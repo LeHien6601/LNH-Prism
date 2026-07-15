@@ -11,7 +11,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Area | State | Evidence / next action |
 |---|---|---|
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
-| Architecture | 🟡 Contract baseline drafted | JSON Schema Draft 2020-12 contracts and validated examples are in `specs/`; 🟣 human review remains required |
+| Architecture | 🟢 Contract baseline approved | JSON Schema Draft 2020-12 contracts and validated examples are in `specs/`; approved 2026-07-15 |
 | Renderer | ⚪ Not started | Implement basic layer primitives in M1 |
 | Materials | ⚪ Not started | Define first material pack after renderer baseline |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
@@ -21,7 +21,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🟡 **M0** — Foundation and project contracts |
-| Next task | 🟣 **Review and approve schemas and IDs** · 🧭 Product + 🛠️ technical lead |
+| Next task | 🟣 **Select one style reference and target device scale** · 🎨 Art lead |
 | Next agent-ready task | ⚪ None — waiting for human-owned M0 decisions |
 | Last reviewed | 2026-07-15 |
 | Project owner | 🧭 To be assigned |
@@ -60,8 +60,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
 | Priority | Task | Owner | Execution | Exit condition |
 |---|---|---|---|---|
-| P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟣 human review and approval remain open |
-| P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟣 Human decision | Versioned contracts have no unresolved ambiguity |
+| P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
+| P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟣 Human decision | Reference brief includes palette, lighting, components, and constraints |
 | P0 | Define V1 assets: Primary Button, Panel, Progress Bar | ✦ UI lead | 🟣 Human decision | Each has a measurable acceptance brief |
 | P1 | Prepare a V1 visual-review rubric draft | 🤖 Agent | 🟢 Complete | V1 rubric defines evidence, scoring, blockers, review roles, and revalidation record |
@@ -76,7 +76,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-003 | AI textures are reusable material inputs | 🟢 Accepted | Controls cost and style variance |
 | ADR-004 | Start with layer presets, not a node editor | 🟢 Accepted | Delivers production value while containing scope |
 | ADR-005 | Validate with real assets at every major phase | 🟢 Accepted | Prevents a technically impressive but unusable tool |
-| ADR-006 | Use JSON Schema Draft 2020-12 for M0 source contracts | 🟡 Proposed | Portable validation baseline; 🟣 pending technical review before approval |
+| ADR-006 | Use JSON Schema Draft 2020-12 for M0 source contracts | 🟢 Accepted | Portable validation baseline; approved with M0 schemas on 2026-07-15 |
 
 ## 7. Top risks and responses
 
@@ -104,3 +104,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-15 | Drafted and validated M0 source contracts; queued V1 rubric work | Codex |
 | 2026-07-15 | Added visual status and role indicators for rapid scanning | Codex |
 | 2026-07-15 | Drafted the V1 visual-review rubric; human M0 decisions are now next | Codex |
+| 2026-07-15 | Approved M0 schemas and examples; advanced to style-reference decision | Project owner |
