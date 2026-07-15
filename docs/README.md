@@ -29,6 +29,7 @@ This documentation package defines the plan for a production-oriented system tha
 | [Production hardening](modules/07-production-hardening.md) | Reliability, regression testing, performance, and operations |
 | [Change control](CHANGE_CONTROL.md) | Rules for new ideas, reviews, traceability, and scope protection |
 | [Dashboard proposal](DASHBOARD_PLAN.md) | When and how to introduce a simple HTML status dashboard |
+| [Skill capability assessment](SKILL_CAPABILITY_ASSESSMENT.md) | Installed skills, roadmap coverage, and deferred integrations |
 
 ## Document conventions
 

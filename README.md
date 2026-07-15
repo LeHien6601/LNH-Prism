@@ -12,6 +12,7 @@ The project is currently in **M0 — Foundation and project contracts**. Its fir
 - [Phased roadmap](docs/ROADMAP.md)
 - [System architecture](docs/modules/01-system-architecture.md)
 - [Change control](docs/CHANGE_CONTROL.md)
+- [Skill capability assessment](docs/SKILL_CAPABILITY_ASSESSMENT.md)
 - [All documentation](docs/README.md)
 
 ## Repository layout
