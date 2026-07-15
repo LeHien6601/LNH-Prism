@@ -63,3 +63,4 @@ M1 V1: create a Primary Button, a Panel, and a Progress Bar for a real screen. T
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
 | 2026-07-15 | Recorded approved V1 SVG/resvg rendering stack | Project owner |
+| 2026-07-15 | Completed Primary Button SVG/PNG proof with named layers, state recipes, manifests, and deterministic-output tests | Codex |

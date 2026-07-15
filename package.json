@@ -3,6 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "scripts": { "validate:contracts": "node tests/contracts/validate-contracts.mjs" },
-  "devDependencies": { "ajv": "^8.17.1", "ajv-formats": "^3.0.1" }
+  "scripts": {
+    "build:renderer": "tsc --project tsconfig.json",
+    "render:primary-button": "npm run build:renderer && node dist/renderer/primary-button-cli.js",
+    "test:renderer": "npm run build:renderer && node --test tests/renderer/*.test.mjs",
+    "validate:contracts": "node tests/contracts/validate-contracts.mjs",
+    "validate": "npm run validate:contracts && npm run test:renderer"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.1",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "typescript": "7.0.2"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "2.6.2"
+  }
 }

@@ -12,7 +12,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 |---|---|---|
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
-| Renderer | ⚪ Not started | Implement basic layer primitives in M1 |
+| Renderer | 🟢 Primary Button proof complete | Deterministic SVG/PNG output, manifest provenance, and focused tests are implemented; Panel is next |
 | Materials | ⚪ Not started | Define first material pack after renderer baseline |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
 | Unity export | ⚪ Not started | Validate assets manually before automation |
@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🟡 **M1** — Deterministic MVP renderer |
-| Next task | 🔵 **Prove the V1 SVG renderer with the Primary Button** · 🤖 Agent |
-| Next agent-ready task | 🔵 Scaffold the TypeScript/SVG renderer and produce the bounded Primary Button proof |
+| Next task | 🔵 **Render the V1 Primary Panel template** · 🤖 Agent |
+| Next agent-ready task | 🔵 Add Panel layers, two target heights, SVG/PNG export, and focused determinism tests |
 | Last reviewed | 2026-07-15 |
 | Project owner | 🧭 To be assigned |
 
@@ -66,7 +66,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Define V1 assets: Primary Button, Panel, Progress Bar | ✦ UI lead | 🟢 Complete | Option A focused briefs approved for `primary-button`, `primary-panel`, and `primary-progress-bar` |
 | P1 | Prepare a V1 visual-review rubric draft | 🤖 Agent | 🟢 Complete | V1 rubric defines evidence, scoring, blockers, review roles, and revalidation record |
 | P1 | Choose render/export technology | 🛠️ Technical lead | 🟢 Complete | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
-| P1 | Prove V1 SVG renderer with the Primary Button | 🤖 Agent | 🔵 Agent-ready | SVG and PNG outputs render the approved layers, states, and two sizes; manifest and deterministic-output test meet ADR-009 |
+| P1 | Prove V1 SVG renderer with the Primary Button | 🤖 Agent | 🟢 Complete | Six SVG/PNG outputs cover two sizes and three states; named layers, pinned renderer provenance, manifest hashes, and determinism tests pass |
+| P1 | Render the V1 Primary Panel template | 🤖 Agent | 🔵 Agent-ready | SVG and PNG outputs cover both accepted heights with independent shadow, border, fill, grain, highlight, and content layers; manifest and focused tests pass |
 
 ## 6. Decision register
 
@@ -113,3 +114,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-15 | Selected Neon Core V1 reference and target scale; advanced to V1 asset-brief decision | Project owner |
 | 2026-07-15 | Approved focused V1 component briefs; advanced to render/export technology decision | Project owner |
 | 2026-07-15 | Accepted V1 render/export stack; completed M0 and queued the bounded M1 renderer proof | Project owner |
+| 2026-07-15 | Completed deterministic Primary Button renderer proof; queued Primary Panel template | Codex |
