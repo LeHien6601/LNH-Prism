@@ -9,6 +9,7 @@ The project is currently in **M0 — Foundation and project contracts**. Its fir
 ## Documentation
 
 - [Project overview and status](docs/PROJECT_OVERVIEW.md)
+- [Agent instructions and quick commands](AGENTS.md)
 - [Phased roadmap](docs/ROADMAP.md)
 - [System architecture](docs/modules/01-system-architecture.md)
 - [Change control](docs/CHANGE_CONTROL.md)

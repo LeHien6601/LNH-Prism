@@ -19,7 +19,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Dashboard | Deferred | Start only when Markdown status review becomes costly |
 
 **Active milestone:** M0 — Foundation and project contracts.  
-**Next task:** Create and review `style-spec.schema.json`, `component-spec.schema.json`, and a one-page reference brief for the first Primary Button.  
+**Next task:** Draft the versioned M0 contracts for style, component, material pack, and export manifest. *(Agent-ready.)*
 **Last reviewed:** 2026-07-15.  
 **Project owner:** To be assigned.
 
@@ -55,13 +55,14 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
 ## 5. Near-term task board
 
-| Priority | Task | Owner | Exit condition |
-|---|---|---|---|
-| P0 | Approve schemas and IDs | Product + technical lead | Versioned contracts have no unresolved ambiguity |
-| P0 | Select one style reference and target device scale | Art lead | Reference brief includes palette, lighting, components, and constraints |
-| P0 | Define V1 assets: Primary Button, Panel, Progress Bar | UI lead | Each has a measurable acceptance brief |
-| P1 | Choose render/export technology | Technical lead | Prototype renders a rounded rectangle with fill, stroke, shadow, highlight |
-| P1 | Establish visual review rubric | UI + art leads | Reviewers can score V1 consistently |
+| Priority | Task | Owner | Execution | Exit condition |
+|---|---|---|---|---|
+| P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | Agent | Agent-ready | Schema drafts validate and document required IDs, provenance, and compatibility assumptions |
+| P0 | Review and approve schemas and IDs | Product + technical lead | Human decision | Versioned contracts have no unresolved ambiguity |
+| P0 | Select one style reference and target device scale | Art lead | Human decision | Reference brief includes palette, lighting, components, and constraints |
+| P0 | Define V1 assets: Primary Button, Panel, Progress Bar | UI lead | Human decision | Each has a measurable acceptance brief |
+| P1 | Prepare a V1 visual-review rubric draft | Agent | Agent-ready | Rubric maps visual, technical, editability, and integration checks to V1 evidence |
+| P1 | Choose render/export technology | Technical lead | Human decision | Prototype renders a rounded rectangle with fill, stroke, shadow, highlight |
 
 ## 6. Decision register
 
@@ -95,3 +96,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial control page created | Codex |
+| 2026-07-15 | Added execution eligibility and agent-ready M0 task queue | Codex |
