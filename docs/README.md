@@ -8,9 +8,9 @@ This documentation package defines the plan for a production-oriented system tha
 
 | Field | Current value |
 |---|---|
-| Status | Planned — implementation has not started |
-| Active milestone | M0: Foundation and project contracts |
-| Next task | Approve the system contracts and create the first `Button` reference brief |
+| Status | 🟡 In progress — M0 contract baseline drafted; review is pending |
+| Active milestone | 🟡 M0: Foundation and project contracts |
+| Next task | 🔵 Prepare the V1 visual-review rubric draft |
 | North-star outcome | Generate consistent UI components, states, and size variants from reusable styles/materials |
 | First production validation | Build a real Primary Button, Panel, and Progress Bar in one selected style |
 
@@ -33,6 +33,8 @@ This documentation package defines the plan for a production-oriented system tha
 
 ## Document conventions
 
+- **Status key:** 🟢 complete/approved · 🔵 agent-ready · 🟡 active/draft/proposed · 🟣 human decision/review · 🔴 blocked · ⚪ deferred/not started.
+- **Role key:** 🤖 agent · 🧭 product · 🛠️ technical · 🎨 art · ✦ UI · 🎮 Unity.
 - **M0–M6** means a delivery milestone in `ROADMAP.md`.
 - **Validation task** means a real deliverable, not a synthetic demo.
 - **Gate** means a required review before work proceeds.

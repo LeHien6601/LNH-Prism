@@ -42,10 +42,10 @@ The **Execution** field in the overview task board controls automation:
 
 | Value | Meaning |
 |---|---|
-| `Agent-ready` | An agent may start and complete the task autonomously within its stated acceptance criteria. |
-| `Human decision` | Requires art/product/technical direction or approval; an agent may prepare options but must not choose or mark it complete. |
-| `Blocked` | Do not start; report the dependency. |
-| `Complete` | Do not restart unless explicitly asked. |
+| `🔵 Agent-ready` | 🤖 An agent may start and complete the task autonomously within its stated acceptance criteria. |
+| `🟣 Human decision` | 🎨🧭🛠️ Requires art/product/technical direction or approval; an agent may prepare options but must not choose or mark it complete. |
+| `🔴 Blocked` | Do not start; report the dependency. |
+| `🟢 Complete` | Do not restart unless explicitly asked. |
 
 An agent must never infer that a `Human decision` task is agent-ready. If no unblocked `Agent-ready` task exists, report that clearly and do not begin unrelated work.
 

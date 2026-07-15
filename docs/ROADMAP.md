@@ -4,7 +4,7 @@
 
 Each milestone ends in a gate. A gate can pass only with working evidence, a recorded review, and an updated next task in `PROJECT_OVERVIEW.md`. If a gate fails, fix the smallest root cause and repeat the validation; do not add unrelated capability.
 
-## M0 — Foundation and contracts
+## 🟡 M0 — Foundation and contracts
 
 **Goal:** establish a shared language before implementation.
 
@@ -15,7 +15,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** contracts reviewed by art, UI, and engineering; no ambiguity about the three V1 assets.
 
-## M1 — Deterministic MVP renderer
+## ⚪ M1 — Deterministic MVP renderer
 
 **Goal:** prove that controlled layers can replace screenshot extraction for core UI.
 
@@ -28,7 +28,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** assets meet the V1 rubric, are reusable at two sizes, and changes to palette/radius/shadow propagate without manual repainting.
 
-## M2 — Design system and reusable materials
+## ⚪ M2 — Design system and reusable materials
 
 **Goal:** make style application systematic across a component family.
 
@@ -41,7 +41,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** one style change updates the set consistently; reviewers judge cross-component consistency at or above the agreed threshold.
 
-## M3 — AI-assisted design analysis and material intake
+## ⚪ M3 — AI-assisted design analysis and material intake
 
 **Goal:** use AI for acceleration while retaining human-controlled specifications.
 
@@ -54,7 +54,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** human reviewers can correct AI suggestions efficiently; no AI suggestion bypasses spec review; material reuse is demonstrated on at least four components.
 
-## M4 — Unity export and integration
+## ⚪ M4 — Unity export and integration
 
 **Goal:** make handoff dependable.
 
@@ -67,7 +67,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** import needs no asset-by-asset correction beyond documented Unity project defaults.
 
-## M5 — Production hardening
+## ⚪ M5 — Production hardening
 
 **Goal:** make the system trustworthy for repeated production use.
 
@@ -80,7 +80,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** reproducibility, performance, QA, and handoff criteria are met; unresolved issues have an owner and release decision.
 
-## M6 — Dashboard and workflow scaling (conditional)
+## ⚪ M6 — Dashboard and workflow scaling (conditional)
 
 **Goal:** reduce coordination overhead only when evidence shows Markdown alone is insufficient.
 
@@ -95,3 +95,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial roadmap created | Codex |
+| 2026-07-15 | Added milestone status indicators | Codex |

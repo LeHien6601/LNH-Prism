@@ -10,18 +10,20 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Area | State | Evidence / next action |
 |---|---|---|
-| Product framing | Approved baseline | Core principle and system boundary are recorded in `README.md` |
-| Architecture | Contract baseline drafted | JSON Schema Draft 2020-12 contracts and validated examples are in `specs/`; human review remains required |
-| Renderer | Not started | Implement basic layer primitives in M1 |
-| Materials | Not started | Define first material pack after renderer baseline |
-| AI analysis | Not started | Add only after manual style specification is proven |
-| Unity export | Not started | Validate assets manually before automation |
-| Dashboard | Deferred | Start only when Markdown status review becomes costly |
+| Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
+| Architecture | 🟡 Contract baseline drafted | JSON Schema Draft 2020-12 contracts and validated examples are in `specs/`; 🟣 human review remains required |
+| Renderer | ⚪ Not started | Implement basic layer primitives in M1 |
+| Materials | ⚪ Not started | Define first material pack after renderer baseline |
+| AI analysis | ⚪ Not started | Add only after manual style specification is proven |
+| Unity export | ⚪ Not started | Validate assets manually before automation |
+| Dashboard | ⚪ Deferred | Start only when Markdown status review becomes costly |
 
-**Active milestone:** M0 — Foundation and project contracts.  
-**Next task:** Prepare the V1 visual-review rubric draft. *(Agent-ready.)*
-**Last reviewed:** 2026-07-15.  
-**Project owner:** To be assigned.
+| Focus | Current value |
+|---|---|
+| Active milestone | 🟡 **M0** — Foundation and project contracts |
+| Next task | 🔵 **Prepare the V1 visual-review rubric draft** · 🤖 Agent-ready |
+| Last reviewed | 2026-07-15 |
+| Project owner | 🧭 To be assigned |
 
 ## 3. Objective boundaries
 
@@ -41,15 +43,15 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 ## 4. Roadmap at a glance
 
-| Milestone | Outcome | Gate |
-|---|---|---|
-| M0 | Contracts, repository, reference brief | Architecture review |
-| M1 | MVP renderer and three core templates | Validation V1 review |
-| M2 | Tokens, variants, states, material packs | Validation V2 review |
-| M3 | AI-assisted analysis and material intake | Human-reviewed fidelity test |
-| M4 | Unity export and import metadata | Unity integration test |
-| M5 | Production hardening and regression suite | Production readiness review |
-| M6 | Optional dashboard and workflow scaling | Operations review |
+| State | Milestone | Outcome | Gate |
+|---|---|---|---|
+| 🟡 | M0 | Contracts, repository, reference brief | 🟣 Architecture review |
+| ⚪ | M1 | MVP renderer and three core templates | 🟣 Validation V1 review |
+| ⚪ | M2 | Tokens, variants, states, material packs | 🟣 Validation V2 review |
+| ⚪ | M3 | AI-assisted analysis and material intake | 🟣 Human-reviewed fidelity test |
+| ⚪ | M4 | Unity export and import metadata | 🟣 Unity integration test |
+| ⚪ | M5 | Production hardening and regression suite | 🟣 Production readiness review |
+| ⚪ | M6 | Optional dashboard and workflow scaling | 🟣 Operations review |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -57,33 +59,33 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
 | Priority | Task | Owner | Execution | Exit condition |
 |---|---|---|---|---|
-| P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | Agent | Complete | Schemas and examples validate; human review and approval remain open |
-| P0 | Review and approve schemas and IDs | Product + technical lead | Human decision | Versioned contracts have no unresolved ambiguity |
-| P0 | Select one style reference and target device scale | Art lead | Human decision | Reference brief includes palette, lighting, components, and constraints |
-| P0 | Define V1 assets: Primary Button, Panel, Progress Bar | UI lead | Human decision | Each has a measurable acceptance brief |
-| P1 | Prepare a V1 visual-review rubric draft | Agent | Agent-ready | Rubric maps visual, technical, editability, and integration checks to V1 evidence |
-| P1 | Choose render/export technology | Technical lead | Human decision | Prototype renders a rounded rectangle with fill, stroke, shadow, highlight |
+| P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟣 human review and approval remain open |
+| P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟣 Human decision | Versioned contracts have no unresolved ambiguity |
+| P0 | Select one style reference and target device scale | 🎨 Art lead | 🟣 Human decision | Reference brief includes palette, lighting, components, and constraints |
+| P0 | Define V1 assets: Primary Button, Panel, Progress Bar | ✦ UI lead | 🟣 Human decision | Each has a measurable acceptance brief |
+| P1 | Prepare a V1 visual-review rubric draft | 🤖 Agent | 🔵 Agent-ready | Rubric maps visual, technical, editability, and integration checks to V1 evidence |
+| P1 | Choose render/export technology | 🛠️ Technical lead | 🟣 Human decision | Prototype renders a rounded rectangle with fill, stroke, shadow, highlight |
 
 ## 6. Decision register
 
 | ID | Decision | Status | Rationale |
 |---|---|---|---|
-| ADR-001 | AI concepts are references, not extraction sources | Accepted | Preserves editability and avoids baked lighting/background contamination |
-| ADR-002 | Geometry and final rendering are deterministic | Accepted | Ensures consistent sizing, states, and repeatable output |
-| ADR-003 | AI textures are reusable material inputs | Accepted | Controls cost and style variance |
-| ADR-004 | Start with layer presets, not a node editor | Accepted | Delivers production value while containing scope |
-| ADR-005 | Validate with real assets at every major phase | Accepted | Prevents a technically impressive but unusable tool |
-| ADR-006 | Use JSON Schema Draft 2020-12 for M0 source contracts | Proposed | Portable validation baseline; pending technical review before approval |
+| ADR-001 | AI concepts are references, not extraction sources | 🟢 Accepted | Preserves editability and avoids baked lighting/background contamination |
+| ADR-002 | Geometry and final rendering are deterministic | 🟢 Accepted | Ensures consistent sizing, states, and repeatable output |
+| ADR-003 | AI textures are reusable material inputs | 🟢 Accepted | Controls cost and style variance |
+| ADR-004 | Start with layer presets, not a node editor | 🟢 Accepted | Delivers production value while containing scope |
+| ADR-005 | Validate with real assets at every major phase | 🟢 Accepted | Prevents a technically impressive but unusable tool |
+| ADR-006 | Use JSON Schema Draft 2020-12 for M0 source contracts | 🟡 Proposed | Portable validation baseline; 🟣 pending technical review before approval |
 
 ## 7. Top risks and responses
 
 | Risk | Signal | Response | Owner |
 |---|---|---|---|
-| Scope expands into a general editor | Requests add arbitrary drawing/node features | Apply `CHANGE_CONTROL.md`; defer unless tied to validation evidence | Product owner |
-| Art quality feels too procedural | Review score is below target | Add controlled material/decal layers before increasing renderer complexity | Art + UI leads |
-| AI output drifts by component | Palette/lighting differs across assets | Normalize into material packs and enforce tokens | Technical lead |
-| Renderer cannot meet mobile needs | Export size or render time misses budget | Bake raster where needed; keep source specs deterministic | Technical lead |
-| Unity handoff is fragile | Missing borders/pivots or naming collisions | Add export manifest and integration tests before scaling | Unity engineer |
+| 🟡 Scope expands into a general editor | Requests add arbitrary drawing/node features | Apply `CHANGE_CONTROL.md`; defer unless tied to validation evidence | 🧭 Product owner |
+| 🟡 Art quality feels too procedural | Review score is below target | Add controlled material/decal layers before increasing renderer complexity | 🎨 Art + ✦ UI leads |
+| 🟡 AI output drifts by component | Palette/lighting differs across assets | Normalize into material packs and enforce tokens | 🛠️ Technical lead |
+| 🟡 Renderer cannot meet mobile needs | Export size or render time misses budget | Bake raster where needed; keep source specs deterministic | 🛠️ Technical lead |
+| 🟡 Unity handoff is fragile | Missing borders/pivots or naming collisions | Add export manifest and integration tests before scaling | 🎮 Unity engineer |
 
 ## 8. Review cadence
 
@@ -99,3 +101,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-15 | Initial control page created | Codex |
 | 2026-07-15 | Added execution eligibility and agent-ready M0 task queue | Codex |
 | 2026-07-15 | Drafted and validated M0 source contracts; queued V1 rubric work | Codex |
+| 2026-07-15 | Added visual status and role indicators for rapid scanning | Codex |
