@@ -1,0 +1,22 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build and generated output
+dist/
+build/
+coverage/
+tmp/
+exports/
+
+# Dependencies and local configuration
+node_modules/
+.env
+.env.*
+!.env.example
+
+# Generated comparison artifacts (approved baselines belong in tests/fixtures)
+*.diff.png
+*.render-log.json

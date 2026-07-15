@@ -1,0 +1,65 @@
+# Module 05 — Practical Validation Lab
+
+## Goal
+
+Use real UI deliveries to test the system, identify root causes, and improve the process immediately.
+
+## Scope
+
+Validation briefs, rubric, evidence collection, retrospective, corrective actions, and revalidation. This is not a generic QA backlog; every validation must exercise the active milestone’s intended capability.
+
+## Inputs and outputs
+
+| Inputs | Outputs |
+|---|---|
+| Validation brief, generated assets, reference, Unity scene where relevant | Review scorecard, issue log, corrective tasks, pass/fail decision |
+
+## Required validation cycle
+
+1. Select a real feature/UI screen with a named owner and playable or reviewable context.
+2. Freeze a small validation brief: user-facing purpose, required components/states/sizes, reference, and target platform.
+3. Generate assets only through the capabilities allowed by the milestone.
+4. Review visual fidelity, consistency, editability, performance, and integration.
+5. Categorize defects: spec, renderer, material, export, process, or reference ambiguity.
+6. Fix the smallest root cause immediately if it blocks the milestone; otherwise file a prioritized task.
+7. Re-run the validation and record the outcome.
+
+## Review rubric
+
+| Dimension | Question | Suggested pass target |
+|---|---|---|
+| Visual hierarchy | Is the intended action/read order clear on a target phone? | No critical issue |
+| Style consistency | Do layers, lighting, palette, and texture read as one family? | 4/5 average |
+| Asset quality | Are edges, alpha, text slots, and details clean? | No blocker |
+| Editability | Can requested token/size/state change without repainting? | Demonstrated |
+| Integration | Does it work in Unity at target scale and state? | Demonstrated when relevant |
+| Traceability | Can output be reproduced from versioned inputs? | Complete manifest |
+
+## Validation milestones
+
+- **V1 / M1:** Primary Button, Panel, Progress Bar for one live screen.
+- **V2 / M2:** themed shop/reward popup family using one material pack.
+- **V3 / M3:** concept-to-spec-to-components rebuild without component extraction.
+- **V4 / M4:** playable Unity reward/shop flow with exported states.
+- **V5 / M5:** release-like batch recreated from clean versioned inputs.
+
+## Dependencies
+
+Every product module; art/UI reviewers; Unity sample project from M4 onward.
+
+## Acceptance criteria
+
+- Every milestone has a completed validation record before its gate.
+- Every failed validation has a root-cause category and corrective decision.
+- Revalidation proves that blocker fixes worked.
+
+## Risks
+
+- Demo-only tests hide real problems: validation briefs must name a real target screen.
+- Endless polishing: define pass targets before rendering and defer non-blockers.
+
+## Change history
+
+| Date | Change | Author |
+|---|---|---|
+| 2026-07-15 | Initial module definition | Codex |
