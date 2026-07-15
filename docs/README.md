@@ -8,9 +8,9 @@ This documentation package defines the plan for a production-oriented system tha
 
 | Field | Current value |
 |---|---|
-| Status | 🟡 In progress — M0 contract baseline drafted; review is pending |
-| Active milestone | 🟡 M0: Foundation and project contracts |
-| Next task | 🔵 Prepare the V1 visual-review rubric draft |
+| Status | 🟡 In progress — M0 gates accepted; M1 renderer proof is next |
+| Active milestone | 🟡 M1: Deterministic MVP renderer |
+| Next task | 🔵 Prove the V1 SVG renderer with the Primary Button |
 | North-star outcome | Generate consistent UI components, states, and size variants from reusable styles/materials |
 | First production validation | Build a real Primary Button, Panel, and Progress Bar in one selected style |
 
@@ -28,6 +28,7 @@ This documentation package defines the plan for a production-oriented system tha
 | [V1 visual-review rubric](validation/V1_VISUAL_REVIEW_RUBRIC.md) | Draft scorecard and evidence requirements for the first real validation |
 | [V1 Neon Core reference brief](reference-briefs/V1_NEON_CORE.md) | Selected style direction, palette, scale, and V1 constraints |
 | [V1 core-component acceptance briefs](acceptance-briefs/V1_CORE_COMPONENTS.md) | Approved dimensions, states, layers, and evidence for the first three assets |
+| [ADR-009: V1 render/export stack](decisions/ADR-009-v1-render-export-stack.md) | Approved TypeScript, SVG, resvg, and JSON-manifest architecture |
 | [Unity export](modules/06-unity-export.md) | Assets, metadata, slicing, naming, and importer integration |
 | [Production hardening](modules/07-production-hardening.md) | Reliability, regression testing, performance, and operations |
 | [Change control](CHANGE_CONTROL.md) | Rules for new ideas, reviews, traceability, and scope protection |

@@ -18,7 +18,7 @@ PNG/SVG selection, state naming, pivots, pixels per unit, 9-slice borders, atlas
 
 1. Establish a stable naming convention: `{style}_{component}_{variant}_{state}_{size}`.
 2. Emit a manifest with dimensions, pivot, PPU, border, state, atlas group, source IDs, and hashes.
-3. Decide SVG eligibility per template; bake PNG for filter-heavy or raster-material components.
+3. Keep SVG as the V1 editable source where compatible; use the approved resvg pipeline to bake PNG for production handoff, filter-heavy, or raster-material components. See [ADR-009](../decisions/ADR-009-v1-render-export-stack.md).
 4. Implement 9-slice metadata and tests at minimum and maximum supported dimensions.
 5. Create a Unity importer adapter or documented manifest reader.
 6. Test re-export with unchanged IDs and verify no scene/prefab reference breaks.
@@ -48,3 +48,4 @@ M4 V4: integrate a reward claim or shop purchase flow with normal/pressed/disabl
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
+| 2026-07-15 | Aligned V1 source/output policy with approved SVG/resvg stack | Project owner |

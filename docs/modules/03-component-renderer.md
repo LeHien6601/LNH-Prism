@@ -30,7 +30,7 @@ Component
 
 ## Implementation steps
 
-1. Choose a rendering backend that supports masks, compositing, and repeatable headless export.
+1. Use the approved TypeScript + SVG source + `@resvg/resvg-js` PNG stack from [ADR-009](../decisions/ADR-009-v1-render-export-stack.md); pin the renderer version.
 2. Implement one layer at a time with parameterized tests.
 3. Build the Button template first; parameterize normal/pressed/disabled rather than duplicating art.
 4. Add Panel and Progress Bar, separating frame and fill into independent renderable parts.
@@ -62,3 +62,4 @@ M1 V1: create a Primary Button, a Panel, and a Progress Bar for a real screen. T
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
+| 2026-07-15 | Recorded approved V1 SVG/resvg rendering stack | Project owner |

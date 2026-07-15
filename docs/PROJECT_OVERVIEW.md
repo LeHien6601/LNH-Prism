@@ -11,7 +11,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Area | State | Evidence / next action |
 |---|---|---|
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
-| Architecture | 🟢 Contract baseline approved | JSON Schema Draft 2020-12 contracts and validated examples are in `specs/`; approved 2026-07-15 |
+| Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | ⚪ Not started | Implement basic layer primitives in M1 |
 | Materials | ⚪ Not started | Define first material pack after renderer baseline |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟡 **M0** — Foundation and project contracts |
-| Next task | 🟣 **Choose render/export technology** · 🛠️ Technical lead |
-| Next agent-ready task | ⚪ None — waiting for human-owned M0 decisions |
+| Active milestone | 🟡 **M1** — Deterministic MVP renderer |
+| Next task | 🔵 **Prove the V1 SVG renderer with the Primary Button** · 🤖 Agent |
+| Next agent-ready task | 🔵 Scaffold the TypeScript/SVG renderer and produce the bounded Primary Button proof |
 | Last reviewed | 2026-07-15 |
 | Project owner | 🧭 To be assigned |
 
@@ -46,8 +46,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | State | Milestone | Outcome | Gate |
 |---|---|---|---|
-| 🟡 | M0 | Contracts, repository, reference brief | 🟣 Architecture review |
-| ⚪ | M1 | MVP renderer and three core templates | 🟣 Validation V1 review |
+| 🟢 | M0 | Contracts, repository, reference brief | 🟢 Architecture review accepted |
+| 🟡 | M1 | MVP renderer and three core templates | 🟣 Validation V1 review |
 | ⚪ | M2 | Tokens, variants, states, material packs | 🟣 Validation V2 review |
 | ⚪ | M3 | AI-assisted analysis and material intake | 🟣 Human-reviewed fidelity test |
 | ⚪ | M4 | Unity export and import metadata | 🟣 Unity integration test |
@@ -65,7 +65,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |
 | P0 | Define V1 assets: Primary Button, Panel, Progress Bar | ✦ UI lead | 🟢 Complete | Option A focused briefs approved for `primary-button`, `primary-panel`, and `primary-progress-bar` |
 | P1 | Prepare a V1 visual-review rubric draft | 🤖 Agent | 🟢 Complete | V1 rubric defines evidence, scoring, blockers, review roles, and revalidation record |
-| P1 | Choose render/export technology | 🛠️ Technical lead | 🟣 Human decision | Prototype renders a rounded rectangle with fill, stroke, shadow, highlight |
+| P1 | Choose render/export technology | 🛠️ Technical lead | 🟢 Complete | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
+| P1 | Prove V1 SVG renderer with the Primary Button | 🤖 Agent | 🔵 Agent-ready | SVG and PNG outputs render the approved layers, states, and two sizes; manifest and deterministic-output test meet ADR-009 |
 
 ## 6. Decision register
 
@@ -79,6 +80,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-006 | Use JSON Schema Draft 2020-12 for M0 source contracts | 🟢 Accepted | Portable validation baseline; approved with M0 schemas on 2026-07-15 |
 | ADR-007 | Use Neon Core for V1 at `540 × 960` logical / `1080 × 1920` output | 🟢 Accepted | Low-risk deterministic baseline aligned with the existing style contract example |
 | ADR-008 | Use focused baseline V1 component briefs | 🟢 Accepted | Proves deterministic core behavior before optional content slots and additional variants |
+| ADR-009 | Use TypeScript + SVG + resvg + JSON manifests for V1 | 🟢 Accepted | Keeps source structure editable while providing deterministic headless PNG output; see [decision record](decisions/ADR-009-v1-render-export-stack.md) |
 
 ## 7. Top risks and responses
 
@@ -110,3 +112,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-15 | Added `Guide:` command for pending human-decision tasks | Codex |
 | 2026-07-15 | Selected Neon Core V1 reference and target scale; advanced to V1 asset-brief decision | Project owner |
 | 2026-07-15 | Approved focused V1 component briefs; advanced to render/export technology decision | Project owner |
+| 2026-07-15 | Accepted V1 render/export stack; completed M0 and queued the bounded M1 renderer proof | Project owner |
