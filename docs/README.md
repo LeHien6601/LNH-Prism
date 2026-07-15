@@ -26,6 +26,7 @@ This documentation package defines the plan for a production-oriented system tha
 | [Materials & textures](modules/04-materials-textures.md) | Reusable procedural and AI-sourced materials |
 | [Validation lab](modules/05-validation-lab.md) | Real-asset validation milestones and review loops |
 | [V1 visual-review rubric](validation/V1_VISUAL_REVIEW_RUBRIC.md) | Draft scorecard and evidence requirements for the first real validation |
+| [V1 Neon Core reference brief](reference-briefs/V1_NEON_CORE.md) | Selected style direction, palette, scale, and V1 constraints |
 | [Unity export](modules/06-unity-export.md) | Assets, metadata, slicing, naming, and importer integration |
 | [Production hardening](modules/07-production-hardening.md) | Reliability, regression testing, performance, and operations |
 | [Change control](CHANGE_CONTROL.md) | Rules for new ideas, reviews, traceability, and scope protection |
