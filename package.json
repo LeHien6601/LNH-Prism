@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "build:renderer": "tsc --project tsconfig.json",
+    "prepare:showcase": "npm run build:renderer && node scripts/prepare-showcase.mjs",
     "render:primary-button": "npm run build:renderer && node dist/renderer/primary-button-cli.js",
     "test:renderer": "npm run build:renderer && node --test tests/renderer/*.test.mjs",
     "validate:contracts": "node tests/contracts/validate-contracts.mjs",
-    "validate": "npm run validate:contracts && npm run test:renderer"
+    "validate:showcase": "node scripts/validate-showcase.mjs",
+    "validate": "npm run validate:contracts && npm run test:renderer && npm run prepare:showcase && npm run validate:showcase"
   },
   "devDependencies": {
     "@types/node": "26.1.1",

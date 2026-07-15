@@ -32,7 +32,8 @@ This documentation package defines the plan for a production-oriented system tha
 | [Unity export](modules/06-unity-export.md) | Assets, metadata, slicing, naming, and importer integration |
 | [Production hardening](modules/07-production-hardening.md) | Reliability, regression testing, performance, and operations |
 | [Change control](CHANGE_CONTROL.md) | Rules for new ideas, reviews, traceability, and scope protection |
-| [Dashboard proposal](DASHBOARD_PLAN.md) | When and how to introduce a simple HTML status dashboard |
+| [Component showcase plan](DASHBOARD_PLAN.md) | Local preview of generated components, states, and real UI scenarios |
+| [CR-001: Component showcase](change-requests/CR-001-component-showcase.md) | Approved scope change from status dashboard to renderer-backed showcase |
 | [Skill capability assessment](SKILL_CAPABILITY_ASSESSMENT.md) | Installed skills, roadmap coverage, and deferred integrations |
 
 ## Document conventions

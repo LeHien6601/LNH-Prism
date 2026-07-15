@@ -1,57 +1,54 @@
-# Simple HTML Dashboard Proposal and Initial Plan
+# Component Showcase Proposal and Initial Plan
 
-## Decision trigger
+## Decision
 
-Keep Markdown as the source of truth initially. Build the dashboard only when one or more conditions occur for two consecutive reviews:
+The project owner approved replacing the deferred status-dashboard proposal with a local Component Showcase on 2026-07-16. See [CR-001](change-requests/CR-001-component-showcase.md).
 
-- Reviewers spend more than 15 minutes locating status, decisions, or validation evidence.
-- There are more than 20 active tasks/change requests across modules.
-- Milestone and validation status must be consumed frequently by non-authors.
+Markdown remains the source of truth for project status, decisions, and governance. The showcase is a renderer-backed visual review surface, not a project-management dashboard.
 
 ## Purpose
 
-Provide a read-only, local overview of project health. It must summarize structured data; it must not replace documentation, approval records, or version-controlled specs.
+Provide a read-only local preview of generated UI components in supported states, sizes, and a realistic screen scenario. It must never replace versioned specifications, renderer output, or validation records.
 
 ## MVP screens
 
 | View | Contents |
 |---|---|
-| Overview | Active milestone, next task, progress, top risks, gate status |
-| Roadmap | Milestones, gates, dependencies, validation milestones |
-| Modules | Per-module status, owner, blockers, latest change |
-| Validation | V1–V5 briefs, scores, defects, corrective actions |
-| Governance | Decisions and change requests with status/filtering |
+| Component lab | Every available component, state, size, and layer/debug reference |
+| Scenario preview | Components combined in a target mobile UI flow |
+| Traceability | Generated manifest/source details and renderer version |
+| Review notes | Links to authoritative validation records |
 
 ## Data model
 
-Create `dashboard/data/project-status.json` as a generated projection from the authoritative Markdown/contracts. It contains milestone, task, risk, decision, change request, and validation summary objects. Each object includes a source-document link and stable ID.
+Generate output assets beneath `showcase/generated/` from the renderer. Create a minimal registry with component IDs, states, sizes, and manifest summaries. Source contracts and manifests remain authoritative.
 
-Do not hand-edit both Markdown and JSON. Either generate the JSON from a small structured front-matter block, or update a single structured status source and render the overview from it.
+Do not copy component artwork into HTML/CSS. The page references generated SVG/PNG output; labels, values, and other localizable text remain HTML slots.
 
 ## Initial implementation plan
 
-1. Confirm the trigger is met and approve M6 via change control.
-2. Define the minimal JSON schema and source-of-truth workflow.
-3. Build a dependency-free static page: `dashboard/index.html`, `dashboard/styles.css`, `dashboard/app.js`.
-4. Render cards/tables from `project-status.json`; every item links back to its Markdown source.
-5. Add filters for module, status, milestone, and risk severity.
-6. Verify the dashboard against `PROJECT_OVERVIEW.md` during two weekly reviews.
-7. Add only proven needs—avoid user accounts, editing, servers, or a database in the MVP.
+1. Generate deterministic display assets with `npm run prepare:showcase`.
+2. Build a dependency-free static page: `showcase/index.html`, `showcase/styles.css`, `showcase/app.js`.
+3. Display each generated state and size plus a mobile context preview with editable HTML labels.
+4. Validate expected display assets and scenario markup with `npm run validate:showcase`.
+5. Add Panel and Progress Bar entries only when their renderer proofs are complete.
+6. Add no editing, asset authoring, accounts, servers, or status-management features in the MVP.
 
 ## Acceptance criteria
 
-- A reviewer finds active milestone, next task, top risks, and latest validation result in under one minute.
-- Every dashboard entry links to an authoritative document.
-- Dashboard data matches the control page at review time.
-- The page works locally with no build service or backend.
+- A reviewer sees every generated state and supported size in under one minute.
+- The scenario uses generated assets without baking button text into them.
+- Every displayed asset is reproducible from the renderer and has a manifest/source reference.
+- The page works locally with no backend or web dependency.
 
 ## Risks
 
-- Duplicate status sources: prevent through generated projection and source links.
-- Dashboard becomes a product: lock MVP to read-only reporting.
+- CSS imitation drifts from renderer output: prevent it by referencing generated SVG/PNG assets only.
+- Showcase becomes an editor: lock M1 to read-only previews and HTML content slots.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial dashboard proposal created | Codex |
+| 2026-07-16 | Replaced the dashboard proposal with a renderer-backed component showcase | Project owner |

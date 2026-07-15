@@ -16,7 +16,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Materials | ⚪ Not started | Define first material pack after renderer baseline |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
 | Unity export | ⚪ Not started | Validate assets manually before automation |
-| Dashboard | ⚪ Deferred | Start only when Markdown status review becomes costly |
+| Component showcase | 🟡 Active | Local renderer-backed preview is being added for component states, sizes, and scenario review |
 
 | Focus | Current value |
 |---|---|
@@ -52,7 +52,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | ⚪ | M3 | AI-assisted analysis and material intake | 🟣 Human-reviewed fidelity test |
 | ⚪ | M4 | Unity export and import metadata | 🟣 Unity integration test |
 | ⚪ | M5 | Production hardening and regression suite | 🟣 Production readiness review |
-| ⚪ | M6 | Optional dashboard and workflow scaling | 🟣 Operations review |
+| ⚪ | M6 | Optional showcase scaling and workflow review | 🟣 Operations review |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -115,3 +115,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-15 | Approved focused V1 component briefs; advanced to render/export technology decision | Project owner |
 | 2026-07-15 | Accepted V1 render/export stack; completed M0 and queued the bounded M1 renderer proof | Project owner |
 | 2026-07-15 | Completed deterministic Primary Button renderer proof; queued Primary Panel template | Codex |
+| 2026-07-16 | Replaced the deferred status dashboard with a renderer-backed component showcase | Project owner |
