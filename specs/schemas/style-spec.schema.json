@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lnhgames.dev/lnh-prism/schemas/style-spec/1.0",
+  "title": "LNH Prism Style Specification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "version", "status", "name", "provenance", "tokens", "renderDefaults", "compatibility"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "id": { "$ref": "#/$defs/id" },
+    "version": { "$ref": "#/$defs/semver" },
+    "status": { "enum": ["draft", "reviewed", "approved", "deprecated"] },
+    "name": { "type": "string", "minLength": 3, "maxLength": 96 },
+    "provenance": { "$ref": "#/$defs/provenance" },
+    "tokens": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["colors", "shape", "lighting", "spacing"],
+      "properties": {
+        "colors": { "type": "object", "minProperties": 1, "additionalProperties": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$" } },
+        "shape": { "type": "object", "additionalProperties": false, "required": ["cornerRadius"], "properties": { "cornerRadius": { "type": "number", "minimum": 0 }, "strokeWidth": { "type": "number", "minimum": 0 } } },
+        "lighting": { "type": "object", "additionalProperties": false, "required": ["highlightDirection"], "properties": { "highlightDirection": { "enum": ["top", "top-left", "top-right", "left", "right", "bottom", "bottom-left", "bottom-right", "none"] }, "shadowColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$" } } },
+        "spacing": { "type": "object", "additionalProperties": { "type": "number", "minimum": 0 }, "minProperties": 1 }
+      }
+    },
+    "renderDefaults": { "type": "object", "additionalProperties": false, "required": ["targetScale"], "properties": { "targetScale": { "type": "number", "exclusiveMinimum": 0 }, "colorSpace": { "enum": ["sRGB", "linear-sRGB"] }, "alphaMode": { "enum": ["straight", "premultiplied"] } } },
+    "compatibility": { "$ref": "#/$defs/compatibility" }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{2,62}$" },
+    "semver": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?(\\+[0-9A-Za-z.-]+)?$" },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "provenance": {
+      "type": "object", "additionalProperties": false, "required": ["createdAt", "sources"],
+      "properties": { "createdAt": { "type": "string", "format": "date-time" }, "sources": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["type", "reference"], "properties": { "type": { "enum": ["human-design", "concept-reference", "ai-analysis", "ai-generated", "imported"] }, "reference": { "type": "string", "minLength": 1 }, "sha256": { "$ref": "#/$defs/sha256" }, "promptOrSettings": { "type": "string", "minLength": 1 } }, "allOf": [{ "if": { "properties": { "type": { "enum": ["ai-analysis", "ai-generated"] } }, "required": ["type"] }, "then": { "properties": { "promptOrSettings": { "type": "string", "minLength": 1 } }, "required": ["promptOrSettings"] } }] } } }
+    },
+    "compatibility": { "type": "object", "additionalProperties": false, "required": ["minimumRendererVersion"], "properties": { "minimumRendererVersion": { "$ref": "#/$defs/semver" }, "migrationNote": { "type": "string", "maxLength": 500 } } }
+  }
+}

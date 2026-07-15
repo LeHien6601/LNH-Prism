@@ -68,3 +68,4 @@ Create one `primary-button` spec that inherits style tokens, overrides one param
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
+| 2026-07-15 | Added JSON Schema Draft 2020-12 contract baseline and validation examples | Codex |

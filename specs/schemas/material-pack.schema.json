@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lnhgames.dev/lnh-prism/schemas/material-pack/1.0",
+  "title": "LNH Prism Material Pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "version", "status", "name", "sources", "materials", "compatibility"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" }, "id": { "$ref": "#/$defs/id" }, "version": { "$ref": "#/$defs/semver" }, "status": { "enum": ["draft", "reviewed", "approved", "deprecated"] }, "name": { "type": "string", "minLength": 3, "maxLength": 96 },
+    "sources": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["id", "type", "path", "sha256", "rights"], "properties": { "id": { "$ref": "#/$defs/id" }, "type": { "enum": ["procedural", "ai-generated", "artist-provided", "imported"] }, "path": { "type": "string", "pattern": "^(?!/)(?!.*\\\\).+" }, "sha256": { "$ref": "#/$defs/sha256" }, "rights": { "type": "string", "minLength": 1 }, "promptOrSettings": { "type": "string", "minLength": 1 } }, "allOf": [{ "if": { "properties": { "type": { "const": "ai-generated" } }, "required": ["type"] }, "then": { "properties": { "promptOrSettings": { "type": "string", "minLength": 1 } }, "required": ["promptOrSettings"] } }] } },
+    "materials": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["id", "role", "sourceId", "normalization"], "properties": { "id": { "$ref": "#/$defs/id" }, "role": { "enum": ["base-material", "detail-overlay", "pattern", "edge-mask", "decal"] }, "sourceId": { "$ref": "#/$defs/id" }, "normalization": { "type": "object", "additionalProperties": false, "required": ["tileMode", "opacity"], "properties": { "tileMode": { "enum": ["tile", "stretch", "clamp"] }, "opacity": { "type": "number", "minimum": 0, "maximum": 1 }, "blendMode": { "enum": ["normal", "multiply", "screen", "overlay", "soft-light"] } } } } } },
+    "compatibility": { "type": "object", "additionalProperties": false, "required": ["minimumRendererVersion"], "properties": { "minimumRendererVersion": { "$ref": "#/$defs/semver" }, "migrationNote": { "type": "string", "maxLength": 500 } } }
+  },
+  "$defs": { "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{2,62}$" }, "semver": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?(\\+[0-9A-Za-z.-]+)?$" }, "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" } }
+}

@@ -12,6 +12,7 @@ The project is currently in **M0 — Foundation and project contracts**. Its fir
 - [Agent instructions and quick commands](AGENTS.md)
 - [Phased roadmap](docs/ROADMAP.md)
 - [System architecture](docs/modules/01-system-architecture.md)
+- [M0 contract specifications](specs/README.md)
 - [Change control](docs/CHANGE_CONTROL.md)
 - [Skill capability assessment](docs/SKILL_CAPABILITY_ASSESSMENT.md)
 - [All documentation](docs/README.md)

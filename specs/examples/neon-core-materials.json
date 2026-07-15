@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "1.0", "id": "neon-core-materials", "version": "0.1.0", "status": "draft", "name": "Neon Core Materials",
+  "sources": [{ "id": "blue-grain", "type": "procedural", "path": "materials/neon-core/blue-grain.json", "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "rights": "LNHGames internal procedural source" }],
+  "materials": [{ "id": "blue-grain-overlay", "role": "detail-overlay", "sourceId": "blue-grain", "normalization": { "tileMode": "tile", "opacity": 0.15, "blendMode": "soft-light" } }], "compatibility": { "minimumRendererVersion": "0.1.0" }
+}

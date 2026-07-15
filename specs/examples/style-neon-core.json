@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "1.0", "id": "neon-core", "version": "0.1.0", "status": "draft", "name": "Neon Core", "provenance": { "createdAt": "2026-07-15T14:00:00Z", "sources": [{ "type": "human-design", "reference": "docs/reference-briefs/pending.md" }] },
+  "tokens": { "colors": { "primary": "#4F84FF", "border": "#D9E8FF" }, "shape": { "cornerRadius": 24, "strokeWidth": 2 }, "lighting": { "highlightDirection": "top", "shadowColor": "#102040" }, "spacing": { "xs": 4, "sm": 8, "md": 16 } },
+  "renderDefaults": { "targetScale": 2, "colorSpace": "sRGB", "alphaMode": "straight" }, "compatibility": { "minimumRendererVersion": "0.1.0" }
+}

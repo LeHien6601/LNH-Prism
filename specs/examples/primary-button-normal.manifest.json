@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "1.0", "assetId": "neon-core-primary-button-normal", "generatedAt": "2026-07-15T14:00:00Z", "renderer": { "name": "lnh-prism-renderer", "version": "0.1.0" },
+  "sources": { "style": { "id": "neon-core", "version": "0.1.0" }, "component": { "id": "primary-button", "version": "0.1.0" }, "materialPacks": [{ "id": "neon-core-materials", "version": "0.1.0" }] },
+  "outputs": [{ "path": "exports/neon-core/primary-button/primary-button-normal.png", "format": "png", "width": 320, "height": 112, "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "state": "normal", "unity": { "pixelsPerUnit": 100, "pivot": { "x": 0.5, "y": 0.5 }, "border": { "left": 24, "right": 24, "top": 24, "bottom": 24 }, "atlasGroup": "ui-neon-core" } }]
+}
