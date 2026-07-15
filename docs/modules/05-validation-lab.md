@@ -63,3 +63,4 @@ Every product module; art/UI reviewers; Unity sample project from M4 onward.
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
+| 2026-07-15 | Added detailed V1 scorecard, blocker criteria, and evidence package | Codex |

@@ -21,7 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🟡 **M0** — Foundation and project contracts |
-| Next task | 🔵 **Prepare the V1 visual-review rubric draft** · 🤖 Agent-ready |
+| Next task | 🟣 **Review and approve schemas and IDs** · 🧭 Product + 🛠️ technical lead |
+| Next agent-ready task | ⚪ None — waiting for human-owned M0 decisions |
 | Last reviewed | 2026-07-15 |
 | Project owner | 🧭 To be assigned |
 
@@ -63,7 +64,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟣 Human decision | Versioned contracts have no unresolved ambiguity |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟣 Human decision | Reference brief includes palette, lighting, components, and constraints |
 | P0 | Define V1 assets: Primary Button, Panel, Progress Bar | ✦ UI lead | 🟣 Human decision | Each has a measurable acceptance brief |
-| P1 | Prepare a V1 visual-review rubric draft | 🤖 Agent | 🔵 Agent-ready | Rubric maps visual, technical, editability, and integration checks to V1 evidence |
+| P1 | Prepare a V1 visual-review rubric draft | 🤖 Agent | 🟢 Complete | V1 rubric defines evidence, scoring, blockers, review roles, and revalidation record |
 | P1 | Choose render/export technology | 🛠️ Technical lead | 🟣 Human decision | Prototype renders a rounded rectangle with fill, stroke, shadow, highlight |
 
 ## 6. Decision register
@@ -102,3 +103,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-15 | Added execution eligibility and agent-ready M0 task queue | Codex |
 | 2026-07-15 | Drafted and validated M0 source contracts; queued V1 rubric work | Codex |
 | 2026-07-15 | Added visual status and role indicators for rapid scanning | Codex |
+| 2026-07-15 | Drafted the V1 visual-review rubric; human M0 decisions are now next | Codex |
