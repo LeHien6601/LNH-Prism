@@ -36,6 +36,7 @@ This documentation package defines the plan for a production-oriented system tha
 
 - **Status key:** 🟢 complete/approved · 🔵 agent-ready · 🟡 active/draft/proposed · 🟣 human decision/review · 🔴 blocked · ⚪ deferred/not started.
 - **Role key:** 🤖 agent · 🧭 product · 🛠️ technical · 🎨 art · ✦ UI · 🎮 Unity.
+- **Quick commands:** `Next:` starts one 🔵 agent-ready task; `Guide:` prepares the current 🟣 human decision; `Review:` performs a read-only health review.
 - **M0–M6** means a delivery milestone in `ROADMAP.md`.
 - **Validation task** means a real deliverable, not a synthetic demo.
 - **Gate** means a required review before work proceeds.

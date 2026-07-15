@@ -105,3 +105,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-15 | Added visual status and role indicators for rapid scanning | Codex |
 | 2026-07-15 | Drafted the V1 visual-review rubric; human M0 decisions are now next | Codex |
 | 2026-07-15 | Approved M0 schemas and examples; advanced to style-reference decision | Project owner |
+| 2026-07-15 | Added `Guide:` command for pending human-decision tasks | Codex |

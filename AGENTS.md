@@ -63,6 +63,19 @@ Treat a user message beginning with `Next:` as authorization to start **one** hi
 
 Text after `Next:` may constrain the task. If it conflicts with the task board, explain the conflict and ask for direction rather than silently changing scope.
 
+### `Guide:`
+
+Treat a user message beginning with `Guide:` as a decision-preparation request. Run it **only** when the overview's next task is an unblocked `🟣 Human decision` task. It helps the user complete that task; it does not make the decision or advance task status.
+
+1. Re-read the source-of-truth documents and identify the highest-priority pending human-decision task. Confirm that it matches the overview's next task.
+2. State the decision goal, fixed constraints, acceptance criteria, and what becomes possible after the decision.
+3. Provide a focused review checklist and 2–4 viable options. For each option, show benefits, trade-offs, risks, and downstream impact.
+4. Recommend an option when the evidence supports one, but label it as a recommendation—not a completed decision.
+5. Ask only the smallest set of questions needed for the user to choose. Use explicit choice labels when practical.
+6. Do not edit project status, task ownership, decisions, specifications, or code until the user explicitly confirms a choice.
+
+If the next task is `🔵 Agent-ready`, `🔴 Blocked`, or `🟢 Complete`, explain that `Guide:` does not apply and direct the user to `Next:` or `Review:` as appropriate. Text after `Guide:` may constrain the options or review criteria.
+
 ### `Review:`
 
 Treat a user message beginning with `Review:` as a read-only whole-project health review unless the user explicitly requests fixes.
