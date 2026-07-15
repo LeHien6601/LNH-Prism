@@ -21,7 +21,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🟡 **M0** — Foundation and project contracts |
-| Next task | 🟣 **Define V1 assets: Primary Button, Panel, Progress Bar** · ✦ UI lead |
+| Next task | 🟣 **Choose render/export technology** · 🛠️ Technical lead |
 | Next agent-ready task | ⚪ None — waiting for human-owned M0 decisions |
 | Last reviewed | 2026-07-15 |
 | Project owner | 🧭 To be assigned |
@@ -63,7 +63,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |
-| P0 | Define V1 assets: Primary Button, Panel, Progress Bar | ✦ UI lead | 🟣 Human decision | Each has a measurable acceptance brief |
+| P0 | Define V1 assets: Primary Button, Panel, Progress Bar | ✦ UI lead | 🟢 Complete | Option A focused briefs approved for `primary-button`, `primary-panel`, and `primary-progress-bar` |
 | P1 | Prepare a V1 visual-review rubric draft | 🤖 Agent | 🟢 Complete | V1 rubric defines evidence, scoring, blockers, review roles, and revalidation record |
 | P1 | Choose render/export technology | 🛠️ Technical lead | 🟣 Human decision | Prototype renders a rounded rectangle with fill, stroke, shadow, highlight |
 
@@ -78,6 +78,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-005 | Validate with real assets at every major phase | 🟢 Accepted | Prevents a technically impressive but unusable tool |
 | ADR-006 | Use JSON Schema Draft 2020-12 for M0 source contracts | 🟢 Accepted | Portable validation baseline; approved with M0 schemas on 2026-07-15 |
 | ADR-007 | Use Neon Core for V1 at `540 × 960` logical / `1080 × 1920` output | 🟢 Accepted | Low-risk deterministic baseline aligned with the existing style contract example |
+| ADR-008 | Use focused baseline V1 component briefs | 🟢 Accepted | Proves deterministic core behavior before optional content slots and additional variants |
 
 ## 7. Top risks and responses
 
@@ -108,3 +109,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-15 | Approved M0 schemas and examples; advanced to style-reference decision | Project owner |
 | 2026-07-15 | Added `Guide:` command for pending human-decision tasks | Codex |
 | 2026-07-15 | Selected Neon Core V1 reference and target scale; advanced to V1 asset-brief decision | Project owner |
+| 2026-07-15 | Approved focused V1 component briefs; advanced to render/export technology decision | Project owner |
