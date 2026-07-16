@@ -3,20 +3,19 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { Resvg } from "@resvg/resvg-js";
 import { loadV1ManifestProvenance, type V1ManifestProvenance, type V1ManifestSources } from "./provenance.js";
+import {
+  BUTTON_HEIGHT_LOGICAL,
+  BUTTON_STATES,
+  BUTTON_WIDTHS_LOGICAL,
+  renderPrimaryButtonSvg,
+  type ButtonState,
+  type PrimaryButtonRequest
+} from "./svg-recipes.js";
 import { RENDERER_VERSION } from "./version.js";
 
 export { RENDERER_VERSION } from "./version.js";
-export const BUTTON_HEIGHT_LOGICAL = 56;
-export const BUTTON_WIDTHS_LOGICAL = [160, 240] as const;
-export const BUTTON_STATES = ["normal", "pressed", "disabled"] as const;
-
-export type ButtonWidthLogical = (typeof BUTTON_WIDTHS_LOGICAL)[number];
-export type ButtonState = (typeof BUTTON_STATES)[number];
-
-export interface PrimaryButtonRequest {
-  logicalWidth: ButtonWidthLogical;
-  state: ButtonState;
-}
+export { BUTTON_HEIGHT_LOGICAL, BUTTON_STATES, BUTTON_WIDTH_BOUNDS, BUTTON_WIDTHS_LOGICAL, renderPrimaryButtonSvg } from "./svg-recipes.js";
+export type { ButtonState, ButtonWidthLogical, PrimaryButtonRequest } from "./svg-recipes.js";
 
 export interface RenderedPrimaryButton {
   request: PrimaryButtonRequest;
@@ -51,65 +50,6 @@ interface ExportManifest {
 
 function sha256(content: Uint8Array | string): string {
   return createHash("sha256").update(content).digest("hex");
-}
-
-function stateRecipe(state: ButtonState) {
-  switch (state) {
-    case "pressed":
-      return { fillTop: "#3972E5", fillBottom: "#2859B8", extrusionOpacity: 0.5, extrusionDepth: 2, mainY: 2, highlightOpacity: 0.16 };
-    case "disabled":
-      return { fillTop: "#6E86AE", fillBottom: "#526986", extrusionOpacity: 0.34, extrusionDepth: 4, mainY: 0, highlightOpacity: 0 };
-    default:
-      return { fillTop: "#5B91FF", fillBottom: "#326BDA", extrusionOpacity: 0.72, extrusionDepth: 4, mainY: 0, highlightOpacity: 0.42 };
-  }
-}
-
-/**
- * Builds the canonical V1 SVG source. Each visual effect has a stable group ID
- * so a visual review can isolate the layer without parsing baked pixels.
- */
-export function renderPrimaryButtonSvg(request: PrimaryButtonRequest): string {
-  const { logicalWidth, state } = request;
-  const recipe = stateRecipe(state);
-  const radius = 24;
-  const mainHeight = 52;
-  const inset = 1;
-  const mainWidth = logicalWidth - inset * 2;
-  const mainRadius = radius - inset;
-  const surfaceY = recipe.mainY + inset;
-  const surfaceHeight = mainHeight - inset * 2;
-  const extrusionHeight = surfaceHeight + recipe.extrusionDepth;
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${logicalWidth * 2}" height="${BUTTON_HEIGHT_LOGICAL * 2}" viewBox="0 0 ${logicalWidth} ${BUTTON_HEIGHT_LOGICAL}" role="img" aria-label="Neon Core primary button ${state}">
-  <defs>
-    <linearGradient id="button-fill-gradient" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${recipe.fillTop}"/>
-      <stop offset="100%" stop-color="${recipe.fillBottom}"/>
-    </linearGradient>
-    <linearGradient id="button-highlight-gradient" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="${recipe.highlightOpacity}"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="button-extrusion-gradient" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#193765"/>
-      <stop offset="100%" stop-color="#09172E"/>
-    </linearGradient>
-  </defs>
-  <g id="layer-shadow" data-layer="shadow" data-effect="connected-extrusion" data-depth="${recipe.extrusionDepth}">
-    <rect data-role="extrusion-body" x="${inset}" y="${surfaceY}" width="${mainWidth}" height="${extrusionHeight}" rx="${mainRadius}" fill="url(#button-extrusion-gradient)" fill-opacity="${recipe.extrusionOpacity}"/>
-  </g>
-  <g id="layer-fill" data-layer="fill">
-    <rect x="${inset}" y="${surfaceY}" width="${mainWidth}" height="${surfaceHeight}" rx="${mainRadius}" fill="url(#button-fill-gradient)"/>
-  </g>
-  <g id="layer-border" data-layer="border">
-    <rect x="${inset + 1}" y="${recipe.mainY + inset + 1}" width="${mainWidth - 2}" height="${mainHeight - inset * 2 - 2}" rx="${mainRadius - 1}" fill="none" stroke="#D9E8FF" stroke-width="2"/>
-  </g>
-  <g id="layer-highlight" data-layer="highlight">
-    <path d="M ${radius} ${recipe.mainY + inset + 1} H ${logicalWidth - radius} A ${mainRadius - 1} ${mainRadius - 1} 0 0 1 ${logicalWidth - inset - 1} ${radius} V ${radius + 2} H ${inset + 1} V ${radius} A ${mainRadius - 1} ${mainRadius - 1} 0 0 1 ${radius} ${recipe.mainY + inset + 1} Z" fill="url(#button-highlight-gradient)"/>
-  </g>
-  <g id="layer-content-slot" data-layer="content" data-slot="editable-label" transform="translate(0 ${state === "pressed" ? 2 : 0})"/>
-</svg>`;
 }
 
 export function renderPrimaryButton(request: PrimaryButtonRequest): RenderedPrimaryButton {

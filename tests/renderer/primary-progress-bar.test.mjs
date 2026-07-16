@@ -10,6 +10,8 @@ import {
   PROGRESS_HEIGHT_LOGICAL,
   FRAME_EXTRUSION_DEPTH_LOGICAL,
   PROGRESS_PERCENTAGES,
+  PROGRESS_REVIEW_PERCENTAGES,
+  PROGRESS_WIDTH_BOUNDS,
   PROGRESS_WIDTHS_LOGICAL,
   getProgressFillGeometry,
   renderPrimaryProgressBarPng,
@@ -56,6 +58,20 @@ test("Progress Bar fill geometry is readable and bounded at all V1 percentages",
       assert.ok(geometry.width >= geometry.height, "10% fill must remain visually readable");
       assert.ok(geometry.x + geometry.width <= logicalWidth - 5, "fill must stay within the inner frame");
     }
+  }
+});
+
+test("Progress Bar shared SVG recipe covers bounded widths and edge percentages", () => {
+  for (const logicalWidth of [PROGRESS_WIDTH_BOUNDS.min, 376, PROGRESS_WIDTH_BOUNDS.max]) {
+    for (const percent of PROGRESS_REVIEW_PERCENTAGES) {
+      const geometry = getProgressFillGeometry({ logicalWidth, percent });
+      assert.equal(geometry.width, ((logicalWidth - 10) * percent) / 100);
+      assert.ok(geometry.radius <= geometry.width / 2 || geometry.width === 0);
+      assert.match(renderProgressFillSvg({ logicalWidth, percent }), new RegExp(`data-percent="${percent}"`));
+    }
+  }
+  for (const request of [{ logicalWidth: 319, percent: 50 }, { logicalWidth: 433, percent: 50 }, { logicalWidth: 376.5, percent: 50 }, { logicalWidth: 376, percent: -1 }, { logicalWidth: 376, percent: 101 }, { logicalWidth: 376, percent: 50.5 }]) {
+    assert.throws(() => renderProgressFillSvg(request), RangeError);
   }
 });
 

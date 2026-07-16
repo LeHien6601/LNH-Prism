@@ -42,10 +42,10 @@ const componentPaths: Record<V1ComponentId, string> = {
   "primary-progress-bar": "specs/examples/primary-progress-bar.json"
 };
 
-const rendererPaths: Record<V1ComponentId, string> = {
-  "primary-button": "src/renderer/primary-button.ts",
-  "primary-panel": "src/renderer/primary-panel.ts",
-  "primary-progress-bar": "src/renderer/primary-progress-bar.ts"
+const rendererPaths: Record<V1ComponentId, string[]> = {
+  "primary-button": ["src/renderer/primary-button.ts", "src/renderer/svg-recipes.ts"],
+  "primary-panel": ["src/renderer/primary-panel.ts"],
+  "primary-progress-bar": ["src/renderer/primary-progress-bar.ts", "src/renderer/svg-recipes.ts"]
 };
 
 const stylePath = "specs/examples/style-neon-core.json";
@@ -69,12 +69,12 @@ function parseApprovedDocument(path: string, content: string): VersionedDocument
 
 export async function loadV1ManifestProvenance(componentId: V1ComponentId): Promise<{ sources: V1ManifestSources; provenance: V1ManifestProvenance }> {
   const componentPath = componentPaths[componentId];
-  const rendererPath = rendererPaths[componentId];
-  const [styleSource, componentSource, materialPackSource, rendererSource, rendererVersionSource, provenanceEngine, dependencyLock] = await Promise.all([
+  const componentRendererPaths = rendererPaths[componentId];
+  const [styleSource, componentSource, materialPackSource, rendererSources, rendererVersionSource, provenanceEngine, dependencyLock] = await Promise.all([
     readSource(stylePath),
     readSource(componentPath),
     readSource(materialPackPath),
-    readSource(rendererPath),
+    Promise.all(componentRendererPaths.map(async (path) => ({ path, ...(await readSource(path)) }))),
     readSource("src/renderer/version.ts"),
     readSource("src/renderer/provenance.ts"),
     readSource("package-lock.json")
@@ -102,7 +102,7 @@ export async function loadV1ManifestProvenance(componentId: V1ComponentId): Prom
     { role: "component-spec", path: componentPath, sha256: componentSource.sha256 },
     { role: "material-pack", path: materialPackPath, sha256: materialPackSource.sha256 },
     ...verifiedMaterialFiles,
-    { role: "renderer-source", path: rendererPath, sha256: rendererSource.sha256 },
+    ...rendererSources.map(({ path, sha256 }) => ({ role: "renderer-source" as const, path, sha256 })),
     { role: "renderer-version", path: "src/renderer/version.ts", sha256: rendererVersionSource.sha256 },
     { role: "provenance-engine", path: "src/renderer/provenance.ts", sha256: provenanceEngine.sha256 },
     { role: "dependency-lock", path: "package-lock.json", sha256: dependencyLock.sha256 }

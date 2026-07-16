@@ -16,13 +16,13 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Materials | ⚪ Not started | Define first material pack after renderer baseline |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
 | Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
-| Component showcase | 🔵 Bounded prototype approved | M1 static showcase remains complete; CR-002 authorizes shared-renderer Button and Progress controls as the next task |
+| Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟢 **M1 complete** — bounded post-gate showcase experiment approved |
-| Next task | 🔵 **Implement the CR-002 shared-renderer prototype** · 🤖 Agent |
-| Next agent-ready task | 🔵 Add bounded Button width/state and Progress width/value controls, traceability display, equivalence tests, and review evidence |
+| Active milestone | ⚪ **M2 ready for definition** — CR-002 post-M1 experiment closed |
+| Next task | 🟣 **Choose the V2 validation target and first material direction** · 🧭 Product + 🎨 Art lead |
+| Next agent-ready task | ⚪ None until the V2 target screen and material direction are approved |
 | Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
@@ -78,7 +78,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Re-score V1 Traceability and reproducibility after V1-D004 | 🧭 Project owner + 🛠️ technical lead | 🟢 Complete | Appended `5/5`; recomputed V1 at `93/100`; no blockers; 🟢 Pass approved without overwriting the original failed review |
 | P1 | Improve the connected 3D shadow treatment (V1-D003) | 🤖 Agent | 🟢 Complete | Connected, parameterized extrusion layers remain independently editable and pass desktop/mobile light/dark review at accepted sizes/states |
 | P2 | Review bounded real-time showcase controls (CR-002) | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Option A approved on 2026-07-16 as one scope-boxed shared-renderer prototype |
-| P2 | Implement the CR-002 shared-renderer prototype | 🤖 Agent | 🔵 Agent-ready | Button width/state and Progress width/value controls share deterministic renderer logic; bounds, traceability, equivalence, and required edge values are tested; excluded editor features are absent |
+| P2 | Implement the CR-002 shared-renderer prototype | 🤖 Agent | 🟢 Complete | Shared recipes, bounded controls, read-only traceability, exact browser/CLI equivalence, edge tests, and responsive QA are recorded in the [validation record](validation/records/cr-002-showcase-controls.md) |
+| P0 | Choose the V2 validation target and first material direction | 🧭 Product + 🎨 Art lead | 🟣 Human decision | Select shop or reward popup context, required component family, and one reusable material direction before M2 implementation tasks are drafted |
 
 ## 6. Decision register
 
@@ -140,3 +141,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Approved the appended Traceability `5/5` re-score, recorded V1 Pass at `93/100` with no blockers, and advanced to non-blocking V1-D003 | Project owner / Codex |
 | 2026-07-16 | Closed V1-D003 with connected parameterized extrusion layers, renderer regressions, and desktop/mobile light/dark visual revalidation; queued CR-002 for human review | Codex |
 | 2026-07-16 | Approved CR-002 Option A and queued its scope-boxed shared-renderer Button/Progress prototype as the next agent-ready task | Project owner / Codex |
+| 2026-07-16 | Completed CR-002 with shared browser/CLI SVG recipes, bounded controls, traceability, 18 tests, and responsive browser evidence; advanced to the V2 target/material decision | Codex |

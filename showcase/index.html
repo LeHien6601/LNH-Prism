@@ -17,6 +17,56 @@
     </header>
 
     <main>
+      <section class="section interactive-lab" id="interactive-lab" aria-labelledby="interactive-lab-title" data-interactive-lab="cr-002">
+        <div class="section-heading">
+          <p class="eyebrow">CR-002 · Bounded validation lab</p>
+          <h2 id="interactive-lab-title">Real-time renderer controls</h2>
+          <p>Inspect intermediate geometry using the same pure SVG recipes as CLI output. Values are temporary, contract-bounded, and never modify source specifications.</p>
+        </div>
+
+        <div class="lab-grid">
+          <article class="lab-card" data-lab-component="primary-button">
+            <div class="lab-card__heading"><div><p class="state-label">Primary Button</p><small>Width 160–240 · three approved states</small></div><span class="live-badge">Live SVG</span></div>
+            <div class="control-grid">
+              <label for="lab-button-width">Logical width<input id="lab-button-width" type="number" min="160" max="240" step="1" value="200" inputmode="numeric" required /></label>
+              <label for="lab-button-state">State<select id="lab-button-state"><option value="normal">Normal</option><option value="pressed">Pressed</option><option value="disabled">Disabled</option></select></label>
+            </div>
+            <p class="control-message" id="lab-button-message" role="status">Accepted range: 160–240 logical pixels.</p>
+            <div class="lab-preview">
+              <button class="asset-button lab-button-preview" id="lab-button-preview" type="button" aria-label="Interactive Primary Button preview">
+                <img id="lab-button-image" alt="" />
+                <span class="asset-button__label">Launch</span>
+              </button>
+            </div>
+          </article>
+
+          <article class="lab-card" data-lab-component="primary-progress-bar">
+            <div class="lab-card__heading"><div><p class="state-label">Primary Progress Bar</p><small>Width 320–432 · value 0–100%</small></div><span class="live-badge">Live SVG</span></div>
+            <div class="control-grid">
+              <label for="lab-progress-width">Logical width<input id="lab-progress-width" type="number" min="320" max="432" step="1" value="376" inputmode="numeric" required /></label>
+              <label for="lab-progress-percent">Value (%)<input id="lab-progress-percent" type="number" min="0" max="100" step="1" value="50" inputmode="numeric" required /></label>
+            </div>
+            <p class="control-message" id="lab-progress-message" role="status">Required edge values: 0, 1, 10, 50, 90, 99, 100.</p>
+            <div class="lab-preview">
+              <div class="asset-progress lab-progress-preview" id="lab-progress-preview" role="img" aria-label="Interactive Primary Progress Bar preview at 50 percent">
+                <img class="asset-progress__frame" id="lab-progress-frame" alt="" />
+                <img class="asset-progress__fill" id="lab-progress-fill" alt="" />
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="trace-panel" aria-labelledby="trace-title" data-traceability="interactive-preview">
+          <div><p class="eyebrow">Read-only traceability</p><h3 id="trace-title">Active preview source</h3></div>
+          <dl>
+            <div><dt>Component ID</dt><dd id="trace-component">primary-button</dd></div>
+            <div><dt>Parameters</dt><dd id="trace-parameters">width=200, state=normal</dd></div>
+            <div><dt>Source version</dt><dd id="trace-source">primary-button@0.1.0</dd></div>
+            <div><dt>Renderer version</dt><dd id="trace-renderer">Loading…</dd></div>
+          </dl>
+        </aside>
+      </section>
+
       <section class="section" aria-labelledby="button-title" data-component="primary-button">
         <div class="section-heading">
           <p class="eyebrow">01 · Component lab</p>
@@ -161,6 +211,8 @@
     </main>
 
     <footer>Generated source preview · LNH Prism M1</footer>
-    <script type="module" src="app.js"></script>
+    <script src="generated/renderer-recipes.js"></script>
+    <script src="generated/component-registry.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

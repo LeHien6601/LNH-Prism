@@ -48,7 +48,7 @@ Do not copy component artwork into HTML/CSS. The page references generated SVG/P
 
 ## Proposed enhancement
 
-[CR-002](change-requests/CR-002-realtime-showcase-controls.md) approves one scope-boxed prototype for bounded Primary Button width/state and Progress Bar width/value controls. Preview output must come from the same deterministic renderer recipes and remain within component-contract bounds. Panel resizing, persistence, source-spec mutation, and arbitrary layer/material editing remain excluded.
+[CR-002](change-requests/CR-002-realtime-showcase-controls.md) delivered one scope-boxed prototype for bounded Primary Button width/state and Progress Bar width/value controls. Preview and CLI output share the same deterministic SVG recipes and remain within component-contract bounds. Panel resizing, persistence, source-spec mutation, and arbitrary layer/material editing remain excluded.
 
 ## Change history
 
@@ -59,3 +59,4 @@ Do not copy component artwork into HTML/CSS. The page references generated SVG/P
 | 2026-07-16 | Added layer-stack labels and content-slot alignment requirements | Project owner |
 | 2026-07-16 | Registered bounded real-time preview controls as proposed CR-002 pending M1 revalidation | Codex |
 | 2026-07-16 | Recorded approval of CR-002 Option A as a bounded shared-renderer prototype | Project owner / Codex |
+| 2026-07-16 | Completed CR-002 with bounded controls, read-only traceability, shared recipe equivalence, and responsive validation | Codex |

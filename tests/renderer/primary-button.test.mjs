@@ -6,7 +6,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
-import { BUTTON_STATES, BUTTON_WIDTHS_LOGICAL, RENDERER_VERSION, renderPrimaryButton, renderPrimaryButtonSvg, writePrimaryButtonProof } from "../../dist/renderer/primary-button.js";
+import { BUTTON_STATES, BUTTON_WIDTH_BOUNDS, BUTTON_WIDTHS_LOGICAL, RENDERER_VERSION, renderPrimaryButton, renderPrimaryButtonSvg, writePrimaryButtonProof } from "../../dist/renderer/primary-button.js";
 
 const hash = (content) => createHash("sha256").update(content).digest("hex");
 const exportManifestSchema = JSON.parse(await readFile(new URL("../../specs/schemas/export-manifest.schema.json", import.meta.url), "utf8"));
@@ -29,6 +29,15 @@ test("Primary Button uses a connected state-aware extrusion instead of a shifted
     assert.match(svg, new RegExp(`id="layer-shadow" data-layer="shadow" data-effect="connected-extrusion" data-depth="${depth}"`));
     assert.match(svg, new RegExp(`data-role="extrusion-body" x="1" y="${surfaceY}" width="158" height="${50 + depth}" rx="23"`));
     assert.match(svg, new RegExp(`id="layer-fill" data-layer="fill">\\s*<rect x="1" y="${surfaceY}" width="158" height="50" rx="23"`));
+  }
+});
+
+test("Primary Button shared SVG recipe supports only bounded integer widths", () => {
+  for (const logicalWidth of [BUTTON_WIDTH_BOUNDS.min, 200, BUTTON_WIDTH_BOUNDS.max]) {
+    assert.match(renderPrimaryButtonSvg({ logicalWidth, state: "normal" }), new RegExp(`viewBox="0 0 ${logicalWidth} 56"`));
+  }
+  for (const logicalWidth of [159, 200.5, 241]) {
+    assert.throws(() => renderPrimaryButtonSvg({ logicalWidth, state: "normal" }), RangeError);
   }
 });
 

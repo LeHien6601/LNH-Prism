@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Status | 🟢 Approved — scope-boxed shared-renderer prototype |
+| Status | 🟢 Implemented and validated — prototype closed |
 | Date | 2026-07-16 |
 | Decision date | 2026-07-16 |
 | Requester | 🧭 Project owner |
@@ -63,9 +63,14 @@ This proposal does not authorize arbitrary drawing, layer editing, material auth
 
 The project owner chose **Option A** on 2026-07-16. Implementation is authorized only within the approved prototype boundary. Any expansion requires a new change review.
 
+## Implementation result
+
+The prototype is complete. CLI output and the local showcase now consume `src/renderer/svg-recipes.ts`; showcase preparation emits a dependency-free classic browser artifact from that compiled module. Automated validation proves exact SVG equality across representative widths, all Button states, and required Progress edge values. See the [CR-002 validation record](../validation/records/cr-002-showcase-controls.md).
+
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-16 | Registered project-owner request and initial bounded impact review | Codex |
 | 2026-07-16 | Approved Option A as one scope-boxed shared-renderer prototype with explicit controls, exclusions, and equivalence requirements | Project owner / Codex |
+| 2026-07-16 | Completed the shared-renderer controls, equivalence/boundary tests, traceability panel, and desktop/mobile validation | Codex |
