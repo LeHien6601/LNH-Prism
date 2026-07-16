@@ -68,7 +68,7 @@ The 2026-07-17 guided evidence review scored V2 at `93/100`. Every dimension met
 
 ## Current V3 definition status
 
-The project owner selected the Frostbound Reward Popup at the existing portrait-mobile scale. The draft M3 specification and V3 rubric define a source-annotated, confidence-aware, human-controlled concept-to-spec workflow; a bounded Panel–Button–Progress plus reward-emblem-container reconstruction; and automatic blockers for concept-pixel extraction or unreviewed AI suggestions. Human definition approval is required before M3-S1.
+The project owner selected the Frostbound Reward Popup at the existing portrait-mobile scale and approved M3 definition Option A on 2026-07-17. The specification and V3 rubric define a source-annotated, confidence-aware, human-controlled concept-to-spec workflow; a bounded Panel–Button–Progress plus reward-emblem-container reconstruction; and automatic blockers for concept-pixel extraction or unreviewed AI suggestions. M3-S1 is agent-ready.
 
 ## Change history
 
@@ -91,3 +91,4 @@ The project owner selected the Frostbound Reward Popup at the existing portrait-
 | 2026-07-16 | Closed V2-P002 as a preview-tool artifact after direct RGBA verification; added light/dark surface pixel-integrity regression coverage and retained formal human scoring as the next task | Codex |
 | 2026-07-17 | Recorded the confirmed V2 scorecard at `93/100`, no blockers, and 🟢 Pass; closed M2 and opened V3 target selection | Project owner / Codex |
 | 2026-07-17 | Selected Frostbound Reward for V3 and drafted V3-E01–V3-E10, scoring, blockers, and review controls for human approval | Project owner / Codex |
+| 2026-07-17 | Approved V3 Option A evidence, scoring, blockers, and review controls; unblocked M3-S1 | Project owner / Codex |

@@ -4,7 +4,7 @@
 
 Use this rubric to judge M3's real validation: a human-controlled concept-to-spec workflow and deterministic Frostbound Reward family built without extracting pixels from the concept.
 
-**Status:** 🟡 Draft — human approval required.
+**Status:** 🟢 Approved — Option A accepted on 2026-07-17.
 
 **Review owner:** ✦ UI lead.
 
@@ -88,14 +88,15 @@ The mandatory minimums produce a mathematical floor of `83/100`.
 
 ## Approval checklist
 
-- [ ] Proposal evidence, confidence, disposition, and human-control rules are accepted.
-- [ ] Reconstruction inventory and material-reuse counting are accepted.
-- [ ] V3-E01–V3-E10 and reviewer ownership are sufficient.
-- [ ] `≥85` Pass, `83–84` Conditional Pass, dimension minimums, and blockers are accepted.
-- [ ] Pixel extraction, automatic approval, Unity claims, and general-editor scope remain prohibited.
+- [x] Proposal evidence, confidence, disposition, and human-control rules are accepted.
+- [x] Reconstruction inventory and material-reuse counting are accepted.
+- [x] V3-E01–V3-E10 and reviewer ownership are sufficient.
+- [x] `≥85` Pass, `83–84` Conditional Pass, dimension minimums, and blockers are accepted.
+- [x] Pixel extraction, automatic approval, Unity claims, and general-editor scope remain prohibited.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-17 | Drafted V3 evidence, scoring, blocker, review, and revalidation requirements | Codex |
+| 2026-07-17 | Approved Option A as drafted | Project owner |

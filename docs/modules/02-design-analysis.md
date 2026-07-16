@@ -57,3 +57,4 @@ The approved primary reference is the [Frostbound Reward Popup](../reference-bri
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
 | 2026-07-17 | Selected Frostbound Reward as the V3 concept and drafted the source-annotated, human-controlled analysis workflow | Project owner / Codex |
+| 2026-07-17 | Approved the M3 proposal/review model and unblocked M3-S1 contract implementation | Project owner / Codex |

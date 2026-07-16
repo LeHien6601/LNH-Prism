@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Status | 🟡 Draft — human approval required |
+| Status | 🟢 Approved — Option A |
 | Date | 2026-07-17 |
 | Milestone | M3 — AI-assisted design analysis and material intake |
 | Validation target | V3 — Frostbound Reward Popup |
@@ -119,12 +119,15 @@ Prepare V3-E01 through V3-E10 exactly as defined in [the V3 rubric](../validatio
 | Overfitting | Geometry mimics raster artifacts instead of reusable rules | Bounded templates, secondary sizes, and structure/reuse scoring |
 | Hierarchy drift | Primary/secondary or selected state remains ambiguous | Dedicated comparison evidence and mandatory minimum |
 
-## 12. Approval required
+## 12. Approval outcome
 
-Product, Art, UI, and technical leads must approve this specification and the V3 rubric before M3-S1 begins. Approval must confirm the proposal model, human-control points, reconstruction inventory, material boundary, ordered slices, evidence package, scoring thresholds, and blockers.
+On 2026-07-17, the project owner approved Option A as drafted. The approval covers the proposal model, human-control points, full Panel–Button–Progress plus reward-emblem-container inventory, material boundary, ordered M3-S1 through M3-S5 slices, V3-E01 through V3-E10, scoring thresholds, and automatic blockers.
+
+M3-S1 may begin. Approval does not waive later artifact approvals, slice dependencies, V3 evidence, or the human V3 gate.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-17 | Drafted M3 analysis, review, material-intake, reconstruction, and validation requirements | Codex |
+| 2026-07-17 | Approved Option A as drafted and authorized M3-S1 | Project owner |

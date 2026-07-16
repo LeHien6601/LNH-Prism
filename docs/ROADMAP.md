@@ -58,7 +58,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Approved V3 target:** Frostbound Reward Popup — a portrait mobile reward screen at `540 × 960` logical / `1080 × 1920` presentation scale. The bounded reconstruction covers a reward panel, primary/secondary button family, progress bar, and reusable reward-emblem container. The generated concept is reference evidence only; its pixels cannot become production sources. See [ADR-012](decisions/ADR-012-v3-frostbound-reward.md).
 
-**Definition gate:** 🟡 Draft — the [M3 implementation specification](implementation/M3_FROSTBOUND_ANALYSIS_IMPLEMENTATION_SPEC.md) and [V3 review rubric](validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md) await Product, Art, UI, and technical approval before M3-S1.
+**Definition gate:** 🟢 Approved on 2026-07-17 — Option A accepted the [M3 implementation specification](implementation/M3_FROSTBOUND_ANALYSIS_IMPLEMENTATION_SPEC.md) and [V3 review rubric](validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md) as drafted; M3-S1 may begin.
 
 **Exit gate:** human reviewers can correct AI suggestions efficiently; no AI suggestion bypasses spec review; material reuse is demonstrated on at least four components.
 
@@ -115,3 +115,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-16 | Approved Option A, clarified the V2 Conditional-pass floor to `82`, and opened M2-S1 contract/resolver implementation | Project owner / Codex |
 | 2026-07-17 | Recorded V2 Pass at `93/100`, completed M2, and opened M3 target definition | Project owner / Codex |
 | 2026-07-17 | Selected Frostbound Reward for V3 and drafted the M3 implementation specification and concept-reconstruction rubric for human definition review | Project owner / Codex |
+| 2026-07-17 | Approved M3 definition Option A as drafted and opened M3-S1 contract implementation | Project owner / Codex |
