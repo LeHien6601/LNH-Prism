@@ -72,3 +72,4 @@ M1 V1: create a Primary Button, a Panel, and a Progress Bar for a real screen. T
 | 2026-07-16 | Replaced detached duplicate silhouettes with connected, parameterized extrusion bodies for Button, Panel, and Progress frame while retaining stable independent layer IDs | Codex |
 | 2026-07-16 | Extracted browser-safe pure SVG recipes shared by CLI and CR-002 previews; added bounded intermediate widths/values, low-fill geometry, and manifest provenance | Codex |
 | 2026-07-16 | Drafted M2 requirements for six Neon Market components, stable material layer order, bounded states/sizes, and browser/CLI equivalence; implementation awaits approval | Codex |
+| 2026-07-16 | Approved the M2 renderer requirements and ordered delivery slices; M2-S1 contract/resolver work may begin | Project owner |

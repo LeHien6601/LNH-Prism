@@ -4,13 +4,13 @@
 
 | Field | Value |
 |---|---|
-| Status | 🟡 Draft for human review |
+| Status | 🟢 Approved — Option A |
 | Date | 2026-07-16 |
 | Milestone | M2 — Design system and reusable materials |
 | Validation target | V2 — Neon Market Kit |
 | Decision source | [ADR-011](../decisions/ADR-011-v2-neon-market-kit.md) |
 | Product/art reference | [V2 reference brief](../reference-briefs/V2_NEON_MARKET.md) |
-| Implementation state | Not started; this document does not authorize renderer work |
+| Implementation state | M2-S1 authorized; renderer/material implementation beyond M2-S1 remains gated by the delivery sequence |
 
 ## 1. Intended outcome
 
@@ -242,9 +242,9 @@ The implementation must prepare V2-E01 through V2-E09 exactly as defined in [the
 | Decals become component-specific art | Base family is incoherent without decals | Decal optional; score consistency with decals disabled as an inspection view |
 | M2 expands into editor/runtime work | Requests add free-form controls or Unity behavior | Enforce non-goals and change-control review |
 
-## 13. Approval gate
+## 13. Approval outcome
 
-Before M2-S1 begins, the project owner and technical/art reviewers must approve or amend:
+On 2026-07-16, the project owner approved Option A. The approval covers:
 
 - the six-component inventory and proof sizes;
 - the additive compatibility strategy;
@@ -253,10 +253,11 @@ Before M2-S1 begins, the project owner and technical/art reviewers must approve 
 - implementation sequence;
 - V2 evidence package, scoring thresholds, and automatic blockers.
 
-Approval changes this document and the V2 rubric to 🟢 Approved and makes M2-S1 the next Agent-ready task. Approval does not waive later V2 visual review.
+The V2 rubric's Conditional-pass range is clarified to `82–84`, the mathematical range possible after every dimension meets its mandatory minimum. M2-S1 is now the next Agent-ready task. Approval does not waive the later V2 visual review or authorize work outside the ordered implementation slices.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-16 | Drafted M2 Neon Market contracts, controls, renderer requirements, implementation slices, validation, and scope boundaries | Codex |
+| 2026-07-16 | Approved Option A and authorized M2-S1 with the V2 Conditional-pass range clarified to `82–84` | Project owner |

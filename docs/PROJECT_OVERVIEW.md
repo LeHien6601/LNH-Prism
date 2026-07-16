@@ -13,16 +13,16 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
-| Materials | 🟡 Specification drafted | Neon Alloy contracts, bounded controls, implementation slices, and V2 review rules await approval |
+| Materials | 🟡 Definition approved | Neon Alloy contracts, bounded controls, implementation slices, and V2 review rules are approved; M2-S1 is next |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
 | Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟡 **M2 definition review** — implementation specification and V2 rubric drafted |
-| Next task | 🟣 **Review and approve the M2 implementation specification and V2 rubric** · 🧭 Product + 🎨 Art + 🛠️ technical leads |
-| Next agent-ready task | ⚪ None until the M2 specification and V2 rubric are approved |
+| Active milestone | 🟡 **M2 implementation** — definition gate approved; M2-S1 ready |
+| Next task | 🔵 **Implement M2-S1 contract extensions and deterministic style resolver** · 🤖 Agent |
+| Next agent-ready task | 🔵 Implement M2-S1 contract extensions and deterministic style resolver |
 | Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
@@ -81,7 +81,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P2 | Implement the CR-002 shared-renderer prototype | 🤖 Agent | 🟢 Complete | Shared recipes, bounded controls, read-only traceability, exact browser/CLI equivalence, edge tests, and responsive QA are recorded in the [validation record](validation/records/cr-002-showcase-controls.md) |
 | P0 | Choose the V2 validation target and first material direction | 🧭 Product + 🎨 Art lead | 🟢 Complete | Option A approved: Neon Market Kit at the existing portrait scale with one reusable Neon Alloy material pack; see [ADR-011](decisions/ADR-011-v2-neon-market-kit.md) |
 | P0 | Draft the M2 implementation specification and V2 review rubric | 🤖 Agent | 🟢 Complete | [Implementation specification](implementation/M2_NEON_MARKET_IMPLEMENTATION_SPEC.md) and [V2 rubric](validation/V2_VISUAL_REVIEW_RUBRIC.md) define versioned requirements, bounded controls, delivery slices, evidence, scoring, blockers, and non-goals |
-| P0 | Review and approve the M2 implementation specification and V2 rubric | 🧭 Product + 🎨 Art + 🛠️ technical leads | 🟣 Human decision | Approve or amend component sizes, compatibility/inheritance rules, material bounds, delivery slices, evidence, scoring minimums, and blockers before M2-S1 begins |
+| P0 | Review and approve the M2 implementation specification and V2 rubric | 🧭 Product + 🎨 Art + 🛠️ technical leads | 🟢 Complete | Option A approved on 2026-07-16; all scope, contract, bounds, slice, evidence, and blocker rules accepted; Conditional Pass clarified to `82–84` |
+| P0 | Implement M2-S1 contract extensions and deterministic style resolver | 🤖 Agent | 🔵 Agent-ready | V1 examples remain valid; additive inheritance/material/binding contracts validate; valid overlays resolve deterministically; missing parents, version mismatches, cycles, invalid bounds/bindings, and incomplete resolved styles fail; ancestor provenance is test-covered |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -149,3 +150,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Corrected the export-manifest contract so provenance is mandatory, documented the intentional `1.0` tightening, and added negative omission coverage | Project owner / Codex |
 | 2026-07-16 | Approved Option A for V2: Neon Market Kit with one reusable Neon Alloy pack; queued the M2 specification and V2 rubric as the next agent-ready task | Project owner / Codex |
 | 2026-07-16 | Drafted the M2 Neon Market implementation specification and V2 review rubric; queued human scope, contract, art-control, and quality-gate approval before M2-S1 | Codex |
+| 2026-07-16 | Approved M2 Option A, clarified Conditional Pass to `82–84`, closed the definition gate, and queued M2-S1 contract/resolver implementation | Project owner / Codex |

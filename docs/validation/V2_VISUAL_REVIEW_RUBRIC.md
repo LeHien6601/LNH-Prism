@@ -4,7 +4,7 @@
 
 Use this rubric to judge M2's real validation: a coherent Neon Market shop-popup family built from shared tokens, deterministic recipes, and one reusable Neon Alloy material pack.
 
-**Status:** 🟡 Draft for human review.
+**Status:** 🟢 Approved — Option A accepted by the project owner on 2026-07-16.
 
 **Review owner:** ✦ UI lead.
 
@@ -58,8 +58,10 @@ Score each dimension from `0` to `5`; half points are allowed. Multiply each sco
 | Outcome | Requirement |
 |---|---|
 | 🟢 Pass | Score `≥ 85`, every dimension meets its minimum, all V2 evidence exists, and no blocker remains |
-| 🟡 Conditional pass | Score `75–84`, every dimension meets its minimum, no blocker remains, and corrective tasks are owned before M3 starts |
-| 🔴 Fail | Score `< 75`, any dimension misses its minimum, required evidence is absent, or any blocker remains |
+| 🟡 Conditional pass | Score `82–84`, every dimension meets its minimum, no blocker remains, and corrective tasks are owned before M3 starts |
+| 🔴 Fail | Score `< 82`, any dimension misses its minimum, required evidence is absent, or any blocker remains |
+
+The mandatory dimension minimums produce a mathematical floor of `82/100`; scores below `82` cannot qualify for Conditional Pass even if no automatic blocker is recorded.
 
 ## Automatic blockers
 
@@ -151,14 +153,15 @@ Decision: 🟢 Pass / 🟡 Conditional pass / 🔴 Fail
 
 ## Approval checklist
 
-- [ ] Evidence IDs and owners are sufficient.
-- [ ] Dimension weights and minimums reflect M2 priorities.
-- [ ] `≥ 85` Pass and `75–84` Conditional-pass thresholds are accepted.
-- [ ] Automatic blockers protect material reuse, deterministic structure, propagation, and provenance.
-- [ ] AI analysis and Unity integration remain explicitly deferred.
+- [x] Evidence IDs and owners are sufficient.
+- [x] Dimension weights and minimums reflect M2 priorities.
+- [x] `≥ 85` Pass and `82–84` Conditional-pass thresholds are accepted.
+- [x] Automatic blockers protect material reuse, deterministic structure, propagation, and provenance.
+- [x] AI analysis and Unity integration remain explicitly deferred.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-16 | Drafted V2 evidence, scoring, blocker, review, revalidation, and retrospective requirements | Codex |
+| 2026-07-16 | Approved Option A and clarified Conditional Pass to the mathematically reachable `82–84` range | Project owner |
