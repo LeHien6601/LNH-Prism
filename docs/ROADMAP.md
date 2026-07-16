@@ -11,7 +11,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 - Define repository folders, IDs, versioning, and asset naming.
 - Write JSON/YAML contracts for style specs, component specs, material packs, and export manifests.
 - Select the V1 target: one visual style, target resolution(s), and Primary Button/Panel/Progress Bar briefs.
-- Define visual, technical, and Unity acceptance rubrics.
+- Define visual and technical acceptance rubrics for reusable deterministic assets.
 
 **Exit gate:** contracts reviewed by art, UI, and engineering; no ambiguity about the three V1 assets.
 
@@ -21,12 +21,12 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 - Implement primitives: rounded/cut-corner shape, fill/gradient, stroke, clipping, outer shadow, inner shadow, top highlight, and noise overlay.
 - Implement Button, Panel, and Progress Bar templates.
-- Render fixed dimensions and export PNG; SVG export is optional for compatible components.
+- Render fixed dimensions with reusable, structurally layered SVG as the canonical V1 component output; keep PNG as a deterministic preview/export derivative.
 - Create normal, pressed, and disabled button states using parameters—not new AI generations.
 
-**Practical validation V1:** produce the three assets for an actual game screen and import them into a sample Unity scene.
+**Practical validation V1:** produce the three assets for an actual game screen, inspect them on light/dark backgrounds and at target-phone scale, and verify named SVG layers, independent reusable parts, deterministic variants, and traceable manifests.
 
-**Exit gate:** assets meet the V1 rubric, are reusable at two sizes, and changes to palette/radius/shadow propagate without manual repainting.
+**Exit gate:** assets meet the V1 rubric, remain reusable and structurally inspectable at two sizes, and changes to palette/radius/shadow propagate without manual repainting. Unity integration is deferred to M4.
 
 ## ⚪ M2 — Design system and reusable materials
 
@@ -96,3 +96,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 |---|---|---|
 | 2026-07-15 | Initial roadmap created | Codex |
 | 2026-07-15 | Added milestone status indicators | Codex |
+| 2026-07-16 | Refocused M1/V1 on reusable high-quality structured SVG output and deferred Unity integration to M4 | Project owner |

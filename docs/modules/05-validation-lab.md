@@ -12,7 +12,7 @@ Validation briefs, rubric, evidence collection, retrospective, corrective action
 
 | Inputs | Outputs |
 |---|---|
-| Validation brief, generated assets, reference, Unity scene where relevant | Review scorecard, issue log, corrective tasks, pass/fail decision |
+| Validation brief, generated assets, reference, and milestone-specific review context | Review scorecard, issue log, corrective tasks, pass/fail decision |
 
 ## Required validation cycle
 
@@ -32,12 +32,12 @@ Validation briefs, rubric, evidence collection, retrospective, corrective action
 | Style consistency | Do layers, lighting, palette, and texture read as one family? | 4/5 average |
 | Asset quality | Are edges, alpha, text slots, and details clean? | No blocker |
 | Editability | Can requested token/size/state change without repainting? | Demonstrated |
-| Integration | Does it work in Unity at target scale and state? | Demonstrated when relevant |
+| Structure and reuse | Are SVG layers/parts named, inspectable, independently reusable, and parameter-driven? | Demonstrated |
 | Traceability | Can output be reproduced from versioned inputs? | Complete manifest |
 
 ## Validation milestones
 
-- **V1 / M1:** Primary Button, Panel, Progress Bar for one live screen.
+- **V1 / M1:** reusable, high-quality, structurally layered SVG Primary Button, Panel, and Progress Bar for one live screen; no Unity integration requirement.
 - **V2 / M2:** themed shop/reward popup family using one material pack.
 - **V3 / M3:** concept-to-spec-to-components rebuild without component extraction.
 - **V4 / M4:** playable Unity reward/shop flow with exported states.
@@ -64,3 +64,4 @@ Every product module; art/UI reviewers; Unity sample project from M4 onward.
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
 | 2026-07-15 | Added detailed V1 scorecard, blocker criteria, and evidence package | Codex |
+| 2026-07-16 | Approved V1 as an SVG structure/quality gate and deferred Unity integration validation to M4 | Project owner |

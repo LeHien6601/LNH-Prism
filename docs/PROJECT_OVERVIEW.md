@@ -15,14 +15,14 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Renderer | 🟢 V1 core renderer proofs complete | Button, Panel, and independent Progress Bar frame/fill SVG/PNG outputs have deterministic manifests and focused tests |
 | Materials | ⚪ Not started | Define first material pack after renderer baseline |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
-| Unity export | ⚪ Not started | Validate assets manually before automation |
+| Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
 | Component showcase | 🟢 M1 core showcase complete | Button, Panel, and independent Progress Bar parts are shown across accepted states/sizes and in one combined mobile scenario |
 
 | Focus | Current value |
 |---|---|
 | Active milestone | 🟡 **M1** — Deterministic MVP renderer |
-| Next task | 🟣 **Review and approve the V1 visual-review rubric** · 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | 🔴 None until the V1 rubric is approved; then prepare the V1 evidence package and validation record |
+| Next task | 🔵 **Prepare the V1 validation evidence package and record** · 🤖 Agent |
+| Next agent-ready task | 🔵 Collect V1-E01 through V1-E06 for reusable structured SVG quality; create the traceable scorecard and defect log |
 | Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
@@ -71,8 +71,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Align content slots and sync completed components to showcase | 🤖 Agent | 🟢 Complete | Button labels share one centered slot and move `y: +2` when pressed; both Primary Panel sizes and top-to-bottom SVG layer names appear from renderer output |
 | P1 | Render the V1 Progress Bar template | 🤖 Agent | 🟢 Complete | Frame and fill remain independently renderable at two widths and 10%, 50%, and 90%; manifests and focused tests pass |
 | P1 | Add the completed Progress Bar to the showcase | 🤖 Agent | 🟢 Complete | Both widths and all percentages use independent renderer frame/fill outputs; part separation, layer order, and combined scenario are visible |
-| P1 | Review and approve the V1 visual-review rubric | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Rubric thresholds, evidence requirements, reviewer roles, and blocker rules are explicitly accepted or revised |
-| P1 | Prepare the V1 validation evidence package and record | 🤖 Agent | 🔴 Blocked | Waits for rubric approval; V1-E01 through V1-E05 and a traceable scorecard record are ready for review, with Unity evidence tracked separately |
+| P1 | Review and approve the V1 visual-review rubric | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved by the project owner on 2026-07-16; V1 focuses on reusable high-quality structured SVG and defers Unity integration to M4 |
+| P1 | Prepare the V1 validation evidence package and record | 🤖 Agent | 🔵 Agent-ready | V1-E01 through V1-E06 and a traceable scorecard record are ready for SVG quality review |
 
 ## 6. Decision register
 
@@ -87,6 +87,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-007 | Use Neon Core for V1 at `540 × 960` logical / `1080 × 1920` output | 🟢 Accepted | Low-risk deterministic baseline aligned with the existing style contract example |
 | ADR-008 | Use focused baseline V1 component briefs | 🟢 Accepted | Proves deterministic core behavior before optional content slots and additional variants |
 | ADR-009 | Use TypeScript + SVG + resvg + JSON manifests for V1 | 🟢 Accepted | Keeps source structure editable while providing deterministic headless PNG output; see [decision record](decisions/ADR-009-v1-render-export-stack.md) |
+| ADR-010 | Defer Unity integration validation to M4 | 🟢 Accepted | M1/V1 measures reusable structured SVG quality, editability, consistency, and reproducibility; see [decision record](decisions/ADR-010-defer-unity-integration-to-m4.md) |
 
 ## 7. Top risks and responses
 
@@ -126,3 +127,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Completed independent V1 Progress Bar frame/fill renderer proof; queued showcase sync | Codex |
 | 2026-07-16 | Added all Progress Bar widths/fills, independent-part inspection, layer order, and real-scenario use to the showcase; queued V1 rubric approval | Codex |
 | 2026-07-16 | Corrected Progress Bar highlight cap overflow found during showcase review and added an all-variant clipping regression test | Codex |
+| 2026-07-16 | Approved the V1 rubric with reusable structured SVG as the M1 target, deferred Unity integration to M4, and unblocked V1 evidence preparation | Project owner |

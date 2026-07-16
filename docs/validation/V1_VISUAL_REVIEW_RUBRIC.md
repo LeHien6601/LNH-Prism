@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Use this rubric for **V1**, the first real LNH Prism validation: one Primary Button, Panel, and Progress Bar built from deterministic specifications and shown in a target mobile UI context.
+Use this rubric for **V1**, the first real LNH Prism validation: one Primary Button, Panel, and Progress Bar built as reusable, high-quality, structurally layered SVG components and shown in a target mobile UI context.
 
-**Status:** 🟡 Draft — requires 🟣 art/UI/technical review before V1 use.  
-**Review owner:** ✦ UI lead.  
-**Required reviewers:** 🎨 art lead, 🛠️ technical lead; 🎮 Unity reviewer once the sample scene exists.
+**Status:** 🟢 Approved — Option A accepted by the project owner on 2026-07-16.
+**Review owner:** ✦ UI lead.
+**Required reviewers:** 🎨 art lead and 🛠️ technical lead. Unity integration is deferred to M4 and is not part of V1 acceptance.
 
 ## Preconditions
 
@@ -14,7 +14,7 @@ Use this rubric for **V1**, the first real LNH Prism validation: one Primary But
 - Each asset has a versioned style spec, component spec, and export manifest.
 - Button states include normal, pressed, and disabled.
 - The Button, Panel, and Progress Bar are rendered at their baseline size and one additional supported size.
-- The review package contains light and dark background previews; the Unity sample scene is required for integration sign-off.
+- The review package contains light and dark background previews and exposes the SVG layer/part structure.
 
 If a precondition is missing, record **🔴 Blocked**. Do not substitute an assumption for an approved art/UI decision.
 
@@ -27,8 +27,7 @@ If a precondition is missing, record **🔴 Blocked**. Do not substitute an assu
 | V1-E03 | Baseline and secondary-size renders for all three components | 🤖 | Assets are inspectable at 100% and 200% |
 | V1-E04 | Button normal/pressed/disabled renders | 🤖 | States are distinct and parameter-driven |
 | V1-E05 | Light and dark background composites | ✦ | Alpha, edge, and shadow behavior is visible |
-| V1-E06 | Unity sample-scene screenshots/video | 🎮 | Slicing, pivots, and runtime readability are visible |
-| V1-E07 | Defect log and revalidation record | ✦ / 🛠️ | Every blocker has a disposition |
+| V1-E06 | Defect log and revalidation record | ✦ / 🛠️ | Every blocker has a disposition |
 
 ## Scoring
 
@@ -40,9 +39,8 @@ Score each criterion from 0 to 5, then multiply by its weight. Scores may be rec
 | Style consistency | 20 | Palette, radius, border, lighting, and material strength read as one family across all components | 4 |
 | Edge, alpha, and layer quality | 15 | Clean anti-aliased edges; no background color spill, halos, baked cross-component effects, or unintended pixels | 4 |
 | State and size behavior | 15 | Button states and two sizes preserve intent; protected corners/borders do not distort | 4 |
-| Editability and reuse | 15 | Token, size, and state changes are demonstrated without manual repainting; Progress frame and fill remain independent | 4 |
+| Editability and reuse | 20 | SVG layers and parts remain named, inspectable, independently reusable, and parameter-driven without manual repainting; Progress frame and fill remain independent | 4 |
 | Traceability and reproducibility | 10 | Source versions, material provenance, renderer version, hashes, and output metadata are complete | 5 |
-| Unity integration | 5 | Correct pivot, slicing, state use, and readability in the sample scene | 4 |
 
 **Weighted score:** `sum(score / 5 × weight)` out of 100.
 
@@ -64,16 +62,14 @@ Any of the following produces a 🔴 Fail regardless of score:
 - Pressed/disabled state requires a fresh AI generation rather than deterministic state parameters.
 - Progress frame and fill cannot be independently resized or rendered.
 - Manifest/spec IDs, versions, or source provenance cannot reproduce the reviewed output.
-- Unity slicing, pivot, or state usage requires undocumented per-asset repair.
 
 ## Review procedure
 
-1. **Prepare — 🤖 / 🛠️:** collect V1-E01 through V1-E06; validate specifications before visual review.
-2. **Inspect — 🎨 / ✦:** review all components at 100% and 200%, then in target-phone context. Score the first six dimensions independently before discussing a final score.
-3. **Integrate — 🎮:** review Unity sample-scene evidence and score integration.
-4. **Decide — ✦ + 🛠️:** calculate weighted score, identify blockers, and record Pass, Conditional pass, or Fail.
-5. **Improve — assigned owner:** categorize every issue as `spec`, `renderer`, `material`, `export`, `process`, or `reference ambiguity`; fix the smallest root cause first.
-6. **Revalidate — same reviewers:** repeat only the affected evidence and scores; retain the original record for traceability.
+1. **Prepare — 🤖 / 🛠️:** collect V1-E01 through V1-E06; validate specifications and inspectable SVG structure before visual review.
+2. **Inspect — 🎨 / ✦:** review all components at 100% and 200%, then in target-phone context. Score all six dimensions independently before discussing a final score.
+3. **Decide — ✦ + 🛠️:** calculate weighted score, identify blockers, and record Pass, Conditional pass, or Fail.
+4. **Improve — assigned owner:** categorize every issue as `spec`, `renderer`, `material`, `export`, `process`, or `reference ambiguity`; fix the smallest root cause first.
+5. **Revalidate — same reviewers:** repeat only the affected evidence and scores; retain the original record for traceability.
 
 ## Scorecard template
 
@@ -91,13 +87,12 @@ Renderer version: <version>
 
 | Dimension | Weight | Score (0–5) | Weighted result | Evidence | Reviewer | Notes |
 |---|---:|---:|---:|---|---|---|
-| Visual hierarchy and mobile readability | 20 | | | V1-E03, V1-E06 | 🎨 / ✦ | |
+| Visual hierarchy and mobile readability | 20 | | | V1-E03, V1-E05 | 🎨 / ✦ | |
 | Style consistency | 20 | | | V1-E03 | 🎨 / ✦ | |
 | Edge, alpha, and layer quality | 15 | | | V1-E03, V1-E05 | 🎨 / ✦ | |
 | State and size behavior | 15 | | | V1-E03, V1-E04 | ✦ / 🛠️ | |
-| Editability and reuse | 15 | | | V1-E02, V1-E04 | 🛠️ | |
-| Traceability and reproducibility | 10 | | | V1-E02, V1-E07 | 🛠️ | |
-| Unity integration | 5 | | | V1-E06 | 🎮 | |
+| Editability and reuse | 20 | | | V1-E02, V1-E03, V1-E04 | 🛠️ | |
+| Traceability and reproducibility | 10 | | | V1-E02, V1-E06 | 🛠️ | |
 
 Weighted score: <0–100>
 Automatic blockers: <none or list>
@@ -113,3 +108,4 @@ Decision: 🟢 Pass / 🟡 Conditional pass / 🔴 Fail
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial V1 rubric draft | Codex |
+| 2026-07-16 | Approved Option A with V1 focused on reusable structured SVG quality; moved Unity integration to M4 and increased editability/reuse weight to 20 | Project owner |
