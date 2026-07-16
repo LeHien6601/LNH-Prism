@@ -24,6 +24,7 @@ Decision: Not scored.
 | Issue ID | Category | Severity | Corrective action | Owner | Revalidation evidence |
 |---|---|---|---|---|---|
 | V2-P001 | spec | closed | Approved the versioned M2 style, material pack, and six component specs at `0.1.0` | Project owner | Regenerated V2-E02, V2-E08, and V2-E09 |
+| V2-P002 | process | closed | A preview-tool display suggested black regions on the light surface; direct RGBA inspection confirmed the stored PNG is opaque and preserves the same component pixels as the dark surface. Added an automated surface-pixel regression to prevent future misclassification. | Agent | V2-E05 light PNG and V2-E07 surface-pixel-integrity test |
 
 ## Retrospective prompts
 
