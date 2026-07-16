@@ -1,6 +1,6 @@
 # V1 Evidence Package — Neon Core Core Components
 
-**Status:** 🟢 V1 Pass on 2026-07-16 — `93/100`, every mandatory minimum met, and no blockers. V1-D003 remains a non-blocking improvement.
+**Status:** 🟢 V1 Pass on 2026-07-16 — `93/100`, every mandatory minimum met, no blockers, and all recorded V1 corrections closed.
 
 ## Frozen validation target
 
@@ -54,10 +54,10 @@ The page supplies 100% and 200% inspection controls. Generated SVG files contain
 
 | Component/part | Layers |
 |---|---|
-| Primary Button | Content slot; Highlight; Border; Fill; Shadow |
-| Primary Panel | Content slot; Highlight; Border; Grain; Fill; Shadow |
+| Primary Button | Content slot; Highlight; Border; Fill; Connected extrusion |
+| Primary Panel | Content slot; Highlight; Border; Grain; Fill; Connected extrusion |
 | Progress fill | Fill highlight; Value fill |
-| Progress frame | Frame border; Track fill; Frame shadow |
+| Progress frame | Frame border; Track fill; Frame connected extrusion |
 
 ### V1-E04 — Button state evidence
 
@@ -75,7 +75,7 @@ Human reviewers must inspect at 100%, 200%, and a narrow mobile viewport for hal
 |---|---|---|---|---|---|
 | `V1-D001` Progress highlight cap extended beyond the rounded value fill | renderer | blocker before correction | 🟢 Closed | `6eaffa6 fix(renderer): clip progress highlight to fill` | All six width/percentage variants use the exact fill-shape clip; focused regression and deterministic renderer tests pass |
 | `V1-D002` Initial evidence grid clipped 432-pixel Progress Bars at 100% inspection | process | medium | 🟢 Closed | Use a two-column Progress grid and scale grid cells with the 100%/200% control | Desktop light/dark surfaces show complete end caps; 200% specimen and 320-pixel layout visually checked in Chromium |
-| `V1-D003` Shadow reads as a detached duplicate silhouette rather than a connected 3D extrusion | renderer | medium | 🟡 Open | Design a connected, parameterized side-wall/extrusion treatment that remains independently editable | Re-render and inspect all affected accepted sizes/states on light and dark surfaces |
+| `V1-D003` Shadow reads as a detached duplicate silhouette rather than a connected 3D extrusion | renderer | medium | 🟢 Closed | Connected, parameterized extrusion bodies retain stable independent SVG layer IDs | 16 renderer tests plus desktop/mobile light/dark inspection of all affected accepted sizes/states |
 | `V1-D004` Traceability score missed the mandatory V1 minimum | process | gate failure | 🟢 Closed | Bind approved inputs, real material source, renderer/dependency sources, and outputs by path and SHA-256; expose the chain to reviewers | [Traceability audit](TRACEABILITY_AUDIT.md); re-scored `5/5`; V1 passed at `93/100` |
 
 No automatic blocker remains. The appended traceability re-score meets its mandatory minimum and produces a V1 Pass.
@@ -96,6 +96,6 @@ docs/validation/records/v1-neon-core-core-components.md
 
 ## Post-gate handoff
 
-1. Retain the original failed scorecard and appended passing revalidation as one audit trail.
-2. Address V1-D003 with a connected, independently editable 3D shadow treatment and repeat its affected visual evidence.
-3. Keep V1-D003 non-blocking unless its implementation introduces an automatic blocker or regresses a passing dimension.
+1. Retain the original failed scorecard and appended passing revalidations as one audit trail.
+2. Treat V1-D003 as closed; preserve the connected extrusion regression assertions when renderer recipes evolve.
+3. Review CR-002 before implementing any real-time showcase controls; controls must remain bounded and reuse deterministic renderer logic.

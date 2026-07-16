@@ -28,7 +28,7 @@ if (JSON.stringify(progressRegistry.sizes) !== JSON.stringify([320, 432])) throw
 if (JSON.stringify(progressRegistry.percentages) !== JSON.stringify([10, 50, 90])) throw new Error("Showcase registry has incorrect Progress Bar percentages.");
 if (JSON.stringify(progressRegistry.parts) !== JSON.stringify(["frame", "fill"])) throw new Error("Showcase registry does not preserve independent Progress Bar parts.");
 if (!html.includes('data-content-offset="2"')) throw new Error("Showcase is missing the approved pressed content-slot offset.");
-for (const layer of ["Content slot", "Highlight", "Border", "Grain", "Fill", "Shadow", "Fill highlight", "Value fill", "Frame border", "Track fill", "Frame shadow"]) {
+for (const layer of ["Content slot", "Highlight", "Border", "Grain", "Fill", "Connected extrusion", "Fill highlight", "Value fill", "Frame border", "Track fill", "Frame connected extrusion"]) {
   if (!html.includes(`<li>${layer}</li>`)) throw new Error(`Showcase is missing the ${layer} layer name.`);
 }
 if (!html.includes("Frame · independent") || !html.includes("Fill · independent")) throw new Error("Showcase does not expose the independent Progress Bar frame and fill.");

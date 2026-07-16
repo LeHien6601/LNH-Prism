@@ -8,6 +8,7 @@ import { RENDERER_VERSION } from "./version.js";
 export const PROGRESS_HEIGHT_LOGICAL = 24;
 export const PROGRESS_WIDTHS_LOGICAL = [320, 432] as const;
 export const PROGRESS_PERCENTAGES = [10, 50, 90] as const;
+export const FRAME_EXTRUSION_DEPTH_LOGICAL = 2;
 
 export type ProgressWidthLogical = (typeof PROGRESS_WIDTHS_LOGICAL)[number];
 export type ProgressPercentage = (typeof PROGRESS_PERCENTAGES)[number];
@@ -79,8 +80,8 @@ ${content}
 }
 
 function frameLayers(logicalWidth: ProgressWidthLogical): string {
-  return `    <g id="layer-frame-shadow" data-layer="shadow">
-      <rect x="1" y="4" width="${logicalWidth - 2}" height="19" rx="9.5" fill="#07162E" fill-opacity="0.72"/>
+  return `    <g id="layer-frame-shadow" data-layer="shadow" data-effect="connected-extrusion" data-depth="${FRAME_EXTRUSION_DEPTH_LOGICAL}">
+      <rect data-role="extrusion-body" x="1" y="1" width="${logicalWidth - 2}" height="${20 + FRAME_EXTRUSION_DEPTH_LOGICAL}" rx="10" fill="#07162E" fill-opacity="0.82"/>
     </g>
     <g id="layer-frame-fill" data-layer="fill">
       <rect x="1" y="1" width="${logicalWidth - 2}" height="20" rx="10" fill="url(#progress-track-gradient)"/>

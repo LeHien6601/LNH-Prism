@@ -12,7 +12,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 |---|---|---|
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
-| Renderer | 🟢 V1 gate passed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 remains a non-blocking shadow improvement |
+| Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
 | Materials | ⚪ Not started | Define first material pack after renderer baseline |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
 | Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟢 **M1 gate passed** — post-gate V1-D003 quality improvement |
-| Next task | 🔵 **Improve the connected 3D shadow treatment (V1-D003)** · 🤖 Agent |
-| Next agent-ready task | 🔵 Replace detached duplicate shadows with connected, parameterized extrusion/side-wall layers and revalidate affected visual evidence |
+| Active milestone | 🟢 **M1 complete** — gate passed and post-gate renderer correction closed |
+| Next task | 🟣 **Review bounded real-time showcase controls (CR-002)** · 🧭 Product + 🛠️ technical lead |
+| Next agent-ready task | ⚪ None until CR-002 is approved, deferred, or rejected |
 | Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
@@ -76,7 +76,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Conduct the V1 SVG quality review and record scores | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Review recorded at 91/100 with no blockers; rubric outcome is Fail because Traceability scored 4 below its mandatory minimum of 5 |
 | P0 | Audit and close the V1 traceability evidence gap (V1-D004) | 🤖 Agent | 🟢 Complete | Approved inputs, material provenance, renderer/dependency sources, and output hashes are bound in manifests; audit and reviewer-visible chain are ready for re-scoring |
 | P0 | Re-score V1 Traceability and reproducibility after V1-D004 | 🧭 Project owner + 🛠️ technical lead | 🟢 Complete | Appended `5/5`; recomputed V1 at `93/100`; no blockers; 🟢 Pass approved without overwriting the original failed review |
-| P1 | Improve the connected 3D shadow treatment (V1-D003) | 🤖 Agent | 🔵 Agent-ready | Shadow reads as a connected extrusion/side wall, remains an independent parameterized SVG layer, and passes light/dark review at accepted sizes/states |
+| P1 | Improve the connected 3D shadow treatment (V1-D003) | 🤖 Agent | 🟢 Complete | Connected, parameterized extrusion layers remain independently editable and pass desktop/mobile light/dark review at accepted sizes/states |
 | P2 | Review bounded real-time showcase controls (CR-002) | 🧭 Product + 🛠️ technical lead | 🟣 Human decision | Decide approve, time-box, defer, or reject after M1 revalidation; controls must reuse deterministic renderer logic and remain within bounded size/progress parameters |
 
 ## 6. Decision register
@@ -137,3 +137,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Recorded the 91/100 V1 review; gate failed because Traceability scored below its mandatory minimum; queued traceability and connected-shadow corrections and registered CR-002 | Project owner / Codex |
 | 2026-07-16 | Closed V1-D004 with approved and hashed source bindings, real material provenance, a reviewer-visible traceability chain, and reproducibility enforcement; queued human re-scoring | Codex |
 | 2026-07-16 | Approved the appended Traceability `5/5` re-score, recorded V1 Pass at `93/100` with no blockers, and advanced to non-blocking V1-D003 | Project owner / Codex |
+| 2026-07-16 | Closed V1-D003 with connected parameterized extrusion layers, renderer regressions, and desktop/mobile light/dark visual revalidation; queued CR-002 for human review | Codex |

@@ -16,7 +16,7 @@ const registry = {
       title: "Primary Button",
       states: ["normal", "pressed", "disabled"],
       sizes: [160, 240],
-      layersTopToBottom: ["Content slot", "Highlight", "Border", "Fill", "Shadow"],
+      layersTopToBottom: ["Content slot", "Highlight", "Border", "Fill", "Connected extrusion"],
       pathPattern: "primary-button/{state}/{size}/primary-button.svg"
     },
     {
@@ -24,7 +24,7 @@ const registry = {
       title: "Primary Panel",
       states: ["normal"],
       sizes: ["432x240", "432x360"],
-      layersTopToBottom: ["Content slot", "Highlight", "Border", "Grain", "Fill", "Shadow"],
+      layersTopToBottom: ["Content slot", "Highlight", "Border", "Grain", "Fill", "Connected extrusion"],
       pathPattern: "primary-panel/{height}/primary-panel.svg"
     },
     {
@@ -34,7 +34,7 @@ const registry = {
       sizes: [320, 432],
       percentages: [10, 50, 90],
       parts: ["frame", "fill"],
-      layersTopToBottom: ["Fill highlight", "Value fill", "Frame border", "Track fill", "Frame shadow"],
+      layersTopToBottom: ["Fill highlight", "Value fill", "Frame border", "Track fill", "Frame connected extrusion"],
       pathPatterns: {
         frame: "primary-progress-bar/{width}/primary-progress-bar-frame.svg",
         fill: "primary-progress-bar/{width}/primary-progress-bar-fill-{percent}.svg"

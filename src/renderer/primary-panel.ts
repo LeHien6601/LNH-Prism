@@ -7,6 +7,7 @@ import { RENDERER_VERSION } from "./version.js";
 
 export const PANEL_WIDTH_LOGICAL = 432;
 export const PANEL_HEIGHTS_LOGICAL = [240, 360] as const;
+export const PANEL_EXTRUSION_DEPTH_LOGICAL = 7;
 
 export type PanelHeightLogical = (typeof PANEL_HEIGHTS_LOGICAL)[number];
 
@@ -54,6 +55,7 @@ export function renderPrimaryPanelSvg({ logicalHeight }: PrimaryPanelRequest): s
   const radius = 24;
   const bodyHeight = logicalHeight - 8;
   const contentHeight = logicalHeight - 56;
+  const extrusionHeight = bodyHeight + PANEL_EXTRUSION_DEPTH_LOGICAL;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${PANEL_WIDTH_LOGICAL * 2}" height="${logicalHeight * 2}" viewBox="0 0 ${PANEL_WIDTH_LOGICAL} ${logicalHeight}" role="img" aria-label="Neon Core primary panel ${PANEL_WIDTH_LOGICAL} by ${logicalHeight}">
@@ -76,8 +78,8 @@ export function renderPrimaryPanelSvg({ logicalHeight }: PrimaryPanelRequest): s
       <rect x="1" y="1" width="430" height="${bodyHeight}" rx="${radius - 1}"/>
     </clipPath>
   </defs>
-  <g id="layer-shadow" data-layer="shadow">
-    <rect x="2" y="8" width="428" height="${bodyHeight}" rx="${radius - 1}" fill="#07162E" fill-opacity="0.66"/>
+  <g id="layer-shadow" data-layer="shadow" data-effect="connected-extrusion" data-depth="${PANEL_EXTRUSION_DEPTH_LOGICAL}">
+    <rect data-role="extrusion-body" x="1" y="1" width="430" height="${extrusionHeight}" rx="${radius - 1}" fill="#07162E" fill-opacity="0.76"/>
   </g>
   <g id="layer-fill" data-layer="fill">
     <rect x="1" y="1" width="430" height="${bodyHeight}" rx="${radius - 1}" fill="url(#panel-fill-gradient)"/>

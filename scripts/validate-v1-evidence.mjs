@@ -28,6 +28,7 @@ for (const state of ["normal", "pressed", "disabled"]) {
     await access(path);
     const svg = await readFile(path, "utf8");
     for (const layer of buttonLayers) if (!svg.includes(`id="${layer}"`)) throw new Error(`${path} is missing ${layer}.`);
+    if (!svg.includes('data-effect="connected-extrusion"')) throw new Error(`${path} is missing the connected extrusion treatment.`);
     if (/<text\b/i.test(svg)) throw new Error(`${path} contains baked text.`);
     if (!evidenceHtml.includes(`generated/primary-button/${state}/${size}/primary-button.svg`)) throw new Error(`V1 evidence page is missing ${state} Primary Button ${size}.`);
   }
@@ -39,6 +40,7 @@ for (const height of [240, 360]) {
   await access(path);
   const svg = await readFile(path, "utf8");
   for (const layer of panelLayers) if (!svg.includes(`id="${layer}"`)) throw new Error(`${path} is missing ${layer}.`);
+  if (!svg.includes('data-effect="connected-extrusion"')) throw new Error(`${path} is missing the connected extrusion treatment.`);
   if (/<text\b/i.test(svg)) throw new Error(`${path} contains baked text.`);
   if (!evidenceHtml.includes(`generated/primary-panel/${height}/primary-panel.svg`)) throw new Error(`V1 evidence page is missing Primary Panel ${height}.`);
 }
@@ -49,6 +51,7 @@ for (const width of [320, 432]) {
   const framePath = resolve(`showcase/generated/primary-progress-bar/${width}/primary-progress-bar-frame.svg`);
   const frame = await readFile(framePath, "utf8");
   for (const layer of progressFrameLayers) if (!frame.includes(`id="${layer}"`)) throw new Error(`${framePath} is missing ${layer}.`);
+  if (!frame.includes('data-effect="connected-extrusion"')) throw new Error(`${framePath} is missing the connected extrusion treatment.`);
   if (frame.includes('data-part="fill"')) throw new Error(`${framePath} incorrectly contains the fill part.`);
   for (const percent of [10, 50, 90]) {
     const relativeFillPath = `generated/primary-progress-bar/${width}/primary-progress-bar-fill-${percent}.svg`;

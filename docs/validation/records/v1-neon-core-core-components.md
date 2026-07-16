@@ -1,6 +1,6 @@
 # V1 Validation Record — Neon Core Core Components
 
-**Status:** 🟢 V1 Pass — `93/100` after appended traceability revalidation; V1-D003 remains a non-blocking improvement.
+**Status:** 🟢 V1 Pass — `93/100` after appended traceability revalidation; all recorded V1 corrections are closed.
 
 | Field | Value |
 |---|---|
@@ -50,7 +50,7 @@ The weighted total exceeds the Pass threshold, but the approved rubric requires 
 |---|---|---|---|---|---|---|
 | V1-D001 | renderer | blocker before correction | 🟢 Closed | Clip the Progress highlight to the exact rounded fill silhouette | 🤖 Agent | Commit `6eaffa6`; all-variant clipping test; generated 10% and 90% visual inspection |
 | V1-D002 | process | medium | 🟢 Closed | Prevent evidence-grid clipping and scale inspection cells with their SVGs | 🤖 Agent | Desktop dark/light surfaces at 100%; full 10% bar at 200%; 320-pixel viewport check |
-| V1-D003 | renderer | medium | 🟡 Open | Replace the detached same-silhouette shadow with a connected, parameterized 3D extrusion/side-wall treatment while keeping it as an independent SVG layer | 🤖 Agent | Re-render Button, Panel, and Progress frame at both accepted sizes/states; inspect connection, corners, and alpha on both backgrounds |
+| V1-D003 | renderer | medium | 🟢 Closed | Replace the detached same-silhouette shadow with a connected, parameterized 3D extrusion/side-wall treatment while keeping it as an independent SVG layer | 🤖 Agent | 16 renderer tests; accepted Button states/sizes, Panel heights, and Progress frame widths inspected on light/dark surfaces at desktop and mobile viewports |
 | V1-D004 | process | gate failure | 🟢 Closed | Audit reviewer-visible provenance, source/version links, manifests, hashes, and reproduction instructions; correct the smallest missing or unclear evidence | 🤖 Agent | [Traceability audit](../evidence/v1-neon-core-core-components/TRACEABILITY_AUDIT.md); re-scored `5/5`; V1 gate passed |
 
 ## Revalidation 1 — V1-D004
@@ -71,7 +71,18 @@ The weighted total exceeds the Pass threshold, but the approved rubric requires 
 - **Current gate decision:** 🟢 Pass
 - **Retained original gate decision:** 🔴 Fail at `91/100` before V1-D004
 
-The re-score meets the mandatory `5/5` minimum. With every dimension at or above its minimum, a total of `93/100`, and no blocker, the approved rubric produces a V1 Pass. V1-D003 remains tracked as a non-blocking visual improvement.
+The re-score meets the mandatory `5/5` minimum. With every dimension at or above its minimum, a total of `93/100`, and no blocker, the approved rubric produces a V1 Pass.
+
+## Revalidation 2 — V1-D003
+
+| Field | Value |
+|---|---|
+| Correction status | 🟢 Complete |
+| Implementation | Stable shadow group IDs now contain connected, parameterized extrusion bodies; Button depth is state-aware, while Panel and Progress frame depths are component parameters |
+| Automated result | 16 renderer tests pass; V1 evidence validator enforces connected extrusion semantics on every affected generated SVG |
+| Browser result | Accepted sizes/states inspected on light and dark surfaces at `1440 × 1000` and `390 × 844`; no detached silhouette, clipping, halo, or background spill observed |
+| Affected finding | V1-D003 only; the approved `93/100` gate score is unchanged |
+| Automatic blockers | None |
 
 ## Gate sign-off
 
@@ -96,3 +107,4 @@ The original review is retained for traceability. Revalidation must append the a
 | 2026-07-16 | Recorded the project-owner scorecard, 91/100 weighted result, rubric-computed Fail outcome, and corrective findings V1-D003/V1-D004 | Codex |
 | 2026-07-16 | Appended V1-D004 corrective evidence and opened the affected-dimension re-score without overwriting the original result | Codex |
 | 2026-07-16 | Appended the project-owner `5/5` traceability re-score and recorded the rubric-computed V1 Pass at `93/100` with no blockers | Project owner / Codex |
+| 2026-07-16 | Closed V1-D003 after connected extrusion implementation, automated geometry coverage, and desktop/mobile light/dark visual revalidation | Codex |

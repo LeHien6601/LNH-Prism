@@ -56,11 +56,11 @@ function sha256(content: Uint8Array | string): string {
 function stateRecipe(state: ButtonState) {
   switch (state) {
     case "pressed":
-      return { fillTop: "#3972E5", fillBottom: "#2859B8", shadowOpacity: 0.38, mainY: 2, shadowY: 4, highlightOpacity: 0.16 };
+      return { fillTop: "#3972E5", fillBottom: "#2859B8", extrusionOpacity: 0.5, extrusionDepth: 2, mainY: 2, highlightOpacity: 0.16 };
     case "disabled":
-      return { fillTop: "#6E86AE", fillBottom: "#526986", shadowOpacity: 0.24, mainY: 0, shadowY: 4, highlightOpacity: 0 };
+      return { fillTop: "#6E86AE", fillBottom: "#526986", extrusionOpacity: 0.34, extrusionDepth: 4, mainY: 0, highlightOpacity: 0 };
     default:
-      return { fillTop: "#5B91FF", fillBottom: "#326BDA", shadowOpacity: 0.58, mainY: 0, shadowY: 4, highlightOpacity: 0.42 };
+      return { fillTop: "#5B91FF", fillBottom: "#326BDA", extrusionOpacity: 0.72, extrusionDepth: 4, mainY: 0, highlightOpacity: 0.42 };
   }
 }
 
@@ -76,6 +76,9 @@ export function renderPrimaryButtonSvg(request: PrimaryButtonRequest): string {
   const inset = 1;
   const mainWidth = logicalWidth - inset * 2;
   const mainRadius = radius - inset;
+  const surfaceY = recipe.mainY + inset;
+  const surfaceHeight = mainHeight - inset * 2;
+  const extrusionHeight = surfaceHeight + recipe.extrusionDepth;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${logicalWidth * 2}" height="${BUTTON_HEIGHT_LOGICAL * 2}" viewBox="0 0 ${logicalWidth} ${BUTTON_HEIGHT_LOGICAL}" role="img" aria-label="Neon Core primary button ${state}">
@@ -88,12 +91,16 @@ export function renderPrimaryButtonSvg(request: PrimaryButtonRequest): string {
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="${recipe.highlightOpacity}"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="button-extrusion-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#193765"/>
+      <stop offset="100%" stop-color="#09172E"/>
+    </linearGradient>
   </defs>
-  <g id="layer-shadow" data-layer="shadow">
-    <rect x="${inset}" y="${recipe.shadowY}" width="${mainWidth}" height="${mainHeight}" rx="${mainRadius}" fill="#102040" fill-opacity="${recipe.shadowOpacity}"/>
+  <g id="layer-shadow" data-layer="shadow" data-effect="connected-extrusion" data-depth="${recipe.extrusionDepth}">
+    <rect data-role="extrusion-body" x="${inset}" y="${surfaceY}" width="${mainWidth}" height="${extrusionHeight}" rx="${mainRadius}" fill="url(#button-extrusion-gradient)" fill-opacity="${recipe.extrusionOpacity}"/>
   </g>
   <g id="layer-fill" data-layer="fill">
-    <rect x="${inset}" y="${recipe.mainY + inset}" width="${mainWidth}" height="${mainHeight - inset * 2}" rx="${mainRadius}" fill="url(#button-fill-gradient)"/>
+    <rect x="${inset}" y="${surfaceY}" width="${mainWidth}" height="${surfaceHeight}" rx="${mainRadius}" fill="url(#button-fill-gradient)"/>
   </g>
   <g id="layer-border" data-layer="border">
     <rect x="${inset + 1}" y="${recipe.mainY + inset + 1}" width="${mainWidth - 2}" height="${mainHeight - inset * 2 - 2}" rx="${mainRadius - 1}" fill="none" stroke="#D9E8FF" stroke-width="2"/>

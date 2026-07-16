@@ -69,3 +69,4 @@ M1 V1: create a Primary Button, a Panel, and a Progress Bar for a real screen. T
 | 2026-07-16 | Integrated all Progress Bar variants and independent parts into the renderer-backed showcase for mobile-context review | Codex |
 | 2026-07-16 | Clipped the Progress Bar highlight to the rounded value-fill silhouette after visual review found cap overflow | Codex |
 | 2026-07-16 | Bound V1 manifests to approved source paths/hashes, real material provenance, renderer sources, dependency lock, and verified output hashes for V1-D004 | Codex |
+| 2026-07-16 | Replaced detached duplicate silhouettes with connected, parameterized extrusion bodies for Button, Panel, and Progress frame while retaining stable independent layer IDs | Codex |

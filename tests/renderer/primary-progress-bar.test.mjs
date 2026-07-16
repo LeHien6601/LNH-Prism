@@ -8,6 +8,7 @@ import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import {
   PROGRESS_HEIGHT_LOGICAL,
+  FRAME_EXTRUSION_DEPTH_LOGICAL,
   PROGRESS_PERCENTAGES,
   PROGRESS_WIDTHS_LOGICAL,
   getProgressFillGeometry,
@@ -35,6 +36,15 @@ test("Progress Bar frame and fill remain separate renderable SVG parts", () => {
   assert.match(preview, /id="part-frame"/);
   assert.match(preview, /id="part-fill"/);
   assert.match(fill, /clip-path="url\(#progress-inner-clip\)"/);
+});
+
+test("Progress frame uses a connected extrusion body rather than an offset frame silhouette", () => {
+  for (const logicalWidth of PROGRESS_WIDTHS_LOGICAL) {
+    const frame = renderProgressFrameSvg(logicalWidth);
+    assert.match(frame, new RegExp(`id="layer-frame-shadow" data-layer="shadow" data-effect="connected-extrusion" data-depth="${FRAME_EXTRUSION_DEPTH_LOGICAL}"`));
+    assert.match(frame, new RegExp(`data-role="extrusion-body" x="1" y="1" width="${logicalWidth - 2}" height="22" rx="10"`));
+    assert.match(frame, new RegExp(`id="layer-frame-fill" data-layer="fill">\\s*<rect x="1" y="1" width="${logicalWidth - 2}" height="20" rx="10"`));
+  }
 });
 
 test("Progress Bar fill geometry is readable and bounded at all V1 percentages", () => {

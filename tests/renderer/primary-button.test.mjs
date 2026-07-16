@@ -23,6 +23,15 @@ test("Primary Button SVG keeps V1 visual effects as independent named layers", (
   assert.doesNotMatch(svg, /<filter/);
 });
 
+test("Primary Button uses a connected state-aware extrusion instead of a shifted duplicate silhouette", () => {
+  for (const [state, surfaceY, depth] of [["normal", 1, 4], ["pressed", 3, 2], ["disabled", 1, 4]]) {
+    const svg = renderPrimaryButtonSvg({ logicalWidth: 160, state });
+    assert.match(svg, new RegExp(`id="layer-shadow" data-layer="shadow" data-effect="connected-extrusion" data-depth="${depth}"`));
+    assert.match(svg, new RegExp(`data-role="extrusion-body" x="1" y="${surfaceY}" width="158" height="${50 + depth}" rx="23"`));
+    assert.match(svg, new RegExp(`id="layer-fill" data-layer="fill">\\s*<rect x="1" y="${surfaceY}" width="158" height="50" rx="23"`));
+  }
+});
+
 test("Primary Button PNG output is deterministic for pinned inputs", () => {
   const first = renderPrimaryButton({ logicalWidth: 160, state: "normal" });
   const second = renderPrimaryButton({ logicalWidth: 160, state: "normal" });

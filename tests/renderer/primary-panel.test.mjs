@@ -6,7 +6,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
-import { PANEL_HEIGHTS_LOGICAL, PANEL_WIDTH_LOGICAL, renderPrimaryPanel, renderPrimaryPanelSvg, writePrimaryPanelProof } from "../../dist/renderer/primary-panel.js";
+import { PANEL_EXTRUSION_DEPTH_LOGICAL, PANEL_HEIGHTS_LOGICAL, PANEL_WIDTH_LOGICAL, renderPrimaryPanel, renderPrimaryPanelSvg, writePrimaryPanelProof } from "../../dist/renderer/primary-panel.js";
 
 const hash = (content) => createHash("sha256").update(content).digest("hex");
 const schema = JSON.parse(await readFile(new URL("../../specs/schemas/export-manifest.schema.json", import.meta.url), "utf8"));
@@ -34,6 +34,15 @@ test("Primary Panel preserves fixed corners and highlight depth at both heights"
   }
   assert.match(baseline, /data-height="184"/);
   assert.match(tall, /data-height="304"/);
+});
+
+test("Primary Panel extrusion extends from the surface origin and remains an independent layer", () => {
+  for (const logicalHeight of PANEL_HEIGHTS_LOGICAL) {
+    const svg = renderPrimaryPanelSvg({ logicalHeight });
+    assert.match(svg, new RegExp(`id="layer-shadow" data-layer="shadow" data-effect="connected-extrusion" data-depth="${PANEL_EXTRUSION_DEPTH_LOGICAL}"`));
+    assert.match(svg, new RegExp(`data-role="extrusion-body" x="1" y="1" width="430" height="${logicalHeight - 1}" rx="23"`));
+    assert.match(svg, new RegExp(`id="layer-fill" data-layer="fill">\\s*<rect x="1" y="1" width="430" height="${logicalHeight - 8}" rx="23"`));
+  }
 });
 
 test("Primary Panel PNG output is deterministic for pinned inputs", () => {
