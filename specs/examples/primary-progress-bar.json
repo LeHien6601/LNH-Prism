@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "id": "primary-progress-bar",
+  "version": "0.1.0",
+  "status": "draft",
+  "style": { "id": "neon-core", "version": "0.1.0" },
+  "template": { "id": "progress-bar", "version": "0.1.0" },
+  "layers": [
+    { "id": "progress-frame-shadow", "kind": "shadow", "enabled": true },
+    { "id": "progress-frame-fill", "kind": "fill", "enabled": true },
+    { "id": "progress-frame-border", "kind": "border", "enabled": true },
+    { "id": "progress-value-fill", "kind": "fill", "enabled": true },
+    { "id": "progress-value-highlight", "kind": "highlight", "enabled": true }
+  ],
+  "states": { "normal": {} },
+  "sizing": { "mode": "nine-slice", "minimum": { "width": 320, "height": 24 } },
+  "compatibility": { "minimumRendererVersion": "0.1.0" }
+}

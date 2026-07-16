@@ -22,6 +22,7 @@ const exampleSchemas = new Map([
   ["style-neon-core.json", "style-spec.schema.json"],
   ["primary-button.json", "component-spec.schema.json"],
   ["primary-panel.json", "component-spec.schema.json"],
+  ["primary-progress-bar.json", "component-spec.schema.json"],
   ["neon-core-materials.json", "material-pack.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"]
 ]);

@@ -8,6 +8,7 @@
     "prepare:showcase": "npm run build:renderer && node scripts/prepare-showcase.mjs",
     "render:primary-button": "npm run build:renderer && node dist/renderer/primary-button-cli.js",
     "render:primary-panel": "npm run build:renderer && node dist/renderer/primary-panel-cli.js",
+    "render:primary-progress-bar": "npm run build:renderer && node dist/renderer/primary-progress-bar-cli.js",
     "test:renderer": "npm run build:renderer && node --test tests/renderer/*.test.mjs",
     "validate:contracts": "node tests/contracts/validate-contracts.mjs",
     "validate:showcase": "node scripts/validate-showcase.mjs",
