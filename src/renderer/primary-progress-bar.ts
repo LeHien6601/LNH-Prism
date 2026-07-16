@@ -98,10 +98,15 @@ export function getProgressFillGeometry({ logicalWidth, percent }: ProgressBarRe
 
 function fillLayers(request: ProgressBarRequest): string {
   const geometry = getProgressFillGeometry(request);
-  return `    <g id="layer-progress-fill" data-layer="fill" data-percent="${request.percent}" clip-path="url(#progress-inner-clip)">
+  return `    <defs>
+      <clipPath id="progress-fill-shape-clip">
+        <rect x="${geometry.x}" y="${geometry.y}" width="${geometry.width}" height="${geometry.height}" rx="${geometry.radius}"/>
+      </clipPath>
+    </defs>
+    <g id="layer-progress-fill" data-layer="fill" data-percent="${request.percent}" clip-path="url(#progress-inner-clip)">
       <rect x="${geometry.x}" y="${geometry.y}" width="${geometry.width}" height="${geometry.height}" rx="${geometry.radius}" fill="url(#progress-fill-gradient)"/>
     </g>
-    <g id="layer-progress-highlight" data-layer="highlight" clip-path="url(#progress-inner-clip)">
+    <g id="layer-progress-highlight" data-layer="highlight" clip-path="url(#progress-fill-shape-clip)">
       <rect x="${geometry.x}" y="${geometry.y}" width="${geometry.width}" height="6" rx="3" fill="url(#progress-highlight-gradient)"/>
     </g>`;
 }

@@ -49,6 +49,17 @@ test("Progress Bar fill geometry is readable and bounded at all V1 percentages",
   }
 });
 
+test("Progress Bar highlight is clipped to the rounded fill silhouette", () => {
+  for (const logicalWidth of PROGRESS_WIDTHS_LOGICAL) {
+    for (const percent of PROGRESS_PERCENTAGES) {
+      const fill = renderProgressFillSvg({ logicalWidth, percent });
+      const geometry = getProgressFillGeometry({ logicalWidth, percent });
+      assert.match(fill, new RegExp(`<clipPath id="progress-fill-shape-clip">\\s*<rect x="${geometry.x}" y="${geometry.y}" width="${geometry.width}" height="${geometry.height}" rx="${geometry.radius}"/>`));
+      assert.match(fill, /id="layer-progress-highlight" data-layer="highlight" clip-path="url\(#progress-fill-shape-clip\)"/);
+    }
+  }
+});
+
 test("Progress Bar PNG output is deterministic for pinned inputs", () => {
   const request = { logicalWidth: 320, percent: 50 };
   const first = renderPrimaryProgressBarPng(request);

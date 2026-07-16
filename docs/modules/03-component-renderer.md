@@ -67,3 +67,4 @@ M1 V1: create a Primary Button, a Panel, and a Progress Bar for a real screen. T
 | 2026-07-16 | Completed Primary Panel proof at both target heights with fixed corners, tiled grain, manifests, and deterministic-output tests | Codex |
 | 2026-07-16 | Completed Primary Progress Bar proof with independent frame/fill outputs at two widths and three fill percentages | Codex |
 | 2026-07-16 | Integrated all Progress Bar variants and independent parts into the renderer-backed showcase for mobile-context review | Codex |
+| 2026-07-16 | Clipped the Progress Bar highlight to the rounded value-fill silhouette after visual review found cap overflow | Codex |
