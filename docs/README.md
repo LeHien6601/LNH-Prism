@@ -8,9 +8,9 @@ This documentation package defines the plan for a production-oriented system tha
 
 | Field | Current value |
 |---|---|
-| Status | 🟡 In progress — M0 gates accepted; M1 renderer proof is next |
-| Active milestone | 🟡 M1: Deterministic MVP renderer |
-| Next task | 🔵 Prove the V1 SVG renderer with the Primary Button |
+| Status | 🟡 In progress — M1/V1 passed; M2 definition is under review |
+| Active milestone | 🟡 M2: Design system and reusable materials |
+| Next task | 🟣 Review and approve the M2 implementation specification and V2 rubric |
 | North-star outcome | Generate consistent UI components, states, and size variants from reusable styles/materials |
 | First production validation | Build a real Primary Button, Panel, and Progress Bar in one selected style |
 
@@ -25,9 +25,12 @@ This documentation package defines the plan for a production-oriented system tha
 | [Component renderer](modules/03-component-renderer.md) | Deterministic structure, layers, states, and size variants |
 | [Materials & textures](modules/04-materials-textures.md) | Reusable procedural and AI-sourced materials |
 | [Validation lab](modules/05-validation-lab.md) | Real-asset validation milestones and review loops |
-| [V1 visual-review rubric](validation/V1_VISUAL_REVIEW_RUBRIC.md) | Draft scorecard and evidence requirements for the first real validation |
+| [V1 visual-review rubric](validation/V1_VISUAL_REVIEW_RUBRIC.md) | Approved scorecard and evidence requirements for the completed first validation |
 | [V1 Neon Core reference brief](reference-briefs/V1_NEON_CORE.md) | Selected style direction, palette, scale, and V1 constraints |
 | [V1 core-component acceptance briefs](acceptance-briefs/V1_CORE_COMPONENTS.md) | Approved dimensions, states, layers, and evidence for the first three assets |
+| [V2 Neon Market reference brief](reference-briefs/V2_NEON_MARKET.md) | Approved shop-popup family and Neon Alloy direction |
+| [M2 Neon Market implementation specification](implementation/M2_NEON_MARKET_IMPLEMENTATION_SPEC.md) | Draft versioned requirements, bounded controls, implementation slices, and validation obligations |
+| [V2 visual-review rubric](validation/V2_VISUAL_REVIEW_RUBRIC.md) | Draft evidence package, scoring thresholds, blockers, and scorecard for M2 |
 | [ADR-009: V1 render/export stack](decisions/ADR-009-v1-render-export-stack.md) | Approved TypeScript, SVG, resvg, and JSON-manifest architecture |
 | [Unity export](modules/06-unity-export.md) | Assets, metadata, slicing, naming, and importer integration |
 | [Production hardening](modules/07-production-hardening.md) | Reliability, regression testing, performance, and operations |
