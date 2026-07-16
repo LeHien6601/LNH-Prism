@@ -2,8 +2,9 @@
 
 | Field | Value |
 |---|---|
-| Status | 🟣 Proposed — defer decision until M1 revalidation |
+| Status | 🟢 Approved — scope-boxed shared-renderer prototype |
 | Date | 2026-07-16 |
+| Decision date | 2026-07-16 |
 | Requester | 🧭 Project owner |
 | Owner | 🧭 Product owner + 🛠️ technical lead |
 | Classification | Incremental improvement |
@@ -32,11 +33,11 @@ This proposal does not authorize arbitrary drawing, layer editing, material auth
 | Contracts | No schema change is expected for the initial experiment; controls must respect existing bounds. |
 | Showcase | Changes it from read-only selection to a bounded parameter sandbox, increasing editor-scope risk. |
 | Validation | Enables boundary and intermediate-value review; must not replace committed manifests or reproducible CLI output. |
-| Schedule | Must not delay V1-D004 revalidation or V1-D003 correction. |
+| Schedule | One post-M1 implementation cycle; stop at the approved boundary and review the result before beginning M2 work. |
 
-## Options for later decision
+## Reviewed options
 
-1. **Time-box a shared-renderer prototype (recommended):** prove Button width and Progress value controls using the same deterministic SVG functions, then measure drift and maintenance cost.
+1. **Time-box a shared-renderer prototype — approved:** prove Button width/state and Progress width/value controls using the same deterministic SVG functions, then measure drift and maintenance cost.
 2. **Use pre-generated variants only:** lower technical cost, but not truly real-time and weak for intermediate-value inspection.
 3. **Defer to M2:** align controls with formal tokens, variants, and state recipes before exposing them.
 4. **Reject:** preserve a strictly read-only showcase and rely on CLI regeneration.
@@ -50,12 +51,21 @@ This proposal does not authorize arbitrary drawing, layer editing, material auth
 - The page remains local and dependency-free at runtime unless a separate technical decision approves a build/runtime dependency.
 - The feature remains a validation surface, not a general asset editor.
 
-## Decision required
+## Approved prototype boundary
 
-After the M1 corrective review, Product and Technical leads choose: approve the time-boxed prototype, use pre-generated variants, defer to M2, or reject.
+- Include Primary Button width and normal/pressed/disabled state controls within contract-supported bounds.
+- Include Progress Bar width and continuous `0–100%` value controls within contract-supported bounds.
+- Show active component ID, parameters, source version, and renderer version as read-only traceability data.
+- Treat this as one implementation cycle; stop after the bounded controls, equivalence tests, and review evidence are complete.
+- Exclude Panel resizing, arbitrary layer or material editing, persistence, source-spec mutation, and new runtime dependencies.
+
+## Decision
+
+The project owner chose **Option A** on 2026-07-16. Implementation is authorized only within the approved prototype boundary. Any expansion requires a new change review.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-16 | Registered project-owner request and initial bounded impact review | Codex |
+| 2026-07-16 | Approved Option A as one scope-boxed shared-renderer prototype with explicit controls, exclusions, and equivalence requirements | Project owner / Codex |
