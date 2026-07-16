@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "id": "alloy-circuit-pattern",
+  "version": "0.1.0",
+  "kind": "procedural-tile",
+  "colorSpace": "sRGB",
+  "tile": { "width": 32, "height": 32, "units": "logical-pixels" },
+  "alpha": { "minimum": 0, "maximum": 0.18 },
+  "contrast": 1,
+  "edgeSignature": { "top": "0,16,32", "bottom": "0,16,32", "left": "0,16,32", "right": "0,16,32" },
+  "containsComponentGeometry": false,
+  "rights": "LNHGames internal procedural source"
+}

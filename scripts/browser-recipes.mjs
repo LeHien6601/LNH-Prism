@@ -19,3 +19,8 @@ export function buildClassicBrowserRecipes(compiledModule) {
     .replace(/^\s*export\s*\{\s*\};?\s*$/gm, "");
   return `/* Generated from dist/renderer/svg-recipes.js. Do not edit. */\n(function (global) {\n${body}\n  global.LNHPrismRecipes = Object.freeze({ ${BROWSER_RECIPE_EXPORTS.join(", ")} });\n})(globalThis);\n`;
 }
+
+export function buildM2BrowserRecipes(compiledMaterials, compiledComponents) {
+  const strip = (module) => module.replace(/^import[^;]+;\s*$/gm, "").replace(/^export\s+/gm, "").replace(/^\s*export\s*\{[^}]*\};?\s*$/gm, "");
+  return `/* Generated from deterministic M2 material and component recipes. Do not edit. */\n(function (global) {\n${strip(compiledMaterials)}\n${strip(compiledComponents)}\n  global.LNHPrismM2Recipes = Object.freeze({ renderNeonAlloyComponentSvg });\n})(globalThis);\n`;
+}

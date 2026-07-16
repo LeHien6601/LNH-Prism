@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "id": "neon-alloy-materials",
+  "version": "0.1.0",
+  "status": "approved",
+  "name": "Neon Alloy Materials",
+  "sources": [
+    { "id": "alloy-grain", "type": "procedural", "path": "materials/neon-alloy/alloy-grain.json", "sha256": "a909b0c9fe2783e61a3ca6d7abefb8c3a7e2e6efc2352901323d2ee79cb5a4c7", "rights": "LNHGames internal procedural source" },
+    { "id": "alloy-circuit-pattern", "type": "procedural", "path": "materials/neon-alloy/alloy-circuit-pattern.json", "sha256": "af11d78fe9b5d05874c156e82a3c6e3619000ee6401426cfe2920cbb24ba1d34", "rights": "LNHGames internal procedural source" },
+    { "id": "alloy-holo-accent", "type": "procedural", "path": "materials/neon-alloy/alloy-holo-accent.json", "sha256": "f0ed4967585ad9e5e2bb56949d06eeed01af5205dbb8b3891fd5926d821a83d8", "rights": "LNHGames internal procedural source" }
+  ],
+  "materials": [
+    { "id": "alloy-grain-overlay", "role": "detail-overlay", "sourceId": "alloy-grain", "normalization": { "tileMode": "tile", "opacity": 0.1, "blendMode": "soft-light", "scale": 1, "offsetX": 0, "offsetY": 0, "contrast": 0.8, "saturation": 1 } },
+    { "id": "alloy-circuit-overlay", "role": "pattern", "sourceId": "alloy-circuit-pattern", "normalization": { "tileMode": "tile", "opacity": 0.08, "blendMode": "screen", "scale": 1, "offsetX": 0, "offsetY": 0, "contrast": 1, "saturation": 1 } },
+    { "id": "alloy-holo-decal", "role": "decal", "sourceId": "alloy-holo-accent", "normalization": { "tileMode": "clamp", "opacity": 0.18, "blendMode": "screen", "scale": 1, "offsetX": 0.5, "offsetY": 0.5, "contrast": 1.1, "saturation": 1.2 } }
+  ],
+  "compatibility": { "minimumRendererVersion": "0.1.0" }
+}

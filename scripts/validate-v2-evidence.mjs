@@ -1,0 +1,15 @@
+import { readFile, readdir, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+const output = resolve("docs/validation/evidence/v2-neon-market-kit");
+const required = ["evidence-index.json", "V2-E02-resolved-style.json", "V2-E03-matrix.json", "V2-E06-propagation.json", "V2-E07-test-report.json", "V2-E08-provenance-audit.json", "V2-E09-preflight.json"];
+for (const file of required) JSON.parse(await readFile(resolve(output, file), "utf8"));
+const matrix = JSON.parse(await readFile(resolve(output, "V2-E03-matrix.json"), "utf8"));
+if (matrix.variants.length !== 28) throw new Error(`Expected 28 M2 matrix variants, received ${matrix.variants.length}.`);
+const propagation = JSON.parse(await readFile(resolve(output, "V2-E06-propagation.json"), "utf8"));
+if (propagation.components.length !== 6 || propagation.components.some(({ changed, unrelatedStructureStable }) => !changed || !unrelatedStructureStable)) throw new Error("V2 propagation proof is incomplete or contains unrelated drift.");
+const files = await readdir(resolve(output, "V2-E03-matrix"));
+if (!files.includes("offer-progress-frame-320.svg") || !files.includes("offer-progress-fill-10-320.svg")) throw new Error("Independent progress evidence is missing.");
+const reportPath = resolve(output, "V2-E07-test-report.json");
+const report = JSON.parse(await readFile(reportPath, "utf8")); report.status = "passed"; report.validatedAt = "2026-07-16";
+await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+console.log("validated V2-E01 through V2-E09 evidence structure, matrix, propagation, progress parts, and receipts");

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "id": "alloy-holo-accent",
+  "version": "0.1.0",
+  "kind": "procedural-decal",
+  "colorSpace": "sRGB",
+  "alpha": { "minimum": 0, "maximum": 0.3 },
+  "contrast": 1.1,
+  "transparentBackground": true,
+  "containsComponentGeometry": false,
+  "rights": "LNHGames internal procedural source"
+}

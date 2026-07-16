@@ -64,3 +64,5 @@ M2 V2: produce a themed popup set using one material pack and document every reu
 | 2026-07-16 | Selected Neon Alloy as the first reusable M2 material direction for the V2 Neon Market Kit | Project owner |
 | 2026-07-16 | Drafted Neon Alloy source categories, typed bounds, normalization, binding, propagation, and preflight requirements; implementation awaits approval | Codex |
 | 2026-07-16 | Approved Neon Alloy source categories, typed controls, normalization, binding, and propagation requirements | Project owner |
+| 2026-07-16 | Added M2-S1 typed bounds for material tokens, normalization, and template-governed component bindings; source generation remains M2-S2 | Codex |
+| 2026-07-16 | Completed M2-S2 with reusable Neon Alloy source descriptors, pack receipts, preflight, bounded normalization, mask-safe SVG utilities, and deterministic isolation previews | Codex |

@@ -20,10 +20,14 @@ for (const schema of schemas.values()) ajv.addSchema(schema);
 
 const exampleSchemas = new Map([
   ["style-neon-core.json", "style-spec.schema.json"],
+  ["style-neon-market-overlay.json", "style-spec.schema.json"],
   ["primary-button.json", "component-spec.schema.json"],
+  ["primary-button-material-bindings.json", "component-spec.schema.json"],
+  ["m2-shop-panel.json", "component-spec.schema.json"], ["m2-category-tabs.json", "component-spec.schema.json"], ["m2-primary-purchase-button.json", "component-spec.schema.json"], ["m2-secondary-cancel-button.json", "component-spec.schema.json"], ["m2-currency-badge.json", "component-spec.schema.json"], ["m2-limited-offer-progress.json", "component-spec.schema.json"],
   ["primary-panel.json", "component-spec.schema.json"],
   ["primary-progress-bar.json", "component-spec.schema.json"],
   ["neon-core-materials.json", "material-pack.schema.json"],
+  ["neon-alloy-materials.json", "material-pack.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"]
 ]);
 
@@ -34,6 +38,35 @@ for (const [exampleFile, schemaFile] of exampleSchemas) {
   if (!validate(example)) throw new Error(`${exampleFile} failed ${schemaFile}: ${ajv.errorsText(validate.errors)}`);
   console.log(`validated ${exampleFile}`);
 }
+
+const styleSchema = schemas.get("style-spec.schema.json");
+const validateStyle = ajv.getSchema(styleSchema.$id);
+const rootStyle = JSON.parse(await readFile(join(exampleDir, "style-neon-core.json"), "utf8"));
+const validOverlay = structuredClone(rootStyle);
+validOverlay.id = "neon-market";
+validOverlay.name = "Neon Market";
+validOverlay.extends = { id: "neon-core", version: "0.1.0" };
+validOverlay.tokens = { material: { edgeLightOpacity: 0.42 } };
+if (!validateStyle(validOverlay)) throw new Error(`style overlay must allow partial tokens: ${ajv.errorsText(validateStyle.errors)}`);
+const incompleteRoot = structuredClone(rootStyle);
+incompleteRoot.tokens = { colors: { primary: "#4F84FF" } };
+if (validateStyle(incompleteRoot)) throw new Error("style root without extends must reject incomplete tokens.");
+const outOfRangeMaterialToken = structuredClone(validOverlay);
+outOfRangeMaterialToken.tokens.material.edgeLightOpacity = 0.66;
+if (validateStyle(outOfRangeMaterialToken)) throw new Error("style schema must reject out-of-range material tokens.");
+console.log("validated style inheritance and material token bounds");
+
+const materialSchema = schemas.get("material-pack.schema.json");
+const validateMaterialPack = ajv.getSchema(materialSchema.$id);
+const invalidNormalization = JSON.parse(await readFile(join(exampleDir, "neon-core-materials.json"), "utf8"));
+invalidNormalization.materials[0].normalization.scale = 4.1;
+if (validateMaterialPack(invalidNormalization)) throw new Error("material schema must reject out-of-range normalization scale.");
+const componentSchema = schemas.get("component-spec.schema.json");
+const validateComponent = ajv.getSchema(componentSchema.$id);
+const invalidBinding = JSON.parse(await readFile(join(exampleDir, "primary-button.json"), "utf8"));
+invalidBinding.materialBindings = [{ slot: "surface-grain", materialId: "blue-grain-overlay", overrides: { grainOpacity: 0.21 } }];
+if (validateComponent(invalidBinding)) throw new Error("component schema must reject out-of-range material binding overrides.");
+console.log("rejected invalid material normalization and bindings");
 
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);

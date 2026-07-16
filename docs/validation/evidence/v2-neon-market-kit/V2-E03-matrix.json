@@ -1,0 +1,344 @@
+{
+  "logicalScale": 1,
+  "outputScale": 2,
+  "variants": [
+    {
+      "id": "shop-panel-240",
+      "spec": "m2-shop-panel",
+      "request": {
+        "component": "panel",
+        "width": 432,
+        "height": 240
+      },
+      "svgSha256": "e3b134a5aa1bace55cd5d25df168d310a2afcbd494d2191b4e2fee54651371d7",
+      "pngSha256": "456ecbd516ce6771cbe41c8e436948308e17330e2c7f31338c6d994b3df6a30e"
+    },
+    {
+      "id": "shop-panel-360",
+      "spec": "m2-shop-panel",
+      "request": {
+        "component": "panel",
+        "width": 432,
+        "height": 360
+      },
+      "svgSha256": "e9b6b2b037b5c3490f0de3ed09e83c0454687d646388734c05940db63088057e",
+      "pngSha256": "654138086183b7d4fad273624d962e2fe4226493717f12fc3e87e289333102fc"
+    },
+    {
+      "id": "category-tab-normal-112",
+      "spec": "m2-category-tabs",
+      "request": {
+        "component": "tab",
+        "width": 112,
+        "height": 44,
+        "state": "normal"
+      },
+      "svgSha256": "2807c3a42e4d3fb10109e2c0206f32b2934136e014d936a2c441f04a8a1e45f3",
+      "pngSha256": "d672cfc25b87dbf352b672ceae2a31374a65107c0b06a9e40ca0594a1f9edfd5"
+    },
+    {
+      "id": "category-tab-selected-112",
+      "spec": "m2-category-tabs",
+      "request": {
+        "component": "tab",
+        "width": 112,
+        "height": 44,
+        "state": "selected"
+      },
+      "svgSha256": "5d5775326d379d679f283d186509cb7637acc5fb5096ab29c8bdeb446fca8283",
+      "pngSha256": "e545ec11f898a6f5305525bfd3e8ba9048d117551c56867d41335aea8d4221e6"
+    },
+    {
+      "id": "category-tab-normal-200",
+      "spec": "m2-category-tabs",
+      "request": {
+        "component": "tab",
+        "width": 200,
+        "height": 44,
+        "state": "normal"
+      },
+      "svgSha256": "aeaccabce354b18e433b09af1791238d624cd29eda1a9ad4d1767998021ea2e2",
+      "pngSha256": "0b3068da2e0459d778b54e9b3eb42c60a259eccc3d1bd3d8bbf1e52da61650fd"
+    },
+    {
+      "id": "category-tab-selected-200",
+      "spec": "m2-category-tabs",
+      "request": {
+        "component": "tab",
+        "width": 200,
+        "height": 44,
+        "state": "selected"
+      },
+      "svgSha256": "71a4db90896f923ac7194c13fd6efcd61aa927143a84cf9aa8a4b39f81e860cd",
+      "pngSha256": "eb5bff01902c4a6ad2f0c8832b6a2a2226a038567bca946720447a883925ae69"
+    },
+    {
+      "id": "primary-button-normal-160",
+      "spec": "m2-primary-purchase-button",
+      "request": {
+        "component": "button",
+        "width": 160,
+        "height": 56,
+        "state": "normal"
+      },
+      "svgSha256": "267bdc3e0fe1b6f3c07fc54d279a9c60f82b2f61939a9741ed9cf2409251b6c8",
+      "pngSha256": "adc663500a6156f7fa2d71d7d9baa4e3f2440b86c048cd73a88d21a3b860e418"
+    },
+    {
+      "id": "primary-button-pressed-160",
+      "spec": "m2-primary-purchase-button",
+      "request": {
+        "component": "button",
+        "width": 160,
+        "height": 56,
+        "state": "pressed"
+      },
+      "svgSha256": "27fec296a9f8b40ea9c52525711cb5225457aef315ffb9527deab9e1789452d4",
+      "pngSha256": "95686c39b756f83f8333ff18a56f8fab5122a8c54e21073653874325fcdbc797"
+    },
+    {
+      "id": "primary-button-disabled-160",
+      "spec": "m2-primary-purchase-button",
+      "request": {
+        "component": "button",
+        "width": 160,
+        "height": 56,
+        "state": "disabled"
+      },
+      "svgSha256": "c4fe6583b04767289558a8f665f64c691dd3e104e39daed50cdef96c79d89cd9",
+      "pngSha256": "73b20843fb7f91ff63e4f9334a89aec7964ccbf282ffa36a504e292995e96bea"
+    },
+    {
+      "id": "primary-button-normal-240",
+      "spec": "m2-primary-purchase-button",
+      "request": {
+        "component": "button",
+        "width": 240,
+        "height": 56,
+        "state": "normal"
+      },
+      "svgSha256": "ee90b32845c2bfd6abe0b589025a52b2bfd1f75fb0d3eeae0d868b5c1e15e495",
+      "pngSha256": "2fc32169e8ba21e730a691f1c38c58d487df69e9c4fbeecd5d6f5175f38e85ce"
+    },
+    {
+      "id": "primary-button-pressed-240",
+      "spec": "m2-primary-purchase-button",
+      "request": {
+        "component": "button",
+        "width": 240,
+        "height": 56,
+        "state": "pressed"
+      },
+      "svgSha256": "efabd247371534dd2b59873509205ecc1ffe8f2969e783402267080fcb09b666",
+      "pngSha256": "50634ccfea48675765035a8b045e1fff75368581f368c23139a92420e17985e2"
+    },
+    {
+      "id": "primary-button-disabled-240",
+      "spec": "m2-primary-purchase-button",
+      "request": {
+        "component": "button",
+        "width": 240,
+        "height": 56,
+        "state": "disabled"
+      },
+      "svgSha256": "9a3ab9f02f279840ca06bf1bd441bf921d2c2237d64c10eb480b7d7c56a40133",
+      "pngSha256": "37d27206a9350a4068a8e1bdcc579f96d38f9e4a8e17e8813786409198feeaf5"
+    },
+    {
+      "id": "secondary-button-normal-160",
+      "spec": "m2-secondary-cancel-button",
+      "request": {
+        "component": "button",
+        "width": 160,
+        "height": 56,
+        "state": "normal"
+      },
+      "svgSha256": "267bdc3e0fe1b6f3c07fc54d279a9c60f82b2f61939a9741ed9cf2409251b6c8",
+      "pngSha256": "adc663500a6156f7fa2d71d7d9baa4e3f2440b86c048cd73a88d21a3b860e418"
+    },
+    {
+      "id": "secondary-button-pressed-160",
+      "spec": "m2-secondary-cancel-button",
+      "request": {
+        "component": "button",
+        "width": 160,
+        "height": 56,
+        "state": "pressed"
+      },
+      "svgSha256": "27fec296a9f8b40ea9c52525711cb5225457aef315ffb9527deab9e1789452d4",
+      "pngSha256": "95686c39b756f83f8333ff18a56f8fab5122a8c54e21073653874325fcdbc797"
+    },
+    {
+      "id": "secondary-button-disabled-160",
+      "spec": "m2-secondary-cancel-button",
+      "request": {
+        "component": "button",
+        "width": 160,
+        "height": 56,
+        "state": "disabled"
+      },
+      "svgSha256": "c4fe6583b04767289558a8f665f64c691dd3e104e39daed50cdef96c79d89cd9",
+      "pngSha256": "73b20843fb7f91ff63e4f9334a89aec7964ccbf282ffa36a504e292995e96bea"
+    },
+    {
+      "id": "secondary-button-normal-240",
+      "spec": "m2-secondary-cancel-button",
+      "request": {
+        "component": "button",
+        "width": 240,
+        "height": 56,
+        "state": "normal"
+      },
+      "svgSha256": "ee90b32845c2bfd6abe0b589025a52b2bfd1f75fb0d3eeae0d868b5c1e15e495",
+      "pngSha256": "2fc32169e8ba21e730a691f1c38c58d487df69e9c4fbeecd5d6f5175f38e85ce"
+    },
+    {
+      "id": "secondary-button-pressed-240",
+      "spec": "m2-secondary-cancel-button",
+      "request": {
+        "component": "button",
+        "width": 240,
+        "height": 56,
+        "state": "pressed"
+      },
+      "svgSha256": "efabd247371534dd2b59873509205ecc1ffe8f2969e783402267080fcb09b666",
+      "pngSha256": "50634ccfea48675765035a8b045e1fff75368581f368c23139a92420e17985e2"
+    },
+    {
+      "id": "secondary-button-disabled-240",
+      "spec": "m2-secondary-cancel-button",
+      "request": {
+        "component": "button",
+        "width": 240,
+        "height": 56,
+        "state": "disabled"
+      },
+      "svgSha256": "9a3ab9f02f279840ca06bf1bd441bf921d2c2237d64c10eb480b7d7c56a40133",
+      "pngSha256": "37d27206a9350a4068a8e1bdcc579f96d38f9e4a8e17e8813786409198feeaf5"
+    },
+    {
+      "id": "currency-badge-normal-104",
+      "spec": "m2-currency-badge",
+      "request": {
+        "component": "badge",
+        "width": 104,
+        "height": 44,
+        "state": "normal",
+        "accentDecal": false
+      },
+      "svgSha256": "a0f151c4f662356f86f74f3bd2b89ab2e3b18071034ea1eaf7fce305934479ed",
+      "pngSha256": "a5acfaeff92c93d270e457565ce9ff7177b1a0f8ed91360e93c68bbc9740b0ac"
+    },
+    {
+      "id": "currency-badge-highlighted-104",
+      "spec": "m2-currency-badge",
+      "request": {
+        "component": "badge",
+        "width": 104,
+        "height": 44,
+        "state": "highlighted",
+        "accentDecal": true
+      },
+      "svgSha256": "62e31c22c76424e1e9bfee0435c5a236c6c4fbf133acf5cac13ae8ff6aa96b6f",
+      "pngSha256": "b11ce0c9b246f121b4d1f5af4a759e5d18a59e4758a8be628d37afe16744ff89"
+    },
+    {
+      "id": "currency-badge-normal-200",
+      "spec": "m2-currency-badge",
+      "request": {
+        "component": "badge",
+        "width": 200,
+        "height": 44,
+        "state": "normal",
+        "accentDecal": false
+      },
+      "svgSha256": "cbf77d9d20bc6ef65f0b26903f5965f9d9121ef7a0f69cd99d5348836272a51f",
+      "pngSha256": "1b86217bdaf11ed715db944368f65a64db7e496008ce5a534c3e47289491b84a"
+    },
+    {
+      "id": "currency-badge-highlighted-200",
+      "spec": "m2-currency-badge",
+      "request": {
+        "component": "badge",
+        "width": 200,
+        "height": 44,
+        "state": "highlighted",
+        "accentDecal": true
+      },
+      "svgSha256": "5202fb69569c48d41c11977b6b97c7d9a6a7b24a3912cd6d734dbe2af791d693",
+      "pngSha256": "bc1d9e382a6539bc8d48b0b214183b66c200df326864e9a638c11da1a9c4b4b0"
+    },
+    {
+      "id": "offer-progress-10-320",
+      "spec": "m2-limited-offer-progress",
+      "request": {
+        "component": "progress",
+        "width": 320,
+        "height": 24,
+        "percent": 10
+      },
+      "svgSha256": "b1019f18c368178da5a87821bfd1db104a297274b6feff00a0f4cbc6cfa8e171",
+      "pngSha256": "85b03bb87a58e7f8aa4e738b568cfce15b07640284e35e5b16704a17ca800c7c"
+    },
+    {
+      "id": "offer-progress-50-320",
+      "spec": "m2-limited-offer-progress",
+      "request": {
+        "component": "progress",
+        "width": 320,
+        "height": 24,
+        "percent": 50
+      },
+      "svgSha256": "2f81d3bf6cdcc3dae4500f12700bf1beb5d4f3336317e5e7c34858b833bfc506",
+      "pngSha256": "a458349145b8c5a5c494aed4429244f95fa6d7e7d66a4332a280f73f1ae94008"
+    },
+    {
+      "id": "offer-progress-90-320",
+      "spec": "m2-limited-offer-progress",
+      "request": {
+        "component": "progress",
+        "width": 320,
+        "height": 24,
+        "percent": 90
+      },
+      "svgSha256": "4c075c845fee30d6bac42973d61fb14769d4c317418cb43bd80c946caaea9f6e",
+      "pngSha256": "5871f0408f3deadab96337387e622e341fde0758890f6b1ff45d9c496c52dad0"
+    },
+    {
+      "id": "offer-progress-10-432",
+      "spec": "m2-limited-offer-progress",
+      "request": {
+        "component": "progress",
+        "width": 432,
+        "height": 24,
+        "percent": 10
+      },
+      "svgSha256": "98710fe65f7247ce4fe2f3810176fae88731d5eb3fc81664e93c88ead4833257",
+      "pngSha256": "b5227153dae149145b7bebbd34b2e861d8b76533f012fcb3b251f28881447ee8"
+    },
+    {
+      "id": "offer-progress-50-432",
+      "spec": "m2-limited-offer-progress",
+      "request": {
+        "component": "progress",
+        "width": 432,
+        "height": 24,
+        "percent": 50
+      },
+      "svgSha256": "84df17f36fe1783cfe4128c16c20a9faa635b494eb97d59e3b03794c341bad65",
+      "pngSha256": "72f5619b9cdc743eff68760050fe5e15083fafa80e4d2bb0cbe2833162e39880"
+    },
+    {
+      "id": "offer-progress-90-432",
+      "spec": "m2-limited-offer-progress",
+      "request": {
+        "component": "progress",
+        "width": 432,
+        "height": 24,
+        "percent": 90
+      },
+      "svgSha256": "30d9c46bc4c24c9b40514c041d10df504acbc7a03aef627bf686f61165ae56cc",
+      "pngSha256": "5f320f325b091841d491609be752572ef9e65b302715b0246b788058c517927e"
+    }
+  ]
+}

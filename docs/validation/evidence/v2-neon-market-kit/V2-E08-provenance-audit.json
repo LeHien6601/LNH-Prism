@@ -1,0 +1,83 @@
+{
+  "sourceTreeSha256": "52152573b1e85f421d658c52f525bbb7ff7483c4b36d40a09758657dc6e4c59e",
+  "receipts": [
+    {
+      "path": "specs/examples/style-neon-core.json",
+      "sha256": "4aed9a66a1d85ff19d11e7bcbae0977f716993555f6027da5ffd7c92b718c2d0"
+    },
+    {
+      "path": "specs/examples/style-neon-market-overlay.json",
+      "sha256": "038ae045742d69dfb8e94d27fe0b3ef02bdef6af2c0a92f6763b5bf7d5631763"
+    },
+    {
+      "path": "specs/examples/neon-alloy-materials.json",
+      "sha256": "8db90fd831ce58adf558e7cda808f9a2192933d80c41a7eb4063bcc82afb1530"
+    },
+    {
+      "path": "specs/examples/m2-shop-panel.json",
+      "sha256": "e4d0c65baf17642e974b12c5ff9ed30ce58ed6ffaf0c02aa317b08a016c7b9b9"
+    },
+    {
+      "path": "specs/examples/m2-category-tabs.json",
+      "sha256": "6f6e21348016e0479079d57eb87132b697ed9b781cc8f0f5cad8fc4e57b986df"
+    },
+    {
+      "path": "specs/examples/m2-primary-purchase-button.json",
+      "sha256": "9c5e60a55c97db0b2e4b248a2ac4fd5a5603e9f5f23eede2658dba7db9441ef6"
+    },
+    {
+      "path": "specs/examples/m2-secondary-cancel-button.json",
+      "sha256": "18c2159a633755ad8e2f13d5879d2556c711f0b95f8b4f70ca87c612a937d43a"
+    },
+    {
+      "path": "specs/examples/m2-currency-badge.json",
+      "sha256": "89fd359f75580081ad7bdf228fe9652aa5b6c58fa6fad104d19e74e299906193"
+    },
+    {
+      "path": "specs/examples/m2-limited-offer-progress.json",
+      "sha256": "db2e6712fe76521ac1ba7ddb2145a1b861143721fbdea7e56285641f2a77b0cb"
+    },
+    {
+      "path": "materials/neon-alloy/alloy-grain.json",
+      "sha256": "a909b0c9fe2783e61a3ca6d7abefb8c3a7e2e6efc2352901323d2ee79cb5a4c7"
+    },
+    {
+      "path": "materials/neon-alloy/alloy-circuit-pattern.json",
+      "sha256": "af11d78fe9b5d05874c156e82a3c6e3619000ee6401426cfe2920cbb24ba1d34"
+    },
+    {
+      "path": "materials/neon-alloy/alloy-holo-accent.json",
+      "sha256": "f0ed4967585ad9e5e2bb56949d06eeed01af5205dbb8b3891fd5926d821a83d8"
+    },
+    {
+      "path": "src/materials/neon-alloy.ts",
+      "sha256": "c61a74e1b61d8ca1e94ca3c0dd504c5c83d7fd39d9d6c32bc3703ec5a29c74b1"
+    },
+    {
+      "path": "src/renderer/neon-alloy-components.ts",
+      "sha256": "54b106034effeb2f7d88733df4982402ac68104cf885c699831059e545a26965"
+    },
+    {
+      "path": "src/renderer/neon-market-scenario.ts",
+      "sha256": "d9b8fb41b2b9d8ee006bb9c1beab7c0ab1aab1d8a2a852fc482cadd9e00def59"
+    },
+    {
+      "path": "src/resolver/style-resolver.ts",
+      "sha256": "04bc9dd245e05b9692e1ef50763e79f696ca82a74e3bec3ae92018c5a97f6318"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "9e111c4ae81fa2d761b2cc291f628a19c7e27d4ca5ebd492b2ad0484aedd742c"
+    }
+  ],
+  "materialReuse": {
+    "m2-shop-panel": "neon-alloy-materials@0.1.0",
+    "m2-category-tabs": "neon-alloy-materials@0.1.0",
+    "m2-primary-purchase-button": "neon-alloy-materials@0.1.0",
+    "m2-secondary-cancel-button": "neon-alloy-materials@0.1.0",
+    "m2-currency-badge": "neon-alloy-materials@0.1.0",
+    "m2-limited-offer-progress": "neon-alloy-materials@0.1.0"
+  },
+  "outputCount": 28,
+  "browserCliEquivalent": true
+}

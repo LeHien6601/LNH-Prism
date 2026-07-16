@@ -70,3 +70,4 @@ Create one `primary-button` spec that inherits style tokens, overrides one param
 | 2026-07-15 | Initial module definition | Codex |
 | 2026-07-15 | Added JSON Schema Draft 2020-12 contract baseline and validation examples | Codex |
 | 2026-07-16 | Required export-manifest provenance at the schema root, corrected the canonical example, and added explicit missing-provenance rejection coverage | Project owner / Codex |
+| 2026-07-16 | Added M2-S1 version-pinned style overlays, complete resolved-style checks, deterministic ancestor provenance, and bounded material-binding resolution | Codex |

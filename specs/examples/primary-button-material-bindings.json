@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "id": "primary-button-material-bindings",
+  "version": "0.1.0",
+  "status": "draft",
+  "style": { "id": "neon-core", "version": "0.1.0" },
+  "template": { "id": "button", "version": "0.1.0" },
+  "layers": [{ "id": "button-fill", "kind": "fill", "enabled": true }],
+  "states": { "normal": {} },
+  "materialBindings": [{ "slot": "surface-grain", "materialId": "blue-grain-overlay", "overrides": { "grainOpacity": 0.1 } }],
+  "compatibility": { "minimumRendererVersion": "0.1.0" }
+}

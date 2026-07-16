@@ -1,0 +1,72 @@
+{
+  "document": {
+    "schemaVersion": "1.0",
+    "id": "neon-market",
+    "version": "0.1.0",
+    "status": "approved",
+    "name": "Neon Market Overlay",
+    "provenance": {
+      "createdAt": "2026-07-16T09:00:00Z",
+      "sources": [
+        {
+          "type": "human-design",
+          "reference": "docs/reference-briefs/V2_NEON_MARKET.md"
+        }
+      ]
+    },
+    "tokens": {
+      "colors": {
+        "primary": "#4F84FF",
+        "border": "#D9E8FF",
+        "accent": "#00E5FF"
+      },
+      "shape": {
+        "cornerRadius": 24,
+        "strokeWidth": 2
+      },
+      "lighting": {
+        "highlightDirection": "top",
+        "shadowColor": "#102040"
+      },
+      "spacing": {
+        "xs": 4,
+        "sm": 8,
+        "md": 16
+      },
+      "material": {
+        "grainOpacity": 0.1,
+        "patternOpacity": 0.08,
+        "patternScale": 32,
+        "edgeLightOpacity": 0.42,
+        "bevelDepth": 2,
+        "decalOpacity": 0.18
+      }
+    },
+    "renderDefaults": {
+      "targetScale": 2,
+      "colorSpace": "sRGB",
+      "alphaMode": "straight"
+    },
+    "compatibility": {
+      "minimumRendererVersion": "0.1.0"
+    },
+    "path": "specs/examples/style-neon-market-overlay.json",
+    "sha256": "038ae045742d69dfb8e94d27fe0b3ef02bdef6af2c0a92f6763b5bf7d5631763"
+  },
+  "provenance": {
+    "ancestors": [
+      {
+        "id": "neon-core",
+        "version": "0.1.0",
+        "path": "specs/examples/style-neon-core.json",
+        "sha256": "4aed9a66a1d85ff19d11e7bcbae0977f716993555f6027da5ffd7c92b718c2d0"
+      },
+      {
+        "id": "neon-market",
+        "version": "0.1.0",
+        "path": "specs/examples/style-neon-market-overlay.json",
+        "sha256": "038ae045742d69dfb8e94d27fe0b3ef02bdef6af2c0a92f6763b5bf7d5631763"
+      }
+    ]
+  }
+}

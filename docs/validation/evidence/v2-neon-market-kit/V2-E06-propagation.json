@@ -1,0 +1,51 @@
+{
+  "mutation": {
+    "token": "edgeLightOpacity",
+    "from": 0.42,
+    "to": 0.3
+  },
+  "components": [
+    {
+      "id": "m2-shop-panel",
+      "canonicalSha256": "f59ceb29e05230c05bb60fe7495d2a3d2ce1fb65cec8561d22a9d8d365faf87d",
+      "mutatedSha256": "2e16127573008736bcc0de40224a2855c6af1cace332fd15218d8d11d0cff73b",
+      "changed": true,
+      "unrelatedStructureStable": true
+    },
+    {
+      "id": "m2-category-tabs",
+      "canonicalSha256": "4b26ae5aa632929e90acefbbc0d01cd2365b37108453b879aa7fcaddfcf7eab7",
+      "mutatedSha256": "a05f9e9c5a1586da0daa974f364e6b42066680ac9213f61d963c4fc95d0fcccc",
+      "changed": true,
+      "unrelatedStructureStable": true
+    },
+    {
+      "id": "m2-primary-purchase-button",
+      "canonicalSha256": "675285d795104c02fbcf94ff13a74b7fbda63e9d0b4694addd41445bde99f592",
+      "mutatedSha256": "e327ddf6fe1cd4eccc272358609169a46750e360355c36e218fb7dbc8d9544ea",
+      "changed": true,
+      "unrelatedStructureStable": true
+    },
+    {
+      "id": "m2-secondary-cancel-button",
+      "canonicalSha256": "897dcb48e24aa3542be1fe3ea31d2f86010e1a636c102de6e7da9e43a7d3a12c",
+      "mutatedSha256": "86e7605a3dc6f9fb38764dc70fb6e84fe3542a3e0a64d4f45df227a30dd9302d",
+      "changed": true,
+      "unrelatedStructureStable": true
+    },
+    {
+      "id": "m2-currency-badge",
+      "canonicalSha256": "488465b1e7bfc9ee29998fe13df79b55a4d629c4e067c0427f95fcd6db65a16f",
+      "mutatedSha256": "b2f82dbc94e8c9d2687dd9f2cda3040ae94d30932ba6bb41345054cd015394a6",
+      "changed": true,
+      "unrelatedStructureStable": true
+    },
+    {
+      "id": "m2-limited-offer-progress",
+      "canonicalSha256": "94ac13c2b86401a26cef627caa0606b0008dbe08671e6473facbed276a1f4bbd",
+      "mutatedSha256": "580d602ec53e8ed8c201ef462d7c185daf4090671f6d33bd765992e48b0ca4c3",
+      "changed": true,
+      "unrelatedStructureStable": true
+    }
+  ]
+}

@@ -10,7 +10,7 @@ This documentation package defines the plan for a production-oriented system tha
 |---|---|
 | Status | 🟡 In progress — M1/V1 passed; M2 definition gate approved |
 | Active milestone | 🟡 M2: Design system and reusable materials |
-| Next task | 🔵 Implement M2-S1 contract extensions and deterministic style resolver |
+| Next task | 🟣 Conduct and record the V2 visual review |
 | North-star outcome | Generate consistent UI components, states, and size variants from reusable styles/materials |
 | First production validation | Build a real Primary Button, Panel, and Progress Bar in one selected style |
 

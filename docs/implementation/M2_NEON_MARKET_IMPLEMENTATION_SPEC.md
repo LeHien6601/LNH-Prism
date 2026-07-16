@@ -10,7 +10,7 @@
 | Validation target | V2 — Neon Market Kit |
 | Decision source | [ADR-011](../decisions/ADR-011-v2-neon-market-kit.md) |
 | Product/art reference | [V2 reference brief](../reference-briefs/V2_NEON_MARKET.md) |
-| Implementation state | M2-S1 authorized; renderer/material implementation beyond M2-S1 remains gated by the delivery sequence |
+| Implementation state | M2-S5 evidence preflight complete; all eight `0.1.0` review inputs are approved and V2-P001 is closed. Formal V2 scoring is next. |
 
 ## 1. Intended outcome
 
@@ -253,7 +253,7 @@ On 2026-07-16, the project owner approved Option A. The approval covers:
 - implementation sequence;
 - V2 evidence package, scoring thresholds, and automatic blockers.
 
-The V2 rubric's Conditional-pass range is clarified to `82–84`, the mathematical range possible after every dimension meets its mandatory minimum. M2-S1 is now the next Agent-ready task. Approval does not waive the later V2 visual review or authorize work outside the ordered implementation slices.
+The V2 rubric's Conditional-pass range is clarified to `82–84`, the mathematical range possible after every dimension meets its mandatory minimum. The project owner selected staged M2-S5 evidence preparation before the required human review. Approval does not waive the later V2 visual review or authorize work outside the ordered implementation slices.
 
 ## Change history
 
@@ -261,3 +261,10 @@ The V2 rubric's Conditional-pass range is clarified to `82–84`, the mathematic
 |---|---|---|
 | 2026-07-16 | Drafted M2 Neon Market contracts, controls, renderer requirements, implementation slices, validation, and scope boundaries | Codex |
 | 2026-07-16 | Approved Option A and authorized M2-S1 with the V2 Conditional-pass range clarified to `82–84` | Project owner |
+| 2026-07-16 | Completed M2-S1 contract extensions, overlay resolver, ancestor provenance, and focused failure coverage; M2-S2 may begin | Codex |
+| 2026-07-16 | Completed M2-S2 Neon Alloy procedural sources, preflight, normalization/masking primitives, source hashes, and deterministic isolation evidence; M2-S3 may begin | Codex |
+| 2026-07-16 | Completed M2-S3 shared Button, Panel, Progress, Tab, and Badge recipes with bounded state/size, layer-order, clipping, and determinism coverage; M2-S4 may begin | Codex |
+| 2026-07-16 | Completed M2-S4 with six draft component specs, deterministic Neon Market scenario assets, and browser/CLI recipe equivalence; M2-S5 human review may begin | Codex |
+| 2026-07-16 | Project owner selected staged M2-S5 evidence preparation and preflight before formal human V2 scoring | Project owner |
+| 2026-07-16 | Completed M2-S5 automated preflight with V2-E01–V2-E09, matrix, propagation, progress-part, equivalence, and provenance proof; recorded draft-input blocker V2-P001 | Codex |
+| 2026-07-16 | Approved all eight `0.1.0` review inputs, closed V2-P001, and opened formal V2 scoring without changing scores or the gate decision | Project owner / Codex |

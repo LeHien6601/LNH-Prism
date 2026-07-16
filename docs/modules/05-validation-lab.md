@@ -78,3 +78,5 @@ The original 2026-07-16 review scored V1 at `91/100` and failed because Traceabi
 | 2026-07-16 | Selected the Neon Market Kit and reusable Neon Alloy pack as the Practical Validation V2 target | Project owner |
 | 2026-07-16 | Drafted the V2 evidence package, weighted review rubric, automatic blockers, scorecard, and immediate correction/revalidation procedure | Codex |
 | 2026-07-16 | Approved the V2 rubric with `≥85` Pass, `82–84` Conditional Pass, mandatory dimension minimums, and automatic blockers | Project owner |
+| 2026-07-16 | Prepared V2-E01–V2-E09 with 28 matrix variants, shared-token propagation, independent progress parts, browser/CLI equivalence, source/output receipts, and an unscored record; V2-P001 blocks scoring until draft review inputs are approved or rejected | Codex |
+| 2026-07-16 | Approved the eight versioned V2 review inputs at `0.1.0`, closed V2-P001, and queued formal human scoring | Project owner / Codex |

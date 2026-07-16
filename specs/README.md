@@ -4,6 +4,8 @@ These are versioned, portable M0 contracts. They use JSON Schema Draft 2020-12 a
 
 The Neon Core V1 examples are approved validation inputs. Generated V1 manifests bind their IDs and versions to repository paths and SHA-256 hashes; generation fails if an approved input or declared material source drifts.
 
+M2-S1 adds draft Neon Market overlay and material-binding examples. They demonstrate additive `extends`, bounded material tokens, normalization controls, and typed bindings while leaving the approved V1 inputs unchanged.
+
 ## Contract files
 
 | Contract | Purpose |
@@ -29,6 +31,12 @@ Run `npm run validate:contracts`. It validates every JSON Schema and every examp
 ## Compatibility policy
 
 Additive optional fields are backward-compatible within `schemaVersion: 1.0`. Removing, renaming, or changing the meaning of a required field requires a new schema version and a migration note before approval.
+
+### M2-S1 additive extensions
+
+- A style with `extends` is an overlay pinned to an exact parent ID and version; its token maps may be partial, but the resolver requires the merged result to be complete.
+- `tokens.material`, material normalization controls, and component `materialBindings` are bounded and typed. Template-specific slot and override allowlists are enforced by the resolver.
+- Resolved-style provenance records every ancestor path and SHA-256 hash in parent-to-child order.
 
 ### Approved `1.0` provenance correction
 

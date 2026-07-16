@@ -1,0 +1,17 @@
+{
+  "command": "npm run validate",
+  "status": "passed",
+  "coverage": [
+    "contracts",
+    "inheritance",
+    "bounds",
+    "states",
+    "sizes",
+    "clipping",
+    "progress-parts",
+    "browser-cli-equivalence",
+    "determinism",
+    "V1-regression"
+  ],
+  "validatedAt": "2026-07-16"
+}

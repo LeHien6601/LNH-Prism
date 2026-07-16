@@ -13,16 +13,16 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
-| Materials | 🟡 Definition approved | Neon Alloy contracts, bounded controls, implementation slices, and V2 review rules are approved; M2-S1 is next |
+| Materials | 🟡 Ready for V2 scoring | V2-E01–V2-E09 are ready and all eight `0.1.0` review inputs are approved; formal human scoring is next |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
 | Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟡 **M2 implementation** — definition gate approved; M2-S1 ready |
-| Next task | 🔵 **Implement M2-S1 contract extensions and deterministic style resolver** · 🤖 Agent |
-| Next agent-ready task | 🔵 Implement M2-S1 contract extensions and deterministic style resolver |
+| Active milestone | 🟡 **M2 validation review** — V2-P001 closed; evidence is ready for formal scoring |
+| Next task | 🟣 **Conduct and record the V2 visual review** · 🧭 / 🎨 / 🛠️ Human decision |
+| Next agent-ready task | ⚪ None — human V2 scores and gate decision are required |
 | Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
@@ -82,7 +82,12 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Choose the V2 validation target and first material direction | 🧭 Product + 🎨 Art lead | 🟢 Complete | Option A approved: Neon Market Kit at the existing portrait scale with one reusable Neon Alloy material pack; see [ADR-011](decisions/ADR-011-v2-neon-market-kit.md) |
 | P0 | Draft the M2 implementation specification and V2 review rubric | 🤖 Agent | 🟢 Complete | [Implementation specification](implementation/M2_NEON_MARKET_IMPLEMENTATION_SPEC.md) and [V2 rubric](validation/V2_VISUAL_REVIEW_RUBRIC.md) define versioned requirements, bounded controls, delivery slices, evidence, scoring, blockers, and non-goals |
 | P0 | Review and approve the M2 implementation specification and V2 rubric | 🧭 Product + 🎨 Art + 🛠️ technical leads | 🟢 Complete | Option A approved on 2026-07-16; all scope, contract, bounds, slice, evidence, and blocker rules accepted; Conditional Pass clarified to `82–84` |
-| P0 | Implement M2-S1 contract extensions and deterministic style resolver | 🤖 Agent | 🔵 Agent-ready | V1 examples remain valid; additive inheritance/material/binding contracts validate; valid overlays resolve deterministically; missing parents, version mismatches, cycles, invalid bounds/bindings, and incomplete resolved styles fail; ancestor provenance is test-covered |
+| P0 | Implement M2-S1 contract extensions and deterministic style resolver | 🤖 Agent | 🟢 Complete | V1 examples remain valid; additive inheritance/material/binding contracts validate; valid overlays resolve deterministically; missing parents, version mismatches, cycles, invalid bounds/bindings, and incomplete resolved styles fail; ancestor provenance is test-covered |
+| P0 | Implement M2-S2 Neon Alloy sources, normalization, and masking primitives | 🤖 Agent | 🟢 Complete | Source preflight, tile/edge tests, deterministic hashes, isolated layer previews, and bounded normalization controls are ready for renderer integration |
+| P0 | Upgrade shared templates and add Tab/Badge templates for M2-S3 | 🤖 Agent | 🟢 Complete | Shared Panel/Button/Progress recipes and new Tab/Badge recipes implement stable M2 material layers, state/size rules, clipping, and deterministic output coverage |
+| P0 | Create six component specs and assemble the M2-S4 Neon Market scenario | 🤖 Agent | 🟢 Complete | CLI/browser equivalence, complete family/state matrix, scenario preview, and target-phone/light-dark inspection assets are ready for the V2 evidence package |
+| P0 | Prepare the M2-S5 V2 evidence package and preflight | 🤖 Agent | 🟢 Complete | Produced V2-E01–V2-E09 with 28 matrix variants, propagation/provenance/progress-part proof, an unscored record, and V2-P001 for draft review inputs |
+| P0 | Conduct the M2-S5 V2 evidence review | 🧭 Product + 🎨 Art + 🛠️ technical leads | 🟣 Human decision | Review V2-E01–V2-E09, record independent scores, identify blockers, and decide Pass, Conditional Pass, or Fail |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -151,3 +156,10 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Approved Option A for V2: Neon Market Kit with one reusable Neon Alloy pack; queued the M2 specification and V2 rubric as the next agent-ready task | Project owner / Codex |
 | 2026-07-16 | Drafted the M2 Neon Market implementation specification and V2 review rubric; queued human scope, contract, art-control, and quality-gate approval before M2-S1 | Codex |
 | 2026-07-16 | Approved M2 Option A, clarified Conditional Pass to `82–84`, closed the definition gate, and queued M2-S1 contract/resolver implementation | Project owner / Codex |
+| 2026-07-16 | Completed M2-S1 with additive inheritance/material/binding contracts, deterministic resolved-style provenance, and focused rejection coverage; queued M2-S2 | Codex |
+| 2026-07-16 | Completed M2-S2 with Neon Alloy procedural sources, bounded normalization and masking utilities, source hashes, seam/edge preflight, and deterministic isolation evidence; queued M2-S3 | Codex |
+| 2026-07-16 | Completed M2-S3 with shared deterministic Neon Alloy Button/Panel/Progress/Tab/Badge recipes, stable layer ordering, state/size bounds, clipping, and output tests; queued M2-S4 | Codex |
+| 2026-07-16 | Completed M2-S4 with six versioned draft component specs, deterministic Neon Market dark/light scenario previews, and browser/CLI recipe equivalence; queued the human V2 review | Codex |
+| 2026-07-16 | Selected staged V2 review Option A: prepare the complete evidence/preflight package before human scoring; queued the bounded agent task | Project owner |
+| 2026-07-16 | Prepared and validated V2-E01–V2-E09, including the full matrix, shared-token propagation, independent progress parts, browser/CLI equivalence, source/output receipts, and an unscored record; V2-P001 awaits human input approval | Codex |
+| 2026-07-16 | Approved `neon-market`, `neon-alloy-materials`, and all six M2 component specs at `0.1.0`; closed V2-P001 and opened formal V2 scoring | Project owner |
