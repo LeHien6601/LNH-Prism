@@ -28,7 +28,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** assets meet the V1 rubric, remain reusable and structurally inspectable at two sizes, and changes to palette/radius/shadow propagate without manual repainting. Unity integration is deferred to M4.
 
-## ⚪ M2 — Design system and reusable materials
+## 🟢 M2 — Design system and reusable materials
 
 **Goal:** make style application systematic across a component family.
 
@@ -43,9 +43,9 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Definition gate:** 🟢 Approved on 2026-07-16 — the [M2 implementation specification](implementation/M2_NEON_MARKET_IMPLEMENTATION_SPEC.md) and [V2 review rubric](validation/V2_VISUAL_REVIEW_RUBRIC.md) govern the ordered M2 slices; M2-S1 may begin.
 
-**Exit gate:** one style change updates the set consistently; reviewers judge cross-component consistency at or above the agreed threshold.
+**Exit gate:** 🟢 Passed on 2026-07-17 at `93/100` — one style change updated all six components consistently, every mandatory dimension minimum was met, and no blocker remained.
 
-## ⚪ M3 — AI-assisted design analysis and material intake
+## 🟡 M3 — AI-assisted design analysis and material intake
 
 **Goal:** use AI for acceleration while retaining human-controlled specifications.
 
@@ -109,3 +109,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-16 | Approved the Neon Market Kit and Neon Alloy direction as the M2/V2 target; queued specification and rubric drafting before implementation | Project owner / Codex |
 | 2026-07-16 | Drafted the M2 implementation specification and V2 review rubric; added a human definition gate before M2-S1 contract/resolver work | Codex |
 | 2026-07-16 | Approved Option A, clarified the V2 Conditional-pass floor to `82`, and opened M2-S1 contract/resolver implementation | Project owner / Codex |
+| 2026-07-17 | Recorded V2 Pass at `93/100`, completed M2, and opened M3 target definition | Project owner / Codex |

@@ -10,7 +10,7 @@
 | Validation target | V2 — Neon Market Kit |
 | Decision source | [ADR-011](../decisions/ADR-011-v2-neon-market-kit.md) |
 | Product/art reference | [V2 reference brief](../reference-briefs/V2_NEON_MARKET.md) |
-| Implementation state | M2-S5 evidence preflight complete; all eight `0.1.0` review inputs are approved and V2-P001 is closed. Formal V2 scoring is next. |
+| Implementation state | Complete — V2 passed at `93/100` on 2026-07-17 with every mandatory minimum met and no blockers. |
 
 ## 1. Intended outcome
 
@@ -268,3 +268,4 @@ The V2 rubric's Conditional-pass range is clarified to `82–84`, the mathematic
 | 2026-07-16 | Project owner selected staged M2-S5 evidence preparation and preflight before formal human V2 scoring | Project owner |
 | 2026-07-16 | Completed M2-S5 automated preflight with V2-E01–V2-E09, matrix, propagation, progress-part, equivalence, and provenance proof; recorded draft-input blocker V2-P001 | Codex |
 | 2026-07-16 | Approved all eight `0.1.0` review inputs, closed V2-P001, and opened formal V2 scoring without changing scores or the gate decision | Project owner / Codex |
+| 2026-07-17 | Recorded the confirmed V2 scorecard and 🟢 Pass at `93/100`; M2 is complete | Project owner / Codex |

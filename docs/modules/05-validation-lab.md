@@ -62,6 +62,10 @@ Every product module; art/UI reviewers; Unity sample project from M4 onward.
 
 The original 2026-07-16 review scored V1 at `91/100` and failed because Traceability and reproducibility scored `4/5` against a mandatory `5/5`. V1-D004 corrected the provenance chain; the project owner appended a `5/5` re-score with no blockers. The current rubric-computed outcome is 🟢 Pass at `93/100`. V1-D003 was subsequently closed through connected-extrusion implementation and affected visual revalidation without changing the approved gate score.
 
+## Current V2 gate result
+
+The 2026-07-17 guided evidence review scored V2 at `93/100`. Every dimension met its mandatory minimum, Traceability and reproducibility scored the required `5/5`, and no automatic blocker remained. The rubric-computed outcome is 🟢 Pass. Non-blocking V2-N001 and V2-N002 inform the M3 target/specification; V2-N003 remains assigned to M5 production hardening.
+
 ## Change history
 
 | Date | Change | Author |
@@ -81,3 +85,4 @@ The original 2026-07-16 review scored V1 at `91/100` and failed because Traceabi
 | 2026-07-16 | Prepared V2-E01–V2-E09 with 28 matrix variants, shared-token propagation, independent progress parts, browser/CLI equivalence, source/output receipts, and an unscored record; V2-P001 blocks scoring until draft review inputs are approved or rejected | Codex |
 | 2026-07-16 | Approved the eight versioned V2 review inputs at `0.1.0`, closed V2-P001, and queued formal human scoring | Project owner / Codex |
 | 2026-07-16 | Closed V2-P002 as a preview-tool artifact after direct RGBA verification; added light/dark surface pixel-integrity regression coverage and retained formal human scoring as the next task | Codex |
+| 2026-07-17 | Recorded the confirmed V2 scorecard at `93/100`, no blockers, and 🟢 Pass; closed M2 and opened V3 target selection | Project owner / Codex |

@@ -8,9 +8,9 @@ This documentation package defines the plan for a production-oriented system tha
 
 | Field | Current value |
 |---|---|
-| Status | 🟡 In progress — M1/V1 passed; M2 definition gate approved |
-| Active milestone | 🟡 M2: Design system and reusable materials |
-| Next task | 🟣 Conduct and record the V2 visual review |
+| Status | 🟡 In progress — M2/V2 passed at `93/100`; M3 definition is active |
+| Active milestone | 🟡 M3: AI-assisted analysis and material intake definition |
+| Next task | 🟣 Select the V3 concept screen and bounded reconstruction target |
 | North-star outcome | Generate consistent UI components, states, and size variants from reusable styles/materials |
 | First production validation | Build a real Primary Button, Panel, and Progress Bar in one selected style |
 

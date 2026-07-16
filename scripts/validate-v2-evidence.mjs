@@ -10,6 +10,8 @@ if (propagation.components.length !== 6 || propagation.components.some(({ change
 const files = await readdir(resolve(output, "V2-E03-matrix"));
 if (!files.includes("offer-progress-frame-320.svg") || !files.includes("offer-progress-fill-10-320.svg")) throw new Error("Independent progress evidence is missing.");
 const reportPath = resolve(output, "V2-E07-test-report.json");
-const report = JSON.parse(await readFile(reportPath, "utf8")); report.status = "passed"; report.validatedAt = "2026-07-16";
+const report = JSON.parse(await readFile(reportPath, "utf8")); report.status = "passed"; report.validatedAt = "2026-07-17";
+const preflight = JSON.parse(await readFile(resolve(output, "V2-E09-preflight.json"), "utf8"));
+if (preflight.scoringPerformed && (preflight.status !== "review-complete" || typeof preflight.weightedScore !== "number" || !preflight.gateDecision)) throw new Error("Completed V2 review receipt is incomplete.");
 await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 console.log("validated V2-E01 through V2-E09 evidence structure, matrix, propagation, progress parts, and receipts");

@@ -1,6 +1,8 @@
 {
-  "status": "ready-for-human-review",
+  "status": "review-complete",
   "blockers": [],
   "defects": [],
-  "scoringPerformed": false
+  "scoringPerformed": true,
+  "weightedScore": 93,
+  "gateDecision": "pass"
 }

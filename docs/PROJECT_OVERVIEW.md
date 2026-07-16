@@ -13,17 +13,17 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
-| Materials | 🟡 Ready for V2 scoring | V2-E01–V2-E09 are ready and all eight `0.1.0` review inputs are approved; formal human scoring is next |
-| AI analysis | ⚪ Not started | Add only after manual style specification is proven |
+| Materials | 🟢 V2 gate passed | Neon Market and Neon Alloy passed V2 at `93/100`; shared material reuse, propagation, structure, and traceability met every mandatory minimum |
+| AI analysis | 🟡 M3 definition pending | Select one new concept screen and bounded reconstruction target before drafting the M3 implementation specification |
 | Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟡 **M2 validation review** — V2-P001 closed; evidence is ready for formal scoring |
-| Next task | 🟣 **Conduct and record the V2 visual review** · 🧭 / 🎨 / 🛠️ Human decision |
-| Next agent-ready task | ⚪ None — human V2 scores and gate decision are required |
-| Last reviewed | 2026-07-16 |
+| Active milestone | 🟡 **M3 definition** — M2/V2 passed at `93/100`; V3 target selection is required |
+| Next task | 🟣 **Select the V3 concept screen and bounded reconstruction target** · 🧭 Product + 🎨 Art human decision |
+| Next agent-ready task | ⚪ None — the V3 source reference and target component family must be chosen first |
+| Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
 ## 3. Objective boundaries
@@ -48,8 +48,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 |---|---|---|---|
 | 🟢 | M0 | Contracts, repository, reference brief | 🟢 Architecture review accepted |
 | 🟢 | M1 | MVP renderer and three core templates | 🟢 V1 Pass — `93/100` |
-| ⚪ | M2 | Tokens, variants, states, material packs | 🟣 Validation V2 review |
-| ⚪ | M3 | AI-assisted analysis and material intake | 🟣 Human-reviewed fidelity test |
+| 🟢 | M2 | Tokens, variants, states, material packs | 🟢 V2 Pass — `93/100` |
+| 🟡 | M3 | AI-assisted analysis and material intake | 🟣 Human-reviewed fidelity test |
 | ⚪ | M4 | Unity export and import metadata | 🟣 Unity integration test |
 | ⚪ | M5 | Production hardening and regression suite | 🟣 Production readiness review |
 | ⚪ | M6 | Optional showcase scaling and workflow review | 🟣 Operations review |
@@ -87,7 +87,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Upgrade shared templates and add Tab/Badge templates for M2-S3 | 🤖 Agent | 🟢 Complete | Shared Panel/Button/Progress recipes and new Tab/Badge recipes implement stable M2 material layers, state/size rules, clipping, and deterministic output coverage |
 | P0 | Create six component specs and assemble the M2-S4 Neon Market scenario | 🤖 Agent | 🟢 Complete | CLI/browser equivalence, complete family/state matrix, scenario preview, and target-phone/light-dark inspection assets are ready for the V2 evidence package |
 | P0 | Prepare the M2-S5 V2 evidence package and preflight | 🤖 Agent | 🟢 Complete | Produced V2-E01–V2-E09 with 28 matrix variants, propagation/provenance/progress-part proof, an unscored record, and V2-P001 for draft review inputs |
-| P0 | Conduct the M2-S5 V2 evidence review | 🧭 Product + 🎨 Art + 🛠️ technical leads | 🟣 Human decision | Review V2-E01–V2-E09, record independent scores, identify blockers, and decide Pass, Conditional Pass, or Fail |
+| P0 | Conduct the M2-S5 V2 evidence review | 🧭 Product + 🎨 Art + 🛠️ technical leads | 🟢 Complete | Guided evidence review recorded `93/100`, every mandatory minimum met, no blockers, and 🟢 Pass on 2026-07-17 |
+| P0 | Select the V3 concept screen and bounded reconstruction target | 🧭 Product + 🎨 Art lead | 🟣 Human decision | Nominate one primary concept reference, target platform/scale, and a bounded Button/Panel/Progress reconstruction family without cropped component pixels |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -164,3 +165,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Prepared and validated V2-E01–V2-E09, including the full matrix, shared-token propagation, independent progress parts, browser/CLI equivalence, source/output receipts, and an unscored record; V2-P001 awaits human input approval | Codex |
 | 2026-07-16 | Approved `neon-market`, `neon-alloy-materials`, and all six M2 component specs at `0.1.0`; closed V2-P001 and opened formal V2 scoring | Project owner |
 | 2026-07-16 | Verified the reported light-surface black regions were a preview-tool artifact, closed V2-P002 with direct RGBA checks and regression coverage, and retained formal V2 scoring as the next task | Codex |
+| 2026-07-17 | Confirmed the six V2 scores, recorded 🟢 Pass at `93/100` with no blockers, closed M2, and opened the human V3 target-selection decision | Project owner / Codex |
