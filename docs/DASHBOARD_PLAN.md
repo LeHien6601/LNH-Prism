@@ -46,6 +46,10 @@ Do not copy component artwork into HTML/CSS. The page references generated SVG/P
 - CSS imitation drifts from renderer output: prevent it by referencing generated SVG/PNG assets only.
 - Showcase becomes an editor: lock M1 to read-only previews and HTML content slots.
 
+## Proposed enhancement
+
+[CR-002](change-requests/CR-002-realtime-showcase-controls.md) records a request for bounded real-time component-size and Progress-value controls. It remains unapproved and must not delay M1 corrective work. If approved later, preview output must come from the same deterministic renderer recipes and remain within component-contract bounds.
+
 ## Change history
 
 | Date | Change | Author |
@@ -53,3 +57,4 @@ Do not copy component artwork into HTML/CSS. The page references generated SVG/P
 | 2026-07-15 | Initial dashboard proposal created | Codex |
 | 2026-07-16 | Replaced the dashboard proposal with a renderer-backed component showcase | Project owner |
 | 2026-07-16 | Added layer-stack labels and content-slot alignment requirements | Project owner |
+| 2026-07-16 | Registered bounded real-time preview controls as proposed CR-002 pending M1 revalidation | Codex |

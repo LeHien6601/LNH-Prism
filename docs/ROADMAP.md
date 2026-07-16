@@ -4,7 +4,7 @@
 
 Each milestone ends in a gate. A gate can pass only with working evidence, a recorded review, and an updated next task in `PROJECT_OVERVIEW.md`. If a gate fails, fix the smallest root cause and repeat the validation; do not add unrelated capability.
 
-## 🟡 M0 — Foundation and contracts
+## 🟢 M0 — Foundation and contracts
 
 **Goal:** establish a shared language before implementation.
 
@@ -15,7 +15,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** contracts reviewed by art, UI, and engineering; no ambiguity about the three V1 assets.
 
-## ⚪ M1 — Deterministic MVP renderer
+## 🟡 M1 — Deterministic MVP renderer corrective cycle
 
 **Goal:** prove that controlled layers can replace screenshot extraction for core UI.
 
@@ -97,3 +97,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-15 | Initial roadmap created | Codex |
 | 2026-07-15 | Added milestone status indicators | Codex |
 | 2026-07-16 | Refocused M1/V1 on reusable high-quality structured SVG output and deferred Unity integration to M4 | Project owner |
+| 2026-07-16 | Recorded the failed V1 gate caused by the mandatory traceability minimum and entered the M1 corrective/revalidation cycle | Project owner / Codex |

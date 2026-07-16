@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟡 **M1** — Deterministic MVP renderer |
-| Next task | 🟣 **Conduct the V1 SVG quality review and record scores** · 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | 🔴 None until reviewers record a V1 Pass, Conditional pass, or Fail; corrective Agent tasks may be created from reviewed defects |
+| Active milestone | 🟡 **M1** — Corrective work after failed V1 gate |
+| Next task | 🔵 **Audit and close the V1 traceability evidence gap (V1-D004)** · 🤖 Agent |
+| Next agent-ready task | 🔵 Audit reviewer-visible provenance and reproducibility, correct the smallest gap, then prepare the affected dimension for human re-scoring |
 | Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
@@ -73,7 +73,10 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Add the completed Progress Bar to the showcase | 🤖 Agent | 🟢 Complete | Both widths and all percentages use independent renderer frame/fill outputs; part separation, layer order, and combined scenario are visible |
 | P1 | Review and approve the V1 visual-review rubric | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved by the project owner on 2026-07-16; V1 focuses on reusable high-quality structured SVG and defers Unity integration to M4 |
 | P1 | Prepare the V1 validation evidence package and record | 🤖 Agent | 🟢 Complete | V1-E01 through V1-E06, light/dark review surfaces, SVG structure checks, defect history, and an unscored traceable record are ready |
-| P1 | Conduct the V1 SVG quality review and record scores | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | All six dimensions are scored, blockers are dispositioned, sign-off is recorded, and the M1 gate receives Pass, Conditional pass, or Fail |
+| P1 | Conduct the V1 SVG quality review and record scores | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Review recorded at 91/100 with no blockers; rubric outcome is Fail because Traceability scored 4 below its mandatory minimum of 5 |
+| P0 | Audit and close the V1 traceability evidence gap (V1-D004) | 🤖 Agent | 🔵 Agent-ready | Reproduction succeeds from documented versioned inputs; missing or unclear evidence is corrected; audit is recorded for human re-scoring |
+| P1 | Improve the connected 3D shadow treatment (V1-D003) | 🤖 Agent | 🔵 Agent-ready | Shadow reads as a connected extrusion/side wall, remains an independent parameterized SVG layer, and passes light/dark review at accepted sizes/states |
+| P2 | Review bounded real-time showcase controls (CR-002) | 🧭 Product + 🛠️ technical lead | 🟣 Human decision | Decide approve, time-box, defer, or reject after M1 revalidation; controls must reuse deterministic renderer logic and remain within bounded size/progress parameters |
 
 ## 6. Decision register
 
@@ -130,3 +133,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Corrected Progress Bar highlight cap overflow found during showcase review and added an all-variant clipping regression test | Codex |
 | 2026-07-16 | Approved the V1 rubric with reusable structured SVG as the M1 target, deferred Unity integration to M4, and unblocked V1 evidence preparation | Project owner |
 | 2026-07-16 | Prepared the reproducible V1-E01–V1-E06 package, light/dark SVG review page, structural validator, defect log, and unscored human record | Codex |
+| 2026-07-16 | Recorded the 91/100 V1 review; gate failed because Traceability scored below its mandatory minimum; queued traceability and connected-shadow corrections and registered CR-002 | Project owner / Codex |

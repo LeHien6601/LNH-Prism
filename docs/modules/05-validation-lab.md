@@ -58,6 +58,10 @@ Every product module; art/UI reviewers; Unity sample project from M4 onward.
 - Demo-only tests hide real problems: validation briefs must name a real target screen.
 - Endless polishing: define pass targets before rendering and defer non-blockers.
 
+## Current V1 gate result
+
+The 2026-07-16 human review scored V1 at `91/100` with no automatic blockers, but Traceability and reproducibility scored `4/5` against a mandatory minimum of `5/5`. The rubric-computed outcome is therefore 🔴 Fail. V1-D004 owns the traceability audit and affected-dimension revalidation; V1-D003 records the non-blocking connected-shadow improvement.
+
 ## Change history
 
 | Date | Change | Author |
@@ -66,3 +70,4 @@ Every product module; art/UI reviewers; Unity sample project from M4 onward.
 | 2026-07-15 | Added detailed V1 scorecard, blocker criteria, and evidence package | Codex |
 | 2026-07-16 | Approved V1 as an SVG structure/quality gate and deferred Unity integration validation to M4 | Project owner |
 | 2026-07-16 | Prepared V1-E01 through V1-E06, light/dark SVG review surfaces, an unscored validation record, and drift validation | Codex |
+| 2026-07-16 | Recorded the 91/100 V1 review and rubric-computed Fail outcome; queued traceability revalidation and connected-shadow improvement | Project owner / Codex |

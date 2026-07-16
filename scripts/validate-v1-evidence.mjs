@@ -57,6 +57,25 @@ for (const width of [320, 432]) {
 }
 
 if (!evidenceHtml.includes('data-independent-parts="primary-progress-bar"')) throw new Error("V1 evidence does not expose independent Progress Bar parts.");
-if (!validationRecord.includes("🟣 Ready for human review")) throw new Error("V1 validation record must remain ready for human review until reviewers score it.");
 
-console.log("validated V1-E01 through V1-E06 package, structured SVG assets, review backgrounds, and unscored human record");
+const isReadyForReview = validationRecord.includes("Ready for human review")
+  && validationRecord.includes("**Weighted score:** Pending");
+const hasRecordedScore = /\*\*Weighted score:\*\*\s+\d+(?:\.\d+)?\s*\/\s*100/.test(validationRecord);
+const hasRecordedBlockers = validationRecord.includes("**Automatic blockers:**")
+  && !validationRecord.includes("**Automatic blockers:** Pending");
+const hasGateDecision = /\*\*Rubric-computed decision:\*\*.*(?:Pass|Conditional pass|Fail)/.test(validationRecord);
+const isReviewed = validationRecord.includes("Reviewed")
+  && hasRecordedScore
+  && hasRecordedBlockers
+  && hasGateDecision;
+
+if (!isReadyForReview && !isReviewed) {
+  throw new Error("V1 validation record must be either ready and unscored or reviewed with a numeric score, blocker disposition, and rubric-computed decision.");
+}
+
+if (isReviewed && validationRecord.includes("Rubric-computed decision:** 🔴 Fail")) {
+  if (!validationRecord.includes("| 🟡 Open |")) throw new Error("A failed V1 review must record at least one open corrective finding.");
+  if (!validationRecord.includes("Revalidation must append")) throw new Error("A failed V1 review must preserve the original result and define append-only revalidation.");
+}
+
+console.log(`validated V1-E01 through V1-E06 package, structured SVG assets, review backgrounds, and ${isReviewed ? "recorded gate result" : "unscored human record"}`);
