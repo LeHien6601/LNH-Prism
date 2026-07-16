@@ -27,6 +27,8 @@ Update `docs/PROJECT_OVERVIEW.md` when a task changes status, a gate is reviewed
 4. Add or update focused tests whenever behavior, schemas, rendering, or export changes.
 5. Verify the result in proportion to risk. Do not claim validation that did not run.
 6. Review the final diff for correctness, scope, generated files, and accidental changes.
+7. For every task that changes repository files, stage the task's complete cohesive change, create a Conventional Commit, and push the current branch to its configured upstream after validation. Never force-push, rewrite history, or switch branches merely to complete this step.
+8. If committing or pushing fails, preserve the working tree and local commit, report the exact blocker, and do not claim the task is fully delivered.
 
 Use Conventional Commits:
 
@@ -35,6 +37,16 @@ type(scope): imperative summary
 ```
 
 Examples: `feat(renderer): add layered primary button template`, `test(specs): validate material provenance`, `docs(roadmap): record v1 validation gate`.
+
+## Required task handoff
+
+Every final task reply must include:
+
+1. The completed outcome and validation actually run.
+2. The next task exactly as recorded in `docs/PROJECT_OVERVIEW.md`, prefixed by its execution color and followed by its owner symbol/name. Example: `Next: 🟣 Conduct V2 review — 🧭 Product + 🎨 Art + 🛠️ Technical leads`.
+3. Git status: current branch, clean or dirty working-tree state, created commit hash/subject when files changed, and push target/result. For read-only work, explicitly state that no commit or push was needed.
+
+Do not omit the next-task assignment or Git status even when the task itself is complete. A mutating task is not fully handed off until its commit is pushed, unless an exact push blocker is reported.
 
 ## Task ownership and eligibility
 
@@ -84,6 +96,17 @@ Treat a user message beginning with `Review:` as a read-only whole-project healt
 2. Report: current status, completed/active work, blockers, weaknesses/risks, missing validation, documentation drift, and the next recommended actions.
 3. Classify findings by severity and distinguish facts from assumptions.
 4. Do not implement fixes, modify status, create tasks, or advance the roadmap during a review unless explicitly authorized.
+
+### `Push:`
+
+Treat a user message beginning with `Push:` as authorization to push all commits on the current local branch to its configured upstream remote branch.
+
+1. Inspect Git status, the current branch, configured upstream, and commits that have not yet been pushed.
+2. Push the current branch without creating commits, amending history, rebasing, or switching branches.
+3. Preserve uncommitted changes; report them separately and do not include them in the push.
+4. If the branch has no configured upstream or the push is rejected, report the exact blocker and do not force-push or alter history.
+
+`Push:` remains available for retrying or explicitly checking publication, but normal mutating task completion already includes commit and push under the Engineering workflow.
 
 ## Quality gates
 
