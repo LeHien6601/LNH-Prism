@@ -31,6 +31,35 @@
         </ul>
       </section>
 
+      <section class="traceability-evidence" data-traceability-evidence="v1" aria-labelledby="traceability-title">
+        <div>
+          <p class="eyebrow">V1-E02 / V1-D004 · reproducibility</p>
+          <h2 id="traceability-title">Traceability chain</h2>
+          <p>Each generated manifest binds approved source identities to their repository paths and SHA-256 hashes, the component renderer source, the pinned renderer version, the dependency lock, and every SVG/PNG output hash.</p>
+        </div>
+        <ol class="traceability-chain">
+          <li><strong>Approved intent</strong><span>Reference brief and component acceptance briefs</span></li>
+          <li><strong>Versioned inputs</strong><span>Style, component, material pack, and verified procedural source</span></li>
+          <li><strong>Deterministic renderer</strong><span>Component recipe, renderer version, and package lock hashed per manifest</span></li>
+          <li><strong>Verified outputs</strong><span>Manifest paths, dimensions, states, and SHA-256 hashes checked by validation</span></li>
+        </ol>
+        <div class="traceability-links">
+          <a href="../specs/examples/style-neon-core.json">Style spec</a>
+          <a href="../specs/examples/primary-button.json">Button spec</a>
+          <a href="../specs/examples/primary-panel.json">Panel spec</a>
+          <a href="../specs/examples/primary-progress-bar.json">Progress spec</a>
+          <a href="../specs/examples/neon-core-materials.json">Material pack</a>
+          <a href="../materials/neon-core/blue-grain.json">Procedural source</a>
+          <a href="generated/component-registry.json">Generated registry</a>
+          <a href="generated/primary-button/normal/160/primary-button.manifest.json">Button manifest</a>
+          <a href="generated/primary-panel/240/primary-panel.manifest.json">Panel manifest</a>
+          <a href="generated/primary-progress-bar/320/primary-progress-bar.manifest.json">Progress manifest</a>
+          <a href="../docs/validation/evidence/v1-neon-core-core-components/TRACEABILITY_AUDIT.md">Audit record</a>
+        </div>
+        <pre><code>npm ci
+npm run validate</code></pre>
+      </section>
+
       <section class="surface surface--dark" data-review-background="dark" aria-labelledby="dark-title">
         <div class="surface-heading"><p>V1-E05 · dark background</p><h2 id="dark-title">Dark surface</h2></div>
         <div class="component-group">
@@ -104,7 +133,7 @@
       </section>
     </main>
 
-    <footer>Prepared evidence only · Human V1 scoring is pending</footer>
+    <footer>Reviewed V1 evidence · Traceability correction is ready for human re-scoring</footer>
     <script src="v1-evidence.js" defer></script>
   </body>
 </html>

@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { mkdir, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { Resvg } from "@resvg/resvg-js";
+import { loadV1ManifestProvenance, type V1ManifestProvenance, type V1ManifestSources } from "./provenance.js";
 import { RENDERER_VERSION } from "./version.js";
 
 export const PANEL_WIDTH_LOGICAL = 432;
@@ -39,11 +40,8 @@ interface PanelExportManifest {
   assetId: string;
   generatedAt: string;
   renderer: { name: string; version: string };
-  sources: {
-    style: { id: string; version: string };
-    component: { id: string; version: string };
-    materialPacks: Array<{ id: string; version: string }>;
-  };
+  sources: V1ManifestSources;
+  provenance: V1ManifestProvenance;
   outputs: PanelExportOutput[];
 }
 
@@ -103,7 +101,7 @@ export function renderPrimaryPanel(request: PrimaryPanelRequest): RenderedPrimar
   return { request, svg, png };
 }
 
-function manifestFor(rendered: RenderedPrimaryPanel, outputDirectory: string, rootDirectory: string): PanelExportManifest {
+function manifestFor(rendered: RenderedPrimaryPanel, outputDirectory: string, rootDirectory: string, traceability: { sources: V1ManifestSources; provenance: V1ManifestProvenance }): PanelExportManifest {
   const { logicalHeight } = rendered.request;
   const pngPath = join(outputDirectory, "primary-panel.png");
   const svgPath = join(outputDirectory, "primary-panel.svg");
@@ -130,24 +128,22 @@ function manifestFor(rendered: RenderedPrimaryPanel, outputDirectory: string, ro
     assetId: `neon-core-primary-panel-${logicalHeight}`,
     generatedAt: new Date().toISOString(),
     renderer: { name: "lnh-prism-renderer", version: RENDERER_VERSION },
-    sources: {
-      style: { id: "neon-core", version: "0.1.0" },
-      component: { id: "primary-panel", version: "0.1.0" },
-      materialPacks: [{ id: "neon-core-materials", version: "0.1.0" }]
-    },
+    sources: traceability.sources,
+    provenance: traceability.provenance,
     outputs: [output(svgPath, "svg", rendered.svg), output(pngPath, "png", rendered.png)]
   };
 }
 
 export async function writePrimaryPanelProof(outputRoot: string): Promise<PanelExportManifest[]> {
   const manifests: PanelExportManifest[] = [];
+  const traceability = await loadV1ManifestProvenance("primary-panel");
   for (const logicalHeight of PANEL_HEIGHTS_LOGICAL) {
     const rendered = renderPrimaryPanel({ logicalHeight });
     const outputDirectory = join(outputRoot, "primary-panel", String(logicalHeight));
     await mkdir(outputDirectory, { recursive: true });
     await writeFile(join(outputDirectory, "primary-panel.svg"), rendered.svg, "utf8");
     await writeFile(join(outputDirectory, "primary-panel.png"), rendered.png);
-    const manifest = manifestFor(rendered, outputDirectory, outputRoot);
+    const manifest = manifestFor(rendered, outputDirectory, outputRoot, traceability);
     await writeFile(join(outputDirectory, "primary-panel.manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
     manifests.push(manifest);
   }

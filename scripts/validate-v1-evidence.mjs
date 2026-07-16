@@ -1,9 +1,14 @@
+import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const evidenceHtml = await readFile(resolve("showcase/v1-evidence.html"), "utf8");
 const evidencePackage = await readFile(resolve("docs/validation/evidence/v1-neon-core-core-components/README.md"), "utf8");
 const validationRecord = await readFile(resolve("docs/validation/records/v1-neon-core-core-components.md"), "utf8");
+const traceabilityAudit = await readFile(resolve("docs/validation/evidence/v1-neon-core-core-components/TRACEABILITY_AUDIT.md"), "utf8");
+const registry = JSON.parse(await readFile(resolve("showcase/generated/component-registry.json"), "utf8"));
+const hash = (content) => createHash("sha256").update(content).digest("hex");
+const sourceHash = (content) => hash(content.replaceAll("\r\n", "\n"));
 
 for (const background of ["light", "dark"]) {
   if (!evidenceHtml.includes(`data-review-background="${background}"`)) throw new Error(`V1 evidence is missing the ${background} review background.`);
@@ -57,6 +62,36 @@ for (const width of [320, 432]) {
 }
 
 if (!evidenceHtml.includes('data-independent-parts="primary-progress-bar"')) throw new Error("V1 evidence does not expose independent Progress Bar parts.");
+if (!evidenceHtml.includes('data-traceability-evidence="v1"')) throw new Error("V1 evidence does not expose the reviewer-visible traceability chain.");
+for (const requiredLink of [
+  "../specs/examples/style-neon-core.json",
+  "../specs/examples/neon-core-materials.json",
+  "../materials/neon-core/blue-grain.json",
+  "generated/component-registry.json",
+  "TRACEABILITY_AUDIT.md"
+]) {
+  if (!evidenceHtml.includes(requiredLink)) throw new Error(`V1 traceability evidence is missing ${requiredLink}.`);
+}
+if (!traceabilityAudit.includes("🟢 Corrected and ready for human re-scoring")) throw new Error("V1-D004 audit is not ready for re-scoring.");
+
+for (const manifest of registry.manifests) {
+  if (!manifest.provenance?.sourceTreeSha256 || !Array.isArray(manifest.provenance.sourceFiles)) throw new Error(`${manifest.assetId} is missing source-tree provenance.`);
+  for (const reference of [manifest.sources.style, manifest.sources.component, ...manifest.sources.materialPacks]) {
+    if (!reference.path || !reference.sha256) throw new Error(`${manifest.assetId} has an unhashed source reference.`);
+    const content = await readFile(resolve(reference.path), "utf8");
+    if (sourceHash(content) !== reference.sha256) throw new Error(`${manifest.assetId} source reference drifted: ${reference.path}.`);
+  }
+  for (const sourceFile of manifest.provenance.sourceFiles) {
+    const content = await readFile(resolve(sourceFile.path), "utf8");
+    if (sourceHash(content) !== sourceFile.sha256) throw new Error(`${manifest.assetId} provenance drifted: ${sourceFile.path}.`);
+  }
+  const aggregate = hash(manifest.provenance.sourceFiles.map(({ role, path, sha256 }) => `${role}:${path}:${sha256}`).join("\n"));
+  if (aggregate !== manifest.provenance.sourceTreeSha256) throw new Error(`${manifest.assetId} source-tree hash is invalid.`);
+  for (const output of manifest.outputs) {
+    const content = await readFile(resolve("showcase/generated", output.path));
+    if (hash(content) !== output.sha256) throw new Error(`${manifest.assetId} output hash drifted: ${output.path}.`);
+  }
+}
 
 const isReadyForReview = validationRecord.includes("Ready for human review")
   && validationRecord.includes("**Weighted score:** Pending");

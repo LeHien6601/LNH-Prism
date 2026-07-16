@@ -32,6 +32,18 @@ nav a:hover, .scale-control button:hover, .scale-control button[aria-pressed="tr
 
 .evidence-intro { margin-bottom: 28px; padding: 24px; border: 1px solid var(--page-line); border-radius: 18px; background: #0d1a30; }
 .evidence-intro ul { margin-bottom: 0; padding-left: 20px; color: var(--page-muted); line-height: 1.8; }
+.traceability-evidence { margin-bottom: 32px; padding: 28px; border: 1px solid rgba(106, 178, 255, 0.42); border-radius: 24px; background: linear-gradient(135deg, #0d1a30, #0a1425); }
+.traceability-evidence > div:first-child > p:not(.eyebrow) { max-width: 850px; color: var(--page-muted); line-height: 1.65; }
+.traceability-chain { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; padding: 0; list-style: none; counter-reset: traceability-step; }
+.traceability-chain li { position: relative; min-height: 126px; padding: 44px 16px 16px; border: 1px solid var(--page-line); border-radius: 16px; background: rgba(6, 15, 29, 0.72); counter-increment: traceability-step; }
+.traceability-chain li::before { position: absolute; top: 14px; left: 16px; color: #8bb8ff; font-size: 0.72rem; font-weight: 900; content: "0" counter(traceability-step); }
+.traceability-chain strong, .traceability-chain span { display: block; }
+.traceability-chain strong { margin-bottom: 7px; font-size: 0.88rem; }
+.traceability-chain span { color: var(--page-muted); font-size: 0.75rem; line-height: 1.5; }
+.traceability-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.traceability-links a { border: 1px solid var(--page-line); border-radius: 999px; padding: 7px 10px; color: #cfe2ff; font-size: 0.72rem; text-decoration: none; }
+.traceability-links a:hover { border-color: #8bb8ff; background: rgba(79, 132, 255, 0.16); }
+.traceability-evidence pre { overflow-x: auto; margin: 20px 0 0; padding: 16px; border-radius: 14px; background: #050a13; color: #b8d3ff; font-size: 0.78rem; }
 .surface { overflow-x: auto; margin-bottom: 32px; padding: 28px; border-radius: 24px; }
 .surface--dark { --surface-ink: #eaf2ff; --surface-muted: #9db0cf; background: #07101f; color: var(--surface-ink); }
 .surface--light { --surface-ink: #152542; --surface-muted: #51637e; background: #eef3fa; color: var(--surface-ink); }
@@ -62,5 +74,5 @@ footer { padding: 26px 0 42px; border-top: 1px solid var(--page-line); color: #7
 @media (max-width: 760px) {
   .evidence-header { padding-top: 48px; }
   .surface { padding: 20px; }
-  .button-evidence-grid, .panel-evidence-grid, .progress-evidence-grid, .parts-evidence { grid-template-columns: 1fr; }
+  .button-evidence-grid, .panel-evidence-grid, .progress-evidence-grid, .parts-evidence, .traceability-chain { grid-template-columns: 1fr; }
 }

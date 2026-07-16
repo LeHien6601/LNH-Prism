@@ -51,7 +51,19 @@ The weighted total exceeds the Pass threshold, but the approved rubric requires 
 | V1-D001 | renderer | blocker before correction | 🟢 Closed | Clip the Progress highlight to the exact rounded fill silhouette | 🤖 Agent | Commit `6eaffa6`; all-variant clipping test; generated 10% and 90% visual inspection |
 | V1-D002 | process | medium | 🟢 Closed | Prevent evidence-grid clipping and scale inspection cells with their SVGs | 🤖 Agent | Desktop dark/light surfaces at 100%; full 10% bar at 200%; 320-pixel viewport check |
 | V1-D003 | renderer | medium | 🟡 Open | Replace the detached same-silhouette shadow with a connected, parameterized 3D extrusion/side-wall treatment while keeping it as an independent SVG layer | 🤖 Agent | Re-render Button, Panel, and Progress frame at both accepted sizes/states; inspect connection, corners, and alpha on both backgrounds |
-| V1-D004 | process | gate failure | 🟡 Open | Audit reviewer-visible provenance, source/version links, manifests, hashes, and reproduction instructions; correct the smallest missing or unclear evidence | 🤖 Agent | Run the complete reproduction flow, document the audit, and re-score Traceability and reproducibility |
+| V1-D004 | process | gate failure | 🟢 Corrected; re-score pending | Audit reviewer-visible provenance, source/version links, manifests, hashes, and reproduction instructions; correct the smallest missing or unclear evidence | 🤖 Agent | [Traceability audit](../evidence/v1-neon-core-core-components/TRACEABILITY_AUDIT.md); 13 renderer/provenance tests; full validation; desktop and 390px browser QA |
+
+## Revalidation 1 — V1-D004
+
+| Field | Value |
+|---|---|
+| Correction status | 🟢 Complete |
+| Evidence | [V1-D004 traceability audit](../evidence/v1-neon-core-core-components/TRACEABILITY_AUDIT.md) and the Traceability chain in `showcase/v1-evidence.html` |
+| Automated result | 13 renderer/provenance tests pass; contracts, manifests, source hashes, output hashes, showcase, and V1 evidence validate |
+| Browser result | Traceability chain and links verified at `1440 × 1000` and `390 × 844` |
+| Affected dimension | Traceability and reproducibility only |
+| Human re-score | Pending — append the new score here; do not replace the original `4/5` |
+| Recomputed gate | Pending human re-score |
 
 ## Gate sign-off
 
@@ -68,3 +80,4 @@ The original review is retained for traceability. Revalidation must append the a
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-16 | Recorded the project-owner scorecard, 91/100 weighted result, rubric-computed Fail outcome, and corrective findings V1-D003/V1-D004 | Codex |
+| 2026-07-16 | Appended V1-D004 corrective evidence and opened the affected-dimension re-score without overwriting the original result | Codex |

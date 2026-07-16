@@ -71,3 +71,4 @@ The 2026-07-16 human review scored V1 at `91/100` with no automatic blockers, bu
 | 2026-07-16 | Approved V1 as an SVG structure/quality gate and deferred Unity integration validation to M4 | Project owner |
 | 2026-07-16 | Prepared V1-E01 through V1-E06, light/dark SVG review surfaces, an unscored validation record, and drift validation | Codex |
 | 2026-07-16 | Recorded the 91/100 V1 review and rubric-computed Fail outcome; queued traceability revalidation and connected-shadow improvement | Project owner / Codex |
+| 2026-07-16 | Corrected V1-D004 with a source-hash audit, reviewer-visible traceability chain, manifest drift enforcement, and desktop/mobile QA; human re-score remains pending | Codex |

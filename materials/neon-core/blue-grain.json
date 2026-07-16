@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "id": "blue-grain",
+  "version": "0.1.0",
+  "type": "procedural-svg-pattern",
+  "tile": {
+    "width": 12,
+    "height": 12,
+    "units": "logical-pixels"
+  },
+  "marks": [
+    { "shape": "circle", "cx": 2, "cy": 3, "radius": 0.7, "color": "#D9E8FF", "opacity": 0.12 },
+    { "shape": "circle", "cx": 9, "cy": 7, "radius": 0.55, "color": "#07172F", "opacity": 0.18 },
+    { "shape": "circle", "cx": 5, "cy": 11, "radius": 0.4, "color": "#7FAAFF", "opacity": 0.1 }
+  ],
+  "rights": "LNHGames internal procedural source"
+}

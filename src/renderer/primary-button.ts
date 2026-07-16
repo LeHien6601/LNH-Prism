@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { mkdir, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { Resvg } from "@resvg/resvg-js";
+import { loadV1ManifestProvenance, type V1ManifestProvenance, type V1ManifestSources } from "./provenance.js";
 import { RENDERER_VERSION } from "./version.js";
 
 export { RENDERER_VERSION } from "./version.js";
@@ -43,11 +44,8 @@ interface ExportManifest {
   assetId: string;
   generatedAt: string;
   renderer: { name: string; version: string };
-  sources: {
-    style: { id: string; version: string };
-    component: { id: string; version: string };
-    materialPacks: Array<{ id: string; version: string }>;
-  };
+  sources: V1ManifestSources;
+  provenance: V1ManifestProvenance;
   outputs: ExportOutput[];
 }
 
@@ -113,7 +111,7 @@ export function renderPrimaryButton(request: PrimaryButtonRequest): RenderedPrim
   return { request, svg, png };
 }
 
-function manifestFor(rendered: RenderedPrimaryButton, outputDirectory: string, rootDirectory: string): ExportManifest {
+function manifestFor(rendered: RenderedPrimaryButton, outputDirectory: string, rootDirectory: string, traceability: { sources: V1ManifestSources; provenance: V1ManifestProvenance }): ExportManifest {
   const { logicalWidth, state } = rendered.request;
   const pngPath = join(outputDirectory, "primary-button.png");
   const svgPath = join(outputDirectory, "primary-button.svg");
@@ -135,17 +133,15 @@ function manifestFor(rendered: RenderedPrimaryButton, outputDirectory: string, r
     assetId: `neon-core-primary-button-${state}-${logicalWidth}`,
     generatedAt: new Date().toISOString(),
     renderer: { name: "lnh-prism-renderer", version: RENDERER_VERSION },
-    sources: {
-      style: { id: "neon-core", version: "0.1.0" },
-      component: { id: "primary-button", version: "0.1.0" },
-      materialPacks: [{ id: "neon-core-materials", version: "0.1.0" }]
-    },
+    sources: traceability.sources,
+    provenance: traceability.provenance,
     outputs: [output(svgPath, "svg", rendered.svg), output(pngPath, "png", rendered.png)]
   };
 }
 
 export async function writePrimaryButtonProof(outputRoot: string): Promise<ExportManifest[]> {
   const manifests: ExportManifest[] = [];
+  const traceability = await loadV1ManifestProvenance("primary-button");
 
   for (const logicalWidth of BUTTON_WIDTHS_LOGICAL) {
     for (const state of BUTTON_STATES) {
@@ -154,7 +150,7 @@ export async function writePrimaryButtonProof(outputRoot: string): Promise<Expor
       await mkdir(outputDirectory, { recursive: true });
       await writeFile(join(outputDirectory, "primary-button.svg"), rendered.svg, "utf8");
       await writeFile(join(outputDirectory, "primary-button.png"), rendered.png);
-      const manifest = manifestFor(rendered, outputDirectory, outputRoot);
+      const manifest = manifestFor(rendered, outputDirectory, outputRoot, traceability);
       await writeFile(join(outputDirectory, "primary-button.manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
       manifests.push(manifest);
     }

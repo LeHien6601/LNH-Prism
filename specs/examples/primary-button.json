@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0", "id": "primary-button", "version": "0.1.0", "status": "draft", "style": { "id": "neon-core", "version": "0.1.0" }, "template": { "id": "button", "version": "0.1.0" },
+  "schemaVersion": "1.0", "id": "primary-button", "version": "0.1.0", "status": "approved", "style": { "id": "neon-core", "version": "0.1.0" }, "template": { "id": "button", "version": "0.1.0" },
   "layers": [{ "id": "button-shadow", "kind": "shadow", "enabled": true }, { "id": "button-fill", "kind": "fill", "enabled": true }, { "id": "button-border", "kind": "border", "enabled": true }, { "id": "button-highlight", "kind": "highlight", "enabled": true }, { "id": "button-content", "kind": "content", "enabled": true }],
   "states": { "normal": {}, "pressed": { "contentOffset": { "x": 0, "y": 2 } }, "disabled": { "layerOverrides": { "button-highlight": { "enabled": false } } } }, "sizing": { "mode": "nine-slice", "minimum": { "width": 160, "height": 56 } }, "compatibility": { "minimumRendererVersion": "0.1.0" }
 }

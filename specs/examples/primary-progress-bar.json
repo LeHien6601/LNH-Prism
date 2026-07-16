@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "id": "primary-progress-bar",
   "version": "0.1.0",
-  "status": "draft",
+  "status": "approved",
   "style": { "id": "neon-core", "version": "0.1.0" },
   "template": { "id": "progress-bar", "version": "0.1.0" },
   "layers": [

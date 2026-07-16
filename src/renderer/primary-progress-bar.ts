@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { mkdir, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { Resvg } from "@resvg/resvg-js";
+import { loadV1ManifestProvenance, type V1ManifestProvenance, type V1ManifestSources } from "./provenance.js";
 import { RENDERER_VERSION } from "./version.js";
 
 export const PROGRESS_HEIGHT_LOGICAL = 24;
@@ -44,11 +45,8 @@ interface ProgressExportManifest {
   assetId: string;
   generatedAt: string;
   renderer: { name: string; version: string };
-  sources: {
-    style: { id: string; version: string };
-    component: { id: string; version: string };
-    materialPacks: Array<{ id: string; version: string }>;
-  };
+  sources: V1ManifestSources;
+  provenance: V1ManifestProvenance;
   outputs: ProgressExportOutput[];
 }
 
@@ -127,23 +125,21 @@ function renderPng(svg: string): Uint8Array {
   return new Resvg(svg, { background: "transparent" }).render().asPng();
 }
 
-function manifestFor(logicalWidth: ProgressWidthLogical, rootDirectory: string, outputs: ProgressExportOutput[]): ProgressExportManifest {
+function manifestFor(logicalWidth: ProgressWidthLogical, rootDirectory: string, outputs: ProgressExportOutput[], traceability: { sources: V1ManifestSources; provenance: V1ManifestProvenance }): ProgressExportManifest {
   return {
     schemaVersion: "1.0",
     assetId: `neon-core-primary-progress-bar-${logicalWidth}`,
     generatedAt: new Date().toISOString(),
     renderer: { name: "lnh-prism-renderer", version: RENDERER_VERSION },
-    sources: {
-      style: { id: "neon-core", version: "0.1.0" },
-      component: { id: "primary-progress-bar", version: "0.1.0" },
-      materialPacks: [{ id: "neon-core-materials", version: "0.1.0" }]
-    },
+    sources: traceability.sources,
+    provenance: traceability.provenance,
     outputs: outputs.map((output) => ({ ...output, path: relative(rootDirectory, output.path).replaceAll("\\", "/") }))
   };
 }
 
 export async function writePrimaryProgressBarProof(outputRoot: string): Promise<ProgressExportManifest[]> {
   const manifests: ProgressExportManifest[] = [];
+  const traceability = await loadV1ManifestProvenance("primary-progress-bar");
   const unity = {
     pixelsPerUnit: 100,
     pivot: { x: 0.5, y: 0.5 },
@@ -173,7 +169,7 @@ export async function writePrimaryProgressBarProof(outputRoot: string): Promise<
       await writeOutputPair(`primary-progress-bar-preview-${percent}`, renderPrimaryProgressBarSvg(request));
     }
 
-    const manifest = manifestFor(logicalWidth, outputRoot, outputs);
+    const manifest = manifestFor(logicalWidth, outputRoot, outputs, traceability);
     await writeFile(join(outputDirectory, "primary-progress-bar.manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
     manifests.push(manifest);
   }

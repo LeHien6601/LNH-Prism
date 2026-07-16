@@ -41,7 +41,7 @@ const registry = {
       }
     }
   ],
-  manifests: [...buttonManifests, ...panelManifests, ...progressBarManifests].map(({ assetId, renderer, sources, outputs }) => ({ assetId, renderer, sources, outputs }))
+  manifests: [...buttonManifests, ...panelManifests, ...progressBarManifests].map(({ assetId, renderer, sources, provenance, outputs }) => ({ assetId, renderer, sources, provenance, outputs }))
 };
 
 await mkdir(outputRoot, { recursive: true });

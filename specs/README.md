@@ -2,6 +2,8 @@
 
 These are versioned, portable M0 contracts. They use JSON Schema Draft 2020-12 and describe source data—not generated output.
 
+The Neon Core V1 examples are approved validation inputs. Generated V1 manifests bind their IDs and versions to repository paths and SHA-256 hashes; generation fails if an approved input or declared material source drifts.
+
 ## Contract files
 
 | Contract | Purpose |

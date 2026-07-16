@@ -1,6 +1,6 @@
 # V1 Evidence Package — Neon Core Core Components
 
-**Status:** 🟡 Reviewed on 2026-07-16; corrective evidence is pending after the V1 gate failed on the mandatory traceability minimum. This package remains evidence, not the gate decision.
+**Status:** 🟣 V1-D004 corrected on 2026-07-16; human re-scoring of Traceability and reproducibility is pending. This package remains evidence, not the gate decision.
 
 ## Frozen validation target
 
@@ -76,7 +76,7 @@ Human reviewers must inspect at 100%, 200%, and a narrow mobile viewport for hal
 | `V1-D001` Progress highlight cap extended beyond the rounded value fill | renderer | blocker before correction | 🟢 Closed | `6eaffa6 fix(renderer): clip progress highlight to fill` | All six width/percentage variants use the exact fill-shape clip; focused regression and deterministic renderer tests pass |
 | `V1-D002` Initial evidence grid clipped 432-pixel Progress Bars at 100% inspection | process | medium | 🟢 Closed | Use a two-column Progress grid and scale grid cells with the 100%/200% control | Desktop light/dark surfaces show complete end caps; 200% specimen and 320-pixel layout visually checked in Chromium |
 | `V1-D003` Shadow reads as a detached duplicate silhouette rather than a connected 3D extrusion | renderer | medium | 🟡 Open | Design a connected, parameterized side-wall/extrusion treatment that remains independently editable | Re-render and inspect all affected accepted sizes/states on light and dark surfaces |
-| `V1-D004` Traceability score missed the mandatory V1 minimum | process | gate failure | 🟡 Open | Audit and clarify source/version provenance, hashes, manifest navigation, and reproduction evidence | Complete reproduction audit and human re-score of the affected dimension |
+| `V1-D004` Traceability score missed the mandatory V1 minimum | process | gate failure | 🟢 Corrected; re-score pending | Bind approved inputs, real material source, renderer/dependency sources, and outputs by path and SHA-256; expose the chain to reviewers | [Traceability audit](TRACEABILITY_AUDIT.md); 13 tests and full validation pass; desktop/mobile browser QA complete |
 
 No automatic blocker was reported. The rubric still produces a Fail when any dimension misses its minimum.
 
@@ -96,8 +96,8 @@ docs/validation/records/v1-neon-core-core-components.md
 
 ## Corrective handoff
 
-1. Audit and correct the reviewer-visible traceability evidence for V1-D004.
-2. Re-run the documented reproduction flow and append the audit result.
-3. Ask the same review authority to re-score only Traceability and reproducibility.
+1. Review the [V1-D004 audit](TRACEABILITY_AUDIT.md) and Traceability chain in `showcase/v1-evidence.html`.
+2. Inspect at least one generated manifest for its approved source paths/hashes, source-tree receipt, renderer version, and output hashes.
+3. Ask the same review authority to append a new score for Traceability and reproducibility only.
 4. Address V1-D003 with a connected, independently editable 3D shadow treatment and repeat its affected visual evidence.
 5. Do not mark M1 complete until the retained original scorecard and appended revalidation produce a rubric-compliant Pass.
