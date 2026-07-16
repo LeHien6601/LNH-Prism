@@ -30,7 +30,7 @@ Do not copy component artwork into HTML/CSS. The page references generated SVG/P
 1. Generate deterministic display assets with `npm run prepare:showcase`.
 2. Build a dependency-free static page: `showcase/index.html`, `showcase/styles.css`, `showcase/app.js`.
 3. Display each generated state and size plus a mobile context preview with editable HTML labels.
-4. Validate expected display assets and scenario markup with `npm run validate:showcase`.
+4. List each SVG layer by name from topmost to bottommost and validate expected assets, content slots, and scenario markup with `npm run validate:showcase`.
 5. Add Panel and Progress Bar entries only when their renderer proofs are complete.
 6. Add no editing, asset authoring, accounts, servers, or status-management features in the MVP.
 
@@ -52,3 +52,4 @@ Do not copy component artwork into HTML/CSS. The page references generated SVG/P
 |---|---|---|
 | 2026-07-15 | Initial dashboard proposal created | Codex |
 | 2026-07-16 | Replaced the dashboard proposal with a renderer-backed component showcase | Project owner |
+| 2026-07-16 | Added layer-stack labels and content-slot alignment requirements | Project owner |
