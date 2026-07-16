@@ -31,7 +31,8 @@ h2 { margin-bottom: 12px; font-size: clamp(1.6rem, 3vw, 2.35rem); letter-spacing
 .hero-copy, .section-heading > p:not(.eyebrow) { max-width: 700px; margin: 0 auto; color: var(--muted); line-height: 1.65; }
 .section-heading > p:not(.eyebrow) { margin-left: 0; }
 .hero-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 25px; }
-.hero-meta span { border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; color: #c6d9fa; font-size: 0.78rem; }
+.hero-meta span, .hero-meta a { border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; color: #c6d9fa; font-size: 0.78rem; text-decoration: none; }
+.hero-meta a:hover { border-color: #8bb8ff; color: #ffffff; }
 
 .section { border-top: 1px solid var(--line); padding: 52px 0; }
 .section-heading { margin-bottom: 28px; }

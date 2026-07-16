@@ -65,3 +65,4 @@ Every product module; art/UI reviewers; Unity sample project from M4 onward.
 | 2026-07-15 | Initial module definition | Codex |
 | 2026-07-15 | Added detailed V1 scorecard, blocker criteria, and evidence package | Codex |
 | 2026-07-16 | Approved V1 as an SVG structure/quality gate and deferred Unity integration validation to M4 | Project owner |
+| 2026-07-16 | Prepared V1-E01 through V1-E06, light/dark SVG review surfaces, an unscored validation record, and drift validation | Codex |

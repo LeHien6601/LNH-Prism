@@ -12,7 +12,8 @@
     "test:renderer": "npm run build:renderer && node --test tests/renderer/*.test.mjs",
     "validate:contracts": "node tests/contracts/validate-contracts.mjs",
     "validate:showcase": "node scripts/validate-showcase.mjs",
-    "validate": "npm run validate:contracts && npm run test:renderer && npm run prepare:showcase && npm run validate:showcase"
+    "validate:v1-evidence": "node scripts/validate-v1-evidence.mjs",
+    "validate": "npm run validate:contracts && npm run test:renderer && npm run prepare:showcase && npm run validate:showcase && npm run validate:v1-evidence"
   },
   "devDependencies": {
     "@types/node": "26.1.1",

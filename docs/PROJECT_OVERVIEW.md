@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🟡 **M1** — Deterministic MVP renderer |
-| Next task | 🔵 **Prepare the V1 validation evidence package and record** · 🤖 Agent |
-| Next agent-ready task | 🔵 Collect V1-E01 through V1-E06 for reusable structured SVG quality; create the traceable scorecard and defect log |
+| Next task | 🟣 **Conduct the V1 SVG quality review and record scores** · 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | 🔴 None until reviewers record a V1 Pass, Conditional pass, or Fail; corrective Agent tasks may be created from reviewed defects |
 | Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
@@ -72,7 +72,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Render the V1 Progress Bar template | 🤖 Agent | 🟢 Complete | Frame and fill remain independently renderable at two widths and 10%, 50%, and 90%; manifests and focused tests pass |
 | P1 | Add the completed Progress Bar to the showcase | 🤖 Agent | 🟢 Complete | Both widths and all percentages use independent renderer frame/fill outputs; part separation, layer order, and combined scenario are visible |
 | P1 | Review and approve the V1 visual-review rubric | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved by the project owner on 2026-07-16; V1 focuses on reusable high-quality structured SVG and defers Unity integration to M4 |
-| P1 | Prepare the V1 validation evidence package and record | 🤖 Agent | 🔵 Agent-ready | V1-E01 through V1-E06 and a traceable scorecard record are ready for SVG quality review |
+| P1 | Prepare the V1 validation evidence package and record | 🤖 Agent | 🟢 Complete | V1-E01 through V1-E06, light/dark review surfaces, SVG structure checks, defect history, and an unscored traceable record are ready |
+| P1 | Conduct the V1 SVG quality review and record scores | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | All six dimensions are scored, blockers are dispositioned, sign-off is recorded, and the M1 gate receives Pass, Conditional pass, or Fail |
 
 ## 6. Decision register
 
@@ -128,3 +129,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Added all Progress Bar widths/fills, independent-part inspection, layer order, and real-scenario use to the showcase; queued V1 rubric approval | Codex |
 | 2026-07-16 | Corrected Progress Bar highlight cap overflow found during showcase review and added an all-variant clipping regression test | Codex |
 | 2026-07-16 | Approved the V1 rubric with reusable structured SVG as the M1 target, deferred Unity integration to M4, and unblocked V1 evidence preparation | Project owner |
+| 2026-07-16 | Prepared the reproducible V1-E01–V1-E06 package, light/dark SVG review page, structural validator, defect log, and unscored human record | Codex |
