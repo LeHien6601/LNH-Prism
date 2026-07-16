@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Status | 🟢 Approved |
+| Status | 🟢 Implemented |
 | Date | 2026-07-16 |
 | Owner | 🧭 Project owner |
 | Classification | Incremental improvement |
@@ -41,3 +41,4 @@ The showcase must display deterministic assets produced by LNH Prism. It may pro
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-16 | Approved renderer-backed component showcase in place of a status dashboard | Project owner |
+| 2026-07-16 | Completed the M1 showcase for Button, Panel, and independent Progress Bar parts, including supported states/sizes and a combined mobile scenario | Codex |

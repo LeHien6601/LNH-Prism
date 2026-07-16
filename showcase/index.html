@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="LNH Prism deterministic UI component showcase" />
     <title>LNH Prism · Component Showcase</title>
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -100,18 +101,55 @@
         </div>
       </section>
 
+      <section class="section" aria-labelledby="progress-title" data-component="primary-progress-bar" data-state="normal">
+        <div class="section-heading">
+          <p class="eyebrow">03 · Component lab</p>
+          <h2 id="progress-title">Primary Progress Bar</h2>
+          <p>Each specimen combines two independent renderer outputs: a reusable frame and a percentage-specific fill. Both widths preserve the same 24-pixel logical height and protected end caps.</p>
+        </div>
+
+        <div class="progress-grid">
+          <article class="progress-card" data-progress-width="320">
+            <p class="state-label">320 × 24 · Normal</p>
+            <div class="progress-specimens">
+              <div class="progress-specimen" data-progress-percent="10"><span>10%</span><div class="asset-progress asset-progress--320"><img class="asset-progress__frame" src="generated/primary-progress-bar/320/primary-progress-bar-frame.svg" alt="" /><img class="asset-progress__fill" src="generated/primary-progress-bar/320/primary-progress-bar-fill-10.svg" alt="Neon Core Primary Progress Bar at 10 percent" /></div></div>
+              <div class="progress-specimen" data-progress-percent="50"><span>50%</span><div class="asset-progress asset-progress--320"><img class="asset-progress__frame" src="generated/primary-progress-bar/320/primary-progress-bar-frame.svg" alt="" /><img class="asset-progress__fill" src="generated/primary-progress-bar/320/primary-progress-bar-fill-50.svg" alt="Neon Core Primary Progress Bar at 50 percent" /></div></div>
+              <div class="progress-specimen" data-progress-percent="90"><span>90%</span><div class="asset-progress asset-progress--320"><img class="asset-progress__frame" src="generated/primary-progress-bar/320/primary-progress-bar-frame.svg" alt="" /><img class="asset-progress__fill" src="generated/primary-progress-bar/320/primary-progress-bar-fill-90.svg" alt="Neon Core Primary Progress Bar at 90 percent" /></div></div>
+            </div>
+          </article>
+          <article class="progress-card" data-progress-width="432">
+            <p class="state-label">432 × 24 · Normal</p>
+            <div class="progress-specimens">
+              <div class="progress-specimen" data-progress-percent="10"><span>10%</span><div class="asset-progress asset-progress--432"><img class="asset-progress__frame" src="generated/primary-progress-bar/432/primary-progress-bar-frame.svg" alt="" /><img class="asset-progress__fill" src="generated/primary-progress-bar/432/primary-progress-bar-fill-10.svg" alt="Neon Core Primary Progress Bar at 10 percent" /></div></div>
+              <div class="progress-specimen" data-progress-percent="50"><span>50%</span><div class="asset-progress asset-progress--432"><img class="asset-progress__frame" src="generated/primary-progress-bar/432/primary-progress-bar-frame.svg" alt="" /><img class="asset-progress__fill" src="generated/primary-progress-bar/432/primary-progress-bar-fill-50.svg" alt="Neon Core Primary Progress Bar at 50 percent" /></div></div>
+              <div class="progress-specimen" data-progress-percent="90"><span>90%</span><div class="asset-progress asset-progress--432"><img class="asset-progress__frame" src="generated/primary-progress-bar/432/primary-progress-bar-frame.svg" alt="" /><img class="asset-progress__fill" src="generated/primary-progress-bar/432/primary-progress-bar-fill-90.svg" alt="Neon Core Primary Progress Bar at 90 percent" /></div></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="part-grid" aria-label="Primary Progress Bar independent renderer parts">
+          <article><p class="state-label">Frame · independent</p><img src="generated/primary-progress-bar/432/primary-progress-bar-frame.svg" alt="Primary Progress Bar frame without its value fill" /></article>
+          <article><p class="state-label">Fill · independent</p><img src="generated/primary-progress-bar/432/primary-progress-bar-fill-50.svg" alt="Primary Progress Bar 50 percent value fill without its frame" /></article>
+        </div>
+
+        <div class="layer-block" aria-label="Primary Progress Bar SVG layers from top to bottom">
+          <p>Layers · top to bottom</p>
+          <ol class="layer-stack"><li>Fill highlight</li><li>Value fill</li><li>Frame border</li><li>Track fill</li><li>Frame shadow</li></ol>
+        </div>
+      </section>
+
       <section class="section scenario-section" id="scenario-preview" aria-labelledby="scenario-title">
         <div class="section-heading">
-          <p class="eyebrow">03 · In context</p>
+          <p class="eyebrow">04 · In context</p>
           <h2 id="scenario-title">Combined mobile scenario</h2>
-          <p>The generated Panel and Button assets share one Neon Core material family. Text remains independent and follows each component’s content slot.</p>
+          <p>The generated Panel, Progress Bar, and Button assets share one Neon Core material family. Text remains independent, while the progress frame and fill remain separate reusable parts.</p>
         </div>
         <div class="phone-frame">
           <div class="phone-screen">
             <div class="screen-top"><span class="brand-mark">P</span><span>NEON RUN</span><span class="currency">◆ 2,450</span></div>
             <div class="asset-panel scenario-panel">
               <img src="generated/primary-panel/240/primary-panel.svg" alt="" />
-              <div class="asset-panel__content"><span>Sector 07</span><strong>Power restored</strong><small>Ready for launch</small></div>
+              <div class="asset-panel__content"><span>Sector 07</span><strong>Power restored</strong><small>Mission readiness · 90%</small><div class="asset-progress asset-progress--432"><img class="asset-progress__frame" src="generated/primary-progress-bar/432/primary-progress-bar-frame.svg" alt="" /><img class="asset-progress__fill" src="generated/primary-progress-bar/432/primary-progress-bar-fill-90.svg" alt="Mission readiness at 90 percent" /></div></div>
             </div>
             <div class="scenario-actions">
               <button class="asset-button asset-button--wide" type="button" data-button-preview="normal" aria-label="Play mission"><img src="generated/primary-button/normal/240/primary-button.svg" alt="" /><span class="asset-button__label">Play mission</span></button>

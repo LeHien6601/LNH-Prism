@@ -16,13 +16,13 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Materials | ⚪ Not started | Define first material pack after renderer baseline |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
 | Unity export | ⚪ Not started | Validate assets manually before automation |
-| Component showcase | 🟡 Active | Local renderer-backed preview is being added for component states, sizes, and scenario review |
+| Component showcase | 🟢 M1 core showcase complete | Button, Panel, and independent Progress Bar parts are shown across accepted states/sizes and in one combined mobile scenario |
 
 | Focus | Current value |
 |---|---|
 | Active milestone | 🟡 **M1** — Deterministic MVP renderer |
-| Next task | 🔵 **Add the completed Progress Bar to the showcase** · 🤖 Agent |
-| Next agent-ready task | 🔵 Show frame/fill separation, both widths, 10%/50%/90%, layer order, and the combined mobile scenario |
+| Next task | 🟣 **Review and approve the V1 visual-review rubric** · 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | 🔴 None until the V1 rubric is approved; then prepare the V1 evidence package and validation record |
 | Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
@@ -70,7 +70,9 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Render the V1 Primary Panel template | 🤖 Agent | 🟢 Complete | SVG and PNG outputs cover both accepted heights with independent shadow, border, fill, grain, highlight, and content layers; manifest and focused tests pass |
 | P1 | Align content slots and sync completed components to showcase | 🤖 Agent | 🟢 Complete | Button labels share one centered slot and move `y: +2` when pressed; both Primary Panel sizes and top-to-bottom SVG layer names appear from renderer output |
 | P1 | Render the V1 Progress Bar template | 🤖 Agent | 🟢 Complete | Frame and fill remain independently renderable at two widths and 10%, 50%, and 90%; manifests and focused tests pass |
-| P1 | Add the completed Progress Bar to the showcase | 🤖 Agent | 🔵 Agent-ready | Both widths and all percentages use renderer outputs; frame/fill separation, layer order, and combined scenario are visible |
+| P1 | Add the completed Progress Bar to the showcase | 🤖 Agent | 🟢 Complete | Both widths and all percentages use independent renderer frame/fill outputs; part separation, layer order, and combined scenario are visible |
+| P1 | Review and approve the V1 visual-review rubric | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Rubric thresholds, evidence requirements, reviewer roles, and blocker rules are explicitly accepted or revised |
+| P1 | Prepare the V1 validation evidence package and record | 🤖 Agent | 🔴 Blocked | Waits for rubric approval; V1-E01 through V1-E05 and a traceable scorecard record are ready for review, with Unity evidence tracked separately |
 
 ## 6. Decision register
 
@@ -122,3 +124,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Completed deterministic Primary Panel proof; queued showcase alignment/sync before Progress Bar | Codex |
 | 2026-07-16 | Aligned showcase button content slots, added Panel previews, and exposed SVG layer order | Codex |
 | 2026-07-16 | Completed independent V1 Progress Bar frame/fill renderer proof; queued showcase sync | Codex |
+| 2026-07-16 | Added all Progress Bar widths/fills, independent-part inspection, layer order, and real-scenario use to the showcase; queued V1 rubric approval | Codex |
