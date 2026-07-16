@@ -34,3 +34,16 @@ for (const [exampleFile, schemaFile] of exampleSchemas) {
   if (!validate(example)) throw new Error(`${exampleFile} failed ${schemaFile}: ${ajv.errorsText(validate.errors)}`);
   console.log(`validated ${exampleFile}`);
 }
+
+const exportManifestSchema = schemas.get("export-manifest.schema.json");
+const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);
+const canonicalManifest = JSON.parse(await readFile(join(exampleDir, "primary-button-normal.manifest.json"), "utf8"));
+const manifestWithoutProvenance = structuredClone(canonicalManifest);
+delete manifestWithoutProvenance.provenance;
+if (validateExportManifest(manifestWithoutProvenance)) {
+  throw new Error("export-manifest.schema.json must reject manifests without provenance.");
+}
+if (!validateExportManifest.errors?.some(({ keyword, params }) => keyword === "required" && params.missingProperty === "provenance")) {
+  throw new Error(`missing-provenance rejection was not explicit: ${ajv.errorsText(validateExportManifest.errors)}`);
+}
+console.log("rejected export manifest without required provenance");

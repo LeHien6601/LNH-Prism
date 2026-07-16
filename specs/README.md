@@ -29,3 +29,7 @@ Run `npm run validate:contracts`. It validates every JSON Schema and every examp
 ## Compatibility policy
 
 Additive optional fields are backward-compatible within `schemaVersion: 1.0`. Removing, renaming, or changing the meaning of a required field requires a new schema version and a migration note before approval.
+
+### Approved `1.0` provenance correction
+
+On 2026-07-16, the project owner authorized `provenance` as a required export-manifest field. This tightens validation within `schemaVersion: 1.0` to enforce an already-approved non-negotiable traceability rule. All renderer-produced manifests already complied; the incomplete canonical example was the only repository artifact requiring correction, so no production-output migration was necessary.

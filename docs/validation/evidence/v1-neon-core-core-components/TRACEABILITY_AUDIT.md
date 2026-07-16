@@ -26,7 +26,7 @@ All three gaps are corrected. No SVG visual behavior was intentionally changed b
 |---|---|---|
 | Approved source state | Style, three component specs, and material pack are `approved` | Provenance loading rejects non-approved documents |
 | Material provenance | `materials/neon-core/blue-grain.json` exists and its SHA-256 matches the material pack | Generation rejects a missing or mismatched material source |
-| Manifest source binding | Style/component/material references include ID, version, repository path, and SHA-256 | Export-manifest schema plus renderer tests |
+| Manifest source binding | Style/component/material references include ID, version, repository path, and SHA-256; provenance is mandatory at the manifest root | Export-manifest schema, explicit missing-provenance rejection test, and renderer tests |
 | Executable recipe binding | Each manifest hashes its component renderer source and shared renderer-version source | V1 source-tree receipt and provenance test |
 | Dependency binding | Each manifest hashes `package-lock.json`; resvg remains pinned in renderer version metadata | V1 source-tree receipt and provenance test |
 | Output integrity | Every generated SVG/PNG path and SHA-256 is verified against disk | Component renderer tests and V1 evidence validator |
@@ -60,3 +60,4 @@ The project owner approved Traceability and reproducibility at `5/5` with no blo
 |---|---|---|
 | 2026-07-16 | Audited the original evidence chain, recorded three provenance gaps, and documented the bounded correction and revalidation procedure | Codex |
 | 2026-07-16 | Accepted the corrected evidence at `5/5` with no blockers and approved the V1 Pass | Project owner |
+| 2026-07-16 | Closed the post-review contract loophole by requiring provenance in every schema-valid export manifest | Project owner / Codex |
