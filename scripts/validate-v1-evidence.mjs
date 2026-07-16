@@ -72,7 +72,7 @@ for (const requiredLink of [
 ]) {
   if (!evidenceHtml.includes(requiredLink)) throw new Error(`V1 traceability evidence is missing ${requiredLink}.`);
 }
-if (!traceabilityAudit.includes("🟢 Corrected and ready for human re-scoring")) throw new Error("V1-D004 audit is not ready for re-scoring.");
+if (!traceabilityAudit.includes("🟢 Accepted — re-scored `5/5`")) throw new Error("V1-D004 audit does not contain the accepted human re-score.");
 
 for (const manifest of registry.manifests) {
   if (!manifest.provenance?.sourceTreeSha256 || !Array.isArray(manifest.provenance.sourceFiles)) throw new Error(`${manifest.assetId} is missing source-tree provenance.`);
@@ -99,16 +99,20 @@ const hasRecordedScore = /\*\*Weighted score:\*\*\s+\d+(?:\.\d+)?\s*\/\s*100/.te
 const hasRecordedBlockers = validationRecord.includes("**Automatic blockers:**")
   && !validationRecord.includes("**Automatic blockers:** Pending");
 const hasGateDecision = /\*\*Rubric-computed decision:\*\*.*(?:Pass|Conditional pass|Fail)/.test(validationRecord);
-const isReviewed = validationRecord.includes("Reviewed")
-  && hasRecordedScore
+const hasCurrentPass = validationRecord.includes("**Current gate decision:** 🟢 Pass");
+const isReviewed = hasRecordedScore
   && hasRecordedBlockers
-  && hasGateDecision;
+  && (hasGateDecision || hasCurrentPass);
 
 if (!isReadyForReview && !isReviewed) {
   throw new Error("V1 validation record must be either ready and unscored or reviewed with a numeric score, blocker disposition, and rubric-computed decision.");
 }
 
-if (isReviewed && validationRecord.includes("Rubric-computed decision:** 🔴 Fail")) {
+if (hasCurrentPass) {
+  if (!validationRecord.includes("| Human re-score | `5 / 5`")) throw new Error("The passing V1 revalidation must retain the approved 5/5 traceability re-score.");
+  if (!validationRecord.includes("| Recomputed weighted score | `93 / 100`")) throw new Error("The passing V1 revalidation must record the recomputed 93/100 score.");
+  if (!validationRecord.includes("| Automatic blockers | None |")) throw new Error("The passing V1 revalidation must explicitly record no automatic blockers.");
+} else if (isReviewed && validationRecord.includes("Rubric-computed decision:** 🔴 Fail")) {
   if (!validationRecord.includes("| 🟡 Open |")) throw new Error("A failed V1 review must record at least one open corrective finding.");
   if (!validationRecord.includes("Revalidation must append")) throw new Error("A failed V1 review must preserve the original result and define append-only revalidation.");
 }

@@ -60,7 +60,7 @@ Every product module; art/UI reviewers; Unity sample project from M4 onward.
 
 ## Current V1 gate result
 
-The 2026-07-16 human review scored V1 at `91/100` with no automatic blockers, but Traceability and reproducibility scored `4/5` against a mandatory minimum of `5/5`. The rubric-computed outcome is therefore 🔴 Fail. V1-D004 owns the traceability audit and affected-dimension revalidation; V1-D003 records the non-blocking connected-shadow improvement.
+The original 2026-07-16 review scored V1 at `91/100` and failed because Traceability and reproducibility scored `4/5` against a mandatory `5/5`. V1-D004 corrected the provenance chain; the project owner appended a `5/5` re-score with no blockers. The current rubric-computed outcome is 🟢 Pass at `93/100`. V1-D003 remains a non-blocking connected-shadow improvement.
 
 ## Change history
 
@@ -72,3 +72,4 @@ The 2026-07-16 human review scored V1 at `91/100` with no automatic blockers, bu
 | 2026-07-16 | Prepared V1-E01 through V1-E06, light/dark SVG review surfaces, an unscored validation record, and drift validation | Codex |
 | 2026-07-16 | Recorded the 91/100 V1 review and rubric-computed Fail outcome; queued traceability revalidation and connected-shadow improvement | Project owner / Codex |
 | 2026-07-16 | Corrected V1-D004 with a source-hash audit, reviewer-visible traceability chain, manifest drift enforcement, and desktop/mobile QA; human re-score remains pending | Codex |
+| 2026-07-16 | Appended the approved Traceability `5/5` re-score and recorded the current V1 Pass at `93/100` while retaining the original failed result | Project owner / Codex |

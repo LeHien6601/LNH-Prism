@@ -1,6 +1,6 @@
 # V1-D004 Traceability and Reproducibility Audit
 
-**Status:** 🟢 Corrected and ready for human re-scoring.
+**Status:** 🟢 Accepted — re-scored `5/5`; V1 gate passed at `93/100`.
 
 | Field | Value |
 |---|---|
@@ -50,8 +50,13 @@ Only **Traceability and reproducibility** requires re-scoring for V1-D004. The o
 
 V1-D003 remains a separate visual renderer correction and is not evidence that V1-D004 failed.
 
+## Re-score outcome
+
+The project owner approved Traceability and reproducibility at `5/5` with no blockers on 2026-07-16. The original V1 total of `91/100` is retained; the appended revalidation recomputes the current total to `93/100` and the current gate outcome to 🟢 Pass.
+
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-16 | Audited the original evidence chain, recorded three provenance gaps, and documented the bounded correction and revalidation procedure | Codex |
+| 2026-07-16 | Accepted the corrected evidence at `5/5` with no blockers and approved the V1 Pass | Project owner |
