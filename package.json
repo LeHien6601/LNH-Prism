@@ -7,6 +7,7 @@
     "build:renderer": "tsc --project tsconfig.json",
     "prepare:showcase": "npm run build:renderer && node scripts/prepare-showcase.mjs",
     "render:primary-button": "npm run build:renderer && node dist/renderer/primary-button-cli.js",
+    "render:primary-panel": "npm run build:renderer && node dist/renderer/primary-panel-cli.js",
     "test:renderer": "npm run build:renderer && node --test tests/renderer/*.test.mjs",
     "validate:contracts": "node tests/contracts/validate-contracts.mjs",
     "validate:showcase": "node scripts/validate-showcase.mjs",

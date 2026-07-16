@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "id": "primary-panel",
+  "version": "0.1.0",
+  "status": "draft",
+  "style": { "id": "neon-core", "version": "0.1.0" },
+  "template": { "id": "panel", "version": "0.1.0" },
+  "layers": [
+    { "id": "panel-shadow", "kind": "shadow", "enabled": true },
+    { "id": "panel-fill", "kind": "fill", "enabled": true },
+    { "id": "panel-grain", "kind": "texture", "enabled": true },
+    { "id": "panel-border", "kind": "border", "enabled": true },
+    { "id": "panel-highlight", "kind": "highlight", "enabled": true },
+    { "id": "panel-content", "kind": "content", "enabled": true }
+  ],
+  "states": { "normal": {} },
+  "sizing": { "mode": "nine-slice", "minimum": { "width": 432, "height": 240 } },
+  "compatibility": { "minimumRendererVersion": "0.1.0" }
+}

@@ -2,8 +2,9 @@ import { createHash } from "node:crypto";
 import { mkdir, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { Resvg } from "@resvg/resvg-js";
+import { RENDERER_VERSION } from "./version.js";
 
-export const RENDERER_VERSION = "0.1.0+resvg.2.6.2";
+export { RENDERER_VERSION } from "./version.js";
 export const BUTTON_HEIGHT_LOGICAL = 56;
 export const BUTTON_WIDTHS_LOGICAL = [160, 240] as const;
 export const BUTTON_STATES = ["normal", "pressed", "disabled"] as const;

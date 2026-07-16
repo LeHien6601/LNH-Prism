@@ -12,7 +12,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 |---|---|---|
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
-| Renderer | 🟢 Primary Button proof complete | Deterministic SVG/PNG output, manifest provenance, and focused tests are implemented; Panel is next |
+| Renderer | 🟢 Primary Button and Panel proofs complete | Deterministic SVG/PNG output, manifest provenance, and focused tests are implemented; Progress Bar is next |
 | Materials | ⚪ Not started | Define first material pack after renderer baseline |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
 | Unity export | ⚪ Not started | Validate assets manually before automation |
@@ -21,9 +21,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🟡 **M1** — Deterministic MVP renderer |
-| Next task | 🔵 **Render the V1 Primary Panel template** · 🤖 Agent |
-| Next agent-ready task | 🔵 Add Panel layers, two target heights, SVG/PNG export, and focused determinism tests |
-| Last reviewed | 2026-07-15 |
+| Next task | 🔵 **Align button content slots and add Primary Panel to the showcase** · 🤖 Agent |
+| Next agent-ready task | 🔵 Fix label centering/pressed movement, then display both completed Panel sizes in the renderer-backed showcase |
+| Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
 ## 3. Objective boundaries
@@ -67,7 +67,9 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Prepare a V1 visual-review rubric draft | 🤖 Agent | 🟢 Complete | V1 rubric defines evidence, scoring, blockers, review roles, and revalidation record |
 | P1 | Choose render/export technology | 🛠️ Technical lead | 🟢 Complete | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | P1 | Prove V1 SVG renderer with the Primary Button | 🤖 Agent | 🟢 Complete | Six SVG/PNG outputs cover two sizes and three states; named layers, pinned renderer provenance, manifest hashes, and determinism tests pass |
-| P1 | Render the V1 Primary Panel template | 🤖 Agent | 🔵 Agent-ready | SVG and PNG outputs cover both accepted heights with independent shadow, border, fill, grain, highlight, and content layers; manifest and focused tests pass |
+| P1 | Render the V1 Primary Panel template | 🤖 Agent | 🟢 Complete | SVG and PNG outputs cover both accepted heights with independent shadow, border, fill, grain, highlight, and content layers; manifest and focused tests pass |
+| P1 | Align content slots and sync completed components to showcase | 🤖 Agent | 🔵 Agent-ready | Button labels share one centered slot and move `y: +2` when pressed; both Primary Panel sizes appear from renderer output |
+| P1 | Render the V1 Progress Bar template | 🤖 Agent | 🔵 Agent-ready | Frame and fill remain independently renderable at two widths and 10%, 50%, and 90%; manifests and focused tests pass |
 
 ## 6. Decision register
 
@@ -116,3 +118,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-15 | Accepted V1 render/export stack; completed M0 and queued the bounded M1 renderer proof | Project owner |
 | 2026-07-15 | Completed deterministic Primary Button renderer proof; queued Primary Panel template | Codex |
 | 2026-07-16 | Replaced the deferred status dashboard with a renderer-backed component showcase | Project owner |
+| 2026-07-16 | Completed deterministic Primary Panel proof; queued showcase alignment/sync before Progress Bar | Codex |
