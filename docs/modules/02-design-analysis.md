@@ -44,6 +44,8 @@ Module 01 contracts; style reference collection; M1 renderer for meaningful comp
 
 For V3, analyze one new concept screen and rebuild its Button, Panel, and Progress Bar using only the reviewed spec and material pack—not cropped pixels.
 
+The approved primary reference is the [Frostbound Reward Popup](../reference-briefs/V3_FROSTBOUND_REWARD.md). V3 adds a reusable reward-emblem container so material reuse is demonstrated across at least four component types while retaining the bounded Panel–Button–Progress core.
+
 ## Risks
 
 - False precision from visual inference: show confidence and allow “unknown.”
@@ -54,3 +56,4 @@ For V3, analyze one new concept screen and rebuild its Button, Panel, and Progre
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
+| 2026-07-17 | Selected Frostbound Reward as the V3 concept and drafted the source-annotated, human-controlled analysis workflow | Project owner / Codex |

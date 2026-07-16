@@ -14,15 +14,15 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
 | Materials | 🟢 V2 gate passed | Neon Market and Neon Alloy passed V2 at `93/100`; shared material reuse, propagation, structure, and traceability met every mandatory minimum |
-| AI analysis | 🟡 M3 definition pending | Select one new concept screen and bounded reconstruction target before drafting the M3 implementation specification |
+| AI analysis | 🟡 M3 definition drafted | Frostbound Reward Popup is selected; review the M3 implementation specification and V3 rubric before M3-S1 |
 | Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟡 **M3 definition** — M2/V2 passed at `93/100`; V3 target selection is required |
-| Next task | 🟣 **Select the V3 concept screen and bounded reconstruction target** · 🧭 Product + 🎨 Art human decision |
-| Next agent-ready task | ⚪ None — the V3 source reference and target component family must be chosen first |
+| Active milestone | 🟡 **M3 definition** — Frostbound Reward is selected; the implementation specification and V3 rubric are draft |
+| Next task | 🟣 **Review and approve the M3 implementation specification and V3 rubric** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ technical leads |
+| Next agent-ready task | ⚪ None — M3-S1 is blocked until the definition gate is approved |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -88,7 +88,10 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Create six component specs and assemble the M2-S4 Neon Market scenario | 🤖 Agent | 🟢 Complete | CLI/browser equivalence, complete family/state matrix, scenario preview, and target-phone/light-dark inspection assets are ready for the V2 evidence package |
 | P0 | Prepare the M2-S5 V2 evidence package and preflight | 🤖 Agent | 🟢 Complete | Produced V2-E01–V2-E09 with 28 matrix variants, propagation/provenance/progress-part proof, an unscored record, and V2-P001 for draft review inputs |
 | P0 | Conduct the M2-S5 V2 evidence review | 🧭 Product + 🎨 Art + 🛠️ technical leads | 🟢 Complete | Guided evidence review recorded `93/100`, every mandatory minimum met, no blockers, and 🟢 Pass on 2026-07-17 |
-| P0 | Select the V3 concept screen and bounded reconstruction target | 🧭 Product + 🎨 Art lead | 🟣 Human decision | Nominate one primary concept reference, target platform/scale, and a bounded Button/Panel/Progress reconstruction family without cropped component pixels |
+| P0 | Select the V3 concept screen and bounded reconstruction target | 🧭 Product + 🎨 Art lead | 🟢 Complete | Option A approved: Frostbound Reward Popup at `540 × 960` logical / `1080 × 1920`, with bounded Panel–primary/secondary Button–Progress plus reward-emblem container reconstruction and no concept-pixel extraction; see [ADR-012](decisions/ADR-012-v3-frostbound-reward.md) |
+| P0 | Draft the M3 implementation specification and V3 review rubric | 🤖 Agent | 🟢 Complete | [Implementation specification](implementation/M3_FROSTBOUND_ANALYSIS_IMPLEMENTATION_SPEC.md) and [V3 rubric](validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md) define human-controlled proposals, source/confidence annotations, material intake, bounded reconstruction, evidence, scoring, and blockers |
+| P0 | Review and approve the M3 implementation specification and V3 rubric | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ technical leads | 🟣 Human decision | Proposal model, review controls, reconstruction inventory, material boundary, ordered slices, evidence, thresholds, and blockers are explicitly accepted or revised |
+| P0 | Implement M3-S1 analysis, annotation, and review contracts | 🤖 Agent | 🔴 Blocked | Valid receipts pass; missing evidence, invalid regions, illegal status transitions, and unresolved critical proposals fail; blocked by the M3 definition gate |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -106,6 +109,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-009 | Use TypeScript + SVG + resvg + JSON manifests for V1 | 🟢 Accepted | Keeps source structure editable while providing deterministic headless PNG output; see [decision record](decisions/ADR-009-v1-render-export-stack.md) |
 | ADR-010 | Defer Unity integration validation to M4 | 🟢 Accepted | M1/V1 measures reusable structured SVG quality, editability, consistency, and reproducibility; see [decision record](decisions/ADR-010-defer-unity-integration-to-m4.md) |
 | ADR-011 | Use the Neon Market Kit and Neon Alloy material direction for V2 | 🟢 Accepted | Exercises the complete M2 component family while extending the proven Neon Core baseline; see [decision record](decisions/ADR-011-v2-neon-market-kit.md) |
+| ADR-012 | Use the Frostbound Reward Popup and bounded reconstruction family for V3 | 🟢 Accepted | Tests human-controlled concept analysis, new-theme transfer, action hierarchy, selected-state clarity, and reusable material intake without concept-pixel extraction; see [decision record](decisions/ADR-012-v3-frostbound-reward.md) |
 
 ## 7. Top risks and responses
 
@@ -166,3 +170,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Approved `neon-market`, `neon-alloy-materials`, and all six M2 component specs at `0.1.0`; closed V2-P001 and opened formal V2 scoring | Project owner |
 | 2026-07-16 | Verified the reported light-surface black regions were a preview-tool artifact, closed V2-P002 with direct RGBA checks and regression coverage, and retained formal V2 scoring as the next task | Codex |
 | 2026-07-17 | Confirmed the six V2 scores, recorded 🟢 Pass at `93/100` with no blockers, closed M2, and opened the human V3 target-selection decision | Project owner / Codex |
+| 2026-07-17 | Approved Frostbound Reward Option A, stored its concept receipt, drafted the M3 implementation specification and V3 rubric, and opened the human definition review | Project owner / Codex |

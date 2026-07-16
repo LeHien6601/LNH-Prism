@@ -66,6 +66,10 @@ The original 2026-07-16 review scored V1 at `91/100` and failed because Traceabi
 
 The 2026-07-17 guided evidence review scored V2 at `93/100`. Every dimension met its mandatory minimum, Traceability and reproducibility scored the required `5/5`, and no automatic blocker remained. The rubric-computed outcome is 🟢 Pass. Non-blocking V2-N001 and V2-N002 inform the M3 target/specification; V2-N003 remains assigned to M5 production hardening.
 
+## Current V3 definition status
+
+The project owner selected the Frostbound Reward Popup at the existing portrait-mobile scale. The draft M3 specification and V3 rubric define a source-annotated, confidence-aware, human-controlled concept-to-spec workflow; a bounded Panel–Button–Progress plus reward-emblem-container reconstruction; and automatic blockers for concept-pixel extraction or unreviewed AI suggestions. Human definition approval is required before M3-S1.
+
 ## Change history
 
 | Date | Change | Author |
@@ -86,3 +90,4 @@ The 2026-07-17 guided evidence review scored V2 at `93/100`. Every dimension met
 | 2026-07-16 | Approved the eight versioned V2 review inputs at `0.1.0`, closed V2-P001, and queued formal human scoring | Project owner / Codex |
 | 2026-07-16 | Closed V2-P002 as a preview-tool artifact after direct RGBA verification; added light/dark surface pixel-integrity regression coverage and retained formal human scoring as the next task | Codex |
 | 2026-07-17 | Recorded the confirmed V2 scorecard at `93/100`, no blockers, and 🟢 Pass; closed M2 and opened V3 target selection | Project owner / Codex |
+| 2026-07-17 | Selected Frostbound Reward for V3 and drafted V3-E01–V3-E10, scoring, blockers, and review controls for human approval | Project owner / Codex |

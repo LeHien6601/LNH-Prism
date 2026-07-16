@@ -8,9 +8,9 @@ This documentation package defines the plan for a production-oriented system tha
 
 | Field | Current value |
 |---|---|
-| Status | 🟡 In progress — M2/V2 passed at `93/100`; M3 definition is active |
+| Status | 🟡 In progress — Frostbound Reward is selected; M3 definition awaits review |
 | Active milestone | 🟡 M3: AI-assisted analysis and material intake definition |
-| Next task | 🟣 Select the V3 concept screen and bounded reconstruction target |
+| Next task | 🟣 Review and approve the M3 implementation specification and V3 rubric |
 | North-star outcome | Generate consistent UI components, states, and size variants from reusable styles/materials |
 | First production validation | Build a real Primary Button, Panel, and Progress Bar in one selected style |
 
@@ -31,6 +31,10 @@ This documentation package defines the plan for a production-oriented system tha
 | [V2 Neon Market reference brief](reference-briefs/V2_NEON_MARKET.md) | Approved shop-popup family and Neon Alloy direction |
 | [M2 Neon Market implementation specification](implementation/M2_NEON_MARKET_IMPLEMENTATION_SPEC.md) | Approved versioned requirements, bounded controls, implementation slices, and validation obligations |
 | [V2 visual-review rubric](validation/V2_VISUAL_REVIEW_RUBRIC.md) | Approved evidence package, scoring thresholds, blockers, and scorecard for M2 |
+| [V3 Frostbound Reward reference brief](reference-briefs/V3_FROSTBOUND_REWARD.md) | Selected concept receipt, scale, bounded family, analysis priorities, and no-extraction boundary |
+| [M3 Frostbound implementation specification](implementation/M3_FROSTBOUND_ANALYSIS_IMPLEMENTATION_SPEC.md) | Draft human-controlled proposal, review, material-intake, reconstruction, and evidence requirements |
+| [V3 concept-reconstruction rubric](validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md) | Draft evidence package, scoring, automatic blockers, and review procedure for M3 |
+| [ADR-012: V3 Frostbound Reward target](decisions/ADR-012-v3-frostbound-reward.md) | Approved V3 concept, scale, reconstruction family, and concept-pixel prohibition |
 | [ADR-009: V1 render/export stack](decisions/ADR-009-v1-render-export-stack.md) | Approved TypeScript, SVG, resvg, and JSON-manifest architecture |
 | [Unity export](modules/06-unity-export.md) | Assets, metadata, slicing, naming, and importer integration |
 | [Production hardening](modules/07-production-hardening.md) | Reliability, regression testing, performance, and operations |
