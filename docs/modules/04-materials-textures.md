@@ -61,3 +61,4 @@ M2 V2: produce a themed popup set using one material pack and document every reu
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
+| 2026-07-16 | Selected Neon Alloy as the first reusable M2 material direction for the V2 Neon Market Kit | Project owner |

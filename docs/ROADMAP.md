@@ -39,6 +39,8 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Practical validation V2:** create a shop or reward popup set: panel, primary/secondary buttons, currency badge, tab, and progress bar from one style pack.
 
+**Approved V2 target:** Neon Market Kit — a portrait mobile shop popup using one reusable Neon Alloy material pack across the panel, category tabs, primary/secondary buttons, currency badge, and limited-offer progress bar. See [ADR-011](decisions/ADR-011-v2-neon-market-kit.md).
+
 **Exit gate:** one style change updates the set consistently; reviewers judge cross-component consistency at or above the agreed threshold.
 
 ## ⚪ M3 — AI-assisted design analysis and material intake
@@ -102,3 +104,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-16 | Closed the post-gate V1-D003 connected-extrusion improvement and completed the M1 corrective cycle | Codex |
 | 2026-07-16 | Approved the scope-boxed CR-002 shared-renderer showcase prototype as a post-M1 validation improvement | Project owner / Codex |
 | 2026-07-16 | Completed and closed CR-002; advanced project control to the V2 target-screen and first-material decision | Codex |
+| 2026-07-16 | Approved the Neon Market Kit and Neon Alloy direction as the M2/V2 target; queued specification and rubric drafting before implementation | Project owner / Codex |

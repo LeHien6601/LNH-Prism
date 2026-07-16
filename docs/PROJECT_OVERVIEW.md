@@ -13,16 +13,16 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
-| Materials | ⚪ Not started | Define first material pack after renderer baseline |
+| Materials | 🟡 Direction approved | Neon Alloy is the first reusable pack; implementation specification is next |
 | AI analysis | ⚪ Not started | Add only after manual style specification is proven |
 | Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | ⚪ **M2 ready for definition** — CR-002 post-M1 experiment closed |
-| Next task | 🟣 **Choose the V2 validation target and first material direction** · 🧭 Product + 🎨 Art lead |
-| Next agent-ready task | ⚪ None until the V2 target screen and material direction are approved |
+| Active milestone | 🟡 **M2 definition** — Neon Market Kit and Neon Alloy direction approved |
+| Next task | 🔵 **Draft the M2 implementation specification and V2 review rubric** · 🤖 Agent |
+| Next agent-ready task | 🔵 Draft the M2 implementation specification and V2 review rubric |
 | Last reviewed | 2026-07-16 |
 | Project owner | 🧭 To be assigned |
 
@@ -79,7 +79,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Improve the connected 3D shadow treatment (V1-D003) | 🤖 Agent | 🟢 Complete | Connected, parameterized extrusion layers remain independently editable and pass desktop/mobile light/dark review at accepted sizes/states |
 | P2 | Review bounded real-time showcase controls (CR-002) | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Option A approved on 2026-07-16 as one scope-boxed shared-renderer prototype |
 | P2 | Implement the CR-002 shared-renderer prototype | 🤖 Agent | 🟢 Complete | Shared recipes, bounded controls, read-only traceability, exact browser/CLI equivalence, edge tests, and responsive QA are recorded in the [validation record](validation/records/cr-002-showcase-controls.md) |
-| P0 | Choose the V2 validation target and first material direction | 🧭 Product + 🎨 Art lead | 🟣 Human decision | Select shop or reward popup context, required component family, and one reusable material direction before M2 implementation tasks are drafted |
+| P0 | Choose the V2 validation target and first material direction | 🧭 Product + 🎨 Art lead | 🟢 Complete | Option A approved: Neon Market Kit at the existing portrait scale with one reusable Neon Alloy material pack; see [ADR-011](decisions/ADR-011-v2-neon-market-kit.md) |
+| P0 | Draft the M2 implementation specification and V2 review rubric | 🤖 Agent | 🔵 Agent-ready | Versioned token/material/component requirements, bounded layer controls, implementation sequence, validation evidence, scoring thresholds, and explicit non-goals are reviewable before renderer implementation |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -96,6 +97,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-008 | Use focused baseline V1 component briefs | 🟢 Accepted | Proves deterministic core behavior before optional content slots and additional variants |
 | ADR-009 | Use TypeScript + SVG + resvg + JSON manifests for V1 | 🟢 Accepted | Keeps source structure editable while providing deterministic headless PNG output; see [decision record](decisions/ADR-009-v1-render-export-stack.md) |
 | ADR-010 | Defer Unity integration validation to M4 | 🟢 Accepted | M1/V1 measures reusable structured SVG quality, editability, consistency, and reproducibility; see [decision record](decisions/ADR-010-defer-unity-integration-to-m4.md) |
+| ADR-011 | Use the Neon Market Kit and Neon Alloy material direction for V2 | 🟢 Accepted | Exercises the complete M2 component family while extending the proven Neon Core baseline; see [decision record](decisions/ADR-011-v2-neon-market-kit.md) |
 
 ## 7. Top risks and responses
 
@@ -144,3 +146,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Approved CR-002 Option A and queued its scope-boxed shared-renderer Button/Progress prototype as the next agent-ready task | Project owner / Codex |
 | 2026-07-16 | Completed CR-002 with shared browser/CLI SVG recipes, bounded controls, traceability, 18 tests, and responsive browser evidence; advanced to the V2 target/material decision | Codex |
 | 2026-07-16 | Corrected the export-manifest contract so provenance is mandatory, documented the intentional `1.0` tightening, and added negative omission coverage | Project owner / Codex |
+| 2026-07-16 | Approved Option A for V2: Neon Market Kit with one reusable Neon Alloy pack; queued the M2 specification and V2 rubric as the next agent-ready task | Project owner / Codex |
