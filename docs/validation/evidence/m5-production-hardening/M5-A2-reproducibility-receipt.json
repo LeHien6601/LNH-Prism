@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m5-a2-frostbound-reproducibility-regression",
+  "status": "pass",
+  "packageId": "frostbound-reward-assets",
+  "packageVersion": "1.0.0",
+  "gitCommit": "a7f28050adcff71f6e5e7323a485778a65aac435",
+  "nodeVersion": "v24.11.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "lockfileSha256": "9e111c4ae81fa2d761b2cc291f628a19c7e27d4ca5ebd492b2ad0484aedd742c",
+  "baseline": {
+    "modules": 62,
+    "totalBytes": 436565,
+    "largestFileBytes": 52730,
+    "formatCounts": {
+      "png": 26,
+      "svg": 36
+    }
+  },
+  "cleanWorkspace": {
+    "status": "pass",
+    "sourceMatrix": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix",
+    "temporaryWorkspace": "fresh temporary workspace per command run",
+    "packageAssembler": "scripts/prepare-asset-package.mjs"
+  },
+  "byteComparison": {
+    "status": "pass",
+    "expectedModules": 62,
+    "actualModules": 62,
+    "manifestsByteIdenticalAcrossRuns": true
+  },
+  "runs": {
+    "count": 5,
+    "results": [
+      {
+        "run": 1,
+        "durationMs": 530.237,
+        "manifestSha256": "bca2ef3bba02076ec5827442edc10727fb552267da35416145e1789a6d8c91a0",
+        "comparison": {
+          "status": "pass",
+          "expectedModules": 62,
+          "actualModules": 62,
+          "mismatches": []
+        }
+      },
+      {
+        "run": 2,
+        "durationMs": 415.093,
+        "manifestSha256": "bca2ef3bba02076ec5827442edc10727fb552267da35416145e1789a6d8c91a0",
+        "comparison": {
+          "status": "pass",
+          "expectedModules": 62,
+          "actualModules": 62,
+          "mismatches": []
+        }
+      },
+      {
+        "run": 3,
+        "durationMs": 427.392,
+        "manifestSha256": "bca2ef3bba02076ec5827442edc10727fb552267da35416145e1789a6d8c91a0",
+        "comparison": {
+          "status": "pass",
+          "expectedModules": 62,
+          "actualModules": 62,
+          "mismatches": []
+        }
+      },
+      {
+        "run": 4,
+        "durationMs": 481.628,
+        "manifestSha256": "bca2ef3bba02076ec5827442edc10727fb552267da35416145e1789a6d8c91a0",
+        "comparison": {
+          "status": "pass",
+          "expectedModules": 62,
+          "actualModules": 62,
+          "mismatches": []
+        }
+      },
+      {
+        "run": 5,
+        "durationMs": 453.799,
+        "manifestSha256": "bca2ef3bba02076ec5827442edc10727fb552267da35416145e1789a6d8c91a0",
+        "comparison": {
+          "status": "pass",
+          "expectedModules": 62,
+          "actualModules": 62,
+          "mismatches": []
+        }
+      }
+    ],
+    "medianMs": 453.799,
+    "p95Ms": 530.237
+  },
+  "matrix": {
+    "status": "pass",
+    "requiredNames": 33,
+    "missing": []
+  },
+  "readability": {
+    "status": "pass",
+    "views": [
+      {
+        "id": "light-surface-1080x1920",
+        "sourceAssets": [
+          "assets/frostbound-reward/modules/panel/panel-432x420-normal.png",
+          "assets/frostbound-reward/modules/primary-button/primary-button-288x64-normal.png",
+          "assets/frostbound-reward/modules/secondary-button/secondary-button-200x52-normal.png"
+        ],
+        "path": "docs/validation/evidence/m5-production-hardening/readability/light-surface-1080x1920.png",
+        "svgPath": "docs/validation/evidence/m5-production-hardening/readability/light-surface-1080x1920.svg",
+        "width": 1080,
+        "height": 1920,
+        "checks": {
+          "noClipping": "pass",
+          "labelContrast": "pass",
+          "sourceAssetsPresent": "pass"
+        }
+      },
+      {
+        "id": "dark-surface-1080x1920",
+        "sourceAssets": [
+          "assets/frostbound-reward/modules/panel/panel-432x420-normal.png",
+          "assets/frostbound-reward/modules/emblem/emblem-144x144-selected.png",
+          "assets/frostbound-reward/modules/primary-button/primary-button-288x64-normal.png"
+        ],
+        "path": "docs/validation/evidence/m5-production-hardening/readability/dark-surface-1080x1920.png",
+        "svgPath": "docs/validation/evidence/m5-production-hardening/readability/dark-surface-1080x1920.svg",
+        "width": 1080,
+        "height": 1920,
+        "checks": {
+          "noClipping": "pass",
+          "labelContrast": "pass",
+          "sourceAssetsPresent": "pass"
+        }
+      },
+      {
+        "id": "primary-hierarchy-1080x1920",
+        "sourceAssets": [
+          "assets/frostbound-reward/modules/primary-button/primary-button-288x64-normal.png",
+          "assets/frostbound-reward/modules/secondary-button/secondary-button-160x52-normal.png",
+          "assets/frostbound-reward/modules/emblem/emblem-144x144-selected.png"
+        ],
+        "path": "docs/validation/evidence/m5-production-hardening/readability/primary-hierarchy-1080x1920.png",
+        "svgPath": "docs/validation/evidence/m5-production-hardening/readability/primary-hierarchy-1080x1920.svg",
+        "width": 1080,
+        "height": 1920,
+        "checks": {
+          "noClipping": "pass",
+          "labelContrast": "pass",
+          "sourceAssetsPresent": "pass"
+        }
+      },
+      {
+        "id": "progress-parts-1080x1920",
+        "sourceAssets": [
+          "assets/frostbound-reward/modules/progress/progress-frame-432.svg",
+          "assets/frostbound-reward/modules/progress/progress-fill-432-75.svg"
+        ],
+        "path": "docs/validation/evidence/m5-production-hardening/readability/progress-parts-1080x1920.png",
+        "svgPath": "docs/validation/evidence/m5-production-hardening/readability/progress-parts-1080x1920.svg",
+        "width": 1080,
+        "height": 1920,
+        "checks": {
+          "noClipping": "pass",
+          "labelContrast": "pass",
+          "sourceAssetsPresent": "pass"
+        }
+      }
+    ]
+  },
+  "defects": [],
+  "generatedAt": "2026-07-17T16:34:28.470Z"
+}

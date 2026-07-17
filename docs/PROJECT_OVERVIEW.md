@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🔵 **M5 production hardening** — the Frostbound baseline and validation contract are defined; the reproducibility/regression batch is ready to implement |
-| Next task | 🔵 **Implement and run the M5 Frostbound reproducibility/regression batch** · 🤖 Agent |
-| Next agent-ready task | 🔵 **M5-A2** — automate clean-workspace reproduction, strict receipt/golden checks, five-run timing, matrix verification, and target-scale readability evidence |
+| Active milestone | 🟡 **M5 production hardening** — M5-A2 reproducibility/regression validation passed; post-A2 hardening scope remains to be decided |
+| Next task | 🔵 **Remove retired Unity workflow references from active governance** · 🤖 Agent |
+| Next agent-ready task | 🔵 **R-002** — update active validation/governance guidance to the engine-neutral delivery boundary and repair dead links |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -51,7 +51,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M2 | Tokens, variants, states, material packs | 🟢 V2 Pass — `93/100` |
 | 🟢 | M3 | AI-assisted analysis and material intake | 🟢 V3 Pass — `94/100` |
 | 🟢 | M4 | Modular asset delivery | 🟢 Passed — 62-module engine-neutral package validated |
-| ⚪ | M5 | Production hardening and regression suite | 🟣 Production readiness review |
+| 🟡 | M5 | Production hardening and regression suite | 🟣 Post-A2 hardening scope review |
 | ⚪ | M6 | Optional showcase scaling and workflow review | 🟣 Operations review |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
@@ -100,7 +100,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Conduct the M3-S5 V3 human fidelity review | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A recorded `94/100`; every mandatory minimum met, no blocker or defect remained, and V3 passed on 2026-07-17 |
 | P0 | Define and assemble the engine-neutral modular asset handoff package | 🤖 Agent | 🟢 Complete | `assets/frostbound-reward` contains 62 independently extractable SVG/PNG modules across panel, primary button, secondary button, progress, and emblem; manifest receipts, unique IDs, and package validation pass |
 | P0 | Define the M5 production-hardening validation batch | 🤖 Agent | 🟢 Complete | [M5 plan](implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md) and baseline receipt define clean-workspace reproduction, strict receipt/golden checks, five-run timing, size/matrix controls, and readability evidence |
-| P0 | Implement and run the M5 Frostbound reproducibility/regression batch | 🤖 Agent | 🔵 Agent-ready | One local command records clean-workspace assembly, strict byte receipts, five-run timing, package size, state/part matrix, and four target-scale readability views |
+| P0 | Implement and run the M5 Frostbound reproducibility/regression batch | 🤖 Agent | 🟢 Complete | Passing receipt records clean-workspace assembly, strict byte receipts, five-run timing, package size, state/part matrix, and four target-scale readability views |
+| P1 | Remove retired Unity workflow references from active governance (R-002) | 🤖 Agent | 🔵 Agent-ready | Active validation/governance guidance follows ADR-014's engine-neutral boundary and contains no dead Unity-module links; historical records remain auditable |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -192,3 +193,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Completed M5-A1 production-hardening definition with a fixed Frostbound baseline, batch contract, regression policy, receipt fields, and M5-A2 exit conditions | Codex |
 | 2026-07-17 | Defined the `Review:` weakness-assessment record and `Apply Review:` one-task remediation workflow | Codex |
 | 2026-07-17 | Applied review R-001: aligned M4 completion and M5-A2 next-task status across active project controls | Codex |
+| 2026-07-17 | Completed M5-A2 with clean-workspace byte reproduction, five-run timing, matrix verification, and four readability receipts; queued R-002 | Codex |

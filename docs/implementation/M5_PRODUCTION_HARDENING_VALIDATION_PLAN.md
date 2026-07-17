@@ -2,7 +2,7 @@
 
 ## Status
 
-M5-A1 definition complete. M5-A2 is the next agent-ready implementation task.
+M5-A1 definition and M5-A2 implementation are complete. The passing receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; deferred hardening slices remain out of scope.
 
 ## Purpose
 
