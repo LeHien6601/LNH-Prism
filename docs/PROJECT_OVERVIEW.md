@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | ⚪ **Roadmap direction** — M0 through M6 resolved |
-| Next task | 🟣 **Decide next production roadmap direction** · 🧭 Project owner + 🛠️ Technical lead |
-| Next agent-ready task | None — pending roadmap human decision |
+| Active milestone | ⚪ **M7 — Reference-fidelity style expansion** |
+| Next task | 🔵 **Draft M7 reference-fidelity style expansion specification** · 🤖 Agent |
+| Next agent-ready task | Draft M7 reference-fidelity style expansion specification |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -53,6 +53,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M4 | Modular asset delivery | 🟢 Passed — 62-module engine-neutral package validated |
 | 🟢 | M5 | Production hardening and regression suite | 🟢 Passed — Frostbound-only hardening accepted for M5 exit |
 | 🟢 | M6 | Optional showcase scaling and workflow review | 🟢 Deferred — Markdown + showcase remain sufficient |
+| ⚪ | M7 | Reference-fidelity style expansion | 🔵 Definition task queued — sharper wide-hexagon UI language and expanded style complexity |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -110,7 +111,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P2 | Draft release operating procedure and exception policy (M5-A5) | 🤖 Agent | 🟢 Complete | Checklist defines validation gates, evidence paths, sign-off, exception policy, rollback decision points, and handoff artifacts |
 | P2 | Decide multi-style hardening coverage (M5-A6) | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved: Frostbound-only hardening is sufficient for M5 exit; multi-style coverage is deferred as a future scaling risk |
 | P3 | Decide M6 workflow scaling need | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved: keep Markdown controls and the existing showcase; defer dashboard/workflow scaling until coordination pain appears |
-| P3 | Decide next production roadmap direction | 🧭 Project owner + 🛠️ Technical lead | 🟣 Human decision | Choose the next validation target, future package/style hardening, maintenance cadence, or a new approved milestone |
+| P3 | Decide next production roadmap direction | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved: start the next production asset package track, focused on stronger reference fidelity, sharper wide-hexagon UI geometry, and expanded style complexity |
+| P0 | Draft M7 reference-fidelity style expansion specification | 🤖 Agent | 🔵 Agent-ready | Specification defines the target/reference requirements, sharp wide-hexagon button and angular UI language, expanded material/ornament complexity, component inventory, validation rubric, evidence plan, and engine-neutral asset-only handoff boundary |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -132,6 +134,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-015 | Archive legacy export manifests and move live output to an engine-neutral successor | 🟢 Accepted | Keeps historical evidence auditable while removing retired engine metadata from the live production contract; see [decision record](decisions/ADR-015-export-manifest-compatibility-policy.md) |
 | ADR-016 | Use Frostbound-only hardening coverage for M5 exit | 🟢 Accepted | M5 closes on the fully hardened Frostbound package; multi-style coverage is deferred as a future scaling risk; see [decision record](decisions/ADR-016-m5-frostbound-only-hardening-coverage.md) |
 | ADR-017 | Defer M6 dashboard and workflow scaling | 🟢 Accepted | Markdown controls plus the renderer-backed showcase remain sufficient; dashboard work is deferred until coordination pain appears; see [decision record](decisions/ADR-017-defer-m6-dashboard-workflow-scaling.md) |
+| ADR-018 | Start M7 reference-fidelity style expansion | 🟢 Accepted | The next production package must improve reference fidelity beyond the current rounded-corner UI language, with sharper wide-hexagon buttons, angular forms, richer style complexity, and engine-neutral asset-only delivery; see [decision record](decisions/ADR-018-reference-fidelity-style-expansion.md) |
 
 ## 7. Top risks and responses
 
@@ -144,6 +147,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 🟡 Asset modules are coupled or hard to find | Consumers need project-specific context to use assets | Keep portable modules, stable IDs, and source-to-output receipts together | 🤖 Agent |
 | 🟡 Multi-style hardening remains unproven | A second production package needs release hardening | Treat as an accepted M5 scaling risk per ADR-016; revisit when another production package is selected | 🧭 Product owner + 🛠️ Technical lead |
 | 🟡 Dashboard/workflow scaling may become useful later | Markdown review becomes slow, duplicated, or hard to audit | Treat as deferred per ADR-017; create a scoped task only when a concrete coordination problem appears | 🧭 Product owner + 🛠️ Technical lead |
+| 🟡 Reference fidelity can drift toward the old rounded baseline | New assets repeat existing rounded-corner button/panel language instead of the selected sharper reference direction | Require M7-A1 to define shape-language rules, especially sharp wide-hexagon buttons and angular containers, before rendering begins | 🎨 Art + ✦ UI + 🛠️ Technical leads |
 
 ## 8. Review cadence
 
@@ -217,3 +221,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Completed M5-A5 release operating procedure and exception policy; queued M5-A6 multi-style coverage decision | Codex |
 | 2026-07-18 | Approved M5-A6 Option A: Frostbound-only hardening is sufficient for M5 exit; queued M6 workflow scaling decision | Project owner / Codex |
 | 2026-07-18 | Approved M6 Option A: defer dashboard/workflow scaling; queued next roadmap direction decision | Project owner / Codex |
+| 2026-07-18 | Approved next roadmap Option A: start M7 reference-fidelity style expansion with sharper wide-hexagon UI geometry and expanded style complexity; queued M7-A1 specification | Project owner / Codex |

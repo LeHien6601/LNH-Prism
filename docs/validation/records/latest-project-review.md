@@ -11,12 +11,12 @@
 | Validation run | `npm run validate:asset-package`; `git diff --check` |
 | Validation result | Passed: M6 decision records Markdown + showcase as sufficient; 62 modular files validated across five components; no whitespace errors |
 
-Refresh note: R-001 through R-010 have been resolved. M5 is passed; M6 dashboard/workflow scaling is deferred by ADR-017 because Markdown controls plus the existing showcase remain sufficient.
+Refresh note: R-001 through R-010 have been resolved. M5 is passed; M6 dashboard/workflow scaling is deferred by ADR-017 because Markdown controls plus the existing showcase remain sufficient. The next roadmap direction has now been selected: M7 reference-fidelity style expansion.
 
 ## Current status
 
 - M1/V1, M2/V2, M3/V3, and M4 modular asset delivery are recorded as passed/completed.
-- M5-A1 through M5-A6 are complete and M5 is passed. M6 dashboard/workflow scaling is deferred. R-002, R-004, R-005, R-006, R-007, R-008, R-009, and R-010 are complete. The next item is the Human-decision task for next production roadmap direction.
+- M5-A1 through M5-A6 are complete and M5 is passed. M6 dashboard/workflow scaling is deferred. R-002, R-004, R-005, R-006, R-007, R-008, R-009, and R-010 are complete. The next roadmap direction is M7 reference-fidelity style expansion.
 - The Frostbound package is engine-neutral and validates as 62 modular SVG/PNG files across Panel, Primary Button, Secondary Button, Progress, and Emblem.
 
 ## Findings
@@ -120,4 +120,4 @@ Applied in this run: [ADR-016](../../decisions/ADR-016-m5-frostbound-only-harden
 
 ## Review conclusion
 
-The asset package and M5-A2/M5-A3/M5-A4 validation are healthy, M5-A5 defines the release procedure needed to use that evidence, R-010/ADR-016 accepts Frostbound-only hardening for M5 exit, and ADR-017 defers M6 dashboard/workflow scaling. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, R-004 selected archival legacy validation plus a live engine-neutral successor, R-006 implemented that successor, R-005 split the remaining M5 work into ordered slices, R-007 completed the manifest migration/rollback drill, R-008 completed the package backup/recovery drill, R-009 completed the release operating procedure, and R-010 closed the coverage decision. The next recommended project decision is the next production roadmap direction.
+The asset package and M5-A2/M5-A3/M5-A4 validation are healthy, M5-A5 defines the release procedure needed to use that evidence, R-010/ADR-016 accepts Frostbound-only hardening for M5 exit, and ADR-017 defers M6 dashboard/workflow scaling. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, R-004 selected archival legacy validation plus a live engine-neutral successor, R-006 implemented that successor, R-005 split the remaining M5 work into ordered slices, R-007 completed the manifest migration/rollback drill, R-008 completed the package backup/recovery drill, R-009 completed the release operating procedure, and R-010 closed the coverage decision. ADR-018 selects M7 reference-fidelity style expansion as the next asset-only production track; the next recommended action is the M7-A1 specification and rubric.

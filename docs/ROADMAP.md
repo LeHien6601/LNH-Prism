@@ -103,6 +103,24 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** deferred; no dashboard is required while Markdown controls and the existing showcase remain sufficient.
 
+## ⚪ M7 — Reference-fidelity style expansion
+
+**Goal:** validate a next production package that improves reference fidelity and style complexity beyond the current rounded-corner baseline.
+
+**Decision:** 🟢 Accepted on 2026-07-18 — [ADR-018](decisions/ADR-018-reference-fidelity-style-expansion.md) starts a new asset-only track focused on sharper, wider hexagonal button geometry, angular UI language, richer material/ornament treatment, and engine-neutral modular handoff.
+
+- Draft the M7 implementation specification and visual-fidelity rubric before rendering.
+- Define the target/reference constraints and a bounded component inventory.
+- Replace rounded button expectations with sharp wide-hexagon geometry where the reference calls for it.
+- Expand style complexity through controlled material, edge, lighting, ornament, and state rules.
+- Keep final outputs as deterministic, independently extractable, engine-neutral assets shown in the showroom or handed off with exact file/folder addresses.
+
+**Practical validation M7:** produce one approved production package from the M7 specification and review it against the reference-fidelity rubric, package integrity checks, deterministic receipts, and showroom/handoff evidence.
+
+**Definition gate:** M7-A1 specification and rubric are approved before renderer/template implementation starts.
+
+**Exit gate:** the package passes reference fidelity, modularity, traceability, deterministic reproduction, and asset-only handoff criteria.
+
 ## Change history
 
 | Date | Change | Author |
@@ -128,3 +146,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-18 | Completed M5-A3 through M5-A5 hardening controls and queued the M5-A6 multi-style coverage decision | Codex |
 | 2026-07-18 | Accepted Frostbound-only hardening coverage for M5 exit and marked M5 passed | Project owner / Codex |
 | 2026-07-18 | Deferred M6 dashboard/workflow scaling and kept Markdown plus showcase as the operating model | Project owner / Codex |
+| 2026-07-18 | Selected M7 reference-fidelity style expansion as the next asset-only production track | Project owner / Codex |
