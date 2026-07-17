@@ -4,12 +4,14 @@
 
 | Field | Value |
 |---|---|
-| Reviewed revision | `828ee86` (`docs(workflow): add review remediation command`) |
+| Reviewed revision | `ad59059` (`docs(review): record project weakness assessment`) |
 | Review date | 2026-07-17 |
 | Working tree at start | Clean |
 | Scope | Workflow, status, and plan |
 | Validation run | `npm run validate:contracts`; `npm run validate:asset-package` |
 | Validation result | Passed: contracts validated including missing-provenance rejection; 62 modular files validated across five components |
+
+Refresh note: Compared with the prior review, no recommendation has been applied and no project code, status, or plan has changed. Findings F-001 through F-005 remain open.
 
 ## Current status
 
