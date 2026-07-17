@@ -4,7 +4,7 @@
 
 Make output reproducible, testable, performant, and safe to evolve across many assets and styles.
 
-**Status:** M5-A3 manifest migration/rollback drill complete; export-manifest `1.2` is the live engine-neutral manifest; M5-A4 backup/recovery is the next hardening slice.
+**Status:** M5-A4 backup/recovery drill complete; export-manifest `1.2` is the live engine-neutral manifest; M5-A5 release procedure is the next hardening slice.
 
 ## Scope
 
@@ -49,7 +49,9 @@ ADR-015 approves the compatibility policy for export manifests: legacy `1.0`/`1.
 
 M5-A3 passed with a manifest migration/rollback receipt at `docs/validation/evidence/m5-production-hardening/M5-A3-manifest-migration-rollback-receipt.json`, proving live `1.2` handling, archival legacy retention, clear failure checks, rollback preservation, and unchanged approved package bytes.
 
-The remaining M5 hardening work is split in the M5 plan: M5-A4 backup/recovery drill, M5-A5 release operating procedure, and M5-A6 multi-style coverage decision.
+M5-A4 passed with a package backup/recovery receipt at `docs/validation/evidence/m5-production-hardening/M5-A4-package-backup-recovery-receipt.json`, proving restore from backup, rebuild from pinned source evidence, byte equality, recovery timing, and unchanged approved package bytes.
+
+The remaining M5 hardening work is split in the M5 plan: M5-A5 release operating procedure and M5-A6 multi-style coverage decision.
 
 ## Risks
 
@@ -67,3 +69,4 @@ The remaining M5 hardening work is split in the M5 plan: M5-A4 backup/recovery d
 | 2026-07-17 | Implemented export-manifest `1.2` for live engine-neutral output while preserving archival legacy validation | Codex |
 | 2026-07-18 | Split the remaining post-A2 M5 hardening work into M5-A3 through M5-A6 | Codex |
 | 2026-07-18 | Completed M5-A3 manifest migration/rollback drill and queued M5-A4 backup/recovery | Codex |
+| 2026-07-18 | Completed M5-A4 package backup/recovery drill and queued M5-A5 release procedure | Codex |

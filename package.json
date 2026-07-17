@@ -20,6 +20,7 @@
     "validate:asset-package": "node scripts/validate-asset-package.mjs",
     "validate:m5-production-hardening": "node scripts/validate-m5-production-hardening.mjs",
     "validate:m5-manifest-migration": "node scripts/validate-m5-manifest-migration.mjs",
+    "validate:m5-backup-recovery": "node scripts/validate-m5-backup-recovery.mjs",
     "prepare:m3-s2-review": "npm run build:renderer && node scripts/prepare-m3-s2-review.mjs",
     "validate:m3-s2-review": "npm run build:renderer && node scripts/validate-m3-s2-review.mjs",
     "prepare:m3-s3-material-intake": "npm run build:renderer && node scripts/prepare-m3-s3-material-intake.mjs",

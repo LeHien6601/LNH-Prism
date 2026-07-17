@@ -8,15 +8,15 @@
 | Review date | 2026-07-17 |
 | Working tree at start | Clean |
 | Scope | Workflow, status, and plan |
-| Validation run | `npm run validate:m5-manifest-migration`; `npm run validate:contracts`; `npm run validate:asset-package`; `git diff --check` |
-| Validation result | Passed: M5-A3 manifest migration/rollback receipt recorded; contracts validated including missing-provenance and live `1.2` engine-metadata rejection; 62 modular files validated across five components; no whitespace errors |
+| Validation run | `npm run validate:m5-backup-recovery`; `npm run validate:m5-manifest-migration`; `npm run validate:contracts`; `npm run validate:asset-package`; `git diff --check` |
+| Validation result | Passed: M5-A4 backup/recovery receipt recorded; M5-A3 manifest migration/rollback receipt remains passing; contracts validated including missing-provenance and live `1.2` engine-metadata rejection; 62 modular files validated across five components; no whitespace errors |
 
-Refresh note: R-001, R-002, R-003, R-004, R-005, R-006, and R-007 have been resolved. M5-A3 recorded the manifest migration/rollback drill; M5-A4/R-008 is now the next agent-ready hardening task.
+Refresh note: R-001, R-002, R-003, R-004, R-005, R-006, R-007, and R-008 have been resolved. M5-A4 recorded the package backup/recovery drill; M5-A5/R-009 is now the next agent-ready hardening task.
 
 ## Current status
 
 - M1/V1, M2/V2, M3/V3, and M4 modular asset delivery are recorded as passed/completed.
-- M5-A1, M5-A2, and M5-A3 are complete. R-002, R-004, R-005, R-006, and R-007 are complete. The next item is the Agent-ready task M5-A4/R-008: implement package backup and recovery drill.
+- M5-A1, M5-A2, M5-A3, and M5-A4 are complete. R-002, R-004, R-005, R-006, R-007, and R-008 are complete. The next item is the Agent-ready task M5-A5/R-009: draft release operating procedure and exception policy.
 - The Frostbound package is engine-neutral and validates as 62 modular SVG/PNG files across Panel, Primary Button, Secondary Button, Progress, and Emblem.
 
 ## Findings
@@ -94,15 +94,17 @@ Applied in this run: M5-A3 through M5-A6 are recorded in the M5 plan and overvie
 
 Applied in this run: `npm run validate:m5-manifest-migration` recorded `docs/validation/evidence/m5-production-hardening/M5-A3-manifest-migration-rollback-receipt.json`, validated live `1.2` and archived legacy manifests, rejected engine metadata, missing provenance, missing output hashes, and misplaced legacy evidence, and verified the approved Frostbound package manifest remained byte-identical with 62 modules / 436,565 bytes.
 
-### R-008 — Implement package backup and recovery drill (M5-A4)
+### R-008 — Implement package backup and recovery drill (M5-A4) — Complete
 
-- **Priority / eligibility:** P2 — Agent-ready
+- **Priority / eligibility:** P2 — Complete
 - **Scope:** Restore or rebuild the Frostbound package from pinned inputs and receipts, then verify byte equality against the approved manifest.
 - **Acceptance criteria:** Recovery evidence records source set, destination, environment, timing, defects, and path/byte/SHA equality.
 
+Applied in this run: `npm run validate:m5-backup-recovery` recorded `docs/validation/evidence/m5-production-hardening/M5-A4-package-backup-recovery-receipt.json`, restored the approved package from a backup copy, rebuilt it from pinned source evidence and the package assembler, and verified 62 modules / 436,565 bytes with no mismatches and unchanged approved package bytes.
+
 ### R-009 — Draft release operating procedure and exception policy (M5-A5)
 
-- **Priority / eligibility:** P2 — Blocked on R-008
+- **Priority / eligibility:** P2 — Agent-ready
 - **Scope:** Define the release checklist, validation commands, evidence paths, owner sign-off, regression exception policy, rollback decision points, and handoff artifacts.
 - **Acceptance criteria:** Procedure is usable for an engine-neutral asset package release and references completed hardening evidence.
 
@@ -114,4 +116,4 @@ Applied in this run: `npm run validate:m5-manifest-migration` recorded `docs/val
 
 ## Review conclusion
 
-The asset package and M5-A2/M5-A3 validation are healthy. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, R-004 selected archival legacy validation plus a live engine-neutral successor, R-006 implemented that successor, R-005 split the remaining M5 work into ordered slices, and R-007 completed the manifest migration/rollback drill. The next recommended task is R-008/M5-A4: implement the package backup and recovery drill.
+The asset package and M5-A2/M5-A3/M5-A4 validation are healthy. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, R-004 selected archival legacy validation plus a live engine-neutral successor, R-006 implemented that successor, R-005 split the remaining M5 work into ordered slices, R-007 completed the manifest migration/rollback drill, and R-008 completed the package backup/recovery drill. The next recommended task is R-009/M5-A5: draft the release operating procedure and exception policy.
