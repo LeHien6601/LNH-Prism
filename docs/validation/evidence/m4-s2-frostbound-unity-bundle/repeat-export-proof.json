@@ -1,0 +1,361 @@
+{
+  "schemaVersion": "1.0",
+  "status": "pass",
+  "comparison": "byte-for-byte",
+  "fileCount": 35,
+  "assetCount": 28,
+  "firstInventory": [
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-disabled-240x64.png",
+      "sha256": "8d37b1ca7ff83a6755168b769ab4f90f7a237d9ff90c1b3c4ccb535cb7399900",
+      "bytes": 11812
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-disabled-288x64.png",
+      "sha256": "d13100b659391aaa8381ad053ab4875641937fa520050aabb9a5e3754d3fd640",
+      "bytes": 12454
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-normal-240x64.png",
+      "sha256": "a3511dfb324156f5d8a8f32c21b60c96ba25c7fc62aeedd191f22cc95a3387db",
+      "bytes": 11687
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-normal-288x64.png",
+      "sha256": "2fc54b750f97c8e7b7dd549ec4dd7180d1765efb142a76352c58eaab49846525",
+      "bytes": 12337
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-pressed-240x64.png",
+      "sha256": "6670a7b19bf6f9d68777a316381bc4de5b955a7a6b6cab618ec24c598521110d",
+      "bytes": 11403
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-pressed-288x64.png",
+      "sha256": "f5e811c2654637524d95ee4559fad7f8d6bae782d9b8cc4fc5f29cc6a9692fca",
+      "bytes": 12072
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-disabled-160x52.png",
+      "sha256": "c15442fd9327286f5f3822751142697e401262bcffc7fa212ff5bad0625017da",
+      "bytes": 10457
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-disabled-200x52.png",
+      "sha256": "30823784cef0e48cd33ed7dd631da6989302c75c438b8df97e7078df02e51335",
+      "bytes": 11221
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-normal-160x52.png",
+      "sha256": "3566f615e9cef0e02d547cc161ffeaa392f82886f9b215d44bdb5dd5ebbff9a3",
+      "bytes": 10330
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-normal-200x52.png",
+      "sha256": "56cbae800cf3efefac8a6edc06afadd6c58ca9a9bde3a7ffdab3b979bcbf82a5",
+      "bytes": 11067
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-pressed-160x52.png",
+      "sha256": "0df3ae5d9a7ecab48514ee1a2324a2fbcd461d53552ea8bebd5afb9093501c8c",
+      "bytes": 10143
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-pressed-200x52.png",
+      "sha256": "1c049a26613dfb1d1b0ed10ccb9bbfd8b5c7c1e38d900148a93f761d9d820269",
+      "bytes": 10886
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-lock-badge-locked-48x48.png",
+      "sha256": "09b7f3997a5d3326961e5b48cc24a2b0fbe6ebbd14ffab3921ab5c55ef80cc82",
+      "bytes": 2608
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-normal-104x104.png",
+      "sha256": "179fec48e6a009927e76a6a0878ac3db4a52df22f164d3682b9d8d585de8e3e8",
+      "bytes": 16988
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-normal-144x144.png",
+      "sha256": "c707d255e1df6184163e2b16fc0a57b490e84dd4e57b53523b12e29e086a10ab",
+      "bytes": 22954
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-selected-104x104.png",
+      "sha256": "9b2df4f73a9d6d9237c4c07d06c645578e8c96d5f39709172137f47a327dfcb5",
+      "bytes": 14089
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-selected-144x144.png",
+      "sha256": "8ef9e90e39379cabfee5fe62c9d61098ada0edda1daedaa5f9adbc5eb43f73d0",
+      "bytes": 20006
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-panel/frostbound-reward-frostbound-reward-panel-normal-432x300.png",
+      "sha256": "9667e1801f82e37bc046a1fff94428e35db1667ddf9ec17143133e626c4fee05",
+      "bytes": 39660
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-10-normal-320x28.png",
+      "sha256": "5e94ec3589f68a85ccb72326012548bcfd95ce361e8bf80222e3cddd2ce5d173",
+      "bytes": 1913
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-10-normal-432x28.png",
+      "sha256": "48545784ce8eba674d03302c1d664e37b89515bc74c8723a8fe80c06ad2615bf",
+      "bytes": 2071
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-50-normal-320x28.png",
+      "sha256": "9fc714a944b806304b1c962daef79dd75bb1b73fa6eef011434881c6dbb250fc",
+      "bytes": 2494
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-50-normal-432x28.png",
+      "sha256": "cdf66300860bfc637c83eed60410719b42927a6699ba685ad0b81ce302cf6512",
+      "bytes": 2797
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-75-normal-320x28.png",
+      "sha256": "9c665f44e086c3ee4a37f8bf3380f1b30212a2e5947ae9998c438408cd37f445",
+      "bytes": 2811
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-75-normal-432x28.png",
+      "sha256": "96ad79923da98aac505bbdd86b63e27f4ae4ebb36d68a554e2c8d3ba00a7fd99",
+      "bytes": 3194
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-90-normal-320x28.png",
+      "sha256": "5a236ebb8ed5848ec17303d2d0869833cc3b36a2a76def7a3d8ab45c78472dc8",
+      "bytes": 2964
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-90-normal-432x28.png",
+      "sha256": "43aede6c04a01884f2ec7343a20b67fdd85717baa599dca43c099489627ee118",
+      "bytes": 3369
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-frame-normal-320x28.png",
+      "sha256": "f733a2d53098a8e4e099f6e7772aef2269a52e264ef42c1d5b4a661e85b32a1b",
+      "bytes": 2560
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-frame-normal-432x28.png",
+      "sha256": "099096bb7abc9fdacaebabbddcaca6adefa72d3d30eddf770b28901ce6cc2ecc",
+      "bytes": 2705
+    },
+    {
+      "path": "bundle-receipt.json",
+      "sha256": "c7b037a75c497ebd0bdbd54bd7732cd790da3d17e95336025158fbf27c0cb7ac",
+      "bytes": 5920
+    },
+    {
+      "path": "Manifests/frostbound-claim-button.manifest.json",
+      "sha256": "c1e4bc32606c3b37e6ab601e49cf153f4956daf333d53ebb4992bff1ea11d1bc",
+      "bytes": 9584
+    },
+    {
+      "path": "Manifests/frostbound-later-button.manifest.json",
+      "sha256": "a8a09791df5cb6070cfced0de415498b1a3c81e2ea2b26a66c561864390d79c1",
+      "bytes": 9584
+    },
+    {
+      "path": "Manifests/frostbound-reward-emblem-container.manifest.json",
+      "sha256": "a44fc3a668cacccf629ddd73a9d1d198e21d45e46b749ce696237237cb8394e5",
+      "bytes": 8799
+    },
+    {
+      "path": "Manifests/frostbound-reward-panel.manifest.json",
+      "sha256": "3d20fe3e6c63544f7755bfa1c58f2cfaac7c4347c3159e0053e5f5dac9bd7a3e",
+      "bytes": 4598
+    },
+    {
+      "path": "Manifests/frostbound-reward-progress.manifest.json",
+      "sha256": "bf27abcfd3dfff3c546f6f3bce36739595d8c33105b12854bc3eba50fb69f23f",
+      "bytes": 13754
+    },
+    {
+      "path": "unity-asset-registry.json",
+      "sha256": "ec9a164ff6b82ad3c34154b9edaed7e6641c313b93ffe3b79e7aa8672e801820",
+      "bytes": 11552
+    }
+  ],
+  "secondInventory": [
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-disabled-240x64.png",
+      "sha256": "8d37b1ca7ff83a6755168b769ab4f90f7a237d9ff90c1b3c4ccb535cb7399900",
+      "bytes": 11812
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-disabled-288x64.png",
+      "sha256": "d13100b659391aaa8381ad053ab4875641937fa520050aabb9a5e3754d3fd640",
+      "bytes": 12454
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-normal-240x64.png",
+      "sha256": "a3511dfb324156f5d8a8f32c21b60c96ba25c7fc62aeedd191f22cc95a3387db",
+      "bytes": 11687
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-normal-288x64.png",
+      "sha256": "2fc54b750f97c8e7b7dd549ec4dd7180d1765efb142a76352c58eaab49846525",
+      "bytes": 12337
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-pressed-240x64.png",
+      "sha256": "6670a7b19bf6f9d68777a316381bc4de5b955a7a6b6cab618ec24c598521110d",
+      "bytes": 11403
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-claim-button/frostbound-reward-frostbound-claim-button-pressed-288x64.png",
+      "sha256": "f5e811c2654637524d95ee4559fad7f8d6bae782d9b8cc4fc5f29cc6a9692fca",
+      "bytes": 12072
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-disabled-160x52.png",
+      "sha256": "c15442fd9327286f5f3822751142697e401262bcffc7fa212ff5bad0625017da",
+      "bytes": 10457
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-disabled-200x52.png",
+      "sha256": "30823784cef0e48cd33ed7dd631da6989302c75c438b8df97e7078df02e51335",
+      "bytes": 11221
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-normal-160x52.png",
+      "sha256": "3566f615e9cef0e02d547cc161ffeaa392f82886f9b215d44bdb5dd5ebbff9a3",
+      "bytes": 10330
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-normal-200x52.png",
+      "sha256": "56cbae800cf3efefac8a6edc06afadd6c58ca9a9bde3a7ffdab3b979bcbf82a5",
+      "bytes": 11067
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-pressed-160x52.png",
+      "sha256": "0df3ae5d9a7ecab48514ee1a2324a2fbcd461d53552ea8bebd5afb9093501c8c",
+      "bytes": 10143
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-later-button/frostbound-reward-frostbound-later-button-pressed-200x52.png",
+      "sha256": "1c049a26613dfb1d1b0ed10ccb9bbfd8b5c7c1e38d900148a93f761d9d820269",
+      "bytes": 10886
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-lock-badge-locked-48x48.png",
+      "sha256": "09b7f3997a5d3326961e5b48cc24a2b0fbe6ebbd14ffab3921ab5c55ef80cc82",
+      "bytes": 2608
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-normal-104x104.png",
+      "sha256": "179fec48e6a009927e76a6a0878ac3db4a52df22f164d3682b9d8d585de8e3e8",
+      "bytes": 16988
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-normal-144x144.png",
+      "sha256": "c707d255e1df6184163e2b16fc0a57b490e84dd4e57b53523b12e29e086a10ab",
+      "bytes": 22954
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-selected-104x104.png",
+      "sha256": "9b2df4f73a9d6d9237c4c07d06c645578e8c96d5f39709172137f47a327dfcb5",
+      "bytes": 14089
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-emblem-container/frostbound-reward-frostbound-reward-emblem-container-selected-144x144.png",
+      "sha256": "8ef9e90e39379cabfee5fe62c9d61098ada0edda1daedaa5f9adbc5eb43f73d0",
+      "bytes": 20006
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-panel/frostbound-reward-frostbound-reward-panel-normal-432x300.png",
+      "sha256": "9667e1801f82e37bc046a1fff94428e35db1667ddf9ec17143133e626c4fee05",
+      "bytes": 39660
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-10-normal-320x28.png",
+      "sha256": "5e94ec3589f68a85ccb72326012548bcfd95ce361e8bf80222e3cddd2ce5d173",
+      "bytes": 1913
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-10-normal-432x28.png",
+      "sha256": "48545784ce8eba674d03302c1d664e37b89515bc74c8723a8fe80c06ad2615bf",
+      "bytes": 2071
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-50-normal-320x28.png",
+      "sha256": "9fc714a944b806304b1c962daef79dd75bb1b73fa6eef011434881c6dbb250fc",
+      "bytes": 2494
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-50-normal-432x28.png",
+      "sha256": "cdf66300860bfc637c83eed60410719b42927a6699ba685ad0b81ce302cf6512",
+      "bytes": 2797
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-75-normal-320x28.png",
+      "sha256": "9c665f44e086c3ee4a37f8bf3380f1b30212a2e5947ae9998c438408cd37f445",
+      "bytes": 2811
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-75-normal-432x28.png",
+      "sha256": "96ad79923da98aac505bbdd86b63e27f4ae4ebb36d68a554e2c8d3ba00a7fd99",
+      "bytes": 3194
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-90-normal-320x28.png",
+      "sha256": "5a236ebb8ed5848ec17303d2d0869833cc3b36a2a76def7a3d8ab45c78472dc8",
+      "bytes": 2964
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-fill-90-normal-432x28.png",
+      "sha256": "43aede6c04a01884f2ec7343a20b67fdd85717baa599dca43c099489627ee118",
+      "bytes": 3369
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-frame-normal-320x28.png",
+      "sha256": "f733a2d53098a8e4e099f6e7772aef2269a52e264ef42c1d5b4a661e85b32a1b",
+      "bytes": 2560
+    },
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-progress/frostbound-reward-frostbound-reward-progress-frame-normal-432x28.png",
+      "sha256": "099096bb7abc9fdacaebabbddcaca6adefa72d3d30eddf770b28901ce6cc2ecc",
+      "bytes": 2705
+    },
+    {
+      "path": "bundle-receipt.json",
+      "sha256": "c7b037a75c497ebd0bdbd54bd7732cd790da3d17e95336025158fbf27c0cb7ac",
+      "bytes": 5920
+    },
+    {
+      "path": "Manifests/frostbound-claim-button.manifest.json",
+      "sha256": "c1e4bc32606c3b37e6ab601e49cf153f4956daf333d53ebb4992bff1ea11d1bc",
+      "bytes": 9584
+    },
+    {
+      "path": "Manifests/frostbound-later-button.manifest.json",
+      "sha256": "a8a09791df5cb6070cfced0de415498b1a3c81e2ea2b26a66c561864390d79c1",
+      "bytes": 9584
+    },
+    {
+      "path": "Manifests/frostbound-reward-emblem-container.manifest.json",
+      "sha256": "a44fc3a668cacccf629ddd73a9d1d198e21d45e46b749ce696237237cb8394e5",
+      "bytes": 8799
+    },
+    {
+      "path": "Manifests/frostbound-reward-panel.manifest.json",
+      "sha256": "3d20fe3e6c63544f7755bfa1c58f2cfaac7c4347c3159e0053e5f5dac9bd7a3e",
+      "bytes": 4598
+    },
+    {
+      "path": "Manifests/frostbound-reward-progress.manifest.json",
+      "sha256": "bf27abcfd3dfff3c546f6f3bce36739595d8c33105b12854bc3eba50fb69f23f",
+      "bytes": 13754
+    },
+    {
+      "path": "unity-asset-registry.json",
+      "sha256": "ec9a164ff6b82ad3c34154b9edaed7e6641c313b93ffe3b79e7aa8672e801820",
+      "bytes": 11552
+    }
+  ]
+}

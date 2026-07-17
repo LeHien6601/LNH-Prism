@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.1",
+  "assetId": "frostbound-reward-panel-unity",
+  "generatedAt": "2026-07-17T00:00:00.000Z",
+  "renderer": {
+    "name": "lnh-prism-renderer",
+    "version": "0.1.0+resvg.2.6.2"
+  },
+  "sources": {
+    "style": {
+      "id": "frostbound-reward",
+      "version": "0.1.0",
+      "path": "specs/examples/style-frostbound-reward.json",
+      "sha256": "bbdd65bc9e441d1edfd1a1599f276b4e1a96794a1b396219f193d2c6f5d4541f"
+    },
+    "component": {
+      "id": "frostbound-reward-panel",
+      "version": "0.1.0",
+      "path": "specs/examples/frostbound-reward-panel.json",
+      "sha256": "e24122cae4c0063ff80d86839f6bb65a57422473673c55964b2f66d6e747ebd1"
+    },
+    "materialPacks": [
+      {
+        "id": "frost-crystal-materials",
+        "version": "0.1.0",
+        "path": "specs/examples/frost-crystal-materials.json",
+        "sha256": "fa964352320057cecf72a9e65878d99b18f89db5a327a7c1bb3860a15f65f21c"
+      }
+    ]
+  },
+  "provenance": {
+    "sourceTreeSha256": "7487155b0597b52e8c3a37a2e3d869e7607e4e28a023fe835422ce15686967a7",
+    "sourceFiles": [
+      {
+        "role": "component-spec",
+        "path": "specs/examples/frostbound-reward-panel.json",
+        "sha256": "e24122cae4c0063ff80d86839f6bb65a57422473673c55964b2f66d6e747ebd1"
+      },
+      {
+        "role": "style-spec",
+        "path": "specs/examples/style-frostbound-reward.json",
+        "sha256": "bbdd65bc9e441d1edfd1a1599f276b4e1a96794a1b396219f193d2c6f5d4541f"
+      },
+      {
+        "role": "material-pack",
+        "path": "specs/examples/frost-crystal-materials.json",
+        "sha256": "fa964352320057cecf72a9e65878d99b18f89db5a327a7c1bb3860a15f65f21c"
+      },
+      {
+        "role": "material-source",
+        "path": "materials/frost-crystal/frost-grain.json",
+        "sha256": "3be6718069d38921fadb351a889ae234472fc2010a97f703d299a2cd48d1a396"
+      },
+      {
+        "role": "material-source",
+        "path": "materials/frost-crystal/crystal-facet-pattern.json",
+        "sha256": "9db172b52146af8444bf5ffc0a698188f7f303c084e3b610dbb07ec8051bb55e"
+      },
+      {
+        "role": "material-source",
+        "path": "materials/frost-crystal/rune-ornament.json",
+        "sha256": "726b9f6cf9c6a58e6a84ca87d856cf92d820ce2058dc68d905994ba73b82f9ac"
+      },
+      {
+        "role": "renderer-source",
+        "path": "src/renderer/frostbound-components.ts",
+        "sha256": "80885488974a7faf5203abdda63e68aa9e424b88f65adab139f0b5cdc2423b5f"
+      },
+      {
+        "role": "renderer-version",
+        "path": "src/renderer/version.ts",
+        "sha256": "d4d7d4f5345874986c40b8ae91fef6569755c0c908d2bff7bfcf09250cf6693e"
+      },
+      {
+        "role": "provenance-engine",
+        "path": "src/unity/export-manifest-contract.ts",
+        "sha256": "19f94ba6baf951448ec2e76fbe1c17574d384d5d3cefdb3845a1b2126ada6745"
+      },
+      {
+        "role": "provenance-engine",
+        "path": "src/unity/frostbound-unity-bundle.ts",
+        "sha256": "a791b324887efc067ce96844629b7e58312693ac41e16a64f9589d5712eb4e0a"
+      },
+      {
+        "role": "dependency-lock",
+        "path": "package-lock.json",
+        "sha256": "9e111c4ae81fa2d761b2cc291f628a19c7e27d4ca5ebd492b2ad0484aedd742c"
+      }
+    ]
+  },
+  "unityIntegration": {
+    "profileId": "unity-6000-ugui-builtin-android-portrait",
+    "editorVersion": "6000.3.18f1",
+    "uiSystem": "ugui",
+    "renderPipeline": "built-in",
+    "referenceResolution": {
+      "width": 540,
+      "height": 960
+    },
+    "targetPlatform": "android",
+    "orientation": "portrait",
+    "importerVersion": "0.1.0"
+  },
+  "outputs": [
+    {
+      "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-panel/frostbound-reward-frostbound-reward-panel-normal-432x300.png",
+      "format": "png",
+      "width": 864,
+      "height": 600,
+      "sha256": "9667e1801f82e37bc046a1fff94428e35db1667ddf9ec17143133e626c4fee05",
+      "state": "normal",
+      "unity": {
+        "assetId": "lnh-prism:frostbound-reward-frostbound-reward-panel-normal-432x300",
+        "metaGuid": "afdc75752e3a71f0af2e849bdb79ab35",
+        "pixelsPerUnit": 100,
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "border": {
+          "left": 48,
+          "right": 48,
+          "top": 48,
+          "bottom": 48
+        },
+        "atlasGroup": "ui-frostbound-reward",
+        "spriteMode": "single",
+        "meshType": "full-rect",
+        "filterMode": "bilinear",
+        "wrapMode": "clamp",
+        "mipmaps": false,
+        "alphaIsTransparency": true,
+        "compression": "uncompressed"
+      }
+    }
+  ]
+}

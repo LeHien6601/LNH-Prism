@@ -77,4 +77,11 @@ export function renderFrostboundProgressSvg(width: number, percent: 10 | 50 | 75
   return `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${width*2}" height="56" viewBox="0 0 ${width} 28" role="img" aria-label="Frostbound progress ${percent} percent" data-style="frostbound-reward@0.1.0" data-material-pack="frost-crystal-materials@0.1.0">${frame}${fill}</svg>`;
 }
 
+/** Repository-owned vector lock badge exported independently from the emblem container. */
+export function renderFrostboundLockBadgeSvg(size = 48, instanceId = "frostbound-lock-badge"): string {
+  if (size !== 48) throw new RangeError("Frostbound lock badge supports only the approved 48x48 size.");
+  if (!/^[a-z][a-z0-9-]*$/.test(instanceId)) throw new Error(`Invalid Frostbound instance ID: ${instanceId}.`);
+  return `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${size*2}" height="${size*2}" viewBox="0 0 ${size} ${size}" role="img" aria-label="Frostbound locked badge" data-style="frostbound-reward@0.1.0"><defs><linearGradient id="${instanceId}-metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8FCFF"/><stop offset=".45" stop-color="#77CBEF"/><stop offset="1" stop-color="#246A9C"/></linearGradient></defs><g id="${instanceId}-badge" data-part="lock-badge"><path d="M15 21v-5a9 9 0 0 1 18 0v5" fill="none" stroke="#DDF8FF" stroke-width="5" stroke-linecap="round"/><rect x="9" y="20" width="30" height="24" rx="7" fill="url(#${instanceId}-metal)" stroke="#F3FEFF" stroke-width="2"/><circle cx="24" cy="31" r="3" fill="#0A3152"/><path d="M24 34v5" stroke="#0A3152" stroke-width="3" stroke-linecap="round"/></g></svg>`;
+}
+
 export const FROSTBOUND_LAYER_ORDER = ["shadow", "extrusion", "fill", "texture", "border", "highlight", "decal", "content"] as const;

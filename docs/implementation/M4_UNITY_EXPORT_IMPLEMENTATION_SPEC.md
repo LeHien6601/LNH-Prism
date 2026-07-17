@@ -10,7 +10,7 @@
 | Validation target | V4 — Frostbound Reward Claim |
 | Decision source | [ADR-013](../decisions/ADR-013-m4-unity-reward-claim-baseline.md) |
 | Validation rubric | [V4 Unity Integration Rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md) |
-| Implementation state | 🟢 M4-S1 complete; M4-S2 Unity bundle generation is agent-ready |
+| Implementation state | 🟢 M4-S2 deterministic Unity bundle complete; M4-S3 bounded Unity project/importer is agent-ready |
 
 ## 1. Intended outcome
 
@@ -200,3 +200,4 @@ On 2026-07-17, the project owner approved Option A with two clarifications: the 
 | 2026-07-17 | Drafted the M4 Unity export/import contract, stable identity rules, bounded slices, locked mapping, and validation requirements | Codex |
 | 2026-07-17 | Approved Option A with explicit manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; opened M4-S1 | Project owner / Codex |
 | 2026-07-17 | Completed M4-S1 dual-version schema, semantic identity/GUID/registry validation, canonical fixtures, negative tests, and migration notes; opened M4-S2 | Codex |
+| 2026-07-17 | Completed M4-S2 deterministic 28-PNG Frostbound bundle, five manifests, stable registry, provenance receipts, collision audit, and repeat-export proof; opened M4-S3 | Codex |

@@ -15,14 +15,14 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
 | Materials | 🟢 V2 gate passed | Neon Market and Neon Alloy passed V2 at `93/100`; shared material reuse, propagation, structure, and traceability met every mandatory minimum |
 | AI analysis | 🟢 M3/V3 gate passed | Frostbound passed V3 at `94/100`; every mandatory minimum was met, no blocker or defect remained, and simplified ornamental fidelity is a non-blocking observation |
-| Unity export | 🔵 M4-S2 agent-ready | M4-S1 added export-manifest `1.1` with legacy `1.0` compatibility, the Unity registry contract, deterministic naming/GUID semantics, canonical fixtures, collision/drift rejection, and migration guidance; bundle generation is next |
+| Unity export | 🔵 M4-S3 agent-ready | M4-S2 produced 28 deterministic Frostbound PNGs, five manifest `1.1` files, a sorted stable-ID registry, complete Unity metadata, zero-collision audit, and byte-identical repeat-export proof; the bounded Unity project/importer is next |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🔵 **M4 implementation** — M4-S1 complete; deterministic Frostbound Unity bundle generation is agent-ready |
-| Next task | 🔵 **Produce the deterministic Frostbound Unity bundle and stable-ID registry** · 🤖 Agent |
-| Next agent-ready task | 🔵 **M4-S2** — required PNG/state/part matrix, hashes, metadata, collision audit, and repeat-export proof are complete |
+| Active milestone | 🔵 **M4 implementation** — M4-S2 complete; bounded Unity project and importer implementation is agent-ready |
+| Next task | 🔵 **Create the pinned bounded Unity project, importer, atlas, bindings, prefabs, and scene** · 🤖 Agent |
+| Next agent-ready task | 🔵 **M4-S3** — batch import and Edit Mode tests prove exact settings, slicing, IDs, atlas membership, and references |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -102,7 +102,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Draft the M4 Unity export implementation specification and V4 integration rubric | 🤖 Agent | 🟢 Complete | [Implementation specification](implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md) and [V4 rubric](validation/V4_UNITY_INTEGRATION_RUBRIC.md) make contract additions, stable naming/IDs/GUIDs, locked mapping, importer behavior, 9-slice/pivot/PPU/state/atlas/re-export requirements, ordered slices, evidence, scoring, blockers, and definition-review criteria explicit |
 | P0 | Review and approve the M4 implementation specification and V4 integration rubric | 🧭 Product + 🛠️ Technical + 🎮 Unity leads | 🟢 Complete | Option A approved on 2026-07-17 with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; stable identity, locked mapping, importer ownership, bounded slices, V4 evidence/scoring, and blockers accepted |
 | P0 | Implement M4-S1 contract extensions, semantic validation, naming/GUID rules, canonical fixtures, and migration notes | 🤖 Agent | 🟢 Complete | Updated validators accept legacy `1.0` and Unity-targeted `1.1`; canonical manifest/registry fixtures pass; malformed profiles/settings, unsafe paths, border failures, duplicate/case-folded IDs/paths, GUID collisions, ordering errors, and identity drift fail; migration guidance is linked |
-| P0 | Produce the deterministic Frostbound Unity bundle and stable-ID registry | 🤖 Agent | 🔵 Agent-ready | Required PNG/state/part matrix, hashes, complete Unity metadata, sorted registry, collision audit, and repeat-export proof are complete |
+| P0 | Produce the deterministic Frostbound Unity bundle and stable-ID registry | 🤖 Agent | 🟢 Complete | 28 PNGs, five manifests, source/output receipts, complete Unity metadata, sorted stable-ID registry, zero-collision audit, and byte-identical repeat-export proof validate |
+| P0 | Create the pinned bounded Unity project, importer, atlas, bindings, prefabs, and scene | 🤖 Agent | 🔵 Agent-ready | Batch import and Edit Mode tests prove exact settings, slicing, IDs, atlas membership, and references |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -195,3 +196,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Drafted the M4 Unity export implementation specification and V4 integration rubric with additive contracts, stable IDs/GUIDs, locked-state mapping, importer/re-export rules, ordered slices, evidence, scoring, and blockers; opened human definition review | Codex |
 | 2026-07-17 | Approved M4 definition Option A with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; opened M4-S1 contract implementation | Project owner / Codex |
 | 2026-07-17 | Completed M4-S1 dual-version manifest and registry contracts, deterministic naming/GUID/identity semantics, canonical fixtures, rejection coverage, and migration notes; opened M4-S2 | Codex |
+| 2026-07-17 | Completed M4-S2 with 28 deterministic Frostbound PNGs, five manifests, source/output receipts, stable IDs/GUIDs, zero collisions, and byte-identical repeat-export proof; opened M4-S3 | Codex |
