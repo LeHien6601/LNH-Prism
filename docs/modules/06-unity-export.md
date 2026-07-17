@@ -4,7 +4,7 @@
 
 Export generated UI assets with enough metadata to be imported and re-exported reliably in Unity.
 
-**Status:** M4 target approved; implementation specification and V4 integration rubric drafting are agent-ready.
+**Status:** M4 implementation specification and V4 integration rubric drafted; human definition review is pending.
 
 ## Approved V4 target
 
@@ -19,6 +19,8 @@ Use the Frostbound Reward Claim family in one self-contained sample project:
 | Reference scale | `540 × 960` logical / `1080 × 1920` presentation |
 
 The sample owns only the reward-claim presentation and state transitions needed to verify manifest-driven import, 9-slicing, pivots, PPU, atlas grouping, stable IDs, prefab/scene references, Android readability, and idempotent re-export. Gameplay, backend, economy, save, animation, localization, URP, UI Toolkit, and general-editor concerns remain out of scope. See [ADR-013](../decisions/ADR-013-m4-unity-reward-claim-baseline.md).
+
+The proposed implementation contract, deterministic GUID algorithm, locked-emblem mapping, importer ownership, project boundary, and ordered slices are in the [M4 implementation specification](../implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md). Evidence IDs, scoring, blockers, and the human gate are in the [V4 integration rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md). Neither draft authorizes implementation until the definition review is recorded.
 
 ## Scope
 
@@ -67,3 +69,4 @@ M4 V4: integrate a reward claim or shop purchase flow with normal/pressed/disabl
 | 2026-07-15 | Aligned V1 source/output policy with approved SVG/resvg stack | Project owner |
 | 2026-07-17 | Opened M4 definition after V3 passed; queued Unity validation-flow and supported-version selection | Project owner / Codex |
 | 2026-07-17 | Approved Frostbound Reward Claim on Unity `6000.3.18f1`, uGUI, Built-in pipeline, Editor and Android portrait as the bounded V4 target | Project owner / Codex |
+| 2026-07-17 | Drafted the M4 contract/importer/re-export implementation specification and V4 evidence/scoring rubric; queued human definition review | Codex |

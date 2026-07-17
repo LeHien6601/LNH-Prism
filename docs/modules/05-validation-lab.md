@@ -68,7 +68,11 @@ The 2026-07-17 guided evidence review scored V2 at `93/100`. Every dimension met
 
 ## Current V3 gate result
 
-The 2026-07-17 human fidelity review scored Frostbound V3 at `94/100`. Every mandatory dimension minimum was met; automated and human review found no blocker or defect. Human control and traceability scored `5/5`; simplified ornament, emblem detail, and atmosphere kept intentional style fidelity at its accepted minimum `4/5` and remain non-blocking. M3 is complete and the M4 Unity validation flow/version decision is next.
+The 2026-07-17 human fidelity review scored Frostbound V3 at `94/100`. Every mandatory dimension minimum was met; automated and human review found no blocker or defect. Human control and traceability scored `5/5`; simplified ornament, emblem detail, and atmosphere kept intentional style fidelity at its accepted minimum `4/5` and remain non-blocking. M3 is complete.
+
+## Current V4 definition status
+
+The Frostbound Reward Claim and Unity `6000.3.18f1` uGUI/Built-in baseline are approved. The draft [M4 implementation specification](../implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md) and [V4 integration rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md) define V4-E01–V4-E10, weighted scoring, automatic blockers, and revalidation. Product, Technical, and Unity leads must approve the definition package before implementation or evidence scoring begins.
 
 ## Change history
 
@@ -95,3 +99,4 @@ The 2026-07-17 human fidelity review scored Frostbound V3 at `94/100`. Every man
 | 2026-07-17 | Added M3-S4's 26-variant Frostbound matrix, target portrait render, selected/hierarchy proof, independent progress outputs, annotated concept comparison, and automated no-concept production audit | Codex |
 | 2026-07-17 | Prepared V3-E01–V3-E10, an unscored scorecard, defect/revalidation templates, consolidated phone and semantic comparison views, source/output receipts, and passing human-gate preflight | Codex |
 | 2026-07-17 | Recorded V3 Pass at `94/100`, no blockers or defects, and completed M3 | Project owner / Codex |
+| 2026-07-17 | Drafted the V4 Unity integration evidence package, scoring, blockers, and definition-review checklist | Codex |
