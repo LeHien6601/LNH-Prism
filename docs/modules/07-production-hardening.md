@@ -4,7 +4,7 @@
 
 Make output reproducible, testable, performant, and safe to evolve across many assets and styles.
 
-**Status:** M5-A5 release procedure complete; export-manifest `1.2` is the live engine-neutral manifest; M5-A6 multi-style coverage is the next human decision.
+**Status:** M5 complete; export-manifest `1.2` is the live engine-neutral manifest; Frostbound-only hardening is accepted for M5 exit.
 
 ## Scope
 
@@ -53,7 +53,7 @@ M5-A4 passed with a package backup/recovery receipt at `docs/validation/evidence
 
 M5-A5 is recorded at `docs/operations/M5_ENGINE_NEUTRAL_ASSET_RELEASE_PROCEDURE.md`, defining release validation gates, evidence paths, sign-off, exceptions, rollback decision points, and engine-neutral asset handoff artifacts.
 
-The remaining M5 hardening work is the M5-A6 multi-style coverage decision.
+M5-A6 is accepted in [ADR-016](../decisions/ADR-016-m5-frostbound-only-hardening-coverage.md): Frostbound-only hardening is sufficient for M5 exit. Multi-style hardening remains a future scaling risk to revisit when another production asset package is selected.
 
 ## Risks
 
@@ -73,3 +73,4 @@ The remaining M5 hardening work is the M5-A6 multi-style coverage decision.
 | 2026-07-18 | Completed M5-A3 manifest migration/rollback drill and queued M5-A4 backup/recovery | Codex |
 | 2026-07-18 | Completed M5-A4 package backup/recovery drill and queued M5-A5 release procedure | Codex |
 | 2026-07-18 | Completed M5-A5 release operating procedure and queued M5-A6 multi-style coverage decision | Codex |
+| 2026-07-18 | Accepted Frostbound-only hardening coverage for M5 exit and closed M5 | Project owner / Codex |

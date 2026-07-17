@@ -9,14 +9,14 @@
 | Working tree at start | Clean |
 | Scope | Workflow, status, and plan |
 | Validation run | `npm run validate:asset-package`; `git diff --check` |
-| Validation result | Passed: release procedure references completed M5-A2/M5-A3/M5-A4 evidence; 62 modular files validated across five components; no whitespace errors |
+| Validation result | Passed: M5-A6 decision records Frostbound-only hardening as sufficient for M5 exit; 62 modular files validated across five components; no whitespace errors |
 
-Refresh note: R-001, R-002, R-003, R-004, R-005, R-006, R-007, R-008, and R-009 have been resolved. M5-A5 recorded the release operating procedure; M5-A6/R-010 is now the next human-decision hardening task.
+Refresh note: R-001 through R-010 have been resolved. M5 is passed; multi-style hardening is accepted as a future scaling risk rather than an M5 blocker.
 
 ## Current status
 
 - M1/V1, M2/V2, M3/V3, and M4 modular asset delivery are recorded as passed/completed.
-- M5-A1, M5-A2, M5-A3, M5-A4, and M5-A5 are complete. R-002, R-004, R-005, R-006, R-007, R-008, and R-009 are complete. The next item is the Human-decision task M5-A6/R-010: decide multi-style hardening coverage.
+- M5-A1 through M5-A6 are complete and M5 is passed. R-002, R-004, R-005, R-006, R-007, R-008, R-009, and R-010 are complete. The next item is the Human-decision task for M6 workflow scaling.
 - The Frostbound package is engine-neutral and validates as 62 modular SVG/PNG files across Panel, Primary Button, Secondary Button, Progress, and Emblem.
 
 ## Findings
@@ -110,12 +110,14 @@ Applied in this run: `npm run validate:m5-backup-recovery` recorded `docs/valida
 
 Applied in this run: `docs/operations/M5_ENGINE_NEUTRAL_ASSET_RELEASE_PROCEDURE.md` defines release gates, validation commands, evidence paths, sign-off roles, exception approvers, rollback decision points, rollback steps, and handoff artifact addresses for the engine-neutral Frostbound package.
 
-### R-010 — Decide multi-style hardening coverage (M5-A6)
+### R-010 — Decide multi-style hardening coverage (M5-A6) — Complete
 
-- **Priority / eligibility:** P2 — Human decision
-- **Decision:** Choose whether the Frostbound package is sufficient for M5 exit or whether another style/package must run through M5 hardening.
+- **Priority / eligibility:** P2 — Complete
+- **Decision:** Option A approved on 2026-07-18: Frostbound-only hardening is sufficient for M5 exit; multi-style coverage is deferred as a future scaling risk.
 - **Acceptance criteria:** Approved decision records either the additional target and next agent-ready task, or the rationale for deferring extra coverage.
+
+Applied in this run: [ADR-016](../../decisions/ADR-016-m5-frostbound-only-hardening-coverage.md) records the release rationale, accepted residual risk, and future trigger for additional style/package hardening.
 
 ## Review conclusion
 
-The asset package and M5-A2/M5-A3/M5-A4 validation are healthy, and M5-A5 now defines the release procedure needed to use that evidence. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, R-004 selected archival legacy validation plus a live engine-neutral successor, R-006 implemented that successor, R-005 split the remaining M5 work into ordered slices, R-007 completed the manifest migration/rollback drill, R-008 completed the package backup/recovery drill, and R-009 completed the release operating procedure. The next recommended task is R-010/M5-A6: decide whether Frostbound-only hardening is sufficient for M5 exit or whether another style/package must run through hardening.
+The asset package and M5-A2/M5-A3/M5-A4 validation are healthy, M5-A5 defines the release procedure needed to use that evidence, and R-010/ADR-016 accepts Frostbound-only hardening for M5 exit. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, R-004 selected archival legacy validation plus a live engine-neutral successor, R-006 implemented that successor, R-005 split the remaining M5 work into ordered slices, R-007 completed the manifest migration/rollback drill, R-008 completed the package backup/recovery drill, R-009 completed the release operating procedure, and R-010 closed the coverage decision. The next recommended project decision is whether to begin optional M6 workflow/dashboard scaling.

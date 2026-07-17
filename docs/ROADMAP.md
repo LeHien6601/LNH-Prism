@@ -76,11 +76,11 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** 🟢 Passed on 2026-07-17 — all approved Frostbound assets are delivered as independently usable modules with deterministic source, derivatives, metadata, and provenance; no engine integration is required.
 
-## ⚪ M5 — Production hardening
+## 🟢 M5 — Production hardening
 
 **Goal:** make the system trustworthy for repeated production use.
 
-**Definition status:** 🟡 M5-A1 through M5-A5 complete — [the Frostbound validation plan](implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md), receipts, and release procedure prove clean-workspace reproduction, strict asset receipts, timing, matrix, readability validation, manifest migration/rollback, backup/recovery, and release controls. M5-A6 multi-style hardening coverage remains a human decision.
+**Exit gate:** 🟢 Passed on 2026-07-18 — [the Frostbound validation plan](implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md), receipts, release procedure, and [ADR-016](decisions/ADR-016-m5-frostbound-only-hardening-coverage.md) prove clean-workspace reproduction, strict asset receipts, timing, matrix, readability validation, manifest migration/rollback, backup/recovery, release controls, and accepted coverage scope. Multi-style hardening is deferred as a future scaling risk.
 
 - Add schema validation, deterministic rendering tests, golden-image/regression checks, and visual diff thresholds.
 - Measure generation time, asset size, memory, and mobile readability.
@@ -124,3 +124,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Completed M5-A1 definition and opened M5-A2 reproducibility/regression batch implementation | Codex |
 | 2026-07-17 | Passed M5-A2 reproducibility/regression validation; retained deferred hardening slices for a later scope decision | Codex |
 | 2026-07-18 | Completed M5-A3 through M5-A5 hardening controls and queued the M5-A6 multi-style coverage decision | Codex |
+| 2026-07-18 | Accepted Frostbound-only hardening coverage for M5 exit and marked M5 passed | Project owner / Codex |
