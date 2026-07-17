@@ -80,6 +80,8 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Goal:** make the system trustworthy for repeated production use.
 
+**Definition status:** 🔵 M5-A1 complete — [the Frostbound validation plan](implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md) and its baseline receipt define M5-A2 clean-workspace reproduction, strict asset receipts, timing, matrix, and readability validation.
+
 - Add schema validation, deterministic rendering tests, golden-image/regression checks, and visual diff thresholds.
 - Measure generation time, asset size, memory, and mobile readability.
 - Add error reporting, migration rules, backup/reproducibility, and version compatibility policy.
@@ -119,3 +121,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Passed V3 at `94/100` with every mandatory minimum met and no blockers or defects; completed M3 and opened M4 target definition | Project owner / Codex |
 | 2026-07-17 | Accepted ADR-014, removed engine-specific work, and set M4 to engine-neutral modular asset delivery | Project owner / Codex |
 | 2026-07-17 | Passed M4-A1 modular asset delivery with the tracked Frostbound package and deterministic receipt validation; opened M5-A1 | Codex |
+| 2026-07-17 | Completed M5-A1 definition and opened M5-A2 reproducibility/regression batch implementation | Codex |

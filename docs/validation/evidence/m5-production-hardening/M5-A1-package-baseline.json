@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m5-a1-frostbound-package-baseline",
+  "status": "defined",
+  "packageId": "frostbound-reward-assets",
+  "packageVersion": "1.0.0",
+  "packagePath": "assets/frostbound-reward",
+  "sourceEvidence": "m3-s4-frostbound-reconstruction",
+  "modules": 62,
+  "components": 5,
+  "formats": {
+    "svg": 36,
+    "png": 26
+  },
+  "totalBytes": 436565,
+  "largestFileBytes": 52730,
+  "requiredReadabilityViews": [
+    "light-surface-1080x1920",
+    "dark-surface-1080x1920",
+    "primary-hierarchy-1080x1920",
+    "progress-parts-1080x1920"
+  ],
+  "nextTask": "M5-A2"
+}

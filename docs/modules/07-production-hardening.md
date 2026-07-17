@@ -4,6 +4,8 @@
 
 Make output reproducible, testable, performant, and safe to evolve across many assets and styles.
 
+**Status:** M5-A1 definition complete; M5-A2 reproducibility/regression batch is agent-ready.
+
 ## Scope
 
 Schema validation, golden renders, visual diffs, deterministic builds, performance budgets, migrations, backups, access/logging policy, and release procedures.
@@ -39,6 +41,10 @@ M1–M4 working outputs, Module 05 evidence, release environment.
 
 M5 V5: rebuild one feature’s entire UI asset set in a clean workspace from versioned specs and compare it to approved output.
 
+## Current M5 plan
+
+The versioned [M5 production-hardening validation plan](../implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md) fixes Frostbound Reward as the first release-like target. It records the 62-file, 436,565-byte package baseline and defines clean-workspace reproduction, strict receipts, five-run performance measurement, state/part matrix verification, and four target-scale readability views for M5-A2.
+
 ## Risks
 
 - Golden tests become noisy across platforms: standardize render environment and maintain justified tolerances.
@@ -49,3 +55,4 @@ M5 V5: rebuild one feature’s entire UI asset set in a clean workspace from ver
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
+| 2026-07-17 | Defined M5-A1 Frostbound production-hardening batch, baseline receipt, reproducibility contract, regression policy, and M5-A2 exit conditions | Codex |

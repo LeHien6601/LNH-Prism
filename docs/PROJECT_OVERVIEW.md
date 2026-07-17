@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟢 **M4 modular asset delivery** — engine-neutral handoff package assembled and validated |
-| Next task | 🔵 **Define the M5 production-hardening validation batch** · 🤖 Agent |
-| Next agent-ready task | 🔵 **M5-A1** — define a clean-workspace batch, golden-output checks, performance/readability measurements, and reproducibility receipts |
+| Active milestone | 🔵 **M5 production hardening** — the Frostbound baseline and validation contract are defined; the reproducibility/regression batch is ready to implement |
+| Next task | 🔵 **Implement and run the M5 Frostbound reproducibility/regression batch** · 🤖 Agent |
+| Next agent-ready task | 🔵 **M5-A2** — automate clean-workspace reproduction, strict receipt/golden checks, five-run timing, matrix verification, and target-scale readability evidence |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -99,7 +99,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Prepare M3-S5 V3 evidence package and preflight | 🤖 Agent | 🟢 Complete | V3-E01–V3-E10, unscored review record, defect log, 54 output receipts, source provenance, four-type material audit, consolidated review views, and automated preflight are ready for scoring |
 | P0 | Conduct the M3-S5 V3 human fidelity review | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A recorded `94/100`; every mandatory minimum met, no blocker or defect remained, and V3 passed on 2026-07-17 |
 | P0 | Define and assemble the engine-neutral modular asset handoff package | 🤖 Agent | 🟢 Complete | `assets/frostbound-reward` contains 62 independently extractable SVG/PNG modules across panel, primary button, secondary button, progress, and emblem; manifest receipts, unique IDs, and package validation pass |
-| P0 | Define the M5 production-hardening validation batch | 🤖 Agent | 🔵 Agent-ready | Batch scope covers clean-workspace regeneration, golden-output/regression checks, performance/readability measurements, and reproducibility receipts |
+| P0 | Define the M5 production-hardening validation batch | 🤖 Agent | 🟢 Complete | [M5 plan](implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md) and baseline receipt define clean-workspace reproduction, strict receipt/golden checks, five-run timing, size/matrix controls, and readability evidence |
+| P0 | Implement and run the M5 Frostbound reproducibility/regression batch | 🤖 Agent | 🔵 Agent-ready | One local command records clean-workspace assembly, strict byte receipts, five-run timing, package size, state/part matrix, and four target-scale readability views |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -188,3 +189,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Prepared V3-E01–V3-E10 with approved-input, matrix, material, provenance, and no-pixel audits; added consolidated phone/light-dark/state/hierarchy views, an unscored review record, defect log, and passing automated preflight; opened the human V3 gate | Codex |
 | 2026-07-17 | Accepted ADR-014 and removed all engine-specific work; M4 now targets engine-neutral modular asset delivery | Project owner / Codex |
 | 2026-07-17 | Completed M4-A1 with the tracked Frostbound modular asset package, 62 source/derivative files, stable IDs, SHA-256 receipts, and package validation | Codex |
+| 2026-07-17 | Completed M5-A1 production-hardening definition with a fixed Frostbound baseline, batch contract, regression policy, receipt fields, and M5-A2 exit conditions | Codex |
