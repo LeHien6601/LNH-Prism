@@ -11,7 +11,7 @@
 | Validation run | `npm run validate:contracts`; `npm run validate:asset-package` |
 | Validation result | Passed: contracts validated including missing-provenance rejection; 62 modular files validated across five components |
 
-Refresh note: Compared with the prior review, no recommendation has been applied and no project code, status, or plan has changed. Findings F-001 through F-005 remain open.
+Refresh note: Recommendation R-001 was applied in this run. Finding F-001 is resolved; findings F-002 through F-005 remain open.
 
 ## Current status
 
@@ -23,8 +23,8 @@ Refresh note: Compared with the prior review, no recommendation has been applied
 
 | ID | Severity | Area | Fact or inference | Evidence | Impact | Recommended solution | Dependencies | Eligibility |
 |---|---|---|---|---|---|---|---|---|
-| F-001 | P1 | Status | Fact | `docs/PROJECT_OVERVIEW.md` records M4-A1 as complete and `docs/ROADMAP.md` says M4 passed, while the overview's at-a-glance table still marks M4 `🟡`; `docs/modules/06-asset-delivery.md` says M5-A1 is next even though the overview and M5 plan identify M5-A2. | A reader can select the wrong task or misjudge the milestone state. | Align active status/next-task statements with the completed M4 package and current M5-A2 task. | None. | Agent-ready |
-| F-002 | P1 | Workflow / status | Fact | ADR-014 removed engine integration from scope, but active Module 05 still defines V4/M4 as a playable Unity flow, names Unity project dependencies, and links deleted M4 Unity documents. ADR-009 also links deleted `modules/06-unity-export.md`. | The source-of-truth set contradicts the delivery boundary and contains broken navigation; future work can reintroduce retired scope. | Replace current-scope Unity workflow/dependency statements with engine-neutral M4 package validation; retain historical events only where clearly marked historical; remove or repair dead links. | R-001 can be completed independently. | Agent-ready |
+| F-001 | P1 | Status | Fact | Resolved by R-001: active overview and Module 06 now identify M4 as passed and M5-A2 as next. | Previously caused status/task-selection ambiguity; no longer present in active statements. | Completed: align active status/next-task statements with the completed M4 package and current M5-A2 task. | None. | Complete |
+| F-002 | P1 | Workflow / status | Fact | ADR-014 removed engine integration from scope, but active Module 05 still defines V4/M4 as a playable Unity flow, names Unity project dependencies, and links deleted M4 Unity documents. ADR-009 also links deleted `modules/06-unity-export.md`. | The source-of-truth set contradicts the delivery boundary and contains broken navigation; future work can reintroduce retired scope. | Replace current-scope Unity workflow/dependency statements with engine-neutral M4 package validation; retain historical events only where clearly marked historical; remove or repair dead links. | R-001 complete; no remaining dependency. | Agent-ready |
 | F-003 | P1 | Workflow | Fact | `specs/schemas/export-manifest.schema.json` still defines required Unity 1.1 integration/import metadata and Unity asset paths; V1 renderer manifests/types/tests still emit and assert `unity` fields. | Retired engine assumptions remain in the live output contract, increasing maintenance and risking accidental engine-coupled deliverables. | Plan a backward-compatible engine-neutral export-manifest revision and migrate live renderer/tests/examples to it; retain legacy validation only when needed for historic evidence. | Requires an explicit compatibility decision because schema/version behavior changes. | Human decision |
 | F-004 | P0 | Plan | Fact | M5-A2 has an explicit plan and acceptance criteria, but no package script implements the required clean-workspace five-run receipt batch. `package.json` has no M5 validation command. | The project cannot yet demonstrate its stated production-hardening exit evidence. | Implement and run M5-A2 exactly as defined in `docs/implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md`. | None; this is the overview's current task. | Agent-ready |
 | F-005 | P2 | Plan | Fact | Module 07 and the M5 plan defer migration/rollback, backup/recovery, release procedures, and multi-style coverage, but the overview task board has no later M5 tasks or decision that schedules them. | M5's post-A2 boundary is not yet executable; it could be prematurely considered complete. | Decide the required M5 exit scope after M5-A2 evidence, then create separately bounded follow-on tasks for the accepted slices. | M5-A2 evidence and project-owner scope decision. | Blocked |
@@ -33,12 +33,14 @@ Refresh note: Compared with the prior review, no recommendation has been applied
 
 Recommendations are ordered by urgency and dependency. Apply only one `Agent-ready` task per `Apply Review:` run.
 
-### R-001 — Align active M4/M5 status statements
+### R-001 — Align active M4/M5 status statements — Complete
 
-- **Priority / eligibility:** P1 — Agent-ready
+- **Priority / eligibility:** P1 — Complete
 - **Scope:** Correct the M4 state in the overview at-a-glance table and the stale next-task statement in Module 06. Do not change historical review scores or task-board ownership.
 - **Acceptance criteria:** All active overview, roadmap, and Module 06 statements agree that M4 modular delivery is complete and M5-A2 is next; no Unity scope is added.
 - **Validation:** Inspect the affected tables/text; run `git diff --check`.
+
+Applied in this run: M4 is now green/passed in the overview at-a-glance table, and Module 06 names M5-A2 as the next agent-ready task.
 
 ### R-002 — Remove retired Unity workflow references from active governance
 
@@ -69,4 +71,4 @@ Recommendations are ordered by urgency and dependency. Apply only one `Agent-rea
 
 ## Review conclusion
 
-The asset package and current contracts are healthy, but the project control layer has two immediate scope/status inconsistencies left by the engine-scope retirement. M5-A2 remains the primary delivery task; the export-manifest migration needs a project-owner compatibility decision before any contract-breaking cleanup.
+The asset package and current contracts are healthy. R-001 resolved the immediate M4/M5 status inconsistency; the remaining active governance weakness is retired Unity workflow text and the live Unity-coupled export contract. M5-A2 remains the primary delivery task; the export-manifest migration needs a project-owner compatibility decision before any contract-breaking cleanup.

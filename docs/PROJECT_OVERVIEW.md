@@ -50,7 +50,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M1 | MVP renderer and three core templates | 🟢 V1 Pass — `93/100` |
 | 🟢 | M2 | Tokens, variants, states, material packs | 🟢 V2 Pass — `93/100` |
 | 🟢 | M3 | AI-assisted analysis and material intake | 🟢 V3 Pass — `94/100` |
-| 🟡 | M4 | Modular asset delivery | Asset-package inspection |
+| 🟢 | M4 | Modular asset delivery | 🟢 Passed — 62-module engine-neutral package validated |
 | ⚪ | M5 | Production hardening and regression suite | 🟣 Production readiness review |
 | ⚪ | M6 | Optional showcase scaling and workflow review | 🟣 Operations review |
 
@@ -191,3 +191,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Completed M4-A1 with the tracked Frostbound modular asset package, 62 source/derivative files, stable IDs, SHA-256 receipts, and package validation | Codex |
 | 2026-07-17 | Completed M5-A1 production-hardening definition with a fixed Frostbound baseline, batch contract, regression policy, receipt fields, and M5-A2 exit conditions | Codex |
 | 2026-07-17 | Defined the `Review:` weakness-assessment record and `Apply Review:` one-task remediation workflow | Codex |
+| 2026-07-17 | Applied review R-001: aligned M4 completion and M5-A2 next-task status across active project controls | Codex |
