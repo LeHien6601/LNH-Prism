@@ -1,0 +1,382 @@
+{
+  "schemaVersion": "1.0",
+  "sourceTreeSha256": "26eb42f9d8453d0d333407fa836585522fa12ef2f4b660e9d6dd1e7fed3d9668",
+  "sourceReceipts": [
+    {
+      "path": "docs/decisions/ADR-012-v3-frostbound-reward.md",
+      "sha256": "1b920abd6e8455457c28b5952a1cf7f67be27ffae2a615587e27030cf7ccd883"
+    },
+    {
+      "path": "docs/reference-briefs/V3_FROSTBOUND_REWARD.md",
+      "sha256": "2ca44aeacf6fc8fc2af8c6f829ee37fa7b4e434fcbceeb4ccdf53a8a37026077"
+    },
+    {
+      "path": "docs/implementation/M3_FROSTBOUND_ANALYSIS_IMPLEMENTATION_SPEC.md",
+      "sha256": "bd662455f4068ae20c37cadc4b06c9c019cb66d1461ef6f714403a36b48cc814"
+    },
+    {
+      "path": "docs/validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md",
+      "sha256": "7b68689eaacf05d02934c47cd8bac06f9ea80a58d3a343d06b2ba7ea592d0651"
+    },
+    {
+      "path": "docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json",
+      "sha256": "d40d9258310f14df9b2b9da691c4daf889676773d278306291d823965e9afa17"
+    },
+    {
+      "path": "specs/examples/v3-frostbound-analysis.json",
+      "sha256": "89dc3b69d52c7155a45c7cdd1918f125a5107430047e258b110910e62c2f376f"
+    },
+    {
+      "path": "docs/validation/records/m3-s3-frostbound-analysis-review.json",
+      "sha256": "c90722cfe25e485dfe85cdcc14a280cb213cb5020e4ec8852de8703fcc2db09c"
+    },
+    {
+      "path": "docs/validation/records/m3-s3-frostbound-package-approval.json",
+      "sha256": "8a500019d4c57d21560f4dcd747d0f3f0f75c8df445b92ebc7c204e3b8769ae3"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s3-frost-crystal-intake/approved-token-lineage.json",
+      "sha256": "e8a77beedea86587cf2ec0d8630bb2582a3382a009e1a7add2871178ab292bc8"
+    },
+    {
+      "path": "specs/examples/style-frostbound-reward.json",
+      "sha256": "bbdd65bc9e441d1edfd1a1599f276b4e1a96794a1b396219f193d2c6f5d4541f"
+    },
+    {
+      "path": "specs/examples/frost-crystal-materials.json",
+      "sha256": "fa964352320057cecf72a9e65878d99b18f89db5a327a7c1bb3860a15f65f21c"
+    },
+    {
+      "path": "specs/examples/frostbound-reward-panel.json",
+      "sha256": "e24122cae4c0063ff80d86839f6bb65a57422473673c55964b2f66d6e747ebd1"
+    },
+    {
+      "path": "specs/examples/frostbound-claim-button.json",
+      "sha256": "afa185385c10d3ae122cad7fe59f3e6022986986abb7c8fd486ad7b3ffd88913"
+    },
+    {
+      "path": "specs/examples/frostbound-later-button.json",
+      "sha256": "83d86069d7e618a3ae6272838cca46aff25024ef3bf3d526fd52a74130000ad9"
+    },
+    {
+      "path": "specs/examples/frostbound-reward-progress.json",
+      "sha256": "955964b3260e079f5aedd7e57a1b2d6bad91478928c269448ae13df3497923f2"
+    },
+    {
+      "path": "specs/examples/frostbound-reward-emblem-container.json",
+      "sha256": "de317346fc62cc2ded5c151719d6d10233dd5b52ddaa17d79eeffb06e5346f30"
+    },
+    {
+      "path": "materials/frost-crystal/frost-grain.json",
+      "sha256": "3be6718069d38921fadb351a889ae234472fc2010a97f703d299a2cd48d1a396"
+    },
+    {
+      "path": "materials/frost-crystal/crystal-facet-pattern.json",
+      "sha256": "9db172b52146af8444bf5ffc0a698188f7f303c084e3b610dbb07ec8051bb55e"
+    },
+    {
+      "path": "materials/frost-crystal/rune-ornament.json",
+      "sha256": "726b9f6cf9c6a58e6a84ca87d856cf92d820ce2058dc68d905994ba73b82f9ac"
+    },
+    {
+      "path": "src/materials/frost-crystal.ts",
+      "sha256": "29e91c6bd4e64716e95c56242093055816c6dfaefee4f003b1addd572562afed"
+    },
+    {
+      "path": "src/renderer/frostbound-components.ts",
+      "sha256": "ca2272c27b028aa60d70c3fd5628ced3be6b45a9622b839186d8c9cc30567e9b"
+    },
+    {
+      "path": "src/renderer/frostbound-scenario.ts",
+      "sha256": "a9469ffa491e355807d829563d9897ba4a4b408df96cc93b9833416fd5f0dbd0"
+    },
+    {
+      "path": "scripts/prepare-v3-evidence.mjs",
+      "sha256": "6c3d366953b2cdd225f999b205618086e1e8a95f4aaf5829681093c3917e6577"
+    },
+    {
+      "path": "scripts/validate-v3-evidence.mjs",
+      "sha256": "b85aee1c3dbdaeee04fb9589de348c0d6a78773647fb7ba75754a846cfbb5b3a"
+    },
+    {
+      "path": "package.json",
+      "sha256": "0660d6071df74cb78582e1c9d507d8a8ad3c72e8e2478a7e57e4135a4db44f83"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "9e111c4ae81fa2d761b2cc291f628a19c7e27d4ca5ebd492b2ad0484aedd742c"
+    }
+  ],
+  "outputTreeSha256": "27a53b7f76ad9e192768b0eec80c0bbb87dbc07283664f61122335a733e7b7e1",
+  "outputReceipts": [
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/panel-432x300-normal.svg",
+      "sha256": "26e79a92f782c029ff293090d29efdadc2f28edcb78225a50a977dac175ef448",
+      "expectedSha256": "26e79a92f782c029ff293090d29efdadc2f28edcb78225a50a977dac175ef448"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/panel-432x300-normal.png",
+      "sha256": "9667e1801f82e37bc046a1fff94428e35db1667ddf9ec17143133e626c4fee05",
+      "expectedSha256": "9667e1801f82e37bc046a1fff94428e35db1667ddf9ec17143133e626c4fee05"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/panel-432x420-normal.svg",
+      "sha256": "c29b9309d9aa7cde8b31293c0dd5675fb1b8b449d4fbf46fc7111d6474108d53",
+      "expectedSha256": "c29b9309d9aa7cde8b31293c0dd5675fb1b8b449d4fbf46fc7111d6474108d53"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/panel-432x420-normal.png",
+      "sha256": "45a857cb27a076a7da3374eaafe1c038b0d4d800d8f80afcba018db533616960",
+      "expectedSha256": "45a857cb27a076a7da3374eaafe1c038b0d4d800d8f80afcba018db533616960"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-normal.svg",
+      "sha256": "369030d483a6c183a1c5c9330c9678623b4fb51fe14bb24e766b582da9a22f1f",
+      "expectedSha256": "369030d483a6c183a1c5c9330c9678623b4fb51fe14bb24e766b582da9a22f1f"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-normal.png",
+      "sha256": "a3511dfb324156f5d8a8f32c21b60c96ba25c7fc62aeedd191f22cc95a3387db",
+      "expectedSha256": "a3511dfb324156f5d8a8f32c21b60c96ba25c7fc62aeedd191f22cc95a3387db"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-pressed.svg",
+      "sha256": "1ecb3e52e0c9868abc06c06627a12662067a57085b349faa8685d45fa6d9f3a5",
+      "expectedSha256": "1ecb3e52e0c9868abc06c06627a12662067a57085b349faa8685d45fa6d9f3a5"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-pressed.png",
+      "sha256": "6670a7b19bf6f9d68777a316381bc4de5b955a7a6b6cab618ec24c598521110d",
+      "expectedSha256": "6670a7b19bf6f9d68777a316381bc4de5b955a7a6b6cab618ec24c598521110d"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-disabled.svg",
+      "sha256": "661ab99bc4250f193250ed8036e6143bd5e97e2969d813fab717d45fe7d1a980",
+      "expectedSha256": "661ab99bc4250f193250ed8036e6143bd5e97e2969d813fab717d45fe7d1a980"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-disabled.png",
+      "sha256": "8d37b1ca7ff83a6755168b769ab4f90f7a237d9ff90c1b3c4ccb535cb7399900",
+      "expectedSha256": "8d37b1ca7ff83a6755168b769ab4f90f7a237d9ff90c1b3c4ccb535cb7399900"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-normal.svg",
+      "sha256": "af76b701eb3071f99c4a3ef39fe9299d6ce830fca8d51842cc397c77583346d5",
+      "expectedSha256": "af76b701eb3071f99c4a3ef39fe9299d6ce830fca8d51842cc397c77583346d5"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-normal.png",
+      "sha256": "2fc54b750f97c8e7b7dd549ec4dd7180d1765efb142a76352c58eaab49846525",
+      "expectedSha256": "2fc54b750f97c8e7b7dd549ec4dd7180d1765efb142a76352c58eaab49846525"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-pressed.svg",
+      "sha256": "4d5b4b03236c103079db74f99db60bae9ed1089013d238289a48582afe830eea",
+      "expectedSha256": "4d5b4b03236c103079db74f99db60bae9ed1089013d238289a48582afe830eea"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-pressed.png",
+      "sha256": "f5e811c2654637524d95ee4559fad7f8d6bae782d9b8cc4fc5f29cc6a9692fca",
+      "expectedSha256": "f5e811c2654637524d95ee4559fad7f8d6bae782d9b8cc4fc5f29cc6a9692fca"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-disabled.svg",
+      "sha256": "0e1d4944e9cfa4d188fa64de81a8b72589138a5ddf884b2dca3729a285023737",
+      "expectedSha256": "0e1d4944e9cfa4d188fa64de81a8b72589138a5ddf884b2dca3729a285023737"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-disabled.png",
+      "sha256": "d13100b659391aaa8381ad053ab4875641937fa520050aabb9a5e3754d3fd640",
+      "expectedSha256": "d13100b659391aaa8381ad053ab4875641937fa520050aabb9a5e3754d3fd640"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-normal.svg",
+      "sha256": "60f859d441ebb7d75f3fcd9a0feaa213e3eb6e5c22365e3673f7a684ed73e3b4",
+      "expectedSha256": "60f859d441ebb7d75f3fcd9a0feaa213e3eb6e5c22365e3673f7a684ed73e3b4"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-normal.png",
+      "sha256": "3566f615e9cef0e02d547cc161ffeaa392f82886f9b215d44bdb5dd5ebbff9a3",
+      "expectedSha256": "3566f615e9cef0e02d547cc161ffeaa392f82886f9b215d44bdb5dd5ebbff9a3"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-pressed.svg",
+      "sha256": "e54a399f215b5e0d686fa0a8ccb41ca6040c72ad61da26967e2102a73fdbe430",
+      "expectedSha256": "e54a399f215b5e0d686fa0a8ccb41ca6040c72ad61da26967e2102a73fdbe430"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-pressed.png",
+      "sha256": "0df3ae5d9a7ecab48514ee1a2324a2fbcd461d53552ea8bebd5afb9093501c8c",
+      "expectedSha256": "0df3ae5d9a7ecab48514ee1a2324a2fbcd461d53552ea8bebd5afb9093501c8c"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-disabled.svg",
+      "sha256": "9b17578dcb352543d161471a8141d81234a2626254e6b0e118b0284d4e8c61d1",
+      "expectedSha256": "9b17578dcb352543d161471a8141d81234a2626254e6b0e118b0284d4e8c61d1"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-disabled.png",
+      "sha256": "c15442fd9327286f5f3822751142697e401262bcffc7fa212ff5bad0625017da",
+      "expectedSha256": "c15442fd9327286f5f3822751142697e401262bcffc7fa212ff5bad0625017da"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-normal.svg",
+      "sha256": "5d211ff1c7c09f2f1171dfa7e9cb59931035aff8a45804825d2ad6ae8070bf1e",
+      "expectedSha256": "5d211ff1c7c09f2f1171dfa7e9cb59931035aff8a45804825d2ad6ae8070bf1e"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-normal.png",
+      "sha256": "56cbae800cf3efefac8a6edc06afadd6c58ca9a9bde3a7ffdab3b979bcbf82a5",
+      "expectedSha256": "56cbae800cf3efefac8a6edc06afadd6c58ca9a9bde3a7ffdab3b979bcbf82a5"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-pressed.svg",
+      "sha256": "72085265011415f13fde3f6829c626530e5874bd30a95da4ca8aa4afa045884c",
+      "expectedSha256": "72085265011415f13fde3f6829c626530e5874bd30a95da4ca8aa4afa045884c"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-pressed.png",
+      "sha256": "1c049a26613dfb1d1b0ed10ccb9bbfd8b5c7c1e38d900148a93f761d9d820269",
+      "expectedSha256": "1c049a26613dfb1d1b0ed10ccb9bbfd8b5c7c1e38d900148a93f761d9d820269"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-disabled.svg",
+      "sha256": "651307e116e01d8d6d38f6707de704e1ede8b5050b9085210d6d3cc83c73fae7",
+      "expectedSha256": "651307e116e01d8d6d38f6707de704e1ede8b5050b9085210d6d3cc83c73fae7"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-disabled.png",
+      "sha256": "30823784cef0e48cd33ed7dd631da6989302c75c438b8df97e7078df02e51335",
+      "expectedSha256": "30823784cef0e48cd33ed7dd631da6989302c75c438b8df97e7078df02e51335"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-10.svg",
+      "sha256": "cc8f2f0792f241fe490901200316cd5bfb1a76f722eebe5fe76367b794b51210",
+      "expectedSha256": "cc8f2f0792f241fe490901200316cd5bfb1a76f722eebe5fe76367b794b51210"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-10.png",
+      "sha256": "5d8e1fb0f297d95056d06afd15de1f8ccdc051bf3917a4dcbb3da7e3cbf3e94d",
+      "expectedSha256": "5d8e1fb0f297d95056d06afd15de1f8ccdc051bf3917a4dcbb3da7e3cbf3e94d"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-50.svg",
+      "sha256": "851ef690ff30f5464a03a329e3c6b1d02b6b21c974b737c922a504d1f198e38a",
+      "expectedSha256": "851ef690ff30f5464a03a329e3c6b1d02b6b21c974b737c922a504d1f198e38a"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-50.png",
+      "sha256": "04dfc47aec304ef705205b3760feeefed39510f65dccbc734eef6b01bcf23603",
+      "expectedSha256": "04dfc47aec304ef705205b3760feeefed39510f65dccbc734eef6b01bcf23603"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-75.svg",
+      "sha256": "2d225ac850c70d2289fdb07338de42095f8a6c16e63563b22ef4ae2d0c097342",
+      "expectedSha256": "2d225ac850c70d2289fdb07338de42095f8a6c16e63563b22ef4ae2d0c097342"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-75.png",
+      "sha256": "d7825a28bab76dcd0415bec3dc9e7cfdee3a52001f16cfb0786bb538b13ddc82",
+      "expectedSha256": "d7825a28bab76dcd0415bec3dc9e7cfdee3a52001f16cfb0786bb538b13ddc82"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-90.svg",
+      "sha256": "cb60549c40798fc4e8837cd9abd89d1838a22bd56bbcfb485b92c430e77df8fa",
+      "expectedSha256": "cb60549c40798fc4e8837cd9abd89d1838a22bd56bbcfb485b92c430e77df8fa"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-90.png",
+      "sha256": "782fda0f82973cf9bb55b0ec04004499634cbc6e130b7b4675108b2f1922339b",
+      "expectedSha256": "782fda0f82973cf9bb55b0ec04004499634cbc6e130b7b4675108b2f1922339b"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-10.svg",
+      "sha256": "dc00eb5ecd5d53a7c354b837af9c6d6d7c77b73904ddb4831ef8cf1795bc291a",
+      "expectedSha256": "dc00eb5ecd5d53a7c354b837af9c6d6d7c77b73904ddb4831ef8cf1795bc291a"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-10.png",
+      "sha256": "0d2c613b8eeb18c13bfeae7094a37707d8057810b5a2712206e32205adefb5b0",
+      "expectedSha256": "0d2c613b8eeb18c13bfeae7094a37707d8057810b5a2712206e32205adefb5b0"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-50.svg",
+      "sha256": "d13f173a3b898166a850d6292577582dfa61106ece17e06d5b22afe1d940d3bb",
+      "expectedSha256": "d13f173a3b898166a850d6292577582dfa61106ece17e06d5b22afe1d940d3bb"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-50.png",
+      "sha256": "a5dbc37bca445a3aa7649c2015120b380f04cfee065870e303760bb8b246f28c",
+      "expectedSha256": "a5dbc37bca445a3aa7649c2015120b380f04cfee065870e303760bb8b246f28c"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-75.svg",
+      "sha256": "fd316f7e437c68e01ac8a07f7000657dcc42f08338a3cec60bfe60f565925c92",
+      "expectedSha256": "fd316f7e437c68e01ac8a07f7000657dcc42f08338a3cec60bfe60f565925c92"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-75.png",
+      "sha256": "b50630d4dc175cffdb3f6cf2533fe185ab265bde6159d17d84417b2c312e1e37",
+      "expectedSha256": "b50630d4dc175cffdb3f6cf2533fe185ab265bde6159d17d84417b2c312e1e37"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-90.svg",
+      "sha256": "aee14406b25e9fc17bce26d74ba940c33cd2636cb6fca294ef5a3e3a04dd4c9f",
+      "expectedSha256": "aee14406b25e9fc17bce26d74ba940c33cd2636cb6fca294ef5a3e3a04dd4c9f"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-90.png",
+      "sha256": "7f2e6bf7072f01de0e3f32eb25898f5b1890629d366230b4f182217d5349882a",
+      "expectedSha256": "7f2e6bf7072f01de0e3f32eb25898f5b1890629d366230b4f182217d5349882a"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-104x104-normal.svg",
+      "sha256": "ac4345feb2b9916d3f6ed87f04a56a7405b8ce8477f5f875c0dcfda7926531fd",
+      "expectedSha256": "ac4345feb2b9916d3f6ed87f04a56a7405b8ce8477f5f875c0dcfda7926531fd"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-104x104-normal.png",
+      "sha256": "179fec48e6a009927e76a6a0878ac3db4a52df22f164d3682b9d8d585de8e3e8",
+      "expectedSha256": "179fec48e6a009927e76a6a0878ac3db4a52df22f164d3682b9d8d585de8e3e8"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-104x104-selected.svg",
+      "sha256": "b3c7878117e784dd101555b20d88decab702ce7aa7f5e112172d847fc08c0f7b",
+      "expectedSha256": "b3c7878117e784dd101555b20d88decab702ce7aa7f5e112172d847fc08c0f7b"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-104x104-selected.png",
+      "sha256": "9b2df4f73a9d6d9237c4c07d06c645578e8c96d5f39709172137f47a327dfcb5",
+      "expectedSha256": "9b2df4f73a9d6d9237c4c07d06c645578e8c96d5f39709172137f47a327dfcb5"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-144x144-normal.svg",
+      "sha256": "9007b0963253bd0b5955362945e822d310a37df6eb18d247718779b1b771fed1",
+      "expectedSha256": "9007b0963253bd0b5955362945e822d310a37df6eb18d247718779b1b771fed1"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-144x144-normal.png",
+      "sha256": "c707d255e1df6184163e2b16fc0a57b490e84dd4e57b53523b12e29e086a10ab",
+      "expectedSha256": "c707d255e1df6184163e2b16fc0a57b490e84dd4e57b53523b12e29e086a10ab"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-144x144-selected.svg",
+      "sha256": "54955eb8f9462f9fe0a03f9efbdde60f4ca4ea44586f0e396a8c9510e17f1148",
+      "expectedSha256": "54955eb8f9462f9fe0a03f9efbdde60f4ca4ea44586f0e396a8c9510e17f1148"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-144x144-selected.png",
+      "sha256": "8ef9e90e39379cabfee5fe62c9d61098ada0edda1daedaa5f9adbc5eb43f73d0",
+      "expectedSha256": "8ef9e90e39379cabfee5fe62c9d61098ada0edda1daedaa5f9adbc5eb43f73d0"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/frostbound-reconstruction.svg",
+      "sha256": "124ed1e06b5a028bc2977a3489a32825afec39a1c8f6c562564a10d4fd8018bf"
+    },
+    {
+      "path": "docs/validation/evidence/m3-s4-frostbound-reconstruction/frostbound-reconstruction.png",
+      "sha256": "56fd2d7645fc9c10ae749139f9f2816fca80d5ce39d98315622a4fdb81fa582d"
+    }
+  ],
+  "conceptUsageBoundary": "The concept raster is review evidence only and is absent from production sources and outputs."
+}

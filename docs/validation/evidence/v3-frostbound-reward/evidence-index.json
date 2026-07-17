@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "v3-frostbound-reward",
+  "status": "ready-for-human-review",
+  "evidence": {
+    "V3-E01": [
+      "docs/decisions/ADR-012-v3-frostbound-reward.md",
+      "docs/reference-briefs/V3_FROSTBOUND_REWARD.md",
+      "docs/implementation/M3_FROSTBOUND_ANALYSIS_IMPLEMENTATION_SPEC.md",
+      "docs/validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md"
+    ],
+    "V3-E02": [
+      "docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json",
+      "specs/examples/v3-frostbound-analysis.json"
+    ],
+    "V3-E03": [
+      "docs/validation/records/m3-s3-frostbound-analysis-review.json",
+      "../m3-s3-frost-crystal-intake/approved-token-lineage.json"
+    ],
+    "V3-E04": [
+      "V3-E04-approved-inputs.json",
+      "specs/examples/style-frostbound-reward.json",
+      "specs/examples/frost-crystal-materials.json",
+      "specs/examples/frostbound-reward-panel.json",
+      "specs/examples/frostbound-claim-button.json",
+      "specs/examples/frostbound-later-button.json",
+      "specs/examples/frostbound-reward-progress.json",
+      "specs/examples/frostbound-reward-emblem-container.json"
+    ],
+    "V3-E05": [
+      "V3-E05-matrix-receipt.json",
+      "../m3-s4-frostbound-reconstruction/matrix.json",
+      "../m3-s4-frostbound-reconstruction/matrix/"
+    ],
+    "V3-E06": [
+      "../m3-s4-frostbound-reconstruction/frostbound-reconstruction.svg",
+      "../m3-s4-frostbound-reconstruction/frostbound-reconstruction.png",
+      "../m3-s4-frostbound-reconstruction/comparison.html"
+    ],
+    "V3-E07": [
+      "V3-E07-review-views.html"
+    ],
+    "V3-E08": [
+      "V3-E08-material-audit.json",
+      "../m3-s3-frost-crystal-intake/"
+    ],
+    "V3-E09": [
+      "V3-E09-test-report.json",
+      "V3-E09-provenance-audit.json"
+    ],
+    "V3-E10": [
+      "V3-E10-defect-log.json",
+      "V3-E10-retrospective.md",
+      "V3-E10-preflight.json",
+      "../../records/v3-frostbound-reward.md"
+    ]
+  }
+}

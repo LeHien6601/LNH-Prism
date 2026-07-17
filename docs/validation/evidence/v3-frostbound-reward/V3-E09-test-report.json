@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "command": "npm run validate",
+  "status": "passed",
+  "coverage": [
+    "contracts",
+    "analysis-control",
+    "proposal-mapping",
+    "material-preflight",
+    "renderer-states-and-bounds",
+    "determinism",
+    "progress-frame-fill",
+    "provenance",
+    "concept-leakage",
+    "V1-V2-regression"
+  ],
+  "validatedAt": "2026-07-17"
+}

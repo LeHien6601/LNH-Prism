@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "inputs": [
+    {
+      "path": "specs/examples/style-frostbound-reward.json",
+      "id": "frostbound-reward",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "bbdd65bc9e441d1edfd1a1599f276b4e1a96794a1b396219f193d2c6f5d4541f"
+    },
+    {
+      "path": "specs/examples/frost-crystal-materials.json",
+      "id": "frost-crystal-materials",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "fa964352320057cecf72a9e65878d99b18f89db5a327a7c1bb3860a15f65f21c"
+    },
+    {
+      "path": "specs/examples/frostbound-reward-panel.json",
+      "id": "frostbound-reward-panel",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "e24122cae4c0063ff80d86839f6bb65a57422473673c55964b2f66d6e747ebd1"
+    },
+    {
+      "path": "specs/examples/frostbound-claim-button.json",
+      "id": "frostbound-claim-button",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "afa185385c10d3ae122cad7fe59f3e6022986986abb7c8fd486ad7b3ffd88913"
+    },
+    {
+      "path": "specs/examples/frostbound-later-button.json",
+      "id": "frostbound-later-button",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "83d86069d7e618a3ae6272838cca46aff25024ef3bf3d526fd52a74130000ad9"
+    },
+    {
+      "path": "specs/examples/frostbound-reward-progress.json",
+      "id": "frostbound-reward-progress",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "955964b3260e079f5aedd7e57a1b2d6bad91478928c269448ae13df3497923f2"
+    },
+    {
+      "path": "specs/examples/frostbound-reward-emblem-container.json",
+      "id": "frostbound-reward-emblem-container",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "de317346fc62cc2ded5c151719d6d10233dd5b52ddaa17d79eeffb06e5346f30"
+    }
+  ]
+}

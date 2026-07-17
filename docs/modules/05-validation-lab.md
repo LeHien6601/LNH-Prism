@@ -68,7 +68,7 @@ The 2026-07-17 guided evidence review scored V2 at `93/100`. Every dimension met
 
 ## Current V3 definition status
 
-The project owner selected the Frostbound Reward Popup at the existing portrait-mobile scale and approved M3 definition Option A on 2026-07-17. The specification and V3 rubric define a source-annotated, confidence-aware, human-controlled concept-to-spec workflow; a bounded Panel–Button–Progress plus reward-emblem-container reconstruction; and automatic blockers for concept-pixel extraction or unreviewed AI suggestions. M3-S1 is agent-ready.
+The project owner selected the Frostbound Reward Popup at the existing portrait-mobile scale and approved M3 definition Option A on 2026-07-17. M3-S1 through M3-S5 evidence preparation are complete. V3-E01–V3-E10 now bind the human-controlled proposal lineage, seven approved inputs, 26 deterministic variants, 54 output receipts, portrait and consolidated comparison views, four-type material reuse, provenance, no-pixel audits, and an unscored review record. Automated preflight passes; the Product/Art/UI/Technical fidelity review is the next human decision.
 
 ## Change history
 
@@ -93,3 +93,4 @@ The project owner selected the Frostbound Reward Popup at the existing portrait-
 | 2026-07-17 | Selected Frostbound Reward for V3 and drafted V3-E01–V3-E10, scoring, blockers, and review controls for human approval | Project owner / Codex |
 | 2026-07-17 | Approved V3 Option A evidence, scoring, blockers, and review controls; unblocked M3-S1 | Project owner / Codex |
 | 2026-07-17 | Added M3-S4's 26-variant Frostbound matrix, target portrait render, selected/hierarchy proof, independent progress outputs, annotated concept comparison, and automated no-concept production audit | Codex |
+| 2026-07-17 | Prepared V3-E01–V3-E10, an unscored scorecard, defect/revalidation templates, consolidated phone and semantic comparison views, source/output receipts, and passing human-gate preflight | Codex |
