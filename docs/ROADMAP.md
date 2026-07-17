@@ -91,15 +91,17 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** reproducibility, performance, QA, and handoff criteria are met; unresolved issues have an owner and release decision.
 
-## ⚪ M6 — Dashboard and workflow scaling (conditional)
+## 🟢 M6 — Dashboard and workflow scaling (conditional)
 
 **Goal:** reduce coordination overhead only when evidence shows Markdown alone is insufficient.
 
-- Implement the dashboard described in `DASHBOARD_PLAN.md`.
+**Decision:** 🟢 Deferred on 2026-07-18 — [ADR-017](decisions/ADR-017-defer-m6-dashboard-workflow-scaling.md) keeps Markdown controls and the renderer-backed showcase as the operating model. Dashboard/workflow scaling should start only when a concrete coordination problem appears.
+
+- Keep the showcase plan in [DASHBOARD_PLAN.md](DASHBOARD_PLAN.md) as the renderer-backed visual review surface, not an active project-management dashboard.
 - Read project state from structured source files; dashboard must not become a second source of truth.
 - Add milestone, task, decision, risk, validation, and change-request views.
 
-**Exit gate:** dashboard saves review time and remains consistent with source documents.
+**Exit gate:** deferred; no dashboard is required while Markdown controls and the existing showcase remain sufficient.
 
 ## Change history
 
@@ -125,3 +127,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Passed M5-A2 reproducibility/regression validation; retained deferred hardening slices for a later scope decision | Codex |
 | 2026-07-18 | Completed M5-A3 through M5-A5 hardening controls and queued the M5-A6 multi-style coverage decision | Codex |
 | 2026-07-18 | Accepted Frostbound-only hardening coverage for M5 exit and marked M5 passed | Project owner / Codex |
+| 2026-07-18 | Deferred M6 dashboard/workflow scaling and kept Markdown plus showcase as the operating model | Project owner / Codex |

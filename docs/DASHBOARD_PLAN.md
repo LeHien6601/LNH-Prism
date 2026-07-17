@@ -6,6 +6,8 @@ The project owner approved replacing the deferred status-dashboard proposal with
 
 Markdown remains the source of truth for project status, decisions, and governance. The showcase is a renderer-backed visual review surface, not a project-management dashboard.
 
+M6 dashboard/workflow scaling was deferred on 2026-07-18 in [ADR-017](decisions/ADR-017-defer-m6-dashboard-workflow-scaling.md). This document remains the showcase plan and historical dashboard replacement record; it is not an active dashboard implementation plan.
+
 ## Purpose
 
 Provide a read-only local preview of generated UI components in supported states, sizes, and a realistic screen scenario. It must never replace versioned specifications, renderer output, or validation records.
@@ -60,3 +62,4 @@ Do not copy component artwork into HTML/CSS. The page references generated SVG/P
 | 2026-07-16 | Registered bounded real-time preview controls as proposed CR-002 pending M1 revalidation | Codex |
 | 2026-07-16 | Recorded approval of CR-002 Option A as a bounded shared-renderer prototype | Project owner / Codex |
 | 2026-07-16 | Completed CR-002 with bounded controls, read-only traceability, shared recipe equivalence, and responsive validation | Codex |
+| 2026-07-18 | Deferred M6 dashboard/workflow scaling; Markdown controls plus the renderer-backed showcase remain sufficient | Project owner / Codex |

@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | ⚪ **M6 dashboard/workflow scaling (conditional)** — pending human decision |
-| Next task | 🟣 **Decide M6 workflow scaling need** · 🧭 Project owner + 🛠️ Technical lead |
-| Next agent-ready task | None — pending M6 human decision |
+| Active milestone | ⚪ **Roadmap direction** — M0 through M6 resolved |
+| Next task | 🟣 **Decide next production roadmap direction** · 🧭 Project owner + 🛠️ Technical lead |
+| Next agent-ready task | None — pending roadmap human decision |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -52,7 +52,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M3 | AI-assisted analysis and material intake | 🟢 V3 Pass — `94/100` |
 | 🟢 | M4 | Modular asset delivery | 🟢 Passed — 62-module engine-neutral package validated |
 | 🟢 | M5 | Production hardening and regression suite | 🟢 Passed — Frostbound-only hardening accepted for M5 exit |
-| ⚪ | M6 | Optional showcase scaling and workflow review | 🟣 Operations review |
+| 🟢 | M6 | Optional showcase scaling and workflow review | 🟢 Deferred — Markdown + showcase remain sufficient |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -109,7 +109,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P2 | Implement package backup and recovery drill (M5-A4) | 🤖 Agent | 🟢 Complete | Recovery evidence restores or rebuilds the Frostbound package from pinned inputs and verifies byte equality |
 | P2 | Draft release operating procedure and exception policy (M5-A5) | 🤖 Agent | 🟢 Complete | Checklist defines validation gates, evidence paths, sign-off, exception policy, rollback decision points, and handoff artifacts |
 | P2 | Decide multi-style hardening coverage (M5-A6) | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved: Frostbound-only hardening is sufficient for M5 exit; multi-style coverage is deferred as a future scaling risk |
-| P3 | Decide M6 workflow scaling need | 🧭 Project owner + 🛠️ Technical lead | 🟣 Human decision | Choose whether Markdown controls remain sufficient or whether dashboard/workflow scaling should begin |
+| P3 | Decide M6 workflow scaling need | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved: keep Markdown controls and the existing showcase; defer dashboard/workflow scaling until coordination pain appears |
+| P3 | Decide next production roadmap direction | 🧭 Project owner + 🛠️ Technical lead | 🟣 Human decision | Choose the next validation target, future package/style hardening, maintenance cadence, or a new approved milestone |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -130,6 +131,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-014 | Final delivery is engine-neutral modular UI assets | 🟢 Accepted | Project owner requires independently extractable, usable asset modules with no engine integration scope |
 | ADR-015 | Archive legacy export manifests and move live output to an engine-neutral successor | 🟢 Accepted | Keeps historical evidence auditable while removing retired engine metadata from the live production contract; see [decision record](decisions/ADR-015-export-manifest-compatibility-policy.md) |
 | ADR-016 | Use Frostbound-only hardening coverage for M5 exit | 🟢 Accepted | M5 closes on the fully hardened Frostbound package; multi-style coverage is deferred as a future scaling risk; see [decision record](decisions/ADR-016-m5-frostbound-only-hardening-coverage.md) |
+| ADR-017 | Defer M6 dashboard and workflow scaling | 🟢 Accepted | Markdown controls plus the renderer-backed showcase remain sufficient; dashboard work is deferred until coordination pain appears; see [decision record](decisions/ADR-017-defer-m6-dashboard-workflow-scaling.md) |
 
 ## 7. Top risks and responses
 
@@ -141,6 +143,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 🟡 Renderer cannot meet mobile needs | Export size or render time misses budget | Bake raster where needed; keep source specs deterministic | 🛠️ Technical lead |
 | 🟡 Asset modules are coupled or hard to find | Consumers need project-specific context to use assets | Keep portable modules, stable IDs, and source-to-output receipts together | 🤖 Agent |
 | 🟡 Multi-style hardening remains unproven | A second production package needs release hardening | Treat as an accepted M5 scaling risk per ADR-016; revisit when another production package is selected | 🧭 Product owner + 🛠️ Technical lead |
+| 🟡 Dashboard/workflow scaling may become useful later | Markdown review becomes slow, duplicated, or hard to audit | Treat as deferred per ADR-017; create a scoped task only when a concrete coordination problem appears | 🧭 Product owner + 🛠️ Technical lead |
 
 ## 8. Review cadence
 
@@ -213,3 +216,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Completed M5-A4 package backup/recovery drill with restore and rebuild evidence; queued M5-A5 release procedure | Codex |
 | 2026-07-18 | Completed M5-A5 release operating procedure and exception policy; queued M5-A6 multi-style coverage decision | Codex |
 | 2026-07-18 | Approved M5-A6 Option A: Frostbound-only hardening is sufficient for M5 exit; queued M6 workflow scaling decision | Project owner / Codex |
+| 2026-07-18 | Approved M6 Option A: defer dashboard/workflow scaling; queued next roadmap direction decision | Project owner / Codex |
