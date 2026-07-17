@@ -4,7 +4,7 @@
 
 Use this rubric to judge M4's real validation: a deterministic Frostbound export imported into a bounded uGUI project with exact Sprite settings, stable references, idempotent re-export, and readable Windows Editor/Android portrait behavior.
 
-**Status:** 🟡 Draft — awaiting definition review.
+**Status:** 🟢 Approved — Option A with versioning and naming clarifications accepted on 2026-07-17.
 
 **Review owner:** 🎮 Unity lead.
 
@@ -92,13 +92,13 @@ The mandatory minimums produce a mathematical floor of `87/100`. A Conditional p
 
 ## Required review checklist
 
-- [ ] Contract extension and legacy compatibility are approved.
-- [ ] Naming, stable Unity asset ID, deterministic GUID algorithm, collision rules, and migration boundary are approved.
-- [ ] Manifest-owned importer settings and stale-asset behavior are approved.
-- [ ] Reward panel sizes/borders, component states, progress parts/values, atlas group, and locked mapping are approved.
-- [ ] Bounded Unity project/runtime scope and M4-S1 through M4-S5 ordering are approved.
-- [ ] V4-E01 through V4-E10, reviewers, scoring thresholds, mandatory minimums, and blockers are sufficient.
-- [ ] Implementation remains prohibited until this definition checklist is explicitly confirmed.
+- [x] Manifest `1.1` extension and updated-validator compatibility with legacy `1.0` are approved.
+- [x] Authoritative kebab-case naming, stable Unity asset ID, deterministic GUID algorithm, collision rules, and migration boundary are approved.
+- [x] Manifest-owned importer settings and stale-asset behavior are approved.
+- [x] Reward panel sizes/borders, component states, progress parts/values, atlas group, and locked mapping are approved.
+- [x] Bounded Unity project/runtime scope and M4-S1 through M4-S5 ordering are approved.
+- [x] V4-E01 through V4-E10, reviewers, scoring thresholds, mandatory minimums, and blockers are sufficient.
+- [x] Definition approval unblocks M4-S1 but does not pass M4/V4.
 
 ## Scorecard template
 
@@ -125,3 +125,4 @@ Reviewers/date: `—`
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-17 | Drafted V4 evidence, scoring, blockers, review procedure, and definition checklist | Codex |
+| 2026-07-17 | Approved Option A with manifest versioning and canonical naming clarifications | Project owner / Codex |

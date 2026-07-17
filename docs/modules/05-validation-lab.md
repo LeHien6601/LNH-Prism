@@ -72,7 +72,7 @@ The 2026-07-17 human fidelity review scored Frostbound V3 at `94/100`. Every man
 
 ## Current V4 definition status
 
-The Frostbound Reward Claim and Unity `6000.3.18f1` uGUI/Built-in baseline are approved. The draft [M4 implementation specification](../implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md) and [V4 integration rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md) define V4-E01–V4-E10, weighted scoring, automatic blockers, and revalidation. Product, Technical, and Unity leads must approve the definition package before implementation or evidence scoring begins.
+The Frostbound Reward Claim and Unity `6000.3.18f1` uGUI/Built-in baseline are approved. On 2026-07-17, Option A approved the [M4 implementation specification](../implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md) and [V4 integration rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md) with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming. V4-E01–V4-E10, weighted scoring, automatic blockers, and revalidation are fixed; M4-S1 may begin, but evidence scoring remains gated until implementation is complete.
 
 ## Change history
 
@@ -100,3 +100,4 @@ The Frostbound Reward Claim and Unity `6000.3.18f1` uGUI/Built-in baseline are a
 | 2026-07-17 | Prepared V3-E01–V3-E10, an unscored scorecard, defect/revalidation templates, consolidated phone and semantic comparison views, source/output receipts, and passing human-gate preflight | Codex |
 | 2026-07-17 | Recorded V3 Pass at `94/100`, no blockers or defects, and completed M3 | Project owner / Codex |
 | 2026-07-17 | Drafted the V4 Unity integration evidence package, scoring, blockers, and definition-review checklist | Codex |
+| 2026-07-17 | Approved V4 definition Option A with manifest versioning and canonical naming clarifications; unblocked M4-S1 | Project owner / Codex |

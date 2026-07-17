@@ -4,7 +4,7 @@
 
 Export generated UI assets with enough metadata to be imported and re-exported reliably in Unity.
 
-**Status:** M4 implementation specification and V4 integration rubric drafted; human definition review is pending.
+**Status:** M4 definition approved; M4-S1 contract implementation is agent-ready.
 
 ## Approved V4 target
 
@@ -20,7 +20,7 @@ Use the Frostbound Reward Claim family in one self-contained sample project:
 
 The sample owns only the reward-claim presentation and state transitions needed to verify manifest-driven import, 9-slicing, pivots, PPU, atlas grouping, stable IDs, prefab/scene references, Android readability, and idempotent re-export. Gameplay, backend, economy, save, animation, localization, URP, UI Toolkit, and general-editor concerns remain out of scope. See [ADR-013](../decisions/ADR-013-m4-unity-reward-claim-baseline.md).
 
-The proposed implementation contract, deterministic GUID algorithm, locked-emblem mapping, importer ownership, project boundary, and ordered slices are in the [M4 implementation specification](../implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md). Evidence IDs, scoring, blockers, and the human gate are in the [V4 integration rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md). Neither draft authorizes implementation until the definition review is recorded.
+The approved implementation contract, deterministic GUID algorithm, locked-emblem mapping, importer ownership, project boundary, and ordered slices are in the [M4 implementation specification](../implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md). Evidence IDs, scoring, blockers, and the human gate are in the [V4 integration rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md). The recorded definition approval authorizes M4-S1 only; later slices remain ordered behind their dependencies.
 
 ## Scope
 
@@ -34,7 +34,7 @@ PNG/SVG selection, state naming, pivots, pixels per unit, 9-slice borders, atlas
 
 ## Implementation steps
 
-1. Establish a stable naming convention: `{style}_{component}_{variant}_{state}_{size}`.
+1. Use the approved canonical kebab-case convention: `{style-id}-{component-id}-{part}-{variant}-{state}-{width}x{height}`, omitting inapplicable segments.
 2. Emit a manifest with dimensions, pivot, PPU, border, state, atlas group, source IDs, and hashes.
 3. Keep SVG as the V1 editable source where compatible; use the approved resvg pipeline to bake PNG for production handoff, filter-heavy, or raster-material components. See [ADR-009](../decisions/ADR-009-v1-render-export-stack.md).
 4. Implement 9-slice metadata and tests at minimum and maximum supported dimensions.
@@ -70,3 +70,4 @@ M4 V4: integrate a reward claim or shop purchase flow with normal/pressed/disabl
 | 2026-07-17 | Opened M4 definition after V3 passed; queued Unity validation-flow and supported-version selection | Project owner / Codex |
 | 2026-07-17 | Approved Frostbound Reward Claim on Unity `6000.3.18f1`, uGUI, Built-in pipeline, Editor and Android portrait as the bounded V4 target | Project owner / Codex |
 | 2026-07-17 | Drafted the M4 contract/importer/re-export implementation specification and V4 evidence/scoring rubric; queued human definition review | Codex |
+| 2026-07-17 | Approved Option A with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; opened M4-S1 | Project owner / Codex |

@@ -4,13 +4,13 @@
 
 | Field | Value |
 |---|---|
-| Status | 🟡 Draft — awaiting definition review |
+| Status | 🟢 Approved — Option A with versioning and naming clarifications |
 | Date | 2026-07-17 |
 | Milestone | M4 — Unity export and integration |
 | Validation target | V4 — Frostbound Reward Claim |
 | Decision source | [ADR-013](../decisions/ADR-013-m4-unity-reward-claim-baseline.md) |
 | Validation rubric | [V4 Unity Integration Rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md) |
-| Implementation state | 🔴 Not authorized until the definition review is approved |
+| Implementation state | 🔵 M4-S1 contract implementation is agent-ready |
 
 ## 1. Intended outcome
 
@@ -44,10 +44,10 @@ Out of scope: gameplay, backend, reward/economy rules, persistence, localization
 
 ## 4. Compatibility and contract strategy
 
-The existing export manifest `1.0` already defines output path, dimensions, hash, state, PPU, pivot, border, and atlas group. M4 must extend that contract additively:
+The existing export manifest `1.0` already defines output path, dimensions, hash, state, PPU, pivot, border, and atlas group. M4 must extend that contract as version `1.1` while preserving backward compatibility:
 
-1. Existing valid `1.0` manifests remain valid without migration.
-2. M4 introduces an optional root `unityIntegration` object and optional fields inside `outputs[].unity`; they become required by semantic validation only for a bundle declaring the M4 Unity target.
+1. Updated validators accept existing valid `1.0` manifests without migration and new `1.1` manifests.
+2. A manifest using M4 Unity integration fields declares `schemaVersion: "1.1"`. Version `1.1` introduces an optional root `unityIntegration` object and optional fields inside `outputs[].unity`; they become required by semantic validation for a bundle declaring the M4 Unity target.
 3. The JSON Schema keeps unknown fields closed with `additionalProperties: false`; every extension is typed and tested.
 4. Existing asset IDs, approved component versions, source hashes, and renderer provenance remain unchanged.
 5. Unity-specific data cannot override source identity, output dimensions, or output SHA-256.
@@ -94,6 +94,8 @@ SVG remains the editable source and PNG is the Unity production handoff. Importe
 - Unity asset path: `Assets/LNHPrism/Generated/{style-id}/{component-id}/{file-stem}.png`.
 - Unity asset ID: `lnh-prism:{export-logical-id}` stored in the manifest/registry; it is independent of the asset path.
 - Unity `.meta` GUID: the first 128 bits of SHA-256 over UTF-8 `lnh-prism-unity-guid-v1\n{unity-asset-id}`, serialized as 32 lowercase hex characters.
+
+These kebab-case forms are authoritative for M4 and supersede Module 06's earlier illustrative underscore pattern.
 
 The registry maps `unityAssetId → metaGuid → path → outputSha256`. Generation must sort entries by Unity asset ID, reject duplicate IDs, duplicate GUIDs, path collisions, case-folding collisions, or one ID moving to another GUID, and write atomically. A deliberate rename or identity change requires a reviewed migration record; the importer must never guess.
 
@@ -189,10 +191,11 @@ Prepare V4-E01 through V4-E10 exactly as defined in [the V4 rubric](../validatio
 
 ## 13. Definition approval outcome
 
-Pending. Approval must explicitly accept or edit the contract-extension strategy, naming/GUID algorithm, locked-state mapping, importer ownership, project boundary, M4-S1 through M4-S5 ordering, V4 evidence package, scoring thresholds, and blockers. Drafting this document does not authorize implementation or pass M4/V4.
+On 2026-07-17, the project owner approved Option A with two clarifications: the M4 manifest extension is version `1.1` while updated validators continue accepting legacy `1.0`, and this specification's kebab-case naming forms supersede Module 06's older underscore example. The approval accepts the stable identity/GUID algorithm, locked-state mapping, importer ownership, bounded project, M4-S1 through M4-S5 ordering, V4-E01 through V4-E10, scoring thresholds, and automatic blockers. M4-S1 may begin; this definition approval does not pass M4/V4.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-17 | Drafted the M4 Unity export/import contract, stable identity rules, bounded slices, locked mapping, and validation requirements | Codex |
+| 2026-07-17 | Approved Option A with explicit manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; opened M4-S1 | Project owner / Codex |
