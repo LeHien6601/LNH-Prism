@@ -1,8 +1,0 @@
-{
-  "name": "LNHPrism.EditModeTests",
-  "rootNamespace": "LNHPrism.Tests",
-  "references": ["LNHPrism.Runtime", "LNHPrism.Editor", "Unity.UGUI"],
-  "includePlatforms": ["Editor"],
-  "optionalUnityReferences": ["TestAssemblies"],
-  "autoReferenced": false
-}

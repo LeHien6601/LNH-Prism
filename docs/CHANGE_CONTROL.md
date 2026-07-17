@@ -16,7 +16,7 @@ The system must welcome useful ideas without losing its mission: **AI supplies c
 
 1. Create `CR-###` with problem, proposed change, affected modules, cost, alternatives, and mission impact.
 2. Classify it: correction, incremental improvement, experiment, or strategic expansion.
-3. Perform an impact review: contracts, output compatibility, Unity, quality, timeline, and owners.
+3. Perform an impact review: contracts, output compatibility, asset portability, quality, timeline, and owners.
 4. Decide: approve, time-box experiment, defer, or reject.
 5. For approved work, update the roadmap/module docs and add measurable acceptance criteria.
 6. Validate on a real asset if output behavior changes; record the result.
@@ -37,7 +37,7 @@ The system must welcome useful ideas without losing its mission: **AI supplies c
 - **Design review:** confirms user value, target assets, style constraints, and in/out-of-scope boundary.
 - **Technical review:** confirms contracts, dependencies, compatibility, performance, and failure handling.
 - **Art/UI review:** confirms hierarchy, material treatment, readability, and cross-component consistency.
-- **Integration review:** confirms Unity behavior and re-export safety.
+- **Delivery review:** confirms modular asset completeness, portability, and re-export safety.
 - **Retrospective:** follows every practical validation; turn root causes into tasks or decisions.
 
 ## Traceability rules

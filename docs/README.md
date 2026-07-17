@@ -2,7 +2,7 @@
 
 **Core principle:** AI creates concepts and reusable materials; deterministic tools create structure and final assets.
 
-This documentation package defines the plan for a production-oriented system that turns a game UI style direction into consistent, editable, Unity-ready UI assets. It deliberately treats AI-generated screens as references—not as final assets to cut apart.
+This documentation package defines the plan for a production-oriented system that turns a game UI style direction into consistent, editable, engine-neutral UI asset modules. It deliberately treats AI-generated screens as references—not as final assets to cut apart.
 
 ## Project snapshot
 
@@ -36,7 +36,7 @@ This documentation package defines the plan for a production-oriented system tha
 | [V3 concept-reconstruction rubric](validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md) | Draft evidence package, scoring, automatic blockers, and review procedure for M3 |
 | [ADR-012: V3 Frostbound Reward target](decisions/ADR-012-v3-frostbound-reward.md) | Approved V3 concept, scale, reconstruction family, and concept-pixel prohibition |
 | [ADR-009: V1 render/export stack](decisions/ADR-009-v1-render-export-stack.md) | Approved TypeScript, SVG, resvg, and JSON-manifest architecture |
-| [Unity export](modules/06-unity-export.md) | Assets, metadata, slicing, naming, and importer integration |
+| [Modular asset delivery](modules/06-asset-delivery.md) | Extractable assets, derivatives, metadata, and provenance |
 | [Production hardening](modules/07-production-hardening.md) | Reliability, regression testing, performance, and operations |
 | [Change control](CHANGE_CONTROL.md) | Rules for new ideas, reviews, traceability, and scope protection |
 | [Component showcase plan](DASHBOARD_PLAN.md) | Local preview of generated components, states, and real UI scenarios |
@@ -46,7 +46,7 @@ This documentation package defines the plan for a production-oriented system tha
 ## Document conventions
 
 - **Status key:** 🟢 complete/approved · 🔵 agent-ready · 🟡 active/draft/proposed · 🟣 human decision/review · 🔴 blocked · ⚪ deferred/not started.
-- **Role key:** 🤖 agent · 🧭 product · 🛠️ technical · 🎨 art · ✦ UI · 🎮 Unity.
+- **Role key:** 🤖 agent · 🧭 product · 🛠️ technical · 🎨 art · ✦ UI.
 - **Quick commands:** `Next:` starts one 🔵 agent-ready task; `Guide:` prepares the current 🟣 human decision; `Review:` performs a read-only health review.
 - **M0–M6** means a delivery milestone in `ROADMAP.md`.
 - **Validation task** means a real deliverable, not a synthetic demo.

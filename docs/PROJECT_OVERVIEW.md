@@ -15,14 +15,14 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
 | Materials | 🟢 V2 gate passed | Neon Market and Neon Alloy passed V2 at `93/100`; shared material reuse, propagation, structure, and traceability met every mandatory minimum |
 | AI analysis | 🟢 M3/V3 gate passed | Frostbound passed V3 at `94/100`; every mandatory minimum was met, no blocker or defect remained, and simplified ornamental fidelity is a non-blocking observation |
-| Asset delivery | 🟡 M4 refocused to modular assets | Unity-specific import, project, and build work is non-gating historical evidence; the final deliverable is an engine-neutral, modular asset package with deterministic source, rendered derivatives, and traceability |
+| Asset delivery | 🟡 M4 modular asset delivery | The final deliverable is an engine-neutral, modular asset package with deterministic source, rendered derivatives, and traceability |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M4 modular asset-delivery refocus** — integration validation is out of scope; package the production assets as independently usable modules |
 | Next task | 🔵 **Define and assemble the engine-neutral modular asset handoff package** · 🤖 Agent |
-| Next agent-ready task | 🔵 **M4-A1** — specify module boundaries, deliverable formats, stable IDs, source-to-derivative receipts, and extraction/use guidance without any Unity dependency |
+| Next agent-ready task | 🔵 **M4-A1** — specify module boundaries, deliverable formats, stable IDs, source-to-derivative receipts, and extraction/use guidance with no engine dependency |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -31,7 +31,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 ### In scope
 
 - Layer-based components: button, panel, progress bar, tab, card, badge, popup, toggle, and icon container.
-- Design tokens, reusable material packs, deterministic state generation, and Unity-ready export.
+- Design tokens, reusable material packs, deterministic state generation, and engine-neutral asset delivery.
 - AI-supported concept generation, material generation/import, analysis suggestions, and visual comparison.
 - Repeatable validation using real game UI assets.
 
@@ -50,7 +50,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M1 | MVP renderer and three core templates | 🟢 V1 Pass — `93/100` |
 | 🟢 | M2 | Tokens, variants, states, material packs | 🟢 V2 Pass — `93/100` |
 | 🟢 | M3 | AI-assisted analysis and material intake | 🟢 V3 Pass — `94/100` |
-| 🟡 | M4 | Unity export and import metadata | 🟣 Unity integration test |
+| 🟡 | M4 | Modular asset delivery | Asset-package inspection |
 | ⚪ | M5 | Production hardening and regression suite | 🟣 Production readiness review |
 | ⚪ | M6 | Optional showcase scaling and workflow review | 🟣 Operations review |
 
@@ -71,7 +71,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Align content slots and sync completed components to showcase | 🤖 Agent | 🟢 Complete | Button labels share one centered slot and move `y: +2` when pressed; both Primary Panel sizes and top-to-bottom SVG layer names appear from renderer output |
 | P1 | Render the V1 Progress Bar template | 🤖 Agent | 🟢 Complete | Frame and fill remain independently renderable at two widths and 10%, 50%, and 90%; manifests and focused tests pass |
 | P1 | Add the completed Progress Bar to the showcase | 🤖 Agent | 🟢 Complete | Both widths and all percentages use independent renderer frame/fill outputs; part separation, layer order, and combined scenario are visible |
-| P1 | Review and approve the V1 visual-review rubric | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved by the project owner on 2026-07-16; V1 focuses on reusable high-quality structured SVG and defers Unity integration to M4 |
+| P1 | Review and approve the V1 visual-review rubric | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved by the project owner on 2026-07-16; V1 focuses on reusable high-quality structured SVG |
 | P1 | Prepare the V1 validation evidence package and record | 🤖 Agent | 🟢 Complete | V1-E01 through V1-E06, light/dark review surfaces, SVG structure checks, defect history, and an unscored traceable record are ready |
 | P1 | Conduct the V1 SVG quality review and record scores | 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Review recorded at 91/100 with no blockers; rubric outcome is Fail because Traceability scored 4 below its mandatory minimum of 5 |
 | P0 | Audit and close the V1 traceability evidence gap (V1-D004) | 🤖 Agent | 🟢 Complete | Approved inputs, material provenance, renderer/dependency sources, and output hashes are bound in manifests; audit and reviewer-visible chain are ready for re-scoring |
@@ -98,15 +98,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Implement M3-S4 approved Frostbound component family and comparison view | 🤖 Agent | 🟢 Complete | Five approved specs drive a deterministic 26-variant matrix, two panel/button/progress/emblem sizes, independent progress parts at `10/50/75/90`, selected-state and primary/secondary proof, portrait render, and annotated comparison with no concept references in production outputs |
 | P0 | Prepare M3-S5 V3 evidence package and preflight | 🤖 Agent | 🟢 Complete | V3-E01–V3-E10, unscored review record, defect log, 54 output receipts, source provenance, four-type material audit, consolidated review views, and automated preflight are ready for scoring |
 | P0 | Conduct the M3-S5 V3 human fidelity review | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A recorded `94/100`; every mandatory minimum met, no blocker or defect remained, and V3 passed on 2026-07-17 |
-| P0 | Select the M4 Unity validation flow and supported Unity baseline | 🧭 Product + 🛠️ Technical + 🎮 Unity leads | 🟢 Complete | Option A approved: Frostbound Reward Claim, Unity `6000.3.18f1`, uGUI, Built-in pipeline, Windows Editor plus Android portrait, and one bounded sample project; see [ADR-013](decisions/ADR-013-m4-unity-reward-claim-baseline.md) |
-| P0 | Draft the M4 Unity export implementation specification and V4 integration rubric | 🤖 Agent | 🟢 Complete | [Implementation specification](implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md) and [V4 rubric](validation/V4_UNITY_INTEGRATION_RUBRIC.md) make contract additions, stable naming/IDs/GUIDs, locked mapping, importer behavior, 9-slice/pivot/PPU/state/atlas/re-export requirements, ordered slices, evidence, scoring, blockers, and definition-review criteria explicit |
-| P0 | Review and approve the M4 implementation specification and V4 integration rubric | 🧭 Product + 🛠️ Technical + 🎮 Unity leads | 🟢 Complete | Option A approved on 2026-07-17 with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; stable identity, locked mapping, importer ownership, bounded slices, V4 evidence/scoring, and blockers accepted |
-| P0 | Implement M4-S1 contract extensions, semantic validation, naming/GUID rules, canonical fixtures, and migration notes | 🤖 Agent | 🟢 Complete | Updated validators accept legacy `1.0` and Unity-targeted `1.1`; canonical manifest/registry fixtures pass; malformed profiles/settings, unsafe paths, border failures, duplicate/case-folded IDs/paths, GUID collisions, ordering errors, and identity drift fail; migration guidance is linked |
-| P0 | Produce the deterministic Frostbound Unity bundle and stable-ID registry | 🤖 Agent | 🟢 Complete | 28 PNGs, five manifests, source/output receipts, complete Unity metadata, sorted stable-ID registry, zero-collision audit, and byte-identical repeat-export proof validate |
-| P0 | Create the pinned bounded Unity project, importer, atlas, bindings, prefabs, and scene | 🤖 Agent | 🟢 Complete | Pinned batch import applies exact settings and stable GUIDs to 28 Sprites; 28-member atlas, bindings, seven prefabs, scene, both panel sizes, unchanged rerun, and four Edit Mode tests pass |
-| P0 | Add the local state/progress flow, Play Mode tests, re-export test, and Android portrait build | 🤖 Agent | 🟢 Complete | Local action/emblem/progress states, four Play Mode tests, changed-source reference survival, strict byte-stable no-op, editor evidence, dual-architecture Android build, real launch, and `1080 × 1920` readability pass |
-| P0 | Assemble V4-E01–V4-E10 and conduct the human integration gate | 🎮 Unity + 🧭 Product + 🛠️ Technical + ✦ UI leads | ⚪ Superseded | Superseded by ADR-014: Unity integration is not a final-deliverable gate |
-| P0 | Define and assemble the engine-neutral modular asset handoff package | 🤖 Agent | 🔵 Agent-ready | Asset modules are independently extractable; each includes editable deterministic source, approved raster/SVG derivatives, stable ID, dimensions/slice guidance where relevant, source/material/output receipts, and concise engine-neutral use guidance; no Unity project, importer, atlas, prefab, scene, or build is required |
+| P0 | Define and assemble the engine-neutral modular asset handoff package | 🤖 Agent | 🔵 Agent-ready | Asset modules are independently extractable; each includes editable deterministic source, approved raster/SVG derivatives, stable ID, dimensions/slice guidance where relevant, source/material/output receipts, and concise engine-neutral use guidance; no engine project, importer, atlas, prefab, scene, or build is required |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -122,11 +114,9 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-007 | Use Neon Core for V1 at `540 × 960` logical / `1080 × 1920` output | 🟢 Accepted | Low-risk deterministic baseline aligned with the existing style contract example |
 | ADR-008 | Use focused baseline V1 component briefs | 🟢 Accepted | Proves deterministic core behavior before optional content slots and additional variants |
 | ADR-009 | Use TypeScript + SVG + resvg + JSON manifests for V1 | 🟢 Accepted | Keeps source structure editable while providing deterministic headless PNG output; see [decision record](decisions/ADR-009-v1-render-export-stack.md) |
-| ADR-010 | Defer Unity integration validation to M4 | 🟢 Accepted | M1/V1 measures reusable structured SVG quality, editability, consistency, and reproducibility; see [decision record](decisions/ADR-010-defer-unity-integration-to-m4.md) |
 | ADR-011 | Use the Neon Market Kit and Neon Alloy material direction for V2 | 🟢 Accepted | Exercises the complete M2 component family while extending the proven Neon Core baseline; see [decision record](decisions/ADR-011-v2-neon-market-kit.md) |
 | ADR-012 | Use the Frostbound Reward Popup and bounded reconstruction family for V3 | 🟢 Accepted | Tests human-controlled concept analysis, new-theme transfer, action hierarchy, selected-state clarity, and reusable material intake without concept-pixel extraction; see [decision record](decisions/ADR-012-v3-frostbound-reward.md) |
-| ADR-013 | Use a bounded Frostbound reward-claim flow on Unity `6000.3.18f1` for V4 | 🟢 Accepted | Proves uGUI/Built-in manifest import, slicing, states, atlasing, stable references, and Android portrait handoff without unrelated runtime scope; see [decision record](decisions/ADR-013-m4-unity-reward-claim-baseline.md) |
-| ADR-014 | Final delivery is engine-neutral modular UI assets, not Unity integration | 🟢 Accepted | Project owner superseded the Unity integration gate: assets must be independently extractable and usable as smaller modules; Unity-specific artifacts remain non-gating historical evidence |
+| ADR-014 | Final delivery is engine-neutral modular UI assets | 🟢 Accepted | Project owner requires independently extractable, usable asset modules with no engine integration scope |
 
 ## 7. Top risks and responses
 
@@ -136,7 +126,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 🟡 Art quality feels too procedural | Review score is below target | Add controlled material/decal layers before increasing renderer complexity | 🎨 Art + ✦ UI leads |
 | 🟡 AI output drifts by component | Palette/lighting differs across assets | Normalize into material packs and enforce tokens | 🛠️ Technical lead |
 | 🟡 Renderer cannot meet mobile needs | Export size or render time misses budget | Bake raster where needed; keep source specs deterministic | 🛠️ Technical lead |
-| 🟡 Unity handoff is fragile | Missing borders/pivots or naming collisions | Add export manifest and integration tests before scaling | 🎮 Unity engineer |
+| 🟡 Asset modules are coupled or hard to find | Consumers need project-specific context to use assets | Keep portable modules, stable IDs, and source-to-output receipts together | 🤖 Agent |
 
 ## 8. Review cadence
 
@@ -166,7 +156,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-16 | Completed independent V1 Progress Bar frame/fill renderer proof; queued showcase sync | Codex |
 | 2026-07-16 | Added all Progress Bar widths/fills, independent-part inspection, layer order, and real-scenario use to the showcase; queued V1 rubric approval | Codex |
 | 2026-07-16 | Corrected Progress Bar highlight cap overflow found during showcase review and added an all-variant clipping regression test | Codex |
-| 2026-07-16 | Approved the V1 rubric with reusable structured SVG as the M1 target, deferred Unity integration to M4, and unblocked V1 evidence preparation | Project owner |
+| 2026-07-16 | Approved the V1 rubric with reusable structured SVG as the M1 target and unblocked V1 evidence preparation | Project owner |
 | 2026-07-16 | Prepared the reproducible V1-E01–V1-E06 package, light/dark SVG review page, structural validator, defect log, and unscored human record | Codex |
 | 2026-07-16 | Recorded the 91/100 V1 review; gate failed because Traceability scored below its mandatory minimum; queued traceability and connected-shadow corrections and registered CR-002 | Project owner / Codex |
 | 2026-07-16 | Closed V1-D004 with approved and hashed source bindings, real material provenance, a reviewer-visible traceability chain, and reproducibility enforcement; queued human re-scoring | Codex |
@@ -195,12 +185,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Approved M3-S3 Option A as drafted, recorded accepted proposal/material/reuse/inventory lineage, and unblocked M3-S4 | Project owner / Codex |
 | 2026-07-17 | Completed M3-S4 with five approved specs, deterministic Frostbound recipes, a 26-variant matrix, independent progress parts, portrait reconstruction, and annotated concept comparison; queued V3 evidence preparation | Codex |
 | 2026-07-17 | Prepared V3-E01–V3-E10 with approved-input, matrix, material, provenance, and no-pixel audits; added consolidated phone/light-dark/state/hierarchy views, an unscored review record, defect log, and passing automated preflight; opened the human V3 gate | Codex |
-| 2026-07-17 | Confirmed V3 Option A at `94/100`, met every mandatory minimum with no blockers or defects, closed M3, and opened the M4 Unity target/baseline decision | Project owner / Codex |
-| 2026-07-17 | Approved M4 Option A: bounded Frostbound reward claim on Unity `6000.3.18f1`, uGUI, Built-in pipeline, Editor and Android portrait; queued the M4 specification and V4 rubric | Project owner / Codex |
-| 2026-07-17 | Drafted the M4 Unity export implementation specification and V4 integration rubric with additive contracts, stable IDs/GUIDs, locked-state mapping, importer/re-export rules, ordered slices, evidence, scoring, and blockers; opened human definition review | Codex |
-| 2026-07-17 | Approved M4 definition Option A with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; opened M4-S1 contract implementation | Project owner / Codex |
-| 2026-07-17 | Completed M4-S1 dual-version manifest and registry contracts, deterministic naming/GUID/identity semantics, canonical fixtures, rejection coverage, and migration notes; opened M4-S2 | Codex |
-| 2026-07-17 | Completed M4-S2 with 28 deterministic Frostbound PNGs, five manifests, source/output receipts, stable IDs/GUIDs, zero collisions, and byte-identical repeat-export proof; opened M4-S3 | Codex |
-| 2026-07-17 | Completed M4-S3 pinned Unity project/importer with exact 28-Sprite settings/GUIDs, atlas, bindings, seven prefabs, scene, unchanged rerun receipt, and four passing Edit Mode tests; opened M4-S4 | Codex |
-| 2026-07-17 | Completed M4-S4 local state/progress flow, four Play Mode tests, changed-source reference survival, strict no-op audit, editor state captures, and a launched readable dual-architecture Android portrait build; opened the M4-S5 human integration gate | Codex |
-| 2026-07-17 | Accepted ADR-014: Unity integration is non-gating historical evidence; refocused M4 on an engine-neutral modular asset handoff package | Project owner / Codex |
+| 2026-07-17 | Accepted ADR-014 and removed all engine-specific work; M4 now targets engine-neutral modular asset delivery | Project owner / Codex |

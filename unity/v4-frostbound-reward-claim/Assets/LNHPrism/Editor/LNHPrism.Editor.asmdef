@@ -1,7 +1,0 @@
-{
-  "name": "LNHPrism.Editor",
-  "rootNamespace": "LNHPrism.Editor",
-  "references": ["LNHPrism.Runtime", "Unity.UGUI"],
-  "includePlatforms": ["Editor"],
-  "autoReferenced": true
-}

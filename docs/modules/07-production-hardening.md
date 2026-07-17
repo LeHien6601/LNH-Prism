@@ -37,7 +37,7 @@ M1–M4 working outputs, Module 05 evidence, release environment.
 
 ## Validation task
 
-M5 V5: rebuild one feature’s entire UI asset set in a clean workspace from versioned specs, import it into Unity, and compare it to approved output.
+M5 V5: rebuild one feature’s entire UI asset set in a clean workspace from versioned specs and compare it to approved output.
 
 ## Risks
 

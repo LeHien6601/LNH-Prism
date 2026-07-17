@@ -33,8 +33,6 @@ const exampleSchemas = new Map([
   ["frost-crystal-materials.draft.json", "material-pack.schema.json"],
   ["frost-crystal-materials.json", "material-pack.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
-  ["frostbound-reward-panel.unity.manifest.json", "export-manifest.schema.json"],
-  ["frostbound-reward-panel.unity.registry.json", "unity-asset-registry.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
   ["v3-frostbound-analysis.json", "analysis-receipt.schema.json"],
   ["v3-frostbound-analysis-review.json", "analysis-review.schema.json"],

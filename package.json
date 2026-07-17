@@ -13,7 +13,6 @@
     "test:resolver": "npm run build:renderer && node --test tests/resolver/*.test.mjs",
     "test:materials": "npm run build:renderer && node --test tests/materials/*.test.mjs",
     "test:analysis": "npm run build:renderer && node --test tests/analysis/*.test.mjs",
-    "test:unity-contracts": "npm run build:renderer && node --test tests/unity/*.test.mjs",
     "test:analysis-contracts": "npm run test:analysis",
     "validate:contracts": "node tests/contracts/validate-contracts.mjs",
     "validate:showcase": "node scripts/validate-showcase.mjs",
@@ -23,10 +22,6 @@
     "validate:m3-s3-material-intake": "npm run build:renderer && node scripts/validate-m3-s3-material-intake.mjs",
     "prepare:m3-s4-evidence": "npm run build:renderer && node scripts/prepare-m3-s4-evidence.mjs",
     "validate:m3-s4-evidence": "npm run build:renderer && node scripts/validate-m3-s4-evidence.mjs",
-    "prepare:m4-s2-bundle": "npm run build:renderer && node scripts/prepare-m4-s2-bundle.mjs",
-    "validate:m4-s2-bundle": "npm run build:renderer && node scripts/validate-m4-s2-bundle.mjs",
-    "prepare:m4-s3-unity": "node scripts/run-m4-s3-unity.mjs",
-    "validate:m4-s3-unity": "node scripts/validate-m4-s3-unity-project.mjs",
     "prepare:v3-evidence": "npm run build:renderer && node scripts/prepare-v3-evidence.mjs",
     "validate:v3-evidence": "npm run build:renderer && node scripts/validate-v3-evidence.mjs",
     "prepare:m2-s2-evidence": "npm run build:renderer && node scripts/prepare-m2-s2-evidence.mjs",
@@ -35,7 +30,7 @@
     "prepare:v2-evidence": "npm run build:renderer && node scripts/prepare-v2-evidence.mjs",
     "validate:v2-evidence": "npm run build:renderer && node scripts/validate-v2-evidence.mjs",
     "validate:v1-evidence": "node scripts/validate-v1-evidence.mjs",
-    "validate": "npm run validate:contracts && npm run test:unity-contracts && npm run prepare:m4-s2-bundle && npm run validate:m4-s2-bundle && npm run prepare:m4-s3-unity && npm run validate:m4-s3-unity && npm run test:analysis && npm run prepare:m3-s2-review && npm run validate:m3-s2-review && npm run prepare:m3-s3-material-intake && npm run validate:m3-s3-material-intake && npm run prepare:m3-s4-evidence && npm run validate:m3-s4-evidence && npm run test:resolver && npm run test:materials && npm run test:renderer && npm run prepare:v3-evidence && npm run validate:v3-evidence && npm run prepare:m2-s2-evidence && npm run validate:m2-s2-evidence && npm run prepare:m2-s4-evidence && npm run prepare:v2-evidence && npm run validate:v2-evidence && npm run prepare:showcase && npm run validate:showcase && npm run validate:v1-evidence"
+    "validate": "npm run validate:contracts && npm run test:analysis && npm run prepare:m3-s2-review && npm run validate:m3-s2-review && npm run prepare:m3-s3-material-intake && npm run validate:m3-s3-material-intake && npm run prepare:m3-s4-evidence && npm run validate:m3-s4-evidence && npm run test:resolver && npm run test:materials && npm run test:renderer && npm run prepare:v3-evidence && npm run validate:v3-evidence && npm run prepare:m2-s2-evidence && npm run validate:m2-s2-evidence && npm run prepare:m2-s4-evidence && npm run prepare:v2-evidence && npm run validate:v2-evidence && npm run prepare:showcase && npm run validate:showcase && npm run validate:v1-evidence"
   },
   "devDependencies": {
     "@types/node": "26.1.1",

@@ -26,7 +26,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Practical validation V1:** produce the three assets for an actual game screen, inspect them on light/dark backgrounds and at target-phone scale, and verify named SVG layers, independent reusable parts, deterministic variants, and traceable manifests.
 
-**Exit gate:** assets meet the V1 rubric, remain reusable and structurally inspectable at two sizes, and changes to palette/radius/shadow propagate without manual repainting. Unity integration is deferred to M4.
+**Exit gate:** assets meet the V1 rubric, remain reusable and structurally inspectable at two sizes, and changes to palette/radius/shadow propagate without manual repainting.
 
 ## 🟢 M2 — Design system and reusable materials
 
@@ -68,11 +68,11 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 - Package each component/part as a small engine-neutral module with deterministic source and approved SVG/PNG derivatives.
 - Preserve stable asset IDs, dimensions, state/part boundaries, 9-slice guidance where relevant, and source/material/output provenance.
-- Provide concise extraction and use guidance that does not assume Unity, an importer, an atlas, prefabs, scenes, or a build target.
+- Provide concise extraction and use guidance with no engine-project dependency.
 
 **Practical validation M4-A:** inspect the package outside an engine project and confirm that every required module can be identified, extracted, traced, and used from its package alone.
 
-**Scope decision:** [ADR-014](decisions/ADR-014-engine-neutral-modular-asset-delivery.md) supersedes the Unity integration gate. Prior Unity work remains historical evidence and is non-gating.
+**Scope decision:** [ADR-014](decisions/ADR-014-engine-neutral-modular-asset-delivery.md) defines M4 as an engine-neutral asset package.
 
 **Exit gate:** all approved Frostbound assets are delivered as independently usable modules with deterministic source, derivatives, metadata, and provenance; no engine integration is required.
 
@@ -105,7 +105,6 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 |---|---|---|
 | 2026-07-15 | Initial roadmap created | Codex |
 | 2026-07-15 | Added milestone status indicators | Codex |
-| 2026-07-16 | Refocused M1/V1 on reusable high-quality structured SVG output and deferred Unity integration to M4 | Project owner |
 | 2026-07-16 | Recorded the failed V1 gate caused by the mandatory traceability minimum and entered the M1 corrective/revalidation cycle | Project owner / Codex |
 | 2026-07-16 | Passed V1 at `93/100` after the appended Traceability `5/5` re-score; retained V1-D003 as a non-blocking post-gate improvement | Project owner / Codex |
 | 2026-07-16 | Closed the post-gate V1-D003 connected-extrusion improvement and completed the M1 corrective cycle | Codex |
@@ -118,11 +117,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Selected Frostbound Reward for V3 and drafted the M3 implementation specification and concept-reconstruction rubric for human definition review | Project owner / Codex |
 | 2026-07-17 | Approved M3 definition Option A as drafted and opened M3-S1 contract implementation | Project owner / Codex |
 | 2026-07-17 | Passed V3 at `94/100` with every mandatory minimum met and no blockers or defects; completed M3 and opened M4 target definition | Project owner / Codex |
-| 2026-07-17 | Approved the bounded Frostbound Reward Claim and Unity `6000.3.18f1` uGUI/Built-in baseline for V4; queued M4 specification and rubric drafting | Project owner / Codex |
-| 2026-07-17 | Drafted the M4 implementation specification and V4 Unity integration rubric; implementation remains gated on Product, Technical, and Unity approval | Codex |
-| 2026-07-17 | Approved M4 definition Option A with manifest versioning and naming clarifications; opened M4-S1 contract implementation | Project owner / Codex |
-| 2026-07-17 | Completed M4-S1 manifest/registry contracts, semantic identity validation, canonical fixtures, negative tests, and migration guidance; opened M4-S2 bundle generation | Codex |
-| 2026-07-17 | Completed M4-S2 deterministic Frostbound Unity bundle, manifests, stable-ID registry, collision audit, and repeat-export proof; opened M4-S3 bounded Unity project/importer implementation | Codex |
-| 2026-07-17 | Completed M4-S3 pinned Unity project/importer, exact Sprite settings/GUIDs, atlas, bindings, prefabs, scene, unchanged rerun, and Edit Mode validation; opened M4-S4 local flow/re-export/Android implementation | Codex |
-| 2026-07-17 | Completed M4-S4 bounded flow, Play Mode, changed-source reference survival, strict no-op, editor states, and launched readable Android portrait validation; opened the M4-S5 human integration gate | Codex |
-| 2026-07-17 | Accepted ADR-014 and superseded the Unity integration gate; M4 now targets engine-neutral modular asset delivery | Project owner / Codex |
+| 2026-07-17 | Accepted ADR-014, removed engine-specific work, and set M4 to engine-neutral modular asset delivery | Project owner / Codex |

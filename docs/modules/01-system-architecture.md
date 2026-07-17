@@ -18,7 +18,7 @@ Includes repository structure, specification schemas, IDs, versioning, renderer/
 
 ```text
 Concept / style board ──> reviewed Style Spec ─┐
-AI material source ──> reviewed Material Pack ─┼─> Component Spec ─> Deterministic Renderer ─> Export Manifest ─> Unity
+AI material source ──> reviewed Material Pack ─┼─> Component Spec ─> Deterministic Renderer ─> Portable Asset Module
 Human art/UI decisions ────────────────────────┘                              │
                                                                                 └─> visual validation evidence
 ```
