@@ -21,9 +21,11 @@ for (const schema of schemas.values()) ajv.addSchema(schema);
 const exampleSchemas = new Map([
   ["style-neon-core.json", "style-spec.schema.json"],
   ["style-neon-market-overlay.json", "style-spec.schema.json"],
+  ["style-frostbound-reward.json", "style-spec.schema.json"],
   ["primary-button.json", "component-spec.schema.json"],
   ["primary-button-material-bindings.json", "component-spec.schema.json"],
   ["m2-shop-panel.json", "component-spec.schema.json"], ["m2-category-tabs.json", "component-spec.schema.json"], ["m2-primary-purchase-button.json", "component-spec.schema.json"], ["m2-secondary-cancel-button.json", "component-spec.schema.json"], ["m2-currency-badge.json", "component-spec.schema.json"], ["m2-limited-offer-progress.json", "component-spec.schema.json"],
+  ["frostbound-reward-panel.json", "component-spec.schema.json"], ["frostbound-claim-button.json", "component-spec.schema.json"], ["frostbound-later-button.json", "component-spec.schema.json"], ["frostbound-reward-progress.json", "component-spec.schema.json"], ["frostbound-reward-emblem-container.json", "component-spec.schema.json"],
   ["primary-panel.json", "component-spec.schema.json"],
   ["primary-progress-bar.json", "component-spec.schema.json"],
   ["neon-core-materials.json", "material-pack.schema.json"],

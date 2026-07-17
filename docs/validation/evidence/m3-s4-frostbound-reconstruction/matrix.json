@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "1.0",
+  "count": 26,
+  "entries": [
+    {
+      "name": "panel-432x300-normal",
+      "component": "panel",
+      "width": 432,
+      "height": 300,
+      "svgSha256": "26e79a92f782c029ff293090d29efdadc2f28edcb78225a50a977dac175ef448",
+      "pngSha256": "9667e1801f82e37bc046a1fff94428e35db1667ddf9ec17143133e626c4fee05"
+    },
+    {
+      "name": "panel-432x420-normal",
+      "component": "panel",
+      "width": 432,
+      "height": 420,
+      "svgSha256": "c29b9309d9aa7cde8b31293c0dd5675fb1b8b449d4fbf46fc7111d6474108d53",
+      "pngSha256": "45a857cb27a076a7da3374eaafe1c038b0d4d800d8f80afcba018db533616960"
+    },
+    {
+      "name": "primary-button-240x64-normal",
+      "component": "primary-button",
+      "width": 240,
+      "height": 64,
+      "state": "normal",
+      "label": "CLAIM",
+      "svgSha256": "369030d483a6c183a1c5c9330c9678623b4fb51fe14bb24e766b582da9a22f1f",
+      "pngSha256": "a3511dfb324156f5d8a8f32c21b60c96ba25c7fc62aeedd191f22cc95a3387db"
+    },
+    {
+      "name": "primary-button-240x64-pressed",
+      "component": "primary-button",
+      "width": 240,
+      "height": 64,
+      "state": "pressed",
+      "label": "CLAIM",
+      "svgSha256": "1ecb3e52e0c9868abc06c06627a12662067a57085b349faa8685d45fa6d9f3a5",
+      "pngSha256": "6670a7b19bf6f9d68777a316381bc4de5b955a7a6b6cab618ec24c598521110d"
+    },
+    {
+      "name": "primary-button-240x64-disabled",
+      "component": "primary-button",
+      "width": 240,
+      "height": 64,
+      "state": "disabled",
+      "label": "CLAIM",
+      "svgSha256": "661ab99bc4250f193250ed8036e6143bd5e97e2969d813fab717d45fe7d1a980",
+      "pngSha256": "8d37b1ca7ff83a6755168b769ab4f90f7a237d9ff90c1b3c4ccb535cb7399900"
+    },
+    {
+      "name": "primary-button-288x64-normal",
+      "component": "primary-button",
+      "width": 288,
+      "height": 64,
+      "state": "normal",
+      "label": "CLAIM",
+      "svgSha256": "af76b701eb3071f99c4a3ef39fe9299d6ce830fca8d51842cc397c77583346d5",
+      "pngSha256": "2fc54b750f97c8e7b7dd549ec4dd7180d1765efb142a76352c58eaab49846525"
+    },
+    {
+      "name": "primary-button-288x64-pressed",
+      "component": "primary-button",
+      "width": 288,
+      "height": 64,
+      "state": "pressed",
+      "label": "CLAIM",
+      "svgSha256": "4d5b4b03236c103079db74f99db60bae9ed1089013d238289a48582afe830eea",
+      "pngSha256": "f5e811c2654637524d95ee4559fad7f8d6bae782d9b8cc4fc5f29cc6a9692fca"
+    },
+    {
+      "name": "primary-button-288x64-disabled",
+      "component": "primary-button",
+      "width": 288,
+      "height": 64,
+      "state": "disabled",
+      "label": "CLAIM",
+      "svgSha256": "0e1d4944e9cfa4d188fa64de81a8b72589138a5ddf884b2dca3729a285023737",
+      "pngSha256": "d13100b659391aaa8381ad053ab4875641937fa520050aabb9a5e3754d3fd640"
+    },
+    {
+      "name": "secondary-button-160x52-normal",
+      "component": "secondary-button",
+      "width": 160,
+      "height": 52,
+      "state": "normal",
+      "label": "LATER",
+      "svgSha256": "60f859d441ebb7d75f3fcd9a0feaa213e3eb6e5c22365e3673f7a684ed73e3b4",
+      "pngSha256": "3566f615e9cef0e02d547cc161ffeaa392f82886f9b215d44bdb5dd5ebbff9a3"
+    },
+    {
+      "name": "secondary-button-160x52-pressed",
+      "component": "secondary-button",
+      "width": 160,
+      "height": 52,
+      "state": "pressed",
+      "label": "LATER",
+      "svgSha256": "e54a399f215b5e0d686fa0a8ccb41ca6040c72ad61da26967e2102a73fdbe430",
+      "pngSha256": "0df3ae5d9a7ecab48514ee1a2324a2fbcd461d53552ea8bebd5afb9093501c8c"
+    },
+    {
+      "name": "secondary-button-160x52-disabled",
+      "component": "secondary-button",
+      "width": 160,
+      "height": 52,
+      "state": "disabled",
+      "label": "LATER",
+      "svgSha256": "9b17578dcb352543d161471a8141d81234a2626254e6b0e118b0284d4e8c61d1",
+      "pngSha256": "c15442fd9327286f5f3822751142697e401262bcffc7fa212ff5bad0625017da"
+    },
+    {
+      "name": "secondary-button-200x52-normal",
+      "component": "secondary-button",
+      "width": 200,
+      "height": 52,
+      "state": "normal",
+      "label": "LATER",
+      "svgSha256": "5d211ff1c7c09f2f1171dfa7e9cb59931035aff8a45804825d2ad6ae8070bf1e",
+      "pngSha256": "56cbae800cf3efefac8a6edc06afadd6c58ca9a9bde3a7ffdab3b979bcbf82a5"
+    },
+    {
+      "name": "secondary-button-200x52-pressed",
+      "component": "secondary-button",
+      "width": 200,
+      "height": 52,
+      "state": "pressed",
+      "label": "LATER",
+      "svgSha256": "72085265011415f13fde3f6829c626530e5874bd30a95da4ca8aa4afa045884c",
+      "pngSha256": "1c049a26613dfb1d1b0ed10ccb9bbfd8b5c7c1e38d900148a93f761d9d820269"
+    },
+    {
+      "name": "secondary-button-200x52-disabled",
+      "component": "secondary-button",
+      "width": 200,
+      "height": 52,
+      "state": "disabled",
+      "label": "LATER",
+      "svgSha256": "651307e116e01d8d6d38f6707de704e1ede8b5050b9085210d6d3cc83c73fae7",
+      "pngSha256": "30823784cef0e48cd33ed7dd631da6989302c75c438b8df97e7078df02e51335"
+    },
+    {
+      "name": "progress-320x28-10",
+      "component": "progress",
+      "width": 320,
+      "height": 28,
+      "percent": 10,
+      "svgSha256": "cc8f2f0792f241fe490901200316cd5bfb1a76f722eebe5fe76367b794b51210",
+      "pngSha256": "5d8e1fb0f297d95056d06afd15de1f8ccdc051bf3917a4dcbb3da7e3cbf3e94d"
+    },
+    {
+      "name": "progress-320x28-50",
+      "component": "progress",
+      "width": 320,
+      "height": 28,
+      "percent": 50,
+      "svgSha256": "851ef690ff30f5464a03a329e3c6b1d02b6b21c974b737c922a504d1f198e38a",
+      "pngSha256": "04dfc47aec304ef705205b3760feeefed39510f65dccbc734eef6b01bcf23603"
+    },
+    {
+      "name": "progress-320x28-75",
+      "component": "progress",
+      "width": 320,
+      "height": 28,
+      "percent": 75,
+      "svgSha256": "2d225ac850c70d2289fdb07338de42095f8a6c16e63563b22ef4ae2d0c097342",
+      "pngSha256": "d7825a28bab76dcd0415bec3dc9e7cfdee3a52001f16cfb0786bb538b13ddc82"
+    },
+    {
+      "name": "progress-320x28-90",
+      "component": "progress",
+      "width": 320,
+      "height": 28,
+      "percent": 90,
+      "svgSha256": "cb60549c40798fc4e8837cd9abd89d1838a22bd56bbcfb485b92c430e77df8fa",
+      "pngSha256": "782fda0f82973cf9bb55b0ec04004499634cbc6e130b7b4675108b2f1922339b"
+    },
+    {
+      "name": "progress-432x28-10",
+      "component": "progress",
+      "width": 432,
+      "height": 28,
+      "percent": 10,
+      "svgSha256": "dc00eb5ecd5d53a7c354b837af9c6d6d7c77b73904ddb4831ef8cf1795bc291a",
+      "pngSha256": "0d2c613b8eeb18c13bfeae7094a37707d8057810b5a2712206e32205adefb5b0"
+    },
+    {
+      "name": "progress-432x28-50",
+      "component": "progress",
+      "width": 432,
+      "height": 28,
+      "percent": 50,
+      "svgSha256": "d13f173a3b898166a850d6292577582dfa61106ece17e06d5b22afe1d940d3bb",
+      "pngSha256": "a5dbc37bca445a3aa7649c2015120b380f04cfee065870e303760bb8b246f28c"
+    },
+    {
+      "name": "progress-432x28-75",
+      "component": "progress",
+      "width": 432,
+      "height": 28,
+      "percent": 75,
+      "svgSha256": "fd316f7e437c68e01ac8a07f7000657dcc42f08338a3cec60bfe60f565925c92",
+      "pngSha256": "b50630d4dc175cffdb3f6cf2533fe185ab265bde6159d17d84417b2c312e1e37"
+    },
+    {
+      "name": "progress-432x28-90",
+      "component": "progress",
+      "width": 432,
+      "height": 28,
+      "percent": 90,
+      "svgSha256": "aee14406b25e9fc17bce26d74ba940c33cd2636cb6fca294ef5a3e3a04dd4c9f",
+      "pngSha256": "7f2e6bf7072f01de0e3f32eb25898f5b1890629d366230b4f182217d5349882a"
+    },
+    {
+      "name": "emblem-104x104-normal",
+      "component": "emblem",
+      "width": 104,
+      "height": 104,
+      "state": "normal",
+      "svgSha256": "ac4345feb2b9916d3f6ed87f04a56a7405b8ce8477f5f875c0dcfda7926531fd",
+      "pngSha256": "179fec48e6a009927e76a6a0878ac3db4a52df22f164d3682b9d8d585de8e3e8"
+    },
+    {
+      "name": "emblem-104x104-selected",
+      "component": "emblem",
+      "width": 104,
+      "height": 104,
+      "state": "selected",
+      "svgSha256": "b3c7878117e784dd101555b20d88decab702ce7aa7f5e112172d847fc08c0f7b",
+      "pngSha256": "9b2df4f73a9d6d9237c4c07d06c645578e8c96d5f39709172137f47a327dfcb5"
+    },
+    {
+      "name": "emblem-144x144-normal",
+      "component": "emblem",
+      "width": 144,
+      "height": 144,
+      "state": "normal",
+      "svgSha256": "9007b0963253bd0b5955362945e822d310a37df6eb18d247718779b1b771fed1",
+      "pngSha256": "c707d255e1df6184163e2b16fc0a57b490e84dd4e57b53523b12e29e086a10ab"
+    },
+    {
+      "name": "emblem-144x144-selected",
+      "component": "emblem",
+      "width": 144,
+      "height": 144,
+      "state": "selected",
+      "svgSha256": "54955eb8f9462f9fe0a03f9efbdde60f4ca4ea44586f0e396a8c9510e17f1148",
+      "pngSha256": "8ef9e90e39379cabfee5fe62c9d61098ada0edda1daedaa5f9adbc5eb43f73d0"
+    }
+  ]
+}

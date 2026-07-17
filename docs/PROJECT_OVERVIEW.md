@@ -14,15 +14,15 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
 | Materials | 🟢 V2 gate passed | Neon Market and Neon Alloy passed V2 at `93/100`; shared material reuse, propagation, structure, and traceability met every mandatory minimum |
-| AI analysis | 🟡 M3-S3 approved | Option A accepted all critical proposals, the Frost Crystal material pack, four-type reuse plan, and five-item inventory; M3-S4 is next |
+| AI analysis | 🟡 M3-S4 complete | Approved Frostbound specs now produce a deterministic 26-variant family, portrait reconstruction, selected/hierarchy proof, and annotated comparison; M3-S5 evidence is next |
 | Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟡 **M3 implementation** — M3-S3 approved; M3-S4 reconstruction may begin |
-| Next task | 🔵 **Implement M3-S4 approved Frostbound component family and comparison view** · 🤖 Agent |
-| Next agent-ready task | 🔵 **M3-S4** — deterministic bounded variants, hierarchy/selected-state proof, and annotated concept/render comparison are complete |
+| Active milestone | 🟡 **M3 implementation** — M3-S4 reconstruction complete; V3 evidence preparation may begin |
+| Next task | 🔵 **Prepare M3-S5 V3 evidence package and preflight** · 🤖 Agent |
+| Next agent-ready task | 🔵 **M3-S5 evidence** — V3-E01–V3-E10, an unscored review record, defect log, and automated preflight are ready for the human gate |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -95,7 +95,9 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Implement M3-S2 deterministic proposal normalizer and reviewer-editable review artifact | 🤖 Agent | 🟢 Complete | Deterministic normalized analysis, pending review JSON, and browser-editable review form separate observations/recommendations, display confidence, enforce immutable legal decisions/mapping gates, and emit accepted/edited proposal-to-token lineage with source and reviewer provenance |
 | P0 | Implement M3-S3 Frost Crystal material intake and reviewed draft package | 🤖 Agent | 🟢 Complete | Independent procedural sources contain no concept pixels or component effects; hashes, preflight, isolation previews, four-type reuse plan, and pending approval package validate |
 | P0 | Review and approve M3-S3 Frostbound analysis decisions and draft package | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved on 2026-07-17: all four critical proposals, three material sources and normalization settings, four-type reuse plan, and five-item component inventory accepted as drafted; M3-S4 unblocked |
-| P0 | Implement M3-S4 approved Frostbound component family and comparison view | 🤖 Agent | 🔵 Agent-ready | Human-approved style/material/component inputs exist; deterministic bounded variants, hierarchy/selected-state proof, and annotated concept/render comparison are complete |
+| P0 | Implement M3-S4 approved Frostbound component family and comparison view | 🤖 Agent | 🟢 Complete | Five approved specs drive a deterministic 26-variant matrix, two panel/button/progress/emblem sizes, independent progress parts at `10/50/75/90`, selected-state and primary/secondary proof, portrait render, and annotated comparison with no concept references in production outputs |
+| P0 | Prepare M3-S5 V3 evidence package and preflight | 🤖 Agent | 🔵 Agent-ready | V3-E01–V3-E10, unscored review record, defect log, source/output receipts, and automated preflight are ready for Product/Art/UI/Technical scoring |
+| P0 | Conduct the M3-S5 V3 human fidelity review | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🔴 Blocked | Complete evidence package passes preflight; reviewers record dimension scores, blockers, defects, gate outcome, and any revalidation |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -180,3 +182,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Completed M3-S2 deterministic normalization, reviewer-editable pending artifact, decision workflow, and proposal-to-token lineage; queued M3-S3 | Codex |
 | 2026-07-17 | Completed M3-S3 Frost Crystal procedural intake, source audit, deterministic preflight/isolation evidence, four-type reuse plan, and pending human approval package; blocked M3-S4 on explicit review | Codex |
 | 2026-07-17 | Approved M3-S3 Option A as drafted, recorded accepted proposal/material/reuse/inventory lineage, and unblocked M3-S4 | Project owner / Codex |
+| 2026-07-17 | Completed M3-S4 with five approved specs, deterministic Frostbound recipes, a 26-variant matrix, independent progress parts, portrait reconstruction, and annotated concept comparison; queued V3 evidence preparation | Codex |

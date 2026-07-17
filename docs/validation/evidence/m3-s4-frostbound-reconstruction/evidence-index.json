@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m3-s4-frostbound-reconstruction",
+  "status": "ready-for-review",
+  "matrixCount": 26,
+  "artifacts": [
+    "matrix.json",
+    "frostbound-reconstruction.svg",
+    "frostbound-reconstruction.png",
+    "comparison.html"
+  ],
+  "productionBoundary": "Component and scenario SVG/PNG contain no concept reference, path, hash, or pixels; comparison.html alone links the concept as review evidence."
+}

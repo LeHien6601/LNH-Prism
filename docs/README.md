@@ -8,9 +8,9 @@ This documentation package defines the plan for a production-oriented system tha
 
 | Field | Current value |
 |---|---|
-| Status | 🟡 In progress — M3-S3 Option A approved; M3-S4 is agent-ready |
+| Status | 🟡 In progress — M3-S4 Frostbound reconstruction complete; V3 evidence preparation is next |
 | Active milestone | 🟡 M3: AI-assisted analysis and material intake implementation |
-| Next task | 🔵 Implement M3-S4 approved Frostbound component family and comparison view |
+| Next task | 🔵 Prepare M3-S5 V3 evidence package and preflight |
 | North-star outcome | Generate consistent UI components, states, and size variants from reusable styles/materials |
 | First production validation | Build a real Primary Button, Panel, and Progress Bar in one selected style |
 

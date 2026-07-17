@@ -10,7 +10,7 @@
 | Validation target | V3 — Frostbound Reward Popup |
 | Decision source | [ADR-012](../decisions/ADR-012-v3-frostbound-reward.md) |
 | Product/art reference | [V3 reference brief](../reference-briefs/V3_FROSTBOUND_REWARD.md) |
-| Implementation state | M3-S3 Option A approved; M3-S4 agent-ready |
+| Implementation state | M3-S4 complete; M3-S5 evidence preparation agent-ready |
 
 ## 1. Intended outcome
 
@@ -124,7 +124,7 @@ Prepare V3-E01 through V3-E10 exactly as defined in [the V3 rubric](../validatio
 
 On 2026-07-17, the project owner approved Option A as drafted. The approval covers the proposal model, human-control points, full Panel–Button–Progress plus reward-emblem-container inventory, material boundary, ordered M3-S1 through M3-S5 slices, V3-E01 through V3-E10, scoring thresholds, and automatic blockers.
 
-M3-S1 through M3-S3 are complete. On 2026-07-17, the project owner selected Option A and accepted all four critical proposals, the three Frost Crystal procedural sources and normalization settings, the four-component-type reuse plan, and the five-item component inventory as drafted. The immutable pending artifacts remain preserved beside the approved review, proposal lineage, material pack, and package record. M3-S4 may begin. This approval does not waive V3 evidence or the human V3 gate.
+M3-S1 through M3-S4 are complete. The approved inputs now drive five versioned component specs, a deterministic 26-variant family, independent progress frame/fill outputs, hierarchy and selected-state proof, a `540 × 960` portrait reconstruction, and an evidence-only annotated concept comparison. Production SVG/PNG outputs contain no concept path, hash, image reference, or pixels. M3-S5 evidence preparation may begin; the human V3 gate remains required.
 
 ## Change history
 
@@ -136,3 +136,4 @@ M3-S1 through M3-S3 are complete. On 2026-07-17, the project owner selected Opti
 | 2026-07-17 | Completed M3-S2 deterministic normalization, editable pending-review artifact, immutable decision flow, and accepted/edited token lineage | Codex |
 | 2026-07-17 | Completed M3-S3 with three independent procedural Frost Crystal sources, deterministic source preflight/isolation evidence, a four-component-type reuse plan, and a pending human approval package | Codex |
 | 2026-07-17 | Approved M3-S3 Option A as drafted, preserved pending history, recorded accepted proposal/package lineage, approved `frost-crystal-materials@0.1.0`, and authorized M3-S4 | Project owner / Codex |
+| 2026-07-17 | Completed M3-S4 approved Frostbound specs, deterministic 26-variant family, independent progress parts, portrait reconstruction, hierarchy/selected proof, and annotated comparison evidence | Codex |

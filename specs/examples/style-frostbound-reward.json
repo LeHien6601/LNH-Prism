@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frostbound-reward",
+  "version": "0.1.0",
+  "status": "approved",
+  "name": "Frostbound Reward",
+  "provenance": {
+    "createdAt": "2026-07-17T15:30:00+07:00",
+    "sources": [
+      { "type": "human-design", "reference": "docs/validation/records/m3-s3-frostbound-package-approval.json" },
+      { "type": "human-design", "reference": "docs/validation/evidence/m3-s3-frost-crystal-intake/approved-token-lineage.json" }
+    ]
+  },
+  "extends": { "id": "neon-core", "version": "0.1.0" },
+  "tokens": {
+    "colors": { "primary": "#2F9FEF" },
+    "spacing": { "actionGap": 24 },
+    "material": { "grainOpacity": 0.1, "patternOpacity": 0.12, "patternScale": 48, "edgeLightOpacity": 0.5, "bevelDepth": 2, "decalOpacity": 0.2 }
+  },
+  "renderDefaults": { "targetScale": 2, "colorSpace": "sRGB", "alphaMode": "straight" },
+  "compatibility": { "minimumRendererVersion": "0.1.0" }
+}
