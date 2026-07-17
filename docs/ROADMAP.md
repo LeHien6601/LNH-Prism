@@ -62,7 +62,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** 🟢 Passed on 2026-07-17 at `94/100` — human reviewers controlled every critical proposal, no suggestion bypassed spec review, one traceable material pack served four component types, every mandatory dimension minimum was met, and no blocker or defect remained.
 
-## ⚪ M4 — Unity export and integration
+## 🟡 M4 — Unity export and integration
 
 **Goal:** make handoff dependable.
 
@@ -72,6 +72,10 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 - Test scaling, states, atlas grouping, and re-export without broken references.
 
 **Practical validation V4:** replace a small playable UI flow in Unity—such as reward claim or shop purchase—with generated assets and all required states.
+
+**Approved V4 target:** Frostbound Reward Claim on Unity `6000.3.18f1`, using uGUI and the Built-in Render Pipeline in one bounded sample project. Validate in the Windows Editor and an Android portrait build at the existing `540 × 960` logical / `1080 × 1920` presentation scale. The flow covers a 9-sliced panel, primary/secondary actions, progress values, reward-emblem states, manifest-driven import, stable IDs/references, atlas grouping, and idempotent re-export. See [ADR-013](decisions/ADR-013-m4-unity-reward-claim-baseline.md).
+
+**Definition gate:** target approved on 2026-07-17; the M4 implementation specification and V4 integration rubric must be drafted and reviewed before implementation begins.
 
 **Exit gate:** import needs no asset-by-asset correction beyond documented Unity project defaults.
 
@@ -117,3 +121,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Selected Frostbound Reward for V3 and drafted the M3 implementation specification and concept-reconstruction rubric for human definition review | Project owner / Codex |
 | 2026-07-17 | Approved M3 definition Option A as drafted and opened M3-S1 contract implementation | Project owner / Codex |
 | 2026-07-17 | Passed V3 at `94/100` with every mandatory minimum met and no blockers or defects; completed M3 and opened M4 target definition | Project owner / Codex |
+| 2026-07-17 | Approved the bounded Frostbound Reward Claim and Unity `6000.3.18f1` uGUI/Built-in baseline for V4; queued M4 specification and rubric drafting | Project owner / Codex |
