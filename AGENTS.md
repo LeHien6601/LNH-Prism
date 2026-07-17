@@ -90,12 +90,28 @@ If the next task is `🔵 Agent-ready`, `🔴 Blocked`, or `🟢 Complete`, expl
 
 ### `Review:`
 
-Treat a user message beginning with `Review:` as a read-only whole-project health review unless the user explicitly requests fixes.
+Treat a user message beginning with `Review:` as a whole-project weakness assessment. Its purpose is to find evidence-backed weaknesses in the project's **workflow, status, and plan**, then define practical remediation work without implementing it.
 
-1. Inspect Git status/history, the overview, roadmap, module documents, implementation, tests, and validation evidence available in the repository.
-2. Report: current status, completed/active work, blockers, weaknesses/risks, missing validation, documentation drift, and the next recommended actions.
-3. Classify findings by severity and distinguish facts from assumptions.
-4. Do not implement fixes, modify status, create tasks, or advance the roadmap during a review unless explicitly authorized.
+1. Inspect Git status/history, the overview, roadmap, module documents, implementation, tests, validation evidence, task ownership, and completed-work records available in the repository.
+2. Assess all three review areas:
+   - **Workflow:** handoffs, ownership, validation, reproducibility, delivery, and process controls.
+   - **Status:** task-board accuracy, milestone/gate state, evidence alignment, blockers, and documentation drift.
+   - **Plan:** ordering, dependencies, scope, acceptance criteria, risks, and whether the next task is actionable.
+3. Record every material finding with an ID, severity, review area, evidence, fact vs. inference label, impact, recommended solution, dependencies, and execution eligibility.
+4. Turn each bounded solution into a recommended task with a clear scope and acceptance criteria. When a solution is too large, crosses multiple areas, has independent dependencies, or cannot be validated as one coherent change, split it into ordered smaller tasks.
+5. Write or update `docs/validation/records/latest-project-review.md`. This review record is the only repository mutation permitted by `Review:`; it must include the inspected revision/date, findings, ordered recommended tasks, and any Human decision or Blocked items. Do not modify product code, milestone/task status, roadmap, or other project records during the review.
+6. Report current status, blockers, weakness points, and the ordered recommendations. Classify findings by severity and clearly distinguish facts from assumptions.
+
+### `Apply Review:`
+
+Treat a user message beginning with `Apply Review:` as authorization to implement **one** recommended remediation task from the latest project review record.
+
+1. Read `docs/validation/records/latest-project-review.md`, the source-of-truth documents, and the current repository state. If no current review record exists, or its revision/snapshot no longer matches the repository in a way that could invalidate the recommendation, stop and direct the user to run `Review:` first.
+2. Select the highest-priority unblocked recommended task marked `Agent-ready`. Text after `Apply Review:` may name a recommendation ID; otherwise use the record's order. Never infer that a `Human decision` or `Blocked` recommendation is agent-ready.
+3. Confirm the selected recommendation has bounded scope, dependencies, and acceptance criteria. If it does not, report the gap and direct the user to `Review:`; do not invent scope.
+4. Implement and validate that one task only. Preserve unrelated changes and do not start a second recommendation automatically.
+5. Update the review record to mark the applied recommendation complete and to identify its next recommended task. Update `docs/PROJECT_OVERVIEW.md` only when the applied work changes project status, a material risk/decision, or the next agent-ready task.
+6. Review the final diff, create a Conventional Commit, and push it under the normal engineering workflow. Report the recommendation ID, evidence/validation, remaining recommendations, and any blockers.
 
 ### `Push:`
 
@@ -114,4 +130,4 @@ Treat a user message beginning with `Push:` as authorization to push all commits
 - Validate real assets at V1–V5; a demo alone does not pass a milestone.
 - Do not add general-editor features without a reviewed change request tied to production evidence.
 - Treat AI texture/material inputs as reusable, normalized inputs—not component-specific baked effects.
-- Use Unity export manifests and stable IDs before claiming a reliable handoff.
+- Use engine-neutral asset manifests and stable IDs before claiming a reliable handoff.

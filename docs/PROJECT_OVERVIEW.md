@@ -190,3 +190,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Accepted ADR-014 and removed all engine-specific work; M4 now targets engine-neutral modular asset delivery | Project owner / Codex |
 | 2026-07-17 | Completed M4-A1 with the tracked Frostbound modular asset package, 62 source/derivative files, stable IDs, SHA-256 receipts, and package validation | Codex |
 | 2026-07-17 | Completed M5-A1 production-hardening definition with a fixed Frostbound baseline, batch contract, regression policy, receipt fields, and M5-A2 exit conditions | Codex |
+| 2026-07-17 | Defined the `Review:` weakness-assessment record and `Apply Review:` one-task remediation workflow | Codex |

@@ -40,6 +40,14 @@ The system must welcome useful ideas without losing its mission: **AI supplies c
 - **Delivery review:** confirms modular asset completeness, portability, and re-export safety.
 - **Retrospective:** follows every practical validation; turn root causes into tasks or decisions.
 
+## Whole-project review and remediation
+
+- `Review:` assesses workflow, status, and plan weaknesses across the repository. It records evidence-backed findings and task-sized recommendations in `docs/validation/records/latest-project-review.md`.
+- A review record distinguishes facts from inferences, identifies severity and dependencies, and labels each recommendation `Agent-ready`, `Human decision`, or `Blocked`.
+- A broad or multi-aspect recommendation must be split into independently actionable tasks with their own acceptance criteria and ordering.
+- `Apply Review:` may implement only one highest-priority, unblocked `Agent-ready` recommendation from that record. It must not choose or apply a human-decision/blocked recommendation.
+- Review records are diagnostic control artifacts: they do not themselves alter the roadmap or task board. Applied work updates project status only when the result materially changes it.
+
 ## Traceability rules
 
 - Each output must link to source style/component/material versions and renderer version.
@@ -52,3 +60,4 @@ The system must welcome useful ideas without losing its mission: **AI supplies c
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Initial governance rules created | Codex |
+| 2026-07-17 | Defined whole-project weakness reviews and one-task review remediation workflow | Codex |
