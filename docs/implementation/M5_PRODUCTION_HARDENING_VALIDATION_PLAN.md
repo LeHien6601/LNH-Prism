@@ -2,7 +2,7 @@
 
 ## Status
 
-M5-A1 definition, M5-A2 implementation, post-A2 slice definition, M5-A3 migration/rollback, and M5-A4 backup/recovery are complete. The passing M5-A2 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; the passing M5-A3 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A3-manifest-migration-rollback-receipt.json`; the passing M5-A4 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A4-package-backup-recovery-receipt.json`. M5-A5 release procedure is the next agent-ready hardening slice.
+M5-A1 definition, M5-A2 implementation, post-A2 slice definition, M5-A3 migration/rollback, M5-A4 backup/recovery, and M5-A5 release procedure are complete. The passing M5-A2 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; the passing M5-A3 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A3-manifest-migration-rollback-receipt.json`; the passing M5-A4 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A4-package-backup-recovery-receipt.json`; the release procedure is recorded at `docs/operations/M5_ENGINE_NEUTRAL_ASSET_RELEASE_PROCEDURE.md`. M5-A6 multi-style coverage is the next human decision.
 
 ## Purpose
 
@@ -60,7 +60,7 @@ M5-A2 establishes the reproducibility/regression batch only. The remaining harde
 |---|---|---|---|---|
 | M5-A3 | Implement manifest migration and rollback drill | Agent | Complete | Passing receipt proves live `1.2` manifest validation, archived legacy evidence retention, rollback preservation, clear negative checks, and unchanged approved package bytes |
 | M5-A4 | Implement package backup and recovery drill | Agent | Complete | Passing receipt restores the Frostbound package from a backup copy, rebuilds it from pinned source evidence, verifies byte equality, and records recovery timing |
-| M5-A5 | Draft release operating procedure and exception policy | Agent | Agent-ready | A release checklist defines required validation, evidence paths, owner sign-off, regression exceptions, rollback decision points, and handoff artifacts for engine-neutral asset packages |
+| M5-A5 | Draft release operating procedure and exception policy | Agent | Complete | Release procedure defines required validation, evidence paths, owner sign-off, regression exceptions, rollback decision points, and handoff artifacts for engine-neutral asset packages |
 | M5-A6 | Define multi-style hardening coverage plan | Project owner + Technical lead | Human decision | Choose which additional style/package, if any, must run through the M5 hardening suite before calling M5 complete |
 
 ### M5-A3 acceptance criteria

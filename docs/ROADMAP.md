@@ -80,7 +80,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Goal:** make the system trustworthy for repeated production use.
 
-**Definition status:** 🟢 M5-A1 complete; M5-A2 passed — [the Frostbound validation plan](implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md) and receipt prove clean-workspace reproduction, strict asset receipts, timing, matrix, and readability validation. Post-A2 hardening remains deferred.
+**Definition status:** 🟡 M5-A1 through M5-A5 complete — [the Frostbound validation plan](implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md), receipts, and release procedure prove clean-workspace reproduction, strict asset receipts, timing, matrix, readability validation, manifest migration/rollback, backup/recovery, and release controls. M5-A6 multi-style hardening coverage remains a human decision.
 
 - Add schema validation, deterministic rendering tests, golden-image/regression checks, and visual diff thresholds.
 - Measure generation time, asset size, memory, and mobile readability.
@@ -123,3 +123,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Passed M4-A1 modular asset delivery with the tracked Frostbound package and deterministic receipt validation; opened M5-A1 | Codex |
 | 2026-07-17 | Completed M5-A1 definition and opened M5-A2 reproducibility/regression batch implementation | Codex |
 | 2026-07-17 | Passed M5-A2 reproducibility/regression validation; retained deferred hardening slices for a later scope decision | Codex |
+| 2026-07-18 | Completed M5-A3 through M5-A5 hardening controls and queued the M5-A6 multi-style coverage decision | Codex |
