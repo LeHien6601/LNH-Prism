@@ -2,7 +2,7 @@
 
 ## Status
 
-M5-A1 definition, M5-A2 implementation, and post-A2 slice definition are complete. The passing M5-A2 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; M5-A3 through M5-A6 define the remaining hardening work.
+M5-A1 definition, M5-A2 implementation, post-A2 slice definition, and M5-A3 migration/rollback are complete. The passing M5-A2 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; the passing M5-A3 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A3-manifest-migration-rollback-receipt.json`. M5-A4 backup/recovery is the next agent-ready hardening slice.
 
 ## Purpose
 
@@ -58,8 +58,8 @@ M5-A2 establishes the reproducibility/regression batch only. The remaining harde
 
 | Slice | Task | Owner | Execution | Exit condition |
 |---|---|---|---|---|
-| M5-A3 | Implement manifest migration and rollback drill | Agent | Agent-ready | A deterministic command or validation fixture proves live `1.2` manifests can be migrated/checked from archived legacy evidence where applicable, rollback preserves archived evidence, and failures are reported without altering approved packages |
-| M5-A4 | Implement package backup and recovery drill | Agent | Blocked on M5-A3 | A recoverable backup/rebuild procedure restores the Frostbound package from pinned sources and receipts, verifies byte equality, and records recovery evidence |
+| M5-A3 | Implement manifest migration and rollback drill | Agent | Complete | Passing receipt proves live `1.2` manifest validation, archived legacy evidence retention, rollback preservation, clear negative checks, and unchanged approved package bytes |
+| M5-A4 | Implement package backup and recovery drill | Agent | Agent-ready | A recoverable backup/rebuild procedure restores the Frostbound package from pinned sources and receipts, verifies byte equality, and records recovery evidence |
 | M5-A5 | Draft release operating procedure and exception policy | Agent | Blocked on M5-A4 | A release checklist defines required validation, evidence paths, owner sign-off, regression exceptions, rollback decision points, and handoff artifacts for engine-neutral asset packages |
 | M5-A6 | Define multi-style hardening coverage plan | Project owner + Technical lead | Human decision | Choose which additional style/package, if any, must run through the M5 hardening suite before calling M5 complete |
 

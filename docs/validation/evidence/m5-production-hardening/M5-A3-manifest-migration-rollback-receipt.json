@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m5-a3-manifest-migration-rollback",
+  "status": "pass",
+  "generatedAt": "2026-07-17T17:11:48.875Z",
+  "gitCommit": "5bf5fe6",
+  "nodeVersion": "v24.11.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "liveManifest": {
+    "path": "specs/examples/primary-button-normal.manifest.json",
+    "schemaVersion": "1.2",
+    "validation": "pass",
+    "engineMetadataRejected": "pass",
+    "provenanceRequired": "pass",
+    "outputHashesRequired": "pass"
+  },
+  "archivedLegacy": {
+    "path": "specs/examples/archive/legacy-primary-button-normal.manifest.json",
+    "schemaVersion": "1.0",
+    "validation": "pass",
+    "archiveRule": "pass",
+    "rollbackPreserved": "pass",
+    "beforeSha256": "1f66911aaf0bf53380cccef7c1f3ccd62a8a5106ecc8a8dacad0d813b0d691f7",
+    "afterSha256": "1f66911aaf0bf53380cccef7c1f3ccd62a8a5106ecc8a8dacad0d813b0d691f7"
+  },
+  "migration": {
+    "status": "pass",
+    "source": "specs/examples/archive/legacy-primary-button-normal.manifest.json",
+    "migratedFixture": "C:/Users/LENGOC~1/AppData/Local/Temp/lnh-prism-m5-a3-2220/primary-button-normal.migrated-1.2.manifest.json",
+    "migratedSchemaVersion": "1.2",
+    "removedEngineMetadata": true,
+    "rootEngineMetadataAbsent": true,
+    "outputCount": 1,
+    "outputRoles": [
+      "raster-derivative"
+    ]
+  },
+  "rollback": {
+    "status": "pass",
+    "temporaryWorkspace": "C:\\Users\\LENGOC~1\\AppData\\Local\\Temp\\lnh-prism-m5-a3-2220",
+    "temporaryLegacySha256": "1f66911aaf0bf53380cccef7c1f3ccd62a8a5106ecc8a8dacad0d813b0d691f7",
+    "archivedLegacyUnchanged": "pass",
+    "approvedPackageUnchanged": "pass"
+  },
+  "packageIntegrity": {
+    "status": "pass",
+    "manifestPath": "assets/frostbound-reward/manifest.json",
+    "packageId": "frostbound-reward-assets",
+    "packageVersion": "1.0.0",
+    "beforeManifestSha256": "bca2ef3bba02076ec5827442edc10727fb552267da35416145e1789a6d8c91a0",
+    "afterManifestSha256": "bca2ef3bba02076ec5827442edc10727fb552267da35416145e1789a6d8c91a0",
+    "modules": 62,
+    "totalBytes": 436565,
+    "formats": {
+      "png": 26,
+      "svg": 36
+    },
+    "mismatches": []
+  },
+  "negativeChecks": [
+    {
+      "id": "live-1.2-engine-metadata-rejection",
+      "status": "pass",
+      "error": "/schemaVersion must be equal to constant; /outputs/0 disallows role; /outputs/0 disallows part; /outputs/0 disallows slice; / missing unityIntegration; /schemaVersion must be equal to constant; /outputs/0 disallows role; /outputs/0 disallows part; /outputs/0 disallows slice; /outputs/0/path must match pattern \"^Assets/LNHPrism/Generated/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*\\.png$\"; /outputs/0/unity missing assetId; /outputs/0/unity missing metaGuid; /outputs/0/unity missing pivot; /outputs/0/unity missing border; /outputs/0/unity missing atlasGroup; /outputs/0/unity missing spriteMode; /outputs/0/unity missing meshType; /outputs/0/unity missing filterMode; /outputs/0/unity missing wrapMode; /outputs/0/unity missing mipmaps; /outputs/0/unity missing alphaIsTransparency; /outputs/0/unity missing compression; /outputs/0 disallows unity; / must match exactly one schema in oneOf"
+    },
+    {
+      "id": "live-1.2-missing-provenance-rejection",
+      "status": "pass",
+      "error": "/ missing provenance; /schemaVersion must be equal to constant; /outputs/0 disallows role; /outputs/0 disallows part; /outputs/0 disallows slice; / missing provenance; / missing unityIntegration; /schemaVersion must be equal to constant; /outputs/0 missing unity; /outputs/0 disallows role; /outputs/0 disallows part; /outputs/0 disallows slice; /outputs/0/path must match pattern \"^Assets/LNHPrism/Generated/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*\\.png$\"; / missing provenance; / must match exactly one schema in oneOf"
+    },
+    {
+      "id": "live-1.2-missing-output-hash-rejection",
+      "status": "pass",
+      "error": "/schemaVersion must be equal to constant; /outputs/0 missing sha256; /outputs/0 disallows role; /outputs/0 disallows part; /outputs/0 disallows slice; / missing unityIntegration; /schemaVersion must be equal to constant; /outputs/0 missing sha256; /outputs/0 missing unity; /outputs/0 disallows role; /outputs/0 disallows part; /outputs/0 disallows slice; /outputs/0/path must match pattern \"^Assets/LNHPrism/Generated/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*\\.png$\"; /outputs/0 missing sha256; / must match exactly one schema in oneOf"
+    },
+    {
+      "id": "legacy-archive-rule-rejection",
+      "status": "pass",
+      "error": "legacy manifest must be retained under specs/examples/archive/: specs/examples/legacy-primary-button-normal.manifest.json"
+    }
+  ],
+  "defects": []
+}
