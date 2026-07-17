@@ -1,10 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://lnhgames.dev/lnh-prism/schemas/export-manifest/1.1",
+  "$id": "https://lnhgames.dev/lnh-prism/schemas/export-manifest/1.2",
   "title": "LNH Prism Export Manifest",
   "oneOf": [
     { "$ref": "#/$defs/manifest10" },
-    { "$ref": "#/$defs/manifest11" }
+    { "$ref": "#/$defs/manifest11" },
+    { "$ref": "#/$defs/manifest12" }
   ],
   "$defs": {
     "manifest10": {
@@ -34,6 +35,20 @@
         "provenance": { "$ref": "#/$defs/provenance11" },
         "unityIntegration": { "$ref": "#/$defs/unityIntegration" },
         "outputs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/output11" } }
+      }
+    },
+    "manifest12": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "assetId", "generatedAt", "renderer", "sources", "provenance", "outputs"],
+      "properties": {
+        "schemaVersion": { "const": "1.2" },
+        "assetId": { "$ref": "#/$defs/id" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "renderer": { "$ref": "#/$defs/renderer" },
+        "sources": { "$ref": "#/$defs/sources11" },
+        "provenance": { "$ref": "#/$defs/provenance11" },
+        "outputs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/output12" } }
       }
     },
     "renderer": {
@@ -129,6 +144,22 @@
         "sha256": { "$ref": "#/$defs/sha256" },
         "state": { "$ref": "#/$defs/state" },
         "unity": { "$ref": "#/$defs/unity11" }
+      }
+    },
+    "output12": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "format", "width", "height", "sha256", "role"],
+      "properties": {
+        "path": { "$ref": "#/$defs/repositoryPath" },
+        "format": { "enum": ["png", "svg"] },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "role": { "$ref": "#/$defs/outputRole" },
+        "state": { "$ref": "#/$defs/state" },
+        "part": { "$ref": "#/$defs/part" },
+        "slice": { "$ref": "#/$defs/border" }
       }
     },
     "unity10": {
@@ -243,6 +274,8 @@
     "repositoryPath": { "type": "string", "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\\\)(?!.*(?:^|/)\\.\\.?(?:/|$))(?!.*//).+$" },
     "unityAssetPath": { "type": "string", "pattern": "^Assets/LNHPrism/Generated/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*\\.png$" },
     "state": { "enum": ["normal", "pressed", "disabled", "selected", "locked", "highlighted"] },
+    "part": { "enum": ["whole", "frame", "fill", "surface", "border", "content", "emblem"] },
+    "outputRole": { "enum": ["editable-source", "raster-derivative", "preview"] },
     "provenanceRole": { "enum": ["style-spec", "component-spec", "material-pack", "material-source", "renderer-source", "renderer-version", "provenance-engine", "dependency-lock"] }
   }
 }

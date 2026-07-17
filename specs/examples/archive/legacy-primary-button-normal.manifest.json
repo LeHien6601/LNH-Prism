@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.2", "assetId": "neon-core-primary-button-normal", "generatedAt": "2026-07-15T14:00:00Z", "renderer": { "name": "lnh-prism-renderer", "version": "0.1.0" },
-  "sources": { "style": { "id": "neon-core", "version": "0.1.0", "path": "specs/examples/style-neon-core.json", "sha256": "4aed9a66a1d85ff19d11e7bcbae0977f716993555f6027da5ffd7c92b718c2d0" }, "component": { "id": "primary-button", "version": "0.1.0", "path": "specs/examples/primary-button.json", "sha256": "eccdedf664edc596efddd81ef3f5823d1ba02510081563817ad3da6b6a89a65a" }, "materialPacks": [{ "id": "neon-core-materials", "version": "0.1.0", "path": "specs/examples/neon-core-materials.json", "sha256": "4e66552b79a423ff8e1f07bd7fca5d1470f603a647070a21f7d846b9fecff4d7" }] },
+  "schemaVersion": "1.0", "assetId": "neon-core-primary-button-normal", "generatedAt": "2026-07-15T14:00:00Z", "renderer": { "name": "lnh-prism-renderer", "version": "0.1.0" },
+  "sources": { "style": { "id": "neon-core", "version": "0.1.0" }, "component": { "id": "primary-button", "version": "0.1.0" }, "materialPacks": [{ "id": "neon-core-materials", "version": "0.1.0" }] },
   "provenance": {
     "sourceTreeSha256": "ce29c724972dcd17c2d1af683dbb3f73afb301164900a52dd3da9f9fd52731ac",
     "sourceFiles": [
@@ -15,5 +15,5 @@
       { "role": "dependency-lock", "path": "package-lock.json", "sha256": "9e111c4ae81fa2d761b2cc291f628a19c7e27d4ca5ebd492b2ad0484aedd742c" }
     ]
   },
-  "outputs": [{ "path": "exports/neon-core/primary-button/primary-button-normal.png", "format": "png", "width": 320, "height": 112, "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "role": "raster-derivative", "state": "normal", "part": "whole", "slice": { "left": 24, "right": 24, "top": 24, "bottom": 24 } }]
+  "outputs": [{ "path": "exports/neon-core/primary-button/primary-button-normal.png", "format": "png", "width": 320, "height": 112, "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "state": "normal", "unity": { "pixelsPerUnit": 100, "pivot": { "x": 0.5, "y": 0.5 }, "border": { "left": 24, "right": 24, "top": 24, "bottom": 24 }, "atlasGroup": "ui-neon-core" } }]
 }

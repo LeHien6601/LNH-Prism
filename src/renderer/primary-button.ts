@@ -30,16 +30,13 @@ interface ExportOutput {
   height: number;
   sha256: string;
   state: ButtonState;
-  unity: {
-    pixelsPerUnit: number;
-    pivot: { x: number; y: number };
-    border: { left: number; right: number; top: number; bottom: number };
-    atlasGroup: string;
-  };
+  role: "editable-source" | "raster-derivative";
+  part: "whole";
+  slice: { left: number; right: number; top: number; bottom: number };
 }
 
 interface ExportManifest {
-  schemaVersion: "1.0";
+  schemaVersion: "1.2";
   assetId: string;
   generatedAt: string;
   renderer: { name: string; version: string };
@@ -64,7 +61,6 @@ function manifestFor(rendered: RenderedPrimaryButton, outputDirectory: string, r
   const svgPath = join(outputDirectory, "primary-button.svg");
   const outputWidth = logicalWidth * 2;
   const outputHeight = BUTTON_HEIGHT_LOGICAL * 2;
-  const unity = { pixelsPerUnit: 100, pivot: { x: 0.5, y: 0.5 }, border: { left: 48, right: 48, top: 48, bottom: 48 }, atlasGroup: "ui-neon-core" };
   const output = (path: string, format: "png" | "svg", content: Uint8Array | string): ExportOutput => ({
     path: relative(rootDirectory, path).replaceAll("\\", "/"),
     format,
@@ -72,11 +68,13 @@ function manifestFor(rendered: RenderedPrimaryButton, outputDirectory: string, r
     height: outputHeight,
     sha256: sha256(content),
     state,
-    unity
+    role: format === "svg" ? "editable-source" : "raster-derivative",
+    part: "whole",
+    slice: { left: 48, right: 48, top: 48, bottom: 48 }
   });
 
   return {
-    schemaVersion: "1.0",
+    schemaVersion: "1.2",
     assetId: `neon-core-primary-button-${state}-${logicalWidth}`,
     generatedAt: new Date().toISOString(),
     renderer: { name: "lnh-prism-renderer", version: RENDERER_VERSION },

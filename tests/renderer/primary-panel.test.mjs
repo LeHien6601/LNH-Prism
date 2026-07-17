@@ -59,6 +59,7 @@ test("Primary Panel proof emits both sizes with valid traceable manifests", asyn
     assert.equal(manifests.length, PANEL_HEIGHTS_LOGICAL.length);
     for (const manifest of manifests) {
       assert.equal(validateManifest(manifest), true, JSON.stringify(validateManifest.errors));
+      assert.equal(manifest.schemaVersion, "1.2");
       assert.equal(manifest.outputs.length, 2);
       const png = manifest.outputs.find((output) => output.format === "png");
       const svg = manifest.outputs.find((output) => output.format === "svg");
@@ -66,7 +67,10 @@ test("Primary Panel proof emits both sizes with valid traceable manifests", asyn
       assert.ok(svg);
       assert.equal(png.width, PANEL_WIDTH_LOGICAL * 2);
       assert.equal(png.height, svg.height);
-      assert.equal(png.unity.border.top, 48);
+      assert.equal(png.part, "whole");
+      assert.equal(png.role, "raster-derivative");
+      assert.deepEqual(png.slice, { left: 48, right: 48, top: 48, bottom: 48 });
+      assert.equal("unity" in png, false);
       assert.equal(hash(await readFile(join(outputRoot, png.path))), png.sha256);
     }
   } finally {

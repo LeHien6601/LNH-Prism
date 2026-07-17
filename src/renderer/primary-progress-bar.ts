@@ -36,16 +36,13 @@ interface ProgressExportOutput {
   height: number;
   sha256: string;
   state: "normal";
-  unity: {
-    pixelsPerUnit: number;
-    pivot: { x: number; y: number };
-    border: { left: number; right: number; top: number; bottom: number };
-    atlasGroup: string;
-  };
+  role: "editable-source" | "raster-derivative" | "preview";
+  part: "frame" | "fill" | "whole";
+  slice?: { left: number; right: number; top: number; bottom: number };
 }
 
 interface ProgressExportManifest {
-  schemaVersion: "1.0";
+  schemaVersion: "1.2";
   assetId: string;
   generatedAt: string;
   renderer: { name: string; version: string };
@@ -64,7 +61,7 @@ function renderPng(svg: string): Uint8Array {
 
 function manifestFor(logicalWidth: ProgressWidthLogical, rootDirectory: string, outputs: ProgressExportOutput[], traceability: { sources: V1ManifestSources; provenance: V1ManifestProvenance }): ProgressExportManifest {
   return {
-    schemaVersion: "1.0",
+    schemaVersion: "1.2",
     assetId: `neon-core-primary-progress-bar-${logicalWidth}`,
     generatedAt: new Date().toISOString(),
     renderer: { name: "lnh-prism-renderer", version: RENDERER_VERSION },
@@ -77,33 +74,32 @@ function manifestFor(logicalWidth: ProgressWidthLogical, rootDirectory: string, 
 export async function writePrimaryProgressBarProof(outputRoot: string): Promise<ProgressExportManifest[]> {
   const manifests: ProgressExportManifest[] = [];
   const traceability = await loadV1ManifestProvenance("primary-progress-bar");
-  const unity = {
-    pixelsPerUnit: 100,
-    pivot: { x: 0.5, y: 0.5 },
-    border: { left: 24, right: 24, top: 12, bottom: 12 },
-    atlasGroup: "ui-neon-core"
-  };
-
   for (const logicalWidth of PROGRESS_WIDTHS_LOGICAL) {
     const outputDirectory = join(outputRoot, "primary-progress-bar", String(logicalWidth));
     await mkdir(outputDirectory, { recursive: true });
     const outputs: ProgressExportOutput[] = [];
-    const writeOutputPair = async (baseName: string, svg: string) => {
+    const writeOutputPair = async (baseName: string, svg: string, part: ProgressExportOutput["part"], role: ProgressExportOutput["role"]) => {
       const svgPath = join(outputDirectory, `${baseName}.svg`);
       const pngPath = join(outputDirectory, `${baseName}.png`);
       const png = renderPng(svg);
       await writeFile(svgPath, svg, "utf8");
       await writeFile(pngPath, png);
-      const base = { width: logicalWidth * 2, height: PROGRESS_HEIGHT_LOGICAL * 2, state: "normal" as const, unity };
-      outputs.push({ ...base, path: svgPath, format: "svg", sha256: sha256(svg) });
-      outputs.push({ ...base, path: pngPath, format: "png", sha256: sha256(png) });
+      const base: Omit<ProgressExportOutput, "path" | "format" | "sha256" | "role"> = {
+        width: logicalWidth * 2,
+        height: PROGRESS_HEIGHT_LOGICAL * 2,
+        state: "normal" as const,
+        part
+      };
+      if (part === "frame") base.slice = { left: 24, right: 24, top: 12, bottom: 12 };
+      outputs.push({ ...base, path: svgPath, format: "svg", sha256: sha256(svg), role: role === "preview" ? "preview" : "editable-source" });
+      outputs.push({ ...base, path: pngPath, format: "png", sha256: sha256(png), role: role === "preview" ? "preview" : "raster-derivative" });
     };
 
-    await writeOutputPair("primary-progress-bar-frame", renderProgressFrameSvg(logicalWidth));
+    await writeOutputPair("primary-progress-bar-frame", renderProgressFrameSvg(logicalWidth), "frame", "editable-source");
     for (const percent of PROGRESS_PERCENTAGES) {
       const request = { logicalWidth, percent };
-      await writeOutputPair(`primary-progress-bar-fill-${percent}`, renderProgressFillSvg(request));
-      await writeOutputPair(`primary-progress-bar-preview-${percent}`, renderPrimaryProgressBarSvg(request));
+      await writeOutputPair(`primary-progress-bar-fill-${percent}`, renderProgressFillSvg(request), "fill", "editable-source");
+      await writeOutputPair(`primary-progress-bar-preview-${percent}`, renderPrimaryProgressBarSvg(request), "whole", "preview");
     }
 
     const manifest = manifestFor(logicalWidth, outputRoot, outputs, traceability);

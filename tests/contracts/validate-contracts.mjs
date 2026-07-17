@@ -33,6 +33,7 @@ const exampleSchemas = new Map([
   ["frost-crystal-materials.draft.json", "material-pack.schema.json"],
   ["frost-crystal-materials.json", "material-pack.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
+  ["archive/legacy-primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
   ["v3-frostbound-analysis.json", "analysis-receipt.schema.json"],
   ["v3-frostbound-analysis-review.json", "analysis-review.schema.json"],
@@ -79,6 +80,18 @@ console.log("rejected invalid material normalization and bindings");
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);
 const canonicalManifest = JSON.parse(await readFile(join(exampleDir, "primary-button-normal.manifest.json"), "utf8"));
+if (canonicalManifest.schemaVersion !== "1.2") {
+  throw new Error("canonical export manifest must use the live engine-neutral 1.2 schema.");
+}
+const legacyManifest = JSON.parse(await readFile(join(exampleDir, "archive", "legacy-primary-button-normal.manifest.json"), "utf8"));
+if (!validateExportManifest(legacyManifest)) {
+  throw new Error(`archived legacy export manifest must remain valid: ${ajv.errorsText(validateExportManifest.errors)}`);
+}
+const manifestWithEngineMetadata = structuredClone(canonicalManifest);
+manifestWithEngineMetadata.outputs[0].unity = { pixelsPerUnit: 100 };
+if (validateExportManifest(manifestWithEngineMetadata)) {
+  throw new Error("live export-manifest 1.2 must reject engine import metadata.");
+}
 const manifestWithoutProvenance = structuredClone(canonicalManifest);
 delete manifestWithoutProvenance.provenance;
 if (validateExportManifest(manifestWithoutProvenance)) {

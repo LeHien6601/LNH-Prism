@@ -8,7 +8,7 @@ M2-S1 adds draft Neon Market overlay and material-binding examples. They demonst
 
 M3-S1 adds concept-receipt, analysis-receipt, and analysis-review contracts. They preserve immutable source bindings, separate observations from recommendations, constrain normalized annotations, record human disposition transitions, and block draft mapping while a critical proposal is pending or unresolved.
 
-M4-S1 adds export-manifest `1.1`, a Unity asset-registry contract, semantic identity validation, and canonical Frostbound fixtures. Updated validators continue accepting legacy export-manifest `1.0` unchanged.
+M5 adds export-manifest `1.2` as the live engine-neutral production manifest. Legacy export-manifest `1.0` and Unity-targeted `1.1` remain accepted only for archival validation of historical evidence.
 
 ## Contract files
 
@@ -17,8 +17,8 @@ M4-S1 adds export-manifest `1.1`, a Unity asset-registry contract, semantic iden
 | `schemas/style-spec.schema.json` | Shared art-direction tokens and renderer defaults |
 | `schemas/component-spec.schema.json` | Component structure, layers, states, and style binding |
 | `schemas/material-pack.schema.json` | Reusable material sources, bindings, normalization, and provenance |
-| `schemas/export-manifest.schema.json` | Reproducible asset export, source versions, and Unity metadata |
-| `schemas/unity-asset-registry.schema.json` | Stable Unity asset IDs, deterministic `.meta` GUIDs, canonical paths, and output hashes |
+| `schemas/export-manifest.schema.json` | Reproducible engine-neutral asset export, source versions, output hashes, and portable slice/part metadata |
+| `schemas/unity-asset-registry.schema.json` | Archived Unity asset IDs, deterministic `.meta` GUIDs, canonical paths, and output hashes |
 | `schemas/concept-receipt.schema.json` | Concept file identity, dimensions, generation/source provenance, rights, and usage boundary |
 | `schemas/analysis-receipt.schema.json` | Source-annotated observations, recommendations, confidence, criticality, and initial disposition |
 | `schemas/analysis-review.schema.json` | Human review transitions, edited values, reviewer identity, and the critical-proposal mapping gate |
@@ -27,7 +27,7 @@ M4-S1 adds export-manifest `1.1`, a Unity asset-registry contract, semantic iden
 
 - IDs are lower-case kebab-case and stable after approval.
 - `version` is a semantic version. Increment it when contract data changes.
-- `schemaVersion` identifies the format version; source contracts remain at the M0 `1.0` baseline, while Unity-targeted export manifests use `1.1`.
+- `schemaVersion` identifies the format version; source contracts remain at the M0 `1.0` baseline, live export manifests use engine-neutral `1.2`, and legacy export manifests `1.0`/`1.1` are archival-only.
 - `status` moves from `draft` to `reviewed` to `approved`; production export requires approved source specs.
 - AI-originated data must retain prompt/settings or an explicit reason why they are unavailable.
 - Hashes use lowercase SHA-256 hex values. Paths are repository-relative and use `/`.
@@ -40,12 +40,12 @@ Run `npm run validate:contracts`. It validates every JSON Schema and every examp
 
 Additive optional fields are backward-compatible within `schemaVersion: 1.0`. Removing, renaming, or changing the meaning of a required field requires a new schema version and a migration note before approval.
 
-### M4-S1 Unity export manifest `1.1`
+### M5 engine-neutral export manifest `1.2`
 
-- The combined export-manifest schema accepts legacy `1.0` and Unity-targeted `1.1`; version-specific closed objects prevent fields leaking between versions.
-- Version `1.1` requires the pinned Unity profile, hashed source references, PNG outputs below the canonical generated root, complete Sprite settings, stable Unity IDs, and deterministic GUIDs.
-- Cross-field semantic validation rejects unsafe or mismatched paths/names, invalid border centers, exact/case-folded collisions, GUID collisions, unsorted registries, and stable identity drift.
-- See [the `1.0` to `1.1` migration note](../docs/migrations/EXPORT_MANIFEST_1.0_TO_1.1.md).
+- The combined export-manifest schema accepts archival `1.0`/`1.1` and live `1.2`; version-specific closed objects prevent fields leaking between versions.
+- Version `1.2` requires portable repository-relative paths, hashed source references, output hashes, output role, and optional state, part, and slice metadata.
+- Version `1.2` rejects engine import metadata. Use archived `1.0`/`1.1` fixtures only to validate historical evidence.
+- See [ADR-015](../docs/decisions/ADR-015-export-manifest-compatibility-policy.md).
 
 ### M2-S1 additive extensions
 

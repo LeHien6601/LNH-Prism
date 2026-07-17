@@ -56,6 +56,7 @@ test("Primary Button proof emits both V1 sizes, states, and traceable manifests"
 
     for (const manifest of manifests) {
       assert.equal(validateManifest(manifest), true, JSON.stringify(validateManifest.errors));
+      assert.equal(manifest.schemaVersion, "1.2");
       assert.equal(manifest.renderer.version, RENDERER_VERSION);
       assert.equal(manifest.outputs.length, 2);
       const png = manifest.outputs.find((output) => output.format === "png");
@@ -64,7 +65,10 @@ test("Primary Button proof emits both V1 sizes, states, and traceable manifests"
       assert.ok(svg);
       assert.equal(png.width, svg.width);
       assert.equal(png.height, svg.height);
-      assert.equal(png.unity.border.left, 48);
+      assert.equal(png.part, "whole");
+      assert.equal(png.role, "raster-derivative");
+      assert.deepEqual(png.slice, { left: 48, right: 48, top: 48, bottom: 48 });
+      assert.equal("unity" in png, false);
       const pngContent = await readFile(join(outputRoot, png.path));
       assert.equal(hash(pngContent), png.sha256);
     }

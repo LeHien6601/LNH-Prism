@@ -101,8 +101,13 @@ test("Progress Bar proof emits two widths and all inspection outputs with valid 
     assert.equal(manifests.length, PROGRESS_WIDTHS_LOGICAL.length);
     for (const manifest of manifests) {
       assert.equal(validateManifest(manifest), true, JSON.stringify(validateManifest.errors));
+      assert.equal(manifest.schemaVersion, "1.2");
       assert.equal(manifest.outputs.length, 14);
       assert.equal(new Set(manifest.outputs.map((output) => output.path)).size, 14);
+      assert.equal(manifest.outputs.some((output) => "unity" in output), false);
+      assert.equal(manifest.outputs.filter((output) => output.part === "frame").length, 2);
+      assert.equal(manifest.outputs.filter((output) => output.part === "fill").length, 6);
+      assert.equal(manifest.outputs.filter((output) => output.role === "preview").length, 6);
       for (const output of manifest.outputs) {
         assert.equal(output.height, PROGRESS_HEIGHT_LOGICAL * 2);
         assert.equal(hash(await readFile(join(outputRoot, output.path))), output.sha256);

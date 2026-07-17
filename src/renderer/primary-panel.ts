@@ -28,16 +28,13 @@ interface PanelExportOutput {
   height: number;
   sha256: string;
   state: "normal";
-  unity: {
-    pixelsPerUnit: number;
-    pivot: { x: number; y: number };
-    border: { left: number; right: number; top: number; bottom: number };
-    atlasGroup: string;
-  };
+  role: "editable-source" | "raster-derivative";
+  part: "whole";
+  slice: { left: number; right: number; top: number; bottom: number };
 }
 
 interface PanelExportManifest {
-  schemaVersion: "1.0";
+  schemaVersion: "1.2";
   assetId: string;
   generatedAt: string;
   renderer: { name: string; version: string };
@@ -109,12 +106,6 @@ function manifestFor(rendered: RenderedPrimaryPanel, outputDirectory: string, ro
   const svgPath = join(outputDirectory, "primary-panel.svg");
   const outputWidth = PANEL_WIDTH_LOGICAL * 2;
   const outputHeight = logicalHeight * 2;
-  const unity = {
-    pixelsPerUnit: 100,
-    pivot: { x: 0.5, y: 0.5 },
-    border: { left: 48, right: 48, top: 48, bottom: 48 },
-    atlasGroup: "ui-neon-core"
-  };
   const output = (path: string, format: "png" | "svg", content: Uint8Array | string): PanelExportOutput => ({
     path: relative(rootDirectory, path).replaceAll("\\", "/"),
     format,
@@ -122,11 +113,13 @@ function manifestFor(rendered: RenderedPrimaryPanel, outputDirectory: string, ro
     height: outputHeight,
     sha256: sha256(content),
     state: "normal",
-    unity
+    role: format === "svg" ? "editable-source" : "raster-derivative",
+    part: "whole",
+    slice: { left: 48, right: 48, top: 48, bottom: 48 }
   });
 
   return {
-    schemaVersion: "1.0",
+    schemaVersion: "1.2",
     assetId: `neon-core-primary-panel-${logicalHeight}`,
     generatedAt: new Date().toISOString(),
     renderer: { name: "lnh-prism-renderer", version: RENDERER_VERSION },
