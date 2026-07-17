@@ -126,3 +126,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Approved M4 definition Option A with manifest versioning and naming clarifications; opened M4-S1 contract implementation | Project owner / Codex |
 | 2026-07-17 | Completed M4-S1 manifest/registry contracts, semantic identity validation, canonical fixtures, negative tests, and migration guidance; opened M4-S2 bundle generation | Codex |
 | 2026-07-17 | Completed M4-S2 deterministic Frostbound Unity bundle, manifests, stable-ID registry, collision audit, and repeat-export proof; opened M4-S3 bounded Unity project/importer implementation | Codex |
+| 2026-07-17 | Completed M4-S3 pinned Unity project/importer, exact Sprite settings/GUIDs, atlas, bindings, prefabs, scene, unchanged rerun, and Edit Mode validation; opened M4-S4 local flow/re-export/Android implementation | Codex |

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ui-frostbound-reward
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 21300000, guid: 36a8676f4b46f3f77e7416fa2807abb2, type: 3}
+    - {fileID: 21300000, guid: 05bc84954b7b19313c95e8e30b451f53, type: 3}
+    - {fileID: 21300000, guid: 188028033b40685231118b9dd228c8dd, type: 3}
+    - {fileID: 21300000, guid: 198eb453827045a61f06c9ac54788232, type: 3}
+    - {fileID: 21300000, guid: 1f33b1a34e0fa688c08c41aa02aa5d68, type: 3}
+    - {fileID: 21300000, guid: ce876a35b53fb49ce30cadaa91e7698c, type: 3}
+    - {fileID: 21300000, guid: 29b99c81fbea7b9d6e53963ed3facd9d, type: 3}
+    - {fileID: 21300000, guid: d594db868555a05ff8632b9729d6e189, type: 3}
+    - {fileID: 21300000, guid: 5ebcf97e973a78689f1c8f063fcc1dc8, type: 3}
+    - {fileID: 21300000, guid: 5f59fa8bacae47c14a357cf6ba7612ed, type: 3}
+    - {fileID: 21300000, guid: 92f4b7d72d2e86090d9df0d3c9cd0bcb, type: 3}
+    - {fileID: 21300000, guid: fa7929df8638b42df19eef88873cafa9, type: 3}
+    - {fileID: 21300000, guid: cdb3fd70c50840d297c49460cc9836d7, type: 3}
+    - {fileID: 21300000, guid: 28722e37f659e8e1623ab618fbc1de0f, type: 3}
+    - {fileID: 21300000, guid: a140667ce605501333ba49417da92f1a, type: 3}
+    - {fileID: 21300000, guid: 5bb5817d6cd25278b5c5880dfbb6def4, type: 3}
+    - {fileID: 21300000, guid: e5913938546ba929af0503ba916d11bc, type: 3}
+    - {fileID: 21300000, guid: afdc75752e3a71f0af2e849bdb79ab35, type: 3}
+    - {fileID: 21300000, guid: eea476a6b1a1078d034b11d3ea6d2722, type: 3}
+    - {fileID: 21300000, guid: cddca76499bf7f7c904dae74dac2c085, type: 3}
+    - {fileID: 21300000, guid: fbb2cc0e7025c4ad63fb89720be883c7, type: 3}
+    - {fileID: 21300000, guid: 5bac1bd0517b8152ce6a6110841aacee, type: 3}
+    - {fileID: 21300000, guid: cd048e69848d7202954594b6d0357caf, type: 3}
+    - {fileID: 21300000, guid: 81500ba8fbe72c33733715c981b9d16f, type: 3}
+    - {fileID: 21300000, guid: bc15062bcbfbad900bdb073eea3359df, type: 3}
+    - {fileID: 21300000, guid: dab17239c4f425de088bf7c7ead2e367, type: 3}
+    - {fileID: 21300000, guid: f14406d1dd99ab2671b83cd278522d48, type: 3}
+    - {fileID: 21300000, guid: 45f939185b3b5ae5012af5f63f9d211b, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys: []
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
+  m_RenderDataMap: {}
+  m_Tag: ui-frostbound-reward
+  m_IsVariant: 0

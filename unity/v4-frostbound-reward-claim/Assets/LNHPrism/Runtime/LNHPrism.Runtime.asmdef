@@ -1,0 +1,6 @@
+{
+  "name": "LNHPrism.Runtime",
+  "rootNamespace": "LNHPrism",
+  "references": ["Unity.UGUI"],
+  "autoReferenced": true
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m4-s3-unity-import",
+  "status": "pass",
+  "unityVersion": "6000.3.18f1",
+  "profileId": "unity-6000-ugui-builtin-android-portrait",
+  "declaredSpriteCount": 28,
+  "atlasMemberCount": 28,
+  "manifestCount": 5,
+  "prefabCount": 7,
+  "sceneCount": 1,
+  "editModeTests": { "total": 4, "passed": 4, "failed": 0 },
+  "artifacts": [
+    "import-receipt.json",
+    "edit-mode-results.xml",
+    "../../../../unity/v4-frostbound-reward-claim/Packages/manifest.json",
+    "../../../../unity/v4-frostbound-reward-claim/Packages/packages-lock.json",
+    "../../../../unity/v4-frostbound-reward-claim/Assets/LNHPrism/Generated/ui-frostbound-reward.spriteatlas",
+    "../../../../unity/v4-frostbound-reward-claim/Assets/LNHPrism/Generated/FrostboundBindings.asset",
+    "../../../../unity/v4-frostbound-reward-claim/Assets/LNHPrism/Scenes/V4FrostboundRewardClaim.unity"
+  ],
+  "scopeBoundary": "M4-S3 proves pinned import, exact Sprite settings, atlas membership, bindings, prefabs, scene references, both sliced panel sizes, and unchanged output import counts. Play Mode flow, changed-source re-export, strict serialized no-op audit, and Android build remain M4-S4."
+}

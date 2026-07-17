@@ -21,3 +21,4 @@ node_modules/
 # Generated comparison artifacts (approved baselines belong in tests/fixtures)
 *.diff.png
 *.render-log.json
+docs/validation/evidence/m4-s3-unity-import/*.log

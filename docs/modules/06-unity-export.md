@@ -4,7 +4,7 @@
 
 Export generated UI assets with enough metadata to be imported and re-exported reliably in Unity.
 
-**Status:** M4-S2 deterministic Unity bundle and stable-ID registry complete; M4-S3 bounded Unity project and importer implementation is agent-ready.
+**Status:** M4-S3 pinned Unity project, manifest importer, atlas, bindings, prefabs, scene, and Edit Mode validation complete; M4-S4 local flow/re-export/Android proof is agent-ready.
 
 ## Approved V4 target
 
@@ -73,3 +73,4 @@ M4 V4: integrate a reward claim or shop purchase flow with normal/pressed/disabl
 | 2026-07-17 | Approved Option A with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; opened M4-S1 | Project owner / Codex |
 | 2026-07-17 | Completed M4-S1 with dual-version manifest validation, a Unity registry contract, deterministic naming/GUID semantics, collision/drift rejection, fixtures, tests, and migration notes | Codex |
 | 2026-07-17 | Completed M4-S2 with 28 deterministic Frostbound PNGs, five Unity manifests, full source/output receipts, a stable-ID registry, zero-collision audit, and byte-identical repeat-export proof | Codex |
+| 2026-07-17 | Completed M4-S3 on Unity `6000.3.18f1` with exact 28-Sprite importer settings/GUIDs, 28-member atlas, deterministic bindings, seven prefabs, scene, unchanged rerun receipt, and four passing Edit Mode tests | Codex |

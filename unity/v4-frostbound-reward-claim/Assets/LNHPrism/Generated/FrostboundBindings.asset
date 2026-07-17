@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda6b1a07eae05948a3d0dd7bf7ec520, type: 3}
+  m_Name: FrostboundBindings
+  m_EditorClassIdentifier: LNHPrism.Runtime::LNHPrism.FrostboundBindings
+  profileId: unity-6000-ugui-builtin-android-portrait
+  sprites:
+  - assetId: lnh-prism:frostbound-reward-frostbound-claim-button-disabled-240x64
+    state: disabled
+    sprite: {fileID: 21300000, guid: 36a8676f4b46f3f77e7416fa2807abb2, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-claim-button-disabled-288x64
+    state: disabled
+    sprite: {fileID: 21300000, guid: 05bc84954b7b19313c95e8e30b451f53, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-claim-button-normal-240x64
+    state: normal
+    sprite: {fileID: 21300000, guid: 188028033b40685231118b9dd228c8dd, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-claim-button-normal-288x64
+    state: normal
+    sprite: {fileID: 21300000, guid: 198eb453827045a61f06c9ac54788232, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-claim-button-pressed-240x64
+    state: pressed
+    sprite: {fileID: 21300000, guid: 1f33b1a34e0fa688c08c41aa02aa5d68, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-claim-button-pressed-288x64
+    state: pressed
+    sprite: {fileID: 21300000, guid: ce876a35b53fb49ce30cadaa91e7698c, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-later-button-disabled-160x52
+    state: disabled
+    sprite: {fileID: 21300000, guid: 29b99c81fbea7b9d6e53963ed3facd9d, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-later-button-disabled-200x52
+    state: disabled
+    sprite: {fileID: 21300000, guid: d594db868555a05ff8632b9729d6e189, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-later-button-normal-160x52
+    state: normal
+    sprite: {fileID: 21300000, guid: 5ebcf97e973a78689f1c8f063fcc1dc8, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-later-button-normal-200x52
+    state: normal
+    sprite: {fileID: 21300000, guid: 5f59fa8bacae47c14a357cf6ba7612ed, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-later-button-pressed-160x52
+    state: pressed
+    sprite: {fileID: 21300000, guid: 92f4b7d72d2e86090d9df0d3c9cd0bcb, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-later-button-pressed-200x52
+    state: pressed
+    sprite: {fileID: 21300000, guid: fa7929df8638b42df19eef88873cafa9, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-emblem-container-lock-badge-locked-48x48
+    state: locked
+    sprite: {fileID: 21300000, guid: cdb3fd70c50840d297c49460cc9836d7, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-emblem-container-normal-104x104
+    state: normal
+    sprite: {fileID: 21300000, guid: 28722e37f659e8e1623ab618fbc1de0f, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-emblem-container-normal-144x144
+    state: normal
+    sprite: {fileID: 21300000, guid: a140667ce605501333ba49417da92f1a, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-emblem-container-selected-104x104
+    state: selected
+    sprite: {fileID: 21300000, guid: 5bb5817d6cd25278b5c5880dfbb6def4, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-emblem-container-selected-144x144
+    state: selected
+    sprite: {fileID: 21300000, guid: e5913938546ba929af0503ba916d11bc, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-panel-normal-432x300
+    state: normal
+    sprite: {fileID: 21300000, guid: afdc75752e3a71f0af2e849bdb79ab35, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-fill-10-normal-320x28
+    state: normal
+    sprite: {fileID: 21300000, guid: eea476a6b1a1078d034b11d3ea6d2722, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-fill-10-normal-432x28
+    state: normal
+    sprite: {fileID: 21300000, guid: cddca76499bf7f7c904dae74dac2c085, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-fill-50-normal-320x28
+    state: normal
+    sprite: {fileID: 21300000, guid: fbb2cc0e7025c4ad63fb89720be883c7, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-fill-50-normal-432x28
+    state: normal
+    sprite: {fileID: 21300000, guid: 5bac1bd0517b8152ce6a6110841aacee, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-fill-75-normal-320x28
+    state: normal
+    sprite: {fileID: 21300000, guid: cd048e69848d7202954594b6d0357caf, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-fill-75-normal-432x28
+    state: normal
+    sprite: {fileID: 21300000, guid: 81500ba8fbe72c33733715c981b9d16f, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-fill-90-normal-320x28
+    state: normal
+    sprite: {fileID: 21300000, guid: bc15062bcbfbad900bdb073eea3359df, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-fill-90-normal-432x28
+    state: normal
+    sprite: {fileID: 21300000, guid: dab17239c4f425de088bf7c7ead2e367, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-frame-normal-320x28
+    state: normal
+    sprite: {fileID: 21300000, guid: f14406d1dd99ab2671b83cd278522d48, type: 3}
+  - assetId: lnh-prism:frostbound-reward-frostbound-reward-progress-frame-normal-432x28
+    state: normal
+    sprite: {fileID: 21300000, guid: 45f939185b3b5ae5012af5f63f9d211b, type: 3}
+  lockedEmblemColor: {r: 0.43529412, g: 0.5294118, b: 0.59607846, a: 0.6784314}

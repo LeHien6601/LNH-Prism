@@ -15,14 +15,14 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
 | Materials | 🟢 V2 gate passed | Neon Market and Neon Alloy passed V2 at `93/100`; shared material reuse, propagation, structure, and traceability met every mandatory minimum |
 | AI analysis | 🟢 M3/V3 gate passed | Frostbound passed V3 at `94/100`; every mandatory minimum was met, no blocker or defect remained, and simplified ornamental fidelity is a non-blocking observation |
-| Unity export | 🔵 M4-S3 agent-ready | M4-S2 produced 28 deterministic Frostbound PNGs, five manifest `1.1` files, a sorted stable-ID registry, complete Unity metadata, zero-collision audit, and byte-identical repeat-export proof; the bounded Unity project/importer is next |
+| Unity export | 🔵 M4-S4 agent-ready | M4-S3 pinned Unity `6000.3.18f1`, imported all 28 Sprites with exact manifest settings and stable GUIDs, generated the 28-member atlas, bindings, seven prefabs, and scene, and passed four Edit Mode tests plus an unchanged 28-asset rerun |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🔵 **M4 implementation** — M4-S2 complete; bounded Unity project and importer implementation is agent-ready |
-| Next task | 🔵 **Create the pinned bounded Unity project, importer, atlas, bindings, prefabs, and scene** · 🤖 Agent |
-| Next agent-ready task | 🔵 **M4-S3** — batch import and Edit Mode tests prove exact settings, slicing, IDs, atlas membership, and references |
+| Active milestone | 🔵 **M4 implementation** — M4-S3 complete; local flow, re-export proof, Play Mode tests, and Android portrait build are agent-ready |
+| Next task | 🔵 **Add the local state/progress flow, Play Mode tests, re-export test, and Android portrait build** · 🤖 Agent |
+| Next agent-ready task | 🔵 **M4-S4** — required states/values, reference survival, no-op import, Editor behavior, and Android readability are proven |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -103,7 +103,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Review and approve the M4 implementation specification and V4 integration rubric | 🧭 Product + 🛠️ Technical + 🎮 Unity leads | 🟢 Complete | Option A approved on 2026-07-17 with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; stable identity, locked mapping, importer ownership, bounded slices, V4 evidence/scoring, and blockers accepted |
 | P0 | Implement M4-S1 contract extensions, semantic validation, naming/GUID rules, canonical fixtures, and migration notes | 🤖 Agent | 🟢 Complete | Updated validators accept legacy `1.0` and Unity-targeted `1.1`; canonical manifest/registry fixtures pass; malformed profiles/settings, unsafe paths, border failures, duplicate/case-folded IDs/paths, GUID collisions, ordering errors, and identity drift fail; migration guidance is linked |
 | P0 | Produce the deterministic Frostbound Unity bundle and stable-ID registry | 🤖 Agent | 🟢 Complete | 28 PNGs, five manifests, source/output receipts, complete Unity metadata, sorted stable-ID registry, zero-collision audit, and byte-identical repeat-export proof validate |
-| P0 | Create the pinned bounded Unity project, importer, atlas, bindings, prefabs, and scene | 🤖 Agent | 🔵 Agent-ready | Batch import and Edit Mode tests prove exact settings, slicing, IDs, atlas membership, and references |
+| P0 | Create the pinned bounded Unity project, importer, atlas, bindings, prefabs, and scene | 🤖 Agent | 🟢 Complete | Pinned batch import applies exact settings and stable GUIDs to 28 Sprites; 28-member atlas, bindings, seven prefabs, scene, both panel sizes, unchanged rerun, and four Edit Mode tests pass |
+| P0 | Add the local state/progress flow, Play Mode tests, re-export test, and Android portrait build | 🤖 Agent | 🔵 Agent-ready | Required states/values, reference survival, strict no-op import, Editor behavior, and Android readability are proven |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -197,3 +198,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Approved M4 definition Option A with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; opened M4-S1 contract implementation | Project owner / Codex |
 | 2026-07-17 | Completed M4-S1 dual-version manifest and registry contracts, deterministic naming/GUID/identity semantics, canonical fixtures, rejection coverage, and migration notes; opened M4-S2 | Codex |
 | 2026-07-17 | Completed M4-S2 with 28 deterministic Frostbound PNGs, five manifests, source/output receipts, stable IDs/GUIDs, zero collisions, and byte-identical repeat-export proof; opened M4-S3 | Codex |
+| 2026-07-17 | Completed M4-S3 pinned Unity project/importer with exact 28-Sprite settings/GUIDs, atlas, bindings, seven prefabs, scene, unchanged rerun receipt, and four passing Edit Mode tests; opened M4-S4 | Codex |
