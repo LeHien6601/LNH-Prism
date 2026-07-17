@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frostbound analysis review</title>
+<style>body{margin:0;background:#071625;color:#e8f7ff;font:16px/1.45 system-ui,sans-serif}.page{max-width:980px;margin:auto;padding:32px}.proposal{margin:24px 0;padding:24px;border:1px solid #315a75;border-radius:16px;background:#0d2638}.proposal header{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.proposal h2{margin:0 auto 0 0}.confidence,.critical{padding:4px 10px;border-radius:999px}.confidence-high{background:#174f55}.confidence-medium{background:#5a4919}.confidence-low,.critical{background:#682e3b}.observation,.recommendation{padding:16px;margin:16px 0;border-radius:12px}.observation{background:#102f43}.recommendation{background:#18283b;border:1px dashed #5b7990}fieldset{display:grid;gap:12px;border:1px solid #476b82;border-radius:12px}label{display:grid;gap:6px}select,textarea{padding:10px;background:#06131f;color:#effaff;border:1px solid #55758a;border-radius:8px}textarea{min-height:72px}pre{white-space:pre-wrap}</style>
+</head>
+<body><main class="page">
+<h1>Frostbound proposal review</h1>
+<p>Raw observations are read-only. Reviewers may edit only dispositions, notes, and edited recommendation values.</p>
+<p><strong>Mapping gate:</strong> blocked; blockers: hierarchy-primary-action, material-frost-grain, palette-ice-primary, spacing-action-stack</p>
+<form id="analysis-review-form">
+<fieldset class="reviewer-identity"><legend>Reviewer identity</legend>
+  <label>Reviewer ID <input name="reviewerId" required></label>
+  <label>Role <select name="reviewerRole"><option value="product">product</option><option value="art">art</option><option value="ui">ui</option><option value="technical">technical</option></select></label>
+  <label>Reviewed at (UTC) <input name="reviewedAt" type="datetime-local" required></label>
+</fieldset>
+<article class="proposal" data-proposal-id="palette-ice-primary">
+  <header><h2>palette-ice-primary</h2><span class="confidence confidence-high">High confidence</span><span class="critical">Critical</span></header>
+  <p class="confidence-meaning">Directly observed in the primary reference.</p>
+  <section class="observation"><h3>Observation</h3><p>The primary action and progress fill use a saturated ice-blue value against deep navy surfaces.</p><ul><li>Region x=0.16, y=0.59, w=0.68, h=0.22 — Progress fill and CLAIM button</li></ul></section>
+  <section class="recommendation"><h3>Recommendation</h3><code>/tokens/colors/primary</code><pre>&quot;#2F9FEF&quot;</pre><p>Use a controlled token near the observed accent while retaining deterministic contrast tuning.</p></section>
+  <fieldset><legend>Human review</legend>
+    <label>Disposition <select name="disposition:palette-ice-primary"><option value="pending" selected>pending</option><option value="accepted">accepted</option><option value="edited">edited</option><option value="rejected">rejected</option><option value="unresolved">unresolved</option></select></label>
+    <label>Reviewer note <textarea name="reviewerNote:palette-ice-primary"></textarea></label>
+    <label>Edited value (JSON) <textarea name="editedValue:palette-ice-primary"></textarea></label>
+  </fieldset>
+</article>
+<article class="proposal" data-proposal-id="spacing-action-stack">
+  <header><h2>spacing-action-stack</h2><span class="confidence confidence-medium">Medium confidence</span><span class="critical">Critical</span></header>
+  <p class="confidence-meaning">Constrained inference that requires reviewer verification.</p>
+  <section class="observation"><h3>Observation</h3><p>The primary and secondary actions form a centered vertical stack with a visibly larger primary control.</p><ul><li>Region x=0.18, y=0.68, w=0.64, h=0.22</li></ul></section>
+  <section class="recommendation"><h3>Recommendation</h3><code>/tokens/spacing/actionGap</code><pre>24</pre><p>Normalize the observed separation to the approved logical canvas.</p></section>
+  <fieldset><legend>Human review</legend>
+    <label>Disposition <select name="disposition:spacing-action-stack"><option value="pending" selected>pending</option><option value="accepted">accepted</option><option value="edited">edited</option><option value="rejected">rejected</option><option value="unresolved">unresolved</option></select></label>
+    <label>Reviewer note <textarea name="reviewerNote:spacing-action-stack"></textarea></label>
+    <label>Edited value (JSON) <textarea name="editedValue:spacing-action-stack"></textarea></label>
+  </fieldset>
+</article>
+<article class="proposal" data-proposal-id="material-frost-grain">
+  <header><h2>material-frost-grain</h2><span class="confidence confidence-medium">Medium confidence</span><span class="critical">Critical</span></header>
+  <p class="confidence-meaning">Constrained inference that requires reviewer verification.</p>
+  <section class="observation"><h3>Observation</h3><p>Low-contrast frost variation repeats across the panel, progress, and buttons without defining their silhouettes.</p><ul><li>Region x=0.08, y=0.1, w=0.84, h=0.82</li></ul></section>
+  <section class="recommendation"><h3>Recommendation</h3><code>/materialCategories/frost-grain</code><pre>{
+  &quot;role&quot;: &quot;detail-overlay&quot;,
+  &quot;tileMode&quot;: &quot;tile&quot;
+}</pre></section>
+  <fieldset><legend>Human review</legend>
+    <label>Disposition <select name="disposition:material-frost-grain"><option value="pending" selected>pending</option><option value="accepted">accepted</option><option value="edited">edited</option><option value="rejected">rejected</option><option value="unresolved">unresolved</option></select></label>
+    <label>Reviewer note <textarea name="reviewerNote:material-frost-grain"></textarea></label>
+    <label>Edited value (JSON) <textarea name="editedValue:material-frost-grain"></textarea></label>
+  </fieldset>
+</article>
+<article class="proposal" data-proposal-id="hierarchy-primary-action">
+  <header><h2>hierarchy-primary-action</h2><span class="confidence confidence-high">High confidence</span><span class="critical">Critical</span></header>
+  <p class="confidence-meaning">Directly observed in the primary reference.</p>
+  <section class="observation"><h3>Observation</h3><p>CLAIM dominates LATER through width, luminous fill, and edge contrast rather than label wording alone.</p><ul><li>Region x=0.16, y=0.68, w=0.68, h=0.21</li><li>The approved V3 brief requires deterministic primary/secondary semantic differentiation.</li></ul></section>
+  <section class="recommendation"><h3>Recommendation</h3><code>/componentRules/button/primaryEmphasis</code><pre>{
+  &quot;minimumContrastDelta&quot;: 0.2,
+  &quot;minimumWidthRatio&quot;: 1.4
+}</pre></section>
+  <fieldset><legend>Human review</legend>
+    <label>Disposition <select name="disposition:hierarchy-primary-action"><option value="pending" selected>pending</option><option value="accepted">accepted</option><option value="edited">edited</option><option value="rejected">rejected</option><option value="unresolved">unresolved</option></select></label>
+    <label>Reviewer note <textarea name="reviewerNote:hierarchy-primary-action"></textarea></label>
+    <label>Edited value (JSON) <textarea name="editedValue:hierarchy-primary-action"></textarea></label>
+  </fieldset>
+</article></form>
+</main></body>
+</html>

@@ -10,7 +10,7 @@
 | Validation target | V3 — Frostbound Reward Popup |
 | Decision source | [ADR-012](../decisions/ADR-012-v3-frostbound-reward.md) |
 | Product/art reference | [V3 reference brief](../reference-briefs/V3_FROSTBOUND_REWARD.md) |
-| Implementation state | M3-S1 complete; M3-S2 agent-ready |
+| Implementation state | M3-S2 complete; M3-S3 agent-ready |
 
 ## 1. Intended outcome
 
@@ -124,7 +124,7 @@ Prepare V3-E01 through V3-E10 exactly as defined in [the V3 rubric](../validatio
 
 On 2026-07-17, the project owner approved Option A as drafted. The approval covers the proposal model, human-control points, full Panel–Button–Progress plus reward-emblem-container inventory, material boundary, ordered M3-S1 through M3-S5 slices, V3-E01 through V3-E10, scoring thresholds, and automatic blockers.
 
-M3-S1 was authorized by this approval and is now complete; M3-S2 may begin. Approval does not waive later artifact approvals, slice dependencies, V3 evidence, or the human V3 gate.
+M3-S1 and M3-S2 are complete; M3-S3 may begin. Approval does not waive later artifact approvals, slice dependencies, V3 evidence, or the human V3 gate.
 
 ## Change history
 
@@ -133,3 +133,4 @@ M3-S1 was authorized by this approval and is now complete; M3-S2 may begin. Appr
 | 2026-07-17 | Drafted M3 analysis, review, material-intake, reconstruction, and validation requirements | Codex |
 | 2026-07-17 | Approved Option A as drafted and authorized M3-S1 | Project owner |
 | 2026-07-17 | Completed M3-S1 concept, analysis, and review contracts with fixtures and focused semantic rejection coverage | Codex |
+| 2026-07-17 | Completed M3-S2 deterministic normalization, editable pending-review artifact, immutable decision flow, and accepted/edited token lineage | Codex |

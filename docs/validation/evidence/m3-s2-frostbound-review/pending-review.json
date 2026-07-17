@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frostbound-reward-pending-review",
+  "version": "0.1.0",
+  "analysis": {
+    "id": "frostbound-reward-analysis",
+    "version": "0.1.0"
+  },
+  "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+  "createdAt": "2026-07-17T12:00:00Z",
+  "reviews": [
+    {
+      "proposalId": "palette-ice-primary",
+      "critical": true,
+      "disposition": "pending",
+      "transitions": []
+    },
+    {
+      "proposalId": "spacing-action-stack",
+      "critical": true,
+      "disposition": "pending",
+      "transitions": []
+    },
+    {
+      "proposalId": "material-frost-grain",
+      "critical": true,
+      "disposition": "pending",
+      "transitions": []
+    },
+    {
+      "proposalId": "hierarchy-primary-action",
+      "critical": true,
+      "disposition": "pending",
+      "transitions": []
+    }
+  ],
+  "mappingGate": {
+    "status": "blocked",
+    "blockingProposalIds": [
+      "hierarchy-primary-action",
+      "material-frost-grain",
+      "palette-ice-primary",
+      "spacing-action-stack"
+    ]
+  }
+}

@@ -48,7 +48,7 @@ The approved primary reference is the [Frostbound Reward Popup](../reference-bri
 
 ## Current M3 implementation
 
-M3-S1 is complete. Versioned contracts now cover the concept receipt, source-annotated analysis proposals, and human review records. JSON Schema enforces required evidence, bounded annotation coordinates, typed confidence/disposition values, legal transition shapes, and the critical-proposal mapping gate; semantic validation enforces region containment, concept-hash binding, transition continuity, exact blocker lists, and immutable analysis/review linkage.
+M3-S1 and M3-S2 are complete. Versioned contracts cover the concept receipt, source-annotated analysis proposals, and human review records. The deterministic normalizer separates observations from recommendations, gives each confidence level a reviewer-facing meaning, rejects AI-preapproved or category-incompatible mappings, and preserves concept/proposal lineage. Review decisions are immutable transitions; only accepted or edited recommendations can produce token mappings, and each mapping retains evidence plus reviewer identity. The generated [pending review artifact](../validation/evidence/m3-s2-frostbound-review/review.html) exposes reviewer controls without claiming approval.
 
 ## Risks
 
@@ -63,3 +63,4 @@ M3-S1 is complete. Versioned contracts now cover the concept receipt, source-ann
 | 2026-07-17 | Selected Frostbound Reward as the V3 concept and drafted the source-annotated, human-controlled analysis workflow | Project owner / Codex |
 | 2026-07-17 | Approved the M3 proposal/review model and unblocked M3-S1 contract implementation | Project owner / Codex |
 | 2026-07-17 | Completed M3-S1 contracts, representative Frostbound fixtures, semantic validation, and focused failure coverage | Codex |
+| 2026-07-17 | Completed M3-S2 deterministic normalization, reviewer-editable artifact, decision workflow, and proposal-to-token lineage | Codex |

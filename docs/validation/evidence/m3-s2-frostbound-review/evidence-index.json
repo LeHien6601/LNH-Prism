@@ -1,0 +1,18 @@
+{
+  "evidenceVersion": "1.0.0",
+  "slice": "M3-S2",
+  "analysis": "specs/examples/v3-frostbound-analysis.json",
+  "normalizedAnalysis": "normalized-analysis.json",
+  "pendingReview": "pending-review.json",
+  "reviewArtifact": "review.html",
+  "mappingGate": {
+    "status": "blocked",
+    "blockingProposalIds": [
+      "hierarchy-primary-action",
+      "material-frost-grain",
+      "palette-ice-primary",
+      "spacing-action-stack"
+    ]
+  },
+  "note": "The artifact is intentionally pending; it demonstrates reviewer controls without claiming human approval."
+}
