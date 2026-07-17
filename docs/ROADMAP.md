@@ -74,7 +74,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Scope decision:** [ADR-014](decisions/ADR-014-engine-neutral-modular-asset-delivery.md) defines M4 as an engine-neutral asset package.
 
-**Exit gate:** all approved Frostbound assets are delivered as independently usable modules with deterministic source, derivatives, metadata, and provenance; no engine integration is required.
+**Exit gate:** 🟢 Passed on 2026-07-17 — all approved Frostbound assets are delivered as independently usable modules with deterministic source, derivatives, metadata, and provenance; no engine integration is required.
 
 ## ⚪ M5 — Production hardening
 
@@ -118,3 +118,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Approved M3 definition Option A as drafted and opened M3-S1 contract implementation | Project owner / Codex |
 | 2026-07-17 | Passed V3 at `94/100` with every mandatory minimum met and no blockers or defects; completed M3 and opened M4 target definition | Project owner / Codex |
 | 2026-07-17 | Accepted ADR-014, removed engine-specific work, and set M4 to engine-neutral modular asset delivery | Project owner / Codex |
+| 2026-07-17 | Passed M4-A1 modular asset delivery with the tracked Frostbound package and deterministic receipt validation; opened M5-A1 | Codex |

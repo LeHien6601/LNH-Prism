@@ -4,7 +4,7 @@
 
 Deliver each approved UI asset as an independently extractable, engine-neutral module.
 
-**Status:** M4-A1 is agent-ready.
+**Status:** M4-A1 complete; M5-A1 is the next agent-ready task.
 
 ## Scope
 
@@ -38,3 +38,4 @@ M4-A: inspect the delivery package outside any engine project and confirm that n
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-17 | Replaced engine-specific export scope with engine-neutral modular asset delivery under ADR-014 | Project owner / Codex |
+| 2026-07-17 | Assembled and validated the Frostbound package with 62 independently extractable SVG/PNG modules, unique IDs, and output receipts | Codex |

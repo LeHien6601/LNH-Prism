@@ -1,0 +1,580 @@
+{
+  "schemaVersion": "1.0",
+  "packageId": "frostbound-reward-assets",
+  "packageVersion": "1.0.0",
+  "styleId": "frostbound-reward",
+  "sourceEvidence": "m3-s4-frostbound-reconstruction",
+  "components": [
+    "panel",
+    "primary-button",
+    "secondary-button",
+    "progress",
+    "emblem"
+  ],
+  "modules": [
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:emblem-104x104-normal:png",
+      "component": "emblem",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-104x104-normal.png",
+      "path": "assets/frostbound-reward/modules/emblem/emblem-104x104-normal.png",
+      "format": "png",
+      "bytes": 16988,
+      "sha256": "179fec48e6a009927e76a6a0878ac3db4a52df22f164d3682b9d8d585de8e3e8"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:emblem-104x104-normal:svg",
+      "component": "emblem",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-104x104-normal.svg",
+      "path": "assets/frostbound-reward/modules/emblem/emblem-104x104-normal.svg",
+      "format": "svg",
+      "bytes": 3353,
+      "sha256": "ac4345feb2b9916d3f6ed87f04a56a7405b8ce8477f5f875c0dcfda7926531fd"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:emblem-104x104-selected:png",
+      "component": "emblem",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-104x104-selected.png",
+      "path": "assets/frostbound-reward/modules/emblem/emblem-104x104-selected.png",
+      "format": "png",
+      "bytes": 14089,
+      "sha256": "9b2df4f73a9d6d9237c4c07d06c645578e8c96d5f39709172137f47a327dfcb5"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:emblem-104x104-selected:svg",
+      "component": "emblem",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-104x104-selected.svg",
+      "path": "assets/frostbound-reward/modules/emblem/emblem-104x104-selected.svg",
+      "format": "svg",
+      "bytes": 3387,
+      "sha256": "b3c7878117e784dd101555b20d88decab702ce7aa7f5e112172d847fc08c0f7b"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:emblem-144x144-normal:png",
+      "component": "emblem",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-144x144-normal.png",
+      "path": "assets/frostbound-reward/modules/emblem/emblem-144x144-normal.png",
+      "format": "png",
+      "bytes": 22954,
+      "sha256": "c707d255e1df6184163e2b16fc0a57b490e84dd4e57b53523b12e29e086a10ab"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:emblem-144x144-normal:svg",
+      "component": "emblem",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-144x144-normal.svg",
+      "path": "assets/frostbound-reward/modules/emblem/emblem-144x144-normal.svg",
+      "format": "svg",
+      "bytes": 3381,
+      "sha256": "9007b0963253bd0b5955362945e822d310a37df6eb18d247718779b1b771fed1"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:emblem-144x144-selected:png",
+      "component": "emblem",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-144x144-selected.png",
+      "path": "assets/frostbound-reward/modules/emblem/emblem-144x144-selected.png",
+      "format": "png",
+      "bytes": 20006,
+      "sha256": "8ef9e90e39379cabfee5fe62c9d61098ada0edda1daedaa5f9adbc5eb43f73d0"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:emblem-144x144-selected:svg",
+      "component": "emblem",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/emblem-144x144-selected.svg",
+      "path": "assets/frostbound-reward/modules/emblem/emblem-144x144-selected.svg",
+      "format": "svg",
+      "bytes": 3430,
+      "sha256": "54955eb8f9462f9fe0a03f9efbdde60f4ca4ea44586f0e396a8c9510e17f1148"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:panel-432x300-normal:png",
+      "component": "panel",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/panel-432x300-normal.png",
+      "path": "assets/frostbound-reward/modules/panel/panel-432x300-normal.png",
+      "format": "png",
+      "bytes": 39660,
+      "sha256": "9667e1801f82e37bc046a1fff94428e35db1667ddf9ec17143133e626c4fee05"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:panel-432x300-normal:svg",
+      "component": "panel",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/panel-432x300-normal.svg",
+      "path": "assets/frostbound-reward/modules/panel/panel-432x300-normal.svg",
+      "format": "svg",
+      "bytes": 2837,
+      "sha256": "26e79a92f782c029ff293090d29efdadc2f28edcb78225a50a977dac175ef448"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:panel-432x420-normal:png",
+      "component": "panel",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/panel-432x420-normal.png",
+      "path": "assets/frostbound-reward/modules/panel/panel-432x420-normal.png",
+      "format": "png",
+      "bytes": 52730,
+      "sha256": "45a857cb27a076a7da3374eaafe1c038b0d4d800d8f80afcba018db533616960"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:panel-432x420-normal:svg",
+      "component": "panel",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/panel-432x420-normal.svg",
+      "path": "assets/frostbound-reward/modules/panel/panel-432x420-normal.svg",
+      "format": "svg",
+      "bytes": 2837,
+      "sha256": "c29b9309d9aa7cde8b31293c0dd5675fb1b8b449d4fbf46fc7111d6474108d53"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-240x64-disabled:png",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-disabled.png",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-240x64-disabled.png",
+      "format": "png",
+      "bytes": 11812,
+      "sha256": "8d37b1ca7ff83a6755168b769ab4f90f7a237d9ff90c1b3c4ccb535cb7399900"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-240x64-disabled:svg",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-disabled.svg",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-240x64-disabled.svg",
+      "format": "svg",
+      "bytes": 3143,
+      "sha256": "661ab99bc4250f193250ed8036e6143bd5e97e2969d813fab717d45fe7d1a980"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-240x64-normal:png",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-normal.png",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-240x64-normal.png",
+      "format": "png",
+      "bytes": 11687,
+      "sha256": "a3511dfb324156f5d8a8f32c21b60c96ba25c7fc62aeedd191f22cc95a3387db"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-240x64-normal:svg",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-normal.svg",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-240x64-normal.svg",
+      "format": "svg",
+      "bytes": 3098,
+      "sha256": "369030d483a6c183a1c5c9330c9678623b4fb51fe14bb24e766b582da9a22f1f"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-240x64-pressed:png",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-pressed.png",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-240x64-pressed.png",
+      "format": "png",
+      "bytes": 11403,
+      "sha256": "6670a7b19bf6f9d68777a316381bc4de5b955a7a6b6cab618ec24c598521110d"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-240x64-pressed:svg",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-240x64-pressed.svg",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-240x64-pressed.svg",
+      "format": "svg",
+      "bytes": 3120,
+      "sha256": "1ecb3e52e0c9868abc06c06627a12662067a57085b349faa8685d45fa6d9f3a5"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-288x64-disabled:png",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-disabled.png",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-288x64-disabled.png",
+      "format": "png",
+      "bytes": 12454,
+      "sha256": "d13100b659391aaa8381ad053ab4875641937fa520050aabb9a5e3754d3fd640"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-288x64-disabled:svg",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-disabled.svg",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-288x64-disabled.svg",
+      "format": "svg",
+      "bytes": 3143,
+      "sha256": "0e1d4944e9cfa4d188fa64de81a8b72589138a5ddf884b2dca3729a285023737"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-288x64-normal:png",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-normal.png",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-288x64-normal.png",
+      "format": "png",
+      "bytes": 12337,
+      "sha256": "2fc54b750f97c8e7b7dd549ec4dd7180d1765efb142a76352c58eaab49846525"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-288x64-normal:svg",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-normal.svg",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-288x64-normal.svg",
+      "format": "svg",
+      "bytes": 3098,
+      "sha256": "af76b701eb3071f99c4a3ef39fe9299d6ce830fca8d51842cc397c77583346d5"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-288x64-pressed:png",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-pressed.png",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-288x64-pressed.png",
+      "format": "png",
+      "bytes": 12072,
+      "sha256": "f5e811c2654637524d95ee4559fad7f8d6bae782d9b8cc4fc5f29cc6a9692fca"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:primary-button-288x64-pressed:svg",
+      "component": "primary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/primary-button-288x64-pressed.svg",
+      "path": "assets/frostbound-reward/modules/primary-button/primary-button-288x64-pressed.svg",
+      "format": "svg",
+      "bytes": 3120,
+      "sha256": "4d5b4b03236c103079db74f99db60bae9ed1089013d238289a48582afe830eea"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-320x28-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-10.png",
+      "path": "assets/frostbound-reward/modules/progress/progress-320x28-10.png",
+      "format": "png",
+      "bytes": 3761,
+      "sha256": "5d8e1fb0f297d95056d06afd15de1f8ccdc051bf3917a4dcbb3da7e3cbf3e94d"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-320x28-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-10.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-320x28-10.svg",
+      "format": "svg",
+      "bytes": 2984,
+      "sha256": "cc8f2f0792f241fe490901200316cd5bfb1a76f722eebe5fe76367b794b51210"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-320x28-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-50.png",
+      "path": "assets/frostbound-reward/modules/progress/progress-320x28-50.png",
+      "format": "png",
+      "bytes": 4364,
+      "sha256": "04dfc47aec304ef705205b3760feeefed39510f65dccbc734eef6b01bcf23603"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-320x28-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-50.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-320x28-50.svg",
+      "format": "svg",
+      "bytes": 2987,
+      "sha256": "851ef690ff30f5464a03a329e3c6b1d02b6b21c974b737c922a504d1f198e38a"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-320x28-75:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-75.png",
+      "path": "assets/frostbound-reward/modules/progress/progress-320x28-75.png",
+      "format": "png",
+      "bytes": 4683,
+      "sha256": "d7825a28bab76dcd0415bec3dc9e7cfdee3a52001f16cfb0786bb538b13ddc82"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-320x28-75:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-75.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-320x28-75.svg",
+      "format": "svg",
+      "bytes": 2987,
+      "sha256": "2d225ac850c70d2289fdb07338de42095f8a6c16e63563b22ef4ae2d0c097342"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-320x28-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-90.png",
+      "path": "assets/frostbound-reward/modules/progress/progress-320x28-90.png",
+      "format": "png",
+      "bytes": 4838,
+      "sha256": "782fda0f82973cf9bb55b0ec04004499634cbc6e130b7b4675108b2f1922339b"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-320x28-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-320x28-90.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-320x28-90.svg",
+      "format": "svg",
+      "bytes": 2987,
+      "sha256": "cb60549c40798fc4e8837cd9abd89d1838a22bd56bbcfb485b92c430e77df8fa"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-432x28-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-10.png",
+      "path": "assets/frostbound-reward/modules/progress/progress-432x28-10.png",
+      "format": "png",
+      "bytes": 4006,
+      "sha256": "0d2c613b8eeb18c13bfeae7094a37707d8057810b5a2712206e32205adefb5b0"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-432x28-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-10.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-432x28-10.svg",
+      "format": "svg",
+      "bytes": 2984,
+      "sha256": "dc00eb5ecd5d53a7c354b837af9c6d6d7c77b73904ddb4831ef8cf1795bc291a"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-432x28-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-50.png",
+      "path": "assets/frostbound-reward/modules/progress/progress-432x28-50.png",
+      "format": "png",
+      "bytes": 4759,
+      "sha256": "a5dbc37bca445a3aa7649c2015120b380f04cfee065870e303760bb8b246f28c"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-432x28-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-50.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-432x28-50.svg",
+      "format": "svg",
+      "bytes": 2987,
+      "sha256": "d13f173a3b898166a850d6292577582dfa61106ece17e06d5b22afe1d940d3bb"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-432x28-75:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-75.png",
+      "path": "assets/frostbound-reward/modules/progress/progress-432x28-75.png",
+      "format": "png",
+      "bytes": 5193,
+      "sha256": "b50630d4dc175cffdb3f6cf2533fe185ab265bde6159d17d84417b2c312e1e37"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-432x28-75:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-75.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-432x28-75.svg",
+      "format": "svg",
+      "bytes": 2987,
+      "sha256": "fd316f7e437c68e01ac8a07f7000657dcc42f08338a3cec60bfe60f565925c92"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-432x28-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-90.png",
+      "path": "assets/frostbound-reward/modules/progress/progress-432x28-90.png",
+      "format": "png",
+      "bytes": 5363,
+      "sha256": "7f2e6bf7072f01de0e3f32eb25898f5b1890629d366230b4f182217d5349882a"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-432x28-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-432x28-90.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-432x28-90.svg",
+      "format": "svg",
+      "bytes": 2987,
+      "sha256": "aee14406b25e9fc17bce26d74ba940c33cd2636cb6fca294ef5a3e3a04dd4c9f"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-fill-320-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-fill-320-10.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-fill-320-10.svg",
+      "format": "svg",
+      "bytes": 1728,
+      "sha256": "21ecca4d99e4a9d65a2aae3b8d6d085d55ca2712c17970dc241a893085728bb8"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-fill-320-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-fill-320-50.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-fill-320-50.svg",
+      "format": "svg",
+      "bytes": 1731,
+      "sha256": "894459f5eb136340c5e9bb39de38047620fad7668757d4fb21f1d8f95711b103"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-fill-320-75:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-fill-320-75.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-fill-320-75.svg",
+      "format": "svg",
+      "bytes": 1731,
+      "sha256": "a1762aed83931f96232cf00ed9c1ca8f68934392e0884daac134919f961dbc49"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-fill-320-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-fill-320-90.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-fill-320-90.svg",
+      "format": "svg",
+      "bytes": 1731,
+      "sha256": "160df86bd637eafb780f7af07a247baa63ab29f69908713c79558bfab6029e00"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-fill-432-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-fill-432-10.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-fill-432-10.svg",
+      "format": "svg",
+      "bytes": 1728,
+      "sha256": "25085b22f6b1f6b47d6782a184566fbec46c1ec82e67e925d01912445f2ffabe"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-fill-432-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-fill-432-50.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-fill-432-50.svg",
+      "format": "svg",
+      "bytes": 1731,
+      "sha256": "db8e9bffdb13ebd10a71cabdc74c3b9af3bfca71a7893dfa611f9cf927de073c"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-fill-432-75:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-fill-432-75.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-fill-432-75.svg",
+      "format": "svg",
+      "bytes": 1731,
+      "sha256": "261de003514403b0d2546d3c50930d6d41beb3a3de12899f43425dd323cad4b2"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-fill-432-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-fill-432-90.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-fill-432-90.svg",
+      "format": "svg",
+      "bytes": 1731,
+      "sha256": "24c31ede1b8758e374efda5161020915e8871558f3456f71fb9fb2a83442d964"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-frame-320:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-frame-320.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-frame-320.svg",
+      "format": "svg",
+      "bytes": 1308,
+      "sha256": "a5772773047dea8f475c508335c16f2a360b881034b344cb88e1e7dac42bd4ba"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:progress-frame-432:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/progress-frame-432.svg",
+      "path": "assets/frostbound-reward/modules/progress/progress-frame-432.svg",
+      "format": "svg",
+      "bytes": 1308,
+      "sha256": "a9b8640ba57aa586cafd8fd242ef2aff21d4a9eb835bfdbe6eee0f29b4978512"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-160x52-disabled:png",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-disabled.png",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-160x52-disabled.png",
+      "format": "png",
+      "bytes": 10457,
+      "sha256": "c15442fd9327286f5f3822751142697e401262bcffc7fa212ff5bad0625017da"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-160x52-disabled:svg",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-disabled.svg",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-160x52-disabled.svg",
+      "format": "svg",
+      "bytes": 3190,
+      "sha256": "9b17578dcb352543d161471a8141d81234a2626254e6b0e118b0284d4e8c61d1"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-160x52-normal:png",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-normal.png",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-160x52-normal.png",
+      "format": "png",
+      "bytes": 10330,
+      "sha256": "3566f615e9cef0e02d547cc161ffeaa392f82886f9b215d44bdb5dd5ebbff9a3"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-160x52-normal:svg",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-normal.svg",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-160x52-normal.svg",
+      "format": "svg",
+      "bytes": 3145,
+      "sha256": "60f859d441ebb7d75f3fcd9a0feaa213e3eb6e5c22365e3673f7a684ed73e3b4"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-160x52-pressed:png",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-pressed.png",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-160x52-pressed.png",
+      "format": "png",
+      "bytes": 10143,
+      "sha256": "0df3ae5d9a7ecab48514ee1a2324a2fbcd461d53552ea8bebd5afb9093501c8c"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-160x52-pressed:svg",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-160x52-pressed.svg",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-160x52-pressed.svg",
+      "format": "svg",
+      "bytes": 3167,
+      "sha256": "e54a399f215b5e0d686fa0a8ccb41ca6040c72ad61da26967e2102a73fdbe430"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-200x52-disabled:png",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-disabled.png",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-200x52-disabled.png",
+      "format": "png",
+      "bytes": 11221,
+      "sha256": "30823784cef0e48cd33ed7dd631da6989302c75c438b8df97e7078df02e51335"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-200x52-disabled:svg",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-disabled.svg",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-200x52-disabled.svg",
+      "format": "svg",
+      "bytes": 3191,
+      "sha256": "651307e116e01d8d6d38f6707de704e1ede8b5050b9085210d6d3cc83c73fae7"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-200x52-normal:png",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-normal.png",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-200x52-normal.png",
+      "format": "png",
+      "bytes": 11067,
+      "sha256": "56cbae800cf3efefac8a6edc06afadd6c58ca9a9bde3a7ffdab3b979bcbf82a5"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-200x52-normal:svg",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-normal.svg",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-200x52-normal.svg",
+      "format": "svg",
+      "bytes": 3146,
+      "sha256": "5d211ff1c7c09f2f1171dfa7e9cb59931035aff8a45804825d2ad6ae8070bf1e"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-200x52-pressed:png",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-pressed.png",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-200x52-pressed.png",
+      "format": "png",
+      "bytes": 10886,
+      "sha256": "1c049a26613dfb1d1b0ed10ccb9bbfd8b5c7c1e38d900148a93f761d9d820269"
+    },
+    {
+      "assetId": "lnh-prism:asset:frostbound-reward:secondary-button-200x52-pressed:svg",
+      "component": "secondary-button",
+      "source": "docs/validation/evidence/m3-s4-frostbound-reconstruction/matrix/secondary-button-200x52-pressed.svg",
+      "path": "assets/frostbound-reward/modules/secondary-button/secondary-button-200x52-pressed.svg",
+      "format": "svg",
+      "bytes": 3168,
+      "sha256": "72085265011415f13fde3f6829c626530e5874bd30a95da4ca8aa4afa045884c"
+    }
+  ],
+  "usage": {
+    "svg": "Use SVG files when editable layers and content slots are required.",
+    "png": "Use matching PNG files as deterministic raster derivatives.",
+    "progress": "Progress frame and fill are separate modules; compose them at the target width and value.",
+    "extraction": "Copy any component directory independently; each file is self-describing through this manifest."
+  }
+}
