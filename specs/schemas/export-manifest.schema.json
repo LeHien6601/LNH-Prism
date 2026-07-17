@@ -1,16 +1,248 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://lnhgames.dev/lnh-prism/schemas/export-manifest/1.0",
+  "$id": "https://lnhgames.dev/lnh-prism/schemas/export-manifest/1.1",
   "title": "LNH Prism Export Manifest",
-  "type": "object",
-  "additionalProperties": false,
-  "required": ["schemaVersion", "assetId", "generatedAt", "renderer", "sources", "provenance", "outputs"],
-  "properties": {
-    "schemaVersion": { "const": "1.0" }, "assetId": { "$ref": "#/$defs/id" }, "generatedAt": { "type": "string", "format": "date-time" },
-    "renderer": { "type": "object", "additionalProperties": false, "required": ["name", "version"], "properties": { "name": { "type": "string", "minLength": 1 }, "version": { "$ref": "#/$defs/semver" } } },
-    "sources": { "type": "object", "additionalProperties": false, "required": ["style", "component", "materialPacks"], "properties": { "style": { "$ref": "#/$defs/versionedRef" }, "component": { "$ref": "#/$defs/versionedRef" }, "materialPacks": { "type": "array", "items": { "$ref": "#/$defs/versionedRef" } } } },
-    "provenance": { "type": "object", "additionalProperties": false, "required": ["sourceTreeSha256", "sourceFiles"], "properties": { "sourceTreeSha256": { "$ref": "#/$defs/sha256" }, "sourceFiles": { "type": "array", "minItems": 8, "items": { "type": "object", "additionalProperties": false, "required": ["role", "path", "sha256"], "properties": { "role": { "enum": ["style-spec", "component-spec", "material-pack", "material-source", "renderer-source", "renderer-version", "provenance-engine", "dependency-lock"] }, "path": { "type": "string", "pattern": "^(?!/)(?!.*\\\\).+" }, "sha256": { "$ref": "#/$defs/sha256" } } } } } },
-    "outputs": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["path", "format", "width", "height", "sha256"], "properties": { "path": { "type": "string", "pattern": "^(?!/)(?!.*\\\\).+" }, "format": { "enum": ["png", "svg"] }, "width": { "type": "integer", "minimum": 1 }, "height": { "type": "integer", "minimum": 1 }, "sha256": { "$ref": "#/$defs/sha256" }, "state": { "enum": ["normal", "pressed", "disabled", "selected", "locked", "highlighted"] }, "unity": { "type": "object", "additionalProperties": false, "properties": { "pixelsPerUnit": { "type": "number", "exclusiveMinimum": 0 }, "pivot": { "type": "object", "additionalProperties": false, "required": ["x", "y"], "properties": { "x": { "type": "number", "minimum": 0, "maximum": 1 }, "y": { "type": "number", "minimum": 0, "maximum": 1 } } }, "border": { "type": "object", "additionalProperties": false, "required": ["left", "right", "top", "bottom"], "properties": { "left": { "type": "number", "minimum": 0 }, "right": { "type": "number", "minimum": 0 }, "top": { "type": "number", "minimum": 0 }, "bottom": { "type": "number", "minimum": 0 } } }, "atlasGroup": { "type": "string", "minLength": 1 } } } } } }
-  },
-  "$defs": { "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{2,62}$" }, "semver": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?(\\+[0-9A-Za-z.-]+)?$" }, "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "versionedRef": { "type": "object", "additionalProperties": false, "required": ["id", "version"], "properties": { "id": { "$ref": "#/$defs/id" }, "version": { "$ref": "#/$defs/semver" }, "path": { "type": "string", "pattern": "^(?!/)(?!.*\\\\).+" }, "sha256": { "$ref": "#/$defs/sha256" } } } }
+  "oneOf": [
+    { "$ref": "#/$defs/manifest10" },
+    { "$ref": "#/$defs/manifest11" }
+  ],
+  "$defs": {
+    "manifest10": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "assetId", "generatedAt", "renderer", "sources", "provenance", "outputs"],
+      "properties": {
+        "schemaVersion": { "const": "1.0" },
+        "assetId": { "$ref": "#/$defs/id" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "renderer": { "$ref": "#/$defs/renderer" },
+        "sources": { "$ref": "#/$defs/sources10" },
+        "provenance": { "$ref": "#/$defs/provenance10" },
+        "outputs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/output10" } }
+      }
+    },
+    "manifest11": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "assetId", "generatedAt", "renderer", "sources", "provenance", "unityIntegration", "outputs"],
+      "properties": {
+        "schemaVersion": { "const": "1.1" },
+        "assetId": { "$ref": "#/$defs/id" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "renderer": { "$ref": "#/$defs/renderer" },
+        "sources": { "$ref": "#/$defs/sources11" },
+        "provenance": { "$ref": "#/$defs/provenance11" },
+        "unityIntegration": { "$ref": "#/$defs/unityIntegration" },
+        "outputs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/output11" } }
+      }
+    },
+    "renderer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "$ref": "#/$defs/semver" }
+      }
+    },
+    "sources10": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["style", "component", "materialPacks"],
+      "properties": {
+        "style": { "$ref": "#/$defs/versionedRef10" },
+        "component": { "$ref": "#/$defs/versionedRef10" },
+        "materialPacks": { "type": "array", "items": { "$ref": "#/$defs/versionedRef10" } }
+      }
+    },
+    "sources11": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["style", "component", "materialPacks"],
+      "properties": {
+        "style": { "$ref": "#/$defs/versionedRef11" },
+        "component": { "$ref": "#/$defs/versionedRef11" },
+        "materialPacks": { "type": "array", "items": { "$ref": "#/$defs/versionedRef11" } }
+      }
+    },
+    "provenance10": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceTreeSha256", "sourceFiles"],
+      "properties": {
+        "sourceTreeSha256": { "$ref": "#/$defs/sha256" },
+        "sourceFiles": { "type": "array", "minItems": 8, "items": { "$ref": "#/$defs/provenanceFile10" } }
+      }
+    },
+    "provenance11": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceTreeSha256", "sourceFiles"],
+      "properties": {
+        "sourceTreeSha256": { "$ref": "#/$defs/sha256" },
+        "sourceFiles": { "type": "array", "minItems": 8, "items": { "$ref": "#/$defs/provenanceFile11" } }
+      }
+    },
+    "provenanceFile10": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "path", "sha256"],
+      "properties": {
+        "role": { "$ref": "#/$defs/provenanceRole" },
+        "path": { "$ref": "#/$defs/legacyPath" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "provenanceFile11": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "path", "sha256"],
+      "properties": {
+        "role": { "$ref": "#/$defs/provenanceRole" },
+        "path": { "$ref": "#/$defs/repositoryPath" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "output10": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "format", "width", "height", "sha256"],
+      "properties": {
+        "path": { "$ref": "#/$defs/legacyPath" },
+        "format": { "enum": ["png", "svg"] },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "state": { "$ref": "#/$defs/state" },
+        "unity": { "$ref": "#/$defs/unity10" }
+      }
+    },
+    "output11": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "format", "width", "height", "sha256", "state", "unity"],
+      "properties": {
+        "path": { "$ref": "#/$defs/unityAssetPath" },
+        "format": { "const": "png" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "state": { "$ref": "#/$defs/state" },
+        "unity": { "$ref": "#/$defs/unity11" }
+      }
+    },
+    "unity10": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pixelsPerUnit": { "type": "number", "exclusiveMinimum": 0 },
+        "pivot": { "$ref": "#/$defs/pivot" },
+        "border": { "$ref": "#/$defs/legacyBorder" },
+        "atlasGroup": { "type": "string", "minLength": 1 }
+      }
+    },
+    "unity11": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetId", "metaGuid", "pixelsPerUnit", "pivot", "border", "atlasGroup", "spriteMode", "meshType", "filterMode", "wrapMode", "mipmaps", "alphaIsTransparency", "compression"],
+      "properties": {
+        "assetId": { "$ref": "#/$defs/unityAssetId" },
+        "metaGuid": { "$ref": "#/$defs/metaGuid" },
+        "pixelsPerUnit": { "type": "number", "exclusiveMinimum": 0 },
+        "pivot": { "$ref": "#/$defs/pivot" },
+        "border": { "$ref": "#/$defs/border" },
+        "atlasGroup": { "const": "ui-frostbound-reward" },
+        "spriteMode": { "const": "single" },
+        "meshType": { "const": "full-rect" },
+        "filterMode": { "const": "bilinear" },
+        "wrapMode": { "const": "clamp" },
+        "mipmaps": { "const": false },
+        "alphaIsTransparency": { "const": true },
+        "compression": { "const": "uncompressed" }
+      }
+    },
+    "unityIntegration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profileId", "editorVersion", "uiSystem", "renderPipeline", "referenceResolution", "targetPlatform", "orientation", "importerVersion"],
+      "properties": {
+        "profileId": { "const": "unity-6000-ugui-builtin-android-portrait" },
+        "editorVersion": { "const": "6000.3.18f1" },
+        "uiSystem": { "const": "ugui" },
+        "renderPipeline": { "const": "built-in" },
+        "referenceResolution": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["width", "height"],
+          "properties": { "width": { "const": 540 }, "height": { "const": 960 } }
+        },
+        "targetPlatform": { "const": "android" },
+        "orientation": { "const": "portrait" },
+        "importerVersion": { "$ref": "#/$defs/semver" }
+      }
+    },
+    "pivot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "legacyBorder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["left", "right", "top", "bottom"],
+      "properties": {
+        "left": { "type": "number", "minimum": 0 },
+        "right": { "type": "number", "minimum": 0 },
+        "top": { "type": "number", "minimum": 0 },
+        "bottom": { "type": "number", "minimum": 0 }
+      }
+    },
+    "border": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["left", "right", "top", "bottom"],
+      "properties": {
+        "left": { "type": "integer", "minimum": 0 },
+        "right": { "type": "integer", "minimum": 0 },
+        "top": { "type": "integer", "minimum": 0 },
+        "bottom": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "versionedRef10": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "version": { "$ref": "#/$defs/semver" },
+        "path": { "$ref": "#/$defs/legacyPath" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "versionedRef11": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "path", "sha256"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "version": { "$ref": "#/$defs/semver" },
+        "path": { "$ref": "#/$defs/repositoryPath" },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{2,62}$" },
+    "unityAssetId": { "type": "string", "pattern": "^lnh-prism:[a-z][a-z0-9-]*$", "maxLength": 160 },
+    "metaGuid": { "type": "string", "pattern": "^[a-f0-9]{32}$" },
+    "semver": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?(\\+[0-9A-Za-z.-]+)?$" },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "legacyPath": { "type": "string", "pattern": "^(?!/)(?!.*\\\\).+" },
+    "repositoryPath": { "type": "string", "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\\\)(?!.*(?:^|/)\\.\\.?(?:/|$))(?!.*//).+$" },
+    "unityAssetPath": { "type": "string", "pattern": "^Assets/LNHPrism/Generated/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*/[a-z][a-z0-9-]*\\.png$" },
+    "state": { "enum": ["normal", "pressed", "disabled", "selected", "locked", "highlighted"] },
+    "provenanceRole": { "enum": ["style-spec", "component-spec", "material-pack", "material-source", "renderer-source", "renderer-version", "provenance-engine", "dependency-lock"] }
+  }
 }

@@ -4,7 +4,7 @@
 
 Export generated UI assets with enough metadata to be imported and re-exported reliably in Unity.
 
-**Status:** M4 definition approved; M4-S1 contract implementation is agent-ready.
+**Status:** M4-S1 contract and stable-identity validation complete; M4-S2 deterministic Unity bundle generation is agent-ready.
 
 ## Approved V4 target
 
@@ -71,3 +71,4 @@ M4 V4: integrate a reward claim or shop purchase flow with normal/pressed/disabl
 | 2026-07-17 | Approved Frostbound Reward Claim on Unity `6000.3.18f1`, uGUI, Built-in pipeline, Editor and Android portrait as the bounded V4 target | Project owner / Codex |
 | 2026-07-17 | Drafted the M4 contract/importer/re-export implementation specification and V4 evidence/scoring rubric; queued human definition review | Codex |
 | 2026-07-17 | Approved Option A with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; opened M4-S1 | Project owner / Codex |
+| 2026-07-17 | Completed M4-S1 with dual-version manifest validation, a Unity registry contract, deterministic naming/GUID semantics, collision/drift rejection, fixtures, tests, and migration notes | Codex |

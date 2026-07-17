@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "profileId": "unity-6000-ugui-builtin-android-portrait",
+  "entries": [{
+    "unityAssetId": "lnh-prism:frostbound-reward-frostbound-reward-panel-normal-432x420",
+    "metaGuid": "d75846e2ecbf34b9390c07c4b72dc174",
+    "path": "Assets/LNHPrism/Generated/frostbound-reward/frostbound-reward-panel/frostbound-reward-frostbound-reward-panel-normal-432x420.png",
+    "outputSha256": "45a857cb27a076a7da3374eaafe1c038b0d4d800d8f80afcba018db533616960"
+  }]
+}

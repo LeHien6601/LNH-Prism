@@ -10,7 +10,7 @@
 | Validation target | V4 — Frostbound Reward Claim |
 | Decision source | [ADR-013](../decisions/ADR-013-m4-unity-reward-claim-baseline.md) |
 | Validation rubric | [V4 Unity Integration Rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md) |
-| Implementation state | 🔵 M4-S1 contract implementation is agent-ready |
+| Implementation state | 🟢 M4-S1 complete; M4-S2 Unity bundle generation is agent-ready |
 
 ## 1. Intended outcome
 
@@ -47,7 +47,7 @@ Out of scope: gameplay, backend, reward/economy rules, persistence, localization
 The existing export manifest `1.0` already defines output path, dimensions, hash, state, PPU, pivot, border, and atlas group. M4 must extend that contract as version `1.1` while preserving backward compatibility:
 
 1. Updated validators accept existing valid `1.0` manifests without migration and new `1.1` manifests.
-2. A manifest using M4 Unity integration fields declares `schemaVersion: "1.1"`. Version `1.1` introduces an optional root `unityIntegration` object and optional fields inside `outputs[].unity`; they become required by semantic validation for a bundle declaring the M4 Unity target.
+2. A manifest using M4 Unity integration fields declares `schemaVersion: "1.1"`. Version `1.1` requires the root `unityIntegration` object and complete Unity fields inside each PNG `outputs[].unity` object.
 3. The JSON Schema keeps unknown fields closed with `additionalProperties: false`; every extension is typed and tested.
 4. Existing asset IDs, approved component versions, source hashes, and renderer provenance remain unchanged.
 5. Unity-specific data cannot override source identity, output dimensions, or output SHA-256.
@@ -111,11 +111,11 @@ Timestamps such as `generatedAt` may change between runs, but they are excluded 
 | Progress | Independent frame and fill at widths `320` and `432`; state driver proves `10/50/75/90` without merging the parts |
 | Reward emblem | Normal and selected at `104 × 104` and `144 × 144`, plus the locked mapping below |
 
-### Proposed locked mapping for definition review
+### Approved locked mapping
 
 The locked emblem is a deterministic Unity presentation mapping, not a new AI or baked raster asset. It reuses the normal emblem Sprite and applies manifest-owned uGUI color `#6F8798AD` (`RGBA 111,135,152,173`), sets the enclosing `Selectable.interactable` to `false`, and displays a repository-owned vector-derived lock badge as a separate centered child Image. The badge has its own stable asset ID, source provenance, manifest entry, and Sprite settings. Selected lighting is absent while locked; no text is needed to distinguish the state.
 
-This additive mapping must be explicitly accepted or edited during the M4 definition review. Implementation cannot begin while it is undecided.
+The M4 definition review explicitly accepted this additive mapping.
 
 ## 7. Importer behavior
 
@@ -199,3 +199,4 @@ On 2026-07-17, the project owner approved Option A with two clarifications: the 
 |---|---|---|
 | 2026-07-17 | Drafted the M4 Unity export/import contract, stable identity rules, bounded slices, locked mapping, and validation requirements | Codex |
 | 2026-07-17 | Approved Option A with explicit manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; opened M4-S1 | Project owner / Codex |
+| 2026-07-17 | Completed M4-S1 dual-version schema, semantic identity/GUID/registry validation, canonical fixtures, negative tests, and migration notes; opened M4-S2 | Codex |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "sourceTreeSha256": "a254970f92f27ad8a10c7014dfb49a700fcf8c74b7741db820a71682c6b2b5b3",
+  "sourceTreeSha256": "22d04701593ad951c66718e65875d59ce8910c5a544f753749f51284705cb810",
   "sourceReceipts": [
     {
       "path": "docs/decisions/ADR-012-v3-frostbound-reward.md",
@@ -100,7 +100,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "0660d6071df74cb78582e1c9d507d8a8ad3c72e8e2478a7e57e4135a4db44f83"
+      "sha256": "3cd80c00870bc0bc339451d910922affe711269082a5c35e899ba48f5b9830c6"
     },
     {
       "path": "package-lock.json",
