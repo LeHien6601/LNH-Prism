@@ -12,6 +12,7 @@
     "test:renderer": "npm run build:renderer && node --test tests/renderer/*.test.mjs",
     "test:resolver": "npm run build:renderer && node --test tests/resolver/*.test.mjs",
     "test:materials": "npm run build:renderer && node --test tests/materials/*.test.mjs",
+    "test:analysis-contracts": "npm run build:renderer && node --test tests/analysis/*.test.mjs",
     "validate:contracts": "node tests/contracts/validate-contracts.mjs",
     "validate:showcase": "node scripts/validate-showcase.mjs",
     "prepare:m2-s2-evidence": "npm run build:renderer && node scripts/prepare-m2-s2-evidence.mjs",
@@ -20,7 +21,7 @@
     "prepare:v2-evidence": "npm run build:renderer && node scripts/prepare-v2-evidence.mjs",
     "validate:v2-evidence": "npm run build:renderer && node scripts/validate-v2-evidence.mjs",
     "validate:v1-evidence": "node scripts/validate-v1-evidence.mjs",
-    "validate": "npm run validate:contracts && npm run test:resolver && npm run test:materials && npm run test:renderer && npm run prepare:m2-s2-evidence && npm run validate:m2-s2-evidence && npm run prepare:m2-s4-evidence && npm run prepare:v2-evidence && npm run validate:v2-evidence && npm run prepare:showcase && npm run validate:showcase && npm run validate:v1-evidence"
+    "validate": "npm run validate:contracts && npm run test:analysis-contracts && npm run test:resolver && npm run test:materials && npm run test:renderer && npm run prepare:m2-s2-evidence && npm run validate:m2-s2-evidence && npm run prepare:m2-s4-evidence && npm run prepare:v2-evidence && npm run validate:v2-evidence && npm run prepare:showcase && npm run validate:showcase && npm run validate:v1-evidence"
   },
   "devDependencies": {
     "@types/node": "26.1.1",

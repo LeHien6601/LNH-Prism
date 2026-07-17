@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frostbound-reward-analysis",
+  "version": "0.1.0",
+  "status": "draft",
+  "concept": {
+    "receiptId": "v3-frostbound-reward-concept",
+    "sha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383"
+  },
+  "createdAt": "2026-07-17T10:00:00Z",
+  "analyzer": {
+    "type": "ai-assisted",
+    "tool": "codex-visual-analysis",
+    "settings": "single primary reference; observations separated from recommendations"
+  },
+  "proposals": [
+    {
+      "proposalId": "palette-ice-primary",
+      "category": "palette",
+      "observation": "The primary action and progress fill use a saturated ice-blue value against deep navy surfaces.",
+      "recommendation": {
+        "targetPath": "/tokens/colors/primary",
+        "value": "#2F9FEF",
+        "rationale": "Use a controlled token near the observed accent while retaining deterministic contrast tuning."
+      },
+      "evidence": [
+        {
+          "type": "source-region",
+          "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+          "region": { "x": 0.16, "y": 0.59, "width": 0.68, "height": 0.22 },
+          "note": "Progress fill and CLAIM button"
+        }
+      ],
+      "confidence": "high",
+      "critical": true,
+      "disposition": "pending"
+    },
+    {
+      "proposalId": "spacing-action-stack",
+      "category": "spacing",
+      "observation": "The primary and secondary actions form a centered vertical stack with a visibly larger primary control.",
+      "recommendation": {
+        "targetPath": "/tokens/spacing/actionGap",
+        "value": 24,
+        "rationale": "Normalize the observed separation to the approved logical canvas."
+      },
+      "evidence": [
+        {
+          "type": "source-region",
+          "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+          "region": { "x": 0.18, "y": 0.68, "width": 0.64, "height": 0.22 }
+        }
+      ],
+      "confidence": "medium",
+      "critical": true,
+      "disposition": "pending"
+    },
+    {
+      "proposalId": "material-frost-grain",
+      "category": "material",
+      "observation": "Low-contrast frost variation repeats across the panel, progress, and buttons without defining their silhouettes.",
+      "recommendation": {
+        "targetPath": "/materialCategories/frost-grain",
+        "value": { "role": "detail-overlay", "tileMode": "tile" }
+      },
+      "evidence": [
+        {
+          "type": "source-region",
+          "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+          "region": { "x": 0.08, "y": 0.1, "width": 0.84, "height": 0.82 }
+        }
+      ],
+      "confidence": "medium",
+      "critical": true,
+      "disposition": "pending"
+    },
+    {
+      "proposalId": "hierarchy-primary-action",
+      "category": "hierarchy",
+      "observation": "CLAIM dominates LATER through width, luminous fill, and edge contrast rather than label wording alone.",
+      "recommendation": {
+        "targetPath": "/componentRules/button/primaryEmphasis",
+        "value": { "minimumWidthRatio": 1.4, "minimumContrastDelta": 0.2 }
+      },
+      "evidence": [
+        {
+          "type": "source-region",
+          "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+          "region": { "x": 0.16, "y": 0.68, "width": 0.68, "height": 0.21 }
+        },
+        {
+          "type": "verbal",
+          "statement": "The approved V3 brief requires deterministic primary/secondary semantic differentiation."
+        }
+      ],
+      "confidence": "high",
+      "critical": true,
+      "disposition": "pending"
+    }
+  ]
+}

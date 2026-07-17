@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lnhgames.dev/lnh-prism/schemas/concept-receipt/1.0.0",
+  "title": "LNH Prism Concept Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "receiptVersion",
+    "id",
+    "sourceType",
+    "generatedAt",
+    "file",
+    "mediaType",
+    "width",
+    "height",
+    "sha256",
+    "targetLogicalCanvas",
+    "targetPresentationCanvas",
+    "usageBoundary",
+    "rights"
+  ],
+  "properties": {
+    "receiptVersion": { "const": "1.0.0" },
+    "id": { "$ref": "#/$defs/id" },
+    "sourceType": { "enum": ["ai-generated", "artist-provided", "imported"] },
+    "generationId": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "generatedAt": { "type": "string", "format": "date" },
+    "provider": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "modelSettings": { "type": "string", "minLength": 1 },
+    "sourceReference": { "type": "string", "minLength": 1 },
+    "file": { "type": "string", "pattern": "^(?!/)(?!.*\\\\).+" },
+    "mediaType": { "enum": ["image/png", "image/jpeg", "image/webp"] },
+    "width": { "type": "integer", "minimum": 1 },
+    "height": { "type": "integer", "minimum": 1 },
+    "sha256": { "$ref": "#/$defs/sha256" },
+    "targetLogicalCanvas": { "$ref": "#/$defs/canvas" },
+    "targetPresentationCanvas": { "$ref": "#/$defs/canvas" },
+    "usageBoundary": { "type": "string", "minLength": 20 },
+    "rights": { "type": "string", "minLength": 1 },
+    "prompt": { "type": "string", "minLength": 1 }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "sourceType": { "const": "ai-generated" } },
+        "required": ["sourceType"]
+      },
+      "then": {
+        "properties": {
+          "generationId": {},
+          "provider": {},
+          "modelSettings": {},
+          "prompt": {}
+        },
+        "required": ["generationId", "provider", "modelSettings", "prompt"]
+      },
+      "else": {
+        "properties": { "sourceReference": {} },
+        "required": ["sourceReference"]
+      }
+    }
+  ],
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{2,62}$" },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

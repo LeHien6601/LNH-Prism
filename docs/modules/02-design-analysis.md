@@ -46,6 +46,10 @@ For V3, analyze one new concept screen and rebuild its Button, Panel, and Progre
 
 The approved primary reference is the [Frostbound Reward Popup](../reference-briefs/V3_FROSTBOUND_REWARD.md). V3 adds a reusable reward-emblem container so material reuse is demonstrated across at least four component types while retaining the bounded Panel–Button–Progress core.
 
+## Current M3 implementation
+
+M3-S1 is complete. Versioned contracts now cover the concept receipt, source-annotated analysis proposals, and human review records. JSON Schema enforces required evidence, bounded annotation coordinates, typed confidence/disposition values, legal transition shapes, and the critical-proposal mapping gate; semantic validation enforces region containment, concept-hash binding, transition continuity, exact blocker lists, and immutable analysis/review linkage.
+
 ## Risks
 
 - False precision from visual inference: show confidence and allow “unknown.”
@@ -58,3 +62,4 @@ The approved primary reference is the [Frostbound Reward Popup](../reference-bri
 | 2026-07-15 | Initial module definition | Codex |
 | 2026-07-17 | Selected Frostbound Reward as the V3 concept and drafted the source-annotated, human-controlled analysis workflow | Project owner / Codex |
 | 2026-07-17 | Approved the M3 proposal/review model and unblocked M3-S1 contract implementation | Project owner / Codex |
+| 2026-07-17 | Completed M3-S1 contracts, representative Frostbound fixtures, semantic validation, and focused failure coverage | Codex |

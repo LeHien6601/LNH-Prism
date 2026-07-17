@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frostbound-reward-analysis-review",
+  "version": "0.1.0",
+  "analysis": {
+    "id": "frostbound-reward-analysis",
+    "version": "0.1.0"
+  },
+  "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+  "createdAt": "2026-07-17T11:00:00Z",
+  "reviews": [
+    {
+      "proposalId": "palette-ice-primary",
+      "critical": true,
+      "disposition": "accepted",
+      "transitions": [
+        {
+          "from": "pending",
+          "to": "accepted",
+          "reviewerId": "art-lead",
+          "at": "2026-07-17T11:05:00Z"
+        }
+      ],
+      "reviewer": {
+        "id": "art-lead",
+        "role": "art",
+        "reviewedAt": "2026-07-17T11:05:00Z"
+      }
+    },
+    {
+      "proposalId": "spacing-action-stack",
+      "critical": true,
+      "disposition": "edited",
+      "transitions": [
+        {
+          "from": "pending",
+          "to": "edited",
+          "reviewerId": "ui-lead",
+          "at": "2026-07-17T11:08:00Z"
+        }
+      ],
+      "reviewer": {
+        "id": "ui-lead",
+        "role": "ui",
+        "reviewedAt": "2026-07-17T11:08:00Z"
+      },
+      "reviewerNote": "Use the existing 8 px spacing scale and select 24 px as three units.",
+      "editedValue": 24
+    },
+    {
+      "proposalId": "material-frost-grain",
+      "critical": true,
+      "disposition": "accepted",
+      "transitions": [
+        {
+          "from": "pending",
+          "to": "accepted",
+          "reviewerId": "technical-lead",
+          "at": "2026-07-17T11:12:00Z"
+        }
+      ],
+      "reviewer": {
+        "id": "technical-lead",
+        "role": "technical",
+        "reviewedAt": "2026-07-17T11:12:00Z"
+      }
+    },
+    {
+      "proposalId": "hierarchy-primary-action",
+      "critical": true,
+      "disposition": "accepted",
+      "transitions": [
+        {
+          "from": "pending",
+          "to": "accepted",
+          "reviewerId": "product-owner",
+          "at": "2026-07-17T11:15:00Z"
+        }
+      ],
+      "reviewer": {
+        "id": "product-owner",
+        "role": "product",
+        "reviewedAt": "2026-07-17T11:15:00Z"
+      }
+    }
+  ],
+  "mappingGate": {
+    "status": "ready",
+    "blockingProposalIds": []
+  }
+}

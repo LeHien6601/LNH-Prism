@@ -14,15 +14,15 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
 | Materials | 🟢 V2 gate passed | Neon Market and Neon Alloy passed V2 at `93/100`; shared material reuse, propagation, structure, and traceability met every mandatory minimum |
-| AI analysis | 🟡 M3 implementation active | M3 definition is approved; implement M3-S1 analysis, annotation, and review contracts |
+| AI analysis | 🟡 M3-S1 complete | Concept, analysis, and review contracts enforce source evidence, normalized regions, legal review transitions, and critical-proposal mapping gates; M3-S2 is next |
 | Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟡 **M3 implementation** — Option A definition gate approved; M3-S1 may begin |
-| Next task | 🔵 **Implement M3-S1 analysis, annotation, and review contracts** · 🤖 Agent |
-| Next agent-ready task | 🔵 **M3-S1** — valid receipts pass; invalid evidence, regions, transitions, and unresolved critical proposals fail |
+| Active milestone | 🟡 **M3 implementation** — M3-S1 contracts complete; M3-S2 may begin |
+| Next task | 🔵 **Implement M3-S2 deterministic proposal normalizer and reviewer-editable review artifact** · 🤖 Agent |
+| Next agent-ready task | 🔵 **M3-S2** — observation/recommendation separation, confidence display, dispositions, and proposal-to-token lineage are test-covered |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -91,7 +91,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Select the V3 concept screen and bounded reconstruction target | 🧭 Product + 🎨 Art lead | 🟢 Complete | Option A approved: Frostbound Reward Popup at `540 × 960` logical / `1080 × 1920`, with bounded Panel–primary/secondary Button–Progress plus reward-emblem container reconstruction and no concept-pixel extraction; see [ADR-012](decisions/ADR-012-v3-frostbound-reward.md) |
 | P0 | Draft the M3 implementation specification and V3 review rubric | 🤖 Agent | 🟢 Complete | [Implementation specification](implementation/M3_FROSTBOUND_ANALYSIS_IMPLEMENTATION_SPEC.md) and [V3 rubric](validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md) define human-controlled proposals, source/confidence annotations, material intake, bounded reconstruction, evidence, scoring, and blockers |
 | P0 | Review and approve the M3 implementation specification and V3 rubric | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ technical leads | 🟢 Complete | Option A approved on 2026-07-17: proposal model, human controls, full reconstruction inventory, material boundary, ordered slices, V3-E01–V3-E10, `≥85` Pass, `83–84` Conditional Pass, and automatic blockers accepted as drafted |
-| P0 | Implement M3-S1 analysis, annotation, and review contracts | 🤖 Agent | 🔵 Agent-ready | Valid receipts pass; missing evidence, invalid regions, illegal status transitions, and unresolved critical proposals fail |
+| P0 | Implement M3-S1 analysis, annotation, and review contracts | 🤖 Agent | 🟢 Complete | Concept, analysis, and review schemas plus Frostbound fixtures validate; semantic tests reject missing evidence, escaped normalized regions, mismatched hashes, illegal/inconsistent transitions, unresolved critical mapping, duplicate/drifting review data, and analysis binding mismatches |
+| P0 | Implement M3-S2 deterministic proposal normalizer and reviewer-editable review artifact | 🤖 Agent | 🔵 Agent-ready | Observation/recommendation separation, confidence display, dispositions, and proposal-to-token lineage are test-covered |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -172,3 +173,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Confirmed the six V2 scores, recorded 🟢 Pass at `93/100` with no blockers, closed M2, and opened the human V3 target-selection decision | Project owner / Codex |
 | 2026-07-17 | Approved Frostbound Reward Option A, stored its concept receipt, drafted the M3 implementation specification and V3 rubric, and opened the human definition review | Project owner / Codex |
 | 2026-07-17 | Approved M3 definition Option A as drafted and unblocked M3-S1 analysis, annotation, and review contracts | Project owner / Codex |
+| 2026-07-17 | Completed M3-S1 concept/analysis/review contracts, fixtures, semantic validation, and focused rejection coverage; queued M3-S2 | Codex |
