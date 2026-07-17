@@ -37,15 +37,15 @@ Validation briefs, rubric, evidence collection, retrospective, corrective action
 
 ## Validation milestones
 
-- **V1 / M1:** reusable, high-quality, structurally layered SVG Primary Button, Panel, and Progress Bar for one live screen; no Unity integration requirement.
+- **V1 / M1:** reusable, high-quality, structurally layered SVG Primary Button, Panel, and Progress Bar for one live screen.
 - **V2 / M2:** themed shop/reward popup family using one material pack.
 - **V3 / M3:** concept-to-spec-to-components rebuild without component extraction.
-- **V4 / M4:** playable Unity reward/shop flow with exported states.
+- **M4-A / M4:** engine-neutral modular asset package inspected outside an engine project; every approved part is independently identifiable, traceable, and usable.
 - **V5 / M5:** release-like batch recreated from clean versioned inputs.
 
 ## Dependencies
 
-Every product module; art/UI reviewers; Unity sample project from M4 onward.
+Every product module; art/UI reviewers; the versioned package, renderer, and evidence inputs for the active milestone.
 
 ## Acceptance criteria
 
@@ -70,9 +70,9 @@ The 2026-07-17 guided evidence review scored V2 at `93/100`. Every dimension met
 
 The 2026-07-17 human fidelity review scored Frostbound V3 at `94/100`. Every mandatory dimension minimum was met; automated and human review found no blocker or defect. Human control and traceability scored `5/5`; simplified ornament, emblem detail, and atmosphere kept intentional style fidelity at its accepted minimum `4/5` and remain non-blocking. M3 is complete.
 
-## Current V4 definition status
+## Current M4 status
 
-The Frostbound Reward Claim and Unity `6000.3.18f1` uGUI/Built-in baseline are approved. On 2026-07-17, Option A approved the [M4 implementation specification](../implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md) and [V4 integration rubric](../validation/V4_UNITY_INTEGRATION_RUBRIC.md) with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming. V4-E01–V4-E10, weighted scoring, automatic blockers, and revalidation are fixed; M4-S1 may begin, but evidence scoring remains gated until implementation is complete.
+ADR-014 sets M4's accepted boundary as engine-neutral modular asset delivery. M4-A1 passed on 2026-07-17 with the tracked Frostbound package: 62 independently extractable SVG/PNG modules, stable IDs, output receipts, and use guidance. No engine project, importer, runtime flow, or device build is required for this validation milestone.
 
 ## Change history
 
@@ -101,3 +101,4 @@ The Frostbound Reward Claim and Unity `6000.3.18f1` uGUI/Built-in baseline are a
 | 2026-07-17 | Recorded V3 Pass at `94/100`, no blockers or defects, and completed M3 | Project owner / Codex |
 | 2026-07-17 | Drafted the V4 Unity integration evidence package, scoring, blockers, and definition-review checklist | Codex |
 | 2026-07-17 | Approved V4 definition Option A with manifest versioning and canonical naming clarifications; unblocked M4-S1 | Project owner / Codex |
+| 2026-07-17 | Reconciled active validation guidance with ADR-014's engine-neutral M4 package boundary; historical Unity entries remain for audit only | Codex |

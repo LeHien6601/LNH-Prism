@@ -9,7 +9,7 @@
 
 ## Context
 
-LNH Prism needs an editable, deterministic source representation for the V1 Primary Button, Panel, and Progress Bar, plus reproducible raster output for mobile-game handoff. The stack must support the approved Neon Core baseline, preserve independent layers, fit the existing Node-based contract validation workflow, and leave Unity metadata in versioned manifests.
+LNH Prism needs an editable, deterministic source representation for the V1 Primary Button, Panel, and Progress Bar, plus reproducible raster output for mobile-game handoff. The stack must support the approved Neon Core baseline, preserve independent layers, fit the existing Node-based contract validation workflow, and carry portable IDs, dimensions, state, slice, hash, and provenance metadata. ADR-014 later fixes the final delivery boundary as engine-neutral modular assets.
 
 ## Decision
 
@@ -34,7 +34,7 @@ PNG outputs + JSON export manifest
 - JSON remains the authority for IDs, state, dimensions, pivot, 9-slice border, source versions, hashes, and provenance. SVG does not replace contracts.
 - Build V1 visual effects from explicit, named layers whenever practical: fill, stroke, outer shadow, inner shadow, highlight, and grain. This preserves debuggability and avoids hidden baked effects.
 - SVG filters are allowed only after a golden-image test proves their output is stable on the pinned backend. Filter-heavy or raster-material components may be delivered as PNG while retaining their JSON/SVG source provenance.
-- Unity-specific metadata is emitted in manifests now; a Unity importer adapter is deferred to M4.
+- Export metadata remains portable and deterministic; engine-specific import behavior is outside the accepted delivery boundary recorded in ADR-014.
 
 ## Consequences
 
@@ -51,7 +51,7 @@ PNG outputs + JSON export manifest
 |---|---|
 | SVG renderer/filter behavior can vary | Pin `@resvg/resvg-js`; add golden-image coverage before relying on filters. |
 | Some painterly materials are not good SVG candidates | Mask normalized raster materials in deterministic layers and bake final PNG. |
-| SVG alone does not configure Unity imports | Keep manifest metadata complete; implement importer/configuration support in M4. |
+| SVG alone does not describe every downstream runtime | Keep portable manifest metadata complete and document extraction/use guidance next to the assets. |
 | Two visual artifacts can drift | Generate SVG and PNG from the same render request; record hashes and renderer version in the manifest. |
 
 ## Required M1 proof
@@ -74,7 +74,7 @@ The first agent-ready renderer task must prove all of the following before addit
 ## Links
 
 - [Component renderer module](../modules/03-component-renderer.md)
-- [Unity export module](../modules/06-unity-export.md)
+- [Engine-neutral modular asset delivery decision](ADR-014-engine-neutral-modular-asset-delivery.md)
 - [V1 Neon Core reference](../reference-briefs/V1_NEON_CORE.md)
 - [V1 component acceptance briefs](../acceptance-briefs/V1_CORE_COMPONENTS.md)
 
@@ -83,3 +83,4 @@ The first agent-ready renderer task must prove all of the following before addit
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-15 | Accepted TypeScript, SVG, resvg, and JSON-manifest stack for V1 | Project owner |
+| 2026-07-17 | Reconciled active export-stack guidance with ADR-014's engine-neutral delivery boundary and removed the deleted Unity-module link | Codex |

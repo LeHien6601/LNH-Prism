@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🟡 **M5 production hardening** — M5-A2 reproducibility/regression validation passed; post-A2 hardening scope remains to be decided |
-| Next task | 🔵 **Remove retired Unity workflow references from active governance** · 🤖 Agent |
-| Next agent-ready task | 🔵 **R-002** — update active validation/governance guidance to the engine-neutral delivery boundary and repair dead links |
+| Next task | 🟣 **Decide export-manifest compatibility migration** · 🧭 Project owner + 🛠️ Technical lead |
+| Next agent-ready task | None — the next item requires the project-owner compatibility decision |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -101,7 +101,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Define and assemble the engine-neutral modular asset handoff package | 🤖 Agent | 🟢 Complete | `assets/frostbound-reward` contains 62 independently extractable SVG/PNG modules across panel, primary button, secondary button, progress, and emblem; manifest receipts, unique IDs, and package validation pass |
 | P0 | Define the M5 production-hardening validation batch | 🤖 Agent | 🟢 Complete | [M5 plan](implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md) and baseline receipt define clean-workspace reproduction, strict receipt/golden checks, five-run timing, size/matrix controls, and readability evidence |
 | P0 | Implement and run the M5 Frostbound reproducibility/regression batch | 🤖 Agent | 🟢 Complete | Passing receipt records clean-workspace assembly, strict byte receipts, five-run timing, package size, state/part matrix, and four target-scale readability views |
-| P1 | Remove retired Unity workflow references from active governance (R-002) | 🤖 Agent | 🔵 Agent-ready | Active validation/governance guidance follows ADR-014's engine-neutral boundary and contains no dead Unity-module links; historical records remain auditable |
+| P1 | Remove retired Unity workflow references from active governance (R-002) | 🤖 Agent | 🟢 Complete | Active validation/governance guidance follows ADR-014's engine-neutral boundary; historical records remain auditable and dead Unity-module links are removed |
+| P1 | Decide export-manifest compatibility migration (R-004) | 🧭 Project owner + 🛠️ Technical lead | 🟣 Human decision | Choose archival legacy validation or a versioned engine-neutral successor with migration/deprecation rules |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -194,3 +195,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Defined the `Review:` weakness-assessment record and `Apply Review:` one-task remediation workflow | Codex |
 | 2026-07-17 | Applied review R-001: aligned M4 completion and M5-A2 next-task status across active project controls | Codex |
 | 2026-07-17 | Completed M5-A2 with clean-workspace byte reproduction, five-run timing, matrix verification, and four readability receipts; queued R-002 | Codex |
+| 2026-07-17 | Completed review R-002: aligned active validation governance with ADR-014 and removed dead Unity-module navigation | Codex |
