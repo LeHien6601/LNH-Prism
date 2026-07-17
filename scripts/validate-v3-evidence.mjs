@@ -46,4 +46,4 @@ const report = await readJson("V3-E09-test-report.json");
 report.status = "passed";
 report.validatedAt = "2026-07-17";
 await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
-console.log("validated V3-E01 through V3-E10: approvals, 26-variant matrix, 54 output receipts, review views, material reuse, provenance, no-pixel boundary, and unscored preflight");
+console.log(`validated V3-E01 through V3-E10: approvals, 26-variant matrix, 54 output receipts, review views, material reuse, provenance, no-pixel boundary, and ${preflight.scoringPerformed ? "completed human review" : "unscored preflight"}`);

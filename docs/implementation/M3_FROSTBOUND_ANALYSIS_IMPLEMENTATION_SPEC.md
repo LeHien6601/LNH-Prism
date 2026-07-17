@@ -10,7 +10,7 @@
 | Validation target | V3 — Frostbound Reward Popup |
 | Decision source | [ADR-012](../decisions/ADR-012-v3-frostbound-reward.md) |
 | Product/art reference | [V3 reference brief](../reference-briefs/V3_FROSTBOUND_REWARD.md) |
-| Implementation state | M3-S5 evidence preparation complete; human V3 fidelity review pending |
+| Implementation state | 🟢 Complete — V3 Pass at `94/100` |
 
 ## 1. Intended outcome
 
@@ -124,7 +124,7 @@ Prepare V3-E01 through V3-E10 exactly as defined in [the V3 rubric](../validatio
 
 On 2026-07-17, the project owner approved Option A as drafted. The approval covers the proposal model, human-control points, full Panel–Button–Progress plus reward-emblem-container inventory, material boundary, ordered M3-S1 through M3-S5 slices, V3-E01 through V3-E10, scoring thresholds, and automatic blockers.
 
-M3-S1 through M3-S5 evidence preparation are complete. The approved inputs drive five versioned component specs, a deterministic 26-variant family, independent progress frame/fill outputs, hierarchy and selected-state proof, a `540 × 960` portrait reconstruction, and an evidence-only annotated concept comparison. V3-E01 through V3-E10 add consolidated review views, approved-input and material audits, source and 54-output receipts, no-concept-leakage validation, an unscored review record, defect/revalidation templates, and a passing automated preflight. The human V3 fidelity review remains required and no score or gate result has been inferred.
+M3-S1 through M3-S5 are complete. The approved inputs drive five versioned component specs, a deterministic 26-variant family, independent progress frame/fill outputs, hierarchy and selected-state proof, a `540 × 960` portrait reconstruction, and an evidence-only annotated concept comparison. V3-E01 through V3-E10 bind consolidated review views, approved-input and material audits, source and 54-output receipts, no-concept-leakage validation, and preserved defect/revalidation history. On 2026-07-17, the human review recorded 🟢 Pass at `94/100`; every mandatory minimum was met and no blocker or defect remained.
 
 ## Change history
 
@@ -138,3 +138,4 @@ M3-S1 through M3-S5 evidence preparation are complete. The approved inputs drive
 | 2026-07-17 | Approved M3-S3 Option A as drafted, preserved pending history, recorded accepted proposal/package lineage, approved `frost-crystal-materials@0.1.0`, and authorized M3-S4 | Project owner / Codex |
 | 2026-07-17 | Completed M3-S4 approved Frostbound specs, deterministic 26-variant family, independent progress parts, portrait reconstruction, hierarchy/selected proof, and annotated comparison evidence | Codex |
 | 2026-07-17 | Prepared the complete unscored V3-E01–V3-E10 evidence package and passing automated preflight for the human fidelity gate | Codex |
+| 2026-07-17 | Recorded the human V3 review at `94/100`, no blockers or defects, and completed M3 | Project owner / Codex |

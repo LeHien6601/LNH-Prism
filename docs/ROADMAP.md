@@ -45,7 +45,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** 🟢 Passed on 2026-07-17 at `93/100` — one style change updated all six components consistently, every mandatory dimension minimum was met, and no blocker remained.
 
-## 🟡 M3 — AI-assisted design analysis and material intake
+## 🟢 M3 — AI-assisted design analysis and material intake
 
 **Goal:** use AI for acceleration while retaining human-controlled specifications.
 
@@ -60,7 +60,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Definition gate:** 🟢 Approved on 2026-07-17 — Option A accepted the [M3 implementation specification](implementation/M3_FROSTBOUND_ANALYSIS_IMPLEMENTATION_SPEC.md) and [V3 review rubric](validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md) as drafted; M3-S1 may begin.
 
-**Exit gate:** human reviewers can correct AI suggestions efficiently; no AI suggestion bypasses spec review; material reuse is demonstrated on at least four components.
+**Exit gate:** 🟢 Passed on 2026-07-17 at `94/100` — human reviewers controlled every critical proposal, no suggestion bypassed spec review, one traceable material pack served four component types, every mandatory dimension minimum was met, and no blocker or defect remained.
 
 ## ⚪ M4 — Unity export and integration
 
@@ -116,3 +116,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Recorded V2 Pass at `93/100`, completed M2, and opened M3 target definition | Project owner / Codex |
 | 2026-07-17 | Selected Frostbound Reward for V3 and drafted the M3 implementation specification and concept-reconstruction rubric for human definition review | Project owner / Codex |
 | 2026-07-17 | Approved M3 definition Option A as drafted and opened M3-S1 contract implementation | Project owner / Codex |
+| 2026-07-17 | Passed V3 at `94/100` with every mandatory minimum met and no blockers or defects; completed M3 and opened M4 target definition | Project owner / Codex |

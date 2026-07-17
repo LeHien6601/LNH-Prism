@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
-  "status": "open-for-human-review",
+  "status": "review-complete",
   "defects": [],
   "corrections": [],
   "revalidations": [],
-  "note": "No automated preflight defects are known. Human review may append defects; empty does not imply a V3 decision."
+  "note": "The 2026-07-17 human review recorded no defects or blockers. Simplified ornament, emblem detail, and atmosphere are a non-blocking observation."
 }

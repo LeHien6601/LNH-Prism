@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "id": "v3-frostbound-reward",
-  "status": "ready-for-human-review",
+  "status": "review-complete",
   "evidence": {
     "V3-E01": [
       "docs/decisions/ADR-012-v3-frostbound-reward.md",

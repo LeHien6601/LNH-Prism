@@ -66,9 +66,9 @@ The original 2026-07-16 review scored V1 at `91/100` and failed because Traceabi
 
 The 2026-07-17 guided evidence review scored V2 at `93/100`. Every dimension met its mandatory minimum, Traceability and reproducibility scored the required `5/5`, and no automatic blocker remained. The rubric-computed outcome is 🟢 Pass. Non-blocking V2-N001 and V2-N002 inform the M3 target/specification; V2-N003 remains assigned to M5 production hardening.
 
-## Current V3 definition status
+## Current V3 gate result
 
-The project owner selected the Frostbound Reward Popup at the existing portrait-mobile scale and approved M3 definition Option A on 2026-07-17. M3-S1 through M3-S5 evidence preparation are complete. V3-E01–V3-E10 now bind the human-controlled proposal lineage, seven approved inputs, 26 deterministic variants, 54 output receipts, portrait and consolidated comparison views, four-type material reuse, provenance, no-pixel audits, and an unscored review record. Automated preflight passes; the Product/Art/UI/Technical fidelity review is the next human decision.
+The 2026-07-17 human fidelity review scored Frostbound V3 at `94/100`. Every mandatory dimension minimum was met; automated and human review found no blocker or defect. Human control and traceability scored `5/5`; simplified ornament, emblem detail, and atmosphere kept intentional style fidelity at its accepted minimum `4/5` and remain non-blocking. M3 is complete and the M4 Unity validation flow/version decision is next.
 
 ## Change history
 
@@ -94,3 +94,4 @@ The project owner selected the Frostbound Reward Popup at the existing portrait-
 | 2026-07-17 | Approved V3 Option A evidence, scoring, blockers, and review controls; unblocked M3-S1 | Project owner / Codex |
 | 2026-07-17 | Added M3-S4's 26-variant Frostbound matrix, target portrait render, selected/hierarchy proof, independent progress outputs, annotated concept comparison, and automated no-concept production audit | Codex |
 | 2026-07-17 | Prepared V3-E01–V3-E10, an unscored scorecard, defect/revalidation templates, consolidated phone and semantic comparison views, source/output receipts, and passing human-gate preflight | Codex |
+| 2026-07-17 | Recorded V3 Pass at `94/100`, no blockers or defects, and completed M3 | Project owner / Codex |

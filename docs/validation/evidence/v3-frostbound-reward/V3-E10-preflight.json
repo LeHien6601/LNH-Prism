@@ -1,7 +1,9 @@
 {
   "schemaVersion": "1.0",
-  "status": "ready-for-human-review",
+  "status": "review-complete",
   "blockers": [],
-  "scoringPerformed": false,
-  "defectCount": 0
+  "scoringPerformed": true,
+  "defectCount": 0,
+  "weightedScore": 94,
+  "gateDecision": "pass"
 }

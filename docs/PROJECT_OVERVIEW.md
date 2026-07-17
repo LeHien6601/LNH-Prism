@@ -14,15 +14,15 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
 | Materials | 🟢 V2 gate passed | Neon Market and Neon Alloy passed V2 at `93/100`; shared material reuse, propagation, structure, and traceability met every mandatory minimum |
-| AI analysis | 🟣 M3-S5 evidence ready | V3-E01–V3-E10, source/output receipts, consolidated review views, an unscored record, defect log, and automated preflight are ready for the human gate |
-| Unity export | ⚪ Deferred to M4 | M1/V1 requires no Unity integration; M4 owns importer, runtime, slicing, pivot, and re-export validation |
+| AI analysis | 🟢 M3/V3 gate passed | Frostbound passed V3 at `94/100`; every mandatory minimum was met, no blocker or defect remained, and simplified ornamental fidelity is a non-blocking observation |
+| Unity export | 🟣 M4 definition pending | Select the Unity validation flow and supported Unity baseline before drafting the bounded implementation specification and V4 rubric |
 | Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟣 **M3 human gate** — V3 evidence preflight passes; Product/Art/UI/Technical scoring is required |
-| Next task | 🟣 **Conduct the M3-S5 V3 human fidelity review** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | 🔴 **None** — the human V3 fidelity review must record scores, blockers, defects, and a gate outcome |
+| Active milestone | 🟣 **M4 definition** — M3/V3 passed; Unity target flow and supported version require human selection |
+| Next task | 🟣 **Select the M4 Unity validation flow and supported Unity baseline** · 🧭 Product + 🛠️ Technical + 🎮 Unity leads |
+| Next agent-ready task | 🔴 **None** — the M4 target flow and supported Unity version must be selected before specification drafting |
 | Last reviewed | 2026-07-17 |
 | Project owner | 🧭 To be assigned |
 
@@ -49,7 +49,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M0 | Contracts, repository, reference brief | 🟢 Architecture review accepted |
 | 🟢 | M1 | MVP renderer and three core templates | 🟢 V1 Pass — `93/100` |
 | 🟢 | M2 | Tokens, variants, states, material packs | 🟢 V2 Pass — `93/100` |
-| 🟡 | M3 | AI-assisted analysis and material intake | 🟣 Human-reviewed fidelity test |
+| 🟢 | M3 | AI-assisted analysis and material intake | 🟢 V3 Pass — `94/100` |
 | ⚪ | M4 | Unity export and import metadata | 🟣 Unity integration test |
 | ⚪ | M5 | Production hardening and regression suite | 🟣 Production readiness review |
 | ⚪ | M6 | Optional showcase scaling and workflow review | 🟣 Operations review |
@@ -97,7 +97,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Review and approve M3-S3 Frostbound analysis decisions and draft package | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved on 2026-07-17: all four critical proposals, three material sources and normalization settings, four-type reuse plan, and five-item component inventory accepted as drafted; M3-S4 unblocked |
 | P0 | Implement M3-S4 approved Frostbound component family and comparison view | 🤖 Agent | 🟢 Complete | Five approved specs drive a deterministic 26-variant matrix, two panel/button/progress/emblem sizes, independent progress parts at `10/50/75/90`, selected-state and primary/secondary proof, portrait render, and annotated comparison with no concept references in production outputs |
 | P0 | Prepare M3-S5 V3 evidence package and preflight | 🤖 Agent | 🟢 Complete | V3-E01–V3-E10, unscored review record, defect log, 54 output receipts, source provenance, four-type material audit, consolidated review views, and automated preflight are ready for scoring |
-| P0 | Conduct the M3-S5 V3 human fidelity review | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Evidence preflight passes; reviewers record dimension scores, blockers, defects, gate outcome, and any revalidation |
+| P0 | Conduct the M3-S5 V3 human fidelity review | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A recorded `94/100`; every mandatory minimum met, no blocker or defect remained, and V3 passed on 2026-07-17 |
+| P0 | Select the M4 Unity validation flow and supported Unity baseline | 🧭 Product + 🛠️ Technical + 🎮 Unity leads | 🟣 Human decision | Choose reward claim or shop purchase, target Unity version, render pipeline, and sample-project boundary so the M4 specification and V4 rubric can be drafted |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -184,3 +185,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Approved M3-S3 Option A as drafted, recorded accepted proposal/material/reuse/inventory lineage, and unblocked M3-S4 | Project owner / Codex |
 | 2026-07-17 | Completed M3-S4 with five approved specs, deterministic Frostbound recipes, a 26-variant matrix, independent progress parts, portrait reconstruction, and annotated concept comparison; queued V3 evidence preparation | Codex |
 | 2026-07-17 | Prepared V3-E01–V3-E10 with approved-input, matrix, material, provenance, and no-pixel audits; added consolidated phone/light-dark/state/hierarchy views, an unscored review record, defect log, and passing automated preflight; opened the human V3 gate | Codex |
+| 2026-07-17 | Confirmed V3 Option A at `94/100`, met every mandatory minimum with no blockers or defects, closed M3, and opened the M4 Unity target/baseline decision | Project owner / Codex |

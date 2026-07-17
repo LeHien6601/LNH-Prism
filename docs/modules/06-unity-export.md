@@ -4,6 +4,8 @@
 
 Export generated UI assets with enough metadata to be imported and re-exported reliably in Unity.
 
+**Status:** M4 definition pending. The next human decision selects the V4 reward/shop flow and supported Unity baseline before implementation specification work begins.
+
 ## Scope
 
 PNG/SVG selection, state naming, pivots, pixels per unit, 9-slice borders, atlas grouping, manifests, importer configuration, and reference-safe regeneration.
@@ -49,3 +51,4 @@ M4 V4: integrate a reward claim or shop purchase flow with normal/pressed/disabl
 |---|---|---|
 | 2026-07-15 | Initial module definition | Codex |
 | 2026-07-15 | Aligned V1 source/output policy with approved SVG/resvg stack | Project owner |
+| 2026-07-17 | Opened M4 definition after V3 passed; queued Unity validation-flow and supported-version selection | Project owner / Codex |
