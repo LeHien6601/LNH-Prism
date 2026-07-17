@@ -4,7 +4,7 @@
 
 Make output reproducible, testable, performant, and safe to evolve across many assets and styles.
 
-**Status:** M5-A2 reproducibility/regression batch complete; post-A2 hardening slices remain deferred pending scope review.
+**Status:** M5-A2 reproducibility/regression batch complete; export-manifest compatibility policy accepted in ADR-015; post-A2 hardening now starts with the engine-neutral manifest successor.
 
 ## Scope
 
@@ -45,6 +45,8 @@ M5 V5: rebuild one feature’s entire UI asset set in a clean workspace from ver
 
 The versioned [M5 production-hardening validation plan](../implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md) fixes Frostbound Reward as the first release-like target. M5-A2 passed with the 62-file, 436,565-byte package baseline, clean-workspace reproduction, strict receipts, five-run performance measurement, state/part matrix verification, and four target-scale readability views. The receipt is `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`.
 
+ADR-015 approves the compatibility policy for export manifests: legacy `1.0`/`1.1` manifests remain archival-only for historical evidence, while live production output must move to a versioned engine-neutral successor.
+
 ## Risks
 
 - Golden tests become noisy across platforms: standardize render environment and maintain justified tolerances.
@@ -57,3 +59,4 @@ The versioned [M5 production-hardening validation plan](../implementation/M5_PRO
 | 2026-07-15 | Initial module definition | Codex |
 | 2026-07-17 | Defined M5-A1 Frostbound production-hardening batch, baseline receipt, reproducibility contract, regression policy, and M5-A2 exit conditions | Codex |
 | 2026-07-17 | Completed M5-A2 reproducibility/regression validation with a passing receipt and four target-scale readability views | Codex |
+| 2026-07-17 | Accepted ADR-015 export-manifest compatibility policy and queued the engine-neutral manifest successor | Project owner / Codex |

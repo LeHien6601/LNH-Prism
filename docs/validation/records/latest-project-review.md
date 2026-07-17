@@ -11,12 +11,12 @@
 | Validation run | `npm run validate:contracts`; `npm run validate:asset-package` |
 | Validation result | Passed: contracts validated including missing-provenance rejection; 62 modular files validated across five components |
 
-Refresh note: Recommendation R-001 was applied in this run. Finding F-001 is resolved; findings F-002 through F-005 remain open.
+Refresh note: R-001, R-002, R-003, and R-004 have been resolved. R-004 selected Option A: legacy `1.0`/`1.1` export manifests are archival-only, and live outputs move to a versioned engine-neutral successor.
 
 ## Current status
 
 - M1/V1, M2/V2, M3/V3, and M4 modular asset delivery are recorded as passed/completed.
-- M5-A1 and M5-A2 are complete. R-002 is complete. The next item is the Human decision R-004: export-manifest compatibility migration.
+- M5-A1 and M5-A2 are complete. R-002 and R-004 are complete. The next item is the Agent-ready task to implement an engine-neutral export-manifest successor.
 - The Frostbound package is engine-neutral and validates as 62 modular SVG/PNG files across Panel, Primary Button, Secondary Button, Progress, and Emblem.
 
 ## Findings
@@ -25,9 +25,9 @@ Refresh note: Recommendation R-001 was applied in this run. Finding F-001 is res
 |---|---|---|---|---|---|---|---|---|
 | F-001 | P1 | Status | Fact | Resolved by R-001: active overview and Module 06 now identify M4 as passed and M5-A2 as next. | Previously caused status/task-selection ambiguity; no longer present in active statements. | Completed: align active status/next-task statements with the completed M4 package and current M5-A2 task. | None. | Complete |
 | F-002 | P1 | Workflow / status | Fact | Resolved by R-002: active Module 05 and ADR-009 now state the engine-neutral M4 boundary; dead Unity-module navigation is removed; remaining Unity mentions are historical change-log entries. | Previously contradicted ADR-014 and could reintroduce retired scope; no longer present in active guidance. | Completed: replace current-scope Unity workflow/dependency statements with engine-neutral M4 package validation and repair dead links. | R-001 complete. | Complete |
-| F-003 | P1 | Workflow | Fact | `specs/schemas/export-manifest.schema.json` still defines required Unity 1.1 integration/import metadata and Unity asset paths; V1 renderer manifests/types/tests still emit and assert `unity` fields. | Retired engine assumptions remain in the live output contract, increasing maintenance and risking accidental engine-coupled deliverables. | Plan a backward-compatible engine-neutral export-manifest revision and migrate live renderer/tests/examples to it; retain legacy validation only when needed for historic evidence. | Requires an explicit compatibility decision because schema/version behavior changes. | Human decision |
+| F-003 | P1 | Workflow | Fact | `specs/schemas/export-manifest.schema.json` still defines required Unity 1.1 integration/import metadata and Unity asset paths; V1 renderer manifests/types/tests still emit and assert `unity` fields. R-004 approved Option A on 2026-07-17. | Retired engine assumptions remain in the live output contract until the successor is implemented, but the compatibility policy is now decided. | Implement a backward-compatible engine-neutral export-manifest revision and migrate live renderer/tests/examples to it; retain legacy validation only for historic evidence. | R-004 complete. | Agent-ready |
 | F-004 | P0 | Plan | Fact | Resolved by R-003: the M5 command and passing receipt now exist at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; `package.json` exposes `validate:m5-production-hardening`. | The stated M5-A2 production-hardening evidence is now demonstrated. | Completed: implement and run M5-A2 exactly as defined in the validation plan. | None. | Complete |
-| F-005 | P2 | Plan | Fact | Module 07 and the M5 plan defer migration/rollback, backup/recovery, release procedures, and multi-style coverage, but the overview task board has no later M5 tasks or decision that schedules them. | M5's post-A2 boundary is not yet executable; it could be prematurely considered complete. | Decide the required M5 exit scope after M5-A2 evidence, then create separately bounded follow-on tasks for the accepted slices. | M5-A2 evidence and project-owner scope decision. | Blocked |
+| F-005 | P2 | Plan | Fact | Module 07 and the M5 plan defer migration/rollback, backup/recovery, release procedures, and multi-style coverage. The export-manifest compatibility policy is approved, but the successor is not implemented yet. | M5's remaining hardening boundary is not fully executable; it could be prematurely considered complete. | After the engine-neutral manifest successor lands, split the remaining rollback, backup/recovery, release procedure, and multi-style coverage work into separate tasks. | Engine-neutral export-manifest successor. | Blocked |
 
 ## Recommended tasks
 
@@ -60,19 +60,27 @@ Applied in this run: active Module 05 and ADR-009 guidance now follows ADR-014; 
 
 Applied in this run: `npm run validate:m5-production-hardening` passed with 62 modules, five byte-identical runs, a 453.799 ms median, a 530.237 ms p95, a complete matrix, and four readability views.
 
-### R-004 — Decide export-manifest compatibility migration
+### R-004 — Decide export-manifest compatibility migration — Complete
 
-- **Priority / eligibility:** P1 — Human decision
-- **Decision:** Choose whether legacy Unity `1.0`/`1.1` manifest validation remains as archival compatibility or is formally deprecated in favor of a new engine-neutral manifest version.
-- **Options:** Preserve legacy schemas as historical-only compatibility; or introduce a versioned engine-neutral successor with documented migration/deprecation.
+- **Priority / eligibility:** P1 — Complete
+- **Decision:** Option A approved on 2026-07-17: legacy Unity-shaped `1.0`/`1.1` manifest validation remains archival-only, and live production output moves to a versioned engine-neutral successor.
 - **Acceptance criteria:** An approved compatibility policy identifies the supported manifest versions, migration path, and evidence-retention rule.
+
+Applied in this run: ADR-015 records the archival legacy policy and queues live output migration to an engine-neutral successor.
+
+### R-006 — Implement engine-neutral export-manifest successor
+
+- **Priority / eligibility:** P1 — Agent-ready
+- **Scope:** Add the approved engine-neutral export-manifest successor while preserving archival validation for legacy `1.0`/`1.1` evidence. Migrate live renderer manifest types, canonical examples, focused tests, and validation docs to make the successor the current production-output target.
+- **Acceptance criteria:** Live examples/tests no longer require engine import metadata; legacy fixtures remain explicitly archival; contract validation distinguishes archival compatibility from current production output; no engine integration scope is introduced.
+- **Validation:** Run contract validation and focused renderer/export manifest tests; run `git diff --check`.
 
 ### R-005 — Define post-A2 M5 hardening slices
 
-- **Priority / eligibility:** P2 — Blocked on R-003 and R-004
-- **Scope:** After M5-A2 results and the compatibility policy are available, split the remaining migration/rollback, backup/recovery, release procedure, and multi-style coverage work into separate tasks with owners and exit criteria.
+- **Priority / eligibility:** P2 — Blocked on R-006
+- **Scope:** After the engine-neutral manifest successor is implemented, split the remaining migration/rollback, backup/recovery, release procedure, and multi-style coverage work into separate tasks with owners and exit criteria.
 - **Acceptance criteria:** The overview task board and M5 plan have explicit, ordered follow-on slices; no deferred area is implicitly counted as complete.
 
 ## Review conclusion
 
-The asset package and M5-A2 validation are healthy. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, and R-003 closed the reproducibility batch. The remaining decision is whether legacy Unity-coupled manifest validation is archival-only or replaced by a versioned engine-neutral successor; R-004 requires project-owner direction.
+The asset package and M5-A2 validation are healthy. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, and R-004 selected archival legacy validation plus a live engine-neutral successor. The next recommended task is R-006: implement that successor without adding engine integration scope.
