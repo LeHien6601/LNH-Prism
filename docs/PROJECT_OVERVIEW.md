@@ -20,10 +20,10 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟡 **M5 production hardening** — M5-A2 reproducibility/regression validation passed; engine-neutral export-manifest successor implemented |
-| Next task | 🔵 **Define post-A2 M5 hardening slices** · 🤖 Agent |
-| Next agent-ready task | Define post-A2 M5 hardening slices |
-| Last reviewed | 2026-07-17 |
+| Active milestone | 🟡 **M5 production hardening** — post-A2 slices M5-A3 through M5-A6 are defined |
+| Next task | 🔵 **Implement manifest migration and rollback drill (M5-A3)** · 🤖 Agent |
+| Next agent-ready task | Implement manifest migration and rollback drill (M5-A3) |
+| Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
 ## 3. Objective boundaries
@@ -104,7 +104,11 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Remove retired Unity workflow references from active governance (R-002) | 🤖 Agent | 🟢 Complete | Active validation/governance guidance follows ADR-014's engine-neutral boundary; historical records remain auditable and dead Unity-module links are removed |
 | P1 | Decide export-manifest compatibility migration (R-004) | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved on 2026-07-17: legacy `1.0`/`1.1` manifests are archival-only; live outputs move to a versioned engine-neutral successor |
 | P1 | Implement engine-neutral export-manifest successor | 🤖 Agent | 🟢 Complete | Export-manifest `1.2`, canonical example, live renderer manifest outputs, and tests are engine-neutral; legacy `1.0`/`1.1` validation remains archival |
-| P2 | Define post-A2 M5 hardening slices (R-005) | 🤖 Agent | 🔵 Agent-ready | Remaining migration/rollback, backup/recovery, release procedure, and multi-style coverage work is split into ordered tasks with owners and exit criteria |
+| P2 | Define post-A2 M5 hardening slices (R-005) | 🤖 Agent | 🟢 Complete | Remaining migration/rollback, backup/recovery, release procedure, and multi-style coverage work is split into M5-A3 through M5-A6 with owners and exit criteria |
+| P1 | Implement manifest migration and rollback drill (M5-A3) | 🤖 Agent | 🔵 Agent-ready | Migration/rollback receipt proves live `1.2` manifest handling, archival legacy evidence retention, failure reporting, and unchanged approved package bytes |
+| P2 | Implement package backup and recovery drill (M5-A4) | 🤖 Agent | 🔴 Blocked | Blocked on M5-A3; recovery evidence restores or rebuilds the Frostbound package from pinned inputs and verifies byte equality |
+| P2 | Draft release operating procedure and exception policy (M5-A5) | 🤖 Agent | 🔴 Blocked | Blocked on M5-A4; checklist defines validation gates, evidence paths, sign-off, exception policy, rollback decision points, and handoff artifacts |
+| P2 | Decide multi-style hardening coverage (M5-A6) | 🧭 Project owner + 🛠️ Technical lead | 🟣 Human decision | Choose whether Frostbound-only hardening is sufficient for M5 exit or select an additional style/package coverage target |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -201,3 +205,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-17 | Completed review R-002: aligned active validation governance with ADR-014 and removed dead Unity-module navigation | Codex |
 | 2026-07-17 | Approved R-004 Option A: archive legacy export manifests and queue an engine-neutral successor for live output | Project owner / Codex |
 | 2026-07-17 | Implemented export-manifest `1.2` as the live engine-neutral manifest and kept legacy validation archival | Codex |
+| 2026-07-18 | Completed R-005 by defining M5-A3 through M5-A6 and queued M5-A3 migration/rollback drill | Codex |

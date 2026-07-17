@@ -2,7 +2,7 @@
 
 ## Status
 
-M5-A1 definition and M5-A2 implementation are complete. The passing receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; deferred hardening slices remain out of scope.
+M5-A1 definition, M5-A2 implementation, and post-A2 slice definition are complete. The passing M5-A2 receipt is recorded at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; M5-A3 through M5-A6 define the remaining hardening work.
 
 ## Purpose
 
@@ -52,6 +52,41 @@ M5-A2 must implement one deterministic command that writes a versioned receipt u
 - The exact size baseline and state/part matrix are confirmed.
 - Readability views and any defects are recorded.
 
-## Deferred M5 work
+## Post-A2 hardening slices
 
-M5-A2 establishes the reproducibility/regression batch only. Migration/rollback drills, backup/recovery practice, release operating procedures, and broader multi-style coverage remain later M5 slices and must not be claimed as complete from this batch.
+M5-A2 establishes the reproducibility/regression batch only. The remaining hardening work is split into ordered slices so each can be implemented and validated independently.
+
+| Slice | Task | Owner | Execution | Exit condition |
+|---|---|---|---|---|
+| M5-A3 | Implement manifest migration and rollback drill | Agent | Agent-ready | A deterministic command or validation fixture proves live `1.2` manifests can be migrated/checked from archived legacy evidence where applicable, rollback preserves archived evidence, and failures are reported without altering approved packages |
+| M5-A4 | Implement package backup and recovery drill | Agent | Blocked on M5-A3 | A recoverable backup/rebuild procedure restores the Frostbound package from pinned sources and receipts, verifies byte equality, and records recovery evidence |
+| M5-A5 | Draft release operating procedure and exception policy | Agent | Blocked on M5-A4 | A release checklist defines required validation, evidence paths, owner sign-off, regression exceptions, rollback decision points, and handoff artifacts for engine-neutral asset packages |
+| M5-A6 | Define multi-style hardening coverage plan | Project owner + Technical lead | Human decision | Choose which additional style/package, if any, must run through the M5 hardening suite before calling M5 complete |
+
+### M5-A3 acceptance criteria
+
+- Uses existing checked-in evidence and contracts; does not introduce engine integration.
+- Distinguishes live `1.2` production manifests from archival `1.0`/`1.1` evidence.
+- Records a migration/rollback receipt under `docs/validation/evidence/m5-production-hardening/`.
+- Fails clearly when required provenance, output hashes, or legacy archive rules are missing.
+- Leaves approved asset package bytes unchanged unless an explicit future package version update is approved.
+
+### M5-A4 acceptance criteria
+
+- Documents the backup source set and recovery destination.
+- Rebuilds or restores the Frostbound package from pinned repository inputs and receipts.
+- Compares recovered files against the approved package manifest by path, byte count, and SHA-256.
+- Records recovery timing, environment, and defects.
+
+### M5-A5 acceptance criteria
+
+- Defines the release checklist for an engine-neutral asset package.
+- Lists required validation commands, evidence records, and acceptance gates.
+- Defines who can approve performance, size, readability, or compatibility exceptions.
+- Includes rollback decision points and artifact handoff paths.
+
+### M5-A6 decision criteria
+
+- Decide whether one hardened Frostbound package is enough for M5 exit or whether another style/package must be covered.
+- If extra coverage is required, choose the target and split it into an agent-ready implementation task.
+- If extra coverage is deferred, record the release rationale and remaining risk.

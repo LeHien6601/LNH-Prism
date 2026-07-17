@@ -8,15 +8,15 @@
 | Review date | 2026-07-17 |
 | Working tree at start | Clean |
 | Scope | Workflow, status, and plan |
-| Validation run | `npm run validate:contracts`; `npm run test:renderer`; `npm run validate:asset-package` |
-| Validation result | Passed: contracts validated including missing-provenance and live `1.2` engine-metadata rejection; 31 renderer tests passed; 62 modular files validated across five components |
+| Validation run | `npm run validate:contracts`; `npm run validate:asset-package`; `git diff --check` |
+| Validation result | Passed: contracts validated including missing-provenance and live `1.2` engine-metadata rejection; 62 modular files validated across five components; no whitespace errors |
 
-Refresh note: R-001, R-002, R-003, R-004, and R-006 have been resolved. R-004 selected Option A; R-006 implemented export-manifest `1.2` as the live engine-neutral successor while preserving legacy `1.0`/`1.1` archival validation.
+Refresh note: R-001, R-002, R-003, R-004, R-005, and R-006 have been resolved. R-005 split the remaining post-A2 M5 hardening work into M5-A3 through M5-A6.
 
 ## Current status
 
 - M1/V1, M2/V2, M3/V3, and M4 modular asset delivery are recorded as passed/completed.
-- M5-A1 and M5-A2 are complete. R-002, R-004, and R-006 are complete. The next item is the Agent-ready task R-005: define post-A2 M5 hardening slices.
+- M5-A1 and M5-A2 are complete. R-002, R-004, R-005, and R-006 are complete. The next item is the Agent-ready task M5-A3: implement manifest migration and rollback drill.
 - The Frostbound package is engine-neutral and validates as 62 modular SVG/PNG files across Panel, Primary Button, Secondary Button, Progress, and Emblem.
 
 ## Findings
@@ -27,7 +27,7 @@ Refresh note: R-001, R-002, R-003, R-004, and R-006 have been resolved. R-004 se
 | F-002 | P1 | Workflow / status | Fact | Resolved by R-002: active Module 05 and ADR-009 now state the engine-neutral M4 boundary; dead Unity-module navigation is removed; remaining Unity mentions are historical change-log entries. | Previously contradicted ADR-014 and could reintroduce retired scope; no longer present in active guidance. | Completed: replace current-scope Unity workflow/dependency statements with engine-neutral M4 package validation and repair dead links. | R-001 complete. | Complete |
 | F-003 | P1 | Workflow | Fact | Resolved by R-006: export-manifest `1.2` is the live engine-neutral branch; canonical examples and V1 renderer manifests emit `1.2`; contract tests reject engine import metadata in `1.2`; legacy `1.0` validation is preserved under `specs/examples/archive/`. | Previously risked accidental engine-coupled deliverables; no longer present in live renderer output. | Completed: implement a backward-compatible engine-neutral export-manifest revision and migrate live renderer/tests/examples to it. | None. | Complete |
 | F-004 | P0 | Plan | Fact | Resolved by R-003: the M5 command and passing receipt now exist at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; `package.json` exposes `validate:m5-production-hardening`. | The stated M5-A2 production-hardening evidence is now demonstrated. | Completed: implement and run M5-A2 exactly as defined in the validation plan. | None. | Complete |
-| F-005 | P2 | Plan | Fact | Module 07 and the M5 plan defer migration/rollback, backup/recovery, release procedures, and multi-style coverage. The export-manifest successor is now implemented. | M5's remaining hardening boundary is ready to turn into explicit follow-on slices. | Split the remaining rollback, backup/recovery, release procedure, and multi-style coverage work into separate tasks. | R-006 complete. | Agent-ready |
+| F-005 | P2 | Plan | Fact | Resolved by R-005: the M5 plan now defines M5-A3 migration/rollback, M5-A4 backup/recovery, M5-A5 release procedure, and M5-A6 multi-style coverage decision, each with owner, execution status, and exit condition. | Previously made M5's remaining hardening boundary ambiguous; the follow-on work is now explicitly ordered. | Completed: split the remaining rollback, backup/recovery, release procedure, and multi-style coverage work into separate tasks. | None. | Complete |
 
 ## Recommended tasks
 
@@ -77,12 +77,39 @@ Applied in this run: ADR-015 records the archival legacy policy and queues live 
 
 Applied in this run: export-manifest `1.2` is the live engine-neutral schema branch; V1 renderer proof manifests emit `1.2`; canonical examples and tests reject engine import metadata; archived legacy validation remains covered.
 
-### R-005 — Define post-A2 M5 hardening slices
+### R-005 — Define post-A2 M5 hardening slices — Complete
 
-- **Priority / eligibility:** P2 — Agent-ready
+- **Priority / eligibility:** P2 — Complete
 - **Scope:** Split the remaining migration/rollback, backup/recovery, release procedure, and multi-style coverage work into separate tasks with owners and exit criteria.
 - **Acceptance criteria:** The overview task board and M5 plan have explicit, ordered follow-on slices; no deferred area is implicitly counted as complete.
 
+Applied in this run: M5-A3 through M5-A6 are recorded in the M5 plan and overview with owners, execution status, dependencies, and exit conditions.
+
+### R-007 — Implement manifest migration and rollback drill (M5-A3)
+
+- **Priority / eligibility:** P1 — Agent-ready
+- **Scope:** Implement the M5-A3 drill defined in the M5 plan. Prove live `1.2` manifest handling, archived legacy evidence retention, rollback/failure reporting, and unchanged approved package bytes.
+- **Acceptance criteria:** A migration/rollback receipt is recorded under `docs/validation/evidence/m5-production-hardening/`; missing provenance/output hashes/archive rules fail clearly; approved package bytes remain unchanged.
+- **Validation:** Run the new drill plus `npm run validate:contracts`, `npm run validate:asset-package`, and `git diff --check`.
+
+### R-008 — Implement package backup and recovery drill (M5-A4)
+
+- **Priority / eligibility:** P2 — Blocked on R-007
+- **Scope:** Restore or rebuild the Frostbound package from pinned inputs and receipts, then verify byte equality against the approved manifest.
+- **Acceptance criteria:** Recovery evidence records source set, destination, environment, timing, defects, and path/byte/SHA equality.
+
+### R-009 — Draft release operating procedure and exception policy (M5-A5)
+
+- **Priority / eligibility:** P2 — Blocked on R-008
+- **Scope:** Define the release checklist, validation commands, evidence paths, owner sign-off, regression exception policy, rollback decision points, and handoff artifacts.
+- **Acceptance criteria:** Procedure is usable for an engine-neutral asset package release and references completed hardening evidence.
+
+### R-010 — Decide multi-style hardening coverage (M5-A6)
+
+- **Priority / eligibility:** P2 — Human decision
+- **Decision:** Choose whether the Frostbound package is sufficient for M5 exit or whether another style/package must run through M5 hardening.
+- **Acceptance criteria:** Approved decision records either the additional target and next agent-ready task, or the rationale for deferring extra coverage.
+
 ## Review conclusion
 
-The asset package and M5-A2 validation are healthy. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, R-004 selected archival legacy validation plus a live engine-neutral successor, and R-006 implemented that successor. The next recommended task is R-005: define the remaining post-A2 M5 hardening slices.
+The asset package and M5-A2 validation are healthy. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, R-004 selected archival legacy validation plus a live engine-neutral successor, R-006 implemented that successor, and R-005 split the remaining M5 work into ordered slices. The next recommended task is R-007/M5-A3: implement the manifest migration and rollback drill.
