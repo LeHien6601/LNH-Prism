@@ -8,9 +8,9 @@ This documentation package defines the plan for a production-oriented system tha
 
 | Field | Current value |
 |---|---|
-| Status | 🟡 In progress — M3-S2 review workflow complete; M3-S3 is agent-ready |
+| Status | 🟡 In progress — M3-S3 Frost Crystal intake complete; human approval is pending |
 | Active milestone | 🟡 M3: AI-assisted analysis and material intake implementation |
-| Next task | 🔵 Implement M3-S3 Frost Crystal material intake and reviewed draft package |
+| Next task | 🟣 Review and approve M3-S3 Frostbound analysis decisions and draft package |
 | North-star outcome | Generate consistent UI components, states, and size variants from reusable styles/materials |
 | First production validation | Build a real Primary Button, Panel, and Progress Bar in one selected style |
 

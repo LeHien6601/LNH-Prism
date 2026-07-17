@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "id": "rune-ornament",
+  "version": "0.1.0",
+  "sourceType": "procedural",
+  "kind": "procedural-decal",
+  "generationSettings": "Deterministic source-neutral radial rune line recipe on transparent background; no component silhouette",
+  "colorSpace": "sRGB",
+  "resolution": { "width": 64, "height": 64, "units": "logical-pixels" },
+  "alpha": { "minimum": 0, "maximum": 0.24 },
+  "contrast": 1.1,
+  "transparentBackground": true,
+  "containsConceptPixels": false,
+  "containsComponentGeometry": false,
+  "containsComponentEffects": false,
+  "rights": "LNHGames internal procedural source"
+}

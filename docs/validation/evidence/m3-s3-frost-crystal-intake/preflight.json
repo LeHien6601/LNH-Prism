@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frost-crystal-source-preflight",
+  "version": "0.1.0",
+  "status": "pass",
+  "generatedAt": "2026-07-17T14:00:00Z",
+  "sourceCount": 3,
+  "checks": {
+    "hashesMatch": true,
+    "rightsRecorded": true,
+    "colorSpaceAndResolutionRecorded": true,
+    "seamlessSourcesPass": true,
+    "noConceptPixels": true,
+    "noComponentGeometryOrEffects": true
+  },
+  "sources": [
+    {
+      "sourceId": "frost-grain",
+      "sourceType": "procedural",
+      "path": "materials/frost-crystal/frost-grain.json",
+      "sha256": "3be6718069d38921fadb351a889ae234472fc2010a97f703d299a2cd48d1a396",
+      "rights": "LNHGames internal procedural source",
+      "colorSpace": "sRGB",
+      "resolution": {
+        "width": 32,
+        "height": 32,
+        "units": "logical-pixels"
+      },
+      "alpha": {
+        "minimum": 0,
+        "maximum": 0.12
+      },
+      "seamlessness": "pass",
+      "transparentBackground": true,
+      "containsConceptPixels": false,
+      "containsComponentGeometry": false,
+      "containsComponentEffects": false,
+      "normalizationSettings": {
+        "tileMode": "tile",
+        "opacity": 0.1,
+        "blendMode": "soft-light",
+        "scale": 1,
+        "offsetX": 0,
+        "offsetY": 0,
+        "contrast": 0.85,
+        "saturation": 0.8
+      }
+    },
+    {
+      "sourceId": "crystal-facet-pattern",
+      "sourceType": "procedural",
+      "path": "materials/frost-crystal/crystal-facet-pattern.json",
+      "sha256": "9db172b52146af8444bf5ffc0a698188f7f303c084e3b610dbb07ec8051bb55e",
+      "rights": "LNHGames internal procedural source",
+      "colorSpace": "sRGB",
+      "resolution": {
+        "width": 48,
+        "height": 48,
+        "units": "logical-pixels"
+      },
+      "alpha": {
+        "minimum": 0,
+        "maximum": 0.16
+      },
+      "seamlessness": "pass",
+      "transparentBackground": true,
+      "containsConceptPixels": false,
+      "containsComponentGeometry": false,
+      "containsComponentEffects": false,
+      "normalizationSettings": {
+        "tileMode": "tile",
+        "opacity": 0.12,
+        "blendMode": "screen",
+        "scale": 1,
+        "offsetX": 0,
+        "offsetY": 0,
+        "contrast": 1,
+        "saturation": 0.9
+      }
+    },
+    {
+      "sourceId": "rune-ornament",
+      "sourceType": "procedural",
+      "path": "materials/frost-crystal/rune-ornament.json",
+      "sha256": "726b9f6cf9c6a58e6a84ca87d856cf92d820ce2058dc68d905994ba73b82f9ac",
+      "rights": "LNHGames internal procedural source",
+      "colorSpace": "sRGB",
+      "resolution": {
+        "width": 64,
+        "height": 64,
+        "units": "logical-pixels"
+      },
+      "alpha": {
+        "minimum": 0,
+        "maximum": 0.24
+      },
+      "seamlessness": "not-required",
+      "transparentBackground": true,
+      "containsConceptPixels": false,
+      "containsComponentGeometry": false,
+      "containsComponentEffects": false,
+      "normalizationSettings": {
+        "tileMode": "clamp",
+        "opacity": 0.2,
+        "blendMode": "screen",
+        "scale": 1,
+        "offsetX": 0.5,
+        "offsetY": 0.5,
+        "contrast": 1.1,
+        "saturation": 0.9
+      }
+    }
+  ]
+}

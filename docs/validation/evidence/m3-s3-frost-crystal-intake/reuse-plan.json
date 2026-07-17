@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frost-crystal-four-component-reuse-plan",
+  "version": "0.1.0",
+  "status": "proposed",
+  "componentTypeCount": 4,
+  "bindings": [
+    {
+      "componentType": "panel",
+      "materialIds": [
+        "frost-grain-overlay",
+        "crystal-facet-overlay",
+        "rune-ornament-decal"
+      ],
+      "boundary": "Reusable detail is clipped by the deterministic panel surface and ornament slots."
+    },
+    {
+      "componentType": "button",
+      "materialIds": [
+        "frost-grain-overlay",
+        "crystal-facet-overlay"
+      ],
+      "boundary": "Primary and secondary variants share sources; deterministic recipes own silhouette, border, shadow, and state lighting."
+    },
+    {
+      "componentType": "progress",
+      "materialIds": [
+        "frost-grain-overlay",
+        "crystal-facet-overlay"
+      ],
+      "boundary": "Frame and fill remain independent deterministic masks; materials carry no progress geometry."
+    },
+    {
+      "componentType": "reward-emblem-container",
+      "materialIds": [
+        "frost-grain-overlay",
+        "rune-ornament-decal"
+      ],
+      "boundary": "The deterministic container owns normal/selected silhouettes and the rune remains a source-neutral decal."
+    }
+  ]
+}

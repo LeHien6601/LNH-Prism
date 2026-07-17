@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frostbound-m3-s3-human-approval-package",
+  "version": "0.1.0",
+  "status": "pending-human-approval",
+  "createdAt": "2026-07-17T14:00:00Z",
+  "materialIntake": {
+    "candidatePack": "specs/examples/frost-crystal-materials.draft.json",
+    "candidateStatus": "draft",
+    "preflight": "preflight.json",
+    "reusePlan": "reuse-plan.json"
+  },
+  "analysisReview": {
+    "record": "docs/validation/evidence/m3-s2-frostbound-review/pending-review.json",
+    "status": "blocked",
+    "blockingProposalIds": [
+      "hierarchy-primary-action",
+      "material-frost-grain",
+      "palette-ice-primary",
+      "spacing-action-stack"
+    ]
+  },
+  "proposedComponentInventory": [
+    {
+      "id": "frostbound-reward-panel",
+      "componentType": "panel"
+    },
+    {
+      "id": "frostbound-claim-button",
+      "componentType": "button",
+      "variant": "primary"
+    },
+    {
+      "id": "frostbound-later-button",
+      "componentType": "button",
+      "variant": "secondary"
+    },
+    {
+      "id": "frostbound-reward-progress",
+      "componentType": "progress"
+    },
+    {
+      "id": "frostbound-reward-emblem-container",
+      "componentType": "reward-emblem-container"
+    }
+  ],
+  "decisionsRequired": [
+    {
+      "id": "analysis-proposals",
+      "owner": "Product + Art + UI + Technical leads",
+      "status": "pending",
+      "decision": "Record a disposition for every critical M3-S2 proposal."
+    },
+    {
+      "id": "material-sources",
+      "owner": "Art + Technical leads",
+      "status": "pending",
+      "decision": "Accept, edit, or reject the three independent procedural sources and normalization settings."
+    },
+    {
+      "id": "reuse-plan",
+      "owner": "Art + UI + Technical leads",
+      "status": "pending",
+      "decision": "Accept or edit the four-component-type reuse and deterministic masking boundaries."
+    },
+    {
+      "id": "component-inventory",
+      "owner": "Product + UI leads",
+      "status": "pending",
+      "decision": "Accept or edit the five proposed component artifact IDs and roles."
+    }
+  ],
+  "draftGenerationGate": {
+    "status": "blocked",
+    "reason": "Critical analysis proposals remain pending; style and component drafts must not be generated or reconstructed.",
+    "blockingProposalIds": [
+      "hierarchy-primary-action",
+      "material-frost-grain",
+      "palette-ice-primary",
+      "spacing-action-stack"
+    ]
+  },
+  "reconstructionGate": {
+    "status": "blocked",
+    "reason": "Human proposal decisions and explicit artifact approval are required before M3-S4."
+  }
+}

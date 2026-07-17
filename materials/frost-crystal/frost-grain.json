@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frost-grain",
+  "version": "0.1.0",
+  "sourceType": "procedural",
+  "kind": "procedural-tile",
+  "generationSettings": "Deterministic 32 logical-pixel sparse frost speckle recipe; seed-free fixed geometry",
+  "colorSpace": "sRGB",
+  "resolution": { "width": 32, "height": 32, "units": "logical-pixels" },
+  "alpha": { "minimum": 0, "maximum": 0.12 },
+  "contrast": 0.85,
+  "edgeSignature": { "top": "0,8,16,24,32", "bottom": "0,8,16,24,32", "left": "0,8,16,24,32", "right": "0,8,16,24,32" },
+  "transparentBackground": true,
+  "containsConceptPixels": false,
+  "containsComponentGeometry": false,
+  "containsComponentEffects": false,
+  "rights": "LNHGames internal procedural source"
+}

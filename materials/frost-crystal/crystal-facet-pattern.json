@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "id": "crystal-facet-pattern",
+  "version": "0.1.0",
+  "sourceType": "procedural",
+  "kind": "procedural-tile",
+  "generationSettings": "Deterministic 48 logical-pixel source-neutral crystal facet line recipe; seed-free fixed geometry",
+  "colorSpace": "sRGB",
+  "resolution": { "width": 48, "height": 48, "units": "logical-pixels" },
+  "alpha": { "minimum": 0, "maximum": 0.16 },
+  "contrast": 1,
+  "edgeSignature": { "top": "0,12,24,36,48", "bottom": "0,12,24,36,48", "left": "0,12,24,36,48", "right": "0,12,24,36,48" },
+  "transparentBackground": true,
+  "containsConceptPixels": false,
+  "containsComponentGeometry": false,
+  "containsComponentEffects": false,
+  "rights": "LNHGames internal procedural source"
+}
