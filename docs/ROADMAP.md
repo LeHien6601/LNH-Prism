@@ -62,22 +62,19 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** 🟢 Passed on 2026-07-17 at `94/100` — human reviewers controlled every critical proposal, no suggestion bypassed spec review, one traceable material pack served four component types, every mandatory dimension minimum was met, and no blocker or defect remained.
 
-## 🟡 M4 — Unity export and integration
+## 🟡 M4 — Modular asset delivery
 
-**Goal:** make handoff dependable.
+**Goal:** make final UI assets independently extractable and usable without an engine project.
 
-- Export PNG/SVG where appropriate, state files, 9-slice borders, pivot, PPU, grouping, and manifest.
-- Add deterministic asset IDs and collision-safe naming.
-- Build Unity importer/configuration support or clear manifest-driven setup.
-- Test scaling, states, atlas grouping, and re-export without broken references.
+- Package each component/part as a small engine-neutral module with deterministic source and approved SVG/PNG derivatives.
+- Preserve stable asset IDs, dimensions, state/part boundaries, 9-slice guidance where relevant, and source/material/output provenance.
+- Provide concise extraction and use guidance that does not assume Unity, an importer, an atlas, prefabs, scenes, or a build target.
 
-**Practical validation V4:** replace a small playable UI flow in Unity—such as reward claim or shop purchase—with generated assets and all required states.
+**Practical validation M4-A:** inspect the package outside an engine project and confirm that every required module can be identified, extracted, traced, and used from its package alone.
 
-**Approved V4 target:** Frostbound Reward Claim on Unity `6000.3.18f1`, using uGUI and the Built-in Render Pipeline in one bounded sample project. Validate in the Windows Editor and an Android portrait build at the existing `540 × 960` logical / `1080 × 1920` presentation scale. The flow covers a 9-sliced panel, primary/secondary actions, progress values, reward-emblem states, manifest-driven import, stable IDs/references, atlas grouping, and idempotent re-export. See [ADR-013](decisions/ADR-013-m4-unity-reward-claim-baseline.md).
+**Scope decision:** [ADR-014](decisions/ADR-014-engine-neutral-modular-asset-delivery.md) supersedes the Unity integration gate. Prior Unity work remains historical evidence and is non-gating.
 
-**Definition gate:** 🟢 Approved on 2026-07-17 — Option A accepted the [M4 implementation specification](implementation/M4_UNITY_EXPORT_IMPLEMENTATION_SPEC.md) and [V4 integration rubric](validation/V4_UNITY_INTEGRATION_RUBRIC.md) with manifest `1.1`/legacy `1.0` compatibility and authoritative kebab-case naming; M4-S1 may begin.
-
-**Exit gate:** import needs no asset-by-asset correction beyond documented Unity project defaults.
+**Exit gate:** all approved Frostbound assets are delivered as independently usable modules with deterministic source, derivatives, metadata, and provenance; no engine integration is required.
 
 ## ⚪ M5 — Production hardening
 
@@ -127,3 +124,5 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-17 | Completed M4-S1 manifest/registry contracts, semantic identity validation, canonical fixtures, negative tests, and migration guidance; opened M4-S2 bundle generation | Codex |
 | 2026-07-17 | Completed M4-S2 deterministic Frostbound Unity bundle, manifests, stable-ID registry, collision audit, and repeat-export proof; opened M4-S3 bounded Unity project/importer implementation | Codex |
 | 2026-07-17 | Completed M4-S3 pinned Unity project/importer, exact Sprite settings/GUIDs, atlas, bindings, prefabs, scene, unchanged rerun, and Edit Mode validation; opened M4-S4 local flow/re-export/Android implementation | Codex |
+| 2026-07-17 | Completed M4-S4 bounded flow, Play Mode, changed-source reference survival, strict no-op, editor states, and launched readable Android portrait validation; opened the M4-S5 human integration gate | Codex |
+| 2026-07-17 | Accepted ADR-014 and superseded the Unity integration gate; M4 now targets engine-neutral modular asset delivery | Project owner / Codex |
