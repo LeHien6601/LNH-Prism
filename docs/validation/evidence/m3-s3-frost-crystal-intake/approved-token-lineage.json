@@ -1,0 +1,137 @@
+[
+  {
+    "targetPath": "/componentRules/button/primaryEmphasis",
+    "value": {
+      "minimumContrastDelta": 0.2,
+      "minimumWidthRatio": 1.4
+    },
+    "sourceProposalId": "hierarchy-primary-action",
+    "disposition": "accepted",
+    "analysis": {
+      "id": "frostbound-reward-analysis",
+      "version": "0.1.0"
+    },
+    "concept": {
+      "receiptId": "v3-frostbound-reward-concept",
+      "sha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383"
+    },
+    "evidence": [
+      {
+        "type": "source-region",
+        "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+        "region": {
+          "x": 0.16,
+          "y": 0.68,
+          "width": 0.68,
+          "height": 0.21
+        }
+      },
+      {
+        "type": "verbal",
+        "statement": "The approved V3 brief requires deterministic primary/secondary semantic differentiation."
+      }
+    ],
+    "reviewer": {
+      "id": "project-owner",
+      "role": "product",
+      "reviewedAt": "2026-07-17T15:00:00+07:00"
+    }
+  },
+  {
+    "targetPath": "/materialCategories/frost-grain",
+    "value": {
+      "role": "detail-overlay",
+      "tileMode": "tile"
+    },
+    "sourceProposalId": "material-frost-grain",
+    "disposition": "accepted",
+    "analysis": {
+      "id": "frostbound-reward-analysis",
+      "version": "0.1.0"
+    },
+    "concept": {
+      "receiptId": "v3-frostbound-reward-concept",
+      "sha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383"
+    },
+    "evidence": [
+      {
+        "type": "source-region",
+        "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+        "region": {
+          "x": 0.08,
+          "y": 0.1,
+          "width": 0.84,
+          "height": 0.82
+        }
+      }
+    ],
+    "reviewer": {
+      "id": "project-owner",
+      "role": "product",
+      "reviewedAt": "2026-07-17T15:00:00+07:00"
+    }
+  },
+  {
+    "targetPath": "/tokens/colors/primary",
+    "value": "#2F9FEF",
+    "sourceProposalId": "palette-ice-primary",
+    "disposition": "accepted",
+    "analysis": {
+      "id": "frostbound-reward-analysis",
+      "version": "0.1.0"
+    },
+    "concept": {
+      "receiptId": "v3-frostbound-reward-concept",
+      "sha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383"
+    },
+    "evidence": [
+      {
+        "type": "source-region",
+        "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+        "region": {
+          "x": 0.16,
+          "y": 0.59,
+          "width": 0.68,
+          "height": 0.22
+        },
+        "note": "Progress fill and CLAIM button"
+      }
+    ],
+    "reviewer": {
+      "id": "project-owner",
+      "role": "product",
+      "reviewedAt": "2026-07-17T15:00:00+07:00"
+    }
+  },
+  {
+    "targetPath": "/tokens/spacing/actionGap",
+    "value": 24,
+    "sourceProposalId": "spacing-action-stack",
+    "disposition": "accepted",
+    "analysis": {
+      "id": "frostbound-reward-analysis",
+      "version": "0.1.0"
+    },
+    "concept": {
+      "receiptId": "v3-frostbound-reward-concept",
+      "sha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383"
+    },
+    "evidence": [
+      {
+        "type": "source-region",
+        "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+        "region": {
+          "x": 0.18,
+          "y": 0.68,
+          "width": 0.64,
+          "height": 0.22
+        }
+      }
+    ],
+    "reviewer": {
+      "id": "project-owner",
+      "role": "product",
+      "reviewedAt": "2026-07-17T15:00:00+07:00"
+    }
+  }
+]

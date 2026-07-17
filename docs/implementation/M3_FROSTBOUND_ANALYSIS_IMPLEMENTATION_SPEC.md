@@ -10,7 +10,7 @@
 | Validation target | V3 — Frostbound Reward Popup |
 | Decision source | [ADR-012](../decisions/ADR-012-v3-frostbound-reward.md) |
 | Product/art reference | [V3 reference brief](../reference-briefs/V3_FROSTBOUND_REWARD.md) |
-| Implementation state | M3-S3 complete; human analysis/artifact approval pending; M3-S4 blocked |
+| Implementation state | M3-S3 Option A approved; M3-S4 agent-ready |
 
 ## 1. Intended outcome
 
@@ -124,7 +124,7 @@ Prepare V3-E01 through V3-E10 exactly as defined in [the V3 rubric](../validatio
 
 On 2026-07-17, the project owner approved Option A as drafted. The approval covers the proposal model, human-control points, full Panel–Button–Progress plus reward-emblem-container inventory, material boundary, ordered M3-S1 through M3-S5 slices, V3-E01 through V3-E10, scoring thresholds, and automatic blockers.
 
-M3-S1 through M3-S3 are complete. The Frost Crystal candidate pack remains `draft`, every generated decision control remains pending, and M3-S4 is blocked until human reviewers decide all critical proposals and explicitly approve or edit the material sources, normalization, reuse plan, and component inventory. Approval does not waive later V3 evidence or the human V3 gate.
+M3-S1 through M3-S3 are complete. On 2026-07-17, the project owner selected Option A and accepted all four critical proposals, the three Frost Crystal procedural sources and normalization settings, the four-component-type reuse plan, and the five-item component inventory as drafted. The immutable pending artifacts remain preserved beside the approved review, proposal lineage, material pack, and package record. M3-S4 may begin. This approval does not waive V3 evidence or the human V3 gate.
 
 ## Change history
 
@@ -135,3 +135,4 @@ M3-S1 through M3-S3 are complete. The Frost Crystal candidate pack remains `draf
 | 2026-07-17 | Completed M3-S1 concept, analysis, and review contracts with fixtures and focused semantic rejection coverage | Codex |
 | 2026-07-17 | Completed M3-S2 deterministic normalization, editable pending-review artifact, immutable decision flow, and accepted/edited token lineage | Codex |
 | 2026-07-17 | Completed M3-S3 with three independent procedural Frost Crystal sources, deterministic source preflight/isolation evidence, a four-component-type reuse plan, and a pending human approval package | Codex |
+| 2026-07-17 | Approved M3-S3 Option A as drafted, preserved pending history, recorded accepted proposal/package lineage, approved `frost-crystal-materials@0.1.0`, and authorized M3-S4 | Project owner / Codex |

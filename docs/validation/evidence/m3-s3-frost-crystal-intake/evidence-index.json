@@ -2,15 +2,19 @@
   "schemaVersion": "1.0",
   "id": "m3-s3-frost-crystal-intake-evidence",
   "version": "0.1.0",
-  "status": "ready-for-human-review",
+  "status": "approved-for-m3-s4",
   "artifacts": [
     "preflight.json",
     "reuse-plan.json",
     "approval-package.json",
     "approval.html",
+    "approved-analysis-review.json",
+    "approved-token-lineage.json",
+    "approved-package.json",
+    "approval-record.html",
     "frost-grain-isolation.svg",
     "crystal-facet-pattern-isolation.svg",
     "rune-ornament-isolation.svg"
   ],
-  "caveat": "The source intake is preflighted, but proposals and artifacts remain unapproved; reconstruction is blocked."
+  "note": "The original pending artifacts are preserved; Option A approval is recorded append-only and unblocks M3-S4."
 }

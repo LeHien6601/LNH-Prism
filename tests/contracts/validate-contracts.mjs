@@ -29,10 +29,12 @@ const exampleSchemas = new Map([
   ["neon-core-materials.json", "material-pack.schema.json"],
   ["neon-alloy-materials.json", "material-pack.schema.json"],
   ["frost-crystal-materials.draft.json", "material-pack.schema.json"],
+  ["frost-crystal-materials.json", "material-pack.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
   ["v3-frostbound-analysis.json", "analysis-receipt.schema.json"],
-  ["v3-frostbound-analysis-review.json", "analysis-review.schema.json"]
+  ["v3-frostbound-analysis-review.json", "analysis-review.schema.json"],
+  ["../../docs/validation/records/m3-s3-frostbound-analysis-review.json", "analysis-review.schema.json"]
 ]);
 
 for (const [exampleFile, schemaFile] of exampleSchemas) {

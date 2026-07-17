@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0",
+  "id": "frostbound-reward-analysis-approved-review",
+  "version": "0.1.0",
+  "analysis": {
+    "id": "frostbound-reward-analysis",
+    "version": "0.1.0"
+  },
+  "conceptSha256": "19d55d8ed0d1a2b8949bcd135ecd95ad2d0b5920846a843b652949eb02712383",
+  "createdAt": "2026-07-17T15:00:00+07:00",
+  "reviews": [
+    {
+      "proposalId": "palette-ice-primary",
+      "critical": true,
+      "disposition": "accepted",
+      "transitions": [
+        {
+          "from": "pending",
+          "to": "accepted",
+          "reviewerId": "project-owner",
+          "at": "2026-07-17T15:00:00+07:00"
+        }
+      ],
+      "reviewer": {
+        "id": "project-owner",
+        "role": "product",
+        "reviewedAt": "2026-07-17T15:00:00+07:00"
+      }
+    },
+    {
+      "proposalId": "spacing-action-stack",
+      "critical": true,
+      "disposition": "accepted",
+      "transitions": [
+        {
+          "from": "pending",
+          "to": "accepted",
+          "reviewerId": "project-owner",
+          "at": "2026-07-17T15:00:00+07:00"
+        }
+      ],
+      "reviewer": {
+        "id": "project-owner",
+        "role": "product",
+        "reviewedAt": "2026-07-17T15:00:00+07:00"
+      }
+    },
+    {
+      "proposalId": "material-frost-grain",
+      "critical": true,
+      "disposition": "accepted",
+      "transitions": [
+        {
+          "from": "pending",
+          "to": "accepted",
+          "reviewerId": "project-owner",
+          "at": "2026-07-17T15:00:00+07:00"
+        }
+      ],
+      "reviewer": {
+        "id": "project-owner",
+        "role": "product",
+        "reviewedAt": "2026-07-17T15:00:00+07:00"
+      }
+    },
+    {
+      "proposalId": "hierarchy-primary-action",
+      "critical": true,
+      "disposition": "accepted",
+      "transitions": [
+        {
+          "from": "pending",
+          "to": "accepted",
+          "reviewerId": "project-owner",
+          "at": "2026-07-17T15:00:00+07:00"
+        }
+      ],
+      "reviewer": {
+        "id": "project-owner",
+        "role": "product",
+        "reviewedAt": "2026-07-17T15:00:00+07:00"
+      }
+    }
+  ],
+  "mappingGate": {
+    "status": "ready",
+    "blockingProposalIds": []
+  }
+}

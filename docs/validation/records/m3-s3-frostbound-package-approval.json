@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m3-s3-frostbound-package-approval",
+  "version": "0.1.0",
+  "status": "approved",
+  "decision": "option-a-as-drafted",
+  "approvedAt": "2026-07-17T15:00:00+07:00",
+  "reviewer": {
+    "id": "project-owner",
+    "role": "product"
+  },
+  "analysisReview": "docs/validation/records/m3-s3-frostbound-analysis-review.json",
+  "materialPack": {
+    "draft": "specs/examples/frost-crystal-materials.draft.json",
+    "draftSha256": "2b44165da2ec663120cd5686f9aae767e148c3e99268db887c31eccb3f421f20",
+    "approved": "specs/examples/frost-crystal-materials.json",
+    "id": "frost-crystal-materials",
+    "version": "0.1.0",
+    "disposition": "accepted"
+  },
+  "reusePlan": {
+    "path": "docs/validation/evidence/m3-s3-frost-crystal-intake/reuse-plan.json",
+    "sha256": "8c8f177e3f410240aadb00e60219d66dd032f579f7a4b1c75c35a678c0549da7",
+    "disposition": "accepted"
+  },
+  "componentInventory": {
+    "disposition": "accepted",
+    "items": [
+      { "id": "frostbound-reward-panel", "componentType": "panel" },
+      { "id": "frostbound-claim-button", "componentType": "button", "variant": "primary" },
+      { "id": "frostbound-later-button", "componentType": "button", "variant": "secondary" },
+      { "id": "frostbound-reward-progress", "componentType": "progress" },
+      { "id": "frostbound-reward-emblem-container", "componentType": "reward-emblem-container" }
+    ]
+  },
+  "acceptedProposalValues": [
+    { "proposalId": "palette-ice-primary", "targetPath": "/tokens/colors/primary", "value": "#2F9FEF" },
+    { "proposalId": "spacing-action-stack", "targetPath": "/tokens/spacing/actionGap", "value": 24 },
+    { "proposalId": "material-frost-grain", "targetPath": "/materialCategories/frost-grain", "value": { "role": "detail-overlay", "tileMode": "tile" } },
+    { "proposalId": "hierarchy-primary-action", "targetPath": "/componentRules/button/primaryEmphasis", "value": { "minimumContrastDelta": 0.2, "minimumWidthRatio": 1.4 } }
+  ],
+  "m3S4Gate": {
+    "status": "ready",
+    "blockingProposalIds": []
+  }
+}
