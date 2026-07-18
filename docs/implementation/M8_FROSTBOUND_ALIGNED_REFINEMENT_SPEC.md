@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Status | 🟡 Draft for definition review |
+| Status | 🟢 Approved — Option A |
 | Date | 2026-07-18 |
 | Milestone | M8 — Frostbound-aligned angular refinement |
 | Decision source | [ADR-019](../decisions/ADR-019-frostbound-aligned-m7-refinement.md) |
@@ -89,8 +89,12 @@ Do not begin M8-A3 until M8-A2 is approved.
 
 ## 8. Approval checklist
 
-- [ ] Cold material and focal treatment are sufficiently specific and bounded.
-- [ ] M7 geometry, modularity, and package lineage are preserved.
-- [ ] The Frostbound concept remains evidence-only.
-- [ ] Evidence, scoring, blockers, and asset-only handoff requirements are accepted.
-- [ ] M8-A3 may begin after approval.
+- [x] Cold material and focal treatment are sufficiently specific and bounded.
+- [x] M7 geometry, modularity, and package lineage are preserved.
+- [x] The Frostbound concept remains evidence-only.
+- [x] Evidence, scoring, blockers, and asset-only handoff requirements are accepted.
+- [x] M8-A3 may begin after approval.
+
+## 9. Approval outcome
+
+On 2026-07-18, the project owner approved Option A as drafted. M8-A3 may create the reusable cold material/focal contracts for all seven components. The approval does not authorize concept-pixel use, M7 geometry replacement, unversioned M7 package changes, or engine integration.

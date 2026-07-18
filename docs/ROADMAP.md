@@ -164,8 +164,8 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 - Keep the Frostbound concept as review evidence only; no concept pixels may enter production sources or outputs.
 - Revalidate showroom visibility, exact asset folders, provenance, and modular output receipts.
 
-**Definition package:** [M8 implementation specification](implementation/M8_FROSTBOUND_ALIGNED_REFINEMENT_SPEC.md) and [V8 visual-fidelity rubric](validation/M8_FROSTBOUND_ALIGNED_REFINEMENT_RUBRIC.md) drafted on 2026-07-18. They preserve M7 geometry/lineage, bound the cold-material and reward-focal work, and define V8 evidence and blockers.
+**Definition gate:** 🟢 Approved on 2026-07-18 — Option A accepted the [M8 implementation specification](implementation/M8_FROSTBOUND_ALIGNED_REFINEMENT_SPEC.md) and [V8 visual-fidelity rubric](validation/M8_FROSTBOUND_ALIGNED_REFINEMENT_RUBRIC.md) as drafted. The complete seven-component cold-material/focal refinement may begin.
 
-**Next task:** M8-A2 — review and approve the M8 refinement definition.
+**Next task:** M8-A3 — add M8 cold material and focal contracts.
 
 **Exit gate:** a reviewed M8 package improves the two V7 observations while retaining M7’s deterministic, modular, engine-neutral asset handoff.

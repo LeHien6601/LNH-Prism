@@ -2,7 +2,7 @@
 
 ## Purpose and status
 
-**Status:** 🟡 Draft for definition review.
+**Status:** 🟢 Approved — Option A accepted on 2026-07-18.
 
 Use this rubric to review whether M8 improves the two recorded V7 observations while retaining the M7 system’s angular silhouette, deterministic structure, modular assets, and engine-neutral handoff.
 
