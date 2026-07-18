@@ -168,7 +168,9 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **M8-A3:** 🟢 Complete — versioned M8 cold material/focal contracts, source preflight, seven-component reuse plan, and isolation evidence validate without reference pixels.
 
-**Next task:** M8-A4 — render the M8 family, package, and showroom.
+**M8-A4:** 🟢 Complete — the M8 package provides a 26-render seven-component matrix, 68 modular SVG/PNG assets, a Frostbound portrait, receipts, and `showcase/m8-frostbound-aligned.html` without mutating M7 outputs.
+
+**Next task:** M8-A5 — conduct the human V8 production-fidelity review using the approved rubric and M8 evidence package.
 
 **Exit gate:** a reviewed M8 package improves the two V7 observations while retaining M7’s deterministic, modular, engine-neutral asset handoff.
 

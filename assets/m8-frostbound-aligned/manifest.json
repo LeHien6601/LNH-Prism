@@ -1,0 +1,642 @@
+{
+  "schemaVersion": "1.0",
+  "styleId": "m8-frostbound-aligned",
+  "styleVersion": "0.1.0",
+  "lineage": {
+    "baselinePackage": "assets/m7-reference-fidelity",
+    "preservedGeometry": "m7-wide-hex-angular"
+  },
+  "components": [
+    "panel",
+    "primary-hex-button",
+    "secondary-hex-button",
+    "tab",
+    "badge",
+    "icon-container",
+    "progress"
+  ],
+  "modules": [
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:panel-488x660-normal:svg",
+      "component": "panel",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/panel-488x660-normal.svg",
+      "path": "assets/m8-frostbound-aligned/modules/panel/panel-488x660-normal.svg",
+      "format": "svg",
+      "bytes": 4374,
+      "sha256": "2c5cee1408e95003900ced7d3bab628f247984c27b6f298e22738049a8d8854a"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:panel-488x660-normal:png",
+      "component": "panel",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/panel-488x660-normal.png",
+      "path": "assets/m8-frostbound-aligned/modules/panel/panel-488x660-normal.png",
+      "format": "png",
+      "bytes": 104635,
+      "sha256": "ab1e97868d349f9a89e270d160c48d960cfbffe76bc8c36b0aac8106a881071d"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:panel-488x760-normal:svg",
+      "component": "panel",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/panel-488x760-normal.svg",
+      "path": "assets/m8-frostbound-aligned/modules/panel/panel-488x760-normal.svg",
+      "format": "svg",
+      "bytes": 4374,
+      "sha256": "432d40b33bdebe8a079e9af83ca90f6b42162ff66063b47902e612eb9d47705d"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:panel-488x760-normal:png",
+      "component": "panel",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/panel-488x760-normal.png",
+      "path": "assets/m8-frostbound-aligned/modules/panel/panel-488x760-normal.png",
+      "format": "png",
+      "bytes": 117511,
+      "sha256": "6cf2d7914a473039581c9cabded98b5e1c44c564a92f0eefb2d061afbf68ecc8"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-320x68-normal:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-320x68-normal.svg",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-320x68-normal.svg",
+      "format": "svg",
+      "bytes": 4295,
+      "sha256": "c101bc9f39b3a00ab1af479fcf5a871f8b3a410144ff234c38fec0c2176419b2"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-320x68-normal:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-320x68-normal.png",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-320x68-normal.png",
+      "format": "png",
+      "bytes": 21526,
+      "sha256": "112d2561e47b5344e251f8530a1bbb88403c0f75ade433b644fccd5ac879d13c"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-320x68-pressed:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-320x68-pressed.svg",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-320x68-pressed.svg",
+      "format": "svg",
+      "bytes": 4323,
+      "sha256": "2b3db3e0c1c352186ae2c9b0ffa2ea72b451507673471c6bdb0d98c6f64693bf"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-320x68-pressed:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-320x68-pressed.png",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-320x68-pressed.png",
+      "format": "png",
+      "bytes": 20607,
+      "sha256": "233f35ce78695020a053da9347065ee84f3f89c9ab64fb3ae4e82e606b81482e"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-320x68-disabled:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-320x68-disabled.svg",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-320x68-disabled.svg",
+      "format": "svg",
+      "bytes": 4354,
+      "sha256": "1b2ddba477dc8f2f387de670650a2fcbbae3ae2629259437e9cab74ccbcbe2c5"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-320x68-disabled:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-320x68-disabled.png",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-320x68-disabled.png",
+      "format": "png",
+      "bytes": 19737,
+      "sha256": "8798854bf91f7c44a7b3c7cfb5a7c11721e79110fc51533e8dbfbdd96a3f712f"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-260x62-normal:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-260x62-normal.svg",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-260x62-normal.svg",
+      "format": "svg",
+      "bytes": 4295,
+      "sha256": "bb6d57be00e00b83e1a84d0246ac35a6ded875befb8625294f2cd0da1236315d"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-260x62-normal:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-260x62-normal.png",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-260x62-normal.png",
+      "format": "png",
+      "bytes": 18554,
+      "sha256": "50ecabc9fdc711df4829bf35674b65556260c0860ef6b605beb1a0529cac83e5"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-260x62-pressed:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-260x62-pressed.svg",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-260x62-pressed.svg",
+      "format": "svg",
+      "bytes": 4323,
+      "sha256": "3f3829eb07f3e403e118965634091d4ac524bf9d181a33c8d64367712e8107ac"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-260x62-pressed:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-260x62-pressed.png",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-260x62-pressed.png",
+      "format": "png",
+      "bytes": 17757,
+      "sha256": "75c1ae80669b6d53d07a30dddf70bf7d9add5f71ada8fb0a73f20040b630ef6d"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-260x62-disabled:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-260x62-disabled.svg",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-260x62-disabled.svg",
+      "format": "svg",
+      "bytes": 4354,
+      "sha256": "12115ec258a1a59ce615b52f857ae56a6889640ebf1f80358e76046b14c6474c"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:primary-hex-button-260x62-disabled:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/primary-hex-button-260x62-disabled.png",
+      "path": "assets/m8-frostbound-aligned/modules/primary-hex-button/primary-hex-button-260x62-disabled.png",
+      "format": "png",
+      "bytes": 16589,
+      "sha256": "12d53edc0d81df2b5f1f971a38e2b4ea7e69178d177a775933a5f2a5e2328749"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-232x56-normal:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-232x56-normal.svg",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-232x56-normal.svg",
+      "format": "svg",
+      "bytes": 4351,
+      "sha256": "c5e745f32c9b1eddac43719b96b4b6671a8296f263890e37a5e8462226764df5"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-232x56-normal:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-232x56-normal.png",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-232x56-normal.png",
+      "format": "png",
+      "bytes": 16284,
+      "sha256": "3c24ca996a9c63373e4a45b7bb134d73b528e8e51475a9bd642a7afdae4c6e10"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-232x56-pressed:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-232x56-pressed.svg",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-232x56-pressed.svg",
+      "format": "svg",
+      "bytes": 4379,
+      "sha256": "8c747129ee706a2ffdd8f17e0a00e96f1ce3a79dcc5059fc0f776bd9d8f2e447"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-232x56-pressed:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-232x56-pressed.png",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-232x56-pressed.png",
+      "format": "png",
+      "bytes": 16068,
+      "sha256": "567e669da291debddbc7c521eb567ab4b2f4dc08864a349d3a849124fa91876f"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-232x56-disabled:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-232x56-disabled.svg",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-232x56-disabled.svg",
+      "format": "svg",
+      "bytes": 4410,
+      "sha256": "b4979336846f33f5b6830565a9d5b09594c99c4f6c029eb170cfbbb4cb6df53c"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-232x56-disabled:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-232x56-disabled.png",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-232x56-disabled.png",
+      "format": "png",
+      "bytes": 15319,
+      "sha256": "e1524365f294cab2e40880e29fcaea93358eb23dcd5bc6ba19329d9e2f361bb9"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-188x52-normal:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-188x52-normal.svg",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-188x52-normal.svg",
+      "format": "svg",
+      "bytes": 4351,
+      "sha256": "8a818cf372005dd3b14fef0e63327514de9621d292076c7c9f171cb057fc845e"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-188x52-normal:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-188x52-normal.png",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-188x52-normal.png",
+      "format": "png",
+      "bytes": 13412,
+      "sha256": "11c0699155edd64995723cc88a3ae045a43be29722423eee444703d9408992f5"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-188x52-pressed:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-188x52-pressed.svg",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-188x52-pressed.svg",
+      "format": "svg",
+      "bytes": 4379,
+      "sha256": "42486d39b62a68c78595d4468ef3f92340cdb6eaffb2833e91971553b6e5ce14"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-188x52-pressed:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-188x52-pressed.png",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-188x52-pressed.png",
+      "format": "png",
+      "bytes": 13201,
+      "sha256": "2a046214dec08e877979978fc41f6ab085e380d1125b3c393de27983ff43b3fe"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-188x52-disabled:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-188x52-disabled.svg",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-188x52-disabled.svg",
+      "format": "svg",
+      "bytes": 4410,
+      "sha256": "64367a9d82a0035c347c682757957b17219c8cc627d700679b2ad0d4c13cb27e"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:secondary-hex-button-188x52-disabled:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/secondary-hex-button-188x52-disabled.png",
+      "path": "assets/m8-frostbound-aligned/modules/secondary-hex-button/secondary-hex-button-188x52-disabled.png",
+      "format": "png",
+      "bytes": 12910,
+      "sha256": "fe55c42b736cd7f3249ea503729d3cee63efd5d67d6f838f6023242dbc38a8a6"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:tab-148x52-normal:svg",
+      "component": "tab",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/tab-148x52-normal.svg",
+      "path": "assets/m8-frostbound-aligned/modules/tab/tab-148x52-normal.svg",
+      "format": "svg",
+      "bytes": 3898,
+      "sha256": "db0386805936a2617b34c57f4cf56d0c1adacc7f5bf0235e5bf8cfc8b8dbaf9a"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:tab-148x52-normal:png",
+      "component": "tab",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/tab-148x52-normal.png",
+      "path": "assets/m8-frostbound-aligned/modules/tab/tab-148x52-normal.png",
+      "format": "png",
+      "bytes": 9992,
+      "sha256": "d92c1b6e70a9da1e379c43b56ba557c43522c793e6b63791eee1ca05df7128d4"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:tab-184x52-selected:svg",
+      "component": "tab",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/tab-184x52-selected.svg",
+      "path": "assets/m8-frostbound-aligned/modules/tab/tab-184x52-selected.svg",
+      "format": "svg",
+      "bytes": 3955,
+      "sha256": "71f8798b4210633e106afcb0a6699baa7adc2f0510ba7d5811407f75f4f54419"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:tab-184x52-selected:png",
+      "component": "tab",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/tab-184x52-selected.png",
+      "path": "assets/m8-frostbound-aligned/modules/tab/tab-184x52-selected.png",
+      "format": "png",
+      "bytes": 12299,
+      "sha256": "3ffeca11f03bf1a268b76d18b71e99641d73fe12b637d0bc302aedff3743d25b"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:badge-164x48-normal:svg",
+      "component": "badge",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/badge-164x48-normal.svg",
+      "path": "assets/m8-frostbound-aligned/modules/badge/badge-164x48-normal.svg",
+      "format": "svg",
+      "bytes": 3956,
+      "sha256": "d290aeb77b6f95da69a9584d1b92a1b919ff28a9dd8b375f3263bf1b17a0b680"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:badge-164x48-normal:png",
+      "component": "badge",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/badge-164x48-normal.png",
+      "path": "assets/m8-frostbound-aligned/modules/badge/badge-164x48-normal.png",
+      "format": "png",
+      "bytes": 10982,
+      "sha256": "ae9f0a9afd29fa78fe6a42d5c27c83a60d40e72cdd624c039e26d89590136446"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:badge-212x48-highlighted:svg",
+      "component": "badge",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/badge-212x48-highlighted.svg",
+      "path": "assets/m8-frostbound-aligned/modules/badge/badge-212x48-highlighted.svg",
+      "format": "svg",
+      "bytes": 4096,
+      "sha256": "cc38c2b0bbf7a436ee7023e8c8b5d3c9cf35681f258c0dc4d5741d12dc62b2e0"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:badge-212x48-highlighted:png",
+      "component": "badge",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/badge-212x48-highlighted.png",
+      "path": "assets/m8-frostbound-aligned/modules/badge/badge-212x48-highlighted.png",
+      "format": "png",
+      "bytes": 13528,
+      "sha256": "428e0b55abe25768fd91df12ce80c9b132b807764d8446d24c32c38f305e9261"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:icon-container-92x92-normal:svg",
+      "component": "icon-container",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/icon-container-92x92-normal.svg",
+      "path": "assets/m8-frostbound-aligned/modules/icon-container/icon-container-92x92-normal.svg",
+      "format": "svg",
+      "bytes": 4536,
+      "sha256": "7cc92941924291e3598e49458b3960298eeb11dc49a6510d7661e917655fec32"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:icon-container-92x92-normal:png",
+      "component": "icon-container",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/icon-container-92x92-normal.png",
+      "path": "assets/m8-frostbound-aligned/modules/icon-container/icon-container-92x92-normal.png",
+      "format": "png",
+      "bytes": 11760,
+      "sha256": "b63b1302fcd1349756043f52db7259389ba22c4b67d9ecc0e764765868b3da87"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:icon-container-116x116-selected:svg",
+      "component": "icon-container",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/icon-container-116x116-selected.svg",
+      "path": "assets/m8-frostbound-aligned/modules/icon-container/icon-container-116x116-selected.svg",
+      "format": "svg",
+      "bytes": 4662,
+      "sha256": "1cbf056f64ff44df9b93163b450b6df71a6f192c9091ec9d43b825c184faa8b5"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:icon-container-116x116-selected:png",
+      "component": "icon-container",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/icon-container-116x116-selected.png",
+      "path": "assets/m8-frostbound-aligned/modules/icon-container/icon-container-116x116-selected.png",
+      "format": "png",
+      "bytes": 14882,
+      "sha256": "a853b2cedd539163494523759a75e2c935f196c823e455e17940783cb9caf528"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-344x28-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-344x28-10.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-344x28-10.svg",
+      "format": "svg",
+      "bytes": 2194,
+      "sha256": "b4700de2f084e9cfb03f7542b77bb73a2909a296809cbbf4af8d236f89978b2c"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-344x28-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-344x28-10.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-344x28-10.png",
+      "format": "png",
+      "bytes": 2725,
+      "sha256": "ae4bdb06af9674b78fdda8f48e240d7add21815aa4f121626e306064c98a1c5b"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-344x28-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-344x28-50.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-344x28-50.svg",
+      "format": "svg",
+      "bytes": 2200,
+      "sha256": "0c3d8f808377d2eb6f95795f95533d6f2198faf013496ed4e3c9ce6948d44ee7"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-344x28-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-344x28-50.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-344x28-50.png",
+      "format": "png",
+      "bytes": 3417,
+      "sha256": "1967cd46b3f64939a986467beabef7658fc96c5870b4a947b97d2579075225be"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-344x28-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-344x28-90.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-344x28-90.svg",
+      "format": "svg",
+      "bytes": 2200,
+      "sha256": "5b7aa9a77fb34ab22ac131ca24ed4b716edb7db8972bcedc1d5eddf30e6bc21e"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-344x28-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-344x28-90.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-344x28-90.png",
+      "format": "png",
+      "bytes": 3992,
+      "sha256": "650ca31e92857b5c4bbcd1a5bf9f6b847a5ac75cdfa2262492bd0c3eb417eb6f"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-420x28-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-420x28-10.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-420x28-10.svg",
+      "format": "svg",
+      "bytes": 2194,
+      "sha256": "249eb2529771c91850429fb147589e823f20acccf7324100a0c4351073df8992"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-420x28-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-420x28-10.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-420x28-10.png",
+      "format": "png",
+      "bytes": 2823,
+      "sha256": "4a8ee83ccb911dce5bda2348976051c3a82f9174f386c606793a1e61288b8c6e"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-420x28-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-420x28-50.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-420x28-50.svg",
+      "format": "svg",
+      "bytes": 2200,
+      "sha256": "662e6e052480d867d86ac3591b84bbb8e6d5d0fc5aace6dae0f4358fa37ed73e"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-420x28-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-420x28-50.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-420x28-50.png",
+      "format": "png",
+      "bytes": 3671,
+      "sha256": "6f93bb122ef33095fd95a2db9562a7064ce8d35c5d5d67ff613c8d26ac2cca3f"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-420x28-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-420x28-90.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-420x28-90.svg",
+      "format": "svg",
+      "bytes": 2200,
+      "sha256": "fe100255933610b5177ac84bcfb98723d0501fcfdbcd2ba87b1e629a85cdaccd"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-420x28-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-420x28-90.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-420x28-90.png",
+      "format": "png",
+      "bytes": 4305,
+      "sha256": "0d263c15ced51c6fc74fa4b74ee904be576183765059857d46e4812a77d4fc5b"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-frame-344:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-frame-344.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-frame-344.svg",
+      "format": "svg",
+      "bytes": 417,
+      "sha256": "5b21c4b3d0cc8ee2391395262595211ce596d768c203b07d0fc73e1f567a96f4"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-frame-344:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-frame-344.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-frame-344.png",
+      "format": "png",
+      "bytes": 962,
+      "sha256": "c5e3f39facd3fec5043476b598c0472724d837675f0d7361f9866b3a403e2a23"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-344-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-344-10.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-344-10.svg",
+      "format": "svg",
+      "bytes": 2028,
+      "sha256": "7328487eb4ecd9d45e823e9fb7484217e6c484cd2546f8a52d4bde6906937797"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-344-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-344-10.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-344-10.png",
+      "format": "png",
+      "bytes": 2150,
+      "sha256": "10c7bcac5c09e7752c4256c911271e15fb9d9795a9cf16562045702a9917023f"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-344-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-344-50.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-344-50.svg",
+      "format": "svg",
+      "bytes": 2034,
+      "sha256": "fa71e090cd7de78a1a444942f38884f865646b8a4db1fc7a9b3d0e13ad699b88"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-344-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-344-50.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-344-50.png",
+      "format": "png",
+      "bytes": 2849,
+      "sha256": "a9a44d610297623b5fec5280a10403068db4b23838274c3a6f01cf45d831fdc2"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-344-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-344-90.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-344-90.svg",
+      "format": "svg",
+      "bytes": 2034,
+      "sha256": "fd835bcf461b40a5bd3de7d3da131a679efe795fbaed1d638216bc2b851e4b2d"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-344-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-344-90.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-344-90.png",
+      "format": "png",
+      "bytes": 3424,
+      "sha256": "b171e0048b38ae9e3aa01e5b6fe0d8bcc22a8902562445b07e410578feea74bb"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-frame-420:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-frame-420.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-frame-420.svg",
+      "format": "svg",
+      "bytes": 417,
+      "sha256": "0b661f879e3246ae3b17ebc4b710b719d71abbb24a8e52243178cbc36498fafd"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-frame-420:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-frame-420.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-frame-420.png",
+      "format": "png",
+      "bytes": 998,
+      "sha256": "6bc8e53106fb521613721d15e547c952ae205324939813575a7e6491f6724faa"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-420-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-420-10.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-420-10.svg",
+      "format": "svg",
+      "bytes": 2028,
+      "sha256": "41233fd053551314dcb7e68c8a4115a70d2db86c578908c51607b8879e41b450"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-420-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-420-10.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-420-10.png",
+      "format": "png",
+      "bytes": 2237,
+      "sha256": "9b02cab231470ddf4c13814881967da05f1c460fd1c2da7ac51fbd202964d3aa"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-420-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-420-50.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-420-50.svg",
+      "format": "svg",
+      "bytes": 2034,
+      "sha256": "efd68aacce7294de67910d515b8559c5d9f5f5b300e778bdcb229df68d074935"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-420-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-420-50.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-420-50.png",
+      "format": "png",
+      "bytes": 3080,
+      "sha256": "9147d2ba8a9fc916c9511ea789d43078590e12b876a248ed3bd5e5d24ed0dc6c"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-420-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-420-90.svg",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-420-90.svg",
+      "format": "svg",
+      "bytes": 2034,
+      "sha256": "2d6b3942a301c4bd9ebbeb407e4ad7f04bad9e7804f8fc91c8c1be31b4edfe68"
+    },
+    {
+      "assetId": "lnh-prism:asset:m8-frostbound-aligned:progress-fill-420-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m8-a4-frostbound-aligned/matrix/progress-fill-420-90.png",
+      "path": "assets/m8-frostbound-aligned/modules/progress/progress-fill-420-90.png",
+      "format": "png",
+      "bytes": 3728,
+      "sha256": "9d01816826961479d67993cfa7043a6804ea2d2d6277289e09f07d99ad39a638"
+    }
+  ],
+  "provenance": {
+    "style": "specs/examples/style-m8-frostbound-aligned.json",
+    "materials": "specs/examples/m8-frostbound-materials.json",
+    "renderer": "src/renderer/m8-frostbound-components.ts"
+  },
+  "usage": {
+    "svg": "Editable deterministic source.",
+    "png": "Matching deterministic raster derivative.",
+    "progress": "Compose matching frame and fill modules at the same width."
+  }
+}

@@ -1,0 +1,9 @@
+import { createHash } from "node:crypto";
+import { access, readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+const root=resolve("."), hash=(value)=>createHash("sha256").update(value).digest("hex"), evidence=resolve(root,"docs/validation/evidence/m8-a4-frostbound-aligned"), manifest=JSON.parse(await readFile(resolve(root,"assets/m8-frostbound-aligned/manifest.json"),"utf8")), matrix=JSON.parse(await readFile(resolve(evidence,"matrix.json"),"utf8"));
+if(matrix.count!==26||matrix.entries.length!==26) throw new Error("M8 matrix must contain 26 required renders.");
+if(manifest.styleId!=="m8-frostbound-aligned"||manifest.components.length!==7||manifest.modules.length!==68) throw new Error("M8 manifest is incomplete.");
+for(const entry of matrix.entries){for(const format of ["svg","png"]){const file=resolve(evidence,"matrix",`${entry.name}.${format}`),bytes=await readFile(file);if(hash(bytes)!==entry[`${format}Sha256`])throw new Error(`M8 receipt drift: ${entry.name}`);if(format==="svg"&&(!bytes.includes("m8-frostbound-aligned@0.1.0")||bytes.includes("<image")||/unity|engine/i.test(bytes)))throw new Error(`M8 SVG boundary failure: ${entry.name}`);}}
+for(const module of manifest.modules){const bytes=await readFile(resolve(root,module.path));if(bytes.length!==module.bytes||hash(bytes)!==module.sha256)throw new Error(`M8 module receipt mismatch: ${module.path}`);}
+await access(resolve(evidence,"m8-frostbound-reward-composition.png")); const showroom=await readFile(resolve(root,"showcase/m8-frostbound-aligned.html"),"utf8"); if(!showroom.includes("M8 Frostbound-Aligned Showroom")||!showroom.includes("assets/m8-frostbound-aligned"))throw new Error("M8 showroom handoff missing."); console.log(`validated ${matrix.count} M8 matrix entries, ${manifest.modules.length} modules, portrait, and showroom`);
