@@ -171,3 +171,15 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 **Next task:** M8-A4 — render the M8 family, package, and showroom.
 
 **Exit gate:** a reviewed M8 package improves the two V7 observations while retaining M7’s deterministic, modular, engine-neutral asset handoff.
+
+## ⚪ M9 — Frostbound production-fidelity systems
+
+**Decision:** [ADR-020](decisions/ADR-020-stage-production-fidelity-as-m9.md) accepts Option B on 2026-07-18.
+
+**Goal:** after the bounded M8 package establishes a reviewed baseline, turn Frostbound’s material depth, edge hierarchy, focal quality, controlled irregularity, typography, lighting, composition review, and visual-quality controls into reusable deterministic systems before multi-style transfer.
+
+**Dependencies:** M8-A4 and M8-A5 must complete first. M9 is blocked until their asset and review evidence exists.
+
+**Required ordered capability areas:** layered edge stacks; material-response channels; seeded variation; structural/ornament separation; focal-object framework; typography treatments; shared lighting; three-distance review; visual scoring distinct from technical correctness.
+
+**Boundary:** no concept pixels, unseeded randomness, flattened production structure, engine integration, Volcanic Forge transfer, third-style testing, or style-authoring workflow before M9 is reviewed.

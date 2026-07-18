@@ -124,6 +124,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Review and approve the M8 refinement definition (M8-A2) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved: reusable cold material and editable crystal focal treatment apply across all seven M8 components while M7 geometry, modularity, and evidence boundaries remain fixed |
 | P0 | Add M8 cold material and focal contracts (M8-A3) | 🤖 Agent | 🟢 Complete | Approved M8 style/material contracts, three source-neutral procedural cold materials, seven-component reuse plan, editable `crystal-focal` contract, source preflight, and isolation evidence validate without reference pixels or M7 receipt mutation |
 | P0 | Render the M8 family, package, and showroom (M8-A4) | 🤖 Agent | 🔵 Agent-ready | Render a versioned seven-component M8 matrix and portrait from the cold/focal contracts; package exact modular SVG/PNG assets and expose them in the showroom with receipts and preserved M7 lineage |
+| P0 | Define M9 Frostbound production-fidelity system slices | 🤖 Agent | 🔴 Blocked | After M8-A5 visual/technical review, split the approved strategic-plan gaps into bounded renderer/validation tasks before multi-style transfer; see [ADR-020](decisions/ADR-020-stage-production-fidelity-as-m9.md) |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -243,3 +244,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Completed M8-A1 draft specification and V8 rubric; queued M8 definition review before any rendering | Codex |
 | 2026-07-18 | Approved M8-A2 Option A as drafted; authorized M8-A3 reusable cold material/focal contract implementation for all seven components | Project owner / Codex |
 | 2026-07-18 | Completed M8-A3 cold material/focal contracts, seven-component reuse/preflight/isolation evidence, and focused validation; queued M8-A4 rendering/package/showroom work | Codex |
+| 2026-07-18 | Approved Option B: keep M8-A4 bounded and stage the production-fidelity systems as M9 immediately after M8 review, before multi-style transfer | Project owner / Codex |
