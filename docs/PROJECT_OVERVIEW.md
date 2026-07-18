@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M7 — Reference-fidelity style expansion** |
-| Next task | 🔵 **Draft M7 reference-fidelity style expansion specification** · 🤖 Agent |
-| Next agent-ready task | Draft M7 reference-fidelity style expansion specification |
+| Next task | 🟣 **Review and approve M7 reference-fidelity definition** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | None — pending M7 definition review |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -53,7 +53,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M4 | Modular asset delivery | 🟢 Passed — 62-module engine-neutral package validated |
 | 🟢 | M5 | Production hardening and regression suite | 🟢 Passed — Frostbound-only hardening accepted for M5 exit |
 | 🟢 | M6 | Optional showcase scaling and workflow review | 🟢 Deferred — Markdown + showcase remain sufficient |
-| ⚪ | M7 | Reference-fidelity style expansion | 🔵 Definition task queued — sharper wide-hexagon UI language and expanded style complexity |
+| ⚪ | M7 | Reference-fidelity style expansion | 🟣 Definition review pending — draft brief/spec/rubric define sharper wide-hexagon UI language and expanded style complexity |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -112,7 +112,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P2 | Decide multi-style hardening coverage (M5-A6) | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved: Frostbound-only hardening is sufficient for M5 exit; multi-style coverage is deferred as a future scaling risk |
 | P3 | Decide M6 workflow scaling need | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved: keep Markdown controls and the existing showcase; defer dashboard/workflow scaling until coordination pain appears |
 | P3 | Decide next production roadmap direction | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved: start the next production asset package track, focused on stronger reference fidelity, sharper wide-hexagon UI geometry, and expanded style complexity |
-| P0 | Draft M7 reference-fidelity style expansion specification | 🤖 Agent | 🔵 Agent-ready | Specification defines the target/reference requirements, sharp wide-hexagon button and angular UI language, expanded material/ornament complexity, component inventory, validation rubric, evidence plan, and engine-neutral asset-only handoff boundary |
+| P0 | Draft M7 reference-fidelity style expansion specification | 🤖 Agent | 🟢 Complete | [Reference brief](reference-briefs/M7_REFERENCE_FIDELITY_STYLE_EXPANSION.md), [implementation specification](implementation/M7_REFERENCE_FIDELITY_IMPLEMENTATION_SPEC.md), and [rubric](validation/M7_REFERENCE_FIDELITY_RUBRIC.md) define target/reference requirements, sharp wide-hexagon button and angular UI language, expanded material/ornament complexity, component inventory, validation rubric, evidence plan, and engine-neutral asset-only handoff boundary |
+| P0 | Review and approve M7 reference-fidelity definition | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Approve or edit the M7 reference brief, implementation specification, rubric, seven-component inventory, wide-hexagon shape rules, scoring/blockers, and asset-only handoff requirements before implementation starts |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -222,3 +223,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Approved M5-A6 Option A: Frostbound-only hardening is sufficient for M5 exit; queued M6 workflow scaling decision | Project owner / Codex |
 | 2026-07-18 | Approved M6 Option A: defer dashboard/workflow scaling; queued next roadmap direction decision | Project owner / Codex |
 | 2026-07-18 | Approved next roadmap Option A: start M7 reference-fidelity style expansion with sharper wide-hexagon UI geometry and expanded style complexity; queued M7-A1 specification | Project owner / Codex |
+| 2026-07-18 | Completed M7-A1 with a draft reference brief, implementation specification, and visual-fidelity rubric; queued M7 definition review | Codex |

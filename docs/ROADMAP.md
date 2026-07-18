@@ -117,7 +117,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Practical validation M7:** produce one approved production package from the M7 specification and review it against the reference-fidelity rubric, package integrity checks, deterministic receipts, and showroom/handoff evidence.
 
-**Definition gate:** M7-A1 specification and rubric are approved before renderer/template implementation starts.
+**Definition gate:** draft reference brief, implementation specification, and rubric are ready; human approval is required before renderer/template implementation starts.
 
 **Exit gate:** the package passes reference fidelity, modularity, traceability, deterministic reproduction, and asset-only handoff criteria.
 
@@ -147,3 +147,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-18 | Accepted Frostbound-only hardening coverage for M5 exit and marked M5 passed | Project owner / Codex |
 | 2026-07-18 | Deferred M6 dashboard/workflow scaling and kept Markdown plus showcase as the operating model | Project owner / Codex |
 | 2026-07-18 | Selected M7 reference-fidelity style expansion as the next asset-only production track | Project owner / Codex |
+| 2026-07-18 | Drafted the M7 reference brief, implementation specification, and visual-fidelity rubric for definition review | Codex |
