@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "sourceTreeSha256": "b7ff89eb9037562feaf44ced43a98386e27796e4dbc346741569584f8b9dc5ed",
+  "sourceTreeSha256": "20f501a2a01cb5fc2e6334ab62b10f9a05f69a321f242bbf1188334b3a86e10f",
   "sourceReceipts": [
     {
       "path": "docs/decisions/ADR-018-reference-fidelity-style-expansion.md",
@@ -96,7 +96,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "841283fa7cd2c7633f16abf1346f35bd60dd2f3046cd6bd2bf34d98f82ce2572"
+      "sha256": "53858ba7c127ea492a9ab748ea9e211dda0a77458c5220286d17ddbf58f6a1e0"
     },
     {
       "path": "package-lock.json",
