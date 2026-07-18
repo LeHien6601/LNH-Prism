@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "id": "v8-frostbound-aligned",
-  "status": "unscored-review-ready",
+  "status": "review-complete",
   "evidence": {
     "V8-E01": [
       "../../decisions/ADR-019-frostbound-aligned-m7-refinement.md",

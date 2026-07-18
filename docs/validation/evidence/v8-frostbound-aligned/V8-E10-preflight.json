@@ -1,7 +1,8 @@
 {
   "schemaVersion": "1.0",
-  "status": "unscored-review-ready",
+  "status": "review-complete",
   "automaticBlockers": [],
-  "scoringPerformed": false,
-  "gateDecision": "pending-human-review"
+  "scoringPerformed": true,
+  "weightedScore": 90,
+  "gateDecision": "pass"
 }
