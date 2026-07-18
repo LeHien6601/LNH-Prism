@@ -151,3 +151,19 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-18 | Approved the M7 definition package and opened angular hex contract/template implementation | Project owner / Codex |
 | 2026-07-18 | Completed M7-A3 angular hex contracts/templates and queued M7 material/spec work | Codex |
 | 2026-07-18 | Passed M7 at `90.5/100` with a project-owner-authorized automated review, V7 evidence package, 68 engine-neutral modules, showroom handoff, and no blockers | Project owner / Codex |
+| 2026-07-18 | Approved M8 Frostbound-aligned angular refinement: retain M7 geometry and asset-only handoff while addressing reusable icy material and reward-focal observations | Project owner / Codex |
+
+## ⚪ M8 — Frostbound-aligned angular refinement
+
+**Goal:** improve the M7 family’s Frostbound-aligned cold-blue material, crystal/focal presence, and interior hierarchy without weakening its sharp angular geometry, deterministic structure, or modular asset-only handoff.
+
+**Decision:** [ADR-019](decisions/ADR-019-frostbound-aligned-m7-refinement.md) accepted Option A on 2026-07-18.
+
+- Preserve M7 component boundaries and sharp wide-hex geometry.
+- Add only reusable, source-neutral ice/crystal materials and independently editable focal treatment.
+- Keep the Frostbound concept as review evidence only; no concept pixels may enter production sources or outputs.
+- Revalidate showroom visibility, exact asset folders, provenance, and modular output receipts.
+
+**Next task:** M8-A1 — draft the bounded implementation specification and review rubric.
+
+**Exit gate:** a reviewed M8 package improves the two V7 observations while retaining M7’s deterministic, modular, engine-neutral asset handoff.

@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | ⚪ **M7 — Reference-fidelity style expansion** |
-| Next task | 🟣 **Choose the next production direction after M7** · 🧭 Project owner + 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | None — awaiting post-M7 direction decision |
+| Active milestone | ⚪ **M8 — Frostbound-aligned angular refinement** |
+| Next task | 🔵 **Draft the M8 refinement specification and review rubric** · 🤖 Agent |
+| Next agent-ready task | M8-A1 — draft bounded specification/rubric from ADR-019 and V7 observations |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -54,6 +54,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M5 | Production hardening and regression suite | 🟢 Passed — Frostbound-only hardening accepted for M5 exit |
 | 🟢 | M6 | Optional showcase scaling and workflow review | 🟢 Deferred — Markdown + showcase remain sufficient |
 | 🟢 | M7 | Reference-fidelity style expansion | 🟢 V7 Pass — `90.5/100`; 68 engine-neutral modules, evidence, and showroom validated |
+| ⚪ | M8 | Frostbound-aligned angular refinement | 🔵 Definition/specification slice is next; retain M7 geometry and improve icy material/focal fidelity |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -118,7 +119,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Create M7 material pack and approved component specs (M7-A4) | 🤖 Agent | 🟢 Complete | Approved M7 style, four procedural material sources/pack, seven bounded component specs, source-boundary preflight, seven-component reuse plan, isolation views, and focused validation are recorded without reference pixels or engine scope |
 | P0 | Render M7 component matrix, portrait composition, and showroom integration (M7-A5) | 🤖 Agent | 🟢 Complete | 26 SVG/PNG matrix variants, independent progress parts, portrait/target-phone composition, 68-module package, and dedicated showroom validate from the same deterministic renderer outputs |
 | P0 | Prepare V7 evidence and conduct the V7 reference-fidelity review (M7-A6) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Project-owner-authorized automated review passed at `90.5/100`; all mandatory minima and evidence requirements are met, no blocker remains, and two comparative art observations are recorded in [the V7 validation record](validation/records/v7-reference-fidelity-style-expansion.md) |
-| P0 | Choose the next production direction after M7 | 🧭 Project owner + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Select a bounded next package or approve a targeted M7 art refinement; record target, reference direction, acceptance criteria, and whether it should become agent-ready |
+| P0 | Choose the next production direction after M7 | 🧭 Project owner + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved: start the bounded M8 Frostbound-aligned angular refinement described by [ADR-019](decisions/ADR-019-frostbound-aligned-m7-refinement.md) |
+| P0 | Draft the M8 Frostbound-aligned refinement specification and review rubric (M8-A1) | 🤖 Agent | 🔵 Agent-ready | Define the cold-blue/ice-crystal material and reward-focal refinement scope, preserved M7 contracts, evidence, acceptance criteria, scores, blockers, and asset-only handoff boundary from [ADR-019](decisions/ADR-019-frostbound-aligned-m7-refinement.md) |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -234,3 +236,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Completed M7-A4 with an approved M7 style, four procedural material sources, reusable faceted material pack, seven approved component specs, preflight/reuse/isolation evidence, and focused contract/material validation; queued M7-A5 | Codex |
 | 2026-07-18 | Completed M7-A5 with a 26-variant SVG/PNG matrix, independent progress parts, portrait/target-phone composition, 68-module asset package, package validation, and dedicated M7 showroom; queued V7 human fidelity review | Codex |
 | 2026-07-18 | Passed M7-A6 at `90.5/100` via the project-owner-authorized automated review; completed the V7 evidence package, asset-only handoff, and comparative Frostbound assessment with two non-blocking art observations | Project owner / Codex |
+| 2026-07-18 | Approved Option A: start the bounded M8 Frostbound-aligned angular refinement; preserve M7 geometry and modularity while improving reusable icy material/focal treatment | Project owner / Codex |
