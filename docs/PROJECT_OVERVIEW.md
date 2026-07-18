@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M8 — Frostbound-aligned angular refinement** |
-| Next task | 🔵 **Draft the M8 refinement specification and review rubric** · 🤖 Agent |
-| Next agent-ready task | M8-A1 — draft bounded specification/rubric from ADR-019 and V7 observations |
+| Next task | 🟣 **Review and approve the M8 refinement definition** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | None — awaiting M8 definition approval |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -120,7 +120,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Render M7 component matrix, portrait composition, and showroom integration (M7-A5) | 🤖 Agent | 🟢 Complete | 26 SVG/PNG matrix variants, independent progress parts, portrait/target-phone composition, 68-module package, and dedicated showroom validate from the same deterministic renderer outputs |
 | P0 | Prepare V7 evidence and conduct the V7 reference-fidelity review (M7-A6) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Project-owner-authorized automated review passed at `90.5/100`; all mandatory minima and evidence requirements are met, no blocker remains, and two comparative art observations are recorded in [the V7 validation record](validation/records/v7-reference-fidelity-style-expansion.md) |
 | P0 | Choose the next production direction after M7 | 🧭 Project owner + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved: start the bounded M8 Frostbound-aligned angular refinement described by [ADR-019](decisions/ADR-019-frostbound-aligned-m7-refinement.md) |
-| P0 | Draft the M8 Frostbound-aligned refinement specification and review rubric (M8-A1) | 🤖 Agent | 🔵 Agent-ready | Define the cold-blue/ice-crystal material and reward-focal refinement scope, preserved M7 contracts, evidence, acceptance criteria, scores, blockers, and asset-only handoff boundary from [ADR-019](decisions/ADR-019-frostbound-aligned-m7-refinement.md) |
+| P0 | Draft the M8 Frostbound-aligned refinement specification and review rubric (M8-A1) | 🤖 Agent | 🟢 Complete | [M8 specification](implementation/M8_FROSTBOUND_ALIGNED_REFINEMENT_SPEC.md) and [V8 rubric](validation/M8_FROSTBOUND_ALIGNED_REFINEMENT_RUBRIC.md) define bounded cold-material/focal work, preserved M7 contracts, evidence, acceptance criteria, scores, blockers, and asset-only handoff |
+| P0 | Review and approve the M8 refinement definition (M8-A2) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Approve the M8 scope, material/focal direction, evidence/rubric, versioned M8 lineage, and M8-A3 implementation authorization—or request edits |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -237,3 +238,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Completed M7-A5 with a 26-variant SVG/PNG matrix, independent progress parts, portrait/target-phone composition, 68-module asset package, package validation, and dedicated M7 showroom; queued V7 human fidelity review | Codex |
 | 2026-07-18 | Passed M7-A6 at `90.5/100` via the project-owner-authorized automated review; completed the V7 evidence package, asset-only handoff, and comparative Frostbound assessment with two non-blocking art observations | Project owner / Codex |
 | 2026-07-18 | Approved Option A: start the bounded M8 Frostbound-aligned angular refinement; preserve M7 geometry and modularity while improving reusable icy material/focal treatment | Project owner / Codex |
+| 2026-07-18 | Completed M8-A1 draft specification and V8 rubric; queued M8 definition review before any rendering | Codex |
