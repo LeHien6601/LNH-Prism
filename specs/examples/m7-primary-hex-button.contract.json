@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m7-primary-hex-button-contract",
+  "version": "0.1.0",
+  "status": "draft",
+  "style": {
+    "id": "m7-reference-fidelity",
+    "version": "0.1.0"
+  },
+  "template": {
+    "id": "m7-hex-button",
+    "version": "0.1.0"
+  },
+  "geometry": {
+    "shape": "wide-hexagon",
+    "cornerRadius": 2,
+    "endCapDepth": 34,
+    "contentSafeArea": {
+      "left": 48,
+      "right": 48,
+      "top": 10,
+      "bottom": 12
+    },
+    "approvedLayerOrder": [
+      "content",
+      "ornament-decal",
+      "edge-energy-accent",
+      "top-bevel-highlight",
+      "side-bevel-shade",
+      "surface-pattern",
+      "surface-grain",
+      "inner-plate-fill",
+      "outer-frame",
+      "connected-depth",
+      "outer-shadow"
+    ]
+  },
+  "layers": [
+    { "id": "m7-button-shadow", "kind": "shadow", "enabled": true },
+    { "id": "m7-button-depth", "kind": "extrusion", "enabled": true },
+    { "id": "m7-button-frame", "kind": "border", "enabled": true },
+    { "id": "m7-button-plate", "kind": "fill", "enabled": true },
+    { "id": "m7-button-grain", "kind": "texture", "enabled": true },
+    { "id": "m7-button-pattern", "kind": "texture", "enabled": true },
+    { "id": "m7-button-side-bevel", "kind": "bevel", "enabled": true },
+    { "id": "m7-button-top-bevel", "kind": "bevel", "enabled": true },
+    { "id": "m7-button-edge-energy", "kind": "highlight", "enabled": true },
+    { "id": "m7-button-ornament", "kind": "decal", "enabled": true },
+    { "id": "m7-button-content", "kind": "content", "enabled": true }
+  ],
+  "states": {
+    "normal": {},
+    "pressed": { "contentOffset": { "x": 0, "y": 2 } },
+    "disabled": {}
+  },
+  "sizing": {
+    "mode": "stretch",
+    "minimum": {
+      "width": 260,
+      "height": 62
+    }
+  },
+  "compatibility": {
+    "minimumRendererVersion": "0.1.0"
+  }
+}

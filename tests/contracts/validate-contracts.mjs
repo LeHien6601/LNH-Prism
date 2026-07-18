@@ -26,6 +26,7 @@ const exampleSchemas = new Map([
   ["primary-button-material-bindings.json", "component-spec.schema.json"],
   ["m2-shop-panel.json", "component-spec.schema.json"], ["m2-category-tabs.json", "component-spec.schema.json"], ["m2-primary-purchase-button.json", "component-spec.schema.json"], ["m2-secondary-cancel-button.json", "component-spec.schema.json"], ["m2-currency-badge.json", "component-spec.schema.json"], ["m2-limited-offer-progress.json", "component-spec.schema.json"],
   ["frostbound-reward-panel.json", "component-spec.schema.json"], ["frostbound-claim-button.json", "component-spec.schema.json"], ["frostbound-later-button.json", "component-spec.schema.json"], ["frostbound-reward-progress.json", "component-spec.schema.json"], ["frostbound-reward-emblem-container.json", "component-spec.schema.json"],
+  ["m7-primary-hex-button.contract.json", "component-spec.schema.json"],
   ["primary-panel.json", "component-spec.schema.json"],
   ["primary-progress-bar.json", "component-spec.schema.json"],
   ["neon-core-materials.json", "material-pack.schema.json"],
@@ -75,7 +76,13 @@ const validateComponent = ajv.getSchema(componentSchema.$id);
 const invalidBinding = JSON.parse(await readFile(join(exampleDir, "primary-button.json"), "utf8"));
 invalidBinding.materialBindings = [{ slot: "surface-grain", materialId: "blue-grain-overlay", overrides: { grainOpacity: 0.21 } }];
 if (validateComponent(invalidBinding)) throw new Error("component schema must reject out-of-range material binding overrides.");
-console.log("rejected invalid material normalization and bindings");
+const roundedM7Hex = JSON.parse(await readFile(join(exampleDir, "m7-primary-hex-button.contract.json"), "utf8"));
+roundedM7Hex.geometry.cornerRadius = 18;
+if (validateComponent(roundedM7Hex)) throw new Error("component schema must reject rounded/capsule-like M7 wide-hex geometry.");
+const missingSafeArea = JSON.parse(await readFile(join(exampleDir, "m7-primary-hex-button.contract.json"), "utf8"));
+delete missingSafeArea.geometry.contentSafeArea;
+if (validateComponent(missingSafeArea)) throw new Error("component schema must require content safe area for M7 wide-hex geometry.");
+console.log("rejected invalid material normalization, bindings, and M7 hex geometry");
 
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);

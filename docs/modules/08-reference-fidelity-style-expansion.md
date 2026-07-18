@@ -4,7 +4,7 @@
 
 Prove that the asset pipeline can follow a sharper and more complex reference style without losing deterministic structure, reusable materials, stable IDs, or engine-neutral modular delivery.
 
-**Status:** M7 definition approved. The next task is M7-A3: extend contracts/templates for angular hex geometry and the approved layer model.
+**Status:** M7-A3 complete. The next task is M7-A4: create the M7 material pack and approved component specs.
 
 ## Scope
 
@@ -66,3 +66,4 @@ M7 validation will be defined by M7-A1. It must include at least one reference-f
 | 2026-07-18 | Created module after project owner selected the next production asset package track and requested sharper wide-hexagon reference fidelity | Project owner / Codex |
 | 2026-07-18 | Completed M7-A1 draft definition package and queued human definition review | Codex |
 | 2026-07-18 | Approved M7 definition Option A as drafted and queued angular hex contract/template work | Project owner / Codex |
+| 2026-07-18 | Completed M7-A3 geometry contracts and angular renderer helpers; queued material pack and component specs | Codex |

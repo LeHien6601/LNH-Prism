@@ -149,3 +149,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-18 | Selected M7 reference-fidelity style expansion as the next asset-only production track | Project owner / Codex |
 | 2026-07-18 | Drafted the M7 reference brief, implementation specification, and visual-fidelity rubric for definition review | Codex |
 | 2026-07-18 | Approved the M7 definition package and opened angular hex contract/template implementation | Project owner / Codex |
+| 2026-07-18 | Completed M7-A3 angular hex contracts/templates and queued M7 material/spec work | Codex |

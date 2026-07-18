@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M7 — Reference-fidelity style expansion** |
-| Next task | 🔵 **Extend contracts/templates for angular hex geometry and layer model** · 🤖 Agent |
-| Next agent-ready task | Extend contracts/templates for angular hex geometry and layer model |
+| Next task | 🔵 **Create M7 material pack and approved component specs** · 🤖 Agent |
+| Next agent-ready task | Create M7 material pack and approved component specs |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -53,7 +53,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M4 | Modular asset delivery | 🟢 Passed — 62-module engine-neutral package validated |
 | 🟢 | M5 | Production hardening and regression suite | 🟢 Passed — Frostbound-only hardening accepted for M5 exit |
 | 🟢 | M6 | Optional showcase scaling and workflow review | 🟢 Deferred — Markdown + showcase remain sufficient |
-| ⚪ | M7 | Reference-fidelity style expansion | 🔵 Definition approved — angular hex contracts/templates are next |
+| ⚪ | M7 | Reference-fidelity style expansion | 🔵 Angular hex contracts/templates complete — material pack and specs are next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -114,7 +114,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P3 | Decide next production roadmap direction | 🧭 Project owner + 🛠️ Technical lead | 🟢 Complete | Option A approved: start the next production asset package track, focused on stronger reference fidelity, sharper wide-hexagon UI geometry, and expanded style complexity |
 | P0 | Draft M7 reference-fidelity style expansion specification | 🤖 Agent | 🟢 Complete | [Reference brief](reference-briefs/M7_REFERENCE_FIDELITY_STYLE_EXPANSION.md), [implementation specification](implementation/M7_REFERENCE_FIDELITY_IMPLEMENTATION_SPEC.md), and [rubric](validation/M7_REFERENCE_FIDELITY_RUBRIC.md) define target/reference requirements, sharp wide-hexagon button and angular UI language, expanded material/ornament complexity, component inventory, validation rubric, evidence plan, and engine-neutral asset-only handoff boundary |
 | P0 | Review and approve M7 reference-fidelity definition | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved as drafted: M7 reference brief, implementation specification, rubric, seven-component inventory, wide-hexagon shape rules, scoring/blockers, and asset-only handoff requirements are accepted |
-| P0 | Extend contracts/templates for angular hex geometry and layer model (M7-A3) | 🤖 Agent | 🔵 Agent-ready | Focused contract/template work proves wide-hexagon bounds, angular layer order, deterministic states, invalid rounded/capsule rejection, compatibility with existing outputs, and no engine scope |
+| P0 | Extend contracts/templates for angular hex geometry and layer model (M7-A3) | 🤖 Agent | 🟢 Complete | Optional component-spec geometry contracts, an M7 wide-hex contract fixture, and deterministic angular renderer helpers prove wide-hexagon bounds, angular layer order, deterministic states, invalid rounded/capsule rejection, compatibility with existing outputs, and no engine scope |
+| P0 | Create M7 material pack and approved component specs (M7-A4) | 🤖 Agent | 🔵 Agent-ready | M7 material sources/pack and seven approved component specs validate, reuse the approved angular geometry/layer model, include source boundaries, and avoid reference pixels or engine scope |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -226,3 +227,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Approved next roadmap Option A: start M7 reference-fidelity style expansion with sharper wide-hexagon UI geometry and expanded style complexity; queued M7-A1 specification | Project owner / Codex |
 | 2026-07-18 | Completed M7-A1 with a draft reference brief, implementation specification, and visual-fidelity rubric; queued M7 definition review | Codex |
 | 2026-07-18 | Approved M7 definition Option A as drafted and queued M7-A3 angular hex contracts/templates | Project owner / Codex |
+| 2026-07-18 | Completed M7-A3 with optional geometry contracts, a wide-hex contract fixture, angular renderer helpers, and focused rejection/layer/state tests; queued M7-A4 | Codex |
