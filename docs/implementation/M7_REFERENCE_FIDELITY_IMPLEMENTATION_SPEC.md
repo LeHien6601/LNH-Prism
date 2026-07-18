@@ -4,14 +4,14 @@
 
 | Field | Value |
 |---|---|
-| Status | 🟡 Draft — pending definition review |
+| Status | 🟢 Approved — Option A |
 | Date | 2026-07-18 |
 | Milestone | M7 — Reference-fidelity style expansion |
 | Validation target | V7 — angular reference-fidelity asset package |
 | Decision source | [ADR-018](../decisions/ADR-018-reference-fidelity-style-expansion.md) |
 | Product/art reference | [M7 reference brief](../reference-briefs/M7_REFERENCE_FIDELITY_STYLE_EXPANSION.md) |
 | Review rubric | [M7 visual-fidelity rubric](../validation/M7_REFERENCE_FIDELITY_RUBRIC.md) |
-| Implementation state | Draft definition; no rendering authorized until review approval |
+| Implementation state | Definition approved; M7-A3 may begin |
 
 ## 1. Intended outcome
 
@@ -168,15 +168,22 @@ Prepare V7-E01 through V7-E10 exactly as defined in [the M7 rubric](../validatio
 
 Use this checklist during M7-A2:
 
-- [ ] Wide-hexagon shape language is accepted as the primary correction.
-- [ ] Seven-component inventory is accepted or edited.
-- [ ] Material/ornament complexity is sufficient but bounded.
-- [ ] Evidence IDs, scoring, blockers, and review roles are accepted.
-- [ ] Engine-neutral asset-only delivery remains the final boundary.
-- [ ] Implementation may begin only after approval is recorded.
+- [x] Wide-hexagon shape language is accepted as the primary correction.
+- [x] Seven-component inventory is accepted as drafted.
+- [x] Material/ornament complexity is sufficient but bounded.
+- [x] Evidence IDs, scoring, blockers, and review roles are accepted.
+- [x] Engine-neutral asset-only delivery remains the final boundary.
+- [x] Implementation may begin after this approval is recorded.
+
+## 14. Approval outcome
+
+On 2026-07-18, the project owner approved Option A as drafted. The approval covers the M7 reference brief, seven-component inventory, wide-hexagon button correction, angular component family, material/ornament model, canonical layer order, implementation slices M7-A3 through M7-A6, automated validation requirements, V7-E01 through V7-E10 evidence package, scoring thresholds, automatic blockers, and engine-neutral asset-only handoff requirements.
+
+M7-A3 may begin as the next agent-ready task. Do not add Unity or other engine integration scope.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-18 | Drafted M7 reference-fidelity implementation specification | Codex |
+| 2026-07-18 | Approved Option A as drafted and authorized M7-A3 | Project owner |

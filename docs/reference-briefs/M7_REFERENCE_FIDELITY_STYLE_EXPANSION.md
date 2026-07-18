@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Status | 🟡 Draft — pending definition review |
+| Status | 🟢 Approved — Option A |
 | Date | 2026-07-18 |
 | Milestone | M7 — Reference-fidelity style expansion |
 | Decision source | [ADR-018](../decisions/ADR-018-reference-fidelity-style-expansion.md) |
@@ -87,3 +87,4 @@ The inventory is intentionally package-sized: enough to prove a richer family, b
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-18 | Drafted reference-fidelity brief from project owner direction | Codex |
+| 2026-07-18 | Approved Option A as drafted for M7 implementation | Project owner |

@@ -4,7 +4,7 @@
 
 Use this rubric to judge M7's real validation: a sharper, more complex, reference-faithful asset package that replaces the rounded-corner baseline with a wide-hexagon/angular UI language while preserving deterministic, modular, engine-neutral assets.
 
-**Status:** 🟡 Draft — pending definition review.
+**Status:** 🟢 Approved — Option A accepted on 2026-07-18.
 
 **Review owner:** ✦ UI lead.
 
@@ -154,15 +154,16 @@ Decision: 🟢 Pass / 🟡 Conditional pass / 🔴 Fail
 
 ## Approval checklist
 
-- [ ] Evidence IDs and owners are sufficient.
-- [ ] Shape-fidelity blocker rules protect the wide-hexagon direction.
-- [ ] Dimension weights and minimums reflect M7 priorities.
-- [ ] `≥85` Pass and `83–84` Conditional-pass thresholds are accepted.
-- [ ] Asset-only/showroom or file-address handoff is mandatory.
-- [ ] Unity and engine integration remain explicitly out of scope.
+- [x] Evidence IDs and owners are sufficient.
+- [x] Shape-fidelity blocker rules protect the wide-hexagon direction.
+- [x] Dimension weights and minimums reflect M7 priorities.
+- [x] `≥85` Pass and `83–84` Conditional-pass thresholds are accepted.
+- [x] Asset-only/showroom or file-address handoff is mandatory.
+- [x] Unity and engine integration remain explicitly out of scope.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-18 | Drafted M7 evidence, scoring, blocker, review, and handoff requirements | Codex |
+| 2026-07-18 | Approved Option A as drafted | Project owner |
