@@ -1,6 +1,6 @@
 # V8 Frostbound-Aligned Refinement Review
 
-**Date:** 2026-07-18  
+**Date:** 2026-07-18
 **Decision:** Pass — approved by the project owner
 
 | Dimension | Score | Weight | Weighted |
