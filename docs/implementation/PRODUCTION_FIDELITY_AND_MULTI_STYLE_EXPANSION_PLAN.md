@@ -1,4 +1,4 @@
-# LNH Prism â€” Production Fidelity and Multi-Style Expansion Plan
+# LNH Prism — Production Fidelity and Multi-Style Expansion Plan
 
 ## Document status
 
@@ -18,11 +18,25 @@ This document does not replace:
 - Existing validation rubrics
 - Existing architectural decisions
 
-Those documents remain the projectâ€™s operational source of truth.
+Those documents remain the project’s operational source of truth.
+
+## Navigation
+
+- [Mission](#1-mission)
+- [Strategic development order](#2-strategic-development-order)
+- [Non-negotiable constraints](#3-non-negotiable-constraints)
+- [Current visual-quality assessment](#4-current-visual-quality-assessment)
+- [Target style architecture](#5-target-style-architecture)
+- [Required renderer systems](#6-required-renderer-systems)
+- [Visual-review framework](#7-visual-review-framework)
+- [Roadmap](#8-roadmap)
+- [Repository changes and execution protocol](#9-proposed-repository-changes)
+- [Testing strategy and guardrails](#11-testing-strategy)
+- [Definition of success](#13-definition-of-success)
 
 ---
 
-# 1. Mission
+## 1. Mission
 
 LNH Prism follows this principle:
 
@@ -65,16 +79,16 @@ After Frostbound reaches a production-quality visual bar, the successful techniq
 
 ---
 
-# 2. Strategic development order
+## 2. Strategic development order
 
 The system must be developed in this order:
 
 ```text
 Frostbound production fidelity
-â†’ renderer capability generalization
-â†’ Volcanic Forge transfer test
-â†’ third-style contrast test
-â†’ bounded style-authoring workflow
+→ renderer capability generalization
+→ Volcanic Forge transfer test
+→ third-style contrast test
+→ bounded style-authoring workflow
 ```
 
 Do not optimize for producing many styles quickly.
@@ -88,11 +102,11 @@ Optimize for proving that:
 
 ---
 
-# 3. Non-negotiable constraints
+## 3. Non-negotiable constraints
 
 All work under this plan must preserve the following constraints.
 
-## 3.1 Deterministic output
+### 3.1 Deterministic output
 
 The same versioned inputs must reproduce the same outputs.
 
@@ -109,7 +123,7 @@ Unseeded randomness is prohibited.
 
 ---
 
-## 3.2 Editable structure
+### 3.2 Editable structure
 
 Complexity must remain structurally editable.
 
@@ -127,7 +141,7 @@ Raster exports may exist only as deterministic derived outputs unless an approve
 
 ---
 
-## 3.3 No reference-pixel extraction
+### 3.3 No reference-pixel extraction
 
 Reference images are art-direction and comparison evidence only.
 
@@ -152,7 +166,7 @@ All generated materials and effects must be:
 
 ---
 
-## 3.4 Reusable materials
+### 3.4 Reusable materials
 
 Visual treatment must be represented through reusable material systems rather than component-specific decoration.
 
@@ -176,7 +190,7 @@ A material must describe how a surface behaves visually, not only which colors i
 
 ---
 
-## 3.5 Stable IDs and provenance
+### 3.5 Stable IDs and provenance
 
 All new systems must preserve stable identification and traceability.
 
@@ -210,7 +224,7 @@ Every final output must remain traceable to:
 
 ---
 
-## 3.6 Engine-neutral delivery
+### 3.6 Engine-neutral delivery
 
 The final production deliverable remains an engine-neutral asset package.
 
@@ -231,7 +245,7 @@ Do not introduce Unity-specific or engine-specific implementation unless a futur
 
 ---
 
-## 3.7 Human-controlled art direction
+### 3.7 Human-controlled art direction
 
 Human-decision tasks must remain human-decision tasks.
 
@@ -254,7 +268,7 @@ Codex must not:
 
 ---
 
-## 3.8 One coherent task per execution
+### 3.8 One coherent task per execution
 
 Codex must follow the workflow in `AGENTS.md`.
 
@@ -274,11 +288,11 @@ Do not combine several roadmap tasks into one uncontrolled change.
 
 ---
 
-# 4. Current visual-quality assessment
+## 4. Current visual-quality assessment
 
 The current system is structurally strong but visually underdeveloped relative to the approved Frostbound target.
 
-## 4.1 Existing strengths
+### 4.1 Existing strengths
 
 The current implementation already provides:
 
@@ -297,7 +311,7 @@ These strengths must be preserved.
 
 ---
 
-## 4.2 Main visual gap: material depth
+### 4.2 Main visual gap: material depth
 
 The target reference contains multiple clearly differentiated material responses.
 
@@ -328,7 +342,7 @@ As a result, the output reads closer to a clean vector HUD than a premium frozen
 
 ---
 
-## 4.3 Main visual gap: edge hierarchy
+### 4.3 Main visual gap: edge hierarchy
 
 A premium border must not be represented as only one stroke.
 
@@ -336,30 +350,30 @@ The target style requires an edge construction similar to:
 
 ```text
 outer separation shadow
-â†’ structural silhouette
-â†’ ice or metal body
-â†’ dark bevel
-â†’ bright bevel
-â†’ inner shadow
-â†’ inner rim
-â†’ accent highlight
-â†’ optional glow
-â†’ content-surface boundary
+→ structural silhouette
+→ ice or metal body
+→ dark bevel
+→ bright bevel
+→ inner shadow
+→ inner rim
+→ accent highlight
+→ optional glow
+→ content-surface boundary
 ```
 
 The current output often behaves closer to:
 
 ```text
 outer polygon
-â†’ cyan stroke
-â†’ dark fill
+→ cyan stroke
+→ dark fill
 ```
 
 This is a major reason the current result feels drafted rather than dimensional.
 
 ---
 
-## 4.4 Main visual gap: focal-object quality
+### 4.4 Main visual gap: focal-object quality
 
 The central reward object is the visual anchor of the target composition.
 
@@ -390,7 +404,7 @@ It must not remain:
 
 ---
 
-## 4.5 Main visual gap: composition and scale
+### 4.5 Main visual gap: composition and scale
 
 The target composition uses strong visual-weight contrast.
 
@@ -412,7 +426,7 @@ The upgraded system must support deliberate visual hierarchy rather than only co
 
 ---
 
-## 4.6 Main visual gap: controlled irregularity
+### 4.6 Main visual gap: controlled irregularity
 
 The reference includes deliberate non-uniformity:
 
@@ -431,7 +445,7 @@ The project needs deterministic, seeded irregularity.
 
 ---
 
-## 4.7 Main visual gap: typography
+### 4.7 Main visual gap: typography
 
 Typography must be treated as part of the style system.
 
@@ -453,21 +467,21 @@ Typography effects must remain independent from component geometry.
 
 ---
 
-# 5. Target style architecture
+## 5. Target style architecture
 
 A style must be assembled from independent systems.
 
 ```text
 Style
-â”œâ”€â”€ Shape Language
-â”œâ”€â”€ Material Family
-â”œâ”€â”€ Edge Language
-â”œâ”€â”€ Lighting Model
-â”œâ”€â”€ Ornament Language
-â”œâ”€â”€ Surface Variation
-â”œâ”€â”€ Typography Treatment
-â”œâ”€â”€ Focal Treatment
-â””â”€â”€ State Treatment
+├── Shape Language
+├── Material Family
+├── Edge Language
+├── Lighting Model
+├── Ornament Language
+├── Surface Variation
+├── Typography Treatment
+├── Focal Treatment
+└── State Treatment
 ```
 
 A style must not be represented as one monolithic theme object containing arbitrary renderer behavior.
@@ -508,9 +522,9 @@ stateTreatment: heat-glow-compression-dim
 
 ---
 
-# 6. Required renderer systems
+## 6. Required renderer systems
 
-# 6.1 Layered edge-stack system
+### 6.1 Layered edge-stack system
 
 Introduce a reusable edge-stack system.
 
@@ -543,7 +557,7 @@ export interface EdgeStack {
 
 The exact contract must follow existing repository conventions.
 
-## Minimum edge-stack preset families
+#### Minimum edge-stack preset families
 
 - `ice-heavy`
 - `metal-heavy`
@@ -552,7 +566,7 @@ The exact contract must follow existing repository conventions.
 - `muted-secondary`
 - `ornamental-frame`
 
-## Required behavior
+#### Required behavior
 
 - Every edge layer has a stable ID.
 - Every edge layer can be independently inspected.
@@ -565,7 +579,7 @@ The exact contract must follow existing repository conventions.
 - A change to a shared edge preset propagates to all bound components.
 - Component-specific hardcoded edge behavior is prohibited.
 
-## Required validation
+#### Required validation
 
 - Contract validation
 - Invalid thickness rejection
@@ -578,7 +592,7 @@ The exact contract must follow existing repository conventions.
 
 ---
 
-# 6.2 Structural geometry and ornament separation
+### 6.2 Structural geometry and ornament separation
 
 Each component must separate these concepts:
 
@@ -593,7 +607,7 @@ local variation masks
 lighting accents
 ```
 
-## Structural requirements
+#### Structural requirements
 
 - Structural geometry must remain valid without ornaments.
 - Functional content bounds must remain independent.
@@ -641,7 +655,7 @@ The actual schema must align with existing naming and versioning conventions.
 
 ---
 
-# 6.3 Material-response system
+### 6.3 Material-response system
 
 Materials must describe visual behavior rather than only palette and texture.
 
@@ -662,7 +676,7 @@ export interface MaterialResponse {
 }
 ```
 
-## Minimum Frostbound material responses
+#### Minimum Frostbound material responses
 
 - `frostbound-dark-substrate`
 - `frostbound-silver-metal`
@@ -670,7 +684,7 @@ export interface MaterialResponse {
 - `frostbound-blue-crystal`
 - `frostbound-cold-glow`
 
-## Required behavior
+#### Required behavior
 
 - Material response can be bound to structural regions.
 - Edge response may differ from center response.
@@ -683,7 +697,7 @@ export interface MaterialResponse {
 - Material provenance is recorded.
 - No reference pixels enter the material pack.
 
-## Required isolation evidence
+#### Required isolation evidence
 
 For every material response, render:
 
@@ -697,7 +711,7 @@ For every material response, render:
 
 ---
 
-# 6.4 Deterministic seeded variation
+### 6.4 Deterministic seeded variation
 
 Introduce a reusable variation contract.
 
@@ -715,7 +729,7 @@ Example:
 }
 ```
 
-## Required variation channels
+#### Required variation channels
 
 At minimum:
 
@@ -729,7 +743,7 @@ At minimum:
 - Local asymmetry
 - Surface-wear distribution
 
-## Requirements
+#### Requirements
 
 - Same seed and same inputs produce the same output.
 - Different seeds produce bounded differences.
@@ -742,7 +756,7 @@ At minimum:
 - Seed is written into output manifests.
 - Seed is written into validation receipts.
 
-## Required tests
+#### Required tests
 
 - Same-seed reproducibility
 - Different-seed bounded-difference test
@@ -755,13 +769,13 @@ At minimum:
 
 ---
 
-# 6.5 Focal-object framework
+### 6.5 Focal-object framework
 
 Create a first-class focal-object framework.
 
 The first production implementation is the Frostbound crystal.
 
-## Required independently addressable layers
+#### Required independently addressable layers
 
 ```text
 focal-core
@@ -776,7 +790,7 @@ focal-particles
 focal-ground-glow
 ```
 
-## Crystal generator requirements
+#### Crystal generator requirements
 
 - Versioned silhouette preset
 - Versioned facet topology
@@ -801,7 +815,7 @@ focal-ground-glow
 - Output provenance
 - Manifest lineage
 
-## Focal-object acceptance criteria
+#### Focal-object acceptance criteria
 
 - The object remains recognizable at target mobile scale.
 - Large facets remain readable at target mobile scale.
@@ -814,7 +828,7 @@ focal-ground-glow
 
 ---
 
-# 6.6 Typography-treatment system
+### 6.6 Typography-treatment system
 
 Create reusable typography treatments.
 
@@ -835,7 +849,7 @@ export interface TypographyTreatment {
 }
 ```
 
-## Minimum Frostbound typography presets
+#### Minimum Frostbound typography presets
 
 - `frostbound-title`
 - `frostbound-primary-action`
@@ -843,7 +857,7 @@ export interface TypographyTreatment {
 - `frostbound-progress-label`
 - `frostbound-supporting-label`
 
-## Requirements
+#### Requirements
 
 - Text effects remain separate from button and panel geometry.
 - Width fitting is deterministic.
@@ -855,7 +869,7 @@ export interface TypographyTreatment {
 - Font provenance and licensing are recorded.
 - Font files must not be included in distributable output unless explicitly approved and legally permitted.
 
-## Validation
+#### Validation
 
 - Small-width label
 - Long-width label
@@ -869,7 +883,7 @@ export interface TypographyTreatment {
 
 ---
 
-# 6.7 Lighting-model system
+### 6.7 Lighting-model system
 
 Introduce a style-level lighting model.
 
@@ -888,7 +902,7 @@ export interface LightingModel {
 }
 ```
 
-## Frostbound baseline
+#### Frostbound baseline
 
 - Cold top key light
 - Bright upper bevel
@@ -899,7 +913,7 @@ export interface LightingModel {
 - Stronger focal illumination than component illumination
 - Consistent light direction across all components
 
-## Requirements
+#### Requirements
 
 - All materials reference a shared lighting model.
 - Components do not invent unrelated light directions.
@@ -911,7 +925,7 @@ export interface LightingModel {
 
 ---
 
-# 6.8 Composition hierarchy system
+### 6.8 Composition hierarchy system
 
 The composition must explicitly define visual hierarchy.
 
@@ -927,7 +941,7 @@ Recommended hierarchy:
 7. Decorative ornaments
 ```
 
-## Requirements
+#### Requirements
 
 - Element sizes are not chosen only from equal spacing rules.
 - Visual weight is evaluated at thumbnail scale.
@@ -940,13 +954,13 @@ Recommended hierarchy:
 
 ---
 
-# 7. Visual-review framework
+## 7. Visual-review framework
 
 Technical correctness remains mandatory but must not inflate the visual-quality score.
 
 A technically perfect but visually weak package must not receive a high fidelity score.
 
-## 7.1 Visual score
+### 7.1 Visual score
 
 | Dimension | Weight |
 |---|---:|
@@ -961,9 +975,9 @@ A technically perfect but visually weak package must not receive a high fidelity
 | Mobile-scale readability | 5 |
 | **Total** | **100** |
 
-## 7.2 Suggested dimension guidance
+### 7.2 Suggested dimension guidance
 
-### Silhouette fidelity â€” 10
+#### Silhouette fidelity — 10
 
 Evaluate:
 
@@ -973,7 +987,7 @@ Evaluate:
 - Component distinction
 - Target-style recognition
 
-### Material separation â€” 15
+#### Material separation — 15
 
 Evaluate:
 
@@ -983,7 +997,7 @@ Evaluate:
 - Primary versus secondary treatment
 - Surface behavior at mobile scale
 
-### Edge depth and bevel hierarchy â€” 15
+#### Edge depth and bevel hierarchy — 15
 
 Evaluate:
 
@@ -993,7 +1007,7 @@ Evaluate:
 - Highlight coherence
 - Inner and outer rim distinction
 
-### Lighting coherence â€” 10
+#### Lighting coherence — 10
 
 Evaluate:
 
@@ -1003,7 +1017,7 @@ Evaluate:
 - Focal illumination
 - State treatment
 
-### Focal-object strength â€” 15
+#### Focal-object strength — 15
 
 Evaluate:
 
@@ -1014,7 +1028,7 @@ Evaluate:
 - Hierarchy
 - Mobile readability
 
-### Ornament density and placement â€” 10
+#### Ornament density and placement — 10
 
 Evaluate:
 
@@ -1024,7 +1038,7 @@ Evaluate:
 - Controlled asymmetry
 - Lack of clutter
 
-### Controlled surface variation â€” 10
+#### Controlled surface variation — 10
 
 Evaluate:
 
@@ -1035,7 +1049,7 @@ Evaluate:
 - Shard variance
 - Deterministic irregularity
 
-### Composition and visual hierarchy â€” 10
+#### Composition and visual hierarchy — 10
 
 Evaluate:
 
@@ -1045,7 +1059,7 @@ Evaluate:
 - Secondary action subordination
 - Focal dominance
 
-### Mobile-scale readability â€” 5
+#### Mobile-scale readability — 5
 
 Evaluate:
 
@@ -1057,7 +1071,7 @@ Evaluate:
 
 ---
 
-## 7.3 Automatic blockers
+### 7.3 Automatic blockers
 
 Any of the following blocks a pass regardless of visual score:
 
@@ -1080,11 +1094,11 @@ Any of the following blocks a pass regardless of visual score:
 
 ---
 
-## 7.4 Required review distances
+### 7.4 Required review distances
 
 Every component and composition must be reviewed at three distances.
 
-### Source scale
+#### Source scale
 
 Use this to inspect:
 
@@ -1098,7 +1112,7 @@ Use this to inspect:
 - Frost masks
 - Highlight behavior
 
-### Target mobile scale
+#### Target mobile scale
 
 Use this to inspect:
 
@@ -1110,7 +1124,7 @@ Use this to inspect:
 - Progress readability
 - Particle clutter
 
-### Thumbnail scale
+#### Thumbnail scale
 
 Use this to inspect:
 
@@ -1123,11 +1137,11 @@ Use this to inspect:
 
 ---
 
-# 8. Roadmap
+## 8. Roadmap
 
-# M8 â€” Frostbound production-fidelity pass
+### M8 — Frostbound production-fidelity pass
 
-## Goal
+#### Goal
 
 Upgrade the current seven-component Frostbound-aligned family into a production-quality package while preserving:
 
@@ -1142,13 +1156,13 @@ Upgrade the current seven-component Frostbound-aligned family into a production-
 
 ---
 
-## M8-A4R â€” Reconcile current M8 scope with production-fidelity requirements
+#### M8-A4R — Reconcile current M8 scope with production-fidelity requirements
 
 **Execution:** Human decision  
 **Owner:** Project owner, Art lead, UI lead, Technical lead  
 **Agent role:** Inspect, compare, prepare options, recommend
 
-## Purpose
+#### Purpose
 
 Before rendering the approved M8 contracts, determine whether the current M8 implementation specification and V8 rubric already cover the required production-fidelity systems.
 
@@ -1165,7 +1179,7 @@ The review must compare the current M8 documents against:
 - Three-distance review
 - Visual scoring separated from technical correctness
 
-## Required Codex output
+#### Required Codex output
 
 Codex must produce a gap matrix containing:
 
@@ -1174,7 +1188,7 @@ Codex must produce a gap matrix containing:
 
 Codex must prepare two options.
 
-### Option A â€” Expand M8-A4 before rendering
+##### Option A — Expand M8-A4 before rendering
 
 Use when:
 
@@ -1184,7 +1198,7 @@ Use when:
 - Existing approved M7 outputs remain unchanged.
 - M8 will otherwise produce another incremental draft-quality result.
 
-### Option B â€” Keep M8-A4 bounded
+##### Option B — Keep M8-A4 bounded
 
 Use when:
 
@@ -1200,13 +1214,13 @@ In Option B:
 - Record remaining visual gaps.
 - Start missing fidelity systems in M9.
 
-## Recommendation rule
+#### Recommendation rule
 
 Prefer Option A when the change is bounded and avoids knowingly producing another visually limited package.
 
 Prefer Option B when expanding M8 would create uncontrolled scope or invalidate approved contracts.
 
-## Exit condition
+#### Exit condition
 
 The project owner explicitly selects Option A or Option B.
 
@@ -1221,12 +1235,12 @@ Codex must not make this decision autonomously.
 
 ---
 
-## M8-A4 â€” Render the M8 family, package, and showroom
+#### M8-A4 — Render the M8 family, package, and showroom
 
 **Execution:** Agent-ready after required scope decision  
 **Owner:** Agent
 
-## Required component inventory
+#### Required component inventory
 
 - Primary panel
 - Primary button
@@ -1236,7 +1250,7 @@ Codex must not make this decision autonomously.
 - Badge or container
 - Reward focal crystal or emblem
 
-## Required deliverables
+#### Required deliverables
 
 - Versioned seven-component render matrix
 - Portrait composition
@@ -1259,7 +1273,7 @@ Codex must not make this decision autonomously.
 - Showroom integration
 - Preserved M7 lineage
 
-## Acceptance criteria
+#### Acceptance criteria
 
 - Existing M7 assets are not overwritten.
 - Every M8 output has a versioned ID.
@@ -1277,12 +1291,12 @@ Codex must not make this decision autonomously.
 
 ---
 
-## M8-A5 â€” Human V8 production-fidelity review
+#### M8-A5 — Human V8 production-fidelity review
 
 **Execution:** Human decision  
 **Owner:** Product, Art, UI, and Technical leads
 
-## Required evidence
+#### Required evidence
 
 - Target reference
 - Current output
@@ -1300,7 +1314,7 @@ Codex must not make this decision autonomously.
 - Unscored review form
 - Visual score sheet
 
-## Pass conditions
+#### Pass conditions
 
 - Total score meets the approved threshold.
 - Every mandatory minimum is met.
@@ -1311,9 +1325,9 @@ Codex must not make this decision autonomously.
 
 ---
 
-# M9 â€” Fidelity tooling and renderer generalization
+### M9 — Fidelity tooling and renderer generalization
 
-## Goal
+#### Goal
 
 Convert successful Frostbound-specific techniques into reusable renderer capabilities.
 
@@ -1321,7 +1335,7 @@ The generalized renderer must reproduce Frostbound without Frostbound-specific c
 
 ---
 
-## M9-A1 â€” Generalize edge stacks
+#### M9-A1 — Generalize edge stacks
 
 ### Deliverables
 
@@ -1346,7 +1360,7 @@ The generalized renderer must reproduce Frostbound without Frostbound-specific c
 
 ---
 
-## M9-A2 â€” Generalize material responses
+#### M9-A2 — Generalize material responses
 
 ### Deliverables
 
@@ -1370,7 +1384,7 @@ The generalized renderer must reproduce Frostbound without Frostbound-specific c
 
 ---
 
-## M9-A3 â€” Generalize seeded variation
+#### M9-A3 — Generalize seeded variation
 
 ### Deliverables
 
@@ -1393,7 +1407,7 @@ The generalized renderer must reproduce Frostbound without Frostbound-specific c
 
 ---
 
-## M9-A4 â€” Generalize ornament anchors
+#### M9-A4 — Generalize ornament anchors
 
 ### Deliverables
 
@@ -1417,7 +1431,7 @@ The generalized renderer must reproduce Frostbound without Frostbound-specific c
 
 ---
 
-## M9-A5 â€” Generalize focal-object framework
+#### M9-A5 — Generalize focal-object framework
 
 ### Deliverables
 
@@ -1440,7 +1454,7 @@ The generalized renderer must reproduce Frostbound without Frostbound-specific c
 
 ---
 
-## M9-A6 â€” Generalize typography treatment
+#### M9-A6 — Generalize typography treatment
 
 ### Deliverables
 
@@ -1461,7 +1475,7 @@ The generalized renderer must reproduce Frostbound without Frostbound-specific c
 
 ---
 
-## M9-A7 â€” Complexity and readability budgets
+#### M9-A7 — Complexity and readability budgets
 
 Create explicit limits for:
 
@@ -1487,7 +1501,7 @@ Create explicit limits for:
 
 ---
 
-## M9 exit gate
+#### M9 exit gate
 
 M9 passes only when:
 
@@ -1501,13 +1515,13 @@ M9 passes only when:
 
 ---
 
-# M10 â€” Second-style transfer test: Volcanic Forge
+### M10 — Second-style transfer test: Volcanic Forge
 
-## Goal
+#### Goal
 
 Prove that the generalized renderer can support a materially different style without rewriting component templates.
 
-## Style definition
+#### Style definition
 
 ```yaml
 styleId: volcanic-forge
@@ -1523,7 +1537,7 @@ focalTreatment: molten-core
 stateTreatment: heat-glow-compression-dim
 ```
 
-## Required visual proof
+#### Required visual proof
 
 - Obsidian material
 - Brass or forged-metal material
@@ -1537,7 +1551,7 @@ stateTreatment: heat-glow-compression-dim
 - Molten focal object
 - Strong primary and secondary action distinction
 
-## Required structural proof
+#### Required structural proof
 
 - Same component inventory
 - Shared structural geometry
@@ -1551,7 +1565,7 @@ stateTreatment: heat-glow-compression-dim
 - Engine-neutral package
 - Full provenance
 
-## M10 exit gate
+#### M10 exit gate
 
 The style must be clearly distinguishable from Frostbound at thumbnail scale.
 
@@ -1569,13 +1583,13 @@ A palette-only reskin does not pass.
 
 ---
 
-# M11 â€” Third-style contrast test
+### M11 — Third-style contrast test
 
 Select one of the following.
 
 ---
 
-## Option A â€” Enchanted Forest
+#### Option A — Enchanted Forest
 
 This style tests:
 
@@ -1610,7 +1624,7 @@ This option provides the strongest architecture stress test.
 
 ---
 
-## Option B â€” Royal Arcane
+#### Option B — Royal Arcane
 
 This style tests:
 
@@ -1644,7 +1658,7 @@ This option is lower risk and commercially useful for premium mobile UI.
 
 ---
 
-## Recommendation
+#### Recommendation
 
 Choose Enchanted Forest when the goal is maximum renderer flexibility testing.
 
@@ -1654,7 +1668,7 @@ The project owner must make the final choice.
 
 ---
 
-## M11 exit gate
+#### M11 exit gate
 
 The third style must:
 
@@ -1670,9 +1684,9 @@ The third style must:
 
 ---
 
-# M12 â€” Bounded style-authoring workflow
+### M12 — Bounded style-authoring workflow
 
-## Start condition
+#### Start condition
 
 Do not start M12 until all of the following have passed:
 
@@ -1681,11 +1695,11 @@ Do not start M12 until all of the following have passed:
 - Volcanic Forge transfer
 - Third-style contrast test
 
-## Goal
+#### Goal
 
 Create an authoring workflow around abstractions proven by real production styles.
 
-## Allowed capabilities
+#### Allowed capabilities
 
 - Style preset browser
 - Material-response controls
@@ -1703,7 +1717,7 @@ Create an authoring workflow around abstractions proven by real production style
 - Provenance inspection
 - Validation-state display
 
-## Non-goals
+#### Non-goals
 
 Do not build:
 
@@ -1720,17 +1734,17 @@ The workflow must remain bounded to proven production needs.
 
 ---
 
-# 9. Proposed repository changes
+## 9. Proposed repository changes
 
 The exact filenames must follow current repository conventions.
 
-## New primary document
+### New primary document
 
 ```text
 docs/implementation/PRODUCTION_FIDELITY_AND_MULTI_STYLE_EXPANSION_PLAN.md
 ```
 
-## Existing files likely requiring updates after approval
+### Existing files likely requiring updates after approval
 
 ```text
 docs/PROJECT_OVERVIEW.md
@@ -1740,7 +1754,7 @@ docs/implementation/M8_FROSTBOUND_ALIGNED_REFINEMENT_SPEC.md
 docs/validation/M8_FROSTBOUND_ALIGNED_REFINEMENT_RUBRIC.md
 ```
 
-## Recommended future module documents
+### Recommended future module documents
 
 ```text
 docs/modules/09-fidelity-tooling-generalization.md
@@ -1749,7 +1763,7 @@ docs/modules/11-third-style-contrast.md
 docs/modules/12-style-authoring-workflow.md
 ```
 
-## Recommended future implementation documents
+### Recommended future implementation documents
 
 ```text
 docs/implementation/M9_FIDELITY_TOOLING_SPEC.md
@@ -1758,7 +1772,7 @@ docs/implementation/M11_THIRD_STYLE_CONTRAST_SPEC.md
 docs/implementation/M12_STYLE_AUTHORING_WORKFLOW_SPEC.md
 ```
 
-## Recommended future validation documents
+### Recommended future validation documents
 
 ```text
 docs/validation/V8_PRODUCTION_FIDELITY_RUBRIC.md
@@ -1769,7 +1783,7 @@ docs/validation/V11_STYLE_CONTRAST_RUBRIC.md
 
 Do not create duplicate M8 documents when an existing document should be updated.
 
-## Possible schema files
+### Possible schema files
 
 ```text
 specs/edge-stack.schema.json
@@ -1785,11 +1799,11 @@ Codex must inspect existing schema naming, organization, and versioning before c
 
 ---
 
-# 10. Codex execution protocol
+## 10. Codex execution protocol
 
 For every task in this plan, Codex must follow this protocol.
 
-## 10.1 Read source-of-truth documents
+### 10.1 Read source-of-truth documents
 
 Before editing, read:
 
@@ -1806,7 +1820,7 @@ Before editing, read:
 
 ---
 
-## 10.2 Confirm task eligibility
+### 10.2 Confirm task eligibility
 
 Before implementation, state:
 
@@ -1823,7 +1837,7 @@ Do not start a human-decision task as implementation work.
 
 ---
 
-## 10.3 Implement one task only
+### 10.3 Implement one task only
 
 - Preserve unrelated user changes.
 - Keep backward compatibility unless an approved migration permits a break.
@@ -1834,7 +1848,7 @@ Do not start a human-decision task as implementation work.
 
 ---
 
-## 10.4 Validate proportionally to risk
+### 10.4 Validate proportionally to risk
 
 Validation may include:
 
@@ -1857,7 +1871,7 @@ Do not claim validation that was not run.
 
 ---
 
-## 10.5 Review the final diff
+### 10.5 Review the final diff
 
 Before committing, inspect:
 
@@ -1876,7 +1890,7 @@ Before committing, inspect:
 
 ---
 
-## 10.6 Update project control
+### 10.6 Update project control
 
 Update `docs/PROJECT_OVERVIEW.md` when:
 
@@ -1891,7 +1905,7 @@ Update detailed reasoning in the relevant module, implementation, validation, or
 
 ---
 
-## 10.7 Commit and push
+### 10.7 Commit and push
 
 For every mutating task:
 
@@ -1905,7 +1919,7 @@ For every mutating task:
 
 ---
 
-## 10.8 Required final handoff
+### 10.8 Required final handoff
 
 Every final Codex task response must include:
 
@@ -1924,9 +1938,9 @@ Every final Codex task response must include:
 
 ---
 
-# 11. Testing strategy
+## 11. Testing strategy
 
-# 11.1 Contract tests
+### 11.1 Contract tests
 
 New contracts must reject:
 
@@ -1951,7 +1965,7 @@ New contracts must reject:
 
 ---
 
-# 11.2 Determinism tests
+### 11.2 Determinism tests
 
 For every new rendering system:
 
@@ -1966,7 +1980,7 @@ For every new rendering system:
 
 ---
 
-# 11.3 Golden-render tests
+### 11.3 Golden-render tests
 
 Required render surfaces include:
 
@@ -1990,7 +2004,7 @@ Required render surfaces include:
 
 ---
 
-# 11.4 Package tests
+### 11.4 Package tests
 
 Verify:
 
@@ -2013,7 +2027,7 @@ Verify:
 
 ---
 
-# 11.5 Visual-regression policy
+### 11.5 Visual-regression policy
 
 Visual diffs must distinguish between:
 
@@ -2034,9 +2048,9 @@ Seeded variation must always be compared using the same seed.
 
 ---
 
-# 12. Art-quality guardrails
+## 12. Art-quality guardrails
 
-## 12.1 Avoid procedural flatness
+### 12.1 Avoid procedural flatness
 
 Do not attempt to solve quality only by:
 
@@ -2060,7 +2074,7 @@ Quality must come from:
 
 ---
 
-## 12.2 Avoid style-specific hardcoding
+### 12.2 Avoid style-specific hardcoding
 
 Do not add logic such as:
 
@@ -2083,7 +2097,7 @@ A temporary migration branch must be explicitly documented and removed before th
 
 ---
 
-## 12.3 Avoid unreadable complexity
+### 12.3 Avoid unreadable complexity
 
 At target-mobile scale:
 
@@ -2098,7 +2112,7 @@ At target-mobile scale:
 
 ---
 
-## 12.4 Avoid accidental editor scope
+### 12.4 Avoid accidental editor scope
 
 Do not add:
 
@@ -2113,7 +2127,7 @@ Any such feature requires a reviewed change request tied to production evidence.
 
 ---
 
-## 12.5 Preserve existing successful controls
+### 12.5 Preserve existing successful controls
 
 Do not weaken:
 
@@ -2132,11 +2146,11 @@ Visual quality must be added without sacrificing technical trustworthiness.
 
 ---
 
-# 13. Definition of success
+## 13. Definition of success
 
 This plan succeeds when all of the following are true.
 
-## Frostbound
+### Frostbound
 
 - Frostbound reaches a visibly premium production-quality bar.
 - The focal object is strong and reusable.
@@ -2146,7 +2160,7 @@ This plan succeeds when all of the following are true.
 - Composition has a clear focal path.
 - Mobile readability remains strong.
 
-## Generalization
+### Generalization
 
 - Frostbound runs through generalized systems.
 - No Frostbound-only renderer branch is required.
@@ -2158,7 +2172,7 @@ This plan succeeds when all of the following are true.
 - Typography treatments are reusable.
 - Lighting is style-level.
 
-## Multi-style proof
+### Multi-style proof
 
 - Volcanic Forge is materially different from Frostbound.
 - A third style is materially different from both.
@@ -2166,7 +2180,7 @@ This plan succeeds when all of the following are true.
 - Neither requires flattened source art.
 - All outputs remain deterministic and modular.
 
-## Authoring workflow
+### Authoring workflow
 
 - A bounded authoring workflow is created only after abstractions are proven.
 - The workflow does not become a general editor.
@@ -2175,7 +2189,7 @@ This plan succeeds when all of the following are true.
 
 ---
 
-# 14. Immediate next action
+## 14. Immediate next action
 
 Before implementation begins, Codex must compare the current approved M8 specification and V8 rubric against this document.
 
@@ -2219,7 +2233,7 @@ Codex must then start only the next eligible agent-ready task recorded in `docs/
 
 ---
 
-# 15. Final strategic summary
+## 15. Final strategic summary
 
 The highest-value capabilities are:
 
@@ -2237,10 +2251,10 @@ The required expansion order is:
 
 ```text
 Frostbound quality
-â†’ generalized renderer systems
-â†’ Volcanic Forge
-â†’ Enchanted Forest or Royal Arcane
-â†’ bounded authoring workflow
+→ generalized renderer systems
+→ Volcanic Forge
+→ Enchanted Forest or Royal Arcane
+→ bounded authoring workflow
 ```
 
 Do not expand into many styles while the current style still looks procedural.
