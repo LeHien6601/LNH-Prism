@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0",
+  "showroom": "showcase/m8-frostbound-aligned.html",
+  "portrait": "docs/validation/evidence/m8-a4-frostbound-aligned/m8-frostbound-reward-composition.png",
+  "assetPackage": "assets/m8-frostbound-aligned",
+  "moduleCount": 68,
+  "engineIntegrationRequired": false
+}

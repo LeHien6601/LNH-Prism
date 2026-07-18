@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "materialPreflight": {
+    "status": "pass"
+  },
+  "reuse": {
+    "schemaVersion": "1.0",
+    "componentTypeCount": 7,
+    "bindings": [
+      {
+        "componentType": "panel",
+        "materialIds": [
+          "m8-ice-grain-overlay",
+          "m8-crystal-facet-overlay",
+          "m8-cold-edge-decal"
+        ],
+        "boundary": "Renderer owns panel silhouette and editable crystal-focal slot."
+      },
+      {
+        "componentType": "primary-button",
+        "materialIds": [
+          "m8-ice-grain-overlay",
+          "m8-crystal-facet-overlay",
+          "m8-cold-edge-decal"
+        ],
+        "boundary": "Renderer owns wide-hex geometry and states."
+      },
+      {
+        "componentType": "secondary-button",
+        "materialIds": [
+          "m8-ice-grain-overlay",
+          "m8-crystal-facet-overlay",
+          "m8-cold-edge-decal"
+        ],
+        "boundary": "Renderer owns wide-hex geometry and states."
+      },
+      {
+        "componentType": "tab",
+        "materialIds": [
+          "m8-ice-grain-overlay",
+          "m8-crystal-facet-overlay",
+          "m8-cold-edge-decal"
+        ],
+        "boundary": "Renderer owns angular geometry and selected state."
+      },
+      {
+        "componentType": "badge",
+        "materialIds": [
+          "m8-ice-grain-overlay",
+          "m8-crystal-facet-overlay",
+          "m8-cold-edge-decal"
+        ],
+        "boundary": "Renderer owns faceted geometry and highlighted state."
+      },
+      {
+        "componentType": "progress",
+        "materialIds": [
+          "m8-ice-grain-overlay",
+          "m8-crystal-facet-overlay",
+          "m8-cold-edge-decal"
+        ],
+        "boundary": "Frame and fill remain independent."
+      },
+      {
+        "componentType": "icon-container",
+        "materialIds": [
+          "m8-ice-grain-overlay",
+          "m8-crystal-facet-overlay",
+          "m8-cold-edge-decal"
+        ],
+        "boundary": "Renderer owns editable crystal-focal geometry and content slot."
+      }
+    ]
+  },
+  "noReferencePixelLeakage": true,
+  "leakageFindings": [],
+  "outputsMatchReceipts": true
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "command": "npm run validate",
+  "status": "passed",
+  "checks": [
+    "M8 matrix/package/showroom",
+    "M8 renderer tests",
+    "contracts",
+    "regressions"
+  ],
+  "validatedAt": "2026-07-18"
+}

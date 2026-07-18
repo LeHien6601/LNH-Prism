@@ -30,6 +30,8 @@
     "validate:m7-a5-assets": "node scripts/validate-m7-a5-assets.mjs",
     "prepare:m8-a4-assets": "npm run build:renderer && node scripts/prepare-m8-a4-assets.mjs",
     "validate:m8-a4-assets": "node scripts/validate-m8-a4-assets.mjs",
+    "prepare:v8-evidence": "node scripts/prepare-v8-evidence.mjs",
+    "validate:v8-evidence": "node scripts/validate-v8-evidence.mjs",
     "prepare:v7-evidence": "node scripts/prepare-v7-review.mjs",
     "validate:v7-evidence": "node scripts/validate-v7-evidence.mjs",
     "validate:m3-s3-material-intake": "npm run build:renderer && node scripts/validate-m3-s3-material-intake.mjs",

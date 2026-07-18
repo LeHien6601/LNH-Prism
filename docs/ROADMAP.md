@@ -170,7 +170,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **M8-A4:** 🟢 Complete — the M8 package provides a 26-render seven-component matrix, 68 modular SVG/PNG assets, a Frostbound portrait, receipts, and `showcase/m8-frostbound-aligned.html` without mutating M7 outputs.
 
-**M8-A5a:** 🔵 Agent-ready — prepare the missing V8 target-phone/light-dark/material-focal review surfaces, automated equivalence/audit report, and unscored defect/revalidation record. This is evidence-only work: it must not alter the M8 renderer/assets or score the gate.
+**M8-A5a:** 🟢 Complete — V8-E01 through E10 now provide target-phone/light-dark/material-focal review surfaces, receipt/audit/handoff reports, and unscored defect/preflight records. Renderer and assets were not altered.
 
 **Next task:** M8-A5a — prepare the V8 evidence package; then M8-A5 conducts the human production-fidelity review using the approved rubric.
 

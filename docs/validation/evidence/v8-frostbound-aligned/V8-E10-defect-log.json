@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "status": "unscored-review-ready",
+  "defects": [],
+  "observations": [
+    {
+      "id": "V8-O001",
+      "severity": "review-required",
+      "finding": "Human reviewers must confirm the crystal focal outweighs the panel pattern at target-phone scale."
+    }
+  ],
+  "corrections": [],
+  "revalidations": []
+}

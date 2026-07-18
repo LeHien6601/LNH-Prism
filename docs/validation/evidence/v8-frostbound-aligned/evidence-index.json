@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "v8-frostbound-aligned",
+  "status": "unscored-review-ready",
+  "evidence": {
+    "V8-E01": [
+      "../../decisions/ADR-019-frostbound-aligned-m7-refinement.md",
+      "../../implementation/M8_FROSTBOUND_ALIGNED_REFINEMENT_SPEC.md",
+      "../../validation/M8_FROSTBOUND_ALIGNED_REFINEMENT_RUBRIC.md"
+    ],
+    "V8-E02": [
+      "../../../specs/examples/style-m8-frostbound-aligned.json",
+      "../../../specs/examples/m8-frostbound-materials.json"
+    ],
+    "V8-E03": [
+      "V8-E03-matrix-receipt.json"
+    ],
+    "V8-E04": [
+      "V8-E04-hierarchy-views.html"
+    ],
+    "V8-E05": [
+      "V8-E05-isolation-board.html"
+    ],
+    "V8-E06": [
+      "V8-E06-state-views.html"
+    ],
+    "V8-E07": [
+      "V8-E07-automated-report.json"
+    ],
+    "V8-E08": [
+      "V8-E08-integrity-audit.json"
+    ],
+    "V8-E09": [
+      "V8-E09-handoff.json"
+    ],
+    "V8-E10": [
+      "V8-E10-defect-log.json",
+      "V8-E10-preflight.json"
+    ]
+  }
+}
