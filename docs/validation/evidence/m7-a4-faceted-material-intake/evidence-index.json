@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m7-a4-faceted-material-intake",
+  "version": "0.1.0",
+  "status": "approved-for-m7-a5",
+  "files": [
+    "preflight.json",
+    "reuse-plan.json",
+    "m7-faceted-grain-isolation.svg",
+    "m7-angular-plate-pattern-isolation.svg",
+    "m7-energy-edge-accent-isolation.svg",
+    "m7-ornament-marks-isolation.svg"
+  ],
+  "boundary": "No reference pixels, component geometry, or component-specific effects are permitted in M7 material sources."
+}

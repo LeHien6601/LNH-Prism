@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m7-faceted-materials",
+  "version": "0.1.0",
+  "status": "approved",
+  "name": "M7 Faceted Metal and Energy Materials",
+  "sources": [
+    { "id": "m7-faceted-grain", "type": "procedural", "path": "materials/m7-faceted/m7-faceted-grain.json", "sha256": "b9d56166eb009142f21602a0896657c88de6779fdc458e6327a1b9724486aa9c", "rights": "LNHGames internal procedural source", "promptOrSettings": "Fixed source-neutral sparse metallic grain recipe" },
+    { "id": "m7-angular-plate-pattern", "type": "procedural", "path": "materials/m7-faceted/m7-angular-plate-pattern.json", "sha256": "39d30d9779723713dafdf824eeb5a6883ee812a2bdc257d7ad8a46eda0bfa213", "rights": "LNHGames internal procedural source", "promptOrSettings": "Fixed source-neutral faceted plate-seam recipe" },
+    { "id": "m7-energy-edge-accent", "type": "procedural", "path": "materials/m7-faceted/m7-energy-edge-accent.json", "sha256": "180d56a2d1b22bb54d03a756b5dbaa83f699013f9b126cb12ccd4404f84601db", "rights": "LNHGames internal procedural source", "promptOrSettings": "Fixed transparent reusable edge-energy streak recipe" },
+    { "id": "m7-ornament-marks", "type": "procedural", "path": "materials/m7-faceted/m7-ornament-marks.json", "sha256": "87d6c2cb3d785774c96be87b6a3ec4ca1517d0b9805e97bf604c969600e65bbf", "rights": "LNHGames internal procedural source", "promptOrSettings": "Fixed transparent rune, cut-mark, and bolt decal recipe" }
+  ],
+  "materials": [
+    { "id": "m7-faceted-grain-overlay", "role": "detail-overlay", "sourceId": "m7-faceted-grain", "normalization": { "tileMode": "tile", "opacity": 0.1, "blendMode": "soft-light", "scale": 1, "offsetX": 0, "offsetY": 0, "contrast": 0.82, "saturation": 0.85 } },
+    { "id": "m7-angular-plate-overlay", "role": "pattern", "sourceId": "m7-angular-plate-pattern", "normalization": { "tileMode": "tile", "opacity": 0.12, "blendMode": "screen", "scale": 1, "offsetX": 0, "offsetY": 0, "contrast": 0.9, "saturation": 0.9 } },
+    { "id": "m7-energy-edge-decal", "role": "edge-mask", "sourceId": "m7-energy-edge-accent", "normalization": { "tileMode": "clamp", "opacity": 0.24, "blendMode": "screen", "scale": 1, "offsetX": 0.5, "offsetY": 0.5, "contrast": 1.1, "saturation": 1 } },
+    { "id": "m7-ornament-decal", "role": "decal", "sourceId": "m7-ornament-marks", "normalization": { "tileMode": "clamp", "opacity": 0.18, "blendMode": "screen", "scale": 1, "offsetX": 0.5, "offsetY": 0.5, "contrast": 1, "saturation": 0.9 } }
+  ],
+  "compatibility": { "minimumRendererVersion": "0.1.0" }
+}

@@ -4,7 +4,7 @@
 
 Prove that the asset pipeline can follow a sharper and more complex reference style without losing deterministic structure, reusable materials, stable IDs, or engine-neutral modular delivery.
 
-**Status:** M7-A3 complete. The next task is M7-A4: create the M7 material pack and approved component specs.
+**Status:** M7-A4 complete. The next task is M7-A5: render the component matrix, portrait composition, and showroom integration.
 
 ## Scope
 
@@ -67,3 +67,4 @@ M7 validation will be defined by M7-A1. It must include at least one reference-f
 | 2026-07-18 | Completed M7-A1 draft definition package and queued human definition review | Codex |
 | 2026-07-18 | Approved M7 definition Option A as drafted and queued angular hex contract/template work | Project owner / Codex |
 | 2026-07-18 | Completed M7-A3 geometry contracts and angular renderer helpers; queued material pack and component specs | Codex |
+| 2026-07-18 | Completed M7-A4 approved material pack, seven component specs, and intake evidence; queued component rendering and showroom integration | Codex |

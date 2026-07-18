@@ -22,17 +22,20 @@ const exampleSchemas = new Map([
   ["style-neon-core.json", "style-spec.schema.json"],
   ["style-neon-market-overlay.json", "style-spec.schema.json"],
   ["style-frostbound-reward.json", "style-spec.schema.json"],
+  ["style-m7-reference-fidelity.json", "style-spec.schema.json"],
   ["primary-button.json", "component-spec.schema.json"],
   ["primary-button-material-bindings.json", "component-spec.schema.json"],
   ["m2-shop-panel.json", "component-spec.schema.json"], ["m2-category-tabs.json", "component-spec.schema.json"], ["m2-primary-purchase-button.json", "component-spec.schema.json"], ["m2-secondary-cancel-button.json", "component-spec.schema.json"], ["m2-currency-badge.json", "component-spec.schema.json"], ["m2-limited-offer-progress.json", "component-spec.schema.json"],
   ["frostbound-reward-panel.json", "component-spec.schema.json"], ["frostbound-claim-button.json", "component-spec.schema.json"], ["frostbound-later-button.json", "component-spec.schema.json"], ["frostbound-reward-progress.json", "component-spec.schema.json"], ["frostbound-reward-emblem-container.json", "component-spec.schema.json"],
   ["m7-primary-hex-button.contract.json", "component-spec.schema.json"],
+  ["m7-reward-panel.json", "component-spec.schema.json"], ["m7-primary-hex-button.json", "component-spec.schema.json"], ["m7-secondary-hex-button.json", "component-spec.schema.json"], ["m7-angular-tab.json", "component-spec.schema.json"], ["m7-faceted-badge.json", "component-spec.schema.json"], ["m7-angular-progress.json", "component-spec.schema.json"], ["m7-icon-container.json", "component-spec.schema.json"],
   ["primary-panel.json", "component-spec.schema.json"],
   ["primary-progress-bar.json", "component-spec.schema.json"],
   ["neon-core-materials.json", "material-pack.schema.json"],
   ["neon-alloy-materials.json", "material-pack.schema.json"],
   ["frost-crystal-materials.draft.json", "material-pack.schema.json"],
   ["frost-crystal-materials.json", "material-pack.schema.json"],
+  ["m7-faceted-materials.json", "material-pack.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["archive/legacy-primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
@@ -83,6 +86,19 @@ const missingSafeArea = JSON.parse(await readFile(join(exampleDir, "m7-primary-h
 delete missingSafeArea.geometry.contentSafeArea;
 if (validateComponent(missingSafeArea)) throw new Error("component schema must require content safe area for M7 wide-hex geometry.");
 console.log("rejected invalid material normalization, bindings, and M7 hex geometry");
+
+const m7Pack = JSON.parse(await readFile(join(exampleDir, "m7-faceted-materials.json"), "utf8"));
+const m7MaterialIds = new Set(m7Pack.materials.map(({ id }) => id));
+const m7Components = ["m7-reward-panel.json", "m7-primary-hex-button.json", "m7-secondary-hex-button.json", "m7-angular-tab.json", "m7-faceted-badge.json", "m7-angular-progress.json", "m7-icon-container.json"];
+for (const file of m7Components) {
+  const component = JSON.parse(await readFile(join(exampleDir, file), "utf8"));
+  if (component.status !== "approved" || component.style.id !== "m7-reference-fidelity") throw new Error(`${file} must be an approved M7 component spec.`);
+  for (const binding of component.materialBindings ?? []) if (!m7MaterialIds.has(binding.materialId)) throw new Error(`${file} binds unknown M7 material ${binding.materialId}.`);
+}
+const m7Primary = JSON.parse(await readFile(join(exampleDir, "m7-primary-hex-button.json"), "utf8"));
+m7Primary.geometry.endCapDepth = 15;
+if (validateComponent(m7Primary)) throw new Error("M7 wide-hex component spec must reject shallow end caps.");
+console.log("validated M7 approved material bindings, seven-component inventory, and hex bounds");
 
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);

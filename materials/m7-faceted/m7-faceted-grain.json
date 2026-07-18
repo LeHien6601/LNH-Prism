@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m7-faceted-grain",
+  "version": "0.1.0",
+  "sourceType": "procedural",
+  "kind": "procedural-tile",
+  "generationSettings": "Fixed 32 logical-pixel sparse metallic grain recipe; seed-free geometry.",
+  "colorSpace": "sRGB",
+  "resolution": { "width": 32, "height": 32, "units": "logical-pixels" },
+  "alpha": { "minimum": 0, "maximum": 0.12 },
+  "contrast": 0.82,
+  "transparentBackground": true,
+  "edgeSignature": { "top": "m7-grain-top", "bottom": "m7-grain-top", "left": "m7-grain-left", "right": "m7-grain-left" },
+  "containsReferencePixels": false,
+  "containsComponentGeometry": false,
+  "containsComponentEffects": false,
+  "rights": "LNHGames internal procedural source"
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m7-faceted-source-preflight",
+  "version": "0.1.0",
+  "status": "pass",
+  "materialPack": "m7-faceted-materials@0.1.0",
+  "sources": [
+    {
+      "sourceId": "m7-faceted-grain",
+      "path": "materials/m7-faceted/m7-faceted-grain.json",
+      "sha256": "b9d56166eb009142f21602a0896657c88de6779fdc458e6327a1b9724486aa9c",
+      "sourceType": "procedural",
+      "status": "pass",
+      "boundaries": {
+        "containsReferencePixels": false,
+        "containsComponentGeometry": false,
+        "containsComponentEffects": false
+      }
+    },
+    {
+      "sourceId": "m7-angular-plate-pattern",
+      "path": "materials/m7-faceted/m7-angular-plate-pattern.json",
+      "sha256": "39d30d9779723713dafdf824eeb5a6883ee812a2bdc257d7ad8a46eda0bfa213",
+      "sourceType": "procedural",
+      "status": "pass",
+      "boundaries": {
+        "containsReferencePixels": false,
+        "containsComponentGeometry": false,
+        "containsComponentEffects": false
+      }
+    },
+    {
+      "sourceId": "m7-energy-edge-accent",
+      "path": "materials/m7-faceted/m7-energy-edge-accent.json",
+      "sha256": "180d56a2d1b22bb54d03a756b5dbaa83f699013f9b126cb12ccd4404f84601db",
+      "sourceType": "procedural",
+      "status": "pass",
+      "boundaries": {
+        "containsReferencePixels": false,
+        "containsComponentGeometry": false,
+        "containsComponentEffects": false
+      }
+    },
+    {
+      "sourceId": "m7-ornament-marks",
+      "path": "materials/m7-faceted/m7-ornament-marks.json",
+      "sha256": "87d6c2cb3d785774c96be87b6a3ec4ca1517d0b9805e97bf604c969600e65bbf",
+      "sourceType": "procedural",
+      "status": "pass",
+      "boundaries": {
+        "containsReferencePixels": false,
+        "containsComponentGeometry": false,
+        "containsComponentEffects": false
+      }
+    }
+  ]
+}

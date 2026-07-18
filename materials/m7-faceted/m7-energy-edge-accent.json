@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m7-energy-edge-accent",
+  "version": "0.1.0",
+  "sourceType": "procedural",
+  "kind": "procedural-decal",
+  "generationSettings": "Fixed transparent 64 logical-pixel energy-edge streak recipe; source-neutral and clamp-safe.",
+  "colorSpace": "sRGB",
+  "resolution": { "width": 64, "height": 32, "units": "logical-pixels" },
+  "alpha": { "minimum": 0, "maximum": 0.24 },
+  "contrast": 1.1,
+  "transparentBackground": true,
+  "containsReferencePixels": false,
+  "containsComponentGeometry": false,
+  "containsComponentEffects": false,
+  "rights": "LNHGames internal procedural source"
+}

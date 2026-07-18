@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m7-angular-plate-pattern",
+  "version": "0.1.0",
+  "sourceType": "procedural",
+  "kind": "procedural-tile",
+  "generationSettings": "Fixed 48 logical-pixel faceted seam pattern; source-neutral and seed-free.",
+  "colorSpace": "sRGB",
+  "resolution": { "width": 48, "height": 48, "units": "logical-pixels" },
+  "alpha": { "minimum": 0, "maximum": 0.16 },
+  "contrast": 0.9,
+  "transparentBackground": true,
+  "edgeSignature": { "top": "m7-plate-top", "bottom": "m7-plate-top", "left": "m7-plate-left", "right": "m7-plate-left" },
+  "containsReferencePixels": false,
+  "containsComponentGeometry": false,
+  "containsComponentEffects": false,
+  "rights": "LNHGames internal procedural source"
+}

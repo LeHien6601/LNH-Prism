@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m7-ornament-marks",
+  "version": "0.1.0",
+  "sourceType": "procedural",
+  "kind": "procedural-decal",
+  "generationSettings": "Fixed transparent 64 logical-pixel rune, cut-mark, and bolt decal recipe; no component silhouette.",
+  "colorSpace": "sRGB",
+  "resolution": { "width": 64, "height": 64, "units": "logical-pixels" },
+  "alpha": { "minimum": 0, "maximum": 0.2 },
+  "contrast": 1,
+  "transparentBackground": true,
+  "containsReferencePixels": false,
+  "containsComponentGeometry": false,
+  "containsComponentEffects": false,
+  "rights": "LNHGames internal procedural source"
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m7-reference-fidelity",
+  "version": "0.1.0",
+  "status": "approved",
+  "name": "M7 Reference Fidelity",
+  "provenance": { "createdAt": "2026-07-18T16:00:00+07:00", "sources": [{ "type": "human-design", "reference": "docs/reference-briefs/M7_REFERENCE_FIDELITY_STYLE_EXPANSION.md" }, { "type": "human-design", "reference": "docs/implementation/M7_REFERENCE_FIDELITY_IMPLEMENTATION_SPEC.md" }] },
+  "tokens": {
+    "colors": { "primary": "#49D9FF", "surface": "#142848", "frame": "#82EEFF", "energy": "#93F7FF", "shadow": "#06101FFF" },
+    "shape": { "cornerRadius": 2, "strokeWidth": 2 },
+    "lighting": { "highlightDirection": "top-left", "shadowColor": "#06101FFF" },
+    "spacing": { "contentInset": 16, "angularCapInset": 34, "actionGap": 20 },
+    "material": { "grainOpacity": 0.1, "patternOpacity": 0.12, "patternScale": 48, "edgeLightOpacity": 0.54, "bevelDepth": 3, "decalOpacity": 0.18 }
+  },
+  "renderDefaults": { "targetScale": 2, "colorSpace": "sRGB", "alphaMode": "straight" },
+  "compatibility": { "minimumRendererVersion": "0.1.0" }
+}

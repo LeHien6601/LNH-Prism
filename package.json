@@ -24,6 +24,7 @@
     "prepare:m3-s2-review": "npm run build:renderer && node scripts/prepare-m3-s2-review.mjs",
     "validate:m3-s2-review": "npm run build:renderer && node scripts/validate-m3-s2-review.mjs",
     "prepare:m3-s3-material-intake": "npm run build:renderer && node scripts/prepare-m3-s3-material-intake.mjs",
+    "prepare:m7-material-intake": "npm run build:renderer && node scripts/prepare-m7-material-intake.mjs",
     "validate:m3-s3-material-intake": "npm run build:renderer && node scripts/validate-m3-s3-material-intake.mjs",
     "prepare:m3-s4-evidence": "npm run build:renderer && node scripts/prepare-m3-s4-evidence.mjs",
     "validate:m3-s4-evidence": "npm run build:renderer && node scripts/validate-m3-s4-evidence.mjs",
