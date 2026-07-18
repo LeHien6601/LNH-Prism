@@ -11,7 +11,7 @@
 | Decision source | [ADR-018](../decisions/ADR-018-reference-fidelity-style-expansion.md) |
 | Product/art reference | [M7 reference brief](../reference-briefs/M7_REFERENCE_FIDELITY_STYLE_EXPANSION.md) |
 | Review rubric | [M7 visual-fidelity rubric](../validation/M7_REFERENCE_FIDELITY_RUBRIC.md) |
-| Implementation state | M7-A4 complete; M7-A5 may begin |
+| Implementation state | M7-A5 complete; V7 human fidelity review may begin |
 
 ## 1. Intended outcome
 
@@ -131,7 +131,7 @@ Progress frame and fill must remain independently renderable. Optional layers ma
 | M7-A2 | Review and approve M7 definition | Project owner/art/UI/technical approval or requested edits are recorded | M7-A1 |
 | M7-A3 | Extend contracts/templates for angular hex geometry and layer model | 🟢 Complete — optional component-spec geometry, wide-hex contract fixture, M7 angular renderer helper, and focused tests prove bounds, layer order, states, invalid shapes, and compatibility | M7-A2 |
 | M7-A4 | Create M7 material pack and approved component specs | Complete — approved M7 style, four procedural sources, reusable material pack, seven approved component specs, source preflight, reuse plan, and isolation views validate | M7-A3 |
-| M7-A5 | Render component matrix, portrait composition, and showroom integration | CLI/browser equivalence, required outputs, target-phone views, and handoff paths exist | M7-A4 |
+| M7-A5 | Render component matrix, portrait composition, and showroom integration | Complete — 26 required matrix renders, independent progress parts, portrait/target-phone composition, 68-module asset package, and showroom outputs validate | M7-A4 |
 | M7-A6 | Prepare V7 evidence and conduct human visual-fidelity review | Scorecard, blocker disposition, package validation, and revalidation record are complete | M7-A5 |
 
 Each slice is one task. Do not start implementation slices until M7-A2 approves the definition.
@@ -179,7 +179,7 @@ Use this checklist during M7-A2:
 
 On 2026-07-18, the project owner approved Option A as drafted. The approval covers the M7 reference brief, seven-component inventory, wide-hexagon button correction, angular component family, material/ornament model, canonical layer order, implementation slices M7-A3 through M7-A6, automated validation requirements, V7-E01 through V7-E10 evidence package, scoring thresholds, automatic blockers, and engine-neutral asset-only handoff requirements.
 
-M7-A4 is complete. M7-A5 may begin as the next agent-ready task. Do not add Unity or other engine integration scope.
+M7-A5 is complete. The V7 human fidelity review may begin. Do not add Unity or other engine integration scope.
 
 ## Change history
 
@@ -189,3 +189,4 @@ M7-A4 is complete. M7-A5 may begin as the next agent-ready task. Do not add Unit
 | 2026-07-18 | Approved Option A as drafted and authorized M7-A3 | Project owner |
 | 2026-07-18 | Completed M7-A3 optional geometry contracts, wide-hex fixture, angular template helper, and focused validation | Codex |
 | 2026-07-18 | Completed M7-A4 approved material pack, component specs, source preflight, reuse plan, and isolation evidence | Codex |
+| 2026-07-18 | Completed M7-A5 matrix, independent progress exports, portrait composition, modular asset package, and showroom integration | Codex |

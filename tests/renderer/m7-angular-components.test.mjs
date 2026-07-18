@@ -4,7 +4,9 @@ import test from "node:test";
 import {
   M7_ANGULAR_LAYER_ORDER,
   renderM7AngularComponentSvg,
-  renderM7AngularProgressSvg
+  renderM7AngularProgressSvg,
+  renderM7AngularProgressFrameSvg,
+  renderM7AngularProgressFillSvg
 } from "../../dist/renderer/m7-angular-components.js";
 
 const hash = (value) => createHash("sha256").update(value).digest("hex");
@@ -79,6 +81,12 @@ test("M7 angular progress keeps frame and fill independent at approved values", 
       assert.match(svg, /clip-path="url\(#m7-progress-normal-/);
       assert.doesNotMatch(svg, /<rect[^>]+rx=/);
       assert.equal(svg, renderM7AngularProgressSvg({ component: "progress", width, height: 28, percent }));
+      const frame = renderM7AngularProgressFrameSvg({ component: "progress", width, height: 28, percent });
+      const fill = renderM7AngularProgressFillSvg({ component: "progress", width, height: 28, percent });
+      assert.match(frame, /data-part="frame"/);
+      assert.doesNotMatch(frame, /data-part="fill"/);
+      assert.match(fill, /data-part="fill"/);
+      assert.doesNotMatch(fill, /data-part="frame"/);
     }
   }
   assert.throws(() => renderM7AngularProgressSvg({ component: "progress", width: 344, height: 28, percent: 75 }), /10, 50, or 90/);

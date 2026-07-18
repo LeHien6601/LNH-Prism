@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M7 — Reference-fidelity style expansion** |
-| Next task | 🔵 **Render M7 component matrix, portrait composition, and showroom integration** · 🤖 Agent |
-| Next agent-ready task | Render M7 component matrix, portrait composition, and showroom integration |
+| Next task | 🟣 **Conduct the V7 reference-fidelity review** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | None — awaiting V7 human fidelity review |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -116,7 +116,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Review and approve M7 reference-fidelity definition | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved as drafted: M7 reference brief, implementation specification, rubric, seven-component inventory, wide-hexagon shape rules, scoring/blockers, and asset-only handoff requirements are accepted |
 | P0 | Extend contracts/templates for angular hex geometry and layer model (M7-A3) | 🤖 Agent | 🟢 Complete | Optional component-spec geometry contracts, an M7 wide-hex contract fixture, and deterministic angular renderer helpers prove wide-hexagon bounds, angular layer order, deterministic states, invalid rounded/capsule rejection, compatibility with existing outputs, and no engine scope |
 | P0 | Create M7 material pack and approved component specs (M7-A4) | 🤖 Agent | 🟢 Complete | Approved M7 style, four procedural material sources/pack, seven bounded component specs, source-boundary preflight, seven-component reuse plan, isolation views, and focused validation are recorded without reference pixels or engine scope |
-| P0 | Render M7 component matrix, portrait composition, and showroom integration (M7-A5) | 🤖 Agent | 🔵 Agent-ready | CLI/browser-equivalent SVG/PNG matrix covers the approved sizes, states, and progress values; portrait/target-phone views and showroom or exact asset-handoff paths exist |
+| P0 | Render M7 component matrix, portrait composition, and showroom integration (M7-A5) | 🤖 Agent | 🟢 Complete | 26 SVG/PNG matrix variants, independent progress parts, portrait/target-phone composition, 68-module package, and dedicated showroom validate from the same deterministic renderer outputs |
+| P0 | Prepare V7 evidence and conduct the V7 reference-fidelity review (M7-A6) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Review the generated M7 package against the approved V7 rubric; record scoring, blockers, and correction/revalidation disposition |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -230,3 +231,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Approved M7 definition Option A as drafted and queued M7-A3 angular hex contracts/templates | Project owner / Codex |
 | 2026-07-18 | Completed M7-A3 with optional geometry contracts, a wide-hex contract fixture, angular renderer helpers, and focused rejection/layer/state tests; queued M7-A4 | Codex |
 | 2026-07-18 | Completed M7-A4 with an approved M7 style, four procedural material sources, reusable faceted material pack, seven approved component specs, preflight/reuse/isolation evidence, and focused contract/material validation; queued M7-A5 | Codex |
+| 2026-07-18 | Completed M7-A5 with a 26-variant SVG/PNG matrix, independent progress parts, portrait/target-phone composition, 68-module asset package, package validation, and dedicated M7 showroom; queued V7 human fidelity review | Codex |

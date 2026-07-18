@@ -137,3 +137,20 @@ export function renderM7AngularProgressSvg(input: M7AngularRequest): string {
   const fillPath = hexPath(fillWidth + request.endCapDepth * 2, request.height, request.endCapDepth, 0, 6);
   return `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${request.width * 2}" height="${request.height * 2}" viewBox="0 0 ${request.width} ${request.height}" role="img" aria-label="M7 angular progress ${request.percent} percent" data-style="m7-reference-fidelity@0.1.0" data-geometry-shape="wide-hexagon"><defs>${defs(request.instanceId)}<clipPath id="${request.instanceId}-fill-clip"><path d="${fillPath}"/></clipPath></defs><g id="${request.instanceId}-frame" data-part="frame"><path d="${framePath}" fill="#071421" stroke="#9DEFFF" stroke-width="2" stroke-linejoin="miter"/></g><g id="${request.instanceId}-fill" data-part="fill" clip-path="url(#${request.instanceId}-fill-clip)"><path d="${fillPath}" fill="url(#${request.instanceId}-primary)"/><rect width="${request.width}" height="${request.height}" fill="url(#${request.instanceId}-grain)" data-layer="surface-grain" data-material-source="m7-faceted-grain"/><rect width="${request.width}" height="${request.height}" fill="url(#${request.instanceId}-plate-pattern)" data-layer="surface-pattern" data-material-source="m7-angular-plate-pattern"/></g></svg>`;
 }
+
+/** Independently reusable M7 progress frame. Pair with a matching fill at the same width. */
+export function renderM7AngularProgressFrameSvg(input: M7AngularRequest): string {
+  const request = validate(input);
+  if (request.component !== "progress") throw new RangeError("M7 progress frame renderer requires component=progress.");
+  const framePath = componentPath(request, 0);
+  return `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${request.width * 2}" height="${request.height * 2}" viewBox="0 0 ${request.width} ${request.height}" role="img" aria-label="M7 angular progress frame" data-style="m7-reference-fidelity@0.1.0" data-part="frame"><g id="${request.instanceId}-frame" data-part="frame"><path d="${framePath}" fill="#071421" stroke="#9DEFFF" stroke-width="2" stroke-linejoin="miter"/></g></svg>`;
+}
+
+/** Independently reusable M7 progress fill. It has no frame or track geometry. */
+export function renderM7AngularProgressFillSvg(input: M7AngularRequest): string {
+  const request = validate(input);
+  if (request.component !== "progress") throw new RangeError("M7 progress fill renderer requires component=progress.");
+  const fillWidth = Math.round((request.width - request.endCapDepth * 2) * request.percent / 100);
+  const fillPath = hexPath(fillWidth + request.endCapDepth * 2, request.height, request.endCapDepth, 0, 6);
+  return `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${request.width * 2}" height="${request.height * 2}" viewBox="0 0 ${request.width} ${request.height}" role="img" aria-label="M7 angular progress fill ${request.percent} percent" data-style="m7-reference-fidelity@0.1.0" data-part="fill"><defs>${defs(request.instanceId)}<clipPath id="${request.instanceId}-fill-clip"><path d="${fillPath}"/></clipPath></defs><g id="${request.instanceId}-fill" data-part="fill" clip-path="url(#${request.instanceId}-fill-clip)"><path d="${fillPath}" fill="url(#${request.instanceId}-primary)"/><rect width="${request.width}" height="${request.height}" fill="url(#${request.instanceId}-grain)" data-layer="surface-grain" data-material-source="m7-faceted-grain"/><rect width="${request.width}" height="${request.height}" fill="url(#${request.instanceId}-plate-pattern)" data-layer="surface-pattern" data-material-source="m7-angular-plate-pattern"/></g></svg>`;
+}
