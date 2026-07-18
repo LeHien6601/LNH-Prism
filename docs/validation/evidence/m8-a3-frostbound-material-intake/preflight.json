@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "status": "pass",
+  "sources": [
+    {
+      "sourceId": "m8-ice-grain",
+      "path": "materials/m8-frostbound/m8-ice-grain.json",
+      "sha256": "b9c67d74302ebe6f9ce86fb4f682f64e7ef79b221609832a25759c66e001e823",
+      "status": "pass",
+      "boundaries": {
+        "containsReferencePixels": false,
+        "containsComponentGeometry": false,
+        "containsComponentEffects": false
+      }
+    },
+    {
+      "sourceId": "m8-crystal-facet-pattern",
+      "path": "materials/m8-frostbound/m8-crystal-facet-pattern.json",
+      "sha256": "7d31756d2c5bb07cd5d40d03a8f1e692bd82d7b2faefd91319d94a8ae0a801a5",
+      "status": "pass",
+      "boundaries": {
+        "containsReferencePixels": false,
+        "containsComponentGeometry": false,
+        "containsComponentEffects": false
+      }
+    },
+    {
+      "sourceId": "m8-cold-edge-accent",
+      "path": "materials/m8-frostbound/m8-cold-edge-accent.json",
+      "sha256": "911fb4f9b839a157b4a5e20ea7acae12fb24bccf7dbafb5600dee3ef989cb9be",
+      "status": "pass",
+      "boundaries": {
+        "containsReferencePixels": false,
+        "containsComponentGeometry": false,
+        "containsComponentEffects": false
+      }
+    }
+  ]
+}

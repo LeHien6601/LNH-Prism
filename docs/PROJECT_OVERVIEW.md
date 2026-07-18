@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M8 — Frostbound-aligned angular refinement** |
-| Next task | 🔵 **Add M8 cold material and focal contracts** · 🤖 Agent |
-| Next agent-ready task | M8-A3 — implement approved cold material/focal contracts for the seven-component family |
+| Next task | 🔵 **Render the M8 family, package, and showroom** · 🤖 Agent |
+| Next agent-ready task | M8-A4 — render versioned M8 outputs from approved cold material/focal contracts |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -122,7 +122,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Choose the next production direction after M7 | 🧭 Project owner + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved: start the bounded M8 Frostbound-aligned angular refinement described by [ADR-019](decisions/ADR-019-frostbound-aligned-m7-refinement.md) |
 | P0 | Draft the M8 Frostbound-aligned refinement specification and review rubric (M8-A1) | 🤖 Agent | 🟢 Complete | [M8 specification](implementation/M8_FROSTBOUND_ALIGNED_REFINEMENT_SPEC.md) and [V8 rubric](validation/M8_FROSTBOUND_ALIGNED_REFINEMENT_RUBRIC.md) define bounded cold-material/focal work, preserved M7 contracts, evidence, acceptance criteria, scores, blockers, and asset-only handoff |
 | P0 | Review and approve the M8 refinement definition (M8-A2) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved: reusable cold material and editable crystal focal treatment apply across all seven M8 components while M7 geometry, modularity, and evidence boundaries remain fixed |
-| P0 | Add M8 cold material and focal contracts (M8-A3) | 🤖 Agent | 🔵 Agent-ready | Add versioned source-neutral cold materials, M8 style/component contracts, focal-layer rules, source preflight, reuse plan, and isolation evidence; preserve M7 package lineage and pass focused validation |
+| P0 | Add M8 cold material and focal contracts (M8-A3) | 🤖 Agent | 🟢 Complete | Approved M8 style/material contracts, three source-neutral procedural cold materials, seven-component reuse plan, editable `crystal-focal` contract, source preflight, and isolation evidence validate without reference pixels or M7 receipt mutation |
+| P0 | Render the M8 family, package, and showroom (M8-A4) | 🤖 Agent | 🔵 Agent-ready | Render a versioned seven-component M8 matrix and portrait from the cold/focal contracts; package exact modular SVG/PNG assets and expose them in the showroom with receipts and preserved M7 lineage |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -241,3 +242,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Approved Option A: start the bounded M8 Frostbound-aligned angular refinement; preserve M7 geometry and modularity while improving reusable icy material/focal treatment | Project owner / Codex |
 | 2026-07-18 | Completed M8-A1 draft specification and V8 rubric; queued M8 definition review before any rendering | Codex |
 | 2026-07-18 | Approved M8-A2 Option A as drafted; authorized M8-A3 reusable cold material/focal contract implementation for all seven components | Project owner / Codex |
+| 2026-07-18 | Completed M8-A3 cold material/focal contracts, seven-component reuse/preflight/isolation evidence, and focused validation; queued M8-A4 rendering/package/showroom work | Codex |

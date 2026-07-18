@@ -166,6 +166,8 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Definition gate:** 🟢 Approved on 2026-07-18 — Option A accepted the [M8 implementation specification](implementation/M8_FROSTBOUND_ALIGNED_REFINEMENT_SPEC.md) and [V8 visual-fidelity rubric](validation/M8_FROSTBOUND_ALIGNED_REFINEMENT_RUBRIC.md) as drafted. The complete seven-component cold-material/focal refinement may begin.
 
-**Next task:** M8-A3 — add M8 cold material and focal contracts.
+**M8-A3:** 🟢 Complete — versioned M8 cold material/focal contracts, source preflight, seven-component reuse plan, and isolation evidence validate without reference pixels.
+
+**Next task:** M8-A4 — render the M8 family, package, and showroom.
 
 **Exit gate:** a reviewed M8 package improves the two V7 observations while retaining M7’s deterministic, modular, engine-neutral asset handoff.

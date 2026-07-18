@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "layer": "crystal-focal",
+  "position": "above-material-below-content",
+  "editableContentSlot": true,
+  "componentTypes": [
+    "panel",
+    "icon-container"
+  ]
+}
