@@ -11,7 +11,7 @@
 | Decision source | [ADR-018](../decisions/ADR-018-reference-fidelity-style-expansion.md) |
 | Product/art reference | [M7 reference brief](../reference-briefs/M7_REFERENCE_FIDELITY_STYLE_EXPANSION.md) |
 | Review rubric | [M7 visual-fidelity rubric](../validation/M7_REFERENCE_FIDELITY_RUBRIC.md) |
-| Implementation state | M7-A5 complete; V7 human fidelity review may begin |
+| Implementation state | M7 complete; V7 passed at `90.5/100` through project-owner-authorized automated review |
 
 ## 1. Intended outcome
 
@@ -179,7 +179,7 @@ Use this checklist during M7-A2:
 
 On 2026-07-18, the project owner approved Option A as drafted. The approval covers the M7 reference brief, seven-component inventory, wide-hexagon button correction, angular component family, material/ornament model, canonical layer order, implementation slices M7-A3 through M7-A6, automated validation requirements, V7-E01 through V7-E10 evidence package, scoring thresholds, automatic blockers, and engine-neutral asset-only handoff requirements.
 
-M7-A5 is complete. The V7 human fidelity review may begin. Do not add Unity or other engine integration scope.
+M7 passed V7 at `90.5/100` through the project-owner-authorized automated review. The package remains asset-only; do not add Unity or other engine integration scope.
 
 ## Change history
 

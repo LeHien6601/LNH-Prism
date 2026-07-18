@@ -119,7 +119,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Definition gate:** 🟢 Approved on 2026-07-18 — Option A accepted the M7 reference brief, implementation specification, visual-fidelity rubric, seven-component inventory, wide-hexagon shape rules, scoring/blockers, and asset-only handoff requirements as drafted. M7-A3 may begin.
 
-**Exit gate:** the package passes reference fidelity, modularity, traceability, deterministic reproduction, and asset-only handoff criteria.
+**Exit gate:** 🟢 Passed on 2026-07-18 at `90.5/100` — the M7 package meets every mandatory fidelity, modularity, traceability, deterministic-reproduction, and asset-only-handoff criterion with no automatic blocker. Two non-blocking comparative art observations are retained in the V7 validation record.
 
 ## Change history
 
@@ -150,3 +150,4 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 | 2026-07-18 | Drafted the M7 reference brief, implementation specification, and visual-fidelity rubric for definition review | Codex |
 | 2026-07-18 | Approved the M7 definition package and opened angular hex contract/template implementation | Project owner / Codex |
 | 2026-07-18 | Completed M7-A3 angular hex contracts/templates and queued M7 material/spec work | Codex |
+| 2026-07-18 | Passed M7 at `90.5/100` with a project-owner-authorized automated review, V7 evidence package, 68 engine-neutral modules, showroom handoff, and no blockers | Project owner / Codex |

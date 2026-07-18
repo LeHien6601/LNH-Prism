@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0",
+  "materialPack": "m7-faceted-materials@0.1.0",
+  "materialPreflight": {
+    "path": "docs/validation/evidence/m7-a4-faceted-material-intake/preflight.json",
+    "status": "pass"
+  },
+  "reuse": {
+    "path": "docs/validation/evidence/m7-a4-faceted-material-intake/reuse-plan.json",
+    "componentTypeCount": 7,
+    "bindings": [
+      {
+        "componentType": "panel",
+        "materialIds": [
+          "m7-faceted-grain-overlay",
+          "m7-angular-plate-overlay",
+          "m7-energy-edge-decal",
+          "m7-ornament-decal"
+        ],
+        "boundary": "The angular panel owns its chamfered silhouette, bevel, shadow, and clipping."
+      },
+      {
+        "componentType": "primary-button",
+        "materialIds": [
+          "m7-faceted-grain-overlay",
+          "m7-angular-plate-overlay",
+          "m7-energy-edge-decal",
+          "m7-ornament-decal"
+        ],
+        "boundary": "The renderer owns wide-hex geometry and all state depth changes."
+      },
+      {
+        "componentType": "secondary-button",
+        "materialIds": [
+          "m7-faceted-grain-overlay",
+          "m7-angular-plate-overlay",
+          "m7-energy-edge-decal"
+        ],
+        "boundary": "The renderer owns the secondary wide-hex silhouette and state lighting."
+      },
+      {
+        "componentType": "tab",
+        "materialIds": [
+          "m7-faceted-grain-overlay",
+          "m7-angular-plate-overlay",
+          "m7-energy-edge-decal"
+        ],
+        "boundary": "The renderer owns tab shape and selected contrast."
+      },
+      {
+        "componentType": "badge",
+        "materialIds": [
+          "m7-faceted-grain-overlay",
+          "m7-angular-plate-overlay",
+          "m7-energy-edge-decal",
+          "m7-ornament-decal"
+        ],
+        "boundary": "The renderer owns faceted badge shape and highlighted state."
+      },
+      {
+        "componentType": "progress",
+        "materialIds": [
+          "m7-faceted-grain-overlay",
+          "m7-angular-plate-overlay",
+          "m7-energy-edge-decal"
+        ],
+        "boundary": "Frame and fill remain independent deterministic masks."
+      },
+      {
+        "componentType": "icon-container",
+        "materialIds": [
+          "m7-faceted-grain-overlay",
+          "m7-angular-plate-overlay",
+          "m7-energy-edge-decal",
+          "m7-ornament-decal"
+        ],
+        "boundary": "The renderer owns selected icon-container geometry and protected content slot."
+      }
+    ]
+  },
+  "conceptComparisonBoundary": "Frostbound is comparative review evidence only, not an M7 production source.",
+  "noReferencePixelLeakage": true,
+  "leakageFindings": [],
+  "outputIntegrity": {
+    "receiptCount": 54,
+    "allReceiptsMatchMatrix": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "showroom": "showcase/m7-reference-fidelity.html",
+  "portrait": "docs/validation/evidence/m7-a5-reference-fidelity/m7-angular-reward-composition.png",
+  "assetPackage": "assets/m7-reference-fidelity",
+  "moduleCount": 68,
+  "formats": [
+    "SVG",
+    "PNG"
+  ],
+  "engineIntegrationRequired": false,
+  "exactFolders": [
+    "assets/m7-reference-fidelity/modules",
+    "docs/validation/evidence/m7-a5-reference-fidelity"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "status": "review-complete",
+  "automaticBlockers": [],
+  "scoringPerformed": true,
+  "weightedScore": 90.5,
+  "gateDecision": "pass",
+  "defectCount": 0,
+  "observationCount": 2
+}

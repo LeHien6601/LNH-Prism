@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "command": "npm run validate",
+  "status": "passed",
+  "coverage": [
+    "contracts",
+    "M7 states/sizes/bounds",
+    "material boundary/reuse",
+    "matrix/package receipts",
+    "showroom static references",
+    "no-reference-pixel audit",
+    "regressions"
+  ],
+  "validatedAt": "2026-07-18"
+}

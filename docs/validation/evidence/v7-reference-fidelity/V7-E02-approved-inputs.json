@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "inputs": [
+    {
+      "path": "specs/examples/style-m7-reference-fidelity.json",
+      "id": "m7-reference-fidelity",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "c7a069c874d0becd8b07e784a92b961fd9c6179f9ee7ea8c620d15d82ff1ce02"
+    },
+    {
+      "path": "specs/examples/m7-faceted-materials.json",
+      "id": "m7-faceted-materials",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "0d2ea944646fc46931eda24a920759e0b6ce35900162d982098e41a417a09815"
+    },
+    {
+      "path": "specs/examples/m7-reward-panel.json",
+      "id": "m7-reward-panel",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "4187277dad040fc603c86a9e17ce4c684eb2b2686e7924f7640e0f2b47e9fd42"
+    },
+    {
+      "path": "specs/examples/m7-primary-hex-button.json",
+      "id": "m7-primary-hex-button",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "3b05e39c1928c55b1cbfa7e04da81562fab0af68247bc77acf1cd1692830ea79"
+    },
+    {
+      "path": "specs/examples/m7-secondary-hex-button.json",
+      "id": "m7-secondary-hex-button",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "a694dc78ded65940a1526ef8dfaf767df2a8e1926ba5ae86676ce1e805e5f16f"
+    },
+    {
+      "path": "specs/examples/m7-angular-tab.json",
+      "id": "m7-angular-tab",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "f782a9ed9830cf30ab172599385f8b8f4b9e0a90850949817ad96cfc2580a873"
+    },
+    {
+      "path": "specs/examples/m7-faceted-badge.json",
+      "id": "m7-faceted-badge",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "93d91f99deb62660497a455e66918ec2b9e12e70868057a2138b2c8a06103cf1"
+    },
+    {
+      "path": "specs/examples/m7-angular-progress.json",
+      "id": "m7-angular-progress",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "f43e3c0590c49ca0caed2a3af0cffe5196bf8c61b333a1bb260a3b77f2c5c968"
+    },
+    {
+      "path": "specs/examples/m7-icon-container.json",
+      "id": "m7-icon-container",
+      "version": "0.1.0",
+      "status": "approved",
+      "sha256": "d9c26b74e9b367efa8e88f245f383240f6243d11b99546640eb22b2883a77275"
+    }
+  ]
+}

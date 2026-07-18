@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "id": "v7-reference-fidelity",
+  "status": "review-complete",
+  "evidence": {
+    "V7-E01": [
+      "docs/decisions/ADR-018-reference-fidelity-style-expansion.md",
+      "docs/reference-briefs/M7_REFERENCE_FIDELITY_STYLE_EXPANSION.md",
+      "docs/implementation/M7_REFERENCE_FIDELITY_IMPLEMENTATION_SPEC.md",
+      "docs/validation/M7_REFERENCE_FIDELITY_RUBRIC.md"
+    ],
+    "V7-E02": [
+      "V7-E02-approved-inputs.json",
+      "specs/examples/style-m7-reference-fidelity.json",
+      "specs/examples/m7-faceted-materials.json",
+      "specs/examples/m7-reward-panel.json",
+      "specs/examples/m7-primary-hex-button.json",
+      "specs/examples/m7-secondary-hex-button.json",
+      "specs/examples/m7-angular-tab.json",
+      "specs/examples/m7-faceted-badge.json",
+      "specs/examples/m7-angular-progress.json",
+      "specs/examples/m7-icon-container.json"
+    ],
+    "V7-E03": [
+      "V7-E03-matrix-receipt.json"
+    ],
+    "V7-E04": [
+      "../m7-a5-reference-fidelity/m7-angular-reward-composition.png"
+    ],
+    "V7-E05": [
+      "V7-E05-shape-board.html"
+    ],
+    "V7-E06": [
+      "V7-E06-review-views.html"
+    ],
+    "V7-E07": [
+      "V7-E07-test-report.json"
+    ],
+    "V7-E08": [
+      "V7-E08-integrity-audit.json",
+      "V7-E08-provenance-audit.json"
+    ],
+    "V7-E09": [
+      "V7-E09-handoff.json",
+      "../../../showcase/m7-reference-fidelity.html",
+      "../../../assets/m7-reference-fidelity/"
+    ],
+    "V7-E10": [
+      "V7-E10-defect-log.json",
+      "V7-E10-retrospective.md",
+      "V7-E10-preflight.json",
+      "../../records/v7-reference-fidelity-style-expansion.md"
+    ]
+  }
+}
