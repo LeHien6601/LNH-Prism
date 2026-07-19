@@ -2,11 +2,12 @@ import { M9_FROSTBOUND_EDGE_STACKS, renderEdgeStackSvg, type EdgeStackPreset } f
 import { resolveMaterialResponse } from "../materials/m9-material-responses.js";
 import { renderVariationSvg, type VariationRegion } from "../materials/m9-variation.js";
 import { renderM9Ornaments } from "./m9-ornaments.js";
+import { renderM9FocalObjectSvg, type M9FocalLayer } from "./m9-focal-objects.js";
 import { renderM8FrostboundComponentSvg, renderM8FrostboundProgressFillSvg, renderM8FrostboundProgressFrameSvg, renderM8FrostboundProgressSvg } from "./m8-frostbound-components.js";
 import type { M7AngularComponent, M7AngularRequest } from "./m7-angular-components.js";
 
 const presetFor: Record<M7AngularComponent, string> = { "primary-hex-button": "m9-glowing-primary", "secondary-hex-button": "m9-ice-heavy", panel: "m9-dark-inset", tab: "m9-ice-heavy", badge: "m9-ice-heavy", progress: "m9-dark-inset", "icon-container": "m9-ice-heavy" };
-export interface M9FrostboundRequest extends M7AngularRequest { variationPresetId?: string; variationSeed?: number; }
+export interface M9FrostboundRequest extends M7AngularRequest { variationPresetId?: string; variationSeed?: number; focalPresetId?: "m9-frostbound-crystal"|"m9-placeholder-orb"; disabledFocalLayers?: readonly M9FocalLayer[]; }
 
 function responseLayers(instanceId: string, path: string, component: M7AngularComponent, width: number, height: number, variationPresetId?: string, variationSeed?: number): string {
   const edge = resolveMaterialResponse(component, "structural-edge");
@@ -26,7 +27,8 @@ function migrate(svg: string, request: M9FrostboundRequest, framePart = false): 
   const responses = responseLayers(`${match[1]}-m9`, match[2], request.component, request.width, request.height, request.variationPresetId, request.variationSeed);
   const ornaments = framePart ? "" : renderM9Ornaments(`${match[1]}-m9`, request.component, request.width, request.height);
   const replacement = framePart ? `<g id="${match[1]}" data-part="frame">${stack}${responses}</g>` : `${stack}${responses}${ornaments}`;
-  return svg.replace(match[0], replacement).replace("m8-frostbound-aligned@0.1.0", "m9-frostbound-production-fidelity@0.1.0").replace("M8 Frostbound", "M9 Frostbound edge stack");
+  let output=svg.replace(match[0], replacement).replace("m8-frostbound-aligned@0.1.0", "m9-frostbound-production-fidelity@0.1.0").replace("M8 Frostbound", "M9 Frostbound edge stack");
+  if(!framePart&&(request.component==="panel"||request.component==="icon-container")){const focal=renderM9FocalObjectSvg({instanceId:`m9-${request.component}`,presetId:request.focalPresetId,x:request.width/2,y:request.height/2,disabledLayers:request.disabledFocalLayers});output=output.replace(/<g id="m8-[^"]+-crystal-focal"[^>]*>[\s\S]*?<\/g>/,focal);}return output;
 }
 
 export function renderM9FrostboundComponentSvg(request: M9FrostboundRequest): string { return migrate(renderM8FrostboundComponentSvg(request), request); }

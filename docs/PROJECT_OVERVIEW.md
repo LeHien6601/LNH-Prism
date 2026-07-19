@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M9 — Frostbound production-fidelity systems** |
-| Next task | 🔵 **Implement M9 focal-object framework** · 🤖 Agent |
-| Next agent-ready task | M9-A6 — generalize the Frostbound crystal into independently addressable focal presets |
+| Next task | 🔵 **Implement M9 typography treatments** · 🤖 Agent |
+| Next agent-ready task | M9-A7 — add reusable typography effects and deterministic width/state behavior |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -131,7 +131,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Implement M9 material-response channels and region bindings (M9-A3) | 🤖 Agent | 🟢 Complete | Versioned source-neutral base/edge/highlight/glow/surface response registry and region resolver bind all seven components; provenance, isolation/combined target-size output, renderer integration, and focused validation pass |
 | P0 | Implement M9 seeded variation channels and receipts (M9-A4) | 🤖 Agent | 🟢 Complete | Versioned bounded channel registry, explicit unsigned seed resolver/receipt, zero-detail baseline, and region-local renderer metadata validate deterministic same/different-seed behavior across all approved components |
 | P0 | Implement M9 structural and ornament separation (M9-A5) | 🤖 Agent | 🟢 Complete | Versioned deterministic ornament anchors/bindings render independently from structure with explicit clipping and mirrored reuse; content bounds remain unchanged |
-| P0 | Implement M9 focal-object framework (M9-A6) | 🤖 Agent | 🔵 Agent-ready | Generalize the Frostbound crystal into independently addressable focal presets with optional layers and mobile readability validation |
+| P0 | Implement M9 focal-object framework (M9-A6) | 🤖 Agent | 🟢 Complete | Versioned crystal and placeholder focal presets expose independently addressable optional layers and integrate with M9 panel/icon outputs deterministically |
+| P0 | Implement M9 typography treatments (M9-A7) | 🤖 Agent | 🔵 Agent-ready | Typography effects remain separate from geometry with deterministic long/short width fitting and stable state behavior |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -260,3 +261,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
 | 2026-07-19 | Completed M9-A4: added bounded seeded variation presets, region bindings, typed seed receipts, zero baseline, and renderer trace metadata with same/different-seed validation; opened structural/ornament separation | Codex |
 | 2026-07-19 | Completed M9-A5: added deterministic independent ornament anchors, clipping/mirroring metadata, and focused structural-bound validation; opened focal-object framework | Codex |
+| 2026-07-19 | Completed M9-A6: added versioned focal presets with independently addressable optional layers and M9 panel/icon integration; opened typography treatments | Codex |

@@ -42,6 +42,7 @@ const exampleSchemas = new Map([
   ["m9-frostbound-material-responses.json", "material-response.schema.json"],
   ["m9-frostbound-variation.json", "variation.schema.json"],
   ["m9-frostbound-ornament-anchors.json", "ornament-anchor.schema.json"],
+  ["m9-frostbound-focal-objects.json", "focal-object.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["archive/legacy-primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
