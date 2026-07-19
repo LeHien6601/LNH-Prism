@@ -61,3 +61,23 @@ Reviewer: project-owner-authorized automated review. Reviewed revision: `c28a2df
 | **Total** |  | **54/100** |  |
 
 **Decision: Fail — scored.** No automatic palette-only blocker remains, but the total is below `85/100` and Organic material separation is below `3/5`. `V11-B002` requires deterministic, independently visible stone texture, dark-wood grain, moss growth/masking, and deeper seed-support layering through the shared seam; do not alter geometry, IDs, seeds, semantic text, or production/reference boundaries.
+
+## M11-R004 / V11 re-review — 2026-07-19
+
+Reviewer: project-owner-authorized automated review. Reviewed revision: `e720984` (`fix(styles): deepen enchanted forest material layers`). Inspected `M11-E-source-scale.html`, `M11-E-target-phone.html`, `M11-E-thumbnail.html`, `M11-E-review-reference.html`, the 26-entry matrix, target-phone PNG, material/focal isolate PNGs, manifest, seed receipts, clean-workspace receipt, and generalized-seam proof.
+
+All technical hard gates passed: `npm run validate:m11-a4-package`, `npm run validate:m11-a3-evidence`, `npm run validate:contracts`, focused M11 rendering coverage, serial review-reference boundary coverage, and `npm run validate:control-drift`. The package retains 52 modules, 26 matrix entries, zero plus three named nonzero seeds, the shared composition seam, semantic target-phone text, and production/reference isolation.
+
+| Dimension | Score | Weighted | Observation |
+|---|---:|---:|---|
+| Three-style distinction | 3/5 | 9 | The dark green botanical family remains distinguishable from Frostbound and Forge at thumbnail scale. |
+| Organic material separation | 2/5 | 6 | Stone remains a flat face, wood a small set of parallel lines, and moss mostly dots/curves; the material isolate does not show three convincingly layered, independently legible organic treatments. |
+| Focal hierarchy | 3/5 | 9 | The seed roots add support depth and actions remain dominant, but the focal isolate still presents a shallow halo/diamond treatment. |
+| Botanical ornament restraint | 3/5 | 6 | Vines and roots remain bounded and outside content slots. |
+| Diffuse bioluminescent lighting | 3/5 | 6 | Local green light is coherent and restrained but has little interaction with the material layers. |
+| Seeded organic variation | 3/5 | 6 | Deterministic variation is present and readable, but it does not yet carry the material separation. |
+| Typography and state language | 3/5 | 6 | Semantic labels and state hierarchy remain readable at target-phone scale. |
+| Portrait composition | 3/5 | 6 | The reward hierarchy is legible, but environmental depth remains limited. |
+| **Total** |  | **54/100** |  |
+
+**Decision: Fail — scored.** Technical correctness does not change the visual result. `V11-B003` is a bounded visual blocker: integrate independently visible weathered-stone texture, directional dark-wood grain, and moss growth/masking into the actual component faces and their source isolates, and make the focal-root depth visible in its isolate. Preserve shared geometry, stable IDs, seeds, semantic text, module boundaries, and the review-reference boundary. M11-R005 is the next agent-ready remediation.
