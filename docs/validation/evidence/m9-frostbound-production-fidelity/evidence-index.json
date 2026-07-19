@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m9-frostbound-production-fidelity",
+  "status": "unscored-review-ready",
+  "evidence": {
+    "M9-E01": [
+      "../../../implementation/M9_FROSTBOUND_PRODUCTION_FIDELITY_SYSTEMS_SPEC.md",
+      "../../../validation/M9_PRODUCTION_FIDELITY_RUBRIC.md"
+    ],
+    "M9-E02": [
+      "../../../specs/examples/m9-frostbound-visual-review.json"
+    ],
+    "M9-E03": [
+      "matrix.json"
+    ],
+    "M9-E04": [
+      "M9-E-source-scale.html"
+    ],
+    "M9-E05": [
+      "M9-E-target-phone.html"
+    ],
+    "M9-E06": [
+      "M9-E-thumbnail.html"
+    ],
+    "M9-E07": [
+      "M9-E-technical-preflight.json"
+    ],
+    "M9-E08": [
+      "../../../assets/m9-frostbound-production-fidelity/manifest.json"
+    ],
+    "M9-E09": [
+      "../../../showcase/m9-frostbound-production-fidelity.html"
+    ]
+  }
+}

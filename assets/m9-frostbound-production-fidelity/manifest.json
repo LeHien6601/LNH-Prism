@@ -1,0 +1,646 @@
+{
+  "schemaVersion": "1.0",
+  "packageId": "m9-frostbound-production-fidelity-assets",
+  "packageVersion": "1.0.0",
+  "styleId": "m9-frostbound-production-fidelity",
+  "styleVersion": "0.1.0",
+  "lineage": {
+    "baselinePackage": "assets/m8-frostbound-aligned",
+    "preservedGeometry": "m7-wide-hex-angular"
+  },
+  "components": [
+    "panel",
+    "primary-hex-button",
+    "secondary-hex-button",
+    "tab",
+    "badge",
+    "icon-container",
+    "progress"
+  ],
+  "modules": [
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:panel-488x660-normal:svg",
+      "component": "panel",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/panel-488x660-normal.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/panel/panel-488x660-normal.svg",
+      "format": "svg",
+      "bytes": 11338,
+      "sha256": "e489db6bd680ee711214476109c42e5eb3998de1baada8a59a19ea1b75213d92"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:panel-488x660-normal:png",
+      "component": "panel",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/panel-488x660-normal.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/panel/panel-488x660-normal.png",
+      "format": "png",
+      "bytes": 112479,
+      "sha256": "bea9dc1caee6aabef6122ac4cf46d5edf48e257d1c1bfb8eb8be2ac07694c3e2"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:panel-488x760-normal:svg",
+      "component": "panel",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/panel-488x760-normal.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/panel/panel-488x760-normal.svg",
+      "format": "svg",
+      "bytes": 11339,
+      "sha256": "3d5ae353055a94740755e5aa335f8f355515dbcf455e90a81484c54336f59cfa"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:panel-488x760-normal:png",
+      "component": "panel",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/panel-488x760-normal.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/panel/panel-488x760-normal.png",
+      "format": "png",
+      "bytes": 124888,
+      "sha256": "e4681e96010d9e2a1b80c131ccfb255ce38f37c7b8337e75b34ddfcf7fa95863"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-320x68-normal:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-320x68-normal.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-320x68-normal.svg",
+      "format": "svg",
+      "bytes": 10968,
+      "sha256": "dc3d8368321d4eae857b396d9086a78a12d6b379adacc0aab831bc234b3dca90"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-320x68-normal:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-320x68-normal.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-320x68-normal.png",
+      "format": "png",
+      "bytes": 24762,
+      "sha256": "bca23ea10c663f6f16859077e5b2e8c62ed4aa3b91669886eb93e4de90d9a465"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-320x68-pressed:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-320x68-pressed.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-320x68-pressed.svg",
+      "format": "svg",
+      "bytes": 11014,
+      "sha256": "b13b0c97cb408d7b0fa411a09a38e126ed6f43891c55bd4b2468b5bc1ebd8862"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-320x68-pressed:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-320x68-pressed.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-320x68-pressed.png",
+      "format": "png",
+      "bytes": 24164,
+      "sha256": "978f72cf4775df226068712cc9823e4f6c0577f50182ac770202bf60bac565cc"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-320x68-disabled:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-320x68-disabled.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-320x68-disabled.svg",
+      "format": "svg",
+      "bytes": 11066,
+      "sha256": "631d33d57a490f1bf9f12d1a2742329d1811b272b486ace321daa323e07b7efc"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-320x68-disabled:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-320x68-disabled.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-320x68-disabled.png",
+      "format": "png",
+      "bytes": 22617,
+      "sha256": "2cbf91a63fac8b6e1ddd3c6ae1e2b589dbd704168906c1c21d25cbd35540dae2"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-260x62-normal:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-260x62-normal.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-260x62-normal.svg",
+      "format": "svg",
+      "bytes": 11000,
+      "sha256": "afea81d0f41e43b3aaca71f5f514c744c52a3d5650247b8c12e9c8d407198fb8"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-260x62-normal:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-260x62-normal.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-260x62-normal.png",
+      "format": "png",
+      "bytes": 21575,
+      "sha256": "5cc7a84dec44b8729fa3cc7f369723e04669737be68f41a3a089e28695ac6b40"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-260x62-pressed:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-260x62-pressed.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-260x62-pressed.svg",
+      "format": "svg",
+      "bytes": 11046,
+      "sha256": "fc5ccb34a909faa898087e5d1d486ff7d07b4b655671e9a4a646920f12063bf7"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-260x62-pressed:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-260x62-pressed.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-260x62-pressed.png",
+      "format": "png",
+      "bytes": 20832,
+      "sha256": "eb422c75de1f8fcaf7ca147634b530cc1f45f18391c23316a1565c4df8fb312e"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-260x62-disabled:svg",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-260x62-disabled.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-260x62-disabled.svg",
+      "format": "svg",
+      "bytes": 11098,
+      "sha256": "8445b03f44cc1780f4a7caf81d6bf5e575f04d47e4954f05ac5c91cf80961090"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:primary-hex-button-260x62-disabled:png",
+      "component": "primary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/primary-hex-button-260x62-disabled.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/primary-hex-button/primary-hex-button-260x62-disabled.png",
+      "format": "png",
+      "bytes": 19296,
+      "sha256": "09285eade57f2b15441d68c138d2abeee000059f97968186018b9a0fabcead4f"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-232x56-normal:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-232x56-normal.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-232x56-normal.svg",
+      "format": "svg",
+      "bytes": 10423,
+      "sha256": "c274740b8cc1b7abcd2cbf4218de03294366cfe523d074f83535e90f0b6cc104"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-232x56-normal:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-232x56-normal.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-232x56-normal.png",
+      "format": "png",
+      "bytes": 17870,
+      "sha256": "019bf942a67069aeba247c4010944d234ba7eb82e5bce1516e9d3b2a46c1faef"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-232x56-pressed:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-232x56-pressed.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-232x56-pressed.svg",
+      "format": "svg",
+      "bytes": 10467,
+      "sha256": "21b043f8a185238dece0507214c0955aedab775c075aaf5429585c4484e0d3d5"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-232x56-pressed:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-232x56-pressed.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-232x56-pressed.png",
+      "format": "png",
+      "bytes": 17627,
+      "sha256": "88c96d3dbfa52ca94286918cb079839aa83856a635fde6e1a9339ed7df9b7bd6"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-232x56-disabled:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-232x56-disabled.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-232x56-disabled.svg",
+      "format": "svg",
+      "bytes": 10517,
+      "sha256": "c5de5ede4fe8bf0436982ca89e163fc24c784b01c82660abc0d1023af1d6b8a9"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-232x56-disabled:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-232x56-disabled.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-232x56-disabled.png",
+      "format": "png",
+      "bytes": 16810,
+      "sha256": "4616c1b6088a760d35ed529c2225efe131456bd3ea1462c03a3662575e484179"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-188x52-normal:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-188x52-normal.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-188x52-normal.svg",
+      "format": "svg",
+      "bytes": 10418,
+      "sha256": "c1662093aa38f4c459163cd1fe556f0056ee3ea649e9713778ffbb3d50468eb3"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-188x52-normal:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-188x52-normal.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-188x52-normal.png",
+      "format": "png",
+      "bytes": 15147,
+      "sha256": "6e0e34913f9a878617915433ef3b613c2289e05525691e66de41d0d55fafdd77"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-188x52-pressed:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-188x52-pressed.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-188x52-pressed.svg",
+      "format": "svg",
+      "bytes": 10462,
+      "sha256": "e26c95f6831d5645ab57f505ffa42c3bd168540de0e07f337008b5e19a4d18a2"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-188x52-pressed:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-188x52-pressed.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-188x52-pressed.png",
+      "format": "png",
+      "bytes": 15038,
+      "sha256": "60dbcc1b2ea92b97b1a0129c1177601e0c8e7f03abfb86f0fe7f762e2d96d100"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-188x52-disabled:svg",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-188x52-disabled.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-188x52-disabled.svg",
+      "format": "svg",
+      "bytes": 10512,
+      "sha256": "a0a247b5a33fb666d4380140380149b54dcee4695fa2f0c45886ee0fed7bca81"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:secondary-hex-button-188x52-disabled:png",
+      "component": "secondary-hex-button",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/secondary-hex-button-188x52-disabled.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/secondary-hex-button/secondary-hex-button-188x52-disabled.png",
+      "format": "png",
+      "bytes": 14550,
+      "sha256": "558bc58913f4c803e908c063690224355454f23d8d7bb243e229d4ede51184e0"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:tab-148x52-normal:svg",
+      "component": "tab",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/tab-148x52-normal.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/tab/tab-148x52-normal.svg",
+      "format": "svg",
+      "bytes": 9206,
+      "sha256": "5fbd5a035230a80766c45e62e14066461539b0bcf26822ed8063557d125ed85b"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:tab-148x52-normal:png",
+      "component": "tab",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/tab-148x52-normal.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/tab/tab-148x52-normal.png",
+      "format": "png",
+      "bytes": 10848,
+      "sha256": "d9399a1d0fe3a12e4deb85580f2e06cca40aebe724fc953683db983fe36206b8"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:tab-184x52-selected:svg",
+      "component": "tab",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/tab-184x52-selected.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/tab/tab-184x52-selected.svg",
+      "format": "svg",
+      "bytes": 9307,
+      "sha256": "e292f16e42a70aa5936d9dc3eaafaa49caccfd096d0865fb9a8ca784768b0ec5"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:tab-184x52-selected:png",
+      "component": "tab",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/tab-184x52-selected.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/tab/tab-184x52-selected.png",
+      "format": "png",
+      "bytes": 12971,
+      "sha256": "ff19976729ae0e1affde75115ed87fefc032c94a61323f36e59d76c6e17d948e"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:badge-164x48-normal:svg",
+      "component": "badge",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/badge-164x48-normal.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/badge/badge-164x48-normal.svg",
+      "format": "svg",
+      "bytes": 9299,
+      "sha256": "4bf546b9f50f2d8edde710967315c7285d5820e737f52aa75d1a6d89064902ba"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:badge-164x48-normal:png",
+      "component": "badge",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/badge-164x48-normal.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/badge/badge-164x48-normal.png",
+      "format": "png",
+      "bytes": 11769,
+      "sha256": "656109fdfca5f04d3310aa7259bfc324047d0c77f12dee384b18839d16175999"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:badge-212x48-highlighted:svg",
+      "component": "badge",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/badge-212x48-highlighted.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/badge/badge-212x48-highlighted.svg",
+      "format": "svg",
+      "bytes": 9515,
+      "sha256": "5bc2ad9b9b8f0a5a8fead91697fb33116069a8e1ff5b112c46118edaa148359e"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:badge-212x48-highlighted:png",
+      "component": "badge",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/badge-212x48-highlighted.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/badge/badge-212x48-highlighted.png",
+      "format": "png",
+      "bytes": 14087,
+      "sha256": "8d4cb3e513bb41be63e3c544b9ce3c88f11f21dcc0125b5bf5c73efa5d6131f5"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:icon-container-92x92-normal:svg",
+      "component": "icon-container",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/icon-container-92x92-normal.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/icon-container/icon-container-92x92-normal.svg",
+      "format": "svg",
+      "bytes": 11039,
+      "sha256": "4a1a785b0dafaafe19f4fd6a0a544f8ede85657af8da8f42653e73e2bfddc9be"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:icon-container-92x92-normal:png",
+      "component": "icon-container",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/icon-container-92x92-normal.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/icon-container/icon-container-92x92-normal.png",
+      "format": "png",
+      "bytes": 17415,
+      "sha256": "c2a8c01d7f67e6adcbda941387f2c8c403d8fb8394bb1e1db4d00625fff14a73"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:icon-container-116x116-selected:svg",
+      "component": "icon-container",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/icon-container-116x116-selected.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/icon-container/icon-container-116x116-selected.svg",
+      "format": "svg",
+      "bytes": 11241,
+      "sha256": "de2abeb523bd0d56967c720c264fabbbfc5cb7a4de0c223980c2e6906230df6f"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:icon-container-116x116-selected:png",
+      "component": "icon-container",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/icon-container-116x116-selected.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/icon-container/icon-container-116x116-selected.png",
+      "format": "png",
+      "bytes": 20399,
+      "sha256": "784b5ce8e7a140a057ef869a0a86ff2085784d829d5fb0ac00c519b37cfbdf78"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-344x28-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-344x28-10.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-344x28-10.svg",
+      "format": "svg",
+      "bytes": 7363,
+      "sha256": "78b79ce64074f86a76e3929e8b1ecb1d2bd3eb90db6e6cdf74fe1a7b1e007586"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-344x28-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-344x28-10.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-344x28-10.png",
+      "format": "png",
+      "bytes": 7684,
+      "sha256": "09b0fed545018a0e3677851049c761ed3c61440818cba4d108df7a0f13ce8c49"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-344x28-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-344x28-50.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-344x28-50.svg",
+      "format": "svg",
+      "bytes": 7369,
+      "sha256": "5b196dcedc40d44747b5e2e3b7a658a086528bf7e118e36cfabc897568811966"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-344x28-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-344x28-50.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-344x28-50.png",
+      "format": "png",
+      "bytes": 7635,
+      "sha256": "5c71c8a6b686775c8c35d2682ceb389b1243b85d6bc4315210efe4dd74f5fdde"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-344x28-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-344x28-90.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-344x28-90.svg",
+      "format": "svg",
+      "bytes": 7369,
+      "sha256": "4d310acd7dd59368c687d756052165f86089f1960a6da8c5c1dd2c35de4ff211"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-344x28-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-344x28-90.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-344x28-90.png",
+      "format": "png",
+      "bytes": 7588,
+      "sha256": "266b709e18ffa13d1c88ab7ced1f1845f34656af70c87fe6da8efef1682d19cb"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-420x28-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-420x28-10.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-420x28-10.svg",
+      "format": "svg",
+      "bytes": 7360,
+      "sha256": "f87f0c3ddc504e59396f3001d1d9d5bb1180c3703bd1c0a7217218b3cc84ea88"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-420x28-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-420x28-10.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-420x28-10.png",
+      "format": "png",
+      "bytes": 7831,
+      "sha256": "be80a56d753e831a0d91105b76345c9961104c7d5bcd95fae8e9f7dfb7e0ead8"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-420x28-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-420x28-50.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-420x28-50.svg",
+      "format": "svg",
+      "bytes": 7366,
+      "sha256": "2a9f73af09742e8f1aed6b9472a7d994b5d96d6bb490114426a567564d65fa81"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-420x28-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-420x28-50.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-420x28-50.png",
+      "format": "png",
+      "bytes": 7926,
+      "sha256": "f1fda110a220e33b9293f8bd92f3380a70a65fd5f839160d300eeaa1c1767cd7"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-420x28-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-420x28-90.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-420x28-90.svg",
+      "format": "svg",
+      "bytes": 7366,
+      "sha256": "629b61db1017d1786ca4ec88866cc916c46e945825278d6beed4d9a63a007d66"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-420x28-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-420x28-90.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-420x28-90.png",
+      "format": "png",
+      "bytes": 7930,
+      "sha256": "8685db363c580d4d8cb4bceaac9a534ae13160f3b986f25398c872ad9fd243e9"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-frame-344:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-frame-344.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-frame-344.svg",
+      "format": "svg",
+      "bytes": 5586,
+      "sha256": "1edc2be10144a396a46105aeeac520726da43077bfb6a527a7f93c7913f75397"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-frame-344:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-frame-344.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-frame-344.png",
+      "format": "png",
+      "bytes": 7211,
+      "sha256": "5e9b7ff8311fa482c0013b90c6ea53128d960c8c642f57b17dab139864facd36"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-344-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-344-10.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-344-10.svg",
+      "format": "svg",
+      "bytes": 2040,
+      "sha256": "917f25fc2b4189618d791024399b7ea96cfa6f360a1b4e3d907f905332d8d3ec"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-344-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-344-10.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-344-10.png",
+      "format": "png",
+      "bytes": 2150,
+      "sha256": "10c7bcac5c09e7752c4256c911271e15fb9d9795a9cf16562045702a9917023f"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-344-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-344-50.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-344-50.svg",
+      "format": "svg",
+      "bytes": 2046,
+      "sha256": "dd60943d7240eeb0ddc11ccbebe267cd2df2535029a1e1a86a7bbae560ab94c3"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-344-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-344-50.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-344-50.png",
+      "format": "png",
+      "bytes": 2849,
+      "sha256": "a9a44d610297623b5fec5280a10403068db4b23838274c3a6f01cf45d831fdc2"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-344-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-344-90.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-344-90.svg",
+      "format": "svg",
+      "bytes": 2046,
+      "sha256": "89b4e165b0e42da9959399a351df893899c2207203bc9d599c1cb7c0e4df5dd0"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-344-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-344-90.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-344-90.png",
+      "format": "png",
+      "bytes": 3424,
+      "sha256": "b171e0048b38ae9e3aa01e5b6fe0d8bcc22a8902562445b07e410578feea74bb"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-frame-420:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-frame-420.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-frame-420.svg",
+      "format": "svg",
+      "bytes": 5583,
+      "sha256": "9f3cdab89771e9f56858558e18d7ea3dc0f9fac781605fe62f017148ccdb80c5"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-frame-420:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-frame-420.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-frame-420.png",
+      "format": "png",
+      "bytes": 7192,
+      "sha256": "2a127468e09d90d0df7754512e616dd55c010fa0e0fa57a2a44ffef6e3e95041"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-420-10:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-420-10.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-420-10.svg",
+      "format": "svg",
+      "bytes": 2040,
+      "sha256": "6bebefe539bd4cf337397204b8aaa5abdbd705328ae29b53523c70edf8e2d2e4"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-420-10:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-420-10.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-420-10.png",
+      "format": "png",
+      "bytes": 2237,
+      "sha256": "9b02cab231470ddf4c13814881967da05f1c460fd1c2da7ac51fbd202964d3aa"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-420-50:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-420-50.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-420-50.svg",
+      "format": "svg",
+      "bytes": 2046,
+      "sha256": "4d8a0de253e615be30a7b616b5a053ddb6d8673d2cd408ac2db7847feefc668b"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-420-50:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-420-50.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-420-50.png",
+      "format": "png",
+      "bytes": 3080,
+      "sha256": "9147d2ba8a9fc916c9511ea789d43078590e12b876a248ed3bd5e5d24ed0dc6c"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-420-90:svg",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-420-90.svg",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-420-90.svg",
+      "format": "svg",
+      "bytes": 2046,
+      "sha256": "8b66780ba040d47cab915f1a67dc38cb564c5f125fdd2fc3f5c88aaf6c45e879"
+    },
+    {
+      "assetId": "lnh-prism:asset:m9-frostbound-production-fidelity:progress-fill-420-90:png",
+      "component": "progress",
+      "source": "docs/validation/evidence/m9-frostbound-production-fidelity/matrix/progress-fill-420-90.png",
+      "path": "assets/m9-frostbound-production-fidelity/modules/progress/progress-fill-420-90.png",
+      "format": "png",
+      "bytes": 3728,
+      "sha256": "9d01816826961479d67993cfa7043a6804ea2d2d6277289e09f07d99ad39a638"
+    }
+  ],
+  "provenance": {
+    "style": "specs/examples/style-m8-frostbound-aligned.json",
+    "materials": "specs/examples/m9-frostbound-material-responses.json",
+    "edgeStacks": "specs/examples/m9-frostbound-edge-stacks.json",
+    "variation": "specs/examples/m9-frostbound-variation.json",
+    "renderer": "src/renderer/m9-frostbound-edge-components.ts"
+  },
+  "usage": {
+    "svg": "Editable deterministic source.",
+    "png": "Matching deterministic raster derivative.",
+    "progress": "Compose matching frame and fill modules at the same width."
+  }
+}

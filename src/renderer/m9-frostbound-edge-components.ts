@@ -3,6 +3,8 @@ import { resolveMaterialResponse } from "../materials/m9-material-responses.js";
 import { renderVariationSvg, type VariationRegion } from "../materials/m9-variation.js";
 import { renderM9Ornaments } from "./m9-ornaments.js";
 import { renderM9FocalObjectSvg, type M9FocalLayer } from "./m9-focal-objects.js";
+import { renderM9LightingSvg } from "./m9-lighting.js";
+import { renderM9TypographySvg } from "./m9-typography.js";
 import { renderM8FrostboundComponentSvg, renderM8FrostboundProgressFillSvg, renderM8FrostboundProgressFrameSvg, renderM8FrostboundProgressSvg } from "./m8-frostbound-components.js";
 import type { M7AngularComponent, M7AngularRequest } from "./m7-angular-components.js";
 
@@ -26,7 +28,11 @@ function migrate(svg: string, request: M9FrostboundRequest, framePart = false): 
   const stack = renderEdgeStackSvg({ instanceId: `${match[1]}-m9`, path: match[2], width: request.width, height: request.height, preset });
   const responses = responseLayers(`${match[1]}-m9`, match[2], request.component, request.width, request.height, request.variationPresetId, request.variationSeed);
   const ornaments = framePart ? "" : renderM9Ornaments(`${match[1]}-m9`, request.component, request.width, request.height);
-  const replacement = framePart ? `<g id="${match[1]}" data-part="frame">${stack}${responses}</g>` : `${stack}${responses}${ornaments}`;
+  const lighting = renderM9LightingSvg(`${match[1]}-m9`, request.width, request.height);
+  const label = request.component === "primary-hex-button" ? "CLAIM" : request.component === "secondary-hex-button" ? "CONTINUE" : undefined;
+  const typographyState = request.state === "pressed" || request.state === "disabled" ? request.state : "normal";
+  const typography = label ? renderM9TypographySvg({ instanceId: `${match[1]}-m9`, text: label, width: request.width, state: typographyState }) : "";
+  const replacement = framePart ? `<g id="${match[1]}" data-part="frame">${stack}${responses}${lighting}</g>` : `${stack}${responses}${lighting}${ornaments}${typography}`;
   let output=svg.replace(match[0], replacement).replace("m8-frostbound-aligned@0.1.0", "m9-frostbound-production-fidelity@0.1.0").replace("M8 Frostbound", "M9 Frostbound edge stack");
   if(!framePart&&(request.component==="panel"||request.component==="icon-container")){const focal=renderM9FocalObjectSvg({instanceId:`m9-${request.component}`,presetId:request.focalPresetId,x:request.width/2,y:request.height/2,disabledLayers:request.disabledFocalLayers});output=output.replace(/<g id="m8-[^"]+-crystal-focal"[^>]*>[\s\S]*?<\/g>/,focal);}return output;
 }
