@@ -43,6 +43,7 @@ const exampleSchemas = new Map([
   ["m9-frostbound-variation.json", "variation.schema.json"],
   ["m9-frostbound-ornament-anchors.json", "ornament-anchor.schema.json"],
   ["m9-frostbound-focal-objects.json", "focal-object.schema.json"],
+  ["m9-frostbound-visual-review.json", "visual-review.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["archive/legacy-primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
@@ -140,6 +141,14 @@ const invalidVariation = structuredClone(m9Variation);
 invalidVariation.presets[0].channels.particleCount = 33;
 if (validateVariation(invalidVariation)) throw new Error("variation schema must reject particle count above its bounded maximum.");
 console.log("validated M9 variation registry, bindings, and channel bounds");
+
+const visualReviewSchema = schemas.get("visual-review.schema.json");
+const validateVisualReview = ajv.getSchema(visualReviewSchema.$id);
+const m9VisualReview = JSON.parse(await readFile(join(exampleDir, "m9-frostbound-visual-review.json"), "utf8"));
+const invalidVisualReview = structuredClone(m9VisualReview);
+invalidVisualReview.technicalPreflight.role = "score-multiplier";
+if (validateVisualReview(invalidVisualReview)) throw new Error("M9 visual review must keep technical correctness as a hard gate.");
+console.log("validated M9 three-distance review plan and technical-gate boundary");
 
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);

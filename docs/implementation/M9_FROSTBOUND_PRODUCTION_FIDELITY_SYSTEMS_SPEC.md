@@ -2,6 +2,8 @@
 
 ## Status
 
+**Current implementation status: M9-A1 through M9-A9 complete; integrated evidence assembly is next.**
+
 **M9-A1 complete — implementation sequence defined.** This specification turns the approved strategic direction in [ADR-020](../decisions/ADR-020-stage-production-fidelity-as-m9.md) into bounded renderer and validation tasks. It does not approve a visual gate or authorize multi-style transfer.
 
 ## Objective and fixed boundaries
@@ -45,3 +47,5 @@ M9 passes only after M9-A11 records a human-approved visual result with valid te
 | 2026-07-18 | Defined bounded M9 renderer, validation, integration, and human-review slices from ADR-020 and V8-O001. | Codex |
 | 2026-07-19 | Completed M9-A2 edge-stack migration and M9-A3 material-response/region-binding implementation; opened M9-A4 seeded variation. | Codex |
 | 2026-07-19 | Completed M9-A4 bounded seeded variation, typed receipts, zero baseline, and renderer trace metadata; opened M9-A5 structural/ornament separation. | Codex |
+| 2026-07-19 | Completed M9-A5 through M9-A8 reusable ornament, focal, typography, and lighting systems; opened the three-distance review definition. | Codex |
+| 2026-07-19 | Completed M9-A9 with a versioned source/phone/thumbnail review plan, 100-point visual-score contract, V8-O001 coverage, and technical hard-gate separation; opened M9-A10 integrated evidence assembly. | Codex |
