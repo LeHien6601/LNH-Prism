@@ -1,0 +1,1 @@
+import assert from"node:assert/strict";import test from"node:test";import{renderM9LightingSvg}from"../../dist/renderer/m9-lighting.js";test("M9 lighting is shared and budgeted",()=>{assert.match(renderM9LightingSvg("x",200,60),/m9-cold-top-rim/);assert.throws(()=>renderM9LightingSvg("x",200,60,{id:"x",version:"1",direction:"top",intensity:2,glow:0}),/budget/);});

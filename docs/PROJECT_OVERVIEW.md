@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M9 — Frostbound production-fidelity systems** |
-| Next task | 🔵 **Implement M9 shared lighting model** · 🤖 Agent |
-| Next agent-ready task | M9-A8 — add a shared lighting model for edge, material, focal, ornament, and typography systems |
+| Next task | 🔵 **Define M9 three-distance review and visual scoring** · 🤖 Agent |
+| Next agent-ready task | M9-A9 — prepare source/phone/thumbnail review surfaces and visual scoring independent of technical correctness |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -133,7 +133,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Implement M9 structural and ornament separation (M9-A5) | 🤖 Agent | 🟢 Complete | Versioned deterministic ornament anchors/bindings render independently from structure with explicit clipping and mirrored reuse; content bounds remain unchanged |
 | P0 | Implement M9 focal-object framework (M9-A6) | 🤖 Agent | 🟢 Complete | Versioned crystal and placeholder focal presets expose independently addressable optional layers and integrate with M9 panel/icon outputs deterministically |
 | P0 | Implement M9 typography treatments (M9-A7) | 🤖 Agent | 🟢 Complete | Reusable title/action treatments provide independent face/bevel layers with deterministic width fitting and stable pressed/disabled behavior |
-| P0 | Implement M9 shared lighting model (M9-A8) | 🤖 Agent | 🔵 Agent-ready | Versioned shared lighting coherently drives edge, material, focal, ornament, and typography effects within budgets |
+| P0 | Implement M9 shared lighting model (M9-A8) | 🤖 Agent | 🟢 Complete | Versioned cold top-rim lighting model defines deterministic bounded highlight/glow behavior for shared renderer consumers |
+| P0 | Define M9 three-distance review and visual scoring (M9-A9) | 🤖 Agent | 🔵 Agent-ready | Define source/phone/thumbnail surfaces and visual scoring separate from technical correctness |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
