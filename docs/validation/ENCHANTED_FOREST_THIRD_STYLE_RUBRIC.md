@@ -2,7 +2,7 @@
 
 ## Status and scope
 
-Draft for the R-016b definition review. Apply this rubric only to a later Enchanted Forest package that follows the approved [implementation definition](../implementation/ENCHANTED_FOREST_THIRD_STYLE_IMPLEMENTATION_SPEC.md) and [ADR-024](../decisions/ADR-024-enchanted-forest-third-style-contrast.md).
+Approved on 2026-07-19 by R-016c Option A; see [ADR-025](../decisions/ADR-025-enchanted-forest-definition-approval.md). Apply this rubric only to a later Enchanted Forest package that follows the approved [implementation definition](../implementation/ENCHANTED_FOREST_THIRD_STYLE_IMPLEMENTATION_SPEC.md) and [ADR-024](../decisions/ADR-024-enchanted-forest-third-style-contrast.md).
 
 Technical correctness is a hard gate, not a visual-score multiplier. The generated review-only reference informs comparison only; it is not a production source or a requirement to copy pixels.
 
@@ -25,7 +25,7 @@ All items must pass before a visual result can pass:
 - The complete package has valid module, manifest, provenance, clean-workspace, and deterministic receipt evidence.
 - Zero baseline plus three named nonzero variation seeds have reproducible receipt evidence; only declared material/ornament variation changes.
 - The review-only reference receipt is present, the reference is labeled on review surfaces, and automated production-source scans reject its filename, hash, identical raster content, and direct links.
-- The complete matrix, portrait, source/phone/thumbnail comparisons, material isolates, and focal/ornament evidence are present.
+- The complete matrix, portrait, source/phone/thumbnail comparisons, material isolates, and focal/ornament evidence are present. Required labels and progress values are semantic text and are unobscured at target-phone scale.
 
 Any hard-gate failure produces **Fail — unscored**.
 
@@ -51,6 +51,7 @@ Score each dimension from 1–5, then calculate `weight × score / 5`. A pass re
 - Any dominant ice/crystal, lava/fire, brass/gold engraving, rivet/rune/ember, or metal-heat language remains.
 - Bioluminescent coverage, halo extent/opacity, ornament count, or mote count exceeds the approved implementation bounds.
 - Glow, ornament, or texture obscures a content slot, text, progress value, or state cue.
+- Mobile-scale readability and state distinction scores below `3/5`.
 - The focal reads as a fireball/metal core rather than soft living light, or makes the primary action ambiguous.
 - At thumbnail distance the family cannot be distinguished from both existing styles.
 

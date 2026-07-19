@@ -2,7 +2,7 @@
 
 ## Status
 
-Draft for definition review. This document implements R-016b only: it does not authorize renderer, package, material-source, or production-asset changes.
+Approved on 2026-07-19 by R-016c Option A; see [ADR-025](../decisions/ADR-025-enchanted-forest-definition-approval.md). This document sets the boundary for later implementation planning; it does not itself authorize renderer, package, material-source, or production-asset changes.
 
 ## Purpose and approved inputs
 
@@ -38,7 +38,7 @@ The target must read as an ancient, living interface: weathered stone and dark w
 - Total bioluminescent emission coverage may occupy at most 30% of an individual component's visible face; each halo must remain clipped to its component or focal container.
 - A focal halo may extend no more than 12% of its focal container's shortest dimension beyond the seed silhouette. It must have a separately addressable opacity channel no greater than `0.40` at the default state.
 - No more than six ornamental instances may appear on one component face, and no more than twelve optional motes may appear in the complete portrait. Omitted motes are valid at the zero baseline.
-- Moss, grain, and wear are subordinate to labels and progress values: they may not reduce required label or value contrast below the established target-phone readability threshold.
+- Required labels and progress values remain semantic text layers. At target-phone scale, moss, grain, wear, glow, ornament, focal layers, and state treatments may not overlap or obscure them; the later rubric's Mobile-scale readability and state distinction dimension must score at least `3/5`.
 
 ## Required state and inventory coverage
 
@@ -66,4 +66,4 @@ Before implementation review, prepare these evidence surfaces and receipts:
 
 ## Definition-review decision
 
-A human review must approve this definition and the companion [visual-contrast rubric](../validation/ENCHANTED_FOREST_THIRD_STYLE_RUBRIC.md) before any production implementation begins. Approval authorizes only the bounded implementation slices that the review explicitly accepts; it does not authorize an editor, new component types, engine integration, or changes to reference-pixel policy.
+R-016c approved this definition and the companion [visual-contrast rubric](../validation/ENCHANTED_FOREST_THIRD_STYLE_RUBRIC.md) through [ADR-025](../decisions/ADR-025-enchanted-forest-definition-approval.md). The next permitted work is bounded implementation/evidence slice planning; approval does not authorize an editor, new component types, engine integration, or changes to reference-pixel policy.
