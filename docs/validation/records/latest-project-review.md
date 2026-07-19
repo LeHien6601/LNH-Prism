@@ -78,10 +78,16 @@
 
 ### R-016a — Generate and receipt the Enchanted Forest review-only reference
 
+- **Priority / eligibility:** P0 — Complete.
+- **Outcome:** Generated, deterministically resized, and inspected the `1080 × 1920` reference at `docs/reference-briefs/assets/enchanted-forest-review-reference-1080x1920.png`. Its hash, source size, generation provenance, permitted use, and prohibited production uses are recorded in the adjacent receipt.
+- **Validation:** PNG dimensions, byte count, SHA-256, and visual inspection passed. R-016b remains responsible for the third-style definition and rubric.
+
+### R-016b — Draft Enchanted Forest third-style definition and rubric
+
 - **Priority / eligibility:** P0 — Agent-ready.
-- **Scope:** Generate one `1080 × 1920` Enchanted Forest portrait reference using only ADR-024's approved direction. Store the image and a receipt recording prompt, tool/model, seed when available, dimensions, date, review use, and an explicit no-pixel-extraction boundary.
-- **Acceptance criteria:** The reference is inspectable and hashable; its provenance is complete; it is not linked from production SVG/PNG or material inputs.
-- **Validation:** Image/hash receipt, provenance fields, and source-boundary checks before a later definition task.
+- **Scope:** Draft the bounded deterministic Enchanted Forest implementation definition and visual-contrast rubric from ADR-024 and the generated review-only reference. Specify material, variation, ornament, focal, typography, lighting, state, component inventory, evidence, scoring, and blockers; do not implement renderer or package changes.
+- **Acceptance criteria:** A human-reviewable definition identifies the contrast dimensions, source boundary, seven-component inventory, editable deterministic constraints, review distances, pass threshold, and automatic blockers.
+- **Validation:** Document link/consistency scan and `git diff --check`.
 
 ### R-017 — Add lightweight control-drift detection
 

@@ -20,3 +20,7 @@ The proof remains bounded to the existing seven-component inventory: panel, prim
 - `R-016a` is the next Agent-ready task: generate and receipt the Enchanted Forest review-only reference from this decision.
 - A later definition task must specify deterministic material, variation, ornament, focal, typography, lighting, state, and validation rules before renderer or package changes begin.
 - The third-style exit evidence must include the reference receipt, source/phone/thumbnail comparison, complete bounded component matrix, package/provenance receipts, and automated reference-pixel boundary validation.
+
+## Recorded outcome
+
+R-016a completed on 2026-07-19 with `enchanted-forest-review-reference-1080x1920.png` and its adjacent provenance receipt. The image was generated at `941 × 1672` and deterministically resized to the approved `1080 × 1920` review canvas; it remains review-only evidence.

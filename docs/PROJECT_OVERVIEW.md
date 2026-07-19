@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🔵 **Generate and receipt the Enchanted Forest review-only reference (R-016a)** · 🤖 Agent |
-| Next agent-ready task | R-016a — generate the `1080 × 1920` Enchanted Forest portrait reference from ADR-024 and preserve the no-pixel-extraction boundary |
+| Next task | 🔵 **Draft Enchanted Forest third-style definition and rubric (R-016b)** · 🤖 Agent |
+| Next agent-ready task | R-016b — define deterministic third-style material, variation, ornament, focal, typography, lighting, state, evidence, and visual-gate requirements before implementation |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -159,7 +159,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Register the approved Volcanic Forge review-only reference (R-013) | 🤖 Agent | 🟢 Complete | Bound the generated reference and hash receipt to M10 brief, review record, comparison surface, and technical preflight; automated validation rejects reference pixels in production SVG/PNG assets |
 | P1 | Reconcile active M8–M10 control status (R-014) | 🤖 Agent | 🟢 Complete | Active overview, roadmap, and M10 specification controls now record passed M8–M10 status and the current R-016 decision without rewriting historical review facts |
 | P2 | Select third-style contrast proof (R-016) | 🧭 Product + 🎨 Art lead | 🟢 Complete | Option A selected Enchanted Forest: organic stone/wood/moss surfaces, bioluminescent lighting, botanical ornament, and a soft focal; see [ADR-024](decisions/ADR-024-enchanted-forest-third-style-contrast.md) |
-| P0 | Generate and receipt Enchanted Forest review-only reference (R-016a) | 🤖 Agent | 🔵 Agent-ready | Generate one `1080 × 1920` portrait reference from ADR-024; record prompt/tool/model/seed/dimensions and prohibit production-pixel use |
+| P0 | Generate and receipt Enchanted Forest review-only reference (R-016a) | 🤖 Agent | 🟢 Complete | Generated and inspected one `1080 × 1920` portrait reference with prompt/tool/model/seed-availability, resize, hash, and review-only receipts; production-pixel use is prohibited |
+| P0 | Draft Enchanted Forest third-style definition and rubric (R-016b) | 🤖 Agent | 🔵 Agent-ready | Define bounded deterministic material, variation, ornament, focal, typography, lighting, state, evidence, scoring, and blockers from ADR-024 before implementation |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -301,6 +302,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed R-013: registered the Volcanic Forge reference in M10 evidence and added source-boundary validation; R-014 is next | Codex |
 | 2026-07-19 | Completed R-014: reconciled active M8–M10 status controls and queued the R-016 third-style decision | Codex |
 | 2026-07-19 | Approved R-016 Option A: Enchanted Forest is the bounded third-style contrast target; queued R-016a review-reference generation | Project owner / Codex |
+| 2026-07-19 | Completed R-016a: generated, resized, inspected, and receipted the `1080 × 1920` Enchanted Forest review-only reference; R-016b is next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
