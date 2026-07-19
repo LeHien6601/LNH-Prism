@@ -163,6 +163,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Generate and receipt Enchanted Forest review-only reference (R-016a) | 🤖 Agent | 🟢 Complete | Generated and inspected one `1080 × 1920` portrait reference with prompt/tool/model/seed-availability, resize, hash, and review-only receipts; production-pixel use is prohibited |
 | P0 | Draft Enchanted Forest third-style definition and rubric (R-016b) | 🤖 Agent | 🟢 Complete | Drafted deterministic material, variation, ornament, focal, typography, lighting, state, evidence, scoring, and blockers from ADR-024; no production implementation was authorized |
 | P0 | Review and approve Enchanted Forest third-style definition and rubric (R-016c) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved the definition/rubric with semantic-text, unobscured target-phone readability and a `3/5` minimum; see [ADR-025](decisions/ADR-025-enchanted-forest-definition-approval.md) |
+| P1 | Add lightweight control-drift detection (R-017) | 🤖 Agent | 🟢 Complete | Read-only control validator and negative fixtures reject stale next-task state and undocumented review-only references |
 | P0 | Plan bounded M11 implementation and evidence slices (R-020) | 🤖 Agent | 🔵 Agent-ready | Divide approved work into ordered contracts/materials, rendering/matrix, package/evidence, and review slices with one coherent validation target per slice |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
@@ -309,6 +310,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed R-016a: generated, resized, inspected, and receipted the `1080 × 1920` Enchanted Forest review-only reference; R-016b is next | Codex |
 | 2026-07-19 | Completed R-016b: drafted Enchanted Forest deterministic implementation rules and visual-contrast rubric; R-016c human definition review is next | Codex |
 | 2026-07-19 | Approved R-016c Option A: accepted the Enchanted Forest definition/rubric with semantic-text, unobscured target-phone readability and a `3/5` minimum; R-020 slice planning is next | Project owner / Codex |
+| 2026-07-19 | Completed R-017: added read-only control-drift validation for active-task alignment and documented review-only references; R-020 remains next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
