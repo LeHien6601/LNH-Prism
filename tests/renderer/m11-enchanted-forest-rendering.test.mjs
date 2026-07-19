@@ -22,6 +22,9 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.match(panel, /data-layer="forest-moss-growth-mask"/);
   assert.match(panel, /data-layer="forest-material-restraint"/);
   assert.match(panel, /data-restraint="edge-anchored-low-opacity"/);
+  assert.match(panel, /data-layer="forest-authored-material-clusters"/);
+  assert.match(panel, /data-material-families="stone,wood,moss"/);
+  assert.match(panel, /data-cluster-scale="component"/);
   assert.ok(panel.indexOf('data-layer="forest-material-stack"') > panel.indexOf('data-layer="surface-pattern"'));
   assert.match(panel, /data-layer="luminous-seed-focal"/);
   assert.match(panel, /data-layer="forest-focal-roots"/);
@@ -29,4 +32,15 @@ test("M11 renders required shared-template states without obscuring semantic lay
   const progress = renderStyledProgressSvg({ component: "progress", width: 420, height: 28, percent: 90, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
   assert.match(progress, /data-part="frame"/);
   assert.match(progress, /data-part="fill"/);
+});
+
+test("M11 authored material clusters are deterministic, seed-varying, and absent at baseline", () => {
+  const request = { component: "primary-hex-button", width: 320, height: 68, state: "normal" };
+  const baseline = renderStyledComponentSvg({ ...request, variationSeed: 0 }, M11_ENCHANTED_FOREST_BINDING);
+  const first = renderStyledComponentSvg({ ...request, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
+  const repeated = renderStyledComponentSvg({ ...request, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
+  const changed = renderStyledComponentSvg({ ...request, variationSeed: 104729 }, M11_ENCHANTED_FOREST_BINDING);
+  assert.doesNotMatch(baseline, /forest-authored-material-clusters/);
+  assert.equal(first, repeated);
+  assert.notEqual(first, changed);
 });
