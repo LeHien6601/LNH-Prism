@@ -64,3 +64,7 @@ M10-R002 is the bounded agent-ready remediation: add true clean-workspace reprod
 ## Re-review readiness decision — Option 1
 
 On 2026-07-19, the project owner selected Option 1: return the package unscored for `M10-R003` evidence restoration. M10-R002 closes the prior technical blockers, but the required source-scale, target-phone, and thumbnail review surfaces are absent from the current evidence folder. M10-R003 must regenerate and verify those surfaces from current renderer outputs before V10 is re-reviewed. No score or pass/fail decision was made in this readiness decision.
+
+## Re-review readiness decision — Option 1 (M10-R004)
+
+On 2026-07-19, the project owner returned the package unscored for `M10-R004`. The target-phone surface has no readable action/progress typography, and the thumbnail surface does not compare Volcanic Forge with Frostbound. M10-R004 must add and verify both elements before V10 is re-reviewed. No score or pass/fail decision was made.

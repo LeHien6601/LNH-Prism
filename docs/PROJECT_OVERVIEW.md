@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🟣 **Conduct V10 Volcanic Forge transfer re-review (M10-A7)** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | None — M10-R003 evidence is ready for the bounded V10 human re-review |
+| Next task | 🔵 **Restore V10 action typography and thumbnail comparison (M10-R004)** · 🤖 Agent |
+| Next agent-ready task | M10-R004 — add readable action/progress typography and a renderer-derived Forge-versus-Frostbound thumbnail comparison before V10 re-review |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -150,6 +150,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Conduct V10 Volcanic Forge transfer review (M10-A7) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Fail | Option B recorded a formal V10 fail: hard-gate evidence does not prove true clean-workspace reproduction or recorded seed/zero-baseline output, and the M10-specific adapter is not yet proven compliant with the no-parallel-renderer boundary; see `validation/records/m10-volcanic-forge-transfer-review.md` |
 | P0 | Close V10 hard-gate evidence and shared-renderer proof (M10-R002) | 🤖 Agent | 🟢 Complete | True temporary-workspace byte comparison covers all 52 modules; three nonzero and zero-baseline seed receipts, module-hash validation, and style-neutral composition-seam proof are recorded and pass focused validation |
 | P0 | Restore V10 three-distance review surfaces (M10-R003) | 🤖 Agent | 🟢 Complete | Regenerated source-scale, target-phone, and thumbnail surfaces from the generalized renderer; preflight links and focused validation verify all three review distances |
+| P0 | Restore V10 action typography and thumbnail comparison (M10-R004) | 🤖 Agent | 🔵 Agent-ready | Add readable action/progress typography to the target-phone surface and a renderer-derived Forge-versus-Frostbound thumbnail comparison; verify both before V10 re-review |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
