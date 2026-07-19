@@ -12,6 +12,8 @@
 
 ## Evidence inspected
 
+- `docs/reference-briefs/M10_VOLCANIC_FORGE_REVIEW_REFERENCE.md` and its generated-image receipt
+- `docs/validation/evidence/m10-volcanic-forge/M10-E-review-reference.html`
 - `docs/validation/evidence/m10-volcanic-forge/M10-E-technical-preflight.json`
 - `docs/validation/evidence/m10-volcanic-forge/M10-E-comparison.md`
 - `docs/validation/evidence/m10-volcanic-forge/matrix/`

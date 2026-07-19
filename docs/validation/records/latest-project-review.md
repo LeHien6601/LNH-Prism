@@ -53,10 +53,9 @@
 
 ### R-013 — Register the approved Volcanic Forge review-only reference
 
-- **Priority / eligibility:** P0 — Agent-ready.
-- **Scope:** Add the approved reference/board and hash receipt; bind it to the M10 brief, review record, and evidence index without treating it as a production material or component source.
-- **Acceptance criteria:** Reviewers can locate and verify the reference provenance; automated validation rejects production SVG/PNG links to its pixels.
-- **Validation:** Receipt/hash, link, provenance, and source-boundary checks.
+- **Priority / eligibility:** P0 — Complete.
+- **Outcome:** The M10 reference brief, transfer-review record, technical preflight, and renderer-versus-reference comparison surface now bind the generated reference and receipt. `validate:m10-r002-package` scans production SVG/PNG assets and rejects the reference filename/hash or an identical raster.
+- **Validation:** `npm run test:m10-reference-boundary` passed a negative injected-leak check; `npm run validate:m10-r002-package` passed with 318 production files clear of reference pixels.
 
 ### R-014 — Reconcile active M8–M10 control status
 

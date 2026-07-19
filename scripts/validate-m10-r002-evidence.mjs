@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { validateM10ReferenceBoundary } from "./m10-reference-boundary.mjs";
 const root = resolve("."), evidence = resolve(root, "docs/validation/evidence/m10-volcanic-forge"), hash = value => createHash("sha256").update(value).digest("hex");
 const matrix = JSON.parse(await readFile(resolve(evidence, "matrix.json"))), manifest = JSON.parse(await readFile(resolve(root, "assets/m10-volcanic-forge/manifest.json")));
 if (matrix.count !== 26 || manifest.modules.length !== 52 || !manifest.components.includes("icon-container")) throw Error("M10 matrix or canonical inventory incomplete");
@@ -13,4 +14,6 @@ if (reproduction.status !== "pass" || reproduction.comparedModules !== 52 || rep
 for (const file of ["M10-E-technical-preflight.json", "M10-R002-generalized-seam-proof.json", "M10-E-source-scale.html", "M10-E-target-phone.html", "M10-E-thumbnail.html", "m10-volcanic-forge-target-phone.svg", "m10-volcanic-forge-target-phone.png"]) await access(resolve(evidence, file));
 const phone = await readFile(resolve(evidence, "m10-volcanic-forge-target-phone.svg"), "utf8"); if (!phone.includes("data-renderer=\"style-composition\"") || !phone.includes("data-ember-count=\"8\"") || !phone.includes(">CLAIM<") || !phone.includes(">CONTINUE<") || !phone.includes("FORGE HEAT 90%")) throw Error("M10 target-phone typography or renderer provenance is incomplete.");
 const thumbnail = await readFile(resolve(evidence, "M10-E-thumbnail.html"), "utf8"); if (!thumbnail.includes("Volcanic Forge") || !thumbnail.includes("Frostbound") || !thumbnail.includes("m9-frostbound-production-fidelity")) throw Error("M10 thumbnail comparison is incomplete.");
-console.log(`validated ${matrix.count} M10 entries, ${manifest.modules.length} module receipts, seeds, clean workspace, generalized seam, readable typography, and all three review distances.`);
+const reviewReference = await readFile(resolve(evidence, "M10-E-review-reference.html"), "utf8"); if (!reviewReference.includes("m10-volcanic-forge-review-reference-1080x1920.png") || !reviewReference.includes("m10-volcanic-forge-target-phone.png")) throw Error("M10 review-reference comparison is incomplete.");
+const boundary = await validateM10ReferenceBoundary({ root });
+console.log(`validated ${matrix.count} M10 entries, ${manifest.modules.length} module receipts, seeds, clean workspace, generalized seam, readable typography, all three review distances, and ${boundary.productionFileCount} production files clear of review-reference pixels.`);

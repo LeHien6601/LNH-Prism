@@ -37,6 +37,7 @@ It must not introduce concept pixels, unseeded randomness, a `styleId === "volca
 
 ## Required evidence
 
+- The registered [review-only Volcanic Forge reference](../reference-briefs/M10_VOLCANIC_FORGE_REVIEW_REFERENCE.md), its hash receipt, and a renderer-versus-reference comparison surface. The reference never becomes a production source.
 - Source-scale layer/material/focal/isolation board and matching editable SVGs.
 - Target-phone portrait showing title, molten focal, progress, primary action, and secondary action.
 - Thumbnail comparison against Frostbound proving distinct silhouette, temperature, material, focal, and hierarchy.
