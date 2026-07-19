@@ -88,6 +88,19 @@ Treat a user message beginning with `Guide:` as a decision-preparation request. 
 
 If the next task is `🔵 Agent-ready`, `🔴 Blocked`, or `🟢 Complete`, explain that `Guide:` does not apply and direct the user to `Next:` or `Review:` as appropriate. Text after `Guide:` may constrain the options or review criteria.
 
+### `Auto Review:`
+
+Treat a user message beginning with `Auto Review:` as explicit project-owner authorization for an agent to conduct the overview's next unblocked `🟣 Human decision` **review** task using its approved rubric. It is limited to evidence-based review decisions; it does not authorize product, art-direction, architecture, or scope decisions that are not already governed by an approved rubric.
+
+1. Re-read the source-of-truth documents, relevant review rubric, evidence package, and repository state. Confirm that the next task is a bounded review with explicit pass criteria and a recorded evidence location.
+2. Run the applicable technical/preflight validation and inspect every review surface required by the rubric. Do not claim a hard gate passes unless the evidence or validation demonstrates it.
+3. Record the reviewer as `project-owner-authorized automated review`, the evidence inspected, technical hard-gate outcome, blockers, each required visual score, weighted total, observations, and decision in a new or updated validation record.
+4. Apply the rubric exactly. A hard-gate failure, a score below the stated threshold, or a dimension below its minimum is a fail even when other evidence is strong. Do not treat technical correctness as a visual-score multiplier.
+5. On pass, update the overview, roadmap, and relevant implementation record with the authorized decision and identify the next task that the approved plan permits. On fail, record bounded, evidence-linked remediation task(s), mark only the reviewed task complete with its failed outcome, and set the highest-priority remediation as the next agent-ready task. Do not begin that remediation in the same turn.
+6. Preserve unrelated user changes, review the final diff, create a Conventional Commit, and push it under the normal engineering workflow.
+
+If the next task is not an unblocked human review, if its rubric/evidence/pass criteria are missing, or if the request would decide unapproved product/art/architecture scope, explain the blocker and direct the user to `Guide:` or the appropriate decision process. Text after `Auto Review:` may constrain the evidence or rubric dimensions but cannot weaken existing hard gates or pass criteria.
+
 ### `Review:`
 
 Treat a user message beginning with `Review:` as a whole-project weakness assessment. Its purpose is to find evidence-backed weaknesses in the project's **workflow, status, and plan**, then define practical remediation work without implementing it.
