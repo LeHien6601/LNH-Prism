@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🔵 **Draft Enchanted Forest third-style definition and rubric (R-016b)** · 🤖 Agent |
-| Next agent-ready task | R-016b — define deterministic third-style material, variation, ornament, focal, typography, lighting, state, evidence, and visual-gate requirements before implementation |
+| Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
+| Next task | 🟣 **Review and approve Enchanted Forest third-style definition and rubric (R-016c)** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | None — R-016c human definition review must approve the bounded rules before implementation work begins |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,6 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🟣 Definition review pending — R-016b draft rules and rubric are ready; no renderer/package work is authorized |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -160,7 +161,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P1 | Reconcile active M8–M10 control status (R-014) | 🤖 Agent | 🟢 Complete | Active overview, roadmap, and M10 specification controls now record passed M8–M10 status and the current R-016 decision without rewriting historical review facts |
 | P2 | Select third-style contrast proof (R-016) | 🧭 Product + 🎨 Art lead | 🟢 Complete | Option A selected Enchanted Forest: organic stone/wood/moss surfaces, bioluminescent lighting, botanical ornament, and a soft focal; see [ADR-024](decisions/ADR-024-enchanted-forest-third-style-contrast.md) |
 | P0 | Generate and receipt Enchanted Forest review-only reference (R-016a) | 🤖 Agent | 🟢 Complete | Generated and inspected one `1080 × 1920` portrait reference with prompt/tool/model/seed-availability, resize, hash, and review-only receipts; production-pixel use is prohibited |
-| P0 | Draft Enchanted Forest third-style definition and rubric (R-016b) | 🤖 Agent | 🔵 Agent-ready | Define bounded deterministic material, variation, ornament, focal, typography, lighting, state, evidence, scoring, and blockers from ADR-024 before implementation |
+| P0 | Draft Enchanted Forest third-style definition and rubric (R-016b) | 🤖 Agent | 🟢 Complete | Drafted deterministic material, variation, ornament, focal, typography, lighting, state, evidence, scoring, and blockers from ADR-024; no production implementation was authorized |
+| P0 | Review and approve Enchanted Forest third-style definition and rubric (R-016c) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Approve, return with bounded corrections, or reject the R-016b definition and rubric before implementation |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -303,6 +305,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed R-014: reconciled active M8–M10 status controls and queued the R-016 third-style decision | Codex |
 | 2026-07-19 | Approved R-016 Option A: Enchanted Forest is the bounded third-style contrast target; queued R-016a review-reference generation | Project owner / Codex |
 | 2026-07-19 | Completed R-016a: generated, resized, inspected, and receipted the `1080 × 1920` Enchanted Forest review-only reference; R-016b is next | Codex |
+| 2026-07-19 | Completed R-016b: drafted Enchanted Forest deterministic implementation rules and visual-contrast rubric; R-016c human definition review is next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |

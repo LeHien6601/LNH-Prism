@@ -208,8 +208,20 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Historical review gate:** 🟢 M10-A7 Option A selected on 2026-07-19 — the initial package was returned unscored for M10-R001 remediation. The required source/phone/thumbnail surfaces, clean reproduction, canonical inventory mapping, and non-palette-only transfer proof were subsequently delivered before the recorded V10 pass.
 
-**Exit gate:** 🟢 V10 passed on 2026-07-19 at `86/100` through a project-owner-authorized automated re-review. All technical hard gates and visual minima passed; `V10-O001` is a non-blocking heat-label/focal-spacing observation. M5-B1 cross-style hardening also passed. Per [ADR-023](decisions/ADR-023-generated-review-reference-workflow.md), R-012a generated and receipted the `1080 × 1920` review-only Volcanic Forge reference, R-013 registered it with a comparison surface and production-pixel boundary validation, and R-014 reconciled active controls. R-016 selected Enchanted Forest as the third-style contrast target, and R-016a generated its review-only reference. R-016b is now the next Agent-ready task to draft the definition and rubric before any implementation.
+**Exit gate:** 🟢 V10 passed on 2026-07-19 at `86/100` through a project-owner-authorized automated re-review. All technical hard gates and visual minima passed; `V10-O001` is a non-blocking heat-label/focal-spacing observation. M5-B1 cross-style hardening also passed. Per [ADR-023](decisions/ADR-023-generated-review-reference-workflow.md), R-012a generated and receipted the `1080 × 1920` review-only Volcanic Forge reference, R-013 registered it with a comparison surface and production-pixel boundary validation, and R-014 reconciled active controls. R-016 selected Enchanted Forest as the third-style contrast target, R-016a generated its review-only reference, and R-016b drafted its bounded definition/rubric. R-016c human definition review is now required before any implementation.
 
 **Historical re-review gate:** 🔴 V10 failed on 2026-07-19 under Option B. The remediated visuals were diagnostically scored at `78/100`, but a pass was blocked by missing true clean-workspace reproduction, recorded seed/zero-baseline output receipts, and no-parallel-renderer proof. M10-R002 subsequently closed these blockers before the recorded V10 pass.
 
 **Exit gate:** a deterministic, engine-neutral Volcanic Forge package proves shared templates and generalized systems, complete provenance/receipts, target-phone readability, and visual distinction from Frostbound at source, phone, and thumbnail review distances.
+
+## ⚪ M11 — Enchanted Forest third-style contrast
+
+**Decision:** [ADR-024](decisions/ADR-024-enchanted-forest-third-style-contrast.md) accepted Enchanted Forest on 2026-07-19 as the bounded third-style contrast target.
+
+**Goal:** demonstrate visibly distinct organic stone/wood/moss materials, botanical ornament, diffuse emerald/teal bioluminescence, and a soft living focal through the shared seven-component system without a new renderer, geometry family, editor, or production use of generated-reference pixels.
+
+**Definition gate:** 🟣 R-016c must review and approve the draft [implementation definition](implementation/ENCHANTED_FOREST_THIRD_STYLE_IMPLEMENTATION_SPEC.md) and [visual-contrast rubric](validation/ENCHANTED_FOREST_THIRD_STYLE_RUBRIC.md). The definition fixes the source boundary, component inventory, editable deterministic rules, review distances, scoring threshold, and automatic blockers before implementation.
+
+**Boundary:** reuse panel, primary hex button, secondary hex button, progress frame/fill, tab, badge, and icon container; retain shared angular wide-hex geometry, stable IDs, source provenance, and the `1080 × 1920` portrait canvas. No palette-only reskin, reference pixels, unseeded randomness, flattened effects, style-specific renderer/template fork, or unapproved component expansion.
+
+**Exit gate:** a later reviewed package must pass its hard technical gate and score at least `85/100`, with no visual dimension below `3/5` and no automatic blocker, at source, target-phone, and thumbnail review distances.

@@ -4,7 +4,7 @@
 
 Prove that the asset pipeline can follow a sharper and more complex reference style without losing deterministic structure, reusable materials, stable IDs, or engine-neutral modular delivery.
 
-**Status:** M7-A5 complete. The next task is the V7 human reference-fidelity review.
+**Status:** M7 is complete. M8–M10 subsequently passed their bounded refinement and second-style transfer gates. Enchanted Forest is now the pending M11 third-style contrast definition review; its draft rules preserve this module's deterministic, modular, reference-boundary principles.
 
 ## Scope
 
@@ -69,3 +69,4 @@ M7 validation will be defined by M7-A1. It must include at least one reference-f
 | 2026-07-18 | Completed M7-A3 geometry contracts and angular renderer helpers; queued material pack and component specs | Codex |
 | 2026-07-18 | Completed M7-A4 approved material pack, seven component specs, and intake evidence; queued component rendering and showroom integration | Codex |
 | 2026-07-18 | Completed M7-A5 matrix, composition, package, and showroom outputs; queued the V7 human fidelity review | Codex |
+| 2026-07-19 | Drafted the M11 Enchanted Forest third-style definition and visual-contrast rubric; human definition approval is required before any renderer/package work | Codex |

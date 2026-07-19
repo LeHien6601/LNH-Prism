@@ -80,14 +80,19 @@
 
 - **Priority / eligibility:** P0 — Complete.
 - **Outcome:** Generated, deterministically resized, and inspected the `1080 × 1920` reference at `docs/reference-briefs/assets/enchanted-forest-review-reference-1080x1920.png`. Its hash, source size, generation provenance, permitted use, and prohibited production uses are recorded in the adjacent receipt.
-- **Validation:** PNG dimensions, byte count, SHA-256, and visual inspection passed. R-016b remains responsible for the third-style definition and rubric.
+- **Validation:** PNG dimensions, byte count, SHA-256, and visual inspection passed. R-016b subsequently drafted the third-style definition and rubric; R-016c must review them before implementation.
 
 ### R-016b — Draft Enchanted Forest third-style definition and rubric
 
-- **Priority / eligibility:** P0 — Agent-ready.
-- **Scope:** Draft the bounded deterministic Enchanted Forest implementation definition and visual-contrast rubric from ADR-024 and the generated review-only reference. Specify material, variation, ornament, focal, typography, lighting, state, component inventory, evidence, scoring, and blockers; do not implement renderer or package changes.
-- **Acceptance criteria:** A human-reviewable definition identifies the contrast dimensions, source boundary, seven-component inventory, editable deterministic constraints, review distances, pass threshold, and automatic blockers.
-- **Validation:** Document link/consistency scan and `git diff --check`.
+- **Priority / eligibility:** P0 — Complete.
+- **Outcome:** Drafted the bounded [implementation definition](../../implementation/ENCHANTED_FOREST_THIRD_STYLE_IMPLEMENTATION_SPEC.md) and [visual-contrast rubric](../ENCHANTED_FOREST_THIRD_STYLE_RUBRIC.md). They define organic material/variation/ornament/focal/typography/lighting/state rules, seven-component reuse, deterministic constraints, evidence, scoring, and blockers without authorizing renderer or package work.
+- **Validation:** Document link/consistency scan and `git diff --check` passed.
+
+### R-016c — Review and approve Enchanted Forest third-style definition and rubric
+
+- **Priority / eligibility:** P0 — Human decision.
+- **Scope:** Review the R-016b definition and rubric against ADR-024, the generated review-only reference receipt, shared-renderer boundary, seven-component inventory, and multi-style hardening controls. Approve, return with bounded corrections, or reject; do not implement production assets during the review.
+- **Acceptance criteria:** A recorded decision explicitly accepts or revises the deterministic material, variation, ornament, focal, typography, lighting, state, evidence, scoring, and blocker rules. Only an approved definition may authorize later implementation.
 
 ### R-017 — Add lightweight control-drift detection
 
