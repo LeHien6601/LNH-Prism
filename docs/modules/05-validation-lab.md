@@ -24,6 +24,8 @@ Validation briefs, rubric, evidence collection, retrospective, corrective action
 6. Fix the smallest root cause immediately if it blocks the milestone; otherwise file a prioritized task.
 7. Re-run the validation and record the outcome.
 
+For reference-fidelity packages, add a **craft loop** before a full package: inspect a hero panel, primary action, compact control, and focal/isolate at source and target-phone scale for material joins, depth ordering, receiver interaction, compact-control density, and state-pair readability. Record a reference grammar and state contract first, then return only the smallest owning layer/profile when this loop fails. See [UI reference-fidelity convergence system](../implementation/UI_REFERENCE_FIDELITY_CONVERGENCE_SYSTEM.md).
+
 ## Review rubric
 
 | Dimension | Question | Suggested pass target |
@@ -52,6 +54,7 @@ Every product module; art/UI reviewers; the versioned package, renderer, and evi
 - Every milestone has a completed validation record before its gate.
 - Every failed validation has a root-cause category and corrective decision.
 - Revalidation proves that blocker fixes worked.
+- Reference-fidelity remediation proves a construction-grammar change on its craft board before a full matrix/package regeneration.
 
 ## Risks
 
@@ -102,3 +105,4 @@ ADR-014 sets M4's accepted boundary as engine-neutral modular asset delivery. M4
 | 2026-07-17 | Drafted the V4 Unity integration evidence package, scoring, blockers, and definition-review checklist | Codex |
 | 2026-07-17 | Approved V4 definition Option A with manifest versioning and canonical naming clarifications; unblocked M4-S1 | Project owner / Codex |
 | 2026-07-17 | Reconciled active validation guidance with ADR-014's engine-neutral M4 package boundary; historical Unity entries remain for audit only | Codex |
+| 2026-07-19 | Added a pre-package craft loop and grammar/state-contract evidence after repeated M11 reviews isolated surface construction and perceptible state response as the limiting quality gap | Codex |

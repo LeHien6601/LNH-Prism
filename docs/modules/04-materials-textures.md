@@ -35,6 +35,7 @@ Fantasy-Ice-v1
 4. Implement tile/scale/offset and masking before adding special effects.
 5. Bind material slots to templates; expose bounded intensity controls.
 6. Build state modifiers that adjust lighting/material intensity without regenerating textures.
+7. For reference-fidelity work, define a material construction profile: structural face, directional/seam field, depth response, bounded wear/growth, and named light-receiver behavior. Verify it on a hero surface and compact control before full-package rendering; see [UI reference-fidelity convergence system](../implementation/UI_REFERENCE_FIDELITY_CONVERGENCE_SYSTEM.md).
 
 ## Dependencies
 
@@ -46,6 +47,7 @@ Module 01 contracts and Module 03 masking/compositing support.
 - Texture does not carry component-specific shadows or borders.
 - Cropping/resizing does not expose obvious seams at supported sizes.
 - Every imported AI source has prompt/source/version traceability.
+- A material family reads as constructed at target size through clipped production layers, rather than as independent decal motifs on a flat fill.
 
 ## Validation task
 
@@ -69,3 +71,4 @@ M2 V2: produce a themed popup set using one material pack and document every reu
 | 2026-07-17 | Drafted the V3 Frost Crystal intake boundary: reusable frost/crystal/rune sources with full provenance and no concept-pixel or component-specific effects | Codex |
 | 2026-07-17 | Completed M3-S3 Frost Crystal intake with three deterministic procedural source receipts, declared hashes, seam/color/alpha/rights preflight, isolated previews, four-type reuse boundaries, and a pending human approval package | Codex |
 | 2026-07-17 | Approved `frost-crystal-materials@0.1.0`, its normalization settings, and four-component-type reuse plan as drafted under M3-S3 Option A | Project owner / Codex |
+| 2026-07-19 | Added reference-fidelity construction profiles, scale budgets, and light-receiver requirements after M11 evidence showed that named material primitives alone did not produce crafted surface depth | Codex |
