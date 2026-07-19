@@ -178,16 +178,18 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** a reviewed M8 package improves the two V7 observations while retaining M7’s deterministic, modular, engine-neutral asset handoff.
 
-## ⚪ M9 — Frostbound production-fidelity systems
+## 🟢 M9 — Frostbound production-fidelity systems
 
 **Decision:** [ADR-020](decisions/ADR-020-stage-production-fidelity-as-m9.md) accepts Option B on 2026-07-18.
 
 **Goal:** after the bounded M8 package establishes a reviewed baseline, turn Frostbound’s material depth, edge hierarchy, focal quality, controlled irregularity, typography, lighting, composition review, and visual-quality controls into reusable deterministic systems before multi-style transfer.
 
-**Dependencies:** M8-A4 and M8-A5 are complete. M9-A1 through M9-A10 and M9-R001 are complete; M9-A12 requires human review of the corrected package.
+**Dependencies:** M8-A4 and M8-A5 are complete. M9-A1 through M9-A10 and M9-R001 are complete; M9-A12 passed the corrected package review at `85/100`.
 
 **Required ordered capability areas:** layered edge stacks; material-response channels; seeded variation; structural/ornament separation; focal-object framework; typography treatments; shared lighting; three-distance review; visual scoring distinct from technical correctness.
 
 **Boundary:** no concept pixels, unseeded randomness, flattened production structure, engine integration, Volcanic Forge transfer, third-style testing, or style-authoring workflow before M9 is reviewed.
 
-**Implementation sequence:** 🟢 M9-A1 through M9-A10 complete; 🟢 M9-A11 authorized review failed at `65/100`; 🟢 M9-R001 corrected action typography/focal composition and regenerated receipt-validated evidence. M9-A12 human review is next. Multi-style transfer remains blocked pending a pass.
+**Implementation sequence:** 🟢 M9-A1 through M9-A10 complete; 🟢 M9-A11 authorized review failed at `65/100`; 🟢 M9-R001 corrected action typography/focal composition and regenerated receipt-validated evidence; 🟢 M9-A12 authorized automated review passed at `85/100`, closing M9-B001 and V8-O001. Multi-style transfer is ready for scope decision but has not begun.
+
+**Exit gate:** 🟢 Passed on 2026-07-19 at `85/100` — the corrected package meets every technical hard gate, contains no automatic blocker, and satisfies all M9 visual minimums. M10 scope definition is required before any multi-style transfer implementation.
