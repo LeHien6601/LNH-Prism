@@ -73,9 +73,15 @@
 
 ### R-016 — Select third-style contrast proof
 
-- **Priority / eligibility:** P2 — Human decision; V10, R-012, R-012a, R-013, and R-014 are complete.
-- **Scope:** Choose the third-style target and review-reference policy; do not begin rendering.
-- **Acceptance criteria:** A bounded brief identifies the contrast dimensions, reference provenance, component inventory, and exit evidence.
+- **Priority / eligibility:** P2 — Complete, project-owner decision on 2026-07-19.
+- **Outcome:** Option A selected Enchanted Forest. [ADR-024](../../decisions/ADR-024-enchanted-forest-third-style-contrast.md) records organic stone/wood/moss materials, diffuse bioluminescence, botanical ornament, soft focal treatment, the `1080 × 1920` canvas, the existing seven-component inventory, generated-reference provenance policy, and required exit evidence.
+
+### R-016a — Generate and receipt the Enchanted Forest review-only reference
+
+- **Priority / eligibility:** P0 — Agent-ready.
+- **Scope:** Generate one `1080 × 1920` Enchanted Forest portrait reference using only ADR-024's approved direction. Store the image and a receipt recording prompt, tool/model, seed when available, dimensions, date, review use, and an explicit no-pixel-extraction boundary.
+- **Acceptance criteria:** The reference is inspectable and hashable; its provenance is complete; it is not linked from production SVG/PNG or material inputs.
+- **Validation:** Image/hash receipt, provenance fields, and source-boundary checks before a later definition task.
 
 ### R-017 — Add lightweight control-drift detection
 
