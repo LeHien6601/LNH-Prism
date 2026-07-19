@@ -31,10 +31,11 @@ function migrate(svg: string, request: M9FrostboundRequest, framePart = false): 
   const lighting = renderM9LightingSvg(`${match[1]}-m9`, request.width, request.height);
   const label = request.component === "primary-hex-button" ? "CLAIM" : request.component === "secondary-hex-button" ? "CONTINUE" : undefined;
   const typographyState = request.state === "pressed" || request.state === "disabled" ? request.state : "normal";
-  const typography = label ? renderM9TypographySvg({ instanceId: `${match[1]}-m9`, text: label, width: request.width, state: typographyState }) : "";
-  const replacement = framePart ? `<g id="${match[1]}" data-part="frame">${stack}${responses}${lighting}</g>` : `${stack}${responses}${lighting}${ornaments}${typography}`;
+  const typography = label ? renderM9TypographySvg({ instanceId: `${match[1]}-m9`, text: label, width: request.width, height: request.height, state: typographyState }) : "";
+  const replacement = framePart ? `<g id="${match[1]}" data-part="frame">${stack}${responses}</g>` : `${stack}${responses}${ornaments}`;
   let output=svg.replace(match[0], replacement).replace("m8-frostbound-aligned@0.1.0", "m9-frostbound-production-fidelity@0.1.0").replace("M8 Frostbound", "M9 Frostbound edge stack");
-  if(!framePart&&(request.component==="panel"||request.component==="icon-container")){const focal=renderM9FocalObjectSvg({instanceId:`m9-${request.component}`,presetId:request.focalPresetId,x:request.width/2,y:request.height/2,disabledLayers:request.disabledFocalLayers});output=output.replace(/<g id="m8-[^"]+-crystal-focal"[^>]*>[\s\S]*?<\/g>/,focal);}return output;
+  if(!framePart&&request.component==="panel"){const focal=renderM9FocalObjectSvg({instanceId:"m9-panel",presetId:request.focalPresetId,x:request.width/2,y:request.height*.22,scale:1.35,disabledLayers:request.disabledFocalLayers});output=output.replace(/<g id="m8-[^"]+-crystal-focal"[^>]*>[\s\S]*?<\/g>/,focal);}else if(!framePart&&request.component==="icon-container")output=output.replace(/<g id="m8-[^"]+-crystal-focal"[^>]*>[\s\S]*?<\/g>/,"");
+  return output.replace(/<\/svg>\s*$/, `${lighting}${typography}</svg>`);
 }
 
 export function renderM9FrostboundComponentSvg(request: M9FrostboundRequest): string { return migrate(renderM8FrostboundComponentSvg(request), request); }

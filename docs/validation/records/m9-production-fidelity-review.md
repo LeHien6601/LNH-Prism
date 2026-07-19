@@ -41,3 +41,7 @@
 ## Required remediation
 
 **M9-R001 — Correct M9 action/focal layer order and revalidate package** is agent-ready. It must move action typography above inherited plate layers, establish one unobstructed panel focal at target-phone scale, regenerate the M9 package/evidence, and pass focused readability, package, and receipt validation. A fresh M9-A12 human/authorized review is then required.
+
+## M9-R001 revalidation
+
+**Status:** complete on 2026-07-19. The corrected package now emits typography and shared lighting after inherited component layers, uses explicit component coordinates for composed text, and keeps one panel focal while removing the competing icon focal from the composition. `npm run validate:m9-a10-package`, focused M9 renderer tests, and contract validation pass. This record preserves the failed M9-A11 result; M9-A12 must make the new review decision.
