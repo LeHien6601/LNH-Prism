@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M9 — Frostbound production-fidelity systems** |
-| Next task | 🟣 **Conduct M9 production-fidelity review** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | No unblocked agent-ready task; M9-A11 human review is required before any multi-style transfer |
+| Next task | 🔵 **Correct M9 action/focal layer order and revalidate package** · 🤖 Agent |
+| Next agent-ready task | M9-R001 — restore target-phone action readability and one unobstructed focal reading path, then regenerate evidence |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -136,7 +136,9 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Implement M9 shared lighting model (M9-A8) | 🤖 Agent | 🟢 Complete | Versioned cold top-rim lighting model defines deterministic bounded highlight/glow behavior for shared renderer consumers |
 | P0 | Define M9 three-distance review and visual scoring (M9-A9) | 🤖 Agent | 🟢 Complete | Versioned source/phone/thumbnail review plan validates required evidence, V8-O001 coverage, 100-point visual weights, and a technical hard-gate boundary |
 | P0 | Produce M9 integrated Frostbound package and technical evidence (M9-A10) | 🤖 Agent | 🟢 Complete | 26-render seven-component M9 package, 68 modules, receipts, showroom, source/phone/thumbnail review surfaces, and unscored technical preflight validate without overwriting M7/M8 |
-| P0 | Conduct M9 production-fidelity review (M9-A11) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Apply the M9 rubric to the unscored package; require all hard gates, a score of at least 85/100, no dimension below 3/5, and V8-O001 assessment |
+| P0 | Conduct M9 production-fidelity review (M9-A11) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Fail | Authorized automated review recorded `65/100`; M9-B001 action readability, duplicated/obscured focal hierarchy, and V8-O001 prevent a pass; see `validation/records/m9-production-fidelity-review.md` |
+| P0 | Correct M9 action/focal layer order and revalidate package (M9-R001) | 🤖 Agent | 🔵 Agent-ready | Move action typography above inherited plate layers, establish one unobstructed target-phone focal, regenerate the M9 package/evidence, and pass focused readability/receipt validation |
+| P0 | Re-review corrected M9 production-fidelity package (M9-A12) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🔴 Blocked | Unblocked only after M9-R001 produces a passing package and evidence refresh |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register

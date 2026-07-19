@@ -50,3 +50,4 @@ M9 passes only after M9-A11 records a human-approved visual result with valid te
 | 2026-07-19 | Completed M9-A5 through M9-A8 reusable ornament, focal, typography, and lighting systems; opened the three-distance review definition. | Codex |
 | 2026-07-19 | Completed M9-A9 with a versioned source/phone/thumbnail review plan, 100-point visual-score contract, V8-O001 coverage, and technical hard-gate separation; opened M9-A10 integrated evidence assembly. | Codex |
 | 2026-07-19 | Completed M9-A10 with an integrated seven-component, 26-render, 68-module package, deterministic receipts, showroom, three-distance surfaces, and unscored technical preflight; M9-A11 human review is next. | Codex |
+| 2026-07-19 | Authorized M9-A11 automated review recorded a `65/100` fail: M9-B001 covered action typography fails target-phone readability, while duplicate/obscured focal placement fails V8-O001; M9-R001 remediation is next. | Project owner / Codex |

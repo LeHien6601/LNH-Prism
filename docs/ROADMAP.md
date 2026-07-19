@@ -174,7 +174,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **M8-A5:** 🟢 Pass — project owner approved V8 at `90/100` on 2026-07-18. No automatic blocker; V8-O001 remains a non-blocking M9 observation.
 
-**Next task:** M9-A11 — conduct the human production-fidelity review before any multi-style transfer.
+**Next task:** M9-R001 — correct action/focal layer order and revalidate the M9 package before re-review.
 
 **Exit gate:** a reviewed M8 package improves the two V7 observations while retaining M7’s deterministic, modular, engine-neutral asset handoff.
 
@@ -184,10 +184,10 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Goal:** after the bounded M8 package establishes a reviewed baseline, turn Frostbound’s material depth, edge hierarchy, focal quality, controlled irregularity, typography, lighting, composition review, and visual-quality controls into reusable deterministic systems before multi-style transfer.
 
-**Dependencies:** M8-A4 and M8-A5 are complete. M9-A1 through M9-A10 are complete; M9-A11 requires human review.
+**Dependencies:** M8-A4 and M8-A5 are complete. M9-A1 through M9-A10 are complete; the authorized M9-A11 review failed at `65/100` with M9-B001. M9-R001 is agent-ready.
 
 **Required ordered capability areas:** layered edge stacks; material-response channels; seeded variation; structural/ornament separation; focal-object framework; typography treatments; shared lighting; three-distance review; visual scoring distinct from technical correctness.
 
 **Boundary:** no concept pixels, unseeded randomness, flattened production structure, engine integration, Volcanic Forge transfer, third-style testing, or style-authoring workflow before M9 is reviewed.
 
-**Implementation sequence:** 🟢 M9-A1 through M9-A10 complete — [M9 specification](implementation/M9_FROSTBOUND_PRODUCTION_FIDELITY_SYSTEMS_SPEC.md) now provides an integrated 26-render, seven-component, 68-module package with deterministic receipts and unscored three-distance review evidence. M9-A11 human review is next.
+**Implementation sequence:** 🟢 M9-A1 through M9-A10 complete; 🟢 M9-A11 authorized review failed at `65/100`. M9-R001 must correct the covered action typography and duplicate/obscured focal composition, regenerate the package/evidence, and then unblock M9-A12 re-review. Multi-style transfer remains blocked.
