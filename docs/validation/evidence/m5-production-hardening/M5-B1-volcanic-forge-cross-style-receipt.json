@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m5-b1-volcanic-forge-cross-style-hardening",
+  "status": "pass",
+  "packageId": "m10-volcanic-forge-assets",
+  "packageVersion": "0.2.0",
+  "modules": 52,
+  "totalBytes": 695241,
+  "cleanWorkspace": {
+    "source": "M10-R002-clean-workspace-receipt.json",
+    "status": "pass"
+  },
+  "byteComparison": {
+    "status": "pass",
+    "manifestSha256": "a1458ff67384741e81579f13d07f05ba76855d2698b2a0b916b3936ccf58cae6"
+  },
+  "runs": {
+    "count": 5,
+    "results": [
+      {
+        "run": 1,
+        "manifestSha256": "a1458ff67384741e81579f13d07f05ba76855d2698b2a0b916b3936ccf58cae6",
+        "durationMs": 28.496
+      },
+      {
+        "run": 2,
+        "manifestSha256": "a1458ff67384741e81579f13d07f05ba76855d2698b2a0b916b3936ccf58cae6",
+        "durationMs": 32.106
+      },
+      {
+        "run": 3,
+        "manifestSha256": "a1458ff67384741e81579f13d07f05ba76855d2698b2a0b916b3936ccf58cae6",
+        "durationMs": 41.73
+      },
+      {
+        "run": 4,
+        "manifestSha256": "a1458ff67384741e81579f13d07f05ba76855d2698b2a0b916b3936ccf58cae6",
+        "durationMs": 40.996
+      },
+      {
+        "run": 5,
+        "manifestSha256": "a1458ff67384741e81579f13d07f05ba76855d2698b2a0b916b3936ccf58cae6",
+        "durationMs": 40.239
+      }
+    ],
+    "medianMs": 40.239,
+    "p95Ms": 41.73
+  },
+  "matrix": {
+    "status": "pass",
+    "entries": 26,
+    "modules": 52
+  },
+  "rollbackRecovery": {
+    "status": "pass",
+    "backup": "temporary copy",
+    "recoveredManifestSha256": "a1458ff67384741e81579f13d07f05ba76855d2698b2a0b916b3936ccf58cae6"
+  },
+  "readability": {
+    "status": "pass",
+    "surfaces": [
+      "M10-E-source-scale.html",
+      "M10-E-target-phone.html",
+      "M10-E-thumbnail.html",
+      "m10-volcanic-forge-target-phone.png"
+    ]
+  },
+  "defects": [],
+  "generatedAt": "2026-07-19T06:56:19.944Z"
+}

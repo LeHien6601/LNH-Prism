@@ -98,3 +98,5 @@ Option A is approved in [ADR-016](../decisions/ADR-016-m5-frostbound-only-harden
 ### M5-B1 cross-style hardening decision
 
 [ADR-022](../decisions/ADR-022-reopen-m5-volcanic-forge-hardening.md) reopens M5 for one bounded Volcanic Forge batch after V10 passed. M5-B1 must prove clean-workspace reproduction, strict all-module receipts, five-run timing/size/matrix results, rollback/recovery, and target-phone readability for the existing package. It must not alter approved package bytes, add a third style, or expand into engine integration.
+
+**Outcome:** 🟢 M5-B1 passed on 2026-07-19; `M5-B1-volcanic-forge-cross-style-receipt.json` records the 52-module checks, five receipt runs, temporary backup/recovery, and V10 readability surfaces.

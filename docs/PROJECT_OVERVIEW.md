@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🔵 **Run Volcanic Forge cross-style production-hardening batch (M5-B1)** · 🤖 Agent |
-| Next agent-ready task | M5-B1 — validate clean reproduction, timing/size, matrix, rollback/recovery, and readability for the existing 52-module Volcanic Forge package |
+| Next task | 🟣 **Approve a Volcanic Forge review-reference policy and source (R-012)** · 🧭 Product + 🎨 Art lead |
+| Next agent-ready task | None — M5-B1 passed; approve a review-only Forge reference before selecting a third-style contrast target |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -151,7 +151,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Close V10 hard-gate evidence and shared-renderer proof (M10-R002) | 🤖 Agent | 🟢 Complete | True temporary-workspace byte comparison covers all 52 modules; three nonzero and zero-baseline seed receipts, module-hash validation, and style-neutral composition-seam proof are recorded and pass focused validation |
 | P0 | Restore V10 three-distance review surfaces (M10-R003) | 🤖 Agent | 🟢 Complete | Regenerated source-scale, target-phone, and thumbnail surfaces from the generalized renderer; preflight links and focused validation verify all three review distances |
 | P0 | Restore V10 action typography and thumbnail comparison (M10-R004) | 🤖 Agent | 🟢 Complete | Target-phone `CLAIM`, `CONTINUE`, and `FORGE HEAT 90%` typography and renderer-derived Forge-versus-Frostbound thumbnail comparison validate before V10 re-review |
-| P0 | Run Volcanic Forge cross-style production-hardening batch (M5-B1) | 🤖 Agent | 🔵 Agent-ready | Record clean reproduction, five-run timing/size/matrix, rollback/recovery, and target-phone readability evidence for the existing 52-module Volcanic Forge package |
+| P0 | Run Volcanic Forge cross-style production-hardening batch (M5-B1) | 🤖 Agent | 🟢 Complete | Five receipt runs, clean reproduction, strict 52-module receipt checks, temporary backup/recovery, matrix, and V10 readability evidence pass |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
