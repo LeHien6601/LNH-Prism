@@ -31,6 +31,7 @@ M10 must prove that the shared systems—not a new parallel renderer—produce a
 - M10-A1 is complete; the next agent-ready task is to draft the bounded M10 implementation specification and visual-transfer rubric.
 - The chosen style must use the existing seven-component inventory and shared generalized systems.
 - M10 validation must include deterministic package receipts, complete provenance, independent source/phone/thumbnail inspection, target-phone readability, and a visual gate that rejects palette-only similarity.
+- The M10-A3 definition review accepted Option B: molten focal emission is capped at eight portrait-composition embers, `0.55` opacity, and a glow radius of `12%` of the smaller component dimension; controls emit no embers and no emission may overlap content slots.
 - Enchanted Forest and Royal Arcane remain deferred options for a later third-style decision; neither is authorized now.
 
 ## Follow-up

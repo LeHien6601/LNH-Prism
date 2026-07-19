@@ -2,7 +2,7 @@
 
 ## Status
 
-**Draft review instrument.** It becomes actionable only at M10-A7 after the M10-A6 evidence package is complete.
+**Approved review instrument.** M10-A3 accepted Option B on 2026-07-19 with explicit lava-and-ember emission limits. It becomes actionable only at M10-A7 after the M10-A6 evidence package is complete.
 
 ## Technical hard preflight
 
@@ -38,6 +38,7 @@ Before scoring, confirm deterministic reproduction, stable IDs, complete source/
 - Missing provenance, manifests, receipts, recorded seeds, or engine-neutral module extraction.
 - Reference pixels, flattened production sources, unseeded variation, broken clipping/content bounds, or unreadable action text.
 - Lava, embers, ornaments, or glow obscuring the focal/action hierarchy.
+- More than eight portrait-composition embers, lava emission opacity above `0.55`, glow radius above `12%` of the smaller component dimension, or any ember emission from an individual control.
 
 ## Pass criteria
 

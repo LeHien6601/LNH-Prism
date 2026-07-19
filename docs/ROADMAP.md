@@ -204,6 +204,6 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Boundary:** no palette-only reskin, Frostbound-only branch, flattened production assets, concept pixels, unseeded randomness, third-style testing, or authoring workflow.
 
-**Definition gate:** 🟣 Pending M10-A3 review — the [M10 implementation specification](implementation/M10_VOLCANIC_FORGE_IMPLEMENTATION_SPEC.md) and [V10 transfer rubric](validation/V10_VOLCANIC_FORGE_TRANSFER_RUBRIC.md) define the bounded inventory, shared-system bindings, evidence, blockers, scoring, and pass gate. Renderer, contract, package, and validation work remain blocked until approval.
+**Definition gate:** 🟢 Approved on 2026-07-19 — M10-A3 Option B accepted the [M10 implementation specification](implementation/M10_VOLCANIC_FORGE_IMPLEMENTATION_SPEC.md) and [V10 transfer rubric](validation/V10_VOLCANIC_FORGE_TRANSFER_RUBRIC.md), including the explicit lava/ember emission limits. M10-A4 data-binding implementation may begin.
 
 **Exit gate:** a deterministic, engine-neutral Volcanic Forge package proves shared templates and generalized systems, complete provenance/receipts, target-phone readability, and visual distinction from Frostbound at source, phone, and thumbnail review distances.

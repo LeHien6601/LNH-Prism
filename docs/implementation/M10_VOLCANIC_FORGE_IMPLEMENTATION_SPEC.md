@@ -2,7 +2,7 @@
 
 ## Status
 
-**Draft for human definition review.** This document defines a bounded second-style transfer from the M9 generalized systems. It authorizes no renderer, asset, package, or generated-output change until M10-A3 is approved.
+**Approved for M10-A4 implementation.** The M10-A3 definition review accepted Option B on 2026-07-19: retain the approved scope with explicit lava-and-ember emission limits.
 
 ## Objective and fixed boundaries
 
@@ -47,6 +47,9 @@ It must not introduce concept pixels, unseeded randomness, a `styleId === "volca
 ## Complexity and readability bounds
 
 - Emission, ember count, glow spread, crack density, and ornament density must remain within versioned M9 budgets.
+- At the portrait-composition level, the molten focal may emit at most eight ember particles; individual controls may not emit embers.
+- Lava emission opacity may not exceed `0.55`, and its glow radius may not exceed `12%` of the smaller rendered component dimension.
+- No lava or ember layer may overlap a button label/content slot or obscure the progress fill; violations are validation failures rather than aesthetic warnings.
 - Lava, embers, and runes must not obscure labels, content slots, progress values, or state distinction.
 - Primary and secondary actions must remain distinct at target-phone and thumbnail scale.
 - The molten focal must remain dominant without becoming a substitute for functional hierarchy.
@@ -60,3 +63,4 @@ M10 passes only after M10-A7 records a review at `85/100` or above, every hard g
 | Date | Change | Author |
 |---|---|---|
 | 2026-07-19 | Drafted the bounded M10 implementation sequence from ADR-021 and M9 generalized-system contracts. | Codex |
+| 2026-07-19 | M10-A3 approved Option B: the Volcanic Forge definition is accepted with explicit lava-and-ember emission limits; M10-A4 may begin. | Project owner / Codex |
