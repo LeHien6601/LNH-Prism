@@ -31,10 +31,9 @@
 
 ### R-030 — Complete M11-R005 material-face and isolate depth
 
-- **Priority / eligibility:** P0 — Agent-ready.
-- **Scope:** Integrate deterministic weathered-stone texture, directional dark-wood grain, moss growth/masking, and visible focal roots into the rendered component faces. Generate material/focal isolates from those same layers rather than standalone representative swatches.
-- **Acceptance criteria:** At source, phone, thumbnail, and isolate distances, stone, wood, moss, and living-light/root channels are independently legible; the M11 shared seam, stable IDs, semantic text, seeds, module boundaries, and review-reference boundary remain unchanged.
-- **Validation:** Focused renderer/material assertions; regenerated matrix, portrait, isolates, package, seed/provenance/clean-workspace receipts; technical preflight; boundary and control-drift checks; one subsequent V11 review.
+- **Priority / eligibility:** P0 — Complete.
+- **Outcome:** Added clipped, face-integrated weathered-stone, dark-wood-grain, moss-growth, and focal-root channels through the shared seam. The regenerated material/focal isolates now visibly depict those same material families rather than flat representative swatches.
+- **Validation:** Package/evidence, contracts, focused renderer/material, serial reference-boundary, control-drift, and diff checks passed. M11-R006/V11 re-review is now required; R-031 is the next recommended remediation.
 
 ### R-031 — Make review-reference boundary fixtures concurrency-safe
 

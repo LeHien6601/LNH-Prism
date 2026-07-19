@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🔵 **Integrate Enchanted Forest material-face depth (M11-R005)** · 🤖 Agent |
-| Next agent-ready task | M11-R005 — integrate weathered-stone texture, directional dark-wood grain, moss growth/masking, and visible focal roots into component faces and source isolates |
+| Next task | 🟣 **Re-review Enchanted Forest material-face depth (M11-R006 / V11 re-review)** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | No unblocked agent-ready task — M11-R006 / V11 re-review awaits a human decision |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 V11 re-review scored `54/100` — M11-R005 material-face-depth remediation is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🟣 M11-R005 remediated material-face depth; V11 re-review is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -174,7 +174,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Re-review Enchanted Forest material-language contrast (M11-R002 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed hard gates but scored `54/100`; `V11-B002` requires deeper material separation and seed-support layering |
 | P0 | Deepen Enchanted Forest material and focal layering (M11-R003) | 🤖 Agent | 🟢 Complete | Added deterministic stone chips, dark-wood grain, moss masks, and layered seed roots through the shared composition seam; regenerated all package/evidence receipts |
 | P0 | Re-review Enchanted Forest material and focal layering (M11-R004 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed hard gates but scored `54/100`; `V11-B003` requires material-face and isolate depth |
-| P0 | Integrate Enchanted Forest material-face depth (M11-R005) | 🤖 Agent | 🔵 Agent-ready | Integrate layered weathered-stone texture, directional dark-wood grain, moss growth/masking, and visible focal roots into component faces and source isolates without changing approved boundaries |
+| P0 | Integrate Enchanted Forest material-face depth (M11-R005) | 🤖 Agent | 🟢 Complete | Added clipped face-integrated weathered stone, directional dark-wood grain, moss growth/masking, visible focal roots, and matching richer source isolates through the shared seam |
+| P0 | Re-review Enchanted Forest material-face depth (M11-R006 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Re-score the regenerated package against the unchanged V11 rubric; technical gates must pass and the visual threshold remains `85/100` with no dimension below `3/5` |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -331,6 +332,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Authorized automated V11 re-review failed at `54/100`: hard gates pass, but `V11-B002` requires deeper material separation and seed-support layering; M11-R003 is next | Project owner / Codex |
 | 2026-07-19 | Completed M11-R003: added deterministic material-detail and seed-root layers through the shared seam and regenerated package/evidence receipts; M11-R004 / V11 re-review is next | Codex |
 | 2026-07-19 | Authorized automated V11 re-review failed at `54/100`: technical gates pass, but `V11-B003` requires organic material-face/isolate depth; M11-R005 is next | Project owner / Codex |
+| 2026-07-19 | Completed M11-R005: integrated clipped material-face channels and matching richer source isolates through the shared seam; M11-R006 / V11 re-review is next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
