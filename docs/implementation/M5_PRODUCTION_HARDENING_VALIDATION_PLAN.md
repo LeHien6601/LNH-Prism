@@ -94,3 +94,7 @@ M5-A2 establishes the reproducibility/regression batch only. The remaining harde
 ### M5-A6 decision outcome
 
 Option A is approved in [ADR-016](../decisions/ADR-016-m5-frostbound-only-hardening-coverage.md): the fully hardened Frostbound package is sufficient for M5 exit. Multi-style hardening is deferred as a future scaling risk and should be revisited when another production asset package is selected.
+
+### M5-B1 cross-style hardening decision
+
+[ADR-022](../decisions/ADR-022-reopen-m5-volcanic-forge-hardening.md) reopens M5 for one bounded Volcanic Forge batch after V10 passed. M5-B1 must prove clean-workspace reproduction, strict all-module receipts, five-run timing/size/matrix results, rollback/recovery, and target-phone readability for the existing package. It must not alter approved package bytes, add a third style, or expand into engine integration.

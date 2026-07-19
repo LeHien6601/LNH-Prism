@@ -66,6 +66,8 @@
 - **Scope:** Decide whether a passing Volcanic Forge package requires reopening the M5 hardening batch for cross-style reproduction, rollback, size/timing, and manifest checks.
 - **Acceptance criteria:** An approved policy either defines a bounded cross-style hardening task or explicitly accepts the residual risk with a review trigger.
 
+**Decision:** Complete — Option 1 accepted on 2026-07-19. ADR-022 defines M5-B1 as the bounded Agent-ready Volcanic Forge cross-style hardening batch.
+
 ### R-016 — Select third-style contrast proof
 
 - **Priority / eligibility:** P2 — Human decision after V10 pass and R-012/R-013.
