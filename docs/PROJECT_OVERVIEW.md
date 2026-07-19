@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🟣 **Re-review Enchanted Forest authored material clusters (M11-R010 / V11 re-review)** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | None — M11-R010 / V11 re-review requires the recorded human/authorized automated visual review before another remediation can be selected |
+| Next task | 🔵 **Deepen Enchanted Forest authored cluster fidelity (M11-R011)** · 🤖 Agent |
+| Next agent-ready task | M11-R011 — replace generic cluster glyphs with reusable, distinctly legible stone-chip, wood-knot/grain, and moss/lichen primitives using seeded component-aware placement and density |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🟣 M11-R009 authored-material refinement is complete — V11 re-review is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 V11 re-review scored `57/100` — M11-R011 authored-cluster fidelity remediation is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -179,7 +179,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Refine Enchanted Forest material restraint and hierarchy (M11-R007) | 🤖 Agent | 🟢 Complete | Added clipped low-opacity restraint and edge-anchored treatment while preserving distinct material channels and content hierarchy |
 | P0 | Re-review Enchanted Forest material restraint and hierarchy (M11-R008 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed hard gates and visual minima but scored `57/100`; `V11-B005` requires authored material richness |
 | P0 | Add Enchanted Forest authored material clusters (M11-R009) | 🤖 Agent | 🟢 Complete | Replaced repeated broad material-line motifs with clipped, component-scaled seeded stone/wood/moss clusters; regenerated 26 matrix entries, 52 modules, and receipts |
-| P0 | Re-review Enchanted Forest authored material clusters (M11-R010 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Apply the approved V11 rubric to the regenerated source, target-phone, thumbnail, matrix, and technical evidence; record pass/fail and any bounded remediation |
+| P0 | Re-review Enchanted Forest authored material clusters (M11-R010 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed hard gates and all visual minima but scored `57/100`; `V11-B006` requires authored cluster fidelity |
+| P0 | Deepen Enchanted Forest authored cluster fidelity (M11-R011) | 🤖 Agent | 🔵 Agent-ready | Replace generic cluster glyphs with reusable stone-chip, wood-knot/grain, and moss/lichen primitives using seeded component-aware placement/density; derive isolates from the same primitives and preserve all approved boundaries |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -341,6 +342,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed M11-R007: added clipped low-opacity material restraint and edge-anchored treatment; M11-R008 / V11 re-review is next | Codex |
 | 2026-07-19 | Authorized automated V11 re-review failed at `57/100`: technical gates and visual minima pass, but `V11-B005` requires authored material richness; M11-R009 is next | Project owner / Codex |
 | 2026-07-19 | Completed M11-R009: replaced broad repeated motifs with restrained, clipped component-scaled stone/wood/moss clusters driven by named seeds; regenerated and validated M11 evidence/package receipts; M11-R010 / V11 re-review is next | Codex |
+| 2026-07-19 | Authorized automated M11-R010 / V11 re-review failed at `57/100`: technical hard gates and all visual minima pass, but `V11-B006` requires distinctly authored stone/wood/moss cluster primitives; M11-R011 is next | Project owner / Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |

@@ -102,6 +102,44 @@ Technical hard-gate outcome: **Pass**. `validate:m11-a4-package`, `validate:m11-
 
 **Decision: Fail — scored.** The total is below `85/100`; Botanical ornament restraint and Portrait composition are below `3/5`. `V11-B004` requires reducing material-mark scale and opacity, confining moss growth to edge/anchor regions, and rebalancing the face treatments around the content hierarchy while retaining the newly distinct material channels. M11-R007 is the next agent-ready remediation.
 
+## M11-R010 / V11 re-review — 2026-07-19
+
+Reviewer: `project-owner-authorized automated review`. Reviewed revision: `a82fb3c` (`feat(renderer): add enchanted forest material clusters`). Reference receipt: `enchanted-forest-review-reference-1080x1920.receipt.json`, SHA-256 `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
+
+Inspected `M11-E-source-scale.html`, `M11-E-target-phone.html`, `M11-E-thumbnail.html`, `M11-E-review-reference.html`, the target-phone PNG, material and focal/ornament isolate PNGs, Frostbound and Volcanic Forge comparison portraits, representative panel/button matrix outputs including normal/pressed/disabled states, the 26-entry matrix receipt, 52-module manifest, seed receipts, clean-workspace receipt, generalized-seam proof, and production-reference boundary evidence.
+
+### Technical hard gate
+
+| Requirement | Evidence / validation | Result |
+|---|---|---|
+| Shared seven-component geometry and no style-specific renderer | `M11-A4-generalized-seam-proof.json`; `src/renderer/style-composition.ts` | Pass |
+| Package, manifest, provenance, and clean reproduction | `npm run validate:m11-a4-package`; 26 matrix entries and 52 modules validated | Pass |
+| Zero baseline plus three reproducible nonzero seeds | `M11-A4-variation-receipts.json` records `0`, `51731`, `104729`, and `8675309` | Pass |
+| Review-reference receipt and production boundary | Serial `review-reference-boundary.test.mjs`; 370 production files clear | Pass |
+| Matrix, portrait, isolates, semantic text, and states | `npm run validate:m11-a3-evidence`; focused M11 renderer tests; `npm run validate:contracts` | Pass |
+
+Technical hard-gate outcome: **Pass**. Technical correctness is not used to increase visual scores.
+
+### Visual scoring
+
+| Dimension | Weight | Score | Weighted | Evidence-based observation |
+|---|---:|---:|---:|---|
+| Three-style distinction | 15 | 3/5 | 9 | The dark organic palette, vines, and material marks distinguish the family from Frostbound and Forge at thumbnail distance, but the shared angular composition remains visually dominant. |
+| Organic material separation | 15 | 3/5 | 9 | Stone, wood, moss, and root-light channels are named and separately visible, but production faces reduce them to sparse flat glyphs rather than convincingly layered materials. |
+| Focal hierarchy | 15 | 3/5 | 9 | The seed/halo is identifiable and does not compete with actions, but it remains a simple diamond-and-circle treatment without strong living-grove depth. |
+| Botanical ornament restraint | 10 | 3/5 | 6 | Vines and clusters remain restrained and avoid content slots, though their rhythm is sparse and diagrammatic. |
+| Diffuse bioluminescent lighting | 10 | 3/5 | 6 | Emerald/teal light is bounded, coherent, and avoids fire/ice language; material interaction remains shallow. |
+| Seeded organic variation | 10 | 3/5 | 6 | Cluster placement visibly varies by recorded seed and preserves readability, but the marks do not yet feel richly authored. |
+| Typography and state language | 10 | 3/5 | 6 | Semantic labels remain readable and normal/pressed/disabled hierarchy is preserved at target-phone scale. |
+| Portrait composition | 10 | 3/5 | 6 | Actions, progress, and focal are understandable, but large empty areas and a weak focal-to-action path keep the composition visually plain. |
+| **Total** | **100** |  | **57/100** |  |
+
+### Blocker and decision
+
+- **V11-B006 — authored cluster fidelity:** the R009 clusters are deterministic, component-scaled, and restrained, but visually resolve as dots, short lines, and small geometric pieces. They do not yet provide convincing weathered-stone chips, wood knots/grain fragments, moss/lichen patches, or an authored material rhythm across the seven components.
+
+**Decision: Fail — scored at `57/100`.** Every visual dimension meets the `3/5` minimum and no automatic visual blocker applies, but the weighted total remains below `85/100`. M11-R011 is the next agent-ready remediation: replace the generic cluster glyphs with a bounded reusable library of distinctly legible stone-chip, wood-knot/grain, and moss/lichen cluster primitives; use seeded component-aware placement/density, derive the material isolate from the same primitives, and preserve restraint, semantic slots, shared geometry/seam, stable IDs, receipts, and the reference-pixel boundary.
+
 ## M11-R008 / V11 re-review — 2026-07-19
 
 Reviewer: project-owner-authorized automated review. Reviewed revision: `177604b` (`fix(styles): restrain enchanted forest face treatment`). All required source, phone, thumbnail, reference-comparison, matrix, isolate, package, seed, clean-workspace, and generalized-seam surfaces were inspected.
