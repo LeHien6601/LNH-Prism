@@ -26,7 +26,7 @@
 | F-022 | P1 | Architecture / regression | Fact | `src/renderer/style-composition.ts` is style-neutral in interface, but its implementation delegates to M8 renderers and the focused test exercises only `M10_VOLCANIC_FORGE_BINDING`. The M11 definition requires the same seam without a style fork. | A third binding could silently require an M11 adapter or geometry exception, undermining the multi-style claim. | R-019: add Enchanted Forest binding/contract coverage that proves shared geometry, stable IDs, variation bounds, and no style-specific renderer path before matrix generation. | R-016c approval and R-018 boundary contract. | Agent-ready after R-016c. |
 | F-023 | P1 | Workflow / status | Resolved fact | `validate:control-drift` verifies active-task/task-board/roadmap alignment and that every review-only reference receipt has a real decision, raster, and documentation link. Focused fixtures reject stale task alignment and an undocumented reference. | The previously manual drift patterns now fail with actionable errors. | Run the validator in future control/gate work. | None. | Complete. |
 | F-024 | P2 | Definition quality | Resolved fact | ADR-025 requires semantic labels/progress values, no overlap or obscuration at target-phone scale, and at least `3/5` for Mobile-scale readability and state distinction. | The previously ambiguous readability threshold is now consistent and observable. | Preserve the approved rule in R-020 slice planning and later review evidence. | None. | Complete. |
-| F-025 | P2 | Plan / evidence | Inference | The M11 rubric correctly requires source, phone, thumbnail, matrix, material-isolation, seed, package, and boundary evidence, but no ordered implementation/evidence slices exist after the definition gate. | A future implementation task could combine contracts, rendering, packaging, and review evidence too broadly, increasing delivery and review risk. | R-020: write an ordered M11 implementation/evidence slice plan with one coherent validation target per slice. | R-018/R-019 scope. | Agent-ready. |
+| F-025 | P2 | Plan / evidence | Resolved inference | R-020 added the ordered M11 implementation/evidence plan, assigning every rubric hard-gate surface to exactly one contracts/materials, rendering/matrix, package/evidence, or review slice. | Future work now has bounded ownership and validation targets. | Start R-018 / M11-A1; preserve the ordered dependencies. | None. | Complete. |
 
 ## Ordered recommended tasks
 
@@ -58,10 +58,16 @@
 
 ### R-020 — Plan bounded M11 implementation and evidence slices
 
+- **Priority / eligibility:** P0 — Complete.
+- **Outcome:** [M11 implementation/evidence plan](../../implementation/M11_ENCHANTED_FOREST_IMPLEMENTATION_PLAN.md) assigns every V11 hard-gate surface to one bounded slice and sets R-018 / M11-A1 as the next action.
+- **Validation:** Cross-link and dependency scan against the approved definition/rubric and `git diff --check` passed.
+
+### R-018 / M11-A1 — Generalize Enchanted Forest review-reference boundary validation
+
 - **Priority / eligibility:** P0 — Agent-ready; this is the active overview task and next recommended task.
-- **Scope:** Divide approved M11 work into ordered contracts/materials, rendering/matrix, package/evidence, and review slices, each with bounded acceptance criteria and validation.
-- **Acceptance criteria:** Every required hard-gate surface from the M11 rubric has an owning slice; no slice changes more than one independently reviewable contract/evidence concern.
-- **Validation:** Cross-link and dependency scan against the approved definition/rubric and `git diff --check`.
+- **Scope:** Parameterize review-reference production-boundary validation and register Enchanted Forest with negative coverage before any renderer or material work.
+- **Acceptance criteria:** Forge regression coverage remains green; Enchanted Forest filename, SHA-256 match, identical raster, direct SVG link, and raster `<image>` leaks fail deterministically.
+- **Validation:** Focused negative tests for both references, existing M10 package validation, and a current production-file-count receipt.
 
 ## Review conclusion
 
