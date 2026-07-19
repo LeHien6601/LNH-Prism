@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🟣 **Conduct the Enchanted Forest third-style review (M11-A5 / V11)** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | No unblocked agent-ready task — M11-A5 / V11 review decision is required |
+| Next task | 🔵 **Remediate Enchanted Forest material-language contrast (M11-R001)** · 🤖 Agent |
+| Next agent-ready task | M11-R001 — replace inherited Frostbound material grammar with visible deterministic stone, wood, moss, and botanical treatments through the shared composition seam |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🟢 Definition, rendered review surfaces, package, and technical preflight ready — M11-A4 passed; M11-A5 / V11 review is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 V11 technical gate passed but visual review failed at `41/100` — M11-R001 material-language remediation is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -169,7 +169,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Prove Enchanted Forest shared-composition binding (R-019 / M11-A2) | 🤖 Agent | 🟢 Complete | Versioned source-neutral bindings and contract/renderer coverage prove shared geometry, editable layers, approved limits, and deterministic zero/nonzero seed behavior with no M11 renderer fork |
 | P0 | Render Enchanted Forest matrix and review surfaces (M11-A3) | 🤖 Agent | 🟢 Complete | Rendered 26 shared-template matrix entries, target-phone portrait, material/focal isolates, and source/phone/thumbnail/reference comparison surfaces |
 | P0 | Package Enchanted Forest modules and technical preflight (M11-A4) | 🤖 Agent | 🟢 Complete | 52 SVG/PNG modules, manifest/provenance, clean-workspace and seed receipts, reference-boundary scan, and unscored technical preflight validate |
-| P0 | Conduct the Enchanted Forest third-style review (M11-A5 / V11) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Score the package against the approved V11 rubric; pass requires every hard gate, `≥85/100`, no dimension below `3/5`, and Mobile-scale readability/state distinction `≥3/5` |
+| P0 | Conduct the Enchanted Forest third-style review (M11-A5 / V11) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Project-owner-authorized automated review recorded a hard-gate pass but `41/100` visual fail; `V11-B001` identifies a palette-only Frostbound material grammar |
+| P0 | Remediate Enchanted Forest material-language contrast (M11-R001) | 🤖 Agent | 🔵 Agent-ready | Replace inherited Frostbound material grammar with deterministic visible stone, wood, moss, and botanical treatments through the existing shared composition seam; preserve approved bounds and all production boundaries |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -321,6 +322,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed R-019 / M11-A2: added source-neutral Enchanted Forest bindings and shared-seam proof with deterministic seed coverage; M11-A3 rendering is next | Codex |
 | 2026-07-19 | Completed M11-A3: rendered the Enchanted Forest matrix, target-phone portrait, source isolates, and comparison surfaces through shared templates; M11-A4 packaging/preflight is next | Codex |
 | 2026-07-19 | Completed M11-A4: assembled the 52-module Enchanted Forest package with deterministic seed, provenance, clean-workspace, and technical-preflight receipts; M11-A5 / V11 review is next | Codex |
+| 2026-07-19 | Authorized automated V11 review failed at `41/100`: technical hard gates pass, but `V11-B001` finds a palette-only Frostbound material grammar; M11-R001 remediation is next | Project owner / Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |

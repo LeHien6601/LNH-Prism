@@ -72,3 +72,4 @@ M7 validation will be defined by M7-A1. It must include at least one reference-f
 | 2026-07-19 | Drafted the M11 Enchanted Forest third-style definition and visual-contrast rubric; human definition approval is required before any renderer/package work | Codex |
 | 2026-07-19 | Completed M11-A3: rendered Enchanted Forest's shared-template matrix, target-phone portrait, isolate evidence, and comparison surfaces; package/preflight work is next | Codex |
 | 2026-07-19 | Completed M11-A4: assembled Enchanted Forest's 52-module package with provenance, seed, clean-workspace, and technical-preflight receipts; V11 review is next | Codex |
+| 2026-07-19 | Authorized automated V11 review failed at `41/100`: technical hard gates passed but the palette-only Frostbound material grammar triggered `V11-B001`; M11-R001 remediation is next | Project owner / Codex |

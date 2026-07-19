@@ -68,10 +68,16 @@
 
 ### M11-A5 / V11 — Conduct the Enchanted Forest third-style review
 
-- **Priority / eligibility:** P0 — Human decision; this is the active overview task and next recommended task.
-- **Scope:** Inspect the source, phone, thumbnail, matrix, and review-reference surfaces; apply every V11 hard gate and score the approved rubric.
-- **Acceptance criteria:** Every hard gate passes; visual total is at least `85/100`, no dimension is below `3/5`, no blocker remains, and Mobile-scale readability/state distinction is at least `3/5`.
-- **Validation:** Recorded review with evidence paths, scores, observations, blockers, and decision.
+- **Priority / eligibility:** P0 — Complete — failed.
+- **Outcome:** Project-owner-authorized automated review passed every technical hard gate but scored `41/100` visually. `V11-B001` found a palette-only Frostbound material grammar, and Four visual dimensions fell below the `3/5` minimum.
+- **Validation:** [V11 review record](v11-enchanted-forest-third-style-review.md) records hard gates, inspected surfaces, weighted scores, blocker, and fail decision.
+
+### M11-R001 — Remediate Enchanted Forest material-language contrast
+
+- **Priority / eligibility:** P0 — Agent-ready; this is the active overview task and next recommended task.
+- **Scope:** Replace inherited Frostbound material grammar with deterministic visible stone, wood, moss, and botanical treatments through the existing shared composition seam.
+- **Acceptance criteria:** Source, phone, and thumbnail surfaces clearly establish a third family rather than a recolor while preserving approved bounds, semantic text, geometry, stable IDs, module boundaries, seeds, and reference boundary.
+- **Validation:** Focused renderer/material tests, regenerated matrix/portrait/isolates/package receipts, technical preflight, reference-boundary, and control-drift checks.
 
 ### R-020 — Plan bounded M11 implementation and evidence slices
 
