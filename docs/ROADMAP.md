@@ -206,4 +206,6 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Definition gate:** 🟢 Approved on 2026-07-19 — M10-A3 Option B accepted the [M10 implementation specification](implementation/M10_VOLCANIC_FORGE_IMPLEMENTATION_SPEC.md) and [V10 transfer rubric](validation/V10_VOLCANIC_FORGE_TRANSFER_RUBRIC.md), including the explicit lava/ember emission limits. M10-A4 data-binding implementation may begin.
 
+**Review gate:** 🟢 M10-A7 Option A selected on 2026-07-19 — the initial package is returned unscored for M10-R001 remediation. The next delivery must provide complete source/phone/thumbnail surfaces, clean reproduction, canonical inventory mapping, and non-palette-only transfer proof before V10 is re-reviewed.
+
 **Exit gate:** a deterministic, engine-neutral Volcanic Forge package proves shared templates and generalized systems, complete provenance/receipts, target-phone readability, and visual distinction from Frostbound at source, phone, and thumbnail review distances.
