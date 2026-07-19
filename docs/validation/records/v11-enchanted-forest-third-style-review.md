@@ -82,6 +82,47 @@ All technical hard gates passed: `npm run validate:m11-a4-package`, `npm run val
 
 **Decision: Fail — scored.** Technical correctness does not change the visual result. `V11-B003` is a bounded visual blocker: integrate independently visible weathered-stone texture, directional dark-wood grain, and moss growth/masking into the actual component faces and their source isolates, and make the focal-root depth visible in its isolate. Preserve shared geometry, stable IDs, seeds, semantic text, module boundaries, and the review-reference boundary. M11-R005 is the next agent-ready remediation.
 
+## M11-R014 / V11 re-review — 2026-07-19
+
+Reviewer: `project-owner-authorized automated review`.
+
+Reviewed revision: `2dae2cf` (`feat(renderer): integrate enchanted forest material surfaces`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
+
+Evidence inspected: the full-scale source, `320 × 568` target-phone view, thumbnail, generated-reference comparison, production-derived material and living-focal isolates, Frostbound and Forge comparison surfaces, representative normal/pressed/disabled/highlighted matrix states, the 26-entry matrix receipt, 52-module manifest, named seeds and clean-workspace receipt, generalized-seam proof, and production/reference-boundary evidence. The generated concept was used only as comparison evidence; no generated reference pixels entered production assets.
+
+### Technical hard gate
+
+| Gate | Outcome | Evidence |
+|---|---|---|
+| Deterministic package and provenance | Pass | `validate:m11-a4-package` validated 26 entries, 52 module receipts, named seeds, clean workspace, provenance, seam evidence, technical preflight, and 370 production files clear of review-reference pixels. |
+| Required visual surfaces and editable structure | Pass | `validate:m11-a3-evidence` validated the matrix, independent progress parts, material/focal isolates, portrait, and four review surfaces. |
+| Contracts and renderer build | Pass | `validate:contracts` and `build:renderer` completed successfully. |
+| Focused M11 behavior | Pass | Four focused renderer/material/focal tests passed. |
+| Review-reference isolation | Pass | Three serial boundary tests passed, including both Enchanted Forest leak rejection cases. |
+| Control alignment | Pass | `validate:control-drift` confirmed M11-R014 and all three review-reference receipts. |
+
+Technical hard-gate outcome: **Pass**. No automatic blocker was triggered.
+
+### Visual scoring
+
+| Dimension | Score | Weighted | Observation |
+|---|---:|---:|---|
+| Three-style distinction | 4/5 | 12 | The organic green ancient-grove family is readily distinguishable from Frostbound crystal and Forge metal/lava at phone and thumbnail scale. |
+| Organic material separation | 4/5 | 12 | Connected stone, wood, moss, and living-root regions remain independently identifiable, though several treatments still resolve as broad graphic bands rather than convincing material joins. |
+| Focal hierarchy | 4/5 | 12 | The aligned leaf-seed focal, woven root cradle, and portrait placement create a clearer reward path without obscuring actions. |
+| Botanical ornament restraint | 3/5 | 6 | Ornament stays bounded, but repeated primitive marks and broad ribbons remain visually busy on compact controls. |
+| Diffuse bioluminescent lighting | 3/5 | 6 | Living light is local and non-fire/non-ice, but it only weakly modulates adjacent stone, wood, and moss surfaces. |
+| Seeded organic variation | 4/5 | 8 | Variation is visible, deterministic, family-specific, and bounded by named seeds. |
+| Typography and state language | 3/5 | 6 | Labels remain readable; pressed motion is visible, but disabled and highlighted responses are too subtle at target-phone scale. |
+| Portrait composition | 4/5 | 8 | The taller panel and aligned focal/action stack improve the vertical rhythm, though flat plate-like surface treatments limit depth. |
+| **Total** |  | **70/100** | All dimension minima pass; the weighted total does not. |
+
+### Blocker and decision
+
+`V11-B008 — integrated surface craftsmanship and state response`: M11-R013 materially improves connected regions, focal alignment, and portrait hierarchy, but the stone/wood/moss system still reads partly as broad graphic ribbons and flat plates. Repeated primitive marks remain busy on small controls, living light does not convincingly affect neighboring materials, and disabled/highlighted state language is subtle.
+
+**Decision: Fail — scored.** The technical hard gate passes and no dimension is below `3/5`, but `70/100` is below the required `85/100`. M11-R015 is the next agent-ready remediation: reshape the existing regions into material-specific, scale-aware faceted stone breaks, directional wood relief, and moss growth transitions; reduce compact-control clutter; and strengthen bounded normal/pressed/disabled/highlighted living-light response. This remediation must preserve the approved component inventory and material families, shared geometry and seam, stable IDs, named seeds, reproducibility, and review-reference isolation.
+
 ## M11-R006 / V11 re-review — 2026-07-19
 
 Reviewer: project-owner-authorized automated review. Reviewed revision: `d1ad719` (`fix(styles): deepen enchanted forest face materials`). Inspected all required source, target-phone, thumbnail, reference-comparison, matrix, isolate, package, seed, clean-workspace, and generalized-seam surfaces.
