@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0",
+  "status": "unscored-review-ready",
+  "technicalCorrectness": "hard-gate-only",
+  "automaticBlockers": [],
+  "scoringPerformed": false,
+  "gateDecision": "pending-human-review"
+}

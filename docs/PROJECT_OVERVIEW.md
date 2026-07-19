@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🔵 **Prepare Volcanic Forge package and technical evidence** · 🤖 Agent |
-| Next agent-ready task | M10-A6 — produce the engine-neutral package, receipts, showroom, comparison, and unscored technical preflight |
+| Next task | 🟣 **Conduct V10 Volcanic Forge transfer review** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | No unblocked agent-ready task; M10-A7 review is required |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
