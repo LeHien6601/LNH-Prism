@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { renderStyledComponentSvg, renderStyledProgressSvg } from "../../dist/renderer/style-composition.js";
-import { M11_ENCHANTED_FOREST_BINDING, renderM11MaterialClusterSvg } from "../../dist/styles/m11-enchanted-forest-binding.js";
+import { M11_ENCHANTED_FOREST_BINDING, renderM11LivingFocalSvg, renderM11MaterialClusterSvg } from "../../dist/styles/m11-enchanted-forest-binding.js";
 
 test("M11 renders required shared-template states without obscuring semantic layers", () => {
   for (const state of ["normal", "pressed", "disabled"]) {
@@ -22,6 +22,12 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.match(panel, /data-layer="forest-moss-growth-mask"/);
   assert.match(panel, /data-layer="forest-material-restraint"/);
   assert.match(panel, /data-restraint="edge-anchored-low-opacity"/);
+  assert.match(panel, /data-layer="forest-integrated-material-regions"/);
+  assert.match(panel, /data-integration="edge-anchored-connected"/);
+  assert.match(panel, /data-layer="forest-stone-surface-region"/);
+  assert.match(panel, /data-layer="forest-wood-surface-region"/);
+  assert.match(panel, /data-layer="forest-moss-surface-region"/);
+  assert.match(panel, /data-layer="forest-living-light-surface-response"/);
   assert.match(panel, /data-layer="forest-authored-material-clusters"/);
   assert.match(panel, /data-material-families="stone,wood,moss"/);
   assert.match(panel, /data-cluster-scale="component"/);
@@ -32,10 +38,21 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.ok(panel.indexOf('data-layer="forest-material-stack"') > panel.indexOf('data-layer="surface-pattern"'));
   assert.match(panel, /data-layer="luminous-seed-focal"/);
   assert.match(panel, /data-layer="forest-focal-roots"/);
+  assert.match(panel, /data-layer="forest-focal-light-interaction"/);
+  assert.match(panel, /data-focal-depth="woven-root-cradle"/);
   assert.match(panel, /data-halo-opacity="\.40"/);
   const progress = renderStyledProgressSvg({ component: "progress", width: 420, height: 28, percent: 90, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
   assert.match(progress, /data-part="frame"/);
   assert.match(progress, /data-part="fill"/);
+});
+
+test("M11 living focal helper preserves editable seed, support, roots, and light interaction", () => {
+  const focal = renderM11LivingFocalSvg("icon-container", 58, 58, 22);
+  assert.match(focal, /data-layer="luminous-seed-focal"/);
+  assert.match(focal, /data-layer="forest-focal-support"/);
+  assert.match(focal, /data-layer="forest-focal-roots"/);
+  assert.match(focal, /data-layer="forest-focal-light-interaction"/);
+  assert.doesNotMatch(focal, /<image\b/);
 });
 
 test("M11 authored material clusters are deterministic, seed-varying, and absent at baseline", () => {

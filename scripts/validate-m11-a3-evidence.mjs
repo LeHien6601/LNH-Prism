@@ -12,7 +12,7 @@ for (const component of ["panel", "primary-hex-button", "secondary-hex-button", 
 for (const entry of matrix.entries) {
   const svg = await readFile(resolve(evidence, "matrix", `${entry.name}.svg`));
   if (hash(svg) !== entry.svgSha256 || !svg.includes("m11-enchanted-forest@0.1.0") || svg.includes("<image")) throw new Error(`M11 SVG receipt or boundary failure: ${entry.name}`);
-  if (entry.component !== "progress" && (!svg.includes('data-layer="forest-variation"') || !svg.includes('data-layer="forest-ornament"'))) throw new Error(`M11 editable organic layers missing: ${entry.name}`);
+  if (entry.component !== "progress" && (!svg.includes('data-layer="forest-variation"') || !svg.includes('data-layer="forest-ornament"') || !svg.includes('data-layer="forest-integrated-material-regions"'))) throw new Error(`M11 editable organic layers missing: ${entry.name}`);
   if (entry.component === "progress" && (!svg.includes('data-part="frame"') || !svg.includes('data-part="fill"'))) throw new Error(`M11 progress parts missing: ${entry.name}`);
 }
 for (const file of ["m11-enchanted-forest-target-phone.svg", "m11-enchanted-forest-target-phone.png", "m11-enchanted-forest-material-isolates.svg", "m11-enchanted-forest-material-isolates.png", "m11-enchanted-forest-focal-ornament-isolates.svg", "m11-enchanted-forest-focal-ornament-isolates.png", "M11-E-source-scale.html", "M11-E-target-phone.html", "M11-E-thumbnail.html", "M11-E-review-reference.html"]) await access(resolve(evidence, file));
@@ -20,5 +20,7 @@ const portrait = await readFile(resolve(evidence, "m11-enchanted-forest-target-p
 if (!portrait.includes("GROVE RESONANCE 90%") || !portrait.includes(">CLAIM<") || !portrait.includes(">CONTINUE<")) throw new Error("M11 target-phone semantic hierarchy is incomplete.");
 const materialIsolate = await readFile(resolve(evidence, "m11-enchanted-forest-material-isolates.svg"), "utf8");
 for (const marker of ['data-derived-from="renderM11MaterialClusterSvg"', 'data-layer="forest-stone-chip-cluster"', 'data-layer="forest-wood-knot-cluster"', 'data-layer="forest-moss-lichen-cluster"']) if (!materialIsolate.includes(marker)) throw new Error(`M11 material isolate is not derived from the production primitive library: ${marker}`);
+const focalIsolate = await readFile(resolve(evidence, "m11-enchanted-forest-focal-ornament-isolates.svg"), "utf8");
+for (const marker of ['data-derived-from="renderM11LivingFocalSvg"', 'data-layer="forest-focal-support"', 'data-layer="forest-focal-roots"', 'data-layer="forest-focal-light-interaction"']) if (!focalIsolate.includes(marker)) throw new Error(`M11 focal isolate is not derived from the production focal helper: ${marker}`);
 if (receipt.variationSeed !== 51731 || receipt.packageOrReviewStatus !== "deferred-to-m11-a4-and-m11-a5") throw new Error("M11 A3 receipt scope is invalid.");
 console.log(`validated ${matrix.count} M11 entries, independent progress parts, isolates, portrait, and four review surfaces.`);
