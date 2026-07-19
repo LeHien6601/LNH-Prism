@@ -193,3 +193,17 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 **Implementation sequence:** 🟢 M9-A1 through M9-A10 complete; 🟢 M9-A11 authorized review failed at `65/100`; 🟢 M9-R001 corrected action typography/focal composition and regenerated receipt-validated evidence; 🟢 M9-A12 authorized automated review passed at `85/100`, closing M9-B001 and V8-O001. Multi-style transfer is ready for scope decision but has not begun.
 
 **Exit gate:** 🟢 Passed on 2026-07-19 at `85/100` — the corrected package meets every technical hard gate, contains no automatic blocker, and satisfies all M9 visual minimums. M10 scope definition is required before any multi-style transfer implementation.
+
+## ⚪ M10 — Volcanic Forge second-style transfer
+
+**Decision:** [ADR-021](decisions/ADR-021-volcanic-forge-second-style-transfer.md) accepted Option A on 2026-07-19.
+
+**Goal:** prove the M9 generalized systems can deliver a visibly distinct, warm forged-UI family without rewriting shared component templates or adding a parallel renderer.
+
+**Fixed direction:** reuse angular wide-hex geometry and the seven-component inventory; apply obsidian, brass/forged-metal, and lava material families; warm bottom/inner lighting; seeded soot, crack, and hammered-surface variation; rivet/rune/ember ornaments; engraved-gold typography; molten-core focal treatment; and heat-glow/compression/dim state rules.
+
+**Boundary:** no palette-only reskin, Frostbound-only branch, flattened production assets, concept pixels, unseeded randomness, third-style testing, or authoring workflow.
+
+**Implementation sequence:** 🔵 M10-A2 drafts the implementation specification and visual-transfer rubric. Renderer, contract, package, and validation work remain blocked until that definition is reviewed and approved.
+
+**Exit gate:** a deterministic, engine-neutral Volcanic Forge package proves shared templates and generalized systems, complete provenance/receipts, target-phone readability, and visual distinction from Frostbound at source, phone, and thumbnail review distances.

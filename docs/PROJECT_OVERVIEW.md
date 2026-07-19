@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🟢 **M9 — Frostbound production-fidelity systems** |
-| Next task | 🟣 **Decide multi-style transfer scope** · 🧭 Product + 🎨 Art + 🛠️ Technical leads |
-| Next agent-ready task | No unblocked agent-ready task; approved M10 transfer scope is required before implementation |
+| Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
+| Next task | 🔵 **Draft M10 Volcanic Forge implementation specification and rubric** · 🤖 Agent |
+| Next agent-ready task | M10-A2 — draft the bounded implementation specification and visual-transfer rubric |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -139,7 +139,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Conduct M9 production-fidelity review (M9-A11) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Fail | Authorized automated review recorded `65/100`; M9-B001 action readability, duplicated/obscured focal hierarchy, and V8-O001 prevent a pass; see `validation/records/m9-production-fidelity-review.md` |
 | P0 | Correct M9 action/focal layer order and revalidate package (M9-R001) | 🤖 Agent | 🟢 Complete | Action typography, lighting, and component coordinates render above inherited layers; one panel focal replaces the competing icon focal; regenerated package, receipts, review surfaces, and focused validation pass |
 | P0 | Re-review corrected M9 production-fidelity package (M9-A12) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Pass | Authorized automated review recorded `85/100`; all hard gates pass, M9-B001 is closed, and V8-O001 passes with one dominant crystal focal; see `validation/records/m9-production-fidelity-review.md` |
-| P0 | Decide multi-style transfer scope (M10-A1) | 🧭 Product + 🎨 Art + 🛠️ Technical leads | 🟣 Human decision | Choose the target style, fixed system-transfer bounds, review evidence, and acceptance gate before any multi-style implementation begins |
+| P0 | Decide multi-style transfer scope (M10-A1) | 🧭 Product + 🎨 Art + 🛠️ Technical leads | 🟢 Complete | Option A selected Volcanic Forge: shared wide-hex geometry with obsidian/brass/lava materials, warm lighting, seeded soot/crack variation, and molten focal treatment; see [ADR-021](decisions/ADR-021-volcanic-forge-second-style-transfer.md) |
+| P0 | Draft M10 Volcanic Forge implementation specification and rubric (M10-A2) | 🤖 Agent | 🔵 Agent-ready | Define the bounded component/state inventory, shared-system bindings, technical and visual evidence, blockers, scoring, and acceptance gate before implementation |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -264,6 +265,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Chose V8 review Option B: prepare missing review evidence before the human score; M8-A5a is agent-ready and does not authorize renderer or asset changes | Project owner / Codex |
 | 2026-07-18 | Approved V8 Option A: M8 passes at `90/100` with no blockers; retained V8-O001 as a non-blocking M9 observation and unblocked M9 definition | Project owner / Codex |
 | 2026-07-19 | Passed M9 at `85/100` through the project-owner-authorized automated corrected-package review; all hard gates pass, M9-B001 is closed, V8-O001 passes, and M10 scope decision is next | Project owner / Codex |
+| 2026-07-19 | Approved Option A for M10: Volcanic Forge is the bounded second-style transfer target; M10 specification and rubric drafting are now agent-ready | Project owner / Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
