@@ -1,123 +1,84 @@
-# Whole-project review — 2026-07-17
+# Whole-project weakness review — 2026-07-19
 
 ## Snapshot
 
 | Field | Value |
 |---|---|
-| Reviewed revision | `ad59059` (`docs(review): record project weakness assessment`) |
-| Review date | 2026-07-17 |
-| Working tree at start | Clean |
-| Scope | Workflow, status, and plan |
-| Validation run | `npm run validate:asset-package`; `git diff --check` |
-| Validation result | Passed: M6 decision records Markdown + showcase as sufficient; 62 modular files validated across five components; no whitespace errors |
-
-Refresh note: R-001 through R-010 have been resolved. M5 is passed; M6 dashboard/workflow scaling is deferred by ADR-017 because Markdown controls plus the existing showcase remain sufficient. The next roadmap direction has now been selected: M7 reference-fidelity style expansion.
+| Reviewed revision | `8064579` (`docs(review): record volcanic forge gate failure`) |
+| Review date | 2026-07-19 |
+| Working tree at start | Dirty: unrelated `docs/implementation/PRODUCTION_FIDELITY_AND_MULTI_STYLE_EXPANSION_PLAN.md` modification and untracked `new-plan.md`; neither was inspected as review evidence or changed. |
+| Scope | Workflow, status, plan, renderer/asset architecture, validation/reproducibility, provenance/reference handling, and delivery documentation across M0–M10. |
+| Validation run | `npm run validate:contracts`; `npm run build:renderer`; `node --test tests/renderer/m10-style-transfer.test.mjs`; `npm run validate:m10-r001-package`; `npm run validate:asset-package`; `git diff --check`. |
+| Validation result | All commands passed. They validate contracts, M10 renderer behavior, the M10 26-entry/52-module evidence shape, the original Frostbound 62-module package, and whitespace; they do not close the V10 hard gates below. |
 
 ## Current status
 
-- M1/V1, M2/V2, M3/V3, and M4 modular asset delivery are recorded as passed/completed.
-- M5-A1 through M5-A6 are complete and M5 is passed. M6 dashboard/workflow scaling is deferred. R-002, R-004, R-005, R-006, R-007, R-008, R-009, and R-010 are complete. The next roadmap direction is M7 reference-fidelity style expansion.
-- The Frostbound package is engine-neutral and validates as 62 modular SVG/PNG files across Panel, Primary Button, Secondary Button, Progress, and Emblem.
+- M1–M7 remain passed/completed; M8/M9 completed their Frostbound refinement/generalization work. M10 remains open after a formal V10 fail at a diagnostic `78/100`.
+- `M10-R002` is the active agent-ready task. It correctly targets clean-workspace proof, seed/zero-baseline receipts, and shared-renderer proof.
+- The prior whole-project review was at revision `ad59059` on 2026-07-17, before M7–M10. Its resolved M5/M6 findings remain historical rather than a current assessment.
 
 ## Findings
 
 | ID | Severity | Area | Fact or inference | Evidence | Impact | Recommended solution | Dependencies | Eligibility |
 |---|---|---|---|---|---|---|---|---|
-| F-001 | P1 | Status | Fact | Resolved by R-001: active overview and Module 06 now identify M4 as passed and M5-A2 as next. | Previously caused status/task-selection ambiguity; no longer present in active statements. | Completed: align active status/next-task statements with the completed M4 package and current M5-A2 task. | None. | Complete |
-| F-002 | P1 | Workflow / status | Fact | Resolved by R-002: active Module 05 and ADR-009 now state the engine-neutral M4 boundary; dead Unity-module navigation is removed; remaining Unity mentions are historical change-log entries. | Previously contradicted ADR-014 and could reintroduce retired scope; no longer present in active guidance. | Completed: replace current-scope Unity workflow/dependency statements with engine-neutral M4 package validation and repair dead links. | R-001 complete. | Complete |
-| F-003 | P1 | Workflow | Fact | Resolved by R-006: export-manifest `1.2` is the live engine-neutral branch; canonical examples and V1 renderer manifests emit `1.2`; contract tests reject engine import metadata in `1.2`; legacy `1.0` validation is preserved under `specs/examples/archive/`. | Previously risked accidental engine-coupled deliverables; no longer present in live renderer output. | Completed: implement a backward-compatible engine-neutral export-manifest revision and migrate live renderer/tests/examples to it. | None. | Complete |
-| F-004 | P0 | Plan | Fact | Resolved by R-003: the M5 command and passing receipt now exist at `docs/validation/evidence/m5-production-hardening/M5-A2-reproducibility-receipt.json`; `package.json` exposes `validate:m5-production-hardening`. | The stated M5-A2 production-hardening evidence is now demonstrated. | Completed: implement and run M5-A2 exactly as defined in the validation plan. | None. | Complete |
-| F-005 | P2 | Plan | Fact | Resolved by R-005: the M5 plan now defines M5-A3 migration/rollback, M5-A4 backup/recovery, M5-A5 release procedure, and M5-A6 multi-style coverage decision, each with owner, execution status, and exit condition. | Previously made M5's remaining hardening boundary ambiguous; the follow-on work is now explicitly ordered. | Completed: split the remaining rollback, backup/recovery, release procedure, and multi-style coverage work into separate tasks. | None. | Complete |
+| F-011 | P0 | Validation / architecture | Fact | `m10-volcanic-forge-transfer-review.md` records V10-B001–B003; `prepare-m10-r001-package.mjs` rebuilds in-repository directories, supplies no `variationSeed`, and calls the M10-specific adapter. | V10 cannot pass; determinism, variation, and generalized-reuse claims are not independently demonstrated. | R-011: complete M10-R002 with a true temporary clean workspace, byte comparison, explicit nonzero/zero seed receipts, and a generalized composition seam proven by tests. | None. | Agent-ready. |
+| F-012 | P0 | Provenance / plan | Fact | `style-m10-volcanic-forge.json` cites only ADR-021 as a human-design source; `docs/reference-briefs/assets/` has Frostbound concept/receipt files but no M10 counterpart. | V10 can compare against Frostbound but cannot assess fidelity to a selected Volcanic Forge visual target. | R-012 then R-013: approve a review-only Volcanic Forge reference source, then register a hashed receipt/reference board with an explicit no-pixel-extraction boundary. | Product/art source choice. | Human decision, then Agent-ready. |
+| F-013 | P1 | Validation | Fact | `validate-m10-r001-evidence.mjs` checks matrix count, module count, canonical component name, SVG receipt hashes, and surface existence; it does not iterate the 52 manifest modules to verify paths, bytes, and SHA-256 values. | A stale, missing, or substituted packaged module can remain undetected while the focused M10 validator passes. | R-011: extend the M10 validator to independently verify every manifest module receipt and identity, then include it in the clean-reproduction receipt. | R-011. | Agent-ready. |
+| F-014 | P1 | Status / documentation | Fact | Overview at-a-glance still says M8 definition/specification is next; M10 implementation status still says “Approved for M10-A4 implementation,” while the task board and review record show M10-A7 failed and M10-R002 is next. | Active controls disagree, creating an incorrect handoff for people or automation that use the overview/specification rather than the task board. | R-014: reconcile active milestone/status statements without rewriting historical facts. | R-011 may remain active; documentation task is independent. | Agent-ready. |
+| F-015 | P1 | Workflow / evidence integrity | Fact | M10 technical preflight lists checks as strings with no per-check evidence/result; `M10-E-comparison.md` claims seeded soot/crack behavior while the M10 generation requests omit seeds. | Reviewers must infer technical correctness from prose and may score claims that the evidence does not demonstrate. | R-011: emit per-check pass/fail evidence paths and reject comparison/preflight claims that are not backed by generated receipts. | R-011. | Agent-ready. |
+| F-016 | P1 | Architecture / maintainability | Fact | `src/renderer/m10-style-transfer-components.ts` is a separate M10 adapter over M8; the current test checks its output but does not prove that its forge layers are supplied by an M9-generalized registry/seam. | The no-parallel-renderer rule remains ambiguous and each additional style risks another adapter. | R-011: define and test a style-agnostic composition interface for palette/material/ornament/focal/typography bindings; migrate M10 to it or prove the existing seam satisfies it. | R-011. | Agent-ready. |
+| F-017 | P2 | Plan / risk management | Fact | ADR-016 accepted Frostbound-only hardening as a residual risk; M10 is the first second-style transfer and has not passed its hard gate. | The original single-style hardening evidence is insufficient to claim multi-style package/reproduction readiness. | R-015: after V10 hard gates pass, decide whether M5 multi-style hardening must be reopened and define the coverage target if approved. | V10 hard-gate closure. | Human decision. |
+| F-018 | P2 | Plan / product validation | Fact | ADR-021 defers third-style testing; no third-style scope, reference, or contrast evidence exists. | The renderer is not yet proven beyond Frostbound and one incomplete second-style transfer. | R-016: after V10 passes, choose a third-style contrast target and reference policy before implementation. | V10 pass and R-012/R-013 reference policy. | Human decision. |
+| F-019 | P3 | Workflow | Fact | ADR-017 defers dashboard/workflow scaling; the project now has many cross-linked records and manual status drift. | Markdown remains approved, but coordination cost and drift should be measured rather than assumed absent. | R-017: define lightweight drift signals (stale next-task text, mismatched task states, broken evidence links) and revisit the M6 decision if thresholds are reached. | R-014. | Agent-ready. |
 
-## Recommended tasks
+## Ordered recommended tasks
 
-Recommendations are ordered by urgency and dependency. Apply only one `Agent-ready` task per `Apply Review:` run.
+### R-011 — Close V10 hard-gate evidence and generalized-renderer proof
 
-### R-001 — Align active M4/M5 status statements — Complete
+- **Priority / eligibility:** P0 — Agent-ready; aligns with active M10-R002.
+- **Scope:** Rebuild Volcanic Forge from a temporary clean workspace; compare every output and manifest byte/SHA against the approved package; render three named nonzero seeds plus a zero baseline; and expose Volcanic Forge bindings through a proven style-agnostic composition seam rather than an unproven style adapter.
+- **Acceptance criteria:** Per-check preflight results link to receipts; all 52 modules validate against manifest hashes; seed receipts show deterministic same-seed output and distinct permitted variation; no style-specific renderer branch/parallel composition path remains; M7–M9 bytes are unchanged.
+- **Validation:** New focused clean-workspace, manifest-receipt, seed/baseline, and generalized-seam tests; existing contracts, renderer test, and M10 package validation.
 
-- **Priority / eligibility:** P1 — Complete
-- **Scope:** Correct the M4 state in the overview at-a-glance table and the stale next-task statement in Module 06. Do not change historical review scores or task-board ownership.
-- **Acceptance criteria:** All active overview, roadmap, and Module 06 statements agree that M4 modular delivery is complete and M5-A2 is next; no Unity scope is added.
-- **Validation:** Inspect the affected tables/text; run `git diff --check`.
+### R-012 — Approve a Volcanic Forge review-reference policy and source
 
-Applied in this run: M4 is now green/passed in the overview at-a-glance table, and Module 06 names M5-A2 as the next agent-ready task.
+- **Priority / eligibility:** P0 — Human decision.
+- **Scope:** Select one source: project-owner-provided reference, licensed external board, or generated concept. Record ownership/license or generation provenance, target dimensions, review use, and the no-pixel-extraction rule.
+- **Acceptance criteria:** The choice is explicit enough for an agent to create a receipt without inventing art direction or rights information.
 
-### R-002 — Remove retired Unity workflow references from active governance — Complete
+### R-013 — Register the approved Volcanic Forge review-only reference
 
-- **Priority / eligibility:** P1 — Complete
-- **Scope:** Update Module 05 and ADR-009 to reflect ADR-014's engine-neutral delivery boundary, remove dead Unity-module references, and preserve historical change-log facts without presenting them as current requirements. Update directly affected active acceptance/reference language only when it creates a current Unity requirement.
-- **Acceptance criteria:** No active module, decision, or validation guidance requires an engine project, Unity importer, runtime flow, or deleted Unity document; historic records remain auditable.
-- **Validation:** Repository link/reference scan and `git diff --check`; run relevant contract/package checks if any contract guidance changes.
+- **Priority / eligibility:** P0 — Agent-ready after R-012.
+- **Scope:** Add the approved reference/board and hash receipt; bind it to the M10 brief, review record, and evidence index without treating it as a production material or component source.
+- **Acceptance criteria:** Reviewers can locate and verify the reference provenance; automated validation rejects production SVG/PNG links to its pixels.
+- **Validation:** Receipt/hash, link, provenance, and source-boundary checks.
 
-Applied in this run: active Module 05 and ADR-009 guidance now follows ADR-014; only historical Unity entries remain, and the deleted Unity-module link is gone.
+### R-014 — Reconcile active M8–M10 control status
 
-### R-003 — Implement and run M5-A2 reproducibility/regression batch — Complete
+- **Priority / eligibility:** P1 — Agent-ready.
+- **Scope:** Correct only active status/next-task statements in the overview, roadmap, and active M10 specification; preserve historical records and review scores.
+- **Acceptance criteria:** All three controls name M10-R002 as current; no active statement says M8 definition or M10-A4 is next.
+- **Validation:** Targeted text/link scan and `git diff --check`.
 
-- **Priority / eligibility:** P0 — Complete
-- **Scope:** Implement the one local engine-neutral M5 command and receipt described in `docs/implementation/M5_PRODUCTION_HARDENING_VALIDATION_PLAN.md`; do not include deferred recovery, migration, release, or multi-style work.
-- **Acceptance criteria:** Clean-workspace assembly, strict byte receipts, five-run timing, environment/package metrics, full state/part matrix, and four readability views are recorded and pass the plan's gates.
-- **Validation:** Run the new M5 command and its focused regression checks.
+### R-015 — Revisit multi-style production hardening coverage
 
-Applied in this run: `npm run validate:m5-production-hardening` passed with 62 modules, five byte-identical runs, a 453.799 ms median, a 530.237 ms p95, a complete matrix, and four readability views.
+- **Priority / eligibility:** P2 — Human decision after R-011/V10 hard-gate closure.
+- **Scope:** Decide whether a passing Volcanic Forge package requires reopening the M5 hardening batch for cross-style reproduction, rollback, size/timing, and manifest checks.
+- **Acceptance criteria:** An approved policy either defines a bounded cross-style hardening task or explicitly accepts the residual risk with a review trigger.
 
-### R-004 — Decide export-manifest compatibility migration — Complete
+### R-016 — Select third-style contrast proof
 
-- **Priority / eligibility:** P1 — Complete
-- **Decision:** Option A approved on 2026-07-17: legacy Unity-shaped `1.0`/`1.1` manifest validation remains archival-only, and live production output moves to a versioned engine-neutral successor.
-- **Acceptance criteria:** An approved compatibility policy identifies the supported manifest versions, migration path, and evidence-retention rule.
+- **Priority / eligibility:** P2 — Human decision after V10 pass and R-012/R-013.
+- **Scope:** Choose the third-style target and review-reference policy; do not begin rendering.
+- **Acceptance criteria:** A bounded brief identifies the contrast dimensions, reference provenance, component inventory, and exit evidence.
 
-Applied in this run: ADR-015 records the archival legacy policy and queues live output migration to an engine-neutral successor.
+### R-017 — Add lightweight control-drift detection
 
-### R-006 — Implement engine-neutral export-manifest successor — Complete
-
-- **Priority / eligibility:** P1 — Complete
-- **Scope:** Add the approved engine-neutral export-manifest successor while preserving archival validation for legacy `1.0`/`1.1` evidence. Migrate live renderer manifest types, canonical examples, focused tests, and validation docs to make the successor the current production-output target.
-- **Acceptance criteria:** Live examples/tests no longer require engine import metadata; legacy fixtures remain explicitly archival; contract validation distinguishes archival compatibility from current production output; no engine integration scope is introduced.
-- **Validation:** Run contract validation and focused renderer/export manifest tests; run `git diff --check`.
-
-Applied in this run: export-manifest `1.2` is the live engine-neutral schema branch; V1 renderer proof manifests emit `1.2`; canonical examples and tests reject engine import metadata; archived legacy validation remains covered.
-
-### R-005 — Define post-A2 M5 hardening slices — Complete
-
-- **Priority / eligibility:** P2 — Complete
-- **Scope:** Split the remaining migration/rollback, backup/recovery, release procedure, and multi-style coverage work into separate tasks with owners and exit criteria.
-- **Acceptance criteria:** The overview task board and M5 plan have explicit, ordered follow-on slices; no deferred area is implicitly counted as complete.
-
-Applied in this run: M5-A3 through M5-A6 are recorded in the M5 plan and overview with owners, execution status, dependencies, and exit conditions.
-
-### R-007 — Implement manifest migration and rollback drill (M5-A3) — Complete
-
-- **Priority / eligibility:** P1 — Complete
-- **Scope:** Implement the M5-A3 drill defined in the M5 plan. Prove live `1.2` manifest handling, archived legacy evidence retention, rollback/failure reporting, and unchanged approved package bytes.
-- **Acceptance criteria:** A migration/rollback receipt is recorded under `docs/validation/evidence/m5-production-hardening/`; missing provenance/output hashes/archive rules fail clearly; approved package bytes remain unchanged.
-- **Validation:** Run the new drill plus `npm run validate:contracts`, `npm run validate:asset-package`, and `git diff --check`.
-
-Applied in this run: `npm run validate:m5-manifest-migration` recorded `docs/validation/evidence/m5-production-hardening/M5-A3-manifest-migration-rollback-receipt.json`, validated live `1.2` and archived legacy manifests, rejected engine metadata, missing provenance, missing output hashes, and misplaced legacy evidence, and verified the approved Frostbound package manifest remained byte-identical with 62 modules / 436,565 bytes.
-
-### R-008 — Implement package backup and recovery drill (M5-A4) — Complete
-
-- **Priority / eligibility:** P2 — Complete
-- **Scope:** Restore or rebuild the Frostbound package from pinned inputs and receipts, then verify byte equality against the approved manifest.
-- **Acceptance criteria:** Recovery evidence records source set, destination, environment, timing, defects, and path/byte/SHA equality.
-
-Applied in this run: `npm run validate:m5-backup-recovery` recorded `docs/validation/evidence/m5-production-hardening/M5-A4-package-backup-recovery-receipt.json`, restored the approved package from a backup copy, rebuilt it from pinned source evidence and the package assembler, and verified 62 modules / 436,565 bytes with no mismatches and unchanged approved package bytes.
-
-### R-009 — Draft release operating procedure and exception policy (M5-A5) — Complete
-
-- **Priority / eligibility:** P2 — Complete
-- **Scope:** Define the release checklist, validation commands, evidence paths, owner sign-off, regression exception policy, rollback decision points, and handoff artifacts.
-- **Acceptance criteria:** Procedure is usable for an engine-neutral asset package release and references completed hardening evidence.
-
-Applied in this run: `docs/operations/M5_ENGINE_NEUTRAL_ASSET_RELEASE_PROCEDURE.md` defines release gates, validation commands, evidence paths, sign-off roles, exception approvers, rollback decision points, rollback steps, and handoff artifact addresses for the engine-neutral Frostbound package.
-
-### R-010 — Decide multi-style hardening coverage (M5-A6) — Complete
-
-- **Priority / eligibility:** P2 — Complete
-- **Decision:** Option A approved on 2026-07-18: Frostbound-only hardening is sufficient for M5 exit; multi-style coverage is deferred as a future scaling risk.
-- **Acceptance criteria:** Approved decision records either the additional target and next agent-ready task, or the rationale for deferring extra coverage.
-
-Applied in this run: [ADR-016](../../decisions/ADR-016-m5-frostbound-only-hardening-coverage.md) records the release rationale, accepted residual risk, and future trigger for additional style/package hardening.
+- **Priority / eligibility:** P3 — Agent-ready after R-014.
+- **Scope:** Add a documentation/evidence consistency check for next-task text, task status, required review evidence links, and stale active implementation status.
+- **Acceptance criteria:** The check fails with actionable messages on the M8/M10 drift patterns found in F-014.
+- **Validation:** Focused negative fixtures plus repository consistency command.
 
 ## Review conclusion
 
-The asset package and M5-A2/M5-A3/M5-A4 validation are healthy, M5-A5 defines the release procedure needed to use that evidence, R-010/ADR-016 accepts Frostbound-only hardening for M5 exit, and ADR-017 defers M6 dashboard/workflow scaling. R-001 resolved the M4/M5 status inconsistency, R-002 closed the active Unity-governance drift, R-003 closed the reproducibility batch, R-004 selected archival legacy validation plus a live engine-neutral successor, R-006 implemented that successor, R-005 split the remaining M5 work into ordered slices, R-007 completed the manifest migration/rollback drill, R-008 completed the package backup/recovery drill, R-009 completed the release operating procedure, and R-010 closed the coverage decision. ADR-018 selects M7 reference-fidelity style expansion as the next asset-only production track; the next recommended action is the M7-A1 specification and rubric.
+The project retains strong deterministic, contract, and historical Frostbound package controls. Its current weakness is not baseline rendering capability; it is the lack of credible multi-style proof. The highest-priority work is therefore R-011, which closes V10’s technical hard gates and makes package/reuse claims independently verifiable. A review-only Volcanic Forge reference must then be selected and registered before treating V10 visual fidelity as a meaningful quality gate. Broader multi-style hardening, third-style proof, and workflow scaling remain deliberately deferred until this second style is credible.
