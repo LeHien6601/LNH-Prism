@@ -6,7 +6,10 @@
     "cleanWorkspace": "M10-R002-clean-workspace-receipt.json",
     "moduleReceipts": "assets/m10-volcanic-forge/manifest.json",
     "seedBaseline": "M10-R002-variation-receipts.json",
-    "generalizedSeam": "M10-R002-generalized-seam-proof.json"
+    "generalizedSeam": "M10-R002-generalized-seam-proof.json",
+    "sourceScale": "M10-E-source-scale.html",
+    "targetPhone": "M10-E-target-phone.html",
+    "thumbnail": "M10-E-thumbnail.html"
   },
   "automaticBlockers": [],
   "scoringPerformed": false,

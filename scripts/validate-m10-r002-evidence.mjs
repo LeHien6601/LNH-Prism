@@ -10,5 +10,6 @@ const seeds = JSON.parse(await readFile(resolve(evidence, "M10-R002-variation-re
 if (seeds.receipts.length !== 4 || !seeds.receipts.some(item => item.seed === 0 && item.baseline) || new Set(seeds.receipts.map(item => item.sha256)).size !== 4) throw Error("M10 seed and zero-baseline receipts are incomplete");
 const reproduction = JSON.parse(await readFile(resolve(evidence, "M10-R002-clean-workspace-receipt.json")));
 if (reproduction.status !== "pass" || reproduction.comparedModules !== 52 || reproduction.manifestMatch !== true) throw Error("M10 clean-workspace byte comparison failed");
-for (const file of ["M10-E-technical-preflight.json", "M10-R002-generalized-seam-proof.json"]) await access(resolve(evidence, file));
-console.log(`validated ${matrix.count} M10 entries, ${manifest.modules.length} module receipts, seeds, clean workspace, and generalized seam.`);
+for (const file of ["M10-E-technical-preflight.json", "M10-R002-generalized-seam-proof.json", "M10-E-source-scale.html", "M10-E-target-phone.html", "M10-E-thumbnail.html", "m10-volcanic-forge-target-phone.svg", "m10-volcanic-forge-target-phone.png"]) await access(resolve(evidence, file));
+const phone = await readFile(resolve(evidence, "m10-volcanic-forge-target-phone.svg"), "utf8"); if (!phone.includes("data-renderer=\"style-composition\"") || !phone.includes("data-ember-count=\"8\"")) throw Error("M10 target-phone surface is not derived from the generalized renderer.");
+console.log(`validated ${matrix.count} M10 entries, ${manifest.modules.length} module receipts, seeds, clean workspace, generalized seam, and all three review distances.`);
