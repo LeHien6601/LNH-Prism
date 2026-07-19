@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🔵 **Generalize Enchanted Forest review-reference boundary validation (R-018 / M11-A1)** · 🤖 Agent |
-| Next agent-ready task | R-018 / M11-A1 — parameterize review-reference production-boundary validation and add Enchanted Forest registration/negative coverage before any renderer or material work |
+| Next task | 🔵 **Prove Enchanted Forest shared-composition binding (R-019 / M11-A2)** · 🤖 Agent |
+| Next agent-ready task | R-019 / M11-A2 — add Enchanted Forest versioned bindings and contract coverage through the existing composition seam before matrix rendering |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🟢 Definition and implementation sequence approved — R-020 completed; R-018 / M11-A1 boundary validation is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🟢 Definition, sequence, and reference boundary ready — R-018 / M11-A1 passed; R-019 / M11-A2 bindings are next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -165,7 +165,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Review and approve Enchanted Forest third-style definition and rubric (R-016c) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option A approved the definition/rubric with semantic-text, unobscured target-phone readability and a `3/5` minimum; see [ADR-025](decisions/ADR-025-enchanted-forest-definition-approval.md) |
 | P1 | Add lightweight control-drift detection (R-017) | 🤖 Agent | 🟢 Complete | Read-only control validator and negative fixtures reject stale next-task state and undocumented review-only references |
 | P0 | Plan bounded M11 implementation and evidence slices (R-020) | 🤖 Agent | 🟢 Complete | [M11 implementation plan](implementation/M11_ENCHANTED_FOREST_IMPLEMENTATION_PLAN.md) defines ordered contracts/materials, rendering/matrix, package/evidence, and review slices with one validation target each |
-| P0 | Generalize Enchanted Forest review-reference boundary validation (R-018 / M11-A1) | 🤖 Agent | 🔵 Agent-ready | Parameterize review-reference boundary validation and add Enchanted Forest registration/negative coverage before renderer/material work |
+| P0 | Generalize Enchanted Forest review-reference boundary validation (R-018 / M11-A1) | 🤖 Agent | 🟢 Complete | Registered review-only validator rejects Forge/Enchanted Forest filename, hash, identical-raster, direct-link, and `<image>` production leaks; M10 regression remains green |
+| P0 | Prove Enchanted Forest shared-composition binding (R-019 / M11-A2) | 🤖 Agent | 🔵 Agent-ready | Add versioned bindings and contract coverage for approved materials, variation, ornament, focal, typography, lighting, and state through the existing composition seam |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -313,6 +314,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Approved R-016c Option A: accepted the Enchanted Forest definition/rubric with semantic-text, unobscured target-phone readability and a `3/5` minimum; R-020 slice planning is next | Project owner / Codex |
 | 2026-07-19 | Completed R-017: added read-only control-drift validation for active-task alignment and documented review-only references; R-020 remains next | Codex |
 | 2026-07-19 | Completed R-020: defined bounded M11 contracts/materials, rendering/matrix, package/evidence, and review slices; R-018 / M11-A1 boundary validation is next | Codex |
+| 2026-07-19 | Completed R-018 / M11-A1: generalized review-reference boundary validation and proved Forge/Enchanted Forest negative leak coverage; R-019 / M11-A2 bindings are next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
