@@ -43,3 +43,21 @@ Technical hard-gate outcome: **Pass**. Technical correctness is not used to incr
 - Visual minima fail for Three-style distinction and Organic material separation (`1/5` each), Botanical ornament restraint and Seeded organic variation (`2/5` each), and the weighted total is below `85/100`.
 
 **Decision:** Fail — scored at `41/100`. Do not advance M11 to pass. The required remediation is M11-R001, limited to replacing inherited Frostbound material grammar with independently visible deterministic stone, wood, moss, and botanical treatments through the existing shared composition seam. Preserve geometry, IDs, module boundaries, seeds, semantic text, reference boundary, and all passing technical receipts.
+
+## M11-R002 / V11 re-review — 2026-07-19
+
+Reviewer: project-owner-authorized automated review. Reviewed revision: `c28a2df` (`fix(styles): strengthen enchanted forest material language`). The same technical hard gates and evidence surfaces were re-run and inspected; all passed.
+
+| Dimension | Score | Weighted | Observation |
+|---|---:|---:|---|
+| Three-style distinction | 3/5 | 9 | The visible crystalline grid is removed and the dark green wood/moss treatment reads as a third family at thumbnail scale. |
+| Organic material separation | 2/5 | 6 | Wood bands and moss marks are visible, but weathered stone, wood grain, and moss still read as flat graphic strokes rather than layered materials. |
+| Focal hierarchy | 3/5 | 9 | The seed remains identifiable without competing with actions, but lacks grove-depth/support detail. |
+| Botanical ornament restraint | 3/5 | 6 | Vines remain outside slots and are restrained. |
+| Diffuse bioluminescent lighting | 3/5 | 6 | Local light is bounded and coherent but lacks material interaction. |
+| Seeded organic variation | 3/5 | 6 | Deterministic speckles are visible without harming readability. |
+| Typography and state language | 3/5 | 6 | Labels are readable after the contrast correction. |
+| Portrait composition | 3/5 | 6 | Functional hierarchy is legible but lacks the layered environmental depth of the approved direction. |
+| **Total** |  | **54/100** |  |
+
+**Decision: Fail — scored.** No automatic palette-only blocker remains, but the total is below `85/100` and Organic material separation is below `3/5`. `V11-B002` requires deterministic, independently visible stone texture, dark-wood grain, moss growth/masking, and deeper seed-support layering through the shared seam; do not alter geometry, IDs, seeds, semantic text, or production/reference boundaries.

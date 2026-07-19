@@ -10,8 +10,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "panel-488x660-normal",
-      "svgSha256": "be46f307c0cdc8ccd4c0574cf5a68e2421fca059a06c040818d88473d137ec69",
-      "pngSha256": "3325c1d7aebb37c1bf190e63984b965f3d2da2e092305aa67689dea3c2ea299c"
+      "svgSha256": "a28c760db5fdbf06066550ed53199ed971bb152a6bdce8f784696846001c43f1",
+      "pngSha256": "7346f36e7ffa51bb65d94e2c26b2e7e3204e13733e990357759ebddff8af4805"
     },
     {
       "component": "panel",
@@ -20,8 +20,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "panel-488x760-normal",
-      "svgSha256": "257e849566966912fc9f3b9aeecc598beedaa8ae76bd0bc1ac5775fbaeb5e6d8",
-      "pngSha256": "5995a81def02ac1fce8b534f03b4fc6483b83f5065cef72294a326fc2f63e72e"
+      "svgSha256": "ea744a19196694ea3d53669a9e4cbeb756f7d0b35d8fd77f5b5fdcc4a26505ed",
+      "pngSha256": "8c128ff69b0987a77478d7576ec1de135ebd2fb7d0060e0cb7a653a6d55a3099"
     },
     {
       "component": "primary-hex-button",
@@ -30,8 +30,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "primary-hex-button-320x68-normal",
-      "svgSha256": "90bb711b31bf9aa3f0e04c74a6226295a750786e0247eeedfc25a0147a50b44d",
-      "pngSha256": "870ed3c660b9d7d063c0f738da8947ccadfc1f370c355f434a037226bbafe9f3"
+      "svgSha256": "af424e69fc96a9844ee763cccbb75af0b419b9024dfdeb17d1bc3c320c570461",
+      "pngSha256": "96505b1f98234cad9162ab70c498a80d6db3d649171ce416d408c792612f708d"
     },
     {
       "component": "primary-hex-button",
@@ -40,8 +40,8 @@
       "state": "pressed",
       "variationSeed": 51731,
       "name": "primary-hex-button-320x68-pressed",
-      "svgSha256": "ec157afa9ceaeea45e5a6c50e47df5b7a379bb7f78166c28ba960c86ab107517",
-      "pngSha256": "46e79f63157440108979c2dae0fccda0f86cbfff24558a22fc7db72158f5821b"
+      "svgSha256": "787c52e6f247f646187adca922f7db8d8c2ffa9c5aac15f44003ee8c8e07d90e",
+      "pngSha256": "7f975077f394534196cba13c6d9a56345608e4857b939649df8b571e179dbcc3"
     },
     {
       "component": "primary-hex-button",
@@ -50,8 +50,8 @@
       "state": "disabled",
       "variationSeed": 51731,
       "name": "primary-hex-button-320x68-disabled",
-      "svgSha256": "33cfefe86ca0c0779619dbe59d0c957c44dd695d2f2e75d253a1a63e92f2794c",
-      "pngSha256": "475c7e8258fd448d5066cb65781398fc563e557333d64263d71f61bb7b7b8a12"
+      "svgSha256": "495c400f35848de1426fd785670083211b23a3588df131b4d68643588ab56a0d",
+      "pngSha256": "ef2b42e6105c38800a6754cf2b4d885b4c6529c508d187ed4c3531fea7fef3a3"
     },
     {
       "component": "primary-hex-button",
@@ -60,8 +60,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "primary-hex-button-260x62-normal",
-      "svgSha256": "a468cefd69456131628336d9dd26c7f7512a01c5b680c7b1dde20cb40337dc95",
-      "pngSha256": "d512a952c4a8b469534cebaa55a86d2e9c4cc3dd00a48eeafb6bd218c29babe7"
+      "svgSha256": "84a63cc589ad3d1e71a090eb2095d03167f2849391f181226a06027e3fe2c42d",
+      "pngSha256": "c370c6d6b3b12b800dcfa8bf398cef8727b52999ac26cd4493b21929bcba7ca2"
     },
     {
       "component": "primary-hex-button",
@@ -70,8 +70,8 @@
       "state": "pressed",
       "variationSeed": 51731,
       "name": "primary-hex-button-260x62-pressed",
-      "svgSha256": "81e30a49e353a685d3952a9ca3d10da8a1fcc88d5aa7de836a0e16a1209770bd",
-      "pngSha256": "c330ce8f15e56bfa471f0ca9ac624434e0a7aeba733c386a401cbd7640ffee4e"
+      "svgSha256": "922c3f20aac047fb03f22df1d202994544bcf67ce87375a274e707e0bbf06dd2",
+      "pngSha256": "af5630f95f4c94a85dc934feb1d473d132daf387181687b0b6e3f662e9d93159"
     },
     {
       "component": "primary-hex-button",
@@ -80,8 +80,8 @@
       "state": "disabled",
       "variationSeed": 51731,
       "name": "primary-hex-button-260x62-disabled",
-      "svgSha256": "c42394907b87ad5cdfb3bd431bc77857e2f15b92122ba4bf4ddb47b2e66bfeac",
-      "pngSha256": "16cc125e5df1d7bf85885b33fb3c7672c423c89818de1274160ad71804eb8281"
+      "svgSha256": "99b1c3ea6bdd6f20ebdd2928cbe29807296a4c33b76c2b88f10d8ca4e1ef4c9e",
+      "pngSha256": "8f0394bc3e01368b91c7a9c2a7c6fa264e5138e11c570d047a877565cc05a4e6"
     },
     {
       "component": "secondary-hex-button",
@@ -90,8 +90,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "secondary-hex-button-232x56-normal",
-      "svgSha256": "2194c1020d6022fc240806a2e870b706b9385ae3cb0de4df158bad72882d84b9",
-      "pngSha256": "9b0c5e02d362f36dfc6e9c0646bc57c992b00f7c69d14b0a4d3c43cbf369fab6"
+      "svgSha256": "6051c94e852b9f81a898121410570cc765ba2d198a1fc00128c8fee1e45013f8",
+      "pngSha256": "cf58b37f430c9861e94dd2d422cb00c2f0beb38c9431ecf4cb250c9a5707636f"
     },
     {
       "component": "secondary-hex-button",
@@ -100,8 +100,8 @@
       "state": "pressed",
       "variationSeed": 51731,
       "name": "secondary-hex-button-232x56-pressed",
-      "svgSha256": "bdba3a8e4093ba18442545bf8fad0b8b8facd288c05671f4dcfbb0f18cd26f6d",
-      "pngSha256": "60d46aa7e7bc78c5902485f2aea8b1b4462b9a0a2c22295b3c198c81fefa34b2"
+      "svgSha256": "8fd08580ec2fc30dd89b3c52cf31b4112f2da175e0d6004ac0b3fd78a09e9ab3",
+      "pngSha256": "48c54b857d5a57d57238d9f496dd8a094a36aba95d1aa382cb7c24f5591f4cca"
     },
     {
       "component": "secondary-hex-button",
@@ -110,8 +110,8 @@
       "state": "disabled",
       "variationSeed": 51731,
       "name": "secondary-hex-button-232x56-disabled",
-      "svgSha256": "372a4fe430fe7e869f594ec1bb237dc35b95409333c715b20d770f3da43bece2",
-      "pngSha256": "38152c9a9d3ba52b7d10f990bcb65347ed2d318aa793a873395ee4f068b86f5e"
+      "svgSha256": "70bb27413fca5fc143c97f13a2f673b73085a6557b32002b10d109671391e878",
+      "pngSha256": "65d245cb00c9d94f22e83543e0066975bf70cd579096395dfd6236648427449a"
     },
     {
       "component": "secondary-hex-button",
@@ -120,8 +120,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "secondary-hex-button-188x52-normal",
-      "svgSha256": "93ef0902efee63718b555601fe43ce92d6c8a9f2e14f2a7596f7d645cc39d94c",
-      "pngSha256": "b2466926b2c3b2dd8a87f18d944e2e582f4476d73fe752d4635c3f3ea5c291c7"
+      "svgSha256": "57e214cb8d3f6fb41ab08c086688413c381c0a0a5f7dae97f19439057bf70110",
+      "pngSha256": "0e5152b16f5f9d35b54fd5d69ef463cb4af8a938af28aca182ee941909b6158a"
     },
     {
       "component": "secondary-hex-button",
@@ -130,8 +130,8 @@
       "state": "pressed",
       "variationSeed": 51731,
       "name": "secondary-hex-button-188x52-pressed",
-      "svgSha256": "ab8998a87bb99892f844ca6fec8c8d33cee6220ae3cf500b8cf095b792388cf4",
-      "pngSha256": "d66efa91fc0ac47c62411934e8371e06a5b1d54dbe1d9753fe43f207681a43d5"
+      "svgSha256": "dc87cc2b7d85efda61ce414277388ff048f36b155876bf3f0d46dad28d3797ef",
+      "pngSha256": "aafbce645da1bcb097659eb395eede0d3fe26416453507b42b334131c2ccfaa8"
     },
     {
       "component": "secondary-hex-button",
@@ -140,8 +140,8 @@
       "state": "disabled",
       "variationSeed": 51731,
       "name": "secondary-hex-button-188x52-disabled",
-      "svgSha256": "bd16c8b28d410670a738b3427ba61b83109bc0964c476023bb8ec5e7c63a381a",
-      "pngSha256": "abfc3138bf56528a3f279c45003503ddf6cab2ec88adf0ee4b75e282ce10e5f7"
+      "svgSha256": "87aa86800d5d789ce10c321792eff468c75508b51461b70771621b87a986518e",
+      "pngSha256": "5d245a142d859a84c92ede83cc159d128cac8b16a90b43f18d7347131417fdff"
     },
     {
       "component": "tab",
@@ -150,8 +150,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "tab-148x52-normal",
-      "svgSha256": "6cbef2e0008175d1ff0983d408a4736d692923f032c1d3fa0080250945099818",
-      "pngSha256": "8fa017a72918195ffb2941a9812f3087a4d429d8ca3e86e5ae0d087cb8754566"
+      "svgSha256": "a1ca2aa8faf3199cc87245dfcef129734574648d2e9f256512131d1cdff3ee24",
+      "pngSha256": "fefbb5e98319251c07ecba3a2c6dab3737a3690870fa337e717adfec47cae15d"
     },
     {
       "component": "tab",
@@ -160,8 +160,8 @@
       "state": "selected",
       "variationSeed": 51731,
       "name": "tab-184x52-selected",
-      "svgSha256": "c97cf8a8a56b409bfa87c31d90fe5f651cd30c0fe6e4f2e3731efc1429c4f33c",
-      "pngSha256": "a9b469909bc9125ab8d8e81be03273edcad5e0bda4f46b652b44040e5d84e83d"
+      "svgSha256": "5e29fcba72771fca135c6a5ea781ba23c0c9707db21a65c1aa9bc4ad23d5024f",
+      "pngSha256": "10ba59bdfa3f7abf9163c2dae3e6f7894c4ab4b5cd6e8460bf4da335e95aadf7"
     },
     {
       "component": "badge",
@@ -170,8 +170,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "badge-164x48-normal",
-      "svgSha256": "4695e400ba4aeb5b7acd0245d6a5b10a54c18b385f2e111436145b50a0943c38",
-      "pngSha256": "f0f0bce26d233e6ef573c6bd0ef6223b0bb4e50641aaf314fcc092c80885b389"
+      "svgSha256": "6d97c85d1a69cfb61c1fbd5348c665626fe13568dbcbf48e37f563e69de3b847",
+      "pngSha256": "23e6028992a29140f505478c0e47e9e2136d8e0ae165ca7c5ca0a48e36248d4c"
     },
     {
       "component": "badge",
@@ -180,8 +180,8 @@
       "state": "highlighted",
       "variationSeed": 51731,
       "name": "badge-212x48-highlighted",
-      "svgSha256": "1222ffcb9c11840127faf264e27dbfc74689f31064982e5abc35bd728168d31d",
-      "pngSha256": "6d9dc2e2a26b10877d20ec1f5c96270949b85714966110d67adf88438f4a5cf1"
+      "svgSha256": "17bfda2a71614121f5b7dce53f90a810140569a821b4a487cc0e28e3c0f2b691",
+      "pngSha256": "ff773e605a21a483e5e5c7a050d829b6abe8b40386e69897df55e0fef33ed517"
     },
     {
       "component": "icon-container",
@@ -190,8 +190,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "icon-container-92x92-normal",
-      "svgSha256": "c74133ea5e7eebf2b8fa507898e9b7cd726ee1a7c6776667eb159725b9fff82d",
-      "pngSha256": "d5c39ad640547a66e9dbc2e5eb47da00e7e41ac3ab8350afe34a8ad1fbd89b3c"
+      "svgSha256": "35f09058275f27d9137b51844bba689309f911e90f0df44fe3a1cbfe5ecaab0a",
+      "pngSha256": "3278e5ea1ed2c6cf2c62a5dcfef39a2adf490a6c6196ffb2bde29c85b15cc331"
     },
     {
       "component": "icon-container",
@@ -200,8 +200,8 @@
       "state": "selected",
       "variationSeed": 51731,
       "name": "icon-container-116x116-selected",
-      "svgSha256": "97ef3f09243ee757d07cb8bdf1b6fea15161543d17bf1c7bd8d43fba4f1019ef",
-      "pngSha256": "403cf3ca907a56e9be3f6fe07898a7e1b94cfdbb621f272910609113f25c6129"
+      "svgSha256": "64467eea795f022d9180320f0401f8940024f0ca0e077f712fd546d3b1f814c2",
+      "pngSha256": "bbc0c2c5ed623870ea9f8880c137c5ba9702a50100e0f1b33ee1828fc2ced172"
     },
     {
       "component": "progress",

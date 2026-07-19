@@ -14,8 +14,11 @@ test("M11 renders required shared-template states without obscuring semantic lay
   const panel = renderStyledComponentSvg({ component: "panel", width: 488, height: 660, state: "normal", variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
   assert.match(panel, /data-layer="forest-material-stack"/);
   assert.match(panel, /data-material-families="weathered-stone,dark-wood,moss-lichen"/);
+  assert.match(panel, /data-layer="forest-material-detail"/);
+  assert.match(panel, /data-material-channels="stone-chips,wood-grain,moss-mask"/);
   assert.ok(panel.indexOf('data-layer="forest-material-stack"') > panel.indexOf('data-layer="surface-pattern"'));
   assert.match(panel, /data-layer="luminous-seed-focal"/);
+  assert.match(panel, /data-layer="forest-focal-roots"/);
   assert.match(panel, /data-halo-opacity="\.40"/);
   const progress = renderStyledProgressSvg({ component: "progress", width: 420, height: 28, percent: 90, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
   assert.match(progress, /data-part="frame"/);
