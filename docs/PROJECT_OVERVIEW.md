@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M9 — Frostbound production-fidelity systems** |
-| Next task | 🔵 **Implement M9 typography treatments** · 🤖 Agent |
-| Next agent-ready task | M9-A7 — add reusable typography effects and deterministic width/state behavior |
+| Next task | 🔵 **Implement M9 shared lighting model** · 🤖 Agent |
+| Next agent-ready task | M9-A8 — add a shared lighting model for edge, material, focal, ornament, and typography systems |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -132,7 +132,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Implement M9 seeded variation channels and receipts (M9-A4) | 🤖 Agent | 🟢 Complete | Versioned bounded channel registry, explicit unsigned seed resolver/receipt, zero-detail baseline, and region-local renderer metadata validate deterministic same/different-seed behavior across all approved components |
 | P0 | Implement M9 structural and ornament separation (M9-A5) | 🤖 Agent | 🟢 Complete | Versioned deterministic ornament anchors/bindings render independently from structure with explicit clipping and mirrored reuse; content bounds remain unchanged |
 | P0 | Implement M9 focal-object framework (M9-A6) | 🤖 Agent | 🟢 Complete | Versioned crystal and placeholder focal presets expose independently addressable optional layers and integrate with M9 panel/icon outputs deterministically |
-| P0 | Implement M9 typography treatments (M9-A7) | 🤖 Agent | 🔵 Agent-ready | Typography effects remain separate from geometry with deterministic long/short width fitting and stable state behavior |
+| P0 | Implement M9 typography treatments (M9-A7) | 🤖 Agent | 🟢 Complete | Reusable title/action treatments provide independent face/bevel layers with deterministic width fitting and stable pressed/disabled behavior |
+| P0 | Implement M9 shared lighting model (M9-A8) | 🤖 Agent | 🔵 Agent-ready | Versioned shared lighting coherently drives edge, material, focal, ornament, and typography effects within budgets |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
