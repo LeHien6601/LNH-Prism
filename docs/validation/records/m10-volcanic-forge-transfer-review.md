@@ -32,6 +32,31 @@
 
 M10-R001 is complete. The remediated package contains 26 state/size matrix entries and 52 canonical modules, source/target-phone/thumbnail review surfaces, a clean-reproduction receipt, and editable forge ornament, engraved-typography, and molten-focal layers. `npm run validate:m10-r001-package` passed.
 
-## Review conclusion
+## Formal V10 review — Option B
 
-The reviewers selected Option A. No V10 visual score or pass/fail result is recorded because the original evidence was incomplete. The remediation is now complete; M10 remains open and V10 must be re-reviewed against the approved rubric.
+| Field | Result |
+|---|---|
+| Reviewer | Project-owner-authorized decision |
+| Technical hard gate | Fail |
+| Visual score | `78/100` — recorded for diagnostic use only; it cannot override hard-gate failure |
+| Final decision | Fail |
+
+| Dimension | Score | Observation |
+|---|---:|---|
+| Style distinction from Frostbound | 12/15 | Molten focal, brass rivets, and warm palette are visibly different. |
+| Obsidian/brass/lava material separation | 12/15 | Readable system separation, with restrained lava. |
+| Forged edge depth and angular-language fidelity | 8/10 | Shared angular geometry remains intact. |
+| Warm lighting and emission restraint | 8/10 | Bottom heat and eight-ember cap are evidenced. |
+| Molten focal-object strength and hierarchy | 11/15 | The molten focal is present and contained. |
+| Ornament and ember restraint | 8/10 | Runes/rivets are editable and controls do not emit embers. |
+| Seeded soot/crack/hammered variation quality | 4/10 | No recorded nonzero or zero-baseline output receipts prove this required behavior. |
+| Composition and action hierarchy | 8/10 | Phone surface shows title, focal, progress, and distinct actions. |
+| Mobile-scale readability and state distinction | 5/5 | Focused evidence checks the required states and bounds. |
+
+## Blockers and required remediation
+
+1. `V10-B001` — The reproduction receipt rebuilds evidence/package directories in the working repository, not a clean workspace with byte comparison.
+2. `V10-B002` — The generated M10 requests do not carry recorded nonzero variation seeds or a zero-variation baseline receipt.
+3. `V10-B003` — `src/renderer/m10-style-transfer-components.ts` is a style-specific adapter. It delegates to M8, but the current evidence does not prove it is the approved generalized renderer seam rather than a parallel renderer.
+
+M10-R002 is the bounded agent-ready remediation: add true clean-workspace reproduction and seed/zero-baseline receipts, then move or prove the composition at a generalized renderer seam and regenerate the evidence. V10 must be re-reviewed after those blockers are closed.
