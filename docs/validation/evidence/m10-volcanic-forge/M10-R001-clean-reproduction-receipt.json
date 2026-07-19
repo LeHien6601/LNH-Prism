@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "status": "pass",
+  "command": "npm run prepare:m10-r001-package",
+  "cleanWorkspace": "fresh generated evidence/package directories from versioned renderer and bindings",
+  "matrixEntries": 26,
+  "modules": 52,
+  "deterministicManifestSha256": "e542d10034eeea8182476ba27fbf5aab0db7b29544c01bc393b04b2c8bd06a87",
+  "checks": {
+    "canonicalInventory": "pass",
+    "sourcePhoneThumbnail": "pass",
+    "noControlEmbers": "pass",
+    "portraitEmbers": "pass"
+  }
+}

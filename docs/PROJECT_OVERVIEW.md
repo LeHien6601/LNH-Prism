@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🔵 **Remediate the V10 Volcanic Forge evidence package and visual-transfer proof (M10-R001)** · 🤖 Agent |
-| Next agent-ready task | M10-R001 — complete the missing review surfaces, clean-reproduction proof, canonical inventory mapping, and non-palette-only transfer evidence before V10 is re-reviewed |
+| Next task | 🟣 **Conduct V10 Volcanic Forge transfer review** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | No unblocked agent-ready task; M10-A7 re-review is required |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -146,7 +146,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Render Volcanic Forge component matrix and portrait (M10-A5) | 🤖 Agent | 🟢 Complete | Rendered the seven-component Volcanic Forge matrix and portrait with the shared template compositor, warm palette mapping, deterministic output, and bounded emission configuration |
 | P0 | Prepare Volcanic Forge package and technical evidence (M10-A6) | 🤖 Agent | 🟢 Complete | Produced the engine-neutral package, receipts, showroom, Frostbound comparison, and unscored technical preflight without changing approved M7–M9 outputs |
 | P0 | Conduct V10 Volcanic Forge transfer review (M10-A7) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Return for remediation | Option A selected: do not score the incomplete package; require corrective evidence and a materially distinct transfer before re-review; see `validation/records/m10-volcanic-forge-transfer-review.md` |
-| P0 | Remediate the V10 Volcanic Forge evidence package and visual-transfer proof (M10-R001) | 🤖 Agent | 🔵 Agent-ready | Complete source/phone/thumbnail review surfaces and clean reproduction evidence; correct canonical inventory mapping; and demonstrate data-bound obsidian/brass/lava material, lighting, ornament, typography, focal, and state differences that remove palette-only ambiguity without changing M7–M9 outputs |
+| P0 | Remediate the V10 Volcanic Forge evidence package and visual-transfer proof (M10-R001) | 🤖 Agent | 🟢 Complete | Produced 26 state/size entries, 52 canonical modules, source/phone/thumbnail review surfaces, clean-reproduction receipt, and editable forge-specific focal/ornament/typography layers; focused validation passes |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -277,6 +277,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed M10-A4: added versioned Volcanic Forge data bindings and contract coverage for shared-system reuse, complete component coverage, and approved emission limits; M10-A5 rendering is next | Codex |
 | 2026-07-19 | Completed M10-A5: rendered the Volcanic Forge matrix and portrait through the shared template compositor with deterministic warm palette bindings; M10-A6 evidence/package work is next | Codex |
 | 2026-07-19 | Completed M10-A6 and selected V10 review Option A: return the incomplete package for M10-R001 remediation before scoring; require full review-distance evidence, clean reproduction, canonical inventory mapping, and proof that the transfer is not palette-only | Project owner / Codex |
+| 2026-07-19 | Completed M10-R001: rebuilt the Volcanic Forge package with editable forge layers, canonical inventory, complete review surfaces, and deterministic receipts; V10 re-review is next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |

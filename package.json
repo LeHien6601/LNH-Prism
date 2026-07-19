@@ -32,6 +32,8 @@
     "validate:m8-a4-assets": "node scripts/validate-m8-a4-assets.mjs",
     "prepare:m9-a10-package": "npm run build:renderer && node scripts/prepare-m9-a10-package.mjs",
     "validate:m9-a10-package": "node scripts/validate-m9-a10-package.mjs",
+    "prepare:m10-r001-package": "npm run build:renderer && node scripts/prepare-m10-r001-package.mjs && node scripts/finalize-m10-r001-receipts.mjs",
+    "validate:m10-r001-package": "node scripts/validate-m10-r001-evidence.mjs",
     "prepare:v8-evidence": "node scripts/prepare-v8-evidence.mjs",
     "validate:v8-evidence": "node scripts/validate-v8-evidence.mjs",
     "prepare:v7-evidence": "node scripts/prepare-v7-review.mjs",

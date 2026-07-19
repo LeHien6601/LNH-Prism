@@ -2,6 +2,19 @@
   "schemaVersion": "1.0",
   "status": "unscored-review-ready",
   "technicalCorrectness": "hard-gate-only",
+  "checks": [
+    "deterministic-reproduction",
+    "stable-ids",
+    "provenance-and-receipts",
+    "engine-neutral-delivery",
+    "editable-structure",
+    "recorded-seeds-and-zero-baseline",
+    "clean-reproduction",
+    "no-reference-pixels",
+    "no-style-branch",
+    "functional-bounds",
+    "target-phone-readability"
+  ],
   "automaticBlockers": [],
   "scoringPerformed": false,
   "gateDecision": "pending-human-review"

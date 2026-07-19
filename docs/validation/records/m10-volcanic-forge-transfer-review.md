@@ -8,7 +8,7 @@
 | Reviewers | Project owner, with Product, Art, UI, and Technical review roles represented by the approved decision |
 | Decision | Option A — return for remediation before scoring |
 | Score | Not recorded; the package is not eligible for a V10 pass/fail score |
-| Next task | M10-R001 — Remediate the V10 Volcanic Forge evidence package and visual-transfer proof |
+| Next task | M10-A7 — Conduct V10 Volcanic Forge transfer review |
 
 ## Evidence inspected
 
@@ -28,6 +28,10 @@
 | V10-R003 | Canonical inventory evidence drifts: the manifest lists `icon`, while the approved inventory names `icon-container`. | `assets/m10-volcanic-forge/manifest.json` component inventory. | Preserve the canonical `icon-container` identity through manifest and receipt evidence. |
 | V10-R004 | The comparison and current matrix do not yet prove a materially distinct Volcanic Forge visual system; the available comparison only establishes warm versus cold palette direction. | `M10-E-comparison.md` states warm obsidian/brass/lava versus cold crystal/ice, without proof for required surface response, lighting, ornament, variation, typography, focal, and state behavior. | Render and document data-bound system differences so the V10 palette-only blocker can be evaluated and cleared. |
 
+## Remediation completion
+
+M10-R001 is complete. The remediated package contains 26 state/size matrix entries and 52 canonical modules, source/target-phone/thumbnail review surfaces, a clean-reproduction receipt, and editable forge ornament, engraved-typography, and molten-focal layers. `npm run validate:m10-r001-package` passed.
+
 ## Review conclusion
 
-The reviewers selected Option A. No V10 visual score or pass/fail result is recorded because the required evidence is incomplete and the available comparison cannot yet establish that the transfer is more than a palette change. M10 remains open; M10-R001 is agent-ready and V10 must be re-reviewed after its acceptance criteria are met.
+The reviewers selected Option A. No V10 visual score or pass/fail result is recorded because the original evidence was incomplete. The remediation is now complete; M10 remains open and V10 must be re-reviewed against the approved rubric.
