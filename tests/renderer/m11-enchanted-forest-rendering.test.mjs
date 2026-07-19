@@ -20,6 +20,8 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.match(panel, /data-layer="forest-weathered-stone"/);
   assert.match(panel, /data-layer="forest-dark-wood-grain"/);
   assert.match(panel, /data-layer="forest-moss-growth-mask"/);
+  assert.match(panel, /data-layer="forest-material-restraint"/);
+  assert.match(panel, /data-restraint="edge-anchored-low-opacity"/);
   assert.ok(panel.indexOf('data-layer="forest-material-stack"') > panel.indexOf('data-layer="surface-pattern"'));
   assert.match(panel, /data-layer="luminous-seed-focal"/);
   assert.match(panel, /data-layer="forest-focal-roots"/);
