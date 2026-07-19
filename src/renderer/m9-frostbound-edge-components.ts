@@ -1,6 +1,7 @@
 import { M9_FROSTBOUND_EDGE_STACKS, renderEdgeStackSvg, type EdgeStackPreset } from "./edge-stacks.js";
 import { resolveMaterialResponse } from "../materials/m9-material-responses.js";
 import { renderVariationSvg, type VariationRegion } from "../materials/m9-variation.js";
+import { renderM9Ornaments } from "./m9-ornaments.js";
 import { renderM8FrostboundComponentSvg, renderM8FrostboundProgressFillSvg, renderM8FrostboundProgressFrameSvg, renderM8FrostboundProgressSvg } from "./m8-frostbound-components.js";
 import type { M7AngularComponent, M7AngularRequest } from "./m7-angular-components.js";
 
@@ -23,7 +24,8 @@ function migrate(svg: string, request: M9FrostboundRequest, framePart = false): 
   if (!match) throw new Error("M9 edge-stack migration could not locate the inherited structural frame.");
   const stack = renderEdgeStackSvg({ instanceId: `${match[1]}-m9`, path: match[2], width: request.width, height: request.height, preset });
   const responses = responseLayers(`${match[1]}-m9`, match[2], request.component, request.width, request.height, request.variationPresetId, request.variationSeed);
-  const replacement = framePart ? `<g id="${match[1]}" data-part="frame">${stack}${responses}</g>` : `${stack}${responses}`;
+  const ornaments = framePart ? "" : renderM9Ornaments(`${match[1]}-m9`, request.component, request.width, request.height);
+  const replacement = framePart ? `<g id="${match[1]}" data-part="frame">${stack}${responses}</g>` : `${stack}${responses}${ornaments}`;
   return svg.replace(match[0], replacement).replace("m8-frostbound-aligned@0.1.0", "m9-frostbound-production-fidelity@0.1.0").replace("M8 Frostbound", "M9 Frostbound edge stack");
 }
 

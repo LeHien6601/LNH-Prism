@@ -1,0 +1,9 @@
+import type { M7AngularComponent } from "./m7-angular-components.js";
+export type OrnamentAnchor = "top-left"|"top-right"|"bottom-left"|"bottom-right"|"center";
+export interface OrnamentBinding { id:string; componentId:M7AngularComponent; anchor:OrnamentAnchor; ornamentId:string; clip:boolean; mirrorOf?:string; }
+export const M9_ORNAMENT_BINDINGS: readonly OrnamentBinding[]=[
+ {id:"m9-panel-corner-left",componentId:"panel",anchor:"top-left",ornamentId:"m9-ice-corner",clip:true},{id:"m9-panel-corner-right",componentId:"panel",anchor:"top-right",ornamentId:"m9-ice-corner",clip:true,mirrorOf:"m9-panel-corner-left"},
+ {id:"m9-button-corner-left",componentId:"primary-hex-button",anchor:"bottom-left",ornamentId:"m9-ice-corner",clip:true},{id:"m9-button-corner-right",componentId:"primary-hex-button",anchor:"bottom-right",ornamentId:"m9-ice-corner",clip:true,mirrorOf:"m9-button-corner-left"}
+];
+function position(anchor:OrnamentAnchor,w:number,h:number):string { if(anchor==="top-left")return "translate(10 10)";if(anchor==="top-right")return `translate(${w-10} 10) scale(-1 1)`;if(anchor==="bottom-left")return `translate(10 ${h-10}) scale(1 -1)`;if(anchor==="bottom-right")return `translate(${w-10} ${h-10}) scale(-1 -1)`;return `translate(${w/2} ${h/2})`; }
+export function renderM9Ornaments(instanceId:string,component:M7AngularComponent,width:number,height:number):string { const bindings=M9_ORNAMENT_BINDINGS.filter(x=>x.componentId===component); return `<g id="${instanceId}-ornaments" data-ornament-layer="independent">${bindings.map(x=>`<g id="${instanceId}-${x.id}" data-ornament-id="${x.ornamentId}" data-anchor="${x.anchor}" data-clip="${x.clip}"${x.mirrorOf?` data-mirror-of="${x.mirrorOf}"`:""} transform="${position(x.anchor,width,height)}"><path d="M0 0h16l-8 8Z" fill="#B9F7FF" fill-opacity=".48" stroke="#E6FBFF" stroke-width="1"/></g>`).join("")}</g>`; }
