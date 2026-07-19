@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "status": "rendered",
+  "renderer": "src/renderer/style-composition.ts",
+  "binding": "src/styles/m11-enchanted-forest-binding.ts",
+  "matrixEntries": 26,
+  "portrait": "m11-enchanted-forest-target-phone.svg",
+  "isolates": [
+    "m11-enchanted-forest-material-isolates.svg",
+    "m11-enchanted-forest-focal-ornament-isolates.svg"
+  ],
+  "surfaces": [
+    "M11-E-source-scale.html",
+    "M11-E-target-phone.html",
+    "M11-E-thumbnail.html",
+    "M11-E-review-reference.html"
+  ],
+  "variationSeed": 51731,
+  "bounds": {
+    "bioluminescenceCoverageMaximum": 0.3,
+    "haloExtentRatioMaximum": 0.12,
+    "haloOpacityMaximum": 0.4,
+    "ornamentMaximum": 6,
+    "portraitMoteMaximum": 12
+  },
+  "packageOrReviewStatus": "deferred-to-m11-a4-and-m11-a5"
+}

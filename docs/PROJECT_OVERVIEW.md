@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🔵 **Render Enchanted Forest matrix and review surfaces (M11-A3)** · 🤖 Agent |
-| Next agent-ready task | M11-A3 — render the seven-component matrix, portrait, isolates, and source/phone/thumbnail review surfaces through shared templates |
+| Next task | 🔵 **Package Enchanted Forest modules and technical preflight (M11-A4)** · 🤖 Agent |
+| Next agent-ready task | M11-A4 — assemble engine-neutral modules, manifest/provenance and deterministic receipts, clean-workspace reproduction, and technical preflight |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🟢 Definition, boundary, and bindings ready — R-019 / M11-A2 passed; M11-A3 rendering is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🟢 Definition, bindings, and rendered review surfaces ready — M11-A3 passed; M11-A4 packaging/preflight is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -167,7 +167,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Plan bounded M11 implementation and evidence slices (R-020) | 🤖 Agent | 🟢 Complete | [M11 implementation plan](implementation/M11_ENCHANTED_FOREST_IMPLEMENTATION_PLAN.md) defines ordered contracts/materials, rendering/matrix, package/evidence, and review slices with one validation target each |
 | P0 | Generalize Enchanted Forest review-reference boundary validation (R-018 / M11-A1) | 🤖 Agent | 🟢 Complete | Registered review-only validator rejects Forge/Enchanted Forest filename, hash, identical-raster, direct-link, and `<image>` production leaks; M10 regression remains green |
 | P0 | Prove Enchanted Forest shared-composition binding (R-019 / M11-A2) | 🤖 Agent | 🟢 Complete | Versioned source-neutral bindings and contract/renderer coverage prove shared geometry, editable layers, approved limits, and deterministic zero/nonzero seed behavior with no M11 renderer fork |
-| P0 | Render Enchanted Forest matrix and review surfaces (M11-A3) | 🤖 Agent | 🔵 Agent-ready | Render the shared-template seven-component matrix and portrait, plus material/focal isolates and source/phone/thumbnail comparison surfaces |
+| P0 | Render Enchanted Forest matrix and review surfaces (M11-A3) | 🤖 Agent | 🟢 Complete | Rendered 26 shared-template matrix entries, target-phone portrait, material/focal isolates, and source/phone/thumbnail/reference comparison surfaces |
+| P0 | Package Enchanted Forest modules and technical preflight (M11-A4) | 🤖 Agent | 🔵 Agent-ready | Assemble engine-neutral SVG/PNG modules, manifest/provenance and deterministic receipts, clean-workspace reproduction, and the technical preflight |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -317,6 +318,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed R-020: defined bounded M11 contracts/materials, rendering/matrix, package/evidence, and review slices; R-018 / M11-A1 boundary validation is next | Codex |
 | 2026-07-19 | Completed R-018 / M11-A1: generalized review-reference boundary validation and proved Forge/Enchanted Forest negative leak coverage; R-019 / M11-A2 bindings are next | Codex |
 | 2026-07-19 | Completed R-019 / M11-A2: added source-neutral Enchanted Forest bindings and shared-seam proof with deterministic seed coverage; M11-A3 rendering is next | Codex |
+| 2026-07-19 | Completed M11-A3: rendered the Enchanted Forest matrix, target-phone portrait, source isolates, and comparison surfaces through shared templates; M11-A4 packaging/preflight is next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |

@@ -37,6 +37,8 @@
     "validate:m10-r001-package": "node scripts/validate-m10-r001-evidence.mjs",
     "prepare:m10-r002-package": "npm run build:renderer && node scripts/prepare-m10-r002-package.mjs && node scripts/prepare-m10-r002-receipts.mjs",
     "validate:m10-r002-package": "node scripts/validate-m10-r002-evidence.mjs",
+    "prepare:m11-a3-evidence": "npm run build:renderer && node scripts/prepare-m11-a3-evidence.mjs",
+    "validate:m11-a3-evidence": "node scripts/validate-m11-a3-evidence.mjs",
     "test:m10-reference-boundary": "node --test tests/validation/m10-reference-boundary.test.mjs",
     "test:review-reference-boundary": "node --test tests/validation/review-reference-boundary.test.mjs",
     "test:control-drift": "node --test tests/validation/control-drift.test.mjs",

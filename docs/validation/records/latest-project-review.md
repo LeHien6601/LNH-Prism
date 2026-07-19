@@ -56,10 +56,16 @@
 
 ### M11-A3 — Render Enchanted Forest matrix and review surfaces
 
+- **Priority / eligibility:** P0 — Complete.
+- **Outcome:** Rendered 26 shared-template matrix entries, a `1080 × 1920` target-phone portrait, editable material and focal/ornament isolate surfaces, and labeled source/phone/thumbnail/reference comparison surfaces.
+- **Validation:** `npm run prepare:m11-a3-evidence`; `npm run validate:m11-a3-evidence`; focused M11 rendering test; contracts; review-reference boundary; control-drift; and target-phone visual inspection passed.
+
+### M11-A4 — Package Enchanted Forest modules and technical preflight
+
 - **Priority / eligibility:** P0 — Agent-ready; this is the active overview task and next recommended task.
-- **Scope:** Render the seven-component matrix and `1080 × 1920` portrait through shared templates, then create material/focal isolates and source/phone/thumbnail comparison surfaces.
-- **Acceptance criteria:** Required states and independent progress parts are visible; organic materials, restrained lighting/ornament, living focal, and readable semantic text follow approved bounds.
-- **Validation:** Focused renderer tests, clipping/slot/readability checks, and three-distance evidence existence/provenance checks.
+- **Scope:** Assemble engine-neutral SVG/PNG modules with manifest/provenance, deterministic seed and clean-workspace receipts, technical preflight, and comparison evidence.
+- **Acceptance criteria:** The bounded package and all V11 hard-gate artifacts reproduce without changing approved M7–M10 outputs.
+- **Validation:** Package/manifest/hash audit, clean-workspace byte comparison, seed receipt audit, reference-boundary scan, and control-drift check.
 
 ### R-020 — Plan bounded M11 implementation and evidence slices
 
