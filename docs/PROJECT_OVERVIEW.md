@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M9 — Frostbound production-fidelity systems** |
-| Next task | 🔵 **Implement M9 seeded variation channels and receipts** · 🤖 Agent |
-| Next agent-ready task | M9-A4 — add deterministic region-local variation, bounds enforcement, and seed traceability |
+| Next task | 🔵 **Implement M9 structural and ornament separation** · 🤖 Agent |
+| Next agent-ready task | M9-A5 — add reusable deterministic ornament anchors/bindings without changing structural or content bounds |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -129,7 +129,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Define M9 Frostbound production-fidelity system slices (M9-A1) | 🤖 Agent | 🟢 Complete | [M9 specification](implementation/M9_FROSTBOUND_PRODUCTION_FIDELITY_SYSTEMS_SPEC.md) defines M9-A2–A11 in dependency order, including shared lighting and independent three-distance/visual scoring review controls |
 | P0 | Implement M9 layered edge-stack contracts and migration (M9-A2) | 🤖 Agent | 🟢 Complete | Versioned registry and reusable presets migrate M9 Frostbound component/progress frames without changing M7/M8 files; ordering, bounds, determinism, and independent frame/fill validation pass |
 | P0 | Implement M9 material-response channels and region bindings (M9-A3) | 🤖 Agent | 🟢 Complete | Versioned source-neutral base/edge/highlight/glow/surface response registry and region resolver bind all seven components; provenance, isolation/combined target-size output, renderer integration, and focused validation pass |
-| P0 | Implement M9 seeded variation channels and receipts (M9-A4) | 🤖 Agent | 🔵 Agent-ready | Explicit deterministic region-local variation stays bounded, supports zero detail, records seeds in receipts/manifests, and validates same/different-seed behavior |
+| P0 | Implement M9 seeded variation channels and receipts (M9-A4) | 🤖 Agent | 🟢 Complete | Versioned bounded channel registry, explicit unsigned seed resolver/receipt, zero-detail baseline, and region-local renderer metadata validate deterministic same/different-seed behavior across all approved components |
+| P0 | Implement M9 structural and ornament separation (M9-A5) | 🤖 Agent | 🔵 Agent-ready | Reusable deterministic ornament anchors/bindings remain independently editable with explicit clipping/mirroring and do not alter structural or content bounds |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -256,3 +257,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
+| 2026-07-19 | Completed M9-A4: added bounded seeded variation presets, region bindings, typed seed receipts, zero baseline, and renderer trace metadata with same/different-seed validation; opened structural/ornament separation | Codex |

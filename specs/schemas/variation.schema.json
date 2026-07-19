@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lnhgames.dev/lnh-prism/schemas/variation/1.0",
+  "title": "LNH Prism Deterministic Variation Registry",
+  "type": "object", "additionalProperties": false,
+  "required": ["schemaVersion", "id", "version", "status", "presets", "bindings", "compatibility"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" }, "id": { "$ref": "https://lnhgames.dev/lnh-prism/schemas/component-spec/1.0#/$defs/id" }, "version": { "$ref": "https://lnhgames.dev/lnh-prism/schemas/component-spec/1.0#/$defs/semver" }, "status": { "enum": ["draft", "reviewed", "approved", "deprecated"] },
+    "presets": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/preset" } }, "bindings": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/binding" } },
+    "compatibility": { "type": "object", "additionalProperties": false, "required": ["minimumRendererVersion"], "properties": { "minimumRendererVersion": { "$ref": "https://lnhgames.dev/lnh-prism/schemas/component-spec/1.0#/$defs/semver" }, "migrationNote": { "type": "string", "maxLength": 500 } } }
+  },
+  "$defs": {
+    "channels": { "type": "object", "additionalProperties": false, "required": ["frostCoverage", "crackDensity", "scratchDensity", "highlightScatter", "particleCount", "shardVariance", "asymmetry"], "properties": { "frostCoverage": { "type": "number", "minimum": 0, "maximum": 1 }, "crackDensity": { "type": "number", "minimum": 0, "maximum": 1 }, "scratchDensity": { "type": "number", "minimum": 0, "maximum": 1 }, "highlightScatter": { "type": "number", "minimum": 0, "maximum": 1 }, "particleCount": { "type": "integer", "minimum": 0, "maximum": 32 }, "shardVariance": { "type": "number", "minimum": 0, "maximum": 1 }, "asymmetry": { "type": "number", "minimum": 0, "maximum": 1 } } },
+    "preset": { "type": "object", "additionalProperties": false, "required": ["id", "version", "seed", "channels"], "properties": { "id": { "$ref": "https://lnhgames.dev/lnh-prism/schemas/component-spec/1.0#/$defs/id" }, "version": { "$ref": "https://lnhgames.dev/lnh-prism/schemas/component-spec/1.0#/$defs/semver" }, "seed": { "type": "integer", "minimum": 0, "maximum": 4294967295 }, "channels": { "$ref": "#/$defs/channels" } } },
+    "binding": { "type": "object", "additionalProperties": false, "required": ["componentId", "region", "presetId"], "properties": { "componentId": { "enum": ["primary-hex-button", "secondary-hex-button", "panel", "tab", "badge", "progress", "icon-container"] }, "region": { "enum": ["content-surface", "focal-surface"] }, "presetId": { "$ref": "https://lnhgames.dev/lnh-prism/schemas/component-spec/1.0#/$defs/id" } } }
+  }
+}

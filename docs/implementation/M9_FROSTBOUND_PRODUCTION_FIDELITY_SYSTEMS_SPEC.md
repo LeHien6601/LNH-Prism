@@ -44,3 +44,4 @@ M9 passes only after M9-A11 records a human-approved visual result with valid te
 |---|---|---|
 | 2026-07-18 | Defined bounded M9 renderer, validation, integration, and human-review slices from ADR-020 and V8-O001. | Codex |
 | 2026-07-19 | Completed M9-A2 edge-stack migration and M9-A3 material-response/region-binding implementation; opened M9-A4 seeded variation. | Codex |
+| 2026-07-19 | Completed M9-A4 bounded seeded variation, typed receipts, zero baseline, and renderer trace metadata; opened M9-A5 structural/ornament separation. | Codex |

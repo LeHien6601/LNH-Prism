@@ -40,6 +40,7 @@ const exampleSchemas = new Map([
   ["m8-frostbound-materials.json", "material-pack.schema.json"],
   ["m9-frostbound-edge-stacks.json", "edge-stack.schema.json"],
   ["m9-frostbound-material-responses.json", "material-response.schema.json"],
+  ["m9-frostbound-variation.json", "variation.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["archive/legacy-primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
@@ -127,6 +128,16 @@ const invalidMaterialResponse = structuredClone(m9Responses);
 invalidMaterialResponse.responses[0].glow.opacity = 1.1;
 if (validateMaterialResponse(invalidMaterialResponse)) throw new Error("material-response schema must reject out-of-range channel opacity.");
 console.log("validated M9 material-response registry, bindings, and channel bounds");
+
+const variationSchema = schemas.get("variation.schema.json");
+const validateVariation = ajv.getSchema(variationSchema.$id);
+const m9Variation = JSON.parse(await readFile(join(exampleDir, "m9-frostbound-variation.json"), "utf8"));
+const variationPresetIds = new Set(m9Variation.presets.map(({ id }) => id));
+if (!m9Variation.bindings.every(({ presetId }) => variationPresetIds.has(presetId))) throw new Error("M9 variation bindings must reference registered presets.");
+const invalidVariation = structuredClone(m9Variation);
+invalidVariation.presets[0].channels.particleCount = 33;
+if (validateVariation(invalidVariation)) throw new Error("variation schema must reject particle count above its bounded maximum.");
+console.log("validated M9 variation registry, bindings, and channel bounds");
 
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);
