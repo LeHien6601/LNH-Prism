@@ -18,5 +18,7 @@ for (const entry of matrix.entries) {
 for (const file of ["m11-enchanted-forest-target-phone.svg", "m11-enchanted-forest-target-phone.png", "m11-enchanted-forest-material-isolates.svg", "m11-enchanted-forest-material-isolates.png", "m11-enchanted-forest-focal-ornament-isolates.svg", "m11-enchanted-forest-focal-ornament-isolates.png", "M11-E-source-scale.html", "M11-E-target-phone.html", "M11-E-thumbnail.html", "M11-E-review-reference.html"]) await access(resolve(evidence, file));
 const portrait = await readFile(resolve(evidence, "m11-enchanted-forest-target-phone.svg"), "utf8");
 if (!portrait.includes("GROVE RESONANCE 90%") || !portrait.includes(">CLAIM<") || !portrait.includes(">CONTINUE<")) throw new Error("M11 target-phone semantic hierarchy is incomplete.");
+const materialIsolate = await readFile(resolve(evidence, "m11-enchanted-forest-material-isolates.svg"), "utf8");
+for (const marker of ['data-derived-from="renderM11MaterialClusterSvg"', 'data-layer="forest-stone-chip-cluster"', 'data-layer="forest-wood-knot-cluster"', 'data-layer="forest-moss-lichen-cluster"']) if (!materialIsolate.includes(marker)) throw new Error(`M11 material isolate is not derived from the production primitive library: ${marker}`);
 if (receipt.variationSeed !== 51731 || receipt.packageOrReviewStatus !== "deferred-to-m11-a4-and-m11-a5") throw new Error("M11 A3 receipt scope is invalid.");
 console.log(`validated ${matrix.count} M11 entries, independent progress parts, isolates, portrait, and four review surfaces.`);

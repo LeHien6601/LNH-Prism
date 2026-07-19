@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { renderStyledComponentSvg, renderStyledProgressSvg } from "../../dist/renderer/style-composition.js";
-import { M11_ENCHANTED_FOREST_BINDING } from "../../dist/styles/m11-enchanted-forest-binding.js";
+import { M11_ENCHANTED_FOREST_BINDING, renderM11MaterialClusterSvg } from "../../dist/styles/m11-enchanted-forest-binding.js";
 
 test("M11 renders required shared-template states without obscuring semantic layers", () => {
   for (const state of ["normal", "pressed", "disabled"]) {
@@ -25,6 +25,10 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.match(panel, /data-layer="forest-authored-material-clusters"/);
   assert.match(panel, /data-material-families="stone,wood,moss"/);
   assert.match(panel, /data-cluster-scale="component"/);
+  assert.match(panel, /data-placement="component-aware"/);
+  assert.match(panel, /data-layer="forest-stone-chip-cluster"/);
+  assert.match(panel, /data-layer="forest-wood-knot-cluster"/);
+  assert.match(panel, /data-layer="forest-moss-lichen-cluster"/);
   assert.ok(panel.indexOf('data-layer="forest-material-stack"') > panel.indexOf('data-layer="surface-pattern"'));
   assert.match(panel, /data-layer="luminous-seed-focal"/);
   assert.match(panel, /data-layer="forest-focal-roots"/);
@@ -43,4 +47,17 @@ test("M11 authored material clusters are deterministic, seed-varying, and absent
   assert.doesNotMatch(baseline, /forest-authored-material-clusters/);
   assert.equal(first, repeated);
   assert.notEqual(first, changed);
+});
+
+test("M11 material cluster library keeps each organic family independently editable", () => {
+  for (const [kind, family, layer] of [
+    ["stone-chip", "stone", "forest-stone-chip-cluster"],
+    ["wood-knot", "wood", "forest-wood-knot-cluster"],
+    ["moss-lichen", "moss", "forest-moss-lichen-cluster"]
+  ]) {
+    const primitive = renderM11MaterialClusterSvg(kind, 1);
+    assert.match(primitive, new RegExp(`data-material-family="${family}"`));
+    assert.match(primitive, new RegExp(`data-layer="${layer}"`));
+    assert.doesNotMatch(primitive, /<image\b/);
+  }
 });
