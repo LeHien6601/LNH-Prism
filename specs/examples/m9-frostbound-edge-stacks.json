@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m9-frostbound-edge-stacks",
+  "version": "1.0.0",
+  "status": "approved",
+  "presets": [
+    { "id": "m9-ice-heavy", "version": "1.0.0", "layers": [
+      { "id": "outer-shadow", "order": 0, "inset": 0, "thickness": 4, "opacity": 0.72, "color": "#020812" },
+      { "id": "structural-silhouette", "order": 1, "inset": 1, "thickness": 3, "opacity": 1, "color": "#102A45" },
+      { "id": "dark-bevel", "order": 2, "inset": 3, "thickness": 2, "opacity": 0.88, "color": "#174B70" },
+      { "id": "bright-bevel", "order": 3, "inset": 5, "thickness": 2, "opacity": 0.92, "color": "#B9F7FF" },
+      { "id": "inner-rim", "order": 4, "inset": 8, "thickness": 1, "opacity": 0.64, "color": "#63CFF3" }
+    ] },
+    { "id": "m9-dark-inset", "version": "1.0.0", "layers": [
+      { "id": "outer-shadow", "order": 0, "inset": 0, "thickness": 5, "opacity": 0.78, "color": "#020812" },
+      { "id": "structural-silhouette", "order": 1, "inset": 1, "thickness": 3, "opacity": 1, "color": "#0B2038" },
+      { "id": "dark-bevel", "order": 2, "inset": 4, "thickness": 3, "opacity": 0.9, "color": "#071329" },
+      { "id": "inner-shadow", "order": 3, "inset": 7, "thickness": 2, "opacity": 0.72, "color": "#173D5A" },
+      { "id": "inner-rim", "order": 4, "inset": 10, "thickness": 1, "opacity": 0.55, "color": "#9FEFFF" }
+    ] },
+    { "id": "m9-glowing-primary", "version": "1.0.0", "layers": [
+      { "id": "outer-shadow", "order": 0, "inset": 0, "thickness": 5, "opacity": 0.72, "color": "#020812" },
+      { "id": "structural-silhouette", "order": 1, "inset": 1, "thickness": 3, "opacity": 1, "color": "#173B57" },
+      { "id": "dark-bevel", "order": 2, "inset": 3, "thickness": 2, "opacity": 0.85, "color": "#1A6592" },
+      { "id": "bright-bevel", "order": 3, "inset": 5, "thickness": 2, "opacity": 0.94, "color": "#E6FBFF" },
+      { "id": "accent-highlight", "order": 4, "inset": 8, "thickness": 1, "opacity": 0.8, "color": "#63CFF3" }
+    ] }
+  ],
+  "bindings": [
+    { "componentId": "primary-hex-button", "presetId": "m9-glowing-primary" },
+    { "componentId": "secondary-hex-button", "presetId": "m9-ice-heavy" },
+    { "componentId": "panel", "presetId": "m9-dark-inset" },
+    { "componentId": "tab", "presetId": "m9-ice-heavy" },
+    { "componentId": "badge", "presetId": "m9-ice-heavy" },
+    { "componentId": "progress", "presetId": "m9-dark-inset" },
+    { "componentId": "icon-container", "presetId": "m9-ice-heavy" }
+  ],
+  "compatibility": { "minimumRendererVersion": "0.1.0", "migrationNote": "M9 consumes M8 geometry as lineage and replaces only the structural frame in M9 outputs." }
+}

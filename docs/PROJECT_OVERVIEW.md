@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M9 — Frostbound production-fidelity systems** |
-| Next task | 🔵 **Implement M9 layered edge-stack contracts and migration** · 🤖 Agent |
-| Next agent-ready task | M9-A2 — add versioned reusable edge-stack contracts, renderer integration, and focused validation |
+| Next task | 🔵 **Implement M9 material-response channels and region bindings** · 🤖 Agent |
+| Next agent-ready task | M9-A3 — add source-neutral material-response contracts, resolver integration, and isolation validation |
 | Last reviewed | 2026-07-18 |
 | Project owner | 🧭 To be assigned |
 
@@ -127,7 +127,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Prepare the M8 V8 evidence package (M8-A5a) | 🤖 Agent | 🟢 Complete | Added V8-E01–E10 unscored review evidence: hierarchy/state/isolation boards, receipt/audit/handoff reports, and defect/preflight records; M8 renderer/assets remain unchanged |
 | P0 | Conduct the M8 V8 production-fidelity review (M8-A5) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Project owner approved V8 Pass at `90/100`; all minima met, no blockers, and one non-blocking focal/panel observation is retained in the [V8 record](validation/records/v8-frostbound-aligned-refinement.md) |
 | P0 | Define M9 Frostbound production-fidelity system slices (M9-A1) | 🤖 Agent | 🟢 Complete | [M9 specification](implementation/M9_FROSTBOUND_PRODUCTION_FIDELITY_SYSTEMS_SPEC.md) defines M9-A2–A11 in dependency order, including shared lighting and independent three-distance/visual scoring review controls |
-| P0 | Implement M9 layered edge-stack contracts and migration (M9-A2) | 🤖 Agent | 🔵 Agent-ready | Versioned reusable edge-stack schema/presets render Frostbound without a style branch; ordering, bounds, isolation, clipping, compatibility, and determinism validate |
+| P0 | Implement M9 layered edge-stack contracts and migration (M9-A2) | 🤖 Agent | 🟢 Complete | Versioned registry and reusable presets migrate M9 Frostbound component/progress frames without changing M7/M8 files; ordering, bounds, determinism, and independent frame/fill validation pass |
+| P0 | Implement M9 material-response channels and region bindings (M9-A3) | 🤖 Agent | 🔵 Agent-ready | Source-neutral response channels and structural-region bindings are independently editable, reusable, provenance-complete, and validated with isolation/combined target-size output |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -252,3 +253,4 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-18 | Chose V8 review Option B: prepare missing review evidence before the human score; M8-A5a is agent-ready and does not authorize renderer or asset changes | Project owner / Codex |
 | 2026-07-18 | Approved V8 Option A: M8 passes at `90/100` with no blockers; retained V8-O001 as a non-blocking M9 observation and unblocked M9 definition | Project owner / Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
+| 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |

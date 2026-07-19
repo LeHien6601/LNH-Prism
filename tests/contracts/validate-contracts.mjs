@@ -38,6 +38,7 @@ const exampleSchemas = new Map([
   ["frost-crystal-materials.json", "material-pack.schema.json"],
   ["m7-faceted-materials.json", "material-pack.schema.json"],
   ["m8-frostbound-materials.json", "material-pack.schema.json"],
+  ["m9-frostbound-edge-stacks.json", "edge-stack.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["archive/legacy-primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
@@ -101,6 +102,20 @@ const m7Primary = JSON.parse(await readFile(join(exampleDir, "m7-primary-hex-but
 m7Primary.geometry.endCapDepth = 15;
 if (validateComponent(m7Primary)) throw new Error("M7 wide-hex component spec must reject shallow end caps.");
 console.log("validated M7 approved material bindings, seven-component inventory, and hex bounds");
+
+const edgeStackSchema = schemas.get("edge-stack.schema.json");
+const validateEdgeStack = ajv.getSchema(edgeStackSchema.$id);
+const m9EdgeStacks = JSON.parse(await readFile(join(exampleDir, "m9-frostbound-edge-stacks.json"), "utf8"));
+const presetIds = new Set(m9EdgeStacks.presets.map(({ id }) => id));
+if (!m9EdgeStacks.bindings.every(({ presetId }) => presetIds.has(presetId))) throw new Error("M9 edge-stack bindings must reference registered presets.");
+for (const preset of m9EdgeStacks.presets) {
+  const ordered = [...preset.layers].sort((a, b) => a.order - b.order);
+  if (ordered.some((layer, index) => layer !== preset.layers[index])) throw new Error(`${preset.id} layers must be stored in rendering order.`);
+}
+const invalidEdgeThickness = structuredClone(m9EdgeStacks);
+invalidEdgeThickness.presets[0].layers[0].thickness = 13;
+if (validateEdgeStack(invalidEdgeThickness)) throw new Error("edge-stack schema must reject thickness above its bounded maximum.");
+console.log("validated M9 edge-stack registry, bindings, and bounded-thickness rejection");
 
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);
