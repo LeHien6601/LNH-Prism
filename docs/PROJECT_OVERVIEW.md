@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🟣 **Approve a Volcanic Forge review-reference policy and source (R-012)** · 🧭 Product + 🎨 Art lead |
-| Next agent-ready task | None — M5-B1 passed; approve a review-only Forge reference before selecting a third-style contrast target |
+| Next task | 🔵 **Generate and receipt the Volcanic Forge review-only reference (R-012a)** · 🤖 Agent |
+| Next agent-ready task | R-012a — generate the `1080 × 1920` portrait reference from ADR-021, record generation provenance, and preserve the no-pixel-extraction boundary |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -152,6 +152,9 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Restore V10 three-distance review surfaces (M10-R003) | 🤖 Agent | 🟢 Complete | Regenerated source-scale, target-phone, and thumbnail surfaces from the generalized renderer; preflight links and focused validation verify all three review distances |
 | P0 | Restore V10 action typography and thumbnail comparison (M10-R004) | 🤖 Agent | 🟢 Complete | Target-phone `CLAIM`, `CONTINUE`, and `FORGE HEAT 90%` typography and renderer-derived Forge-versus-Frostbound thumbnail comparison validate before V10 re-review |
 | P0 | Run Volcanic Forge cross-style production-hardening batch (M5-B1) | 🤖 Agent | 🟢 Complete | Five receipt runs, clean reproduction, strict 52-module receipt checks, temporary backup/recovery, matrix, and V10 readability evidence pass |
+| P0 | Approve Volcanic Forge review-reference policy (R-012) | 🧭 Product + 🎨 Art lead | 🟢 Complete | Project owner selected the generated review-only reference policy; see [ADR-023](decisions/ADR-023-generated-review-reference-workflow.md) |
+| P0 | Generate and receipt Volcanic Forge review-only reference (R-012a) | 🤖 Agent | 🔵 Agent-ready | Generate one `1080 × 1920` portrait reference from the approved ADR-021 direction; record prompt/tool/model/seed/dimensions and prohibit production-pixel use |
+| P0 | Register the approved Volcanic Forge review-only reference (R-013) | 🤖 Agent | 🔴 Blocked | After R-012a, bind the generated reference and hash receipt to M10 review evidence; source-boundary validation must reject production SVG/PNG links to its pixels |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -174,6 +177,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-016 | Use Frostbound-only hardening coverage for M5 exit | 🟢 Accepted | M5 closes on the fully hardened Frostbound package; multi-style coverage is deferred as a future scaling risk; see [decision record](decisions/ADR-016-m5-frostbound-only-hardening-coverage.md) |
 | ADR-017 | Defer M6 dashboard and workflow scaling | 🟢 Accepted | Markdown controls plus the renderer-backed showcase remain sufficient; dashboard work is deferred until coordination pain appears; see [decision record](decisions/ADR-017-defer-m6-dashboard-workflow-scaling.md) |
 | ADR-018 | Start M7 reference-fidelity style expansion | 🟢 Accepted | The next production package must improve reference fidelity beyond the current rounded-corner UI language, with sharper wide-hexagon buttons, angular forms, richer style complexity, and engine-neutral asset-only delivery; see [decision record](decisions/ADR-018-reference-fidelity-style-expansion.md) |
+| ADR-023 | Generate review-only references for new style packages | 🟢 Accepted | After human style approval, an agent generates and receipts one review-only reference before visual comparison; reference pixels never enter production assets |
 
 ## 7. Top risks and responses
 
@@ -286,6 +290,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Recorded V10 Option B fail: missing true clean-workspace and seed/zero-baseline proof plus unresolved no-parallel-renderer compliance block a pass; M10-R002 is next | Project owner / Codex |
 | 2026-07-19 | Completed M10-R002: recorded temporary clean-workspace byte comparison, seed/zero-baseline receipts, manifest-module audits, and a style-neutral composition-seam proof; V10 re-review is next | Codex |
 | 2026-07-19 | V10 re-review readiness decision Option 1: return unscored for M10-R003 evidence restoration because the required source/phone/thumbnail surfaces are absent; retain M10-R002 technical receipts | Project owner / Codex |
+| 2026-07-19 | Accepted generated review-only references as the required pre-review task for every new style; queued R-012a for Volcanic Forge | Project owner / Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |

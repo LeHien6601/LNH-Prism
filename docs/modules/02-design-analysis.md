@@ -28,7 +28,8 @@ Palette/radius/spacing/lighting/material-category suggestions, component invento
 2. Define confidence levels: high (directly observed), medium (reasonable inference), low (requires decision).
 3. Require AI output to distinguish observation from recommendation.
 4. Map accepted items into `style-spec` fields; leave rejected items recorded.
-5. Add side-by-side concept/render review once M1 is available.
+5. After human approval of a new style direction, create an Agent-ready task to generate and receipt one review-only reference image from that approved direction. Preserve prompt/tool/model/seed/dimension provenance and forbid its pixels from production sources or materials.
+6. Add side-by-side concept/render review once M1 is available.
 
 ## Dependencies
 

@@ -53,6 +53,7 @@ The system must welcome useful ideas without losing its mission: **AI supplies c
 - Each output must link to source style/component/material versions and renderer version.
 - Each milestone gate links to its validation report.
 - Each material source stores provenance, generation prompt/settings when applicable, and rights/usage status.
+- After a human approves a new style direction, create an Agent-ready task to generate and receipt one review-only reference image before visual-fidelity review. Record its prompt, tool/model, seed when available, dimensions, date, and review-only status; reference pixels must never enter production assets or materials.
 - Update `PROJECT_OVERVIEW.md` after accepted decisions, new critical risks, gate outcomes, or next-task changes.
 
 ## Change history

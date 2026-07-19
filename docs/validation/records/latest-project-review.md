@@ -42,13 +42,19 @@
 
 ### R-012 — Approve a Volcanic Forge review-reference policy and source
 
-- **Priority / eligibility:** P0 — Human decision.
-- **Scope:** Select one source: project-owner-provided reference, licensed external board, or generated concept. Record ownership/license or generation provenance, target dimensions, review use, and the no-pixel-extraction rule.
-- **Acceptance criteria:** The choice is explicit enough for an agent to create a receipt without inventing art direction or rights information.
+- **Priority / eligibility:** P0 — Complete, project-owner decision on 2026-07-19.
+- **Decision:** Use a generated, review-only reference for Volcanic Forge and make the same agent-task workflow mandatory for future styles; see [ADR-023](../../decisions/ADR-023-generated-review-reference-workflow.md).
+
+### R-012a — Generate and receipt the Volcanic Forge review-only reference
+
+- **Priority / eligibility:** P0 — Agent-ready.
+- **Scope:** Generate one `1080 × 1920` portrait reference using only ADR-021's approved Volcanic Forge direction. Store the image and a receipt recording prompt, tool/model, seed when available, dimensions, date, review use, and an explicit no-pixel-extraction boundary.
+- **Acceptance criteria:** The reference is inspectable and hashable; its provenance is complete; it is not linked from production SVG/PNG or material inputs.
+- **Validation:** Image/hash receipt, provenance fields, M10 review/evidence links, and source-boundary checks.
 
 ### R-013 — Register the approved Volcanic Forge review-only reference
 
-- **Priority / eligibility:** P0 — Agent-ready after R-012.
+- **Priority / eligibility:** P0 — Blocked until R-012a.
 - **Scope:** Add the approved reference/board and hash receipt; bind it to the M10 brief, review record, and evidence index without treating it as a production material or component source.
 - **Acceptance criteria:** Reviewers can locate and verify the reference provenance; automated validation rejects production SVG/PNG links to its pixels.
 - **Validation:** Receipt/hash, link, provenance, and source-boundary checks.
