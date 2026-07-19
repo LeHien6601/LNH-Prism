@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🔵 **Add Volcanic Forge style-system bindings** · 🤖 Agent |
-| Next agent-ready task | M10-A4 — add versioned Volcanic Forge style, material, variation, ornament, focal, typography, and lighting bindings |
+| Next task | 🔵 **Render Volcanic Forge component matrix and portrait** · 🤖 Agent |
+| Next agent-ready task | M10-A5 — render the seven-component state/size matrix and portrait through shared templates |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -142,7 +142,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Decide multi-style transfer scope (M10-A1) | 🧭 Product + 🎨 Art + 🛠️ Technical leads | 🟢 Complete | Option A selected Volcanic Forge: shared wide-hex geometry with obsidian/brass/lava materials, warm lighting, seeded soot/crack variation, and molten focal treatment; see [ADR-021](decisions/ADR-021-volcanic-forge-second-style-transfer.md) |
 | P0 | Draft M10 Volcanic Forge implementation specification and rubric (M10-A2) | 🤖 Agent | 🟢 Complete | [M10 specification](implementation/M10_VOLCANIC_FORGE_IMPLEMENTATION_SPEC.md) and [V10 rubric](validation/V10_VOLCANIC_FORGE_TRANSFER_RUBRIC.md) define the seven-component shared-system transfer, bounds, evidence, blockers, scoring, and `85/100` gate |
 | P0 | Review and approve M10 Volcanic Forge definition (M10-A3) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete | Option B approved: M10 definition and V10 rubric are accepted with explicit lava/ember emission limits; M10-A4 data bindings are authorized |
-| P0 | Add Volcanic Forge style-system bindings (M10-A4) | 🤖 Agent | 🔵 Agent-ready | Add versioned stable-ID style, material, variation, ornament, focal, typography, and lighting bindings using existing generalized systems; enforce the approved emission limits |
+| P0 | Add Volcanic Forge style-system bindings (M10-A4) | 🤖 Agent | 🟢 Complete | Added approved stable-ID style, material, edge, variation, ornament, focal, typography, and lighting bindings with full-family coverage and tested lava/ember limits; no renderer branch or geometry change |
+| P0 | Render Volcanic Forge component matrix and portrait (M10-A5) | 🤖 Agent | 🔵 Agent-ready | Render the seven-component state/size matrix and portrait through shared templates, applying the approved bindings while preserving content bounds and emission limits |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -270,6 +271,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Approved Option A for M10: Volcanic Forge is the bounded second-style transfer target; M10 specification and rubric drafting are now agent-ready | Project owner / Codex |
 | 2026-07-19 | Completed M10-A2: drafted the bounded Volcanic Forge implementation specification and V10 transfer rubric; M10-A3 definition review is next | Codex |
 | 2026-07-19 | Approved M10-A3 Option B: accepted the Volcanic Forge definition with explicit lava/ember emission limits and opened M10-A4 data-binding implementation | Project owner / Codex |
+| 2026-07-19 | Completed M10-A4: added versioned Volcanic Forge data bindings and contract coverage for shared-system reuse, complete component coverage, and approved emission limits; M10-A5 rendering is next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |

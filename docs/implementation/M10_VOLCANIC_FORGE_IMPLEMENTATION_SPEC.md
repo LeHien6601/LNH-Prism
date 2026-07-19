@@ -64,3 +64,4 @@ M10 passes only after M10-A7 records a review at `85/100` or above, every hard g
 |---|---|---|
 | 2026-07-19 | Drafted the bounded M10 implementation sequence from ADR-021 and M9 generalized-system contracts. | Codex |
 | 2026-07-19 | M10-A3 approved Option B: the Volcanic Forge definition is accepted with explicit lava-and-ember emission limits; M10-A4 may begin. | Project owner / Codex |
+| 2026-07-19 | Completed M10-A4: added schema-validated Volcanic Forge style/material/edge/variation/ornament/focal data and a versioned system-binding manifest for typography, lighting, and emission limits; M10-A5 rendering is next. | Codex |

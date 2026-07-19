@@ -44,6 +44,13 @@ const exampleSchemas = new Map([
   ["m9-frostbound-ornament-anchors.json", "ornament-anchor.schema.json"],
   ["m9-frostbound-focal-objects.json", "focal-object.schema.json"],
   ["m9-frostbound-visual-review.json", "visual-review.schema.json"],
+  ["style-m10-volcanic-forge.json", "style-spec.schema.json"],
+  ["m10-volcanic-forge-materials.json", "material-pack.schema.json"],
+  ["m10-volcanic-forge-edge-stacks.json", "edge-stack.schema.json"],
+  ["m10-volcanic-forge-material-responses.json", "material-response.schema.json"],
+  ["m10-volcanic-forge-variation.json", "variation.schema.json"],
+  ["m10-volcanic-forge-ornament-anchors.json", "ornament-anchor.schema.json"],
+  ["m10-volcanic-forge-focal-objects.json", "focal-object.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["archive/legacy-primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
@@ -149,6 +156,19 @@ const invalidVisualReview = structuredClone(m9VisualReview);
 invalidVisualReview.technicalPreflight.role = "score-multiplier";
 if (validateVisualReview(invalidVisualReview)) throw new Error("M9 visual review must keep technical correctness as a hard gate.");
 console.log("validated M9 three-distance review plan and technical-gate boundary");
+
+const m10Bindings = JSON.parse(await readFile(join(exampleDir, "m10-volcanic-forge-system-bindings.json"), "utf8"));
+const m10Components = ["primary-hex-button", "secondary-hex-button", "panel", "tab", "badge", "progress", "icon-container"];
+const m10Edge = JSON.parse(await readFile(join(exampleDir, "m10-volcanic-forge-edge-stacks.json"), "utf8"));
+const m10Responses = JSON.parse(await readFile(join(exampleDir, "m10-volcanic-forge-material-responses.json"), "utf8"));
+const m10Variation = JSON.parse(await readFile(join(exampleDir, "m10-volcanic-forge-variation.json"), "utf8"));
+for (const registry of [m10Edge, m10Responses, m10Variation]) {
+  for (const componentId of m10Components) if (!registry.bindings.some((binding) => binding.componentId === componentId)) throw new Error(`M10 bindings must cover ${componentId}.`);
+}
+if (m10Variation.presets.some(({ channels }) => channels.particleCount > 0)) throw new Error("M10 controls must not emit ember particles through variation.");
+if (m10Bindings.emissionBudget.portraitEmberCount !== 8 || m10Bindings.emissionBudget.controlEmberCount !== 0 || m10Bindings.emissionBudget.lavaOpacityMaximum > .55 || m10Bindings.emissionBudget.glowRadiusRatioMaximum > .12 || m10Bindings.emissionBudget.contentOverlap !== "forbidden") throw new Error("M10 emission budget must enforce the approved limits.");
+if (m10Bindings.bindings.lighting.direction !== "bottom" || m10Bindings.bindings.typography.action !== "m10-engraved-gold-action@1.0.0") throw new Error("M10 must bind the approved warm lighting and engraved action typography.");
+console.log("validated M10 shared-system bindings, full component coverage, and emission limits");
 
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);
