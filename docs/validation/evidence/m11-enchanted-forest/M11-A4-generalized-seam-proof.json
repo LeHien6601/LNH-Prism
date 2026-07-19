@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "renderer": "src/renderer/style-composition.ts",
+  "binding": "src/styles/m11-enchanted-forest-binding.ts",
+  "proof": [
+    "M11 has no renderer module",
+    "style-composition owns all renderer entry points",
+    "binding supplies only data-owned organic layers while M7/M8 geometry is inherited"
+  ],
+  "status": "pass"
+}

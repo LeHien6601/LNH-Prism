@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "renderer": "src/renderer/style-composition.ts",
+  "permittedVariation": [
+    "moss-variation",
+    "leaf-vine-ornament"
+  ],
+  "receipts": [
+    {
+      "seed": 0,
+      "baseline": true,
+      "sha256": "b2f20acc107c5a63d289249d1ff98d14bf3eb040de5c0ce1b3784da185f55d80",
+      "sameSeedDeterministic": true
+    },
+    {
+      "seed": 51731,
+      "baseline": false,
+      "sha256": "01e4471808166e5a60ee752a65f57b7a06c2c11193c389a97a4315ea52e7af34",
+      "sameSeedDeterministic": true
+    },
+    {
+      "seed": 104729,
+      "baseline": false,
+      "sha256": "9f24f2ba74bda7cb86dcaa476582e3a599f5ea5f67e7b75baffab68174b23538",
+      "sameSeedDeterministic": true
+    },
+    {
+      "seed": 8675309,
+      "baseline": false,
+      "sha256": "8e2bd758af361b0bbb9630611517bc79914929ae217078d054cceb78374089da",
+      "sameSeedDeterministic": true
+    }
+  ]
+}

@@ -62,10 +62,16 @@
 
 ### M11-A4 — Package Enchanted Forest modules and technical preflight
 
-- **Priority / eligibility:** P0 — Agent-ready; this is the active overview task and next recommended task.
-- **Scope:** Assemble engine-neutral SVG/PNG modules with manifest/provenance, deterministic seed and clean-workspace receipts, technical preflight, and comparison evidence.
-- **Acceptance criteria:** The bounded package and all V11 hard-gate artifacts reproduce without changing approved M7–M10 outputs.
-- **Validation:** Package/manifest/hash audit, clean-workspace byte comparison, seed receipt audit, reference-boundary scan, and control-drift check.
+- **Priority / eligibility:** P0 — Complete.
+- **Outcome:** Produced 52 engine-neutral M11 modules plus manifest/provenance, four named variation seed receipts including zero baseline, clean-workspace byte comparison, generalized-seam proof, review-reference boundary proof, and unscored technical preflight.
+- **Validation:** `npm run prepare:m11-a4-package`; `npm run validate:m11-a4-package`; M11-A3 evidence validation; contracts; review-reference boundary; and control-drift passed.
+
+### M11-A5 / V11 — Conduct the Enchanted Forest third-style review
+
+- **Priority / eligibility:** P0 — Human decision; this is the active overview task and next recommended task.
+- **Scope:** Inspect the source, phone, thumbnail, matrix, and review-reference surfaces; apply every V11 hard gate and score the approved rubric.
+- **Acceptance criteria:** Every hard gate passes; visual total is at least `85/100`, no dimension is below `3/5`, no blocker remains, and Mobile-scale readability/state distinction is at least `3/5`.
+- **Validation:** Recorded review with evidence paths, scores, observations, blockers, and decision.
 
 ### R-020 — Plan bounded M11 implementation and evidence slices
 

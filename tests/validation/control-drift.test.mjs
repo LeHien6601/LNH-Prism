@@ -33,7 +33,20 @@ test("control-drift validator accepts aligned controls and documented references
 
 test("control-drift validator rejects stale next-task alignment", async () => {
   const root = await fixture({ stale: true });
-  await assert.rejects(() => validateControlDrift({ root }), /R-016c is not an Agent-ready overview task/);
+  await assert.rejects(() => validateControlDrift({ root }), /R-016c is not an authorized overview task/);
+});
+
+test("control-drift validator accepts an aligned human decision", async () => {
+  const root = await fixture();
+  await writeFile(join(root, "docs/PROJECT_OVERVIEW.md"), [
+    "| Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |",
+    "| Next task | 🟣 **Conduct V11 review (M11-A5 / V11)** · 🧭 Product |",
+    "| Next agent-ready task | No unblocked agent-ready task — M11-A5 / V11 review decision is required |",
+    "| ⚪ | M11 | Enchanted Forest third-style contrast | 🟢 Package ready |",
+    "| P0 | Conduct V11 review (M11-A5 / V11) | 🧭 Product | 🟣 Human decision | Ready |"
+  ].join("\n"));
+  await writeFile(join(root, "docs/ROADMAP.md"), "## ⚪ M11 — Enchanted Forest third-style contrast\nM11-A5 / V11 review is next.\n");
+  assert.deepEqual(await validateControlDrift({ root }), { activeMilestone: "M11", nextTask: "M11-A5 / V11", reviewReferenceReceipts: 1 });
 });
 
 test("control-drift validator rejects an undocumented review reference", async () => {

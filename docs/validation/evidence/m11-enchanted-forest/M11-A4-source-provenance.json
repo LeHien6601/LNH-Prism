@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "sources": [
+    "specs/examples/style-m11-enchanted-forest.json",
+    "specs/examples/m11-enchanted-forest-materials.json",
+    "specs/examples/m11-enchanted-forest-edge-stacks.json",
+    "specs/examples/m11-enchanted-forest-material-responses.json",
+    "specs/examples/m11-enchanted-forest-variation.json",
+    "specs/examples/m11-enchanted-forest-ornament-anchors.json",
+    "specs/examples/m11-enchanted-forest-focal-objects.json"
+  ],
+  "prohibitedReviewReference": "enchanted-forest-review-reference-1080x1920.png",
+  "status": "pass"
+}

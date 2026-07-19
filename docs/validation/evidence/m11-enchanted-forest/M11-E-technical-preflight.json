@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "status": "unscored-review-ready",
+  "technicalCorrectness": "hard-gate-only",
+  "checks": {
+    "matrix": "matrix.json",
+    "modules": "assets/m11-enchanted-forest/manifest.json",
+    "cleanWorkspace": "M11-A4-clean-workspace-receipt.json",
+    "seedBaseline": "M11-A4-variation-receipts.json",
+    "generalizedSeam": "M11-A4-generalized-seam-proof.json",
+    "provenance": "M11-A4-source-provenance.json",
+    "sourceScale": "M11-E-source-scale.html",
+    "targetPhone": "M11-E-target-phone.html",
+    "thumbnail": "M11-E-thumbnail.html",
+    "reviewReference": "../../../reference-briefs/ENCHANTED_FOREST_REVIEW_REFERENCE.md",
+    "reviewReferenceReceipt": "../../../reference-briefs/assets/enchanted-forest-review-reference-1080x1920.receipt.json",
+    "reviewReferenceComparison": "M11-E-review-reference.html",
+    "reviewReferenceBoundary": "npm run test:review-reference-boundary"
+  },
+  "automaticBlockers": [],
+  "scoringPerformed": false,
+  "gateDecision": "pending-human-review"
+}

@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0",
+  "status": "pass",
+  "workspace": "temporary clean source snapshot",
+  "command": "tsc then prepare-m11-a3-evidence then prepare-m11-a4-package",
+  "comparedModules": 52,
+  "manifestMatch": true,
+  "modules": [
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x660-normal:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x660-normal:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x760-normal:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x760-normal:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-normal:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-normal:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-pressed:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-pressed:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-disabled:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-disabled:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-normal:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-normal:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-pressed:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-pressed:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-disabled:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-disabled:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-normal:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-normal:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-pressed:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-pressed:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-disabled:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-disabled:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-normal:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-normal:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-pressed:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-pressed:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-disabled:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-disabled:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:tab-148x52-normal:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:tab-148x52-normal:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:tab-184x52-selected:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:tab-184x52-selected:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:badge-164x48-normal:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:badge-164x48-normal:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:badge-212x48-highlighted:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:badge-212x48-highlighted:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:icon-container-92x92-normal:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:icon-container-92x92-normal:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:icon-container-116x116-selected:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:icon-container-116x116-selected:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-344x28-10:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-344x28-10:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-344x28-50:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-344x28-50:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-344x28-90:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-344x28-90:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-420x28-10:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-420x28-10:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-420x28-50:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-420x28-50:png",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-420x28-90:svg",
+      "match": true
+    },
+    {
+      "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-420x28-90:png",
+      "match": true
+    }
+  ]
+}
