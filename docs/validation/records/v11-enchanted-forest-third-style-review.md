@@ -102,6 +102,46 @@ Technical hard-gate outcome: **Pass**. `validate:m11-a4-package`, `validate:m11-
 
 **Decision: Fail — scored.** The total is below `85/100`; Botanical ornament restraint and Portrait composition are below `3/5`. `V11-B004` requires reducing material-mark scale and opacity, confining moss growth to edge/anchor regions, and rebalancing the face treatments around the content hierarchy while retaining the newly distinct material channels. M11-R007 is the next agent-ready remediation.
 
+## M11-R008 / V11 re-review — 2026-07-19
+
+Reviewer: project-owner-authorized automated review. Reviewed revision: `177604b` (`fix(styles): restrain enchanted forest face treatment`). All required source, phone, thumbnail, reference-comparison, matrix, isolate, package, seed, clean-workspace, and generalized-seam surfaces were inspected.
+
+Technical hard-gate outcome: **Pass**. Package/evidence validation, focused renderer coverage, serial review-reference boundary coverage, and control-drift validation passed. The 52-module package, 26-entry matrix, seed/baseline receipts, shared seam, semantic labels, and production/reference boundary are unchanged.
+
+| Dimension | Score | Weighted | Observation |
+|---|---:|---:|---|
+| Three-style distinction | 3/5 | 9 | The organic green family remains distinct from Frostbound and Forge. |
+| Organic material separation | 3/5 | 9 | Stone, wood, moss, and root-light channels remain independently legible. |
+| Focal hierarchy | 3/5 | 9 | The seed remains identifiable without obscuring actions or labels. |
+| Botanical ornament restraint | 3/5 | 6 | The restraint layer improves containment at anchors, meeting the minimum without creating collisions. |
+| Diffuse bioluminescent lighting | 3/5 | 6 | Local living light is coherent and bounded. |
+| Seeded organic variation | 3/5 | 6 | Variation remains visible, deterministic, and bounded. |
+| Typography and state language | 3/5 | 6 | Labels and state hierarchy are readable at target-phone scale. |
+| Portrait composition | 3/5 | 6 | The hierarchy is now understandable, but still visually plain and materially repetitive. |
+| **Total** |  | **57/100** |  |
+
+**Decision: Fail — scored.** Every visual minimum is now met, but the weighted total is below `85/100`. `V11-B005` requires one bounded authored-detail refinement: replace repeated broad line motifs with smaller, component-scaled stone/wood/moss clusters that vary by seed and preserve the established restraint. M11-R009 is the next agent-ready remediation.
+
+## M11-R008 / V11 re-review — 2026-07-19
+
+Reviewer: project-owner-authorized automated review. Reviewed revision: `177604b` (`fix(styles): restrain enchanted forest face treatment`). All required source, phone, thumbnail, reference-comparison, matrix, isolate, package, seed, clean-workspace, and generalized-seam surfaces were inspected.
+
+Technical hard-gate outcome: **Pass**. Package/evidence validation, focused renderer coverage, serial review-reference boundary coverage, and control-drift validation passed. The 52-module package, 26-entry matrix, seed/baseline receipts, shared seam, semantic labels, and production/reference boundary are unchanged.
+
+| Dimension | Score | Weighted | Observation |
+|---|---:|---:|---|
+| Three-style distinction | 3/5 | 9 | The organic green family remains distinct from Frostbound and Forge. |
+| Organic material separation | 3/5 | 9 | Stone, wood, moss, and root-light channels remain independently legible. |
+| Focal hierarchy | 3/5 | 9 | The seed remains identifiable without obscuring actions or labels. |
+| Botanical ornament restraint | 3/5 | 6 | The restraint layer improves containment at anchors, meeting the minimum without creating collisions. |
+| Diffuse bioluminescent lighting | 3/5 | 6 | Local living light is coherent and bounded. |
+| Seeded organic variation | 3/5 | 6 | Variation remains visible, deterministic, and bounded. |
+| Typography and state language | 3/5 | 6 | Labels and state hierarchy are readable at target-phone scale. |
+| Portrait composition | 3/5 | 6 | The hierarchy is now understandable, but still visually plain and materially repetitive. |
+| **Total** |  | **57/100** |  |
+
+**Decision: Fail — scored.** Every visual minimum is now met, but the weighted total is below `85/100`. `V11-B005` requires one bounded authored-detail refinement: replace repeated broad line motifs with smaller, component-scaled stone/wood/moss clusters that vary by seed and preserve the established restraint. M11-R009 is the next agent-ready remediation.
+
 ## M11-R006 / V11 re-review — 2026-07-19
 
 Reviewer: project-owner-authorized automated review. Reviewed revision: `d1ad719` (`fix(styles): deepen enchanted forest face materials`). Inspected all required source, target-phone, thumbnail, reference-comparison, matrix, isolate, package, seed, clean-workspace, and generalized-seam surfaces.

@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🟣 **Re-review Enchanted Forest material restraint and hierarchy (M11-R008 / V11 re-review)** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | No unblocked agent-ready task — M11-R008 / V11 re-review awaits a human decision |
+| Next task | 🔵 **Add Enchanted Forest authored material clusters (M11-R009)** · 🤖 Agent |
+| Next agent-ready task | M11-R009 — replace repeated broad line motifs with smaller component-scaled stone/wood/moss clusters that vary by seed while preserving restraint |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🟣 M11-R007 refined material restraint; V11 re-review is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 V11 re-review scored `57/100` — M11-R009 authored-material refinement is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -177,7 +177,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Integrate Enchanted Forest material-face depth (M11-R005) | 🤖 Agent | 🟢 Complete | Added clipped face-integrated weathered stone, directional dark-wood grain, moss growth/masking, visible focal roots, and matching richer source isolates through the shared seam |
 | P0 | Re-review Enchanted Forest material-face depth (M11-R006 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed hard gates but scored `53/100`; `V11-B004` requires material restraint and composition balance |
 | P0 | Refine Enchanted Forest material restraint and hierarchy (M11-R007) | 🤖 Agent | 🟢 Complete | Added clipped low-opacity restraint and edge-anchored treatment while preserving distinct material channels and content hierarchy |
-| P0 | Re-review Enchanted Forest material restraint and hierarchy (M11-R008 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Re-score the regenerated package against the unchanged V11 rubric; technical gates must pass and the visual threshold remains `85/100` with no dimension below `3/5` |
+| P0 | Re-review Enchanted Forest material restraint and hierarchy (M11-R008 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed hard gates and visual minima but scored `57/100`; `V11-B005` requires authored material richness |
+| P0 | Add Enchanted Forest authored material clusters (M11-R009) | 🤖 Agent | 🔵 Agent-ready | Replace repeated broad line motifs with smaller component-scaled stone/wood/moss clusters that vary by seed while preserving restraint and approved boundaries |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -337,6 +338,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed M11-R005: integrated clipped material-face channels and matching richer source isolates through the shared seam; M11-R006 / V11 re-review is next | Codex |
 | 2026-07-19 | Authorized automated V11 re-review failed at `53/100`: technical gates pass, but `V11-B004` requires material restraint and composition balance; M11-R007 is next | Project owner / Codex |
 | 2026-07-19 | Completed M11-R007: added clipped low-opacity material restraint and edge-anchored treatment; M11-R008 / V11 re-review is next | Codex |
+| 2026-07-19 | Authorized automated V11 re-review failed at `57/100`: technical gates and visual minima pass, but `V11-B005` requires authored material richness; M11-R009 is next | Project owner / Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
