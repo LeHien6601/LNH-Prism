@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0", "id": "m9-frostbound-material-responses", "version": "1.0.0", "status": "approved",
+  "materialPack": { "id": "m8-frostbound-materials", "version": "0.1.0" },
+  "responses": [
+    { "id": "m9-dark-substrate", "version": "1.0.0", "base": { "color": "#071329", "opacity": 1 }, "edge": { "color": "#173D5A", "opacity": 0.76, "sourceId": "m8-cold-edge-accent" }, "highlight": { "color": "#9FEFFF", "opacity": 0.24 }, "glow": { "color": "#63CFF3", "opacity": 0.16 }, "surface": { "color": "#B9F7FF", "opacity": 0.06, "sourceId": "m8-ice-grain" } },
+    { "id": "m9-silver-metal", "version": "1.0.0", "base": { "color": "#315C7A", "opacity": 1 }, "edge": { "color": "#B9F7FF", "opacity": 0.84, "sourceId": "m8-cold-edge-accent" }, "highlight": { "color": "#E6FBFF", "opacity": 0.56 }, "glow": { "color": "#63CFF3", "opacity": 0.22 }, "surface": { "color": "#B9F7FF", "opacity": 0.08, "sourceId": "m8-ice-grain" } },
+    { "id": "m9-clear-ice", "version": "1.0.0", "base": { "color": "#1A6592", "opacity": 0.74 }, "edge": { "color": "#B9F7FF", "opacity": 0.9, "sourceId": "m8-cold-edge-accent" }, "highlight": { "color": "#E6FBFF", "opacity": 0.68 }, "glow": { "color": "#63CFF3", "opacity": 0.34 }, "surface": { "color": "#9FEFFF", "opacity": 0.1, "sourceId": "m8-crystal-facet-pattern" } },
+    { "id": "m9-blue-crystal", "version": "1.0.0", "base": { "color": "#175A8D", "opacity": 0.88 }, "edge": { "color": "#9FEFFF", "opacity": 0.86, "sourceId": "m8-cold-edge-accent" }, "highlight": { "color": "#E6FBFF", "opacity": 0.62 }, "glow": { "color": "#63CFF3", "opacity": 0.42 }, "surface": { "color": "#B9F7FF", "opacity": 0.12, "sourceId": "m8-crystal-facet-pattern" } },
+    { "id": "m9-cold-glow", "version": "1.0.0", "base": { "color": "#0B2440", "opacity": 0.4 }, "edge": { "color": "#63CFF3", "opacity": 0.72, "sourceId": "m8-cold-edge-accent" }, "highlight": { "color": "#E6FBFF", "opacity": 0.5 }, "glow": { "color": "#9FEFFF", "opacity": 0.62 }, "surface": { "color": "#B9F7FF", "opacity": 0.08, "sourceId": "m8-ice-grain" } }
+  ],
+  "bindings": [
+    { "componentId": "primary-hex-button", "region": "structural-edge", "responseId": "m9-silver-metal" }, { "componentId": "primary-hex-button", "region": "content-surface", "responseId": "m9-blue-crystal" },
+    { "componentId": "secondary-hex-button", "region": "structural-edge", "responseId": "m9-clear-ice" }, { "componentId": "secondary-hex-button", "region": "content-surface", "responseId": "m9-dark-substrate" },
+    { "componentId": "panel", "region": "structural-edge", "responseId": "m9-silver-metal" }, { "componentId": "panel", "region": "content-surface", "responseId": "m9-dark-substrate" }, { "componentId": "panel", "region": "focal-surface", "responseId": "m9-blue-crystal" },
+    { "componentId": "tab", "region": "structural-edge", "responseId": "m9-clear-ice" }, { "componentId": "tab", "region": "content-surface", "responseId": "m9-dark-substrate" },
+    { "componentId": "badge", "region": "structural-edge", "responseId": "m9-clear-ice" }, { "componentId": "badge", "region": "content-surface", "responseId": "m9-blue-crystal" },
+    { "componentId": "progress", "region": "structural-edge", "responseId": "m9-silver-metal" }, { "componentId": "progress", "region": "content-surface", "responseId": "m9-cold-glow" },
+    { "componentId": "icon-container", "region": "structural-edge", "responseId": "m9-clear-ice" }, { "componentId": "icon-container", "region": "content-surface", "responseId": "m9-dark-substrate" }, { "componentId": "icon-container", "region": "focal-surface", "responseId": "m9-blue-crystal" }
+  ],
+  "compatibility": { "minimumRendererVersion": "0.1.0", "migrationNote": "M9 response layers supplement M8 source-neutral materials; M8 receipts remain unchanged." }
+}

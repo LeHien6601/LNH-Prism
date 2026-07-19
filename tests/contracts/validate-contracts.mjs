@@ -39,6 +39,7 @@ const exampleSchemas = new Map([
   ["m7-faceted-materials.json", "material-pack.schema.json"],
   ["m8-frostbound-materials.json", "material-pack.schema.json"],
   ["m9-frostbound-edge-stacks.json", "edge-stack.schema.json"],
+  ["m9-frostbound-material-responses.json", "material-response.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["archive/legacy-primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
@@ -116,6 +117,16 @@ const invalidEdgeThickness = structuredClone(m9EdgeStacks);
 invalidEdgeThickness.presets[0].layers[0].thickness = 13;
 if (validateEdgeStack(invalidEdgeThickness)) throw new Error("edge-stack schema must reject thickness above its bounded maximum.");
 console.log("validated M9 edge-stack registry, bindings, and bounded-thickness rejection");
+
+const materialResponseSchema = schemas.get("material-response.schema.json");
+const validateMaterialResponse = ajv.getSchema(materialResponseSchema.$id);
+const m9Responses = JSON.parse(await readFile(join(exampleDir, "m9-frostbound-material-responses.json"), "utf8"));
+const responseIds = new Set(m9Responses.responses.map(({ id }) => id));
+if (!m9Responses.bindings.every(({ responseId }) => responseIds.has(responseId))) throw new Error("M9 material-response bindings must reference registered responses.");
+const invalidMaterialResponse = structuredClone(m9Responses);
+invalidMaterialResponse.responses[0].glow.opacity = 1.1;
+if (validateMaterialResponse(invalidMaterialResponse)) throw new Error("material-response schema must reject out-of-range channel opacity.");
+console.log("validated M9 material-response registry, bindings, and channel bounds");
 
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);
