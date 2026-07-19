@@ -59,10 +59,9 @@
 
 ### R-014 — Reconcile active M8–M10 control status
 
-- **Priority / eligibility:** P1 — Agent-ready.
-- **Scope:** Correct only active status/next-task statements in the overview, roadmap, and active M10 specification; preserve historical records and review scores.
-- **Acceptance criteria:** All three controls name M10-R002 as current; no active statement says M8 definition or M10-A4 is next.
-- **Validation:** Targeted text/link scan and `git diff --check`.
+- **Priority / eligibility:** P1 — Complete.
+- **Outcome:** Active overview, roadmap, and M10 specification controls now show M8–M10 as passed/completed, identify R-016 as the current decision, and retain historical M10 remediation/review outcomes as historical records.
+- **Validation:** Targeted status scan and `git diff --check` passed.
 
 ### R-015 — Revisit multi-style production hardening coverage
 
@@ -74,7 +73,7 @@
 
 ### R-016 — Select third-style contrast proof
 
-- **Priority / eligibility:** P2 — Human decision after V10 pass and R-012/R-013.
+- **Priority / eligibility:** P2 — Human decision; V10, R-012, R-012a, R-013, and R-014 are complete.
 - **Scope:** Choose the third-style target and review-reference policy; do not begin rendering.
 - **Acceptance criteria:** A bounded brief identifies the contrast dimensions, reference provenance, component inventory, and exit evidence.
 

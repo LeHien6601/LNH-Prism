@@ -174,7 +174,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **M8-A5:** 🟢 Pass — project owner approved V8 at `90/100` on 2026-07-18. No automatic blocker; V8-O001 remains a non-blocking M9 observation.
 
-**Next task:** M9-A12 — re-review the corrected M9 package before any multi-style transfer.
+**Follow-on outcome:** M9-A12 subsequently passed at `85/100`, then M10 passed as the second-style transfer. The current project decision is R-016 third-style contrast proof.
 
 **Exit gate:** a reviewed M8 package improves the two V7 observations while retaining M7’s deterministic, modular, engine-neutral asset handoff.
 
@@ -204,12 +204,12 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Boundary:** no palette-only reskin, Frostbound-only branch, flattened production assets, concept pixels, unseeded randomness, third-style testing, or authoring workflow.
 
-**Definition gate:** 🟢 Approved on 2026-07-19 — M10-A3 Option B accepted the [M10 implementation specification](implementation/M10_VOLCANIC_FORGE_IMPLEMENTATION_SPEC.md) and [V10 transfer rubric](validation/V10_VOLCANIC_FORGE_TRANSFER_RUBRIC.md), including the explicit lava/ember emission limits. M10-A4 data-binding implementation may begin.
+**Definition gate:** 🟢 Approved on 2026-07-19 — M10-A3 Option B accepted the [M10 implementation specification](implementation/M10_VOLCANIC_FORGE_IMPLEMENTATION_SPEC.md) and [V10 transfer rubric](validation/V10_VOLCANIC_FORGE_TRANSFER_RUBRIC.md), including the explicit lava/ember emission limits. M10-A4 data-binding implementation was authorized and is complete.
 
-**Review gate:** 🟢 M10-A7 Option A selected on 2026-07-19 — the initial package is returned unscored for M10-R001 remediation. The next delivery must provide complete source/phone/thumbnail surfaces, clean reproduction, canonical inventory mapping, and non-palette-only transfer proof before V10 is re-reviewed.
+**Historical review gate:** 🟢 M10-A7 Option A selected on 2026-07-19 — the initial package was returned unscored for M10-R001 remediation. The required source/phone/thumbnail surfaces, clean reproduction, canonical inventory mapping, and non-palette-only transfer proof were subsequently delivered before the recorded V10 pass.
 
-**Exit gate:** 🟢 V10 passed on 2026-07-19 at `86/100` through a project-owner-authorized automated re-review. All technical hard gates and visual minima passed; `V10-O001` is a non-blocking heat-label/focal-spacing observation. M5-B1 cross-style hardening also passed. Per [ADR-023](decisions/ADR-023-generated-review-reference-workflow.md), R-012a generated and receipted the `1080 × 1920` review-only Volcanic Forge reference, and R-013 registered it with a comparison surface and production-pixel boundary validation. R-014 is now the next Agent-ready task.
+**Exit gate:** 🟢 V10 passed on 2026-07-19 at `86/100` through a project-owner-authorized automated re-review. All technical hard gates and visual minima passed; `V10-O001` is a non-blocking heat-label/focal-spacing observation. M5-B1 cross-style hardening also passed. Per [ADR-023](decisions/ADR-023-generated-review-reference-workflow.md), R-012a generated and receipted the `1080 × 1920` review-only Volcanic Forge reference, R-013 registered it with a comparison surface and production-pixel boundary validation, and R-014 reconciled active controls. R-016 is now the next Human decision: select a third-style contrast target and review-reference policy before implementation.
 
-**Re-review gate:** 🔴 V10 failed on 2026-07-19 under Option B. The remediated visuals are diagnostically scored at `78/100`, but a pass is blocked by missing true clean-workspace reproduction, missing recorded seed/zero-baseline output receipts, and unproven no-parallel-renderer compliance. M10-R002 is the next agent-ready remediation.
+**Historical re-review gate:** 🔴 V10 failed on 2026-07-19 under Option B. The remediated visuals were diagnostically scored at `78/100`, but a pass was blocked by missing true clean-workspace reproduction, recorded seed/zero-baseline output receipts, and no-parallel-renderer proof. M10-R002 subsequently closed these blockers before the recorded V10 pass.
 
 **Exit gate:** a deterministic, engine-neutral Volcanic Forge package proves shared templates and generalized systems, complete provenance/receipts, target-phone readability, and visual distinction from Frostbound at source, phone, and thumbnail review distances.

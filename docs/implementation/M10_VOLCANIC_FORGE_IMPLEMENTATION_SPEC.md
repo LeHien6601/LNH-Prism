@@ -2,7 +2,7 @@
 
 ## Status
 
-**Approved for M10-A4 implementation.** The M10-A3 definition review accepted Option B on 2026-07-19: retain the approved scope with explicit lava-and-ember emission limits.
+**Complete — V10 passed at `86/100` on 2026-07-19.** The M10-A3 definition review accepted Option B with explicit lava-and-ember emission limits; the complete package subsequently passed its authorized automated review, cross-style hardening, and review-reference boundary validation. The next project task is the R-016 Human decision for third-style contrast proof.
 
 ## Objective and fixed boundaries
 
@@ -70,3 +70,4 @@ M10 passes only after M10-A7 records a review at `85/100` or above, every hard g
 | 2026-07-19 | Completed M10-A6 and M10-A7 Option A returned the package unscored for M10-R001 remediation: complete evidence surfaces and clean reproduction, repair canonical inventory mapping, and make the shared-system transfer visibly non-palette-only before re-review. | Project owner / Codex |
 | 2026-07-19 | V10 re-review Option B failed at a diagnostic `78/100`: hard gates remain open for clean-workspace reproduction, recorded seed/zero-baseline output evidence, and no-parallel-renderer compliance; M10-R002 is next. | Project owner / Codex |
 | 2026-07-19 | Project-owner-authorized automated V10 re-review passed at `86/100`: hard gates and visual minima passed, with `V10-O001` retained as a non-blocking heat-label/focal-spacing observation. | Project owner / Codex |
+| 2026-07-19 | Reconciled the active implementation status after V10 pass, R-013 reference registration, and R-014 control review; R-016 third-style decision is next. | Codex |

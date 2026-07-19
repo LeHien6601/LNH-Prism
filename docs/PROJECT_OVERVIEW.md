@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🔵 **Reconcile active M8–M10 control status (R-014)** · 🤖 Agent |
-| Next agent-ready task | R-014 — reconcile active overview, roadmap, and M10-status statements without rewriting historical review facts |
+| Next task | 🟣 **Select third-style contrast proof (R-016)** · 🧭 Product + 🎨 Art lead |
+| Next agent-ready task | None — choose the third-style contrast target and review-reference policy before implementation |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -54,7 +54,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M5 | Production hardening and regression suite | 🟢 Passed — Frostbound-only hardening accepted for M5 exit |
 | 🟢 | M6 | Optional showcase scaling and workflow review | 🟢 Deferred — Markdown + showcase remain sufficient |
 | 🟢 | M7 | Reference-fidelity style expansion | 🟢 V7 Pass — `90.5/100`; 68 engine-neutral modules, evidence, and showroom validated |
-| ⚪ | M8 | Frostbound-aligned angular refinement | 🔵 Definition/specification slice is next; retain M7 geometry and improve icy material/focal fidelity |
+| 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
+| 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
+| 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -155,7 +157,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Approve Volcanic Forge review-reference policy (R-012) | 🧭 Product + 🎨 Art lead | 🟢 Complete | Project owner selected the generated review-only reference policy; see [ADR-023](decisions/ADR-023-generated-review-reference-workflow.md) |
 | P0 | Generate and receipt Volcanic Forge review-only reference (R-012a) | 🤖 Agent | 🟢 Complete | Generated and inspected one `1080 × 1920` portrait reference with prompt/tool/model/seed-availability, resize, hash, and review-only receipts; production-pixel use is prohibited |
 | P0 | Register the approved Volcanic Forge review-only reference (R-013) | 🤖 Agent | 🟢 Complete | Bound the generated reference and hash receipt to M10 brief, review record, comparison surface, and technical preflight; automated validation rejects reference pixels in production SVG/PNG assets |
-| P1 | Reconcile active M8–M10 control status (R-014) | 🤖 Agent | 🔵 Agent-ready | Correct active overview, roadmap, and M10 specification status/next-task statements without rewriting historical review facts |
+| P1 | Reconcile active M8–M10 control status (R-014) | 🤖 Agent | 🟢 Complete | Active overview, roadmap, and M10 specification controls now record passed M8–M10 status and the current R-016 decision without rewriting historical review facts |
+| P2 | Select third-style contrast proof (R-016) | 🧭 Product + 🎨 Art lead | 🟣 Human decision | Choose a bounded third-style target and review-reference policy; do not begin rendering |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -294,6 +297,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Accepted generated review-only references as the required pre-review task for every new style; queued R-012a for Volcanic Forge | Project owner / Codex |
 | 2026-07-19 | Completed R-012a: generated, resized, inspected, and receipted the `1080 × 1920` Volcanic Forge review-only reference; R-013 is next | Codex |
 | 2026-07-19 | Completed R-013: registered the Volcanic Forge reference in M10 evidence and added source-boundary validation; R-014 is next | Codex |
+| 2026-07-19 | Completed R-014: reconciled active M8–M10 status controls and queued the R-016 third-style decision | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
