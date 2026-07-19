@@ -81,3 +81,43 @@ All technical hard gates passed: `npm run validate:m11-a4-package`, `npm run val
 | **Total** |  | **54/100** |  |
 
 **Decision: Fail — scored.** Technical correctness does not change the visual result. `V11-B003` is a bounded visual blocker: integrate independently visible weathered-stone texture, directional dark-wood grain, and moss growth/masking into the actual component faces and their source isolates, and make the focal-root depth visible in its isolate. Preserve shared geometry, stable IDs, seeds, semantic text, module boundaries, and the review-reference boundary. M11-R005 is the next agent-ready remediation.
+
+## M11-R006 / V11 re-review — 2026-07-19
+
+Reviewer: project-owner-authorized automated review. Reviewed revision: `d1ad719` (`fix(styles): deepen enchanted forest face materials`). Inspected all required source, target-phone, thumbnail, reference-comparison, matrix, isolate, package, seed, clean-workspace, and generalized-seam surfaces.
+
+Technical hard-gate outcome: **Pass**. `validate:m11-a4-package`, `validate:m11-a3-evidence`, contracts, focused M11 renderer coverage, serial review-reference boundary coverage, and control-drift validation all passed. The 52-module package, 26-entry matrix, named seed/baseline receipts, shared geometry/seam, semantic labels, and review-reference boundary remain intact.
+
+| Dimension | Score | Weighted | Observation |
+|---|---:|---:|---|
+| Three-style distinction | 3/5 | 9 | The green organic family remains distinct from Frostbound and Forge. |
+| Organic material separation | 3/5 | 9 | The source isolate and component faces now distinguish weathered stone, dark wood grain, moss growth, and living root light. |
+| Focal hierarchy | 3/5 | 9 | The seed and roots are identifiable while actions remain readable. |
+| Botanical ornament restraint | 2/5 | 4 | Large moss-growth silhouettes and broad face markings compete with the contained UI language instead of acting as restrained anchored ornament. |
+| Diffuse bioluminescent lighting | 3/5 | 6 | Local living light is bounded and not fire/ice-like. |
+| Seeded organic variation | 3/5 | 6 | Variation is deterministic and visible within approved bounds. |
+| Typography and state language | 3/5 | 6 | Labels remain readable and action hierarchy is preserved. |
+| Portrait composition | 2/5 | 4 | The enlarged material marks create uneven visual weight in the panel and compete with the calm reward hierarchy. |
+| **Total** |  | **53/100** |  |
+
+**Decision: Fail — scored.** The total is below `85/100`; Botanical ornament restraint and Portrait composition are below `3/5`. `V11-B004` requires reducing material-mark scale and opacity, confining moss growth to edge/anchor regions, and rebalancing the face treatments around the content hierarchy while retaining the newly distinct material channels. M11-R007 is the next agent-ready remediation.
+
+## M11-R006 / V11 re-review — 2026-07-19
+
+Reviewer: project-owner-authorized automated review. Reviewed revision: `d1ad719` (`fix(styles): deepen enchanted forest face materials`). Inspected all required source, target-phone, thumbnail, reference-comparison, matrix, isolate, package, seed, clean-workspace, and generalized-seam surfaces.
+
+Technical hard-gate outcome: **Pass**. `validate:m11-a4-package`, `validate:m11-a3-evidence`, contracts, focused M11 renderer coverage, serial review-reference boundary coverage, and control-drift validation all passed. The 52-module package, 26-entry matrix, named seed/baseline receipts, shared geometry/seam, semantic labels, and review-reference boundary remain intact.
+
+| Dimension | Score | Weighted | Observation |
+|---|---:|---:|---|
+| Three-style distinction | 3/5 | 9 | The green organic family remains distinct from Frostbound and Forge. |
+| Organic material separation | 3/5 | 9 | The source isolate and component faces now distinguish weathered stone, dark wood grain, moss growth, and living root light. |
+| Focal hierarchy | 3/5 | 9 | The seed and roots are identifiable while actions remain readable. |
+| Botanical ornament restraint | 2/5 | 4 | Large moss-growth silhouettes and broad face markings compete with the contained UI language instead of acting as restrained anchored ornament. |
+| Diffuse bioluminescent lighting | 3/5 | 6 | Local living light is bounded and not fire/ice-like. |
+| Seeded organic variation | 3/5 | 6 | Variation is deterministic and visible within approved bounds. |
+| Typography and state language | 3/5 | 6 | Labels remain readable and action hierarchy is preserved. |
+| Portrait composition | 2/5 | 4 | The enlarged material marks create uneven visual weight in the panel and compete with the calm reward hierarchy. |
+| **Total** |  | **53/100** |  |
+
+**Decision: Fail — scored.** The total is below `85/100`; Botanical ornament restraint and Portrait composition are below `3/5`. `V11-B004` requires reducing material-mark scale and opacity, confining moss growth to edge/anchor regions, and rebalancing the face treatments around the content hierarchy while retaining the newly distinct material channels. M11-R007 is the next agent-ready remediation.
