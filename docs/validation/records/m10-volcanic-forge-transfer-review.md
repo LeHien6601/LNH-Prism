@@ -68,3 +68,26 @@ On 2026-07-19, the project owner selected Option 1: return the package unscored 
 ## Re-review readiness decision — Option 1 (M10-R004)
 
 On 2026-07-19, the project owner returned the package unscored for `M10-R004`. The target-phone surface has no readable action/progress typography, and the thumbnail surface does not compare Volcanic Forge with Frostbound. M10-R004 must add and verify both elements before V10 is re-reviewed. No score or pass/fail decision was made.
+
+## Authorized automated V10 re-review
+
+| Field | Result |
+|---|---|
+| Reviewer | project-owner-authorized automated review |
+| Technical hard gate | Pass — `npm run validate:m10-r002-package` and the focused renderer test passed; no automatic blocker found |
+| Weighted score | `86/100` |
+| Decision | Pass |
+
+| Dimension | Score | Observation |
+|---|---:|---|
+| Style distinction from Frostbound | 13/15 | Thumbnail comparison clearly separates warm forge and cold crystal identities. |
+| Obsidian/brass/lava material separation | 13/15 | Obsidian field, brass trim, and orange core/action layers remain legible. |
+| Forged edge depth and angular-language fidelity | 9/10 | Shared wide-hex geometry stays crisp and consistent. |
+| Warm lighting and emission restraint | 9/10 | Restrained bottom heat and eight-ember maximum remain within bounds. |
+| Molten focal-object strength and hierarchy | 12/15 | Strong and contained; heat-label proximity is non-blocking. |
+| Ornament and ember restraint | 8/10 | Rivets and embers support rather than dominate hierarchy. |
+| Seeded soot/crack/hammered variation quality | 8/10 | Recorded seed outputs show controlled variation. |
+| Composition and action hierarchy | 9/10 | Title, focal, progress, primary, and secondary actions read in order. |
+| Mobile-scale readability and state distinction | 5/5 | Action and progress typography are readable at target-phone scale. |
+
+No visual dimension is below its minimum and no automatic blocker is open. `V10-O001`: keep the heat label clear of the molten focal in future visual-polish work. The M10 exit gate passes.

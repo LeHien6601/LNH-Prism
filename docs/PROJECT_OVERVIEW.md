@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🟣 **Conduct V10 Volcanic Forge transfer re-review (M10-A7)** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | None — M10-R004 evidence is ready for the bounded V10 human re-review |
+| Next task | 🟣 **Decide multi-style production-hardening coverage after V10 (R-015)** · 🧭 Project owner + 🛠️ Technical lead |
+| Next agent-ready task | None — V10 passed; the next approved plan decision is whether to reopen M5 coverage for the second style |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -147,7 +147,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Prepare Volcanic Forge package and technical evidence (M10-A6) | 🤖 Agent | 🟢 Complete | Produced the engine-neutral package, receipts, showroom, Frostbound comparison, and unscored technical preflight without changing approved M7–M9 outputs |
 | P0 | Conduct V10 Volcanic Forge transfer review (M10-A7) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Return for remediation | Option A selected: do not score the incomplete package; require corrective evidence and a materially distinct transfer before re-review; see `validation/records/m10-volcanic-forge-transfer-review.md` |
 | P0 | Remediate the V10 Volcanic Forge evidence package and visual-transfer proof (M10-R001) | 🤖 Agent | 🟢 Complete | Produced 26 state/size entries, 52 canonical modules, source/phone/thumbnail review surfaces, clean-reproduction receipt, and editable forge-specific focal/ornament/typography layers; focused validation passes |
-| P0 | Conduct V10 Volcanic Forge transfer review (M10-A7) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Fail | Option B recorded a formal V10 fail: hard-gate evidence does not prove true clean-workspace reproduction or recorded seed/zero-baseline output, and the M10-specific adapter is not yet proven compliant with the no-parallel-renderer boundary; see `validation/records/m10-volcanic-forge-transfer-review.md` |
+| P0 | Conduct V10 Volcanic Forge transfer review (M10-A7) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Pass | Project-owner-authorized automated re-review recorded `86/100`; all hard gates and minima passed with no automatic blocker; see `validation/records/m10-volcanic-forge-transfer-review.md` |
 | P0 | Close V10 hard-gate evidence and shared-renderer proof (M10-R002) | 🤖 Agent | 🟢 Complete | True temporary-workspace byte comparison covers all 52 modules; three nonzero and zero-baseline seed receipts, module-hash validation, and style-neutral composition-seam proof are recorded and pass focused validation |
 | P0 | Restore V10 three-distance review surfaces (M10-R003) | 🤖 Agent | 🟢 Complete | Regenerated source-scale, target-phone, and thumbnail surfaces from the generalized renderer; preflight links and focused validation verify all three review distances |
 | P0 | Restore V10 action typography and thumbnail comparison (M10-R004) | 🤖 Agent | 🟢 Complete | Target-phone `CLAIM`, `CONTINUE`, and `FORGE HEAT 90%` typography and renderer-derived Forge-versus-Frostbound thumbnail comparison validate before V10 re-review |

@@ -208,7 +208,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Review gate:** 🟢 M10-A7 Option A selected on 2026-07-19 — the initial package is returned unscored for M10-R001 remediation. The next delivery must provide complete source/phone/thumbnail surfaces, clean reproduction, canonical inventory mapping, and non-palette-only transfer proof before V10 is re-reviewed.
 
-**Re-review readiness:** 🟣 On 2026-07-19, Option 1 returned V10 unscored for M10-R003: restore the required source-scale, target-phone, and thumbnail review surfaces. M10-R002 technical receipts remain valid; V10 must not be re-scored until the three review distances are restored and verified.
+**Exit gate:** 🟢 V10 passed on 2026-07-19 at `86/100` through a project-owner-authorized automated re-review. All technical hard gates and visual minima passed; `V10-O001` is a non-blocking heat-label/focal-spacing observation. The next approved decision is R-015 multi-style production-hardening coverage.
 
 **Re-review gate:** 🔴 V10 failed on 2026-07-19 under Option B. The remediated visuals are diagnostically scored at `78/100`, but a pass is blocked by missing true clean-workspace reproduction, missing recorded seed/zero-baseline output receipts, and unproven no-parallel-renderer compliance. M10-R002 is the next agent-ready remediation.
 
