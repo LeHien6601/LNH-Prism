@@ -51,6 +51,13 @@ const exampleSchemas = new Map([
   ["m10-volcanic-forge-variation.json", "variation.schema.json"],
   ["m10-volcanic-forge-ornament-anchors.json", "ornament-anchor.schema.json"],
   ["m10-volcanic-forge-focal-objects.json", "focal-object.schema.json"],
+  ["style-m11-enchanted-forest.json", "style-spec.schema.json"],
+  ["m11-enchanted-forest-materials.json", "material-pack.schema.json"],
+  ["m11-enchanted-forest-edge-stacks.json", "edge-stack.schema.json"],
+  ["m11-enchanted-forest-material-responses.json", "material-response.schema.json"],
+  ["m11-enchanted-forest-variation.json", "variation.schema.json"],
+  ["m11-enchanted-forest-ornament-anchors.json", "ornament-anchor.schema.json"],
+  ["m11-enchanted-forest-focal-objects.json", "focal-object.schema.json"],
   ["primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["archive/legacy-primary-button-normal.manifest.json", "export-manifest.schema.json"],
   ["../../docs/reference-briefs/assets/v3-frostbound-reward-concept.receipt.json", "concept-receipt.schema.json"],
@@ -169,6 +176,18 @@ if (m10Variation.presets.some(({ channels }) => channels.particleCount > 0)) thr
 if (m10Bindings.emissionBudget.portraitEmberCount !== 8 || m10Bindings.emissionBudget.controlEmberCount !== 0 || m10Bindings.emissionBudget.lavaOpacityMaximum > .55 || m10Bindings.emissionBudget.glowRadiusRatioMaximum > .12 || m10Bindings.emissionBudget.contentOverlap !== "forbidden") throw new Error("M10 emission budget must enforce the approved limits.");
 if (m10Bindings.bindings.lighting.direction !== "bottom" || m10Bindings.bindings.typography.action !== "m10-engraved-gold-action@1.0.0") throw new Error("M10 must bind the approved warm lighting and engraved action typography.");
 console.log("validated M10 shared-system bindings, full component coverage, and emission limits");
+
+const m11Bindings = JSON.parse(await readFile(join(exampleDir, "m11-enchanted-forest-system-bindings.json"), "utf8"));
+const m11Components = ["primary-hex-button", "secondary-hex-button", "panel", "tab", "badge", "progress", "icon-container"];
+const m11Edge = JSON.parse(await readFile(join(exampleDir, "m11-enchanted-forest-edge-stacks.json"), "utf8"));
+const m11Responses = JSON.parse(await readFile(join(exampleDir, "m11-enchanted-forest-material-responses.json"), "utf8"));
+const m11Variation = JSON.parse(await readFile(join(exampleDir, "m11-enchanted-forest-variation.json"), "utf8"));
+for (const registry of [m11Edge, m11Responses, m11Variation]) for (const componentId of m11Components) if (!registry.bindings.some((binding) => binding.componentId === componentId)) throw new Error("M11 bindings must cover " + componentId + ".");
+if (m11Variation.presets.some(({ channels }) => channels.particleCount > 0)) throw new Error("M11 variation may not emit particles.");
+const m11Budget = m11Bindings.bioluminescenceBudget;
+if (m11Budget.coverageMaximum > .30 || m11Budget.haloExtentRatioMaximum > .12 || m11Budget.haloOpacityMaximum > .40 || m11Budget.ornamentMaximum > 6 || m11Budget.portraitMoteMaximum > 12 || m11Budget.contentOverlap !== "forbidden" || m11Budget.semanticText !== "required") throw new Error("M11 bounds must enforce approved limits.");
+if (m11Bindings.bindings.lighting.direction !== "inner-canopy" || m11Bindings.bindings.typography.action !== "m11-parchment-sage-action@1.0.0") throw new Error("M11 must bind approved lighting and typography.");
+console.log("validated M11 shared-system bindings, component coverage, and organic-lighting limits");
 
 const exportManifestSchema = schemas.get("export-manifest.schema.json");
 const validateExportManifest = ajv.getSchema(exportManifestSchema.$id);

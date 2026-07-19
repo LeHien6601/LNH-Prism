@@ -1,0 +1,1 @@
+{"schemaVersion":"1.0","id":"m11-enchanted-forest-focal-objects","version":"0.1.0","status":"approved","presets":[{"id":"m11-luminous-seed","version":"1.0.0","layers":["core","rim","inner-light","support-frame","ground-glow"]},{"id":"m11-leaf-mark","version":"1.0.0","layers":["core","rim","inner-light"]}],"compatibility":{"minimumRendererVersion":"0.1.0"}}

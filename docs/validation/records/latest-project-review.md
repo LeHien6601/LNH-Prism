@@ -23,7 +23,7 @@
 |---|---|---|---|---|---|---|---|---|
 | F-020 | P0 | Plan / governance | Resolved fact | R-016c Option A approved the M11 definition/rubric through ADR-025, retaining the seven-component/no-reference-pixel/no-style-fork boundary and adding an observable target-phone readability rule. | The definition gate no longer blocks planning; direct renderer/package work remains intentionally deferred. | R-020: plan bounded implementation/evidence slices before implementation. | None. | Agent-ready. |
 | F-021 | P1 | Validation / provenance | Resolved fact | `review-reference-boundary.mjs` validates registered review-only references, while focused tests inject filename, hash, identical-raster, direct-link, and `<image>` leaks for Forge and Enchanted Forest. | The generated-reference policy now protects both reviewed styles before M11 production work. | Preserve this validator in M11-A4 package preflight. | None. | Complete. |
-| F-022 | P1 | Architecture / regression | Fact | `src/renderer/style-composition.ts` is style-neutral in interface, but its implementation delegates to M8 renderers and the focused test exercises only `M10_VOLCANIC_FORGE_BINDING`. The M11 definition requires the same seam without a style fork. | A third binding could silently require an M11 adapter or geometry exception, undermining the multi-style claim. | R-019: add Enchanted Forest binding/contract coverage that proves shared geometry, stable IDs, variation bounds, and no style-specific renderer path before matrix generation. | R-016c approval and R-018 boundary contract. | Agent-ready after R-016c. |
+| F-022 | P1 | Architecture / regression | Resolved fact | `src/styles/m11-enchanted-forest-binding.ts`, its focused renderer test, and contract validation now exercise Enchanted Forest through the existing shared composition seam with stable IDs, seed behavior, and approved bounds. | The third binding no longer requires an M11 adapter or geometry exception. | Preserve this proof while rendering the M11 matrix. | R-016c approval and R-018 boundary contract. | Complete. |
 | F-023 | P1 | Workflow / status | Resolved fact | `validate:control-drift` verifies active-task/task-board/roadmap alignment and that every review-only reference receipt has a real decision, raster, and documentation link. Focused fixtures reject stale task alignment and an undocumented reference. | The previously manual drift patterns now fail with actionable errors. | Run the validator in future control/gate work. | None. | Complete. |
 | F-024 | P2 | Definition quality | Resolved fact | ADR-025 requires semantic labels/progress values, no overlap or obscuration at target-phone scale, and at least `3/5` for Mobile-scale readability and state distinction. | The previously ambiguous readability threshold is now consistent and observable. | Preserve the approved rule in R-020 slice planning and later review evidence. | None. | Complete. |
 | F-025 | P2 | Plan / evidence | Resolved inference | R-020 added the ordered M11 implementation/evidence plan, assigning every rubric hard-gate surface to exactly one contracts/materials, rendering/matrix, package/evidence, or review slice. | Future work now has bounded ownership and validation targets. | Start R-018 / M11-A1; preserve the ordered dependencies. | None. | Complete. |
@@ -50,10 +50,16 @@
 
 ### R-019 / M11-A2 — Prove Enchanted Forest shared-composition binding
 
+- **Priority / eligibility:** P0 — Complete.
+- **Outcome:** Added source-neutral Enchanted Forest style, material, variation, ornament, focal, typography, lighting, state, and component binding registries through the existing composition seam. The focused proof covers shared geometry, independent editable layers, approved budgets, and named same/different/zero seed behavior without an M11 renderer/template branch.
+- **Validation:** `npm run build:renderer`; `npm run validate:contracts`; `node --test tests/renderer/m11-enchanted-forest-binding.test.mjs`; `npm run test:review-reference-boundary`; and `npm run validate:control-drift` passed.
+
+### M11-A3 — Render Enchanted Forest matrix and review surfaces
+
 - **Priority / eligibility:** P0 — Agent-ready; this is the active overview task and next recommended task.
-- **Scope:** Add Enchanted Forest versioned binding and focused contract/renderer coverage through the existing composition seam, before matrix generation.
-- **Acceptance criteria:** Stable IDs, shared geometry, named zero/nonzero seed behavior, independent layers, source provenance, approved bounds, and no M11-specific renderer/template path are proven.
-- **Validation:** Contract negatives, focused renderer tests, source/provenance checks, and same/different/zero-seed tests.
+- **Scope:** Render the seven-component matrix and `1080 × 1920` portrait through shared templates, then create material/focal isolates and source/phone/thumbnail comparison surfaces.
+- **Acceptance criteria:** Required states and independent progress parts are visible; organic materials, restrained lighting/ornament, living focal, and readable semantic text follow approved bounds.
+- **Validation:** Focused renderer tests, clipping/slot/readability checks, and three-distance evidence existence/provenance checks.
 
 ### R-020 — Plan bounded M11 implementation and evidence slices
 
