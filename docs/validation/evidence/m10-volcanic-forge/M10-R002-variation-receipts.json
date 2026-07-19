@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "renderer": "src/renderer/style-composition.ts",
+  "receipts": [
+    {
+      "seed": 0,
+      "baseline": true,
+      "sha256": "7b66a06c1761010d007a3f1f14809eded439cf7129e20b7ca7c1c5744351f556",
+      "sameSeedDeterministic": true
+    },
+    {
+      "seed": 39211,
+      "baseline": false,
+      "sha256": "ee5eb31718cfe583612cb51075663df52f37a2c101612cc535d73c5df741a2fc",
+      "sameSeedDeterministic": true
+    },
+    {
+      "seed": 481516,
+      "baseline": false,
+      "sha256": "75d0c7477826eff39ec323599fe96979c4b33eb907b89a6b8f1a9459101b0256",
+      "sameSeedDeterministic": true
+    },
+    {
+      "seed": 8675309,
+      "baseline": false,
+      "sha256": "b41e9eea8a1945a51561f4c79bdb558115378c52ef12cb0a0864f4e12f5b34fd",
+      "sameSeedDeterministic": true
+    }
+  ]
+}

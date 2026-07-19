@@ -2,19 +2,12 @@
   "schemaVersion": "1.0",
   "status": "unscored-review-ready",
   "technicalCorrectness": "hard-gate-only",
-  "checks": [
-    "deterministic-reproduction",
-    "stable-ids",
-    "provenance-and-receipts",
-    "engine-neutral-delivery",
-    "editable-structure",
-    "recorded-seeds-and-zero-baseline",
-    "clean-reproduction",
-    "no-reference-pixels",
-    "no-style-branch",
-    "functional-bounds",
-    "target-phone-readability"
-  ],
+  "checks": {
+    "cleanWorkspace": "M10-R002-clean-workspace-receipt.json",
+    "moduleReceipts": "assets/m10-volcanic-forge/manifest.json",
+    "seedBaseline": "M10-R002-variation-receipts.json",
+    "generalizedSeam": "M10-R002-generalized-seam-proof.json"
+  },
   "automaticBlockers": [],
   "scoringPerformed": false,
   "gateDecision": "pending-human-review"

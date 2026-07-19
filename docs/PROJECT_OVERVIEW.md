@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🔵 **Close V10 hard-gate evidence and shared-renderer proof (M10-R002)** · 🤖 Agent |
-| Next agent-ready task | M10-R002 — record real clean-workspace reproduction, seed/zero-baseline receipts, and prove the Volcanic Forge composition uses the generalized renderer seam rather than a parallel renderer |
+| Next task | 🟣 **Conduct V10 Volcanic Forge transfer re-review (M10-A7)** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
+| Next agent-ready task | None — M10-R002 evidence is ready for the bounded V10 human re-review |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -148,7 +148,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Conduct V10 Volcanic Forge transfer review (M10-A7) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Return for remediation | Option A selected: do not score the incomplete package; require corrective evidence and a materially distinct transfer before re-review; see `validation/records/m10-volcanic-forge-transfer-review.md` |
 | P0 | Remediate the V10 Volcanic Forge evidence package and visual-transfer proof (M10-R001) | 🤖 Agent | 🟢 Complete | Produced 26 state/size entries, 52 canonical modules, source/phone/thumbnail review surfaces, clean-reproduction receipt, and editable forge-specific focal/ornament/typography layers; focused validation passes |
 | P0 | Conduct V10 Volcanic Forge transfer review (M10-A7) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Fail | Option B recorded a formal V10 fail: hard-gate evidence does not prove true clean-workspace reproduction or recorded seed/zero-baseline output, and the M10-specific adapter is not yet proven compliant with the no-parallel-renderer boundary; see `validation/records/m10-volcanic-forge-transfer-review.md` |
-| P0 | Close V10 hard-gate evidence and shared-renderer proof (M10-R002) | 🤖 Agent | 🔵 Agent-ready | Add a true clean-workspace rebuild/byte-comparison receipt, record nonzero and zero-variation output receipts, and move or prove M10 composition at the generalized renderer seam without a style-specific renderer path; regenerate evidence and pass focused validation |
+| P0 | Close V10 hard-gate evidence and shared-renderer proof (M10-R002) | 🤖 Agent | 🟢 Complete | True temporary-workspace byte comparison covers all 52 modules; three nonzero and zero-baseline seed receipts, module-hash validation, and style-neutral composition-seam proof are recorded and pass focused validation |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -281,6 +281,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed M10-A6 and selected V10 review Option A: return the incomplete package for M10-R001 remediation before scoring; require full review-distance evidence, clean reproduction, canonical inventory mapping, and proof that the transfer is not palette-only | Project owner / Codex |
 | 2026-07-19 | Completed M10-R001: rebuilt the Volcanic Forge package with editable forge layers, canonical inventory, complete review surfaces, and deterministic receipts; V10 re-review is next | Codex |
 | 2026-07-19 | Recorded V10 Option B fail: missing true clean-workspace and seed/zero-baseline proof plus unresolved no-parallel-renderer compliance block a pass; M10-R002 is next | Project owner / Codex |
+| 2026-07-19 | Completed M10-R002: recorded temporary clean-workspace byte comparison, seed/zero-baseline receipts, manifest-module audits, and a style-neutral composition-seam proof; V10 re-review is next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |

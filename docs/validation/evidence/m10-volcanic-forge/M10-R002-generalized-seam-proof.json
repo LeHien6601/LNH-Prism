@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "renderer": "src/renderer/style-composition.ts",
+  "binding": "src/styles/m10-volcanic-forge-binding.ts",
+  "proof": [
+    "M10 has no renderer module",
+    "style-composition owns all renderer entry points",
+    "binding supplies only style data/layers while M7/M8 geometry is inherited"
+  ],
+  "status": "pass"
+}

@@ -20,8 +20,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/panel-488x660-normal.svg",
       "path": "assets/m10-volcanic-forge/modules/panel/panel-488x660-normal.svg",
       "format": "svg",
-      "bytes": 5344,
-      "sha256": "bcc3828af5ed6d0fdc1735582a13315eece79845e972c14174909a59760b4025"
+      "bytes": 5677,
+      "sha256": "c94eabcb61ba54a2db9dbd55946d1c25aa2dbb10fe939a4fa11e82ed5ed77b23"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:panel-488x660-normal:png",
@@ -29,8 +29,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/panel-488x660-normal.png",
       "path": "assets/m10-volcanic-forge/modules/panel/panel-488x660-normal.png",
       "format": "png",
-      "bytes": 121338,
-      "sha256": "07e9a6855f1ddc2b5f64750b24ec9637e7adab42175a6894a130e42fd75f9cbb"
+      "bytes": 121795,
+      "sha256": "59ca3d53cbe9e29a0acf014180d3e7edc6e2a90b5fe738e5d43f365e9b2b8d4b"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:panel-488x760-normal:svg",
@@ -38,8 +38,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/panel-488x760-normal.svg",
       "path": "assets/m10-volcanic-forge/modules/panel/panel-488x760-normal.svg",
       "format": "svg",
-      "bytes": 5344,
-      "sha256": "f5312f174a06f6d2ec09d1ab2ca63a80691dd486a82de3e659abcadb81035636"
+      "bytes": 5677,
+      "sha256": "656e91d104324979ff9aaae6a8a0eddb0bac03edc289f3e4b7238259db2ff647"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:panel-488x760-normal:png",
@@ -47,8 +47,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/panel-488x760-normal.png",
       "path": "assets/m10-volcanic-forge/modules/panel/panel-488x760-normal.png",
       "format": "png",
-      "bytes": 133610,
-      "sha256": "8695bb271ef0f5491e3144d8d7f87042ebc1a34b01184829914ceba42f2f2218"
+      "bytes": 133979,
+      "sha256": "0d1acf4d8264f4eda74eb99dbafb6d5944f5084b0a938b6d2b9dd2767e963702"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-320x68-normal:svg",
@@ -56,8 +56,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-320x68-normal.svg",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-320x68-normal.svg",
       "format": "svg",
-      "bytes": 4817,
-      "sha256": "a8880246a412e92c58ee8e271b91b9a10926500f8474971e1861f665d9ce45d0"
+      "bytes": 5159,
+      "sha256": "6db53ddaabcabbaf882de2793a1f644ae276053afd976e9e73250246f7143b38"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-320x68-normal:png",
@@ -65,8 +65,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-320x68-normal.png",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-320x68-normal.png",
       "format": "png",
-      "bytes": 23300,
-      "sha256": "7113e28f9dbddb94b6a96b768def07e1413ba6c8afe0f3ae78afd414de57678c"
+      "bytes": 23656,
+      "sha256": "7d28e681b0c2f20dbef4babfc3a73477fbf8eeb6e525fd2f7935a8429d73d17e"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-320x68-pressed:svg",
@@ -74,8 +74,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-320x68-pressed.svg",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-320x68-pressed.svg",
       "format": "svg",
-      "bytes": 4844,
-      "sha256": "69b7473175d0dada6395d3bbc56511ca5bc2454abd8532ecf41ea357abbf6d23"
+      "bytes": 5186,
+      "sha256": "c97a098be5b10a5465a05fb32e717dc2b85eaceaf3f5bdb8791b77325b594e27"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-320x68-pressed:png",
@@ -83,8 +83,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-320x68-pressed.png",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-320x68-pressed.png",
       "format": "png",
-      "bytes": 22525,
-      "sha256": "8f66125cd08a338b7434b5edc38b4864b20b8b0d79b4aa6e8855376b582c0047"
+      "bytes": 22888,
+      "sha256": "e3c360e84ac39b1f1c40ec90bd2bd9c71d48650a1f32ae0da75040556a99fa4e"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-320x68-disabled:svg",
@@ -92,8 +92,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-320x68-disabled.svg",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-320x68-disabled.svg",
       "format": "svg",
-      "bytes": 4874,
-      "sha256": "b6cdb3351f5f2c7543bb962545debb289dee192ca8f93784d737c2fabbfcc158"
+      "bytes": 5216,
+      "sha256": "a3d7465851dbc8eef79fe0921d0f7e3defd161fd89ebdc6b75c58567d25319c0"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-320x68-disabled:png",
@@ -101,8 +101,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-320x68-disabled.png",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-320x68-disabled.png",
       "format": "png",
-      "bytes": 20889,
-      "sha256": "e03904fe6053bad8f507405ccd442ac1a731dd00123d541b79af627dcabee958"
+      "bytes": 21224,
+      "sha256": "d89e91d661c63122474b58295be676924ebe008101e50843ed84de178cf13f16"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-260x62-normal:svg",
@@ -110,8 +110,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-260x62-normal.svg",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-260x62-normal.svg",
       "format": "svg",
-      "bytes": 4817,
-      "sha256": "1a6d0697248ee5369943d4de5a3988eb25b577fedb347501cf627b721ce54fc6"
+      "bytes": 5158,
+      "sha256": "d3f3c15e09d1c6dae713de78fa144a54facb5d0ff141636148c338390710a4db"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-260x62-normal:png",
@@ -119,8 +119,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-260x62-normal.png",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-260x62-normal.png",
       "format": "png",
-      "bytes": 20052,
-      "sha256": "5313a28f0857def14438ffcc872219827ec20cb2fd0e69f265ca1034c2f91274"
+      "bytes": 20438,
+      "sha256": "e4792288ed603e2e5896d2605121724786921865b9101e55e57f12bfe6d01af4"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-260x62-pressed:svg",
@@ -128,8 +128,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-260x62-pressed.svg",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-260x62-pressed.svg",
       "format": "svg",
-      "bytes": 4844,
-      "sha256": "81c102b5e910cd5994df4174730f325e30079d085e1ee0310ffb182f0d384b35"
+      "bytes": 5185,
+      "sha256": "226de442aec94b6aa4560f167abac62bda5eb00418b80175addb328586faca2b"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-260x62-pressed:png",
@@ -137,8 +137,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-260x62-pressed.png",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-260x62-pressed.png",
       "format": "png",
-      "bytes": 19215,
-      "sha256": "04820ac9e29af4370e968e368fc283d91e5861e705c1e690c88c4956a8adad45"
+      "bytes": 19590,
+      "sha256": "7a30169a3d51812e219e192a50a8d47b61b3ec9ff5b653e7bf0d054b369f9721"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-260x62-disabled:svg",
@@ -146,8 +146,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-260x62-disabled.svg",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-260x62-disabled.svg",
       "format": "svg",
-      "bytes": 4874,
-      "sha256": "b7b6c408e27c875529b0663559ebe713afd933c16c93772a79c280453bb5cf14"
+      "bytes": 5215,
+      "sha256": "964b6428ed010f8976a3521b2a915fe246ad0fe8efc98a806a5e383e54f4858f"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:primary-hex-button-260x62-disabled:png",
@@ -155,8 +155,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/primary-hex-button-260x62-disabled.png",
       "path": "assets/m10-volcanic-forge/modules/primary-hex-button/primary-hex-button-260x62-disabled.png",
       "format": "png",
-      "bytes": 17952,
-      "sha256": "c2c73541602f503a1ed0401a083dd46f4f1f048ad16b322b5302af6dec4e8d35"
+      "bytes": 18313,
+      "sha256": "c01ea33c100ad09286d8be1e3f264fa8cf18c79301fc3fe03028abac8db61443"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-232x56-normal:svg",
@@ -164,8 +164,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-232x56-normal.svg",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-232x56-normal.svg",
       "format": "svg",
-      "bytes": 4875,
-      "sha256": "8ab64248eeab2833743ece588b733773c26af5707e2cc273f6c13841b4c03ed9"
+      "bytes": 5218,
+      "sha256": "a1c5dd09603097a6463c0cf64f3f066fdd6babff502f9f370b1cc3b426714037"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-232x56-normal:png",
@@ -173,8 +173,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-232x56-normal.png",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-232x56-normal.png",
       "format": "png",
-      "bytes": 16790,
-      "sha256": "60f1fad2f992defbf92f0786d220181f33112558105397be880210d485cbafc6"
+      "bytes": 17215,
+      "sha256": "b25eb4af0627c527a15af9e519126e45991a636d252f8222a12a69104bc00588"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-232x56-pressed:svg",
@@ -182,8 +182,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-232x56-pressed.svg",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-232x56-pressed.svg",
       "format": "svg",
-      "bytes": 4902,
-      "sha256": "22659d3bd7c7b4bff2749d8363d52831d2b845a53642d9af808898c688aa0af3"
+      "bytes": 5245,
+      "sha256": "9f98f1102bb8d91d5b95ee196d8b5fec04d3078c503d3fe78f7cfee7fbd99d1b"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-232x56-pressed:png",
@@ -191,8 +191,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-232x56-pressed.png",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-232x56-pressed.png",
       "format": "png",
-      "bytes": 16531,
-      "sha256": "7416ba3f78efa36faf65de8cd23c5a366b355369efd94a497d0e70997f30b995"
+      "bytes": 16925,
+      "sha256": "7644e3f9eb795126024c77a6ce03ed565da3fc10e1f95ba8345af5d3b6ce338e"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-232x56-disabled:svg",
@@ -200,8 +200,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-232x56-disabled.svg",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-232x56-disabled.svg",
       "format": "svg",
-      "bytes": 4932,
-      "sha256": "f8e10960157d5c906bd628e8e9f97024744708f71f80a4f6412cee125cd712b9"
+      "bytes": 5275,
+      "sha256": "d1ace874599244f9f973292d4c50e8335462f565ea1e2c93d05a1175a4fa297c"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-232x56-disabled:png",
@@ -209,8 +209,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-232x56-disabled.png",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-232x56-disabled.png",
       "format": "png",
-      "bytes": 15858,
-      "sha256": "35d7fe60ff2694a37f57f56aa3cc4ea1968aa244a7f68811ba0a2ad0758bd992"
+      "bytes": 16281,
+      "sha256": "56127d82c7d952ee1ada8ae5983ed5fad7309611b4093f6a9e79913b4f1de2a9"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-188x52-normal:svg",
@@ -218,8 +218,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-188x52-normal.svg",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-188x52-normal.svg",
       "format": "svg",
-      "bytes": 4875,
-      "sha256": "cdf5d18f929975b768b6fd00392a1d01731cb099235ba0fc7e2709909dc24e43"
+      "bytes": 5217,
+      "sha256": "f60f00ebe7e16596bd80b317bf8f4bcac388b7e7064cdbfd43f5c6def5e4e218"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-188x52-normal:png",
@@ -227,8 +227,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-188x52-normal.png",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-188x52-normal.png",
       "format": "png",
-      "bytes": 13760,
-      "sha256": "ea3ea64c103993ebd026d2f00dd2a63ec0fe08ac55e2594a44487520e1e20549"
+      "bytes": 14212,
+      "sha256": "a20db661eab5260521668c243fe05d41c1d4ffd9cb8fcc0cf4c29f6e2dc53cd5"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-188x52-pressed:svg",
@@ -236,8 +236,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-188x52-pressed.svg",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-188x52-pressed.svg",
       "format": "svg",
-      "bytes": 4902,
-      "sha256": "1164a16cab18e8fe1547bcd5972882a22a9637d0b2cb7ce0f096b87be34c5146"
+      "bytes": 5244,
+      "sha256": "ee74c48efd7ba7b63bab9d4bda05d3c489c6c1d0a36dc34b8ea0cfa6c4202251"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-188x52-pressed:png",
@@ -245,8 +245,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-188x52-pressed.png",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-188x52-pressed.png",
       "format": "png",
-      "bytes": 13385,
-      "sha256": "06594dc994d440d302042d41f252d6aa5ebe1bdf0ac3bdef07ad55b106220636"
+      "bytes": 13850,
+      "sha256": "02407b6f907a83056996c4c5eeefd2e5ab22ca9c1f424ffd9d1b6177de124573"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-188x52-disabled:svg",
@@ -254,8 +254,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-188x52-disabled.svg",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-188x52-disabled.svg",
       "format": "svg",
-      "bytes": 4932,
-      "sha256": "4c0f0b7c570399b153777edd3481a752bae7e1e966e550ba93eb70f80333bd33"
+      "bytes": 5274,
+      "sha256": "9c7325d09d1d8161448c4d6a194e1c0fa3a652e8b57558a813bbdaff0aa4229c"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:secondary-hex-button-188x52-disabled:png",
@@ -263,8 +263,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/secondary-hex-button-188x52-disabled.png",
       "path": "assets/m10-volcanic-forge/modules/secondary-hex-button/secondary-hex-button-188x52-disabled.png",
       "format": "png",
-      "bytes": 13480,
-      "sha256": "335415ede1f98731c4f20c4a3b2c3c90f2a7045255c18f1a5b2f75002642ad27"
+      "bytes": 13939,
+      "sha256": "ca86994ade88c878097a3223ae25adcdc76364f4e5117157238749de8dd3ef12"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:tab-148x52-normal:svg",
@@ -272,8 +272,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/tab-148x52-normal.svg",
       "path": "assets/m10-volcanic-forge/modules/tab/tab-148x52-normal.svg",
       "format": "svg",
-      "bytes": 4388,
-      "sha256": "5694e38600b6499dc7aa5fd0bf0bef44529047a9bbf1b0bec5da41acaf7f5a9d"
+      "bytes": 4713,
+      "sha256": "daadfec2aecf859ff08dcd6ad3cb0bc5d826b3fe7a7db5e0021450576554c0ef"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:tab-148x52-normal:png",
@@ -281,8 +281,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/tab-148x52-normal.png",
       "path": "assets/m10-volcanic-forge/modules/tab/tab-148x52-normal.png",
       "format": "png",
-      "bytes": 10729,
-      "sha256": "462224a8b944b22608d8474e36d01cd75b9cadf68a1dfcd5a9dca0e25db0736b"
+      "bytes": 11129,
+      "sha256": "0c642ad9672be549000c06ceda26024af877a2dcc915cf78e97a311bee1f92ec"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:tab-184x52-selected:svg",
@@ -290,8 +290,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/tab-184x52-selected.svg",
       "path": "assets/m10-volcanic-forge/modules/tab/tab-184x52-selected.svg",
       "format": "svg",
-      "bytes": 4443,
-      "sha256": "4704542d26d83cbfeb7683ee64d01dac6bac52ed6e41466b353f0cc0c61ae7b1"
+      "bytes": 4768,
+      "sha256": "57d48850f9afedf3329a708c523609472361dd14af9ee9e2c7fb421a6d67cc96"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:tab-184x52-selected:png",
@@ -299,8 +299,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/tab-184x52-selected.png",
       "path": "assets/m10-volcanic-forge/modules/tab/tab-184x52-selected.png",
       "format": "png",
-      "bytes": 12888,
-      "sha256": "0db83a679eeb62ad82fc2b2d384b540fc645eeca05ac1e32e1bb2497b08ddcc8"
+      "bytes": 13339,
+      "sha256": "24d6895dd31ff8e94f7de0b9fb2f39ac74a600650bf8b1b4ab0ad6b651779f11"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:badge-164x48-normal:svg",
@@ -308,8 +308,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/badge-164x48-normal.svg",
       "path": "assets/m10-volcanic-forge/modules/badge/badge-164x48-normal.svg",
       "format": "svg",
-      "bytes": 4450,
-      "sha256": "8ae4a40c56d7850b2d96736723b96707d303696fe34438cd037f78eea9f267d0"
+      "bytes": 4777,
+      "sha256": "3aa1485d2e015d810a8e59cfbe3c841db90ce19eed210ee98d4bb3aabc1f69e7"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:badge-164x48-normal:png",
@@ -317,8 +317,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/badge-164x48-normal.png",
       "path": "assets/m10-volcanic-forge/modules/badge/badge-164x48-normal.png",
       "format": "png",
-      "bytes": 11606,
-      "sha256": "16514eb19854fa87b8d6abffa17a0f4140866e5edc8e63b601802c771345babf"
+      "bytes": 12067,
+      "sha256": "2d79c9c11d7a5938d7042823bc58eb22deec1d444f2356d8fa7761659eae2f6b"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:badge-212x48-highlighted:svg",
@@ -326,8 +326,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/badge-212x48-highlighted.svg",
       "path": "assets/m10-volcanic-forge/modules/badge/badge-212x48-highlighted.svg",
       "format": "svg",
-      "bytes": 4585,
-      "sha256": "2cfe133ebfc5842d71a941d314341dc1ef7fb10c25ef571aa457e069fc5266c6"
+      "bytes": 4912,
+      "sha256": "5a58106cd927790103b53b551c186bdd3450cd55751040373489a9a1d7f491f9"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:badge-212x48-highlighted:png",
@@ -335,8 +335,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/badge-212x48-highlighted.png",
       "path": "assets/m10-volcanic-forge/modules/badge/badge-212x48-highlighted.png",
       "format": "png",
-      "bytes": 14099,
-      "sha256": "d21d52dd780aa05d261d67fba610d0b6d8c29db78a3e0fa5dfcd37f1866c3dbe"
+      "bytes": 14607,
+      "sha256": "916308eac5886cf0d2268764dd8691183028d0c0f8e6b6ccbad24e8a05bd3dc9"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:icon-container-92x92-normal:svg",
@@ -344,8 +344,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/icon-container-92x92-normal.svg",
       "path": "assets/m10-volcanic-forge/modules/icon-container/icon-container-92x92-normal.svg",
       "format": "svg",
-      "bytes": 5258,
-      "sha256": "9ac3ffdbfdab2db224512350dd202cd662660cee4d44405fbeabfdf9ab327839"
+      "bytes": 5593,
+      "sha256": "3ffedb1f1b3522245ca0f161e7a5a8e959d4a615d7c37dd15620b3dc23afac9f"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:icon-container-92x92-normal:png",
@@ -353,8 +353,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/icon-container-92x92-normal.png",
       "path": "assets/m10-volcanic-forge/modules/icon-container/icon-container-92x92-normal.png",
       "format": "png",
-      "bytes": 13820,
-      "sha256": "a1ed08bff214e58c6ee944067e7f840e5ab88b655ecc3b65ec2348be0d0eb764"
+      "bytes": 13911,
+      "sha256": "fe93783c32fd131e7ef840554c8b905ad8b26787f4a449253499055586f98d0f"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:icon-container-116x116-selected:svg",
@@ -362,8 +362,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/icon-container-116x116-selected.svg",
       "path": "assets/m10-volcanic-forge/modules/icon-container/icon-container-116x116-selected.svg",
       "format": "svg",
-      "bytes": 5389,
-      "sha256": "421bcc40d63924dd1fbb7213924ebc617d6d939c2185e071026d365b66455c15"
+      "bytes": 5724,
+      "sha256": "96af4d43275c5e506099ad3d2fa6ec7362a5f480046e14d60d7a4e22efbd5167"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:icon-container-116x116-selected:png",
@@ -371,8 +371,8 @@
       "source": "docs/validation/evidence/m10-volcanic-forge/matrix/icon-container-116x116-selected.png",
       "path": "assets/m10-volcanic-forge/modules/icon-container/icon-container-116x116-selected.png",
       "format": "png",
-      "bytes": 17852,
-      "sha256": "c6f3b54f4a64e448e8f62e2d967ab894aa1e6dbf61189f14658005e0c55eb8ab"
+      "bytes": 18033,
+      "sha256": "5979964deaf75d7b86286cbde4b1d4889e249a34e41d4d964a279d284cdbed39"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:progress-344x28-10:svg",
@@ -381,7 +381,7 @@
       "path": "assets/m10-volcanic-forge/modules/progress/progress-344x28-10.svg",
       "format": "svg",
       "bytes": 2207,
-      "sha256": "719f5901205dc2945e435d9e99e30724d04a8a2e6659a79a8a358a0e09202fcd"
+      "sha256": "dc9b35d2fd5e353063d64d2a9b2af4a1cfee17ee93b43159b0a4a2a407aab5b1"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:progress-344x28-10:png",
@@ -399,7 +399,7 @@
       "path": "assets/m10-volcanic-forge/modules/progress/progress-344x28-50.svg",
       "format": "svg",
       "bytes": 2213,
-      "sha256": "c2c5707cd59bbc2fda7cca77899d6ad6daed382ac24801ab48c3a7a373e61040"
+      "sha256": "cbcb18c8989941e4a18c86c685eb2a7c5d01cec9e7e1103e9bb0b811fb835604"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:progress-344x28-50:png",
@@ -417,7 +417,7 @@
       "path": "assets/m10-volcanic-forge/modules/progress/progress-344x28-90.svg",
       "format": "svg",
       "bytes": 2213,
-      "sha256": "443267a54ea5bf908c8fee3521f32d3d76af62fa1b7b33696fb03c073e640094"
+      "sha256": "1045f6d17d2961e85f7448a3883f93bb36bbfd190dfef362dd8ab5905a300014"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:progress-344x28-90:png",
@@ -435,7 +435,7 @@
       "path": "assets/m10-volcanic-forge/modules/progress/progress-420x28-10.svg",
       "format": "svg",
       "bytes": 2207,
-      "sha256": "195acb70e602f27989df3b9b4f78dda23da7583c95464a7bfe93ac3c47d84699"
+      "sha256": "a6a2545c712cede13319e30b97e2677c42b25de425977c03135fc02894c9e4c3"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:progress-420x28-10:png",
@@ -453,7 +453,7 @@
       "path": "assets/m10-volcanic-forge/modules/progress/progress-420x28-50.svg",
       "format": "svg",
       "bytes": 2213,
-      "sha256": "a8b9110eb8ec1c02ce06b678cc73775742158c8be56c7784bf3e956eac96c016"
+      "sha256": "406408328be6a15b66b0cd5f4ca34e05635b5434a5bddc17512fa2146a188f3f"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:progress-420x28-50:png",
@@ -471,7 +471,7 @@
       "path": "assets/m10-volcanic-forge/modules/progress/progress-420x28-90.svg",
       "format": "svg",
       "bytes": 2213,
-      "sha256": "3901c19e53875825bb8d8d492f250eaeb4826a27c2a86e6021808d7444d76fb6"
+      "sha256": "ca06f3e850f0f87d97064db54203b25912fb47837a537d6db1a2abb373bf5952"
     },
     {
       "assetId": "lnh-prism:asset:m10-volcanic-forge:progress-420x28-90:png",
@@ -485,7 +485,7 @@
   ],
   "provenance": {
     "style": "specs/examples/style-m10-volcanic-forge.json",
-    "bindings": "specs/examples/m10-volcanic-forge-system-bindings.json",
-    "renderer": "src/renderer/m10-style-transfer-components.ts"
+    "bindings": "src/styles/m10-volcanic-forge-binding.ts",
+    "renderer": "src/renderer/style-composition.ts"
   }
 }
