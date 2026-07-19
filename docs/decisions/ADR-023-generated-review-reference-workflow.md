@@ -20,3 +20,7 @@ The generated image is comparison evidence only. It must never be used as a prod
 - `R-012a` is the next Agent-ready task: generate and receipt the Volcanic Forge portrait reference at `1080 × 1920` from ADR-021's approved direction.
 - `R-013` follows R-012a and binds the generated reference receipt to review evidence while enforcing the no-pixel-extraction boundary.
 - Future style plans must include the same generated-reference task before a visual-fidelity review can claim reference comparison.
+
+## Recorded outcome
+
+R-012a completed on 2026-07-19 with `m10-volcanic-forge-review-reference-1080x1920.png` and its adjacent provenance receipt. The image was generated at `941 × 1672` and deterministically resized to the approved `1080 × 1920` review canvas; it remains review-only evidence.

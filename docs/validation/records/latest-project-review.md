@@ -47,14 +47,13 @@
 
 ### R-012a — Generate and receipt the Volcanic Forge review-only reference
 
-- **Priority / eligibility:** P0 — Agent-ready.
-- **Scope:** Generate one `1080 × 1920` portrait reference using only ADR-021's approved Volcanic Forge direction. Store the image and a receipt recording prompt, tool/model, seed when available, dimensions, date, review use, and an explicit no-pixel-extraction boundary.
-- **Acceptance criteria:** The reference is inspectable and hashable; its provenance is complete; it is not linked from production SVG/PNG or material inputs.
-- **Validation:** Image/hash receipt, provenance fields, M10 review/evidence links, and source-boundary checks.
+- **Priority / eligibility:** P0 — Complete.
+- **Outcome:** Generated, deterministically resized, and inspected the `1080 × 1920` reference at `docs/reference-briefs/assets/m10-volcanic-forge-review-reference-1080x1920.png`. Its hash, source size, generation provenance, permitted use, and prohibited production uses are recorded in the adjacent receipt.
+- **Validation:** PNG dimensions, byte count, SHA-256, and visual inspection passed. R-013 remains responsible for the M10 evidence links and automated source-boundary checks.
 
 ### R-013 — Register the approved Volcanic Forge review-only reference
 
-- **Priority / eligibility:** P0 — Blocked until R-012a.
+- **Priority / eligibility:** P0 — Agent-ready.
 - **Scope:** Add the approved reference/board and hash receipt; bind it to the M10 brief, review record, and evidence index without treating it as a production material or component source.
 - **Acceptance criteria:** Reviewers can locate and verify the reference provenance; automated validation rejects production SVG/PNG links to its pixels.
 - **Validation:** Receipt/hash, link, provenance, and source-boundary checks.

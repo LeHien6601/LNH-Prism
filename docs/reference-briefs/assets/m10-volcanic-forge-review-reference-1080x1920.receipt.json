@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "referenceId": "m10-volcanic-forge-review-reference",
+  "styleId": "volcanic-forge",
+  "status": "review-only",
+  "createdAt": "2026-07-19",
+  "sourceDecision": "docs/decisions/ADR-023-generated-review-reference-workflow.md",
+  "approvedDirection": "docs/decisions/ADR-021-volcanic-forge-second-style-transfer.md",
+  "file": "m10-volcanic-forge-review-reference-1080x1920.png",
+  "sha256": "78196f44c83e35bbb8ba8bb524913cbce37a2c29a6c24ba56d1342660a455023",
+  "bytes": 3006254,
+  "dimensions": {
+    "width": 1080,
+    "height": 1920
+  },
+  "generation": {
+    "tool": "OpenAI built-in image_gen",
+    "model": "not exposed by built-in tool",
+    "seed": "not exposed by built-in tool",
+    "prompt": "Create a polished portrait mobile game reward/forge UI reference for the approved Volcanic Forge direction: angular wide-hex panel, obsidian and forged-brass materials, restrained lava glow, sparse soot/crack/hammered variation, rivet/rune detail, engraved-gold typography, central molten-core focal, readable progress, dominant primary action, and distinct secondary action. Use a 1080 x 1920 portrait hierarchy; no logos, watermarks, copied game UI, device frame, annotations, icy styling, or production-source claim."
+  },
+  "normalization": {
+    "sourceDimensions": {
+      "width": 941,
+      "height": 1672
+    },
+    "operation": "deterministic resize to the approved 1080 x 1920 review canvas"
+  },
+  "permittedUse": "Visual-comparison evidence for Volcanic Forge review only.",
+  "prohibitedUse": [
+    "production component source",
+    "raster tracing",
+    "material crop or texture input",
+    "production SVG or PNG link",
+    "art-direction override outside the approved specification"
+  ]
+}

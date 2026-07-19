@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🔵 **Generate and receipt the Volcanic Forge review-only reference (R-012a)** · 🤖 Agent |
-| Next agent-ready task | R-012a — generate the `1080 × 1920` portrait reference from ADR-021, record generation provenance, and preserve the no-pixel-extraction boundary |
+| Next task | 🔵 **Register the Volcanic Forge review-only reference (R-013)** · 🤖 Agent |
+| Next agent-ready task | R-013 — bind the generated reference and hash receipt to M10 review evidence and enforce the no-pixel-extraction boundary |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -153,8 +153,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Restore V10 action typography and thumbnail comparison (M10-R004) | 🤖 Agent | 🟢 Complete | Target-phone `CLAIM`, `CONTINUE`, and `FORGE HEAT 90%` typography and renderer-derived Forge-versus-Frostbound thumbnail comparison validate before V10 re-review |
 | P0 | Run Volcanic Forge cross-style production-hardening batch (M5-B1) | 🤖 Agent | 🟢 Complete | Five receipt runs, clean reproduction, strict 52-module receipt checks, temporary backup/recovery, matrix, and V10 readability evidence pass |
 | P0 | Approve Volcanic Forge review-reference policy (R-012) | 🧭 Product + 🎨 Art lead | 🟢 Complete | Project owner selected the generated review-only reference policy; see [ADR-023](decisions/ADR-023-generated-review-reference-workflow.md) |
-| P0 | Generate and receipt Volcanic Forge review-only reference (R-012a) | 🤖 Agent | 🔵 Agent-ready | Generate one `1080 × 1920` portrait reference from the approved ADR-021 direction; record prompt/tool/model/seed/dimensions and prohibit production-pixel use |
-| P0 | Register the approved Volcanic Forge review-only reference (R-013) | 🤖 Agent | 🔴 Blocked | After R-012a, bind the generated reference and hash receipt to M10 review evidence; source-boundary validation must reject production SVG/PNG links to its pixels |
+| P0 | Generate and receipt Volcanic Forge review-only reference (R-012a) | 🤖 Agent | 🟢 Complete | Generated and inspected one `1080 × 1920` portrait reference with prompt/tool/model/seed-availability, resize, hash, and review-only receipts; production-pixel use is prohibited |
+| P0 | Register the approved Volcanic Forge review-only reference (R-013) | 🤖 Agent | 🔵 Agent-ready | Bind the generated reference and hash receipt to M10 review evidence; source-boundary validation must reject production SVG/PNG links to its pixels |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -291,6 +291,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed M10-R002: recorded temporary clean-workspace byte comparison, seed/zero-baseline receipts, manifest-module audits, and a style-neutral composition-seam proof; V10 re-review is next | Codex |
 | 2026-07-19 | V10 re-review readiness decision Option 1: return unscored for M10-R003 evidence restoration because the required source/phone/thumbnail surfaces are absent; retain M10-R002 technical receipts | Project owner / Codex |
 | 2026-07-19 | Accepted generated review-only references as the required pre-review task for every new style; queued R-012a for Volcanic Forge | Project owner / Codex |
+| 2026-07-19 | Completed R-012a: generated, resized, inspected, and receipted the `1080 × 1920` Volcanic Forge review-only reference; R-013 is next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
