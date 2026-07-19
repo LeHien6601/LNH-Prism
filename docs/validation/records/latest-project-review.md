@@ -4,94 +4,59 @@
 
 | Field | Value |
 |---|---|
-| Reviewed revision | `d6b8a8e` (`docs(reference): define enchanted forest contrast gate`) |
+| Reviewed revision | `8ceeea0` (`docs(review): record v11 material-depth failure`) |
 | Review date | 2026-07-19 |
-| Working tree at start | Dirty: unrelated `docs/implementation/PRODUCTION_FIDELITY_AND_MULTI_STYLE_EXPANSION_PLAN.md` modification and untracked `new-plan.md`; neither was inspected as review evidence or changed. |
-| Scope | Workflow, status, plan, renderer/composition architecture, validation/reproducibility, provenance/reference handling, and M11 readiness across the committed M0–M11 controls. |
-| Validation run | `npm run validate:contracts`; `node --test tests/renderer/m10-style-transfer.test.mjs`; `npm run validate:m10-r002-package`; `npm run test:m10-reference-boundary`; `git diff --check`. |
-| Validation result | All commands passed. The M10 package has 26 matrix entries, 52 validated modules, named seed/zero-baseline receipts, a clean-workspace receipt, and 318 production SVG/PNG files clear of the Forge review reference. These checks do not validate a future Enchanted Forest package. |
+| Working tree at start | Dirty: unrelated `docs/implementation/PRODUCTION_FIDELITY_AND_MULTI_STYLE_EXPANSION_PLAN.md` modification and untracked `new-plan.md`; neither was inspected as evidence or changed. |
+| Publication state | `main` is five commits ahead of `origin/main`; external publication was not authorized. |
+| Scope | Workflow, status, plan, M11 rendering/evidence, validation, reference boundary, and delivery controls. |
+| Validation run | `validate:m11-a4-package`; `validate:m11-a3-evidence`; `validate:control-drift`; default `review-reference-boundary` test; Git history/status and document cross-links. |
+| Validation result | All commands in this review run passed: 26 M11 entries, 52 modules, clean-workspace/provenance/seed/seam receipts, 370 production files clear of review-reference pixels, and active-task control drift alignment. |
 
 ## Current status
 
-- M1–M10 are passed. V10 is recorded at `86/100`, and M5-B1 cross-style hardening has passed for Volcanic Forge.
-- M11 passed its definition gate: R-016c Option A approved the rules/rubric with an observable target-phone readability threshold. R-020 is the next Agent-ready planning task; renderer and package work remain unauthorized.
-- The prior review record was stale because it still reported a failed/open M10 and recommended work that later commits completed. This review supersedes it without rewriting the historical V10 review record.
+- M1–M10 are passed. M11 remains open after V11 scores of `41/100`, `54/100`, and `54/100` across the initial review and two re-reviews.
+- M11-R005 is the only unblocked Agent-ready task. Its scope is bounded to visible material-face/isolate depth while retaining shared geometry, IDs, semantic text, deterministic seeds, and the production/reference boundary.
+- The V11 technical hard gate is healthy. The active failure is visual: Organic material separation is still `2/5`; material isolates show flat swatches, lines, and dots rather than independently legible weathered stone, wood grain, and moss growth.
 
 ## Findings
 
 | ID | Severity | Area | Fact or inference | Evidence | Impact | Recommended solution | Dependencies | Eligibility |
 |---|---|---|---|---|---|---|---|---|
-| F-020 | P0 | Plan / governance | Resolved fact | R-016c Option A approved the M11 definition/rubric through ADR-025, retaining the seven-component/no-reference-pixel/no-style-fork boundary and adding an observable target-phone readability rule. | The definition gate no longer blocks planning; direct renderer/package work remains intentionally deferred. | R-020: plan bounded implementation/evidence slices before implementation. | None. | Agent-ready. |
-| F-021 | P1 | Validation / provenance | Resolved fact | `review-reference-boundary.mjs` validates registered review-only references, while focused tests inject filename, hash, identical-raster, direct-link, and `<image>` leaks for Forge and Enchanted Forest. | The generated-reference policy now protects both reviewed styles before M11 production work. | Preserve this validator in M11-A4 package preflight. | None. | Complete. |
-| F-022 | P1 | Architecture / regression | Resolved fact | `src/styles/m11-enchanted-forest-binding.ts`, its focused renderer test, and contract validation now exercise Enchanted Forest through the existing shared composition seam with stable IDs, seed behavior, and approved bounds. | The third binding no longer requires an M11 adapter or geometry exception. | Preserve this proof while rendering the M11 matrix. | R-016c approval and R-018 boundary contract. | Complete. |
-| F-023 | P1 | Workflow / status | Resolved fact | `validate:control-drift` verifies active-task/task-board/roadmap alignment and that every review-only reference receipt has a real decision, raster, and documentation link. Focused fixtures reject stale task alignment and an undocumented reference. | The previously manual drift patterns now fail with actionable errors. | Run the validator in future control/gate work. | None. | Complete. |
-| F-024 | P2 | Definition quality | Resolved fact | ADR-025 requires semantic labels/progress values, no overlap or obscuration at target-phone scale, and at least `3/5` for Mobile-scale readability and state distinction. | The previously ambiguous readability threshold is now consistent and observable. | Preserve the approved rule in R-020 slice planning and later review evidence. | None. | Complete. |
-| F-025 | P2 | Plan / evidence | Resolved inference | R-020 added the ordered M11 implementation/evidence plan, assigning every rubric hard-gate surface to exactly one contracts/materials, rendering/matrix, package/evidence, or review slice. | Future work now has bounded ownership and validation targets. | Start R-018 / M11-A1; preserve the ordered dependencies. | None. | Complete. |
+| F-030 | P0 | Plan / quality | Fact | V11 records `41/100`, then `54/100` twice; M11-R004 identifies flat component faces and isolates as `V11-B003`. The rubric requires at least three independently legible material families. | Repeated re-reviews consume a gate cycle without raising the failed visual minimum. | R-030: complete M11-R005 with face-integrated material channels and isolate evidence derived from those actual layers, then re-review once. | Existing M11-R005 scope and passing technical receipts. | Agent-ready. |
+| F-031 | P1 | Workflow / validation | Fact plus inference | `review-reference-boundary.test.mjs` runs a baseline scan concurrently with two tests that write temporary leak fixtures into the scanned `assets` tree. A prior default-concurrency run in this review cycle reported leaks; the later run passed, consistent with a fixture race. | A nondeterministic boundary result can block reviews or falsely imply a production-reference leak. | R-031: make the suite concurrency-safe by serializing mutation cases or isolating each fixture set from the baseline scan; prove repeated default runs pass. | None. | Agent-ready. |
+| F-032 | P1 | Delivery / governance | Fact | `main...origin/main [ahead 5]`; repository instructions require a push after mutating tasks, while current external-remote authorization is absent. | Five completed M11 commits are not yet published, so delivery is incomplete under the repository workflow. | R-032: explicitly approve publication to the configured `origin/main`, or record a durable exception/change to the delivery rule. | Project-owner authority for an external push. | Human decision. |
+| F-033 | P2 | Status / documentation | Fact | `docs/README.md` still names the historical M3-S5 evidence task, while the source-of-truth overview names M11-R005. | Readers who enter through the README receive an incorrect handoff. | R-033: update README status/next-task text to link to the overview rather than duplicate a mutable task label. | None. | Agent-ready. |
 
 ## Ordered recommended tasks
 
-### R-016c — Review and approve Enchanted Forest third-style definition and rubric
+### R-030 — Complete M11-R005 material-face and isolate depth
 
-- **Priority / eligibility:** P0 — Complete.
-- **Outcome:** Option A approved the definition/rubric through ADR-025. Required labels and progress values are semantic text, unobscured at target-phone scale, and the later Mobile-scale readability and state distinction score must be at least `3/5`.
-- **Validation:** The decision record, approved definition, approved rubric, and next permitted R-020 task are cross-linked; no production renderer/package changes occurred.
+- **Priority / eligibility:** P0 — Agent-ready.
+- **Scope:** Integrate deterministic weathered-stone texture, directional dark-wood grain, moss growth/masking, and visible focal roots into the rendered component faces. Generate material/focal isolates from those same layers rather than standalone representative swatches.
+- **Acceptance criteria:** At source, phone, thumbnail, and isolate distances, stone, wood, moss, and living-light/root channels are independently legible; the M11 shared seam, stable IDs, semantic text, seeds, module boundaries, and review-reference boundary remain unchanged.
+- **Validation:** Focused renderer/material assertions; regenerated matrix, portrait, isolates, package, seed/provenance/clean-workspace receipts; technical preflight; boundary and control-drift checks; one subsequent V11 review.
 
-### R-017 — Add lightweight control-drift detection
+### R-031 — Make review-reference boundary fixtures concurrency-safe
 
-- **Priority / eligibility:** P1 — Complete.
-- **Outcome:** Added `validate:control-drift` plus focused negative fixtures. It verifies overview next-task/task-board/roadmap alignment and review-only reference receipt decision/raster/documentation links.
-- **Validation:** `npm run test:control-drift`; `npm run validate:control-drift`; `git diff --check`.
+- **Priority / eligibility:** P1 — Agent-ready.
+- **Scope:** Remove shared mutable fixture overlap in `review-reference-boundary.test.mjs` without weakening filename, hash, identical-raster, direct-link, or SVG-image rejection coverage.
+- **Acceptance criteria:** The default test command is deterministic across repeated runs; the baseline scan cannot observe another subtest's temporary fixture; every existing negative leak form remains covered.
+- **Validation:** Run the focused boundary suite repeatedly with default concurrency and run the package boundary preflight.
 
-### R-018 / M11-A1 — Generalize the review-reference production boundary
+### R-032 — Decide publication of completed M11 commits
 
-- **Priority / eligibility:** P0 — Complete.
-- **Outcome:** Added a registered-reference validator and retained the Forge compatibility wrapper. Focused tests reject filename, SHA-256, identical raster, direct SVG link, and `<image>` leaks for Forge and Enchanted Forest.
-- **Validation:** Both boundary suites and `validate:m10-r002-package` passed with 318 production SVG/PNG files clear.
+- **Priority / eligibility:** P1 — Human decision.
+- **Scope:** Approve pushing the current `main` branch to its configured upstream, or approve an explicit exception to the repository's normal push requirement.
+- **Acceptance criteria:** The project has an unambiguous publication decision; no force-push, rebase, or unrelated working-tree change is involved.
+- **Validation:** If approved, inspect upstream/ahead state and push; otherwise record the accepted exception in the governing workflow.
 
-### R-019 / M11-A2 — Prove Enchanted Forest shared-composition binding
+### R-033 — Reconcile README handoff with the control page
 
-- **Priority / eligibility:** P0 — Complete.
-- **Outcome:** Added source-neutral Enchanted Forest style, material, variation, ornament, focal, typography, lighting, state, and component binding registries through the existing composition seam. The focused proof covers shared geometry, independent editable layers, approved budgets, and named same/different/zero seed behavior without an M11 renderer/template branch.
-- **Validation:** `npm run build:renderer`; `npm run validate:contracts`; `node --test tests/renderer/m11-enchanted-forest-binding.test.mjs`; `npm run test:review-reference-boundary`; and `npm run validate:control-drift` passed.
-
-### M11-A3 — Render Enchanted Forest matrix and review surfaces
-
-- **Priority / eligibility:** P0 — Complete.
-- **Outcome:** Rendered 26 shared-template matrix entries, a `1080 × 1920` target-phone portrait, editable material and focal/ornament isolate surfaces, and labeled source/phone/thumbnail/reference comparison surfaces.
-- **Validation:** `npm run prepare:m11-a3-evidence`; `npm run validate:m11-a3-evidence`; focused M11 rendering test; contracts; review-reference boundary; control-drift; and target-phone visual inspection passed.
-
-### M11-A4 — Package Enchanted Forest modules and technical preflight
-
-- **Priority / eligibility:** P0 — Complete.
-- **Outcome:** Produced 52 engine-neutral M11 modules plus manifest/provenance, four named variation seed receipts including zero baseline, clean-workspace byte comparison, generalized-seam proof, review-reference boundary proof, and unscored technical preflight.
-- **Validation:** `npm run prepare:m11-a4-package`; `npm run validate:m11-a4-package`; M11-A3 evidence validation; contracts; review-reference boundary; and control-drift passed.
-
-### M11-A5 / V11 — Conduct the Enchanted Forest third-style review
-
-- **Priority / eligibility:** P0 — Complete — failed.
-- **Outcome:** Project-owner-authorized automated review passed every technical hard gate but scored `41/100` visually. `V11-B001` found a palette-only Frostbound material grammar, and Four visual dimensions fell below the `3/5` minimum.
-- **Validation:** [V11 review record](v11-enchanted-forest-third-style-review.md) records hard gates, inspected surfaces, weighted scores, blocker, and fail decision.
-
-### M11-R001 — Remediate Enchanted Forest material-language contrast
-
-- **Priority / eligibility:** P0 — Agent-ready; this is the active overview task and next recommended task.
-- **Scope:** Replace inherited Frostbound material grammar with deterministic visible stone, wood, moss, and botanical treatments through the existing shared composition seam.
-- **Acceptance criteria:** Source, phone, and thumbnail surfaces clearly establish a third family rather than a recolor while preserving approved bounds, semantic text, geometry, stable IDs, module boundaries, seeds, and reference boundary.
-- **Validation:** Focused renderer/material tests, regenerated matrix/portrait/isolates/package receipts, technical preflight, reference-boundary, and control-drift checks.
-
-### R-020 — Plan bounded M11 implementation and evidence slices
-
-- **Priority / eligibility:** P0 — Complete.
-- **Outcome:** [M11 implementation/evidence plan](../../implementation/M11_ENCHANTED_FOREST_IMPLEMENTATION_PLAN.md) assigns every V11 hard-gate surface to one bounded slice and sets R-018 / M11-A1 as the next action.
-- **Validation:** Cross-link and dependency scan against the approved definition/rubric and `git diff --check` passed.
-
-### R-018 / M11-A1 — Generalize Enchanted Forest review-reference boundary validation
-
-- **Priority / eligibility:** P0 — Agent-ready; this is the active overview task and next recommended task.
-- **Scope:** Parameterize review-reference production-boundary validation and register Enchanted Forest with negative coverage before any renderer or material work.
-- **Acceptance criteria:** Forge regression coverage remains green; Enchanted Forest filename, SHA-256 match, identical raster, direct SVG link, and raster `<image>` leaks fail deterministically.
-- **Validation:** Focused negative tests for both references, existing M10 package validation, and a current production-file-count receipt.
+- **Priority / eligibility:** P2 — Agent-ready.
+- **Scope:** Replace the stale README next-task statement with a durable pointer to `PROJECT_OVERVIEW.md` or current M11-R005 status.
+- **Acceptance criteria:** README no longer claims M3-S5 is next and cannot silently drift from the source-of-truth control page.
+- **Validation:** Text/link check and `git diff --check`.
 
 ## Review conclusion
 
-The project’s baseline and two-style claims are now supported by passing contracts, deterministic M10 receipts, shared-composition evidence, review-only reference protection, and cross-style hardening. M11’s definition gate is approved, including an observable readability threshold. The credible remaining weakness is implementation readiness: first plan bounded slices, then extend the reference-boundary and regression controls to a third style before package work.
+The deterministic technical system is healthy: package, provenance, seed, shared-seam, and reference-boundary controls all pass. The project is blocked by a bounded visual-quality issue, not architecture. Complete R-030 before another V11 review; R-031 should follow to eliminate the observed flaky boundary-test risk. Publication and README drift are separate delivery/status controls and should not expand M11 rendering scope.
