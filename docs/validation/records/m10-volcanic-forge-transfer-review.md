@@ -60,3 +60,7 @@ M10-R001 is complete. The remediated package contains 26 state/size matrix entri
 3. `V10-B003` — `src/renderer/m10-style-transfer-components.ts` is a style-specific adapter. It delegates to M8, but the current evidence does not prove it is the approved generalized renderer seam rather than a parallel renderer.
 
 M10-R002 is the bounded agent-ready remediation: add true clean-workspace reproduction and seed/zero-baseline receipts, then move or prove the composition at a generalized renderer seam and regenerate the evidence. V10 must be re-reviewed after those blockers are closed.
+
+## Re-review readiness decision — Option 1
+
+On 2026-07-19, the project owner selected Option 1: return the package unscored for `M10-R003` evidence restoration. M10-R002 closes the prior technical blockers, but the required source-scale, target-phone, and thumbnail review surfaces are absent from the current evidence folder. M10-R003 must regenerate and verify those surfaces from current renderer outputs before V10 is re-reviewed. No score or pass/fail decision was made in this readiness decision.

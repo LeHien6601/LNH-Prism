@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M10 — Volcanic Forge second-style transfer** |
-| Next task | 🟣 **Conduct V10 Volcanic Forge transfer re-review (M10-A7)** · 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads |
-| Next agent-ready task | None — M10-R002 evidence is ready for the bounded V10 human re-review |
+| Next task | 🔵 **Restore V10 three-distance review surfaces (M10-R003)** · 🤖 Agent |
+| Next agent-ready task | M10-R003 — regenerate and verify the source-scale, target-phone, and thumbnail surfaces from the current generalized renderer package before the V10 re-review |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -149,6 +149,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Remediate the V10 Volcanic Forge evidence package and visual-transfer proof (M10-R001) | 🤖 Agent | 🟢 Complete | Produced 26 state/size entries, 52 canonical modules, source/phone/thumbnail review surfaces, clean-reproduction receipt, and editable forge-specific focal/ornament/typography layers; focused validation passes |
 | P0 | Conduct V10 Volcanic Forge transfer review (M10-A7) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — Fail | Option B recorded a formal V10 fail: hard-gate evidence does not prove true clean-workspace reproduction or recorded seed/zero-baseline output, and the M10-specific adapter is not yet proven compliant with the no-parallel-renderer boundary; see `validation/records/m10-volcanic-forge-transfer-review.md` |
 | P0 | Close V10 hard-gate evidence and shared-renderer proof (M10-R002) | 🤖 Agent | 🟢 Complete | True temporary-workspace byte comparison covers all 52 modules; three nonzero and zero-baseline seed receipts, module-hash validation, and style-neutral composition-seam proof are recorded and pass focused validation |
+| P0 | Restore V10 three-distance review surfaces (M10-R003) | 🤖 Agent | 🔵 Agent-ready | Regenerate source-scale, target-phone, and thumbnail surfaces from current renderer outputs; link them in preflight and verify them before the bounded V10 re-review |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -282,6 +283,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed M10-R001: rebuilt the Volcanic Forge package with editable forge layers, canonical inventory, complete review surfaces, and deterministic receipts; V10 re-review is next | Codex |
 | 2026-07-19 | Recorded V10 Option B fail: missing true clean-workspace and seed/zero-baseline proof plus unresolved no-parallel-renderer compliance block a pass; M10-R002 is next | Project owner / Codex |
 | 2026-07-19 | Completed M10-R002: recorded temporary clean-workspace byte comparison, seed/zero-baseline receipts, manifest-module audits, and a style-neutral composition-seam proof; V10 re-review is next | Codex |
+| 2026-07-19 | V10 re-review readiness decision Option 1: return unscored for M10-R003 evidence restoration because the required source/phone/thumbnail surfaces are absent; retain M10-R002 technical receipts | Project owner / Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
