@@ -54,7 +54,7 @@ test("M11 living focal helper preserves editable seed, support, roots, and light
   assert.match(focal, /data-layer="forest-focal-roots"/);
   assert.match(focal, /data-layer="forest-focal-light-interaction"/);
   assert.match(focal, /data-focal-state="selected"/);
-  assert.match(focal, /data-emitter-opacity="0.38"/);
+  assert.match(focal, new RegExp(`data-emitter-opacity="${M11_ENCHANTED_FOREST_STATE_RECIPES.selected.emitter}"`));
   assert.doesNotMatch(focal, /<image\b/);
 });
 
@@ -85,6 +85,16 @@ test("M11 states drive named receivers instead of a global opacity change", () =
   }
   assert.notEqual(normal, pressed);
   assert.notEqual(normal, disabled);
+});
+
+test("M11 compact controls use one quiet relief seam and make active receiver pulses explicit", () => {
+  const request = { component: "badge", width: 212, height: 48, variationSeed: 51731 };
+  const normal = renderStyledComponentSvg({ ...request, state: "normal" }, M11_ENCHANTED_FOREST_BINDING);
+  const highlighted = renderStyledComponentSvg({ ...request, state: "highlighted" }, M11_ENCHANTED_FOREST_BINDING);
+  assert.match(normal, /data-layer="forest-wood-relief-bands" data-band-count="1"/);
+  assert.doesNotMatch(normal, /data-layer="forest-state-receiver-pulse"/);
+  assert.match(highlighted, /data-layer="forest-state-receiver-pulse" data-state-response="highlighted"/);
+  assert.match(highlighted, /stroke-width="2\.8"/);
 });
 
 test("M11 authored material clusters are deterministic, seed-varying, and absent at baseline", () => {

@@ -55,9 +55,9 @@
       "cue": "stable-living-presence"
     },
     "pressed": {
-      "emitter": 0.4,
-      "receiver": 0.48,
-      "edge": 0.3,
+      "emitter": 0.46,
+      "receiver": 0.62,
+      "edge": 0.56,
       "relief": 0.76,
       "cue": "contained-energy-compression"
     },
@@ -69,26 +69,26 @@
       "cue": "dormant-unavailable"
     },
     "selected": {
-      "emitter": 0.38,
-      "receiver": 0.58,
-      "edge": 0.52,
+      "emitter": 0.42,
+      "receiver": 0.7,
+      "edge": 0.68,
       "relief": 1.08,
       "cue": "active-attunement"
     },
     "highlighted": {
-      "emitter": 0.38,
-      "receiver": 0.58,
-      "edge": 0.52,
+      "emitter": 0.42,
+      "receiver": 0.7,
+      "edge": 0.68,
       "relief": 1.08,
       "cue": "active-attunement"
     }
   },
   "craftBoard": {
     "svg": "m11-enchanted-forest-craft-board.svg",
-    "svgSha256": "4bfd2c08411c3a85f9059445caf1346e515022183e618083fb8ee401d9460e39"
+    "svgSha256": "c665d250065ad353cd9b5c01c2a4afdf58d6c8eeb6e021f29288803530f5f6ee"
   },
   "statePairs": {
     "svg": "m11-enchanted-forest-state-pairs.svg",
-    "svgSha256": "c76723e63000b8e9d50c047a699f50ab6475c7982cbb9372403e1e8c08de4f10"
+    "svgSha256": "a6ee67129ab4c4d1423ad8f1594750d80f8d2ae4713f6b2d160ba8c5d3819ce0"
   }
 }
