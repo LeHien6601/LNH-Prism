@@ -1,5 +1,41 @@
 # V11 Enchanted Forest third-style review
 
+## M11-R018 / V11 re-review — 2026-07-24
+
+Reviewer: `project-owner-authorized automated review`. Reviewed revision: `7dece3b` (`feat(renderer): strengthen enchanted forest state contrast`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
+
+Inspected the production-derived material/focal isolates, construction craft board, state-pair board, full target-phone portrait, three-style thumbnail/reference comparison, all 26 matrix outputs, 52-module manifest, seed/clean-workspace receipts, generalized-seam proof, and reference-boundary evidence.
+
+### Technical hard gate
+
+| Requirement | Evidence | Result |
+|---|---|---|
+| Shared geometry, stable IDs, and no style fork | generalized-seam proof and shared composition renderer | Pass |
+| Package, provenance, clean reproduction, and seeds | `validate:m11-a4-package`; 26 entries, 52 modules, seeds `0/51731/104729/8675309` | Pass |
+| Reference boundary | `test:review-reference-boundary`; 370 production files clear | Pass |
+| Matrix, semantic text, states, and review surfaces | `test:renderer`, craft/state boards, target-phone and thumbnail surfaces | Pass |
+
+Technical hard-gate outcome: **Pass**. It does not increase visual scores.
+
+### Visual scoring
+
+| Dimension | Weight | Score | Weighted | Observation |
+|---|---:|---:|---:|---|
+| Three-style distinction | 15 | 4/5 | 12 | The dark green stone, wood, moss, and living-light family remains distinct from Frostbound and Forge at thumbnail scale. |
+| Organic material separation | 15 | 3/5 | 9 | Named materials and contact seams are visible, but the broad side plates still read as flat graphic slabs rather than layered weathered construction. |
+| Focal hierarchy | 15 | 3/5 | 9 | The seed and root cradle are readable without obscuring actions, but remain diagrammatic rather than deeply integrated with the panel materials. |
+| Botanical ornament restraint | 10 | 3/5 | 6 | Compact controls are quieter and remain outside semantic slots; repeated small vine and cluster marks still feel mechanically placed. |
+| Diffuse bioluminescent lighting | 10 | 3/5 | 6 | The receiver pulse is clearer and bounded, but material-light interaction remains mostly line-based. |
+| Seeded organic variation | 10 | 3/5 | 6 | Variation remains reproducible and readable, but does not yet create a convincing authored surface rhythm. |
+| Typography and state language | 10 | 4/5 | 8 | Pressed and highlighted receiver pulses now read at phone scale; the state board’s printed `.48`/`.52` values are stale versus the rendered recipes and weaken review evidence fidelity. |
+| Portrait composition | 10 | 3/5 | 6 | Reward hierarchy is readable, but the large flat side plates dominate the negative space and flatten depth. |
+| **Total** | **100** |  | **62/100** |  |
+
+### Decision
+
+**Fail — scored.** Every dimension meets the minimum, but `62/100` is below the required `85/100`.
+
+**V11-B010 — material depth and review-surface fidelity:** preserve approved geometry, inventory, families, IDs, seeds, semantic slots, shared seam, and reference isolation. Replace the broad panel-side slab read with bounded discrete weathered-stone segments and visible wood/moss join depth, while retaining quiet compact controls. Regenerate the state board so displayed state values derive from the same recipes as the production renderer. M11-R019 is the next agent-ready remediation.
 ## M11-R016 / V11 re-review â€” 2026-07-24
 
 Reviewer: `project-owner-authorized automated review`. Reviewed revision: `2264d24` (`feat(renderer): refine enchanted forest craftsmanship`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
