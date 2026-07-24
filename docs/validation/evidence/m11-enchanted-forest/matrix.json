@@ -10,8 +10,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "panel-488x660-normal",
-      "svgSha256": "b5640ca3ea06348692ec204cc1d257c070813861c5663d048d8e68d9a89784d8",
-      "pngSha256": "ad4342e15b8090dadd6db561a989b4dee2ec2a86a05d694094c3d42ac0ec7eef"
+      "svgSha256": "bac4ade7454cd1c5cc5dc4489342a862b030149da8e489a924049e2fd99c523b",
+      "pngSha256": "50181c6b7d8b2ca873f84bafdb543afba96348e4b14b442bcd5a2be3db7fd80e"
     },
     {
       "component": "panel",
@@ -20,8 +20,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "panel-488x760-normal",
-      "svgSha256": "f34f8f14f6d99aa72d525eb551d28d906525a9d35d7db537a5646c0e13b4c500",
-      "pngSha256": "40ba22ad99de721012f051087ba621eaa3c64d8fa913f48c264c782cf37c97e6"
+      "svgSha256": "d9d39076c625ca8e06b4776a36649163d9710cd5a661aa381dc2d306f7605391",
+      "pngSha256": "eec1749f46277bb9b528f4863b67abd0b3d63c021d429b5bf9d5661fa3936faf"
     },
     {
       "component": "primary-hex-button",

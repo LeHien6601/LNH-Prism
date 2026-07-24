@@ -24,6 +24,9 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.equal((panel.match(/data-layer="forest-stone-plate-pit"/g) ?? []).length, 18, "each plate owns localized pits");
   assert.equal((panel.match(/data-layer="forest-stone-plate-contact-darkening"/g) ?? []).length, 6);
   assert.equal((panel.match(/data-layer="forest-stone-irregular-inner-bevel-break"/g) ?? []).length, 6);
+  assert.equal((panel.match(/data-layer="forest-stone-focal-zone-relief-falloff"/g) ?? []).length, 6, "each plate owns bounded focal-zone relief falloff");
+  assert.equal((panel.match(/data-layer="forest-focal-zone-stone-receiver"/g) ?? []).length, 6, "each plate owns a localized stone receiver");
+  assert.equal((panel.match(/data-layer="forest-focal-zone-moss-receiver"/g) ?? []).length, 6, "each plate owns a localized moss receiver");
   assert.equal((panel.match(/data-join-following="true"/g) ?? []).length, 6);
   assert.match(panel, /data-layer="forest-stone-contact-occlusion"/);
   assert.match(panel, /data-layer="forest-stone-fracture-field"/);

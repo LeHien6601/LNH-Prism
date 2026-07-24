@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🤖 **Integrate Enchanted Forest focal hierarchy with bounded rail rhythm (M11-R027)** · Agent |
-| Next agent-ready task | M11-R027 — rebalance the existing shared seam so weathered rails support the living focal, with bounded local receiver integration and unchanged geometry/boundaries |
+| Next task | 🧭 **Re-review Enchanted Forest focal hierarchy and rail rhythm (M11-R028 / V11 re-review)** · Product + Art + UI + Technical leads |
+| Next agent-ready task | None — M11-R028 is a human decision gate |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 M11-R026 review failed at `67/100`; M11-R027 focal/rail hierarchy integration is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🟡 M11-R027 focal/rail hierarchy integration complete; M11-R028 / V11 re-review is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -196,7 +196,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Re-review Enchanted Forest weathered plate interiors (M11-R024 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed the technical hard gate and all visual minima but scored `62/100`; `V11-B013` requires integrated plate-surface authorship |
 | P0 | Author connected multi-scale Enchanted Forest plate interiors (M11-R025) | 🤖 Agent | 🟢 Complete | All six plates now own coherent seeded tonal-plane structure, irregular inner-bevel breaks, localized multi-scale pits/chips, and join-following contact darkening; the zero baseline, compact controls, shared seam, semantic slots, state evidence, and reference isolation remain intact |
 | P0 | Re-review connected multi-scale Enchanted Forest plate interiors (M11-R026 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed technical hard gates and all visual minima but scored `67/100`; `V11-B014` requires focal/rail hierarchy integration |
-| P0 | Integrate Enchanted Forest focal hierarchy with bounded rail rhythm (M11-R027) | 🤖 Agent | 🔵 Agent-ready | Rebalance only the existing shared seam: quiet the repeated rail rhythm around the focal zone and deepen living-light interaction with existing stone, wood, and moss receivers while preserving geometry and approved boundaries |
+| P0 | Integrate Enchanted Forest focal hierarchy with bounded rail rhythm (M11-R027) | 🤖 Agent | 🟢 Complete | Added independently clipped plate-specific focal-zone relief falloff and localized stone/moss receiver pools through the existing shared seam; regenerated validated evidence while preserving geometry, controls, semantic slots, named seeds, and reference isolation |
+| P0 | Re-review Enchanted Forest focal hierarchy and rail rhythm (M11-R028 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟡 Human decision | Apply the approved V11 rubric to regenerated R027 evidence at source, target-phone, isolate, state-pair, and thumbnail distances |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -393,3 +394,5 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-24 | Completed M11-R025: replaced the repeated single-chip plate rhythm with independently clipped connected tonal planes, irregular inner-bevel breaks, localized multi-scale pits/chips, and join-following contact darkening across all six panel plates; regenerated and validated the 26-entry/52-module package; M11-R026 / V11 re-review is next | Codex |
 
 | 2026-07-25 | Applied M11-R026 authorized automated review: technical gates and visual minima passed, but V11 failed at `67/100`; `V11-B014` opens M11-R027 focal/rail hierarchy integration | Project owner / Codex |
+
+| 2026-07-25 | Completed M11-R027: added bounded focal-zone plate relief falloff and localized stone/moss living-light receiver pools through the shared seam; regenerated and validated the 26-entry/52-module package; M11-R028 / V11 re-review is next | Codex |

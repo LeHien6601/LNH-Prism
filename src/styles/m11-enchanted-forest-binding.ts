@@ -98,13 +98,18 @@ export function renderM11ConstructionProfilesSvg(request: StyleCompositionReques
       const outerX = right ? w : 0;
       const [startRatio, endRatio] = [[.02, .29], [.34, .62], [.68, .98]][band];
       const startY = h * startRatio, endY = h * endRatio, span = endY - startY;
+      const focalProximity = band === 1 ? 1 : .28;
+      const railFalloffOpacity = (.08 + focalProximity * .22).toFixed(2);
       const splitOne = startY + span * (.31 + random(seed, 220 + index) * .08);
       const splitTwo = startY + span * (.65 + random(seed, 240 + index) * .08);
       const planeX = (amount: number, variationIndex: number) => outerX + direction * w * (amount + random(seed, variationIndex + index) * .018);
       const tonalPlanes = [
         `<path data-layer="forest-stone-connected-tonal-plane" data-plane-index="1" d="M${outerX} ${startY}L${planeX(.145, 260).toFixed(2)} ${(startY + span * .04).toFixed(2)} ${planeX(.128, 280).toFixed(2)} ${splitOne.toFixed(2)}H${outerX}Z" fill="#D0D1AE" fill-opacity="${(.16 + random(seed, 300 + index) * .07).toFixed(2)}"/>`,
         `<path data-layer="forest-stone-connected-tonal-plane" data-plane-index="2" d="M${outerX} ${splitOne.toFixed(2)}L${planeX(.128, 320).toFixed(2)} ${splitOne.toFixed(2)} ${planeX(.155, 340).toFixed(2)} ${splitTwo.toFixed(2)}H${outerX}Z" fill="#435649" fill-opacity="${(.22 + random(seed, 360 + index) * .08).toFixed(2)}"/>`,
-        `<path data-layer="forest-stone-connected-tonal-plane" data-plane-index="3" d="M${outerX} ${splitTwo.toFixed(2)}L${planeX(.155, 380).toFixed(2)} ${splitTwo.toFixed(2)} ${planeX(.12, 400).toFixed(2)} ${(endY - span * .03).toFixed(2)}L${outerX} ${endY}Z" fill="#929B85" fill-opacity="${(.13 + random(seed, 420 + index) * .08).toFixed(2)}"/>`
+        `<path data-layer="forest-stone-connected-tonal-plane" data-plane-index="3" d="M${outerX} ${splitTwo.toFixed(2)}L${planeX(.155, 380).toFixed(2)} ${splitTwo.toFixed(2)} ${planeX(.12, 400).toFixed(2)} ${(endY - span * .03).toFixed(2)}L${outerX} ${endY}Z" fill="#929B85" fill-opacity="${(.13 + random(seed, 420 + index) * .08).toFixed(2)}"/>`,
+        `<path data-layer="forest-stone-focal-zone-relief-falloff" data-focal-proximity="${focalProximity}" d="M${outerX} ${startY}H${planeX(.165, 800).toFixed(2)}V${endY.toFixed(2)}H${outerX}Z" fill="#0D2119" fill-opacity="${railFalloffOpacity}"/>`,
+        `<path data-layer="forest-focal-zone-stone-receiver" data-receiver-zone="inner-rail" d="M${planeX(.15, 820).toFixed(2)} ${(startY + span * .47).toFixed(2)}Q${planeX(.08, 840).toFixed(2)} ${(startY + span * .52).toFixed(2)} ${planeX(.13, 860).toFixed(2)} ${(startY + span * .58).toFixed(2)}" fill="none" stroke="#73D5A8" stroke-width="${(3 + focalProximity * 2).toFixed(1)}" stroke-opacity="${(recipe.receiver * (.14 + focalProximity * .28)).toFixed(2)}"/>`,
+        `<path data-layer="forest-focal-zone-moss-receiver" data-receiver-zone="inner-rail" d="M${planeX(.15, 820).toFixed(2)} ${(startY + span * .47).toFixed(2)}Q${planeX(.10, 880).toFixed(2)} ${(startY + span * .55).toFixed(2)} ${planeX(.14, 900).toFixed(2)} ${(startY + span * .62).toFixed(2)}" fill="none" stroke="#C4F3B7" stroke-width="${(1.2 + focalProximity).toFixed(1)}" stroke-opacity="${(recipe.receiver * (.10 + focalProximity * .22)).toFixed(2)}"/>`
       ].join("");
       const chipX = outerX + direction * w * (.085 + random(seed, 440 + index) * .045);
       const chipY = startY + span * (.23 + random(seed, 460 + index) * .18);
