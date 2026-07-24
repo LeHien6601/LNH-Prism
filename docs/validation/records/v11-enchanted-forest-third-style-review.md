@@ -1,5 +1,41 @@
 # V11 Enchanted Forest third-style review
 
+## M11-R022 / V11 re-review — 2026-07-24
+
+Reviewer: `project-owner-authorized automated review`. Reviewed revision: `aec01b5` (`feat(renderer): weather enchanted forest panel plates`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
+
+Inspected the production-derived material/focal isolates, construction craft board, recipe-derived state-pair board, full target-phone portrait, three-style thumbnail/reference comparison, all 26 matrix outputs, 52-module manifest, seed/clean-workspace receipts, generalized-seam proof, and reference-boundary evidence.
+
+### Technical hard gate
+
+| Requirement | Evidence | Result |
+|---|---|---|
+| Shared geometry, stable IDs, and no style fork | generalized-seam proof and shared composition renderer | Pass |
+| Package, provenance, clean reproduction, and seeds | `validate:m11-a4-package`; 26 entries, 52 modules, seeds `0/51731/104729/8675309` | Pass |
+| Reference boundary | `test:review-reference-boundary`; 370 production files clear | Pass |
+| Matrix, semantic text, states, and review surfaces | `test:renderer`, craft/state boards, target-phone and thumbnail surfaces | Pass |
+
+Technical hard-gate outcome: **Pass**. It does not increase visual scores.
+
+### Visual scoring
+
+| Dimension | Weight | Score | Weighted | Observation |
+|---|---:|---:|---:|---|
+| Three-style distinction | 15 | 4/5 | 12 | The dark green organic family remains distinct from Frostbound and Forge at thumbnail scale. |
+| Organic material separation | 15 | 3/5 | 9 | Seeded chipped silhouette breaks are visible at plate joins, but the large uniform fills still do not read as weathered stone layers. |
+| Focal hierarchy | 15 | 3/5 | 9 | The seed and root cradle remain readable and actions are unambiguous; focal-to-panel material integration remains shallow. |
+| Botanical ornament restraint | 10 | 3/5 | 6 | Compact controls stay quiet and marks remain outside semantic slots, with some mechanical repetition. |
+| Diffuse bioluminescent lighting | 10 | 3/5 | 6 | Active receivers remain bounded and clear, while material interaction stays line-based. |
+| Seeded organic variation | 10 | 3/5 | 6 | Chipped edges now vary reproducibly, but the plate interiors lack enough weathered variation to establish an authored surface rhythm. |
+| Typography and state language | 10 | 4/5 | 8 | Phone-scale active states remain clear and board values remain renderer-derived. |
+| Portrait composition | 10 | 3/5 | 6 | The hierarchy is readable; broad side plate fills continue to dominate the negative space. |
+| **Total** | **100** |  | **62/100** |  |
+
+### Decision
+
+**Fail — scored.** Every dimension meets the minimum, but `62/100` is below the required `85/100`.
+
+**V11-B012 — weathered plate interior treatment:** preserve approved geometry, inventory, families, IDs, seeds, semantic slots, shared seam, compact controls, state evidence, and reference isolation. Add restrained deterministic interior weathering to each panel plate—localized stone-chip clusters, tonal bevel islands, and contact-darkening—so the broken silhouette resolves as a material surface rather than large uniform fills. M11-R023 is the next agent-ready remediation.
 ## M11-R020 / V11 re-review — 2026-07-24
 
 Reviewer: `project-owner-authorized automated review`. Reviewed revision: `a49acad` (`feat(renderer): segment enchanted forest panel plates`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
