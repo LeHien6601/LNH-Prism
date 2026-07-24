@@ -230,7 +230,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** a later reviewed package must pass its hard technical gate and score at least `85/100`, with no visual dimension below `3/5` and no automatic blocker, at source, target-phone, and thumbnail review distances.
 
-M11-R023 remediation is next.
+M11-R023 remediation is complete; M11-R024 / V11 re-review is next.
 
 M11-R016 / V11 re-review failed at 60/100; M11-R017 remediation is complete and M11-R023 remediation is next.
 
@@ -244,4 +244,6 @@ M11-R020 authorized automated review scored 62/100 with technical gates passing;
 
 M11-R021 completed: seed-driven chipped plate silhouettes were regenerated and validated. M11-R023 remediation is next.
 
-M11-R022 authorized automated review scored 62/100 with technical gates passing; M11-R023 weathered-plate interior remediation is next.
+M11-R022 authorized automated review scored 62/100 with technical gates passing; M11-R023 weathered-plate interior remediation is complete.
+
+M11-R023 completed: every panel plate now owns independently clipped deterministic stone-chip, tonal bevel-island, and contact-darkening interior layers; the zero baseline, shared seam, compact controls, semantic slots, state evidence, and reference boundary remain intact. M11-R024 / V11 re-review is next.

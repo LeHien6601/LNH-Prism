@@ -18,6 +18,10 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.match(panel, /data-integration="construction-profile-connected"/);
   assert.match(panel, /data-layer="forest-stone-surface-region"/);
   assert.equal((panel.match(/ZM0/g) ?? []).length >= 2, true, "panel stone rail uses separated plate paths");
+  assert.equal((panel.match(/data-layer="forest-stone-plate-interior"/g) ?? []).length, 6, "each panel plate owns an interior treatment");
+  assert.equal((panel.match(/data-layer="forest-stone-plate-chip"/g) ?? []).length, 6);
+  assert.equal((panel.match(/data-layer="forest-stone-tonal-bevel-island"/g) ?? []).length, 6);
+  assert.equal((panel.match(/data-layer="forest-stone-plate-contact-darkening"/g) ?? []).length, 6);
   assert.match(panel, /data-layer="forest-stone-contact-occlusion"/);
   assert.match(panel, /data-layer="forest-stone-fracture-field"/);
   assert.match(panel, /data-layer="forest-wood-surface-region"/);
@@ -107,6 +111,20 @@ test("M11 authored material clusters are deterministic, seed-varying, and absent
   assert.doesNotMatch(baseline, /forest-authored-material-clusters/);
   assert.equal(first, repeated);
   assert.notEqual(first, changed);
+});
+
+test("M11 panel plate interiors are deterministic, seed-varying, clipped, and absent at baseline", () => {
+  const request = { component: "panel", width: 488, height: 660, state: "normal" };
+  const baseline = renderStyledComponentSvg({ ...request, variationSeed: 0 }, M11_ENCHANTED_FOREST_BINDING);
+  const first = renderStyledComponentSvg({ ...request, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
+  const repeated = renderStyledComponentSvg({ ...request, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
+  const changed = renderStyledComponentSvg({ ...request, variationSeed: 104729 }, M11_ENCHANTED_FOREST_BINDING);
+  assert.doesNotMatch(baseline, /data-layer="forest-stone-plate-interior"/);
+  assert.equal(first, repeated);
+  assert.notEqual(first, changed);
+  for (let index = 1; index <= 6; index += 1) {
+    assert.match(first, new RegExp(`data-plate-index="${index}"[^>]+clip-path="url\\(#m11-panel-stone-plate-${index}-clip\\)"`));
+  }
 });
 
 test("M11 material cluster library keeps each organic family independently editable", () => {

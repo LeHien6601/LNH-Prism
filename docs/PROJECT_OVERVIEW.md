@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | ?? **Deepen Enchanted Forest weathered plate interiors (M11-R023)** � ?? Agent |
-| Next agent-ready task | M11-R023 � add restrained seeded stone-chip, tonal bevel-island, and contact-darkening treatment within each panel plate while preserving approved boundaries |
+| Next task | 🧭 **Re-review Enchanted Forest weathered plate interiors (M11-R024 / V11 re-review)** · Product + Art + UI + Technical leads |
+| Next agent-ready task | None — M11-R024 requires project-owner-authorized visual review of the regenerated M11-R023 evidence |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🟣 M11-R015 remediation package is validated — M11-R023 remediation is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🟣 M11-R023 weathered-plate interior package is validated — M11-R024 / V11 re-review is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -185,14 +185,15 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Integrate Enchanted Forest materials and living focal (M11-R013) | 🤖 Agent | 🟢 Complete | Added clipped connected stone/wood/moss surface regions with family-specific depth/light response, a production-derived living focal/root isolate, and a rebalanced portrait hierarchy; regenerated and validated the 26-entry/52-module package |
 | P0 | Re-review Enchanted Forest material/focal integration (M11-R014 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed the technical hard gate and all visual minima but scored `70/100`; `V11-B008` requires stronger integrated surface craftsmanship and state response |
 | P0 | Refine Enchanted Forest surface craftsmanship and state language (M11-R015) | ?? Agent | ?? Complete | Added reference grammar, connected construction profiles, component-class budgets, craft/state boards, and bounded receiver responses; regenerated and validated the 26-entry/52-module package |
-| P0 | Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete � failed | Authorized automated review passed technical gates but scored 60/100; V11-B009 requires production-surface integration and target-scale state contrast |
+| P0 | Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete — failed | Authorized automated review passed technical gates but scored 60/100; V11-B009 requires production-surface integration and target-scale state contrast |
 | P0 | Integrate Enchanted Forest production surfaces and target-scale state contrast (M11-R017) | ?? Agent | ?? Complete | Added single-seam compact-control relief, explicit active receiver pulses, stronger bounded state contrast, and regenerated 26-entry/52-module evidence |
-| P0 | Re-review Enchanted Forest production-surface integration and target-scale state contrast (M11-R018 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete � failed | Authorized automated review passed technical gates but scored 62/100; V11-B010 requires material depth and review-surface fidelity |
+| P0 | Re-review Enchanted Forest production-surface integration and target-scale state contrast (M11-R018 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete — failed | Authorized automated review passed technical gates but scored 62/100; V11-B010 requires material depth and review-surface fidelity |
 | P0 | Deepen Enchanted Forest panel material depth and state-evidence fidelity (M11-R019) | ?? Agent | ?? Complete | Replaced continuous panel slabs with bounded segmented plate paths and derived state-board values from production state recipes; regenerated 26-entry/52-module evidence |
-| P0 | Re-review Enchanted Forest material depth and state-evidence fidelity (M11-R020 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete � failed | Authorized automated review passed technical gates but scored 62/100; V11-B011 requires weathered plate depth |
+| P0 | Re-review Enchanted Forest material depth and state-evidence fidelity (M11-R020 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete — failed | Authorized automated review passed technical gates but scored 62/100; V11-B011 requires weathered plate depth |
 | P0 | Deepen Enchanted Forest weathered plate depth (M11-R021) | ?? Agent | ?? Complete | Added bounded seed-driven chipped plate silhouettes while retaining deterministic joins, compact controls, and recipe-derived state evidence; regenerated 26-entry/52-module package |
-| P0 | Re-review Enchanted Forest weathered plate depth (M11-R022 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete � failed | Authorized automated review passed technical gates but scored 62/100; V11-B012 requires weathered plate interiors |
-| P0 | Deepen Enchanted Forest weathered plate interiors (M11-R023) | ?? Agent | ?? Agent-ready | Add restrained seeded stone-chip, tonal bevel-island, and contact-darkening treatment within each panel plate while preserving approved boundaries |
+| P0 | Re-review Enchanted Forest weathered plate depth (M11-R022 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete — failed | Authorized automated review passed technical gates but scored 62/100; V11-B012 requires weathered plate interiors |
+| P0 | Deepen Enchanted Forest weathered plate interiors (M11-R023) | 🤖 Agent | 🟢 Complete | Added six independently clipped, seeded plate-interior treatments with localized stone chips, tonal bevel islands, and contact darkening; preserved the zero baseline, shared seam, compact controls, and approved boundaries; regenerated 26-entry/52-module evidence |
+| P0 | Re-review Enchanted Forest weathered plate interiors (M11-R024 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Apply the approved V11 rubric to the regenerated M11-R023 source, phone, thumbnail, matrix, isolate, package, seed, and boundary evidence |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -381,3 +382,5 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-24 | Completed M11-R021: added bounded seed-driven chipped plate silhouettes and regenerated validated M11 evidence; M11-R023 remediation is next | Codex |
 
 | 2026-07-24 | Completed M11-R022 authorized automated review: technical gates passed but the package scored 62/100; V11-B012 opens M11-R023 weathered-plate interior remediation | Codex |
+
+| 2026-07-24 | Completed M11-R023: added deterministic clipped interior treatment to all six panel plates, preserved the zero baseline and approved shared boundaries, and regenerated the validated 26-entry/52-module evidence package; M11-R024 / V11 re-review is next | Codex |
