@@ -17,6 +17,7 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.match(panel, /data-layer="forest-integrated-material-regions"/);
   assert.match(panel, /data-integration="construction-profile-connected"/);
   assert.match(panel, /data-layer="forest-stone-surface-region"/);
+  assert.equal((panel.match(/M0 [\d.]+H[\d.]+L[\d.]+ [\d.]+ [\d.]+ [\d.]+H0Z/g) ?? []).length >= 3, true, "panel stone rail uses separated plate paths");
   assert.match(panel, /data-layer="forest-stone-contact-occlusion"/);
   assert.match(panel, /data-layer="forest-stone-fracture-field"/);
   assert.match(panel, /data-layer="forest-wood-surface-region"/);
