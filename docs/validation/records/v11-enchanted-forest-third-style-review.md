@@ -1,6 +1,43 @@
 # V11 Enchanted Forest third-style review
 
-## M11-R022 / V11 re-review — 2026-07-24
+## M11-R024 / V11 re-review â€” 2026-07-24
+
+Reviewer: `project-owner-authorized automated review`. Reviewed revision: `5cf898a` (`feat(renderer): deepen enchanted forest plate interiors`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
+
+Inspected the review-only reference, full renderer and target-phone portraits, construction/material and focal/ornament isolates, state-pair board, Frostbound and Volcanic Forge portraits, all 26 matrix outputs, 52-module manifest, seed/clean-workspace receipts, generalized-seam proof, and reference-boundary evidence.
+
+### Technical hard gate
+
+| Requirement | Evidence | Result |
+|---|---|---|
+| Shared geometry, stable IDs, and no style fork | generalized-seam proof and shared composition renderer | Pass |
+| Package, provenance, clean reproduction, and seeds | `validate:m11-a4-package`; 26 entries, 52 modules, seeds `0/51731/104729/8675309` | Pass |
+| Reference boundary | `test:review-reference-boundary`; 370 production files clear and registered leak forms rejected | Pass |
+| Matrix, semantic text, states, and review surfaces | `test:renderer`, evidence validator, contracts, state board, target-phone, and thumbnail surfaces | Pass |
+
+Technical hard-gate outcome: **Pass**. It does not increase visual scores.
+
+### Visual scoring
+
+| Dimension | Weight | Score | Weighted | Observation |
+|---|---:|---:|---:|---|
+| Three-style distinction | 15 | 4/5 | 12 | The dark green organic family remains clearly distinct from Frostbound and Volcanic Forge at thumbnail distance. |
+| Organic material separation | 15 | 3/5 | 9 | Stone, wood, moss, and living-light channels are identifiable, but broad uniform plate fills dominate the sparse chip and bevel-island overlays. |
+| Focal hierarchy | 15 | 3/5 | 9 | The seed/root focal remains identifiable and actions are unambiguous; focal-to-panel integration remains shallow. |
+| Botanical ornament restraint | 10 | 3/5 | 6 | Marks remain outside semantic slots, though compact ornaments and plate chips retain a mechanical rhythm. |
+| Diffuse bioluminescent lighting | 10 | 3/5 | 6 | Living light is bounded and coherent, but material interaction remains primarily line-based. |
+| Seeded organic variation | 10 | 3/5 | 6 | Plate treatments vary reproducibly, but one repeated chip grammar plus sparse islands does not create multi-scale weathering. |
+| Typography and state language | 10 | 4/5 | 8 | Required text is readable and state receiver differences are clear at phone scale. |
+| Portrait composition | 10 | 3/5 | 6 | Reward hierarchy is understandable, but broad side plates continue to dominate negative space and flatten depth. |
+| **Total** | **100** |  | **62/100** | Every dimension meets its minimum; the total remains below `85/100`. |
+
+### Decision
+
+**Fail â€” scored.** No automatic blocker applies and no dimension is below `3/5`, but `62/100` is below the required `85/100`.
+
+**V11-B013 â€” integrated plate-surface authorship:** the six plate interiors are clipped, deterministic, and seed-varying, but their sparse repeated marks still read as decoration on broad uniform slabs. M11-R025 must replace the single-chip rhythm with bounded connected tonal planes, irregular inner-bevel breaks, localized pits/chips, and join-following contact darkening while preserving the zero baseline, compact controls, semantic slots, shared geometry/seam, stable IDs, material families, state evidence, and reference isolation.
+
+## M11-R022 / V11 re-review â€” 2026-07-24
 
 Reviewer: `project-owner-authorized automated review`. Reviewed revision: `aec01b5` (`feat(renderer): weather enchanted forest panel plates`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
 
@@ -33,10 +70,10 @@ Technical hard-gate outcome: **Pass**. It does not increase visual scores.
 
 ### Decision
 
-**Fail — scored.** Every dimension meets the minimum, but `62/100` is below the required `85/100`.
+**Fail â€” scored.** Every dimension meets the minimum, but `62/100` is below the required `85/100`.
 
-**V11-B012 — weathered plate interior treatment:** preserve approved geometry, inventory, families, IDs, seeds, semantic slots, shared seam, compact controls, state evidence, and reference isolation. Add restrained deterministic interior weathering to each panel plate—localized stone-chip clusters, tonal bevel islands, and contact-darkening—so the broken silhouette resolves as a material surface rather than large uniform fills. M11-R023 is the next agent-ready remediation.
-## M11-R020 / V11 re-review — 2026-07-24
+**V11-B012 â€” weathered plate interior treatment:** preserve approved geometry, inventory, families, IDs, seeds, semantic slots, shared seam, compact controls, state evidence, and reference isolation. Add restrained deterministic interior weathering to each panel plateâ€”localized stone-chip clusters, tonal bevel islands, and contact-darkeningâ€”so the broken silhouette resolves as a material surface rather than large uniform fills. M11-R023 is the next agent-ready remediation.
+## M11-R020 / V11 re-review â€” 2026-07-24
 
 Reviewer: `project-owner-authorized automated review`. Reviewed revision: `a49acad` (`feat(renderer): segment enchanted forest panel plates`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
 
@@ -69,10 +106,10 @@ Technical hard-gate outcome: **Pass**. It does not increase visual scores.
 
 ### Decision
 
-**Fail — scored.** Every dimension meets the minimum, but `62/100` is below the required `85/100`.
+**Fail â€” scored.** Every dimension meets the minimum, but `62/100` is below the required `85/100`.
 
-**V11-B011 — weathered plate depth:** preserve approved geometry, inventory, families, IDs, seeds, semantic slots, shared seam, and reference isolation. Give each bounded panel plate an independently visible chipped silhouette, inner bevel/occlusion, and restrained weathering variation so the segment gaps read as material construction rather than flat rectangular fills. Keep compact controls and recipe-derived state evidence unchanged. M11-R021 is the next agent-ready remediation.
-## M11-R018 / V11 re-review — 2026-07-24
+**V11-B011 â€” weathered plate depth:** preserve approved geometry, inventory, families, IDs, seeds, semantic slots, shared seam, and reference isolation. Give each bounded panel plate an independently visible chipped silhouette, inner bevel/occlusion, and restrained weathering variation so the segment gaps read as material construction rather than flat rectangular fills. Keep compact controls and recipe-derived state evidence unchanged. M11-R021 is the next agent-ready remediation.
+## M11-R018 / V11 re-review â€” 2026-07-24
 
 Reviewer: `project-owner-authorized automated review`. Reviewed revision: `7dece3b` (`feat(renderer): strengthen enchanted forest state contrast`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
 
@@ -99,15 +136,15 @@ Technical hard-gate outcome: **Pass**. It does not increase visual scores.
 | Botanical ornament restraint | 10 | 3/5 | 6 | Compact controls are quieter and remain outside semantic slots; repeated small vine and cluster marks still feel mechanically placed. |
 | Diffuse bioluminescent lighting | 10 | 3/5 | 6 | The receiver pulse is clearer and bounded, but material-light interaction remains mostly line-based. |
 | Seeded organic variation | 10 | 3/5 | 6 | Variation remains reproducible and readable, but does not yet create a convincing authored surface rhythm. |
-| Typography and state language | 10 | 4/5 | 8 | Pressed and highlighted receiver pulses now read at phone scale; the state board’s printed `.48`/`.52` values are stale versus the rendered recipes and weaken review evidence fidelity. |
+| Typography and state language | 10 | 4/5 | 8 | Pressed and highlighted receiver pulses now read at phone scale; the state boardâ€™s printed `.48`/`.52` values are stale versus the rendered recipes and weaken review evidence fidelity. |
 | Portrait composition | 10 | 3/5 | 6 | Reward hierarchy is readable, but the large flat side plates dominate the negative space and flatten depth. |
 | **Total** | **100** |  | **62/100** |  |
 
 ### Decision
 
-**Fail — scored.** Every dimension meets the minimum, but `62/100` is below the required `85/100`.
+**Fail â€” scored.** Every dimension meets the minimum, but `62/100` is below the required `85/100`.
 
-**V11-B010 — material depth and review-surface fidelity:** preserve approved geometry, inventory, families, IDs, seeds, semantic slots, shared seam, and reference isolation. Replace the broad panel-side slab read with bounded discrete weathered-stone segments and visible wood/moss join depth, while retaining quiet compact controls. Regenerate the state board so displayed state values derive from the same recipes as the production renderer. M11-R019 is the next agent-ready remediation.
+**V11-B010 â€” material depth and review-surface fidelity:** preserve approved geometry, inventory, families, IDs, seeds, semantic slots, shared seam, and reference isolation. Replace the broad panel-side slab read with bounded discrete weathered-stone segments and visible wood/moss join depth, while retaining quiet compact controls. Regenerate the state board so displayed state values derive from the same recipes as the production renderer. M11-R019 is the next agent-ready remediation.
 ## M11-R016 / V11 re-review â€” 2026-07-24
 
 Reviewer: `project-owner-authorized automated review`. Reviewed revision: `2264d24` (`feat(renderer): refine enchanted forest craftsmanship`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
