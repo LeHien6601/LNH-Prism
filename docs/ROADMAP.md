@@ -230,7 +230,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** a later reviewed package must pass its hard technical gate and score at least `85/100`, with no visual dimension below `3/5` and no automatic blocker, at source, target-phone, and thumbnail review distances.
 
-M11-R025 connected multi-scale plate-interior remediation is complete; M11-R026 / V11 re-review is next.
+M11-R026 / V11 re-review failed at `67/100`; M11-R027 focal/rail hierarchy integration is next.
 
 M11-R016 / V11 re-review failed at 60/100; M11-R017 remediation is complete and M11-R023 remediation is next.
 
@@ -251,3 +251,5 @@ M11-R023 completed: every panel plate now owns independently clipped determinist
 M11-R024 authorized automated review passed the technical hard gate and every visual minimum but failed at `62/100`; `V11-B013` found that sparse repeated interior marks do not overcome the broad uniform plate fills. M11-R025 is next.
 
 M11-R025 completed: all six panel plates now use independently clipped seeded connected tonal planes, irregular inner-bevel breaks, localized multi-scale pits/chips, and join-following contact darkening. Seed `0`, compact controls, shared geometry and composition seam, semantic slots, material families, state evidence, and reference isolation remain unchanged. M11-R026 / V11 re-review is next.
+
+M11-R026 authorized automated review passed the technical hard gate and every visual minimum but failed at `67/100`; `V11-B014` found that the rail rhythm still outweighs the central living focal at target-phone scale. M11-R027 is next.
