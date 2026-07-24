@@ -230,7 +230,7 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** a later reviewed package must pass its hard technical gate and score at least `85/100`, with no visual dimension below `3/5` and no automatic blocker, at source, target-phone, and thumbnail review distances.
 
-M11-R029 bounded living-focal convergence is complete; M11-R030 / V11 re-review is next.
+M11-R032 / V11 re-review failed at `72/100`; M11-R033 upper-canopy relief is next.
 
 M11-R016 / V11 re-review failed at 60/100; M11-R017 remediation is complete and M11-R023 remediation is next.
 
@@ -259,3 +259,9 @@ M11-R027 completed: all six panel plates now own independently clipped focal-zon
 M11-R028 authorized automated review passed the technical hard gate and every visual minimum but failed at `67/100`; `V11-B015` found that the seed remains a separate emblem rather than a convergent material event at target-phone scale. M11-R029 is next.
 
 M11-R029 completed: the luminous seed now owns independently named focal-adjacent occlusion plus bounded stone, wood, moss, and local receiver convergence paths at existing anchors. Geometry, lighting limits, semantic slots, seeds, state evidence, material families, and reference isolation remain unchanged. M11-R030 / V11 re-review is next.
+
+M11-R030 authorized automated review passed the technical hard gate and every visual minimum but failed at `70/100`; `V11-B016` found insufficient portrait-level organic cohesion. M11-R031 is next.
+
+M11-R031 completed: sparse seeded upper-anchor wood, moss, and stone continuity now directs existing panel material toward the living focal without changing geometry, components, lighting bounds, or reference isolation. M11-R032 is next.
+
+M11-R032 authorized automated review passed the technical hard gate and every visual minimum but failed at `72/100`; `V11-B017` found insufficient upper-field material integration. M11-R033 is next.

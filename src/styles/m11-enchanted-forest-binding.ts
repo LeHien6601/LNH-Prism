@@ -60,6 +60,12 @@ function materialClusterAnchors(request: StyleCompositionRequest): Array<[number
   return [[.12, .25], [.24, .72], [.76, .28], [.88, .68], [.16, .52], [.84, .50]];
 }
 
+export function renderM11CanopyFocalRhythmSvg(cx: number, cy: number, w: number, h: number, seed: number, receiver: number): string {
+  if (seed === 0) return "";
+  const drift = (random(seed, 930) - .5) * w * .035;
+  return `<g id="m11-panel-canopy-focal-rhythm" data-layer="forest-canopy-to-focal-rhythm" data-variation-seed="${seed}" data-direction="upper-anchors-to-living-focal"><path data-layer="forest-canopy-wood-continuity" d="M${w * .22} ${h * .16}Q${w * .30 + drift} ${h * .27} ${cx - w * .08} ${cy - h * .06}M${w * .78} ${h * .16}Q${w * .70 - drift} ${h * .27} ${cx + w * .08} ${cy - h * .06}" fill="none" stroke="#4E673F" stroke-width="2.2" stroke-opacity=".72"/><path data-layer="forest-canopy-moss-continuity" d="M${w * .25} ${h * .19}Q${w * .34 + drift} ${h * .28} ${cx - w * .11} ${cy - h * .02}M${w * .75} ${h * .19}Q${w * .66 - drift} ${h * .28} ${cx + w * .11} ${cy - h * .02}" fill="none" stroke="#91BE72" stroke-width="1.5" stroke-opacity="${(receiver * .8).toFixed(2)}" stroke-dasharray="8 5 4 6"/><path data-layer="forest-canopy-stone-relief" d="M${w * .18} ${h * .23}L${w * .25} ${h * .25}M${w * .82} ${h * .23}L${w * .75} ${h * .25}" fill="none" stroke="#A9B196" stroke-width="1.2" stroke-opacity=".46"/></g>`;
+}
+
 function stateRecipe(request: StyleCompositionRequest) {
   const state = String(request.state ?? "normal") as keyof typeof M11_ENCHANTED_FOREST_STATE_RECIPES;
   return { state, ...(M11_ENCHANTED_FOREST_STATE_RECIPES[state] ?? M11_ENCHANTED_FOREST_STATE_RECIPES.normal) };
@@ -185,6 +191,6 @@ function forestLayers(request: StyleCompositionRequest): string {
   const typography = control ? '<g id="m11-' + request.component + '-parchment-typography" data-layer="forest-typography" data-typography-preset="m11-parchment-sage-action" data-semantic-text="required"><path d="M' + (cx - 28) + " " + (request.height / 2 + 13) + 'h56" stroke="#EDE3B4" stroke-opacity=".42"/></g>' : "";
   const focalRadius = Math.min(request.width, request.height) * (request.component === "panel" ? .105 : .19);
   const focalState = String(request.state ?? "normal") as keyof typeof M11_ENCHANTED_FOREST_STATE_RECIPES;
-  const focalLayers = focal ? renderM11LivingFocalSvg(request.component as "panel" | "icon-container", cx, cy, focalRadius, focalState) + renderM11FocalConvergenceSvg(request.component as "panel" | "icon-container", cx, cy, focalRadius, focalState) : "";
+  const focalLayers = focal ? renderM11LivingFocalSvg(request.component as "panel" | "icon-container", cx, cy, focalRadius, focalState) + renderM11FocalConvergenceSvg(request.component as "panel" | "icon-container", cx, cy, focalRadius, focalState) + (request.component === "panel" ? renderM11CanopyFocalRhythmSvg(cx, cy, request.width, request.height, request.variationSeed ?? 51731, M11_ENCHANTED_FOREST_STATE_RECIPES[focalState].receiver) : "") : "";
   return material + integratedRegions + clusters + variation + ornament + typography + focalLayers;
 }
