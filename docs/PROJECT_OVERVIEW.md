@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🤖 **Deepen bounded Enchanted Forest upper-canopy relief (M11-R033)** · Agent |
-| Next agent-ready task | M11-R033 — add sparse seeded upper-anchor relief and material depth while preserving the central focal reading path |
+| Next task | 🤖 **Vary bounded Enchanted Forest canopy material cadence (M11-R035)** · Agent |
+| Next agent-ready task | M11-R035 — introduce sparse seeded upper-canopy asymmetry while preserving the central focal reading path |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 M11-R032 review failed at `72/100`; M11-R033 upper-canopy relief is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 M11-R034 review failed at `74/100`; M11-R035 canopy cadence is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -203,6 +203,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Compose bounded Enchanted Forest canopy-to-focal material rhythm (M11-R031) | 🤖 Agent | 🟢 Complete | Reused existing panel anchors, stone, wood, moss, focal convergence, and receivers to direct sparse seeded organic continuity from the upper panel toward the focal without changing geometry or global lighting |
 | P0 | Re-review Enchanted Forest canopy-to-focal material rhythm (M11-R032 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed hard gates and all visual minima but scored `72/100`; `V11-B017` requires upper-field material integration |
 | P0 | Deepen bounded Enchanted Forest upper-canopy relief (M11-R033) | 🤖 Agent | 🔵 Agent-ready | Reuse existing upper anchors and material families to add sparse seeded relief/occlusion toward the focal without changing geometry, components, or global lighting |
+| P0 | Re-review Enchanted Forest upper-canopy relief (M11-R034 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed hard gates and all visual minima but scored `74/100`; `V11-B018` requires asymmetric canopy rhythm |
+| P0 | Vary bounded Enchanted Forest canopy material cadence (M11-R035) | 🤖 Agent | 🔵 Agent-ready | Reuse existing upper-canopy material layers to introduce sparse seeded asymmetry without changing geometry, components, global lighting, or semantic slots |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
