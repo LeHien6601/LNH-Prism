@@ -27,7 +27,7 @@ export async function validateControlDrift({ root = resolve(".") } = {}) {
   const next = nextTaskId(overview);
   const milestone = activeMilestoneId(overview);
   const taskRow = overview.split(/\r?\n/u).find(line => /^\| P\d+ \|/u.test(line) && line.includes(`(${next})`));
-  const agentReady = taskRow?.includes("🔵 Agent-ready");
+  const agentReady = taskRow?.includes("Agent-ready");
   const humanDecision = taskRow?.includes("Human decision");
   if (!taskRow || (!agentReady && !humanDecision)) throw Error(`Control drift: ${next} is not an authorized overview task.`);
   if (agentReady && !overview.includes(`| Next agent-ready task | ${next} `)) throw Error(`Control drift: overview next-agent-ready text does not match ${next}.`);

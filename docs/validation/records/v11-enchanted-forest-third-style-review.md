@@ -1,5 +1,42 @@
 # V11 Enchanted Forest third-style review
 
+## M11-R016 / V11 re-review — 2026-07-24
+
+Reviewer: `project-owner-authorized automated review`. Reviewed revision: `2264d24` (`feat(renderer): refine enchanted forest craftsmanship`). Reference receipt SHA-256: `02ae9c86a7bd86debed494cd530cb65d09eec715b6be02aa127f24fb02e3e2b6`.
+
+Inspected the source-scale material/focal isolates, `m11-enchanted-forest-craft-board.png`, `m11-enchanted-forest-state-pairs.png`, full target-phone portrait, thumbnail comparison, all 26 matrix outputs, 52-module manifest, seed/clean-workspace receipts, generalized-seam proof, and reference-boundary evidence.
+
+### Technical hard gate
+
+| Requirement | Evidence | Result |
+|---|---|---|
+| Shared geometry, stable IDs, and no style fork | generalized-seam proof and shared composition renderer | Pass |
+| Package, provenance, clean reproduction, and seeds | `validate:m11-a4-package`; 26 entries, 52 modules, seeds `0/51731/104729/8675309` | Pass |
+| Reference boundary | `test:review-reference-boundary`; 370 production files clear | Pass |
+| Matrix, semantic text, states, and review surfaces | `test:renderer`, craft/state boards, target-phone and thumbnail surfaces | Pass |
+
+Technical hard-gate outcome: **Pass**. It does not increase visual scores.
+
+### Visual scoring
+
+| Dimension | Weight | Score | Weighted | Observation |
+|---|---:|---:|---:|---|
+| Three-style distinction | 15 | 4/5 | 12 | The green stone/wood/moss family is distinct from Frostbound and Forge at thumbnail scale. |
+| Organic material separation | 15 | 3/5 | 9 | Stone caps, wood body, moss seams, and living light are named and visible, but still read as broad graphic bands rather than convincing joined materials. |
+| Focal hierarchy | 15 | 3/5 | 9 | The seed is readable and contained, but the icon focal and portrait cradle remain diagrammatic. |
+| Botanical ornament restraint | 10 | 3/5 | 6 | Compact budgets prevent collisions, though repeated vine/cluster marks remain mechanically regular. |
+| Diffuse bioluminescent lighting | 10 | 3/5 | 6 | Light is bounded and non-fire/non-ice, but its receiver influence is subtle in the target-phone portrait. |
+| Seeded organic variation | 10 | 3/5 | 6 | Variation is deterministic and bounded, but sparse marks do not create an authored surface rhythm. |
+| Typography and state language | 10 | 3/5 | 6 | Disabled is legible; pressed/highlighted changes remain too subtle at target-phone scale. |
+| Portrait composition | 10 | 3/5 | 6 | Reward hierarchy is readable, but heavy flat side plates and weak material-to-focal integration limit depth. |
+| **Total** | **100** |  | **60/100** |  |
+
+### Decision
+
+**Fail — scored.** Every dimension meets the minimum, but `60/100` is below the required `85/100`.
+
+**V11-B009 — production-surface integration and target-scale state contrast:** keep the approved construction profiles and budgets, but make stone/wood/moss joins materially legible in the rendered panel and actions, replace repetitive compact-control banding with a quieter class-specific construction cue, and increase bounded pressed/highlighted receiver contrast at target-phone scale. Preserve geometry, inventory, material families, IDs, seeds, semantic slots, shared seam, and reference isolation.
+
 ## Authorization and evidence
 
 | Field | Value |

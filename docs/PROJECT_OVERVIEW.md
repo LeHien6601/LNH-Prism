@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | ?? **Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review)** � ?? Product + ?? Art + ? UI + ??? Technical leads |
-| Next agent-ready task | No unblocked agent-ready task � M11-R016 / V11 re-review decision is required |
+| Next task | ?? **Integrate Enchanted Forest production surfaces and target-scale state contrast (M11-R017)** � ?? Agent |
+| Next agent-ready task | M11-R017 � integrate construction-profile joins into production surfaces, quiet compact controls, and strengthen target-phone state receiver contrast without changing approved boundaries |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -185,8 +185,10 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Integrate Enchanted Forest materials and living focal (M11-R013) | 🤖 Agent | 🟢 Complete | Added clipped connected stone/wood/moss surface regions with family-specific depth/light response, a production-derived living focal/root isolate, and a rebalanced portrait hierarchy; regenerated and validated the 26-entry/52-module package |
 | P0 | Re-review Enchanted Forest material/focal integration (M11-R014 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed the technical hard gate and all visual minima but scored `70/100`; `V11-B008` requires stronger integrated surface craftsmanship and state response |
 | P0 | Refine Enchanted Forest surface craftsmanship and state language (M11-R015) | ?? Agent | ?? Complete | Added reference grammar, connected construction profiles, component-class budgets, craft/state boards, and bounded receiver responses; regenerated and validated the 26-entry/52-module package |
-| P0 | Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Human decision | Score the validated R015 evidence against the approved V11 rubric; technical correctness is a hard gate, not a visual-score multiplier |
-| P0 | Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Score the validated R015 evidence against the approved V11 rubric; technical correctness is a hard gate, not a visual-score multiplier |
+| P0 | Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete � failed | Authorized automated review passed technical gates but scored 60/100; V11-B009 requires production-surface integration and target-scale state contrast |
+| P0 | Integrate Enchanted Forest production surfaces and target-scale state contrast (M11-R017) | ?? Agent | ?? Agent-ready | Make joins materially legible in production surfaces, quiet compact-control banding, and strengthen bounded pressed/highlighted receiver contrast while preserving approved boundaries |
+| P0 | Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete � failed | Authorized automated review passed technical gates but scored 60/100; V11-B009 requires production-surface integration and target-scale state contrast |
+| P0 | Integrate Enchanted Forest production surfaces and target-scale state contrast (M11-R017) | ?? Agent | ?? Agent-ready | Make joins materially legible in production surfaces, quiet compact-control banding, and strengthen bounded pressed/highlighted receiver contrast while preserving approved boundaries |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register

@@ -231,3 +231,5 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 **Exit gate:** a later reviewed package must pass its hard technical gate and score at least `85/100`, with no visual dimension below `3/5` and no automatic blocker, at source, target-phone, and thumbnail review distances.
 
 M11-R016 / V11 re-review is next.
+
+M11-R016 / V11 re-review failed at 60/100; M11-R017 is next.
