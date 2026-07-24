@@ -20,8 +20,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/panel-488x660-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/panel/panel-488x660-normal.svg",
       "format": "svg",
-      "bytes": 42853,
-      "sha256": "15a013b1c326407176680d2940410ba2a803ad0451bc81d06f2f28a071e09af2"
+      "bytes": 44170,
+      "sha256": "19a4365a4e99d0035ae8535c68da77039767a3e0e66b8ed14a9e8f5eb80adc3e"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x660-normal:png",
@@ -29,8 +29,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/panel-488x660-normal.png",
       "path": "assets/m11-enchanted-forest/modules/panel/panel-488x660-normal.png",
       "format": "png",
-      "bytes": 294670,
-      "sha256": "72f32c37a050aceafa06d0be4df0c4702c5ded37627e57a7b2ca0072cc72f4f0"
+      "bytes": 303754,
+      "sha256": "b6be7177cffaaedbfd79dade51b622f2051f097fe82f6fe99a6d90c775aa1f4e"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x760-normal:svg",
@@ -38,8 +38,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/panel-488x760-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/panel/panel-488x760-normal.svg",
       "format": "svg",
-      "bytes": 43141,
-      "sha256": "e35f10385620523234eee953dd33010e03eada67bdc1ee5c09d0dc1b2d2a5b6b"
+      "bytes": 44472,
+      "sha256": "63c66357f40bce11d10a643202b503b30b06e5743b5b5bdacf84a2ec92415c52"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x760-normal:png",
@@ -47,8 +47,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/panel-488x760-normal.png",
       "path": "assets/m11-enchanted-forest/modules/panel/panel-488x760-normal.png",
       "format": "png",
-      "bytes": 322947,
-      "sha256": "b703da8017f798c59c1f72ce9306df484f6cf122cfdcf21a5b8873a52e4de061"
+      "bytes": 333219,
+      "sha256": "4f4d0316dd968d3df5cbf01847e34790cecbb9cbfcde740983654e3f17509a91"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-normal:svg",

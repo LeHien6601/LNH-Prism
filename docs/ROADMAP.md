@@ -230,7 +230,8 @@ Each milestone ends in a gate. A gate can pass only with working evidence, a rec
 
 **Exit gate:** a later reviewed package must pass its hard technical gate and score at least `85/100`, with no visual dimension below `3/5` and no automatic blocker, at source, target-phone, and thumbnail review distances.
 
-M11-R034 / V11 re-review failed at `74/100`; M11-R035 canopy material cadence is next.
+M11-R036 / V11 re-review passed at `85/100`; M11 Enchanted Forest third-style contrast is complete.
+M11-R037 is the human closeout decision to select the next bounded production milestone.
 
 M11-R016 / V11 re-review failed at 60/100; M11-R017 remediation is complete and M11-R023 remediation is next.
 
@@ -269,3 +270,7 @@ M11-R032 authorized automated review passed the technical hard gate and every vi
 M11-R033 completed: sparse seeded upper-anchor relief/occlusion and moss receiver surfaces now give the upper field material depth without changing geometry, components, lighting bounds, or reference isolation. M11-R034 is next.
 
 M11-R034 authorized automated review passed the technical hard gate and every visual minimum but failed at `74/100`; `V11-B018` found insufficient asymmetric canopy rhythm. M11-R035 is next.
+
+M11-R035 completed: sparse seeded asymmetric wood, moss, stone, and receiver cadence now inhabits the existing upper canopy region without changing geometry, components, global lighting, semantic slots, or reference isolation. M11-R036 is next.
+
+M11-R036 authorized automated review passed the technical hard gate and all visual minima at `85/100`; M11 V11 passed.

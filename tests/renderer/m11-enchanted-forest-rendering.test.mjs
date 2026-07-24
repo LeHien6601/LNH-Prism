@@ -54,6 +54,7 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.match(panel, /data-layer="forest-focal-material-convergence"/);
   assert.match(panel, /data-layer="forest-canopy-to-focal-rhythm"/);
   assert.match(panel, /data-layer="forest-canopy-relief-occlusion"/);
+  assert.match(panel, /data-layer="forest-canopy-material-cadence"/);
   assert.match(panel, /data-focal-depth="woven-root-cradle"/);
   assert.match(panel, /data-halo-opacity="\.40"/);
   const progress = renderStyledProgressSvg({ component: "progress", width: 420, height: 28, percent: 90, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);

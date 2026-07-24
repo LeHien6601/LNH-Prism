@@ -20,9 +20,9 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🤖 **Vary bounded Enchanted Forest canopy material cadence (M11-R035)** · Agent |
-| Next agent-ready task | M11-R035 — introduce sparse seeded upper-canopy asymmetry while preserving the central focal reading path |
+| Active milestone | 🟢 **M11 — Enchanted Forest third-style contrast** |
+| Next task | 🧭 **Close M11 and choose the next production milestone (M11-R037)** · Human decision |
+| Next agent-ready task | None — M11 passed V11 at `85/100` |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 M11-R034 review failed at `74/100`; M11-R035 canopy cadence is next |
+| 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -202,9 +202,11 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Re-review bounded Enchanted Forest living-focal convergence (M11-R030 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed technical hard gates and all visual minima but scored `70/100`; `V11-B016` requires portrait-level organic cohesion |
 | P0 | Compose bounded Enchanted Forest canopy-to-focal material rhythm (M11-R031) | 🤖 Agent | 🟢 Complete | Reused existing panel anchors, stone, wood, moss, focal convergence, and receivers to direct sparse seeded organic continuity from the upper panel toward the focal without changing geometry or global lighting |
 | P0 | Re-review Enchanted Forest canopy-to-focal material rhythm (M11-R032 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed hard gates and all visual minima but scored `72/100`; `V11-B017` requires upper-field material integration |
-| P0 | Deepen bounded Enchanted Forest upper-canopy relief (M11-R033) | 🤖 Agent | 🔵 Agent-ready | Reuse existing upper anchors and material families to add sparse seeded relief/occlusion toward the focal without changing geometry, components, or global lighting |
+| P0 | Deepen bounded Enchanted Forest upper-canopy relief (M11-R033) | 🤖 Agent | 🟢 Complete | Added sparse seeded relief/occlusion toward the focal without changing geometry, components, or global lighting |
 | P0 | Re-review Enchanted Forest upper-canopy relief (M11-R034 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed hard gates and all visual minima but scored `74/100`; `V11-B018` requires asymmetric canopy rhythm |
-| P0 | Vary bounded Enchanted Forest canopy material cadence (M11-R035) | 🤖 Agent | 🔵 Agent-ready | Reuse existing upper-canopy material layers to introduce sparse seeded asymmetry without changing geometry, components, global lighting, or semantic slots |
+| P0 | Vary bounded Enchanted Forest canopy material cadence (M11-R035) | 🤖 Agent | 🟢 Complete | Added sparse seeded asymmetry through existing upper-canopy material layers without changing geometry, components, global lighting, or semantic slots |
+| P0 | Re-review Enchanted Forest canopy material cadence (M11-R036 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — passed | Authorized automated review passed technical hard gates and all visual minima at `85/100` |
+| P0 | Close M11 and choose the next production milestone (M11-R037) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟡 Human decision | M11 V11 is passed; select the next bounded production direction before authorizing new implementation |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -411,3 +413,5 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-25 | Applied M11-R030 authorized automated review: technical gates and visual minima passed, but V11 remained failed at `70/100`; `V11-B016` opens M11-R031 canopy-to-focal material rhythm | Project owner / Codex |
 | 2026-07-25 | Completed M11-R031: added sparse seeded wood, moss, and stone continuity from upper anchors toward the living focal; regenerated and validated the 26-entry/52-module package; M11-R032 / V11 re-review is next | Codex |
 | 2026-07-25 | Applied M11-R032 authorized automated review: technical gates and visual minima passed, but V11 remained failed at `72/100`; `V11-B017` opens M11-R033 upper-canopy relief | Project owner / Codex |
+| 2026-07-25 | Completed M11-R033 and M11-R035: introduced bounded seeded upper-canopy relief and asymmetric material cadence; regenerated and validated the 26-entry/52-module package | Codex |
+| 2026-07-25 | Applied M11-R036 authorized automated review: technical gates and all visual minima passed at `85/100`; M11 V11 gate passed | Project owner / Codex |
