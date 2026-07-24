@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🧭 **Re-review Enchanted Forest focal hierarchy and rail rhythm (M11-R028 / V11 re-review)** · Product + Art + UI + Technical leads |
-| Next agent-ready task | None — M11-R028 is a human decision gate |
+| Next task | 🤖 **Deepen bounded Enchanted Forest living-focal convergence (M11-R029)** · Agent |
+| Next agent-ready task | M11-R029 — strengthen only existing focal-adjacent stone, wood, moss, root, and receiver layers within approved local lighting bounds |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🟡 M11-R027 focal/rail hierarchy integration complete; M11-R028 / V11 re-review is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 M11-R028 review failed at `67/100`; M11-R029 living-focal convergence is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -197,7 +197,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Author connected multi-scale Enchanted Forest plate interiors (M11-R025) | 🤖 Agent | 🟢 Complete | All six plates now own coherent seeded tonal-plane structure, irregular inner-bevel breaks, localized multi-scale pits/chips, and join-following contact darkening; the zero baseline, compact controls, shared seam, semantic slots, state evidence, and reference isolation remain intact |
 | P0 | Re-review connected multi-scale Enchanted Forest plate interiors (M11-R026 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed technical hard gates and all visual minima but scored `67/100`; `V11-B014` requires focal/rail hierarchy integration |
 | P0 | Integrate Enchanted Forest focal hierarchy with bounded rail rhythm (M11-R027) | 🤖 Agent | 🟢 Complete | Added independently clipped plate-specific focal-zone relief falloff and localized stone/moss receiver pools through the existing shared seam; regenerated validated evidence while preserving geometry, controls, semantic slots, named seeds, and reference isolation |
-| P0 | Re-review Enchanted Forest focal hierarchy and rail rhythm (M11-R028 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟡 Human decision | Apply the approved V11 rubric to regenerated R027 evidence at source, target-phone, isolate, state-pair, and thumbnail distances |
+| P0 | Re-review Enchanted Forest focal hierarchy and rail rhythm (M11-R028 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed technical hard gates and all visual minima but scored `67/100`; `V11-B015` requires living-focal material convergence |
+| P0 | Deepen bounded Enchanted Forest living-focal convergence (M11-R029) | 🤖 Agent | 🔵 Agent-ready | Reuse existing focal, root, stone, wood, moss, and receiver layers to make the seed visibly embedded in its local materials while preserving geometry, lighting bounds, semantic slots, and approved boundaries |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -396,3 +397,5 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-25 | Applied M11-R026 authorized automated review: technical gates and visual minima passed, but V11 failed at `67/100`; `V11-B014` opens M11-R027 focal/rail hierarchy integration | Project owner / Codex |
 
 | 2026-07-25 | Completed M11-R027: added bounded focal-zone plate relief falloff and localized stone/moss living-light receiver pools through the shared seam; regenerated and validated the 26-entry/52-module package; M11-R028 / V11 re-review is next | Codex |
+
+| 2026-07-25 | Applied M11-R028 authorized automated review: technical gates and visual minima passed, but V11 remained failed at `67/100`; `V11-B015` opens M11-R029 bounded living-focal convergence | Project owner / Codex |
