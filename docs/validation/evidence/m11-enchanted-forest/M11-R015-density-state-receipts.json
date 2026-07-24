@@ -85,10 +85,10 @@
   },
   "craftBoard": {
     "svg": "m11-enchanted-forest-craft-board.svg",
-    "svgSha256": "3abce5c261cc46eeb0e86780532820701df33444eddf79b8970a757ee4e1b1df"
+    "svgSha256": "7b87a707484b3c0d240ea369b6f590f9c1d4450447a03585312a65e8d92a8084"
   },
   "statePairs": {
     "svg": "m11-enchanted-forest-state-pairs.svg",
-    "svgSha256": "a6ee67129ab4c4d1423ad8f1594750d80f8d2ae4713f6b2d160ba8c5d3819ce0"
+    "svgSha256": "d1215b89a4771eb86b5cba13852328ad0dc99687c5e2c06eef3aa7937fddea2f"
   }
 }

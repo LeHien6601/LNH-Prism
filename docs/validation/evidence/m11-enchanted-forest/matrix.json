@@ -10,8 +10,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "panel-488x660-normal",
-      "svgSha256": "bac4ade7454cd1c5cc5dc4489342a862b030149da8e489a924049e2fd99c523b",
-      "pngSha256": "50181c6b7d8b2ca873f84bafdb543afba96348e4b14b442bcd5a2be3db7fd80e"
+      "svgSha256": "f4931f9cc27056262269bc319def3d01d8593b0e1ee967ee37d5ba0b1ce164a9",
+      "pngSha256": "cf07b2b7ba72dc3dbfaf101f9eac12e7a3f8419fab1564ae2ae51c85b0d2ed14"
     },
     {
       "component": "panel",
@@ -20,8 +20,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "panel-488x760-normal",
-      "svgSha256": "d9d39076c625ca8e06b4776a36649163d9710cd5a661aa381dc2d306f7605391",
-      "pngSha256": "eec1749f46277bb9b528f4863b67abd0b3d63c021d429b5bf9d5661fa3936faf"
+      "svgSha256": "4add10ee9f48c9a04e7bf2c060ce9b7bbd2853d91b11d063b502a6bac953b416",
+      "pngSha256": "73a5264006ed498a76fb270a43399629276b093c008189ea4a3aad3cb8ee84a4"
     },
     {
       "component": "primary-hex-button",
@@ -190,8 +190,8 @@
       "state": "normal",
       "variationSeed": 51731,
       "name": "icon-container-92x92-normal",
-      "svgSha256": "f12f7668a65df601e48edbcc0c10d3df5be305b66dd6dba0491011d6555b9923",
-      "pngSha256": "69322c1dadf02915881502709c943e07be96bb2155c8e10b63237b0ef7904bae"
+      "svgSha256": "2db95e5dddc2d5a06e343d9f3b29ff5f9382c400c4b894638a21121b60225a89",
+      "pngSha256": "d2f1a7e4d6db48eda2b6a2633809e6b0c511ff15f73907857aba62efb5a30efe"
     },
     {
       "component": "icon-container",
@@ -200,8 +200,8 @@
       "state": "selected",
       "variationSeed": 51731,
       "name": "icon-container-116x116-selected",
-      "svgSha256": "e83a0176d74386db296e48e4754796e15e92657c12ff26d19ce7143c5dfba0fc",
-      "pngSha256": "aeae310f0bdb0b1767282b8774f0cbad9f5669b5428f3a5a58a89b712573a0c8"
+      "svgSha256": "515dda71f3c1f6d3655cae4e0c745aac17899e91b6b993efe3b46cfcea119e43",
+      "pngSha256": "96951997581760baf6884cc78d33d0185af40bfb8626dae5a394dbebdc3cbafb"
     },
     {
       "component": "progress",

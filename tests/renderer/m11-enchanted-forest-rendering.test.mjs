@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { renderStyledComponentSvg, renderStyledProgressSvg } from "../../dist/renderer/style-composition.js";
-import { M11_ENCHANTED_FOREST_BINDING, M11_ENCHANTED_FOREST_DENSITY_BUDGETS, M11_ENCHANTED_FOREST_STATE_RECIPES, renderM11LivingFocalSvg, renderM11MaterialClusterSvg } from "../../dist/styles/m11-enchanted-forest-binding.js";
+import { M11_ENCHANTED_FOREST_BINDING, M11_ENCHANTED_FOREST_DENSITY_BUDGETS, M11_ENCHANTED_FOREST_STATE_RECIPES, renderM11FocalConvergenceSvg, renderM11LivingFocalSvg, renderM11MaterialClusterSvg } from "../../dist/styles/m11-enchanted-forest-binding.js";
 
 test("M11 renders required shared-template states without obscuring semantic layers", () => {
   for (const state of ["normal", "pressed", "disabled"]) {
@@ -51,6 +51,7 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.match(panel, /data-layer="luminous-seed-focal"/);
   assert.match(panel, /data-layer="forest-focal-roots"/);
   assert.match(panel, /data-layer="forest-focal-light-interaction"/);
+  assert.match(panel, /data-layer="forest-focal-material-convergence"/);
   assert.match(panel, /data-focal-depth="woven-root-cradle"/);
   assert.match(panel, /data-halo-opacity="\.40"/);
   const progress = renderStyledProgressSvg({ component: "progress", width: 420, height: 28, percent: 90, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
@@ -67,6 +68,12 @@ test("M11 living focal helper preserves editable seed, support, roots, and light
   assert.match(focal, /data-focal-state="selected"/);
   assert.match(focal, new RegExp(`data-emitter-opacity="${M11_ENCHANTED_FOREST_STATE_RECIPES.selected.emitter}"`));
   assert.doesNotMatch(focal, /<image\b/);
+  const convergence = renderM11FocalConvergenceSvg("icon-container", 58, 58, 22, "selected");
+  assert.match(convergence, /data-layer="forest-focal-adjacent-occlusion"/);
+  assert.match(convergence, /data-layer="forest-focal-stone-convergence"/);
+  assert.match(convergence, /data-layer="forest-focal-wood-convergence"/);
+  assert.match(convergence, /data-layer="forest-focal-moss-convergence"/);
+  assert.match(convergence, /data-layer="forest-focal-material-receiver"/);
 });
 
 test("M11 component-class budgets reduce compact density and keep progress quiet", () => {
