@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "grammar": "specs/examples/m11-enchanted-forest-reference-grammar.json",
+  "renderer": "src/styles/m11-enchanted-forest-binding.ts",
+  "densityBudgets": {
+    "panel": {
+      "clusters": 5,
+      "speckles": 4,
+      "ornaments": 4,
+      "profileStages": 4
+    },
+    "primary-hex-button": {
+      "clusters": 2,
+      "speckles": 2,
+      "ornaments": 2,
+      "profileStages": 4
+    },
+    "secondary-hex-button": {
+      "clusters": 1,
+      "speckles": 1,
+      "ornaments": 2,
+      "profileStages": 3
+    },
+    "tab": {
+      "clusters": 1,
+      "speckles": 1,
+      "ornaments": 2,
+      "profileStages": 3
+    },
+    "badge": {
+      "clusters": 1,
+      "speckles": 1,
+      "ornaments": 2,
+      "profileStages": 3
+    },
+    "progress": {
+      "clusters": 0,
+      "speckles": 0,
+      "ornaments": 0,
+      "profileStages": 2
+    },
+    "icon-container": {
+      "clusters": 2,
+      "speckles": 1,
+      "ornaments": 2,
+      "profileStages": 4
+    }
+  },
+  "stateRecipes": {
+    "normal": {
+      "emitter": 0.24,
+      "receiver": 0.18,
+      "edge": 0.18,
+      "relief": 1,
+      "cue": "stable-living-presence"
+    },
+    "pressed": {
+      "emitter": 0.4,
+      "receiver": 0.48,
+      "edge": 0.3,
+      "relief": 0.76,
+      "cue": "contained-energy-compression"
+    },
+    "disabled": {
+      "emitter": 0.07,
+      "receiver": 0.04,
+      "edge": 0.08,
+      "relief": 0.62,
+      "cue": "dormant-unavailable"
+    },
+    "selected": {
+      "emitter": 0.38,
+      "receiver": 0.58,
+      "edge": 0.52,
+      "relief": 1.08,
+      "cue": "active-attunement"
+    },
+    "highlighted": {
+      "emitter": 0.38,
+      "receiver": 0.58,
+      "edge": 0.52,
+      "relief": 1.08,
+      "cue": "active-attunement"
+    }
+  },
+  "craftBoard": {
+    "svg": "m11-enchanted-forest-craft-board.svg",
+    "svgSha256": "4bfd2c08411c3a85f9059445caf1346e515022183e618083fb8ee401d9460e39"
+  },
+  "statePairs": {
+    "svg": "m11-enchanted-forest-state-pairs.svg",
+    "svgSha256": "c76723e63000b8e9d50c047a699f50ab6475c7982cbb9372403e1e8c08de4f10"
+  }
+}

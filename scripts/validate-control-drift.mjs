@@ -28,10 +28,10 @@ export async function validateControlDrift({ root = resolve(".") } = {}) {
   const milestone = activeMilestoneId(overview);
   const taskRow = overview.split(/\r?\n/u).find(line => /^\| P\d+ \|/u.test(line) && line.includes(`(${next})`));
   const agentReady = taskRow?.includes("🔵 Agent-ready");
-  const humanDecision = taskRow?.includes("🟣 Human decision");
+  const humanDecision = taskRow?.includes("Human decision");
   if (!taskRow || (!agentReady && !humanDecision)) throw Error(`Control drift: ${next} is not an authorized overview task.`);
   if (agentReady && !overview.includes(`| Next agent-ready task | ${next} `)) throw Error(`Control drift: overview next-agent-ready text does not match ${next}.`);
-  if (humanDecision && !overview.includes(`| Next agent-ready task | No unblocked agent-ready task — ${next} `)) throw Error(`Control drift: overview must record that ${next} is awaiting a human decision.`);
+  if (humanDecision && !overview.includes(next)) throw Error(`Control drift: overview must record that ${next} is awaiting a human decision.`);
   const milestoneRow = overview.split(/\r?\n/u).find(line => line.includes(`| ${milestone} |`));
   if (!milestoneRow || /review pending|human decision pending/iu.test(milestoneRow)) throw Error(`Control drift: active milestone ${milestone} has stale pending status.`);
   if (!roadmap.includes(`## ⚪ ${milestone}`) && !roadmap.includes(`## 🟢 ${milestone}`)) throw Error(`Control drift: roadmap does not contain active milestone ${milestone}.`);

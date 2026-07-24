@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "id": "m11-enchanted-forest-reference-grammar",
+  "style": "m11-enchanted-forest@0.1.0",
+  "status": "approved-remediation-input",
+  "sourceBoundary": {
+    "reference": "docs/reference-briefs/ENCHANTED_FOREST_REVIEW_REFERENCE.md",
+    "usage": "review-only visual comparison",
+    "prohibited": ["raster extraction", "palette sampling", "contour tracing", "embedded image", "reference-derived production pixels"]
+  },
+  "macro": {
+    "silhouette": "Ancient stone rails contain a vertically grown wood structure while the shared angular geometry remains unchanged.",
+    "focalPath": "The luminous seed and root cradle lead downward through resonance, progress, and claim actions.",
+    "quietZones": ["panel centre semantic lane", "button label slot", "progress fill reading lane"]
+  },
+  "meso": {
+    "joins": ["stone plates occlude wood rail terminations", "moss grows from stone-to-wood damp seams", "roots connect the focal to named wood and moss receivers"],
+    "depthOrder": ["base face", "wood growth body", "stone structural plates", "contact occlusion", "moss substrate and transition", "living-light receivers", "semantic content"]
+  },
+  "micro": {
+    "panel": "Sparse fractures, limited anchored knots, seam lichen, and four low-opacity variation specks stay outside the central content lane.",
+    "primaryAction": "At most two anchored authored clusters and two specks support one wood body with stone end caps.",
+    "compactControls": "At most one anchored cluster and one speck; progress uses no clusters, specks, or ornament."
+  },
+  "families": {
+    "stone": { "positive": "Structural plates follow exposed edges and use selective bevel, fracture, and contact occlusion.", "prohibited": "Floating centred stone decals or a uniform outline around every surface." },
+    "wood": { "positive": "Growth follows declared vertical panel rails or horizontal action bodies and terminates beneath structural masks.", "prohibited": "Broad decorative ribbons crossing semantic content or equal grain density on every component." },
+    "moss": { "positive": "Growth starts at a named damp stone-to-wood seam and transitions irregularly along that substrate.", "prohibited": "Repeated centred moss stickers or unanchored lichen dots." },
+    "livingLight": { "positive": "A bounded emitter drives separately named stone, wood, moss, and edge receivers near the focal or state cue.", "prohibited": "Uniform cyan overlay, global-opacity-only state changes, fire, or ice language." }
+  },
+  "stateContract": {
+    "normal": { "cue": "stable living presence", "emitter": 0.24, "receiver": 0.18, "edge": 0.18, "relief": 1.0 },
+    "pressed": { "cue": "contained energy compression", "emitter": 0.40, "receiver": 0.48, "edge": 0.30, "relief": 0.76 },
+    "disabled": { "cue": "dormant unavailable", "emitter": 0.07, "receiver": 0.04, "edge": 0.08, "relief": 0.62 },
+    "selectedOrHighlighted": { "cue": "active attunement", "emitter": 0.38, "receiver": 0.58, "edge": 0.52, "relief": 1.08 }
+  },
+  "densityBudgets": {
+    "panel": { "clusters": 5, "speckles": 4, "ornaments": 4, "profileStages": 4 },
+    "primary-hex-button": { "clusters": 2, "speckles": 2, "ornaments": 2, "profileStages": 4 },
+    "secondary-hex-button": { "clusters": 1, "speckles": 1, "ornaments": 2, "profileStages": 3 },
+    "tab": { "clusters": 1, "speckles": 1, "ornaments": 2, "profileStages": 3 },
+    "badge": { "clusters": 1, "speckles": 1, "ornaments": 2, "profileStages": 3 },
+    "progress": { "clusters": 0, "speckles": 0, "ornaments": 0, "profileStages": 2 },
+    "icon-container": { "clusters": 2, "speckles": 1, "ornaments": 2, "profileStages": 4 }
+  }
+}

@@ -3,17 +3,24 @@
   "status": "rendered",
   "renderer": "src/renderer/style-composition.ts",
   "binding": "src/styles/m11-enchanted-forest-binding.ts",
+  "referenceGrammar": "specs/examples/m11-enchanted-forest-reference-grammar.json",
   "matrixEntries": 26,
   "portrait": "m11-enchanted-forest-target-phone.svg",
   "isolates": [
     "m11-enchanted-forest-material-isolates.svg",
     "m11-enchanted-forest-focal-ornament-isolates.svg"
   ],
+  "craftEvidence": [
+    "m11-enchanted-forest-craft-board.svg",
+    "m11-enchanted-forest-state-pairs.svg",
+    "M11-R015-density-state-receipts.json"
+  ],
   "surfaces": [
     "M11-E-source-scale.html",
     "M11-E-target-phone.html",
     "M11-E-thumbnail.html",
-    "M11-E-review-reference.html"
+    "M11-E-review-reference.html",
+    "M11-E-craft-board.html"
   ],
   "variationSeed": 51731,
   "bounds": {

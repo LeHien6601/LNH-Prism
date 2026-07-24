@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🔵 **Refine Enchanted Forest surface craftsmanship and state language (M11-R015)** · 🤖 Agent |
-| Next agent-ready task | M11-R015 — apply the reference-fidelity convergence system to connected stone/wood/moss construction profiles, compact-control complexity budgets, and bounded living-light state response without changing component geometry, IDs, seams, seeds, material families, or the review-reference boundary |
+| Next task | ?? **Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review)** � ?? Product + ?? Art + ? UI + ??? Technical leads |
+| Next agent-ready task | No unblocked agent-ready task � M11-R016 / V11 re-review decision is required |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 M11-R014 / V11 re-review scored `70/100` — M11-R015 surface-craftsmanship and state-language remediation is next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🟣 M11-R015 remediation package is validated — M11-R016 / V11 re-review is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -184,7 +184,9 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Re-review Enchanted Forest authored cluster fidelity (M11-R012 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed hard gates and all visual minima but scored `65/100`; `V11-B007` requires material/focal integration and portrait cohesion |
 | P0 | Integrate Enchanted Forest materials and living focal (M11-R013) | 🤖 Agent | 🟢 Complete | Added clipped connected stone/wood/moss surface regions with family-specific depth/light response, a production-derived living focal/root isolate, and a rebalanced portrait hierarchy; regenerated and validated the 26-entry/52-module package |
 | P0 | Re-review Enchanted Forest material/focal integration (M11-R014 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated re-review passed the technical hard gate and all visual minima but scored `70/100`; `V11-B008` requires stronger integrated surface craftsmanship and state response |
-| P0 | Refine Enchanted Forest surface craftsmanship and state language (M11-R015) | 🤖 Agent | 🔵 Agent-ready | Apply the reference-fidelity convergence system: capture the review-only visual grammar; reshape existing connected stone/wood/moss regions into construction profiles; enforce compact-control complexity budgets; and strengthen bounded living-light response across normal, pressed, disabled, and highlighted states without adding components/material families or changing geometry, IDs, seams, seeds, or reference isolation |
+| P0 | Refine Enchanted Forest surface craftsmanship and state language (M11-R015) | ?? Agent | ?? Complete | Added reference grammar, connected construction profiles, component-class budgets, craft/state boards, and bounded receiver responses; regenerated and validated the 26-entry/52-module package |
+| P0 | Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Human decision | Score the validated R015 evidence against the approved V11 rubric; technical correctness is a hard gate, not a visual-score multiplier |
+| P0 | Re-review Enchanted Forest surface craftsmanship and state language (M11-R016 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟣 Human decision | Score the validated R015 evidence against the approved V11 rubric; technical correctness is a hard gate, not a visual-score multiplier |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -352,9 +354,12 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-19 | Completed M11-R013: integrated authored stone/wood/moss primitives into clipped connected surface regions, deepened the production-derived living focal/root interaction, rebalanced the portrait, and regenerated the validated M11 package; M11-R014 / V11 re-review is next | Codex |
 | 2026-07-19 | Authorized automated M11-R014 / V11 re-review failed at `70/100`: technical hard gates and all visual minima pass, but `V11-B008` requires stronger integrated surface craftsmanship and state response; M11-R015 is next | Project owner / Codex |
 | 2026-07-19 | Added the reference-fidelity convergence system after inspecting M11 production SVG/PNG evidence against the Enchanted Forest concept: future remediation must prove construction grammar, scale budgets, receiver-aware state language, and a craft board before full-package regeneration | Codex |
+| 2026-07-24 | Completed M11-R015: added the review-only grammar record, deterministic construction profiles, compact-control budgets, bounded state receivers, craft/state boards, and regenerated 26-entry/52-module technical evidence; M11-R016 / V11 re-review is next | Codex |
 | 2026-07-18 | Completed M9-A1: defined ordered M9-A2–A11 renderer, validation, integration, and human-review slices; opened edge-stack implementation | Codex |
 | 2026-07-19 | Completed M9-A2: added reusable versioned edge-stack contracts/presets and M9 Frostbound component/progress frame migration with focused contract and renderer validation; opened material-response implementation | Codex |
 | 2026-07-19 | Completed M9-A3: added source-neutral material-response registry/resolver, all-channel isolation surfaces, seven-component region bindings, provenance references, and focused validation; opened seeded variation implementation | Codex |
 | 2026-07-19 | Completed M9-A4: added bounded seeded variation presets, region bindings, typed seed receipts, zero baseline, and renderer trace metadata with same/different-seed validation; opened structural/ornament separation | Codex |
 | 2026-07-19 | Completed M9-A5: added deterministic independent ornament anchors, clipping/mirroring metadata, and focused structural-bound validation; opened focal-object framework | Codex |
 | 2026-07-19 | Completed M9-A6: added versioned focal presets with independently addressable optional layers and M9 panel/icon integration; opened typography treatments | Codex |
+
+| 2026-07-24 | Completed M11-R015: added the review-only grammar record, deterministic construction profiles, compact-control budgets, bounded state receivers, craft/state boards, and regenerated 26-entry/52-module technical evidence; M11-R016 / V11 re-review is next | Codex |

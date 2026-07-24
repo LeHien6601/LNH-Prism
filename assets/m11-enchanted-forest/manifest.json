@@ -20,8 +20,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/panel-488x660-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/panel/panel-488x660-normal.svg",
       "format": "svg",
-      "bytes": 19722,
-      "sha256": "341f2f365b03c9ad5cd4b3ba663801c54769d83b7698739260c1fa2d2520c59c"
+      "bytes": 16400,
+      "sha256": "8faee96818c89537cba16ce7cc1632fbd4491cce76c489a83558a8c4bc125500"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x660-normal:png",
@@ -29,8 +29,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/panel-488x660-normal.png",
       "path": "assets/m11-enchanted-forest/modules/panel/panel-488x660-normal.png",
       "format": "png",
-      "bytes": 131720,
-      "sha256": "fcad2900f45f0c8b9815e95d4e4cb858d4144c1d7a16611562c5a24857a25373"
+      "bytes": 278885,
+      "sha256": "f414f5b80268fba78ef7a6a45b065d466e0c26461dbbbc65b2d4e196af0aa80a"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x760-normal:svg",
@@ -38,8 +38,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/panel-488x760-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/panel/panel-488x760-normal.svg",
       "format": "svg",
-      "bytes": 19775,
-      "sha256": "106a1df2d2077241f9b7ffdf1b1f64e624feb068a5418dff1071b3b04b532450"
+      "bytes": 16396,
+      "sha256": "91325effc33434270bc37196e42e101d8181b01e301f5611446439c88c51b223"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:panel-488x760-normal:png",
@@ -47,8 +47,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/panel-488x760-normal.png",
       "path": "assets/m11-enchanted-forest/modules/panel/panel-488x760-normal.png",
       "format": "png",
-      "bytes": 142749,
-      "sha256": "0d70ef9f27a22f645ec2fbe1ae43abae65261f9e757c4b5819571506c5904cb9"
+      "bytes": 304178,
+      "sha256": "139ca1eadc20f1c5036ed55301b1527458a29e5b47264c65c2aab543ab2e9af5"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-normal:svg",
@@ -56,8 +56,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-320x68-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-320x68-normal.svg",
       "format": "svg",
-      "bytes": 13741,
-      "sha256": "c35c9f72b61b4b98aa66edfe6807d7c05b3413be0bd0909188d400beaf2f7c0f"
+      "bytes": 10764,
+      "sha256": "f76df2452a6b32405fba262572c85ef79af5b94d52c355c7d8d3654a43edf38b"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-normal:png",
@@ -65,8 +65,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-320x68-normal.png",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-320x68-normal.png",
       "format": "png",
-      "bytes": 47526,
-      "sha256": "ae641659981166077131e43ec73e1c9b65822e1d8e5409fec25d0a9eaa20a41f"
+      "bytes": 24834,
+      "sha256": "50f5f32eae40a8c06a9c7f580900ba0503b8543ae37a54dbc41e4cc774948df7"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-pressed:svg",
@@ -74,8 +74,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-320x68-pressed.svg",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-320x68-pressed.svg",
       "format": "svg",
-      "bytes": 13768,
-      "sha256": "96247b2c5a346f27038e382a0187a55d6df8130cd3ecb845930a45a9bcbcf75a"
+      "bytes": 10796,
+      "sha256": "2ca4f9838cf681dd55760f3a91bce0d4980a0c6189f188351162718b07a67677"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-pressed:png",
@@ -83,8 +83,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-320x68-pressed.png",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-320x68-pressed.png",
       "format": "png",
-      "bytes": 46482,
-      "sha256": "6e86fc2896482c276a07cea1e846b38ee8bce2c5f24e3be614b11dfaed1970cb"
+      "bytes": 24108,
+      "sha256": "f29810cb67d3c19446ddc3fd9cba54fde4dc42ac41399e39997979ae46fe6a49"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-disabled:svg",
@@ -92,8 +92,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-320x68-disabled.svg",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-320x68-disabled.svg",
       "format": "svg",
-      "bytes": 13798,
-      "sha256": "4c8c29a830ccd31bbb8426ce1381abbbc04a4798e85b04e4d8b8ca7d292b6c35"
+      "bytes": 10820,
+      "sha256": "5ffbeb8b6a76bfd407a25793e361d115953d097a30a49b1615503a0da0a962ae"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-320x68-disabled:png",
@@ -101,8 +101,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-320x68-disabled.png",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-320x68-disabled.png",
       "format": "png",
-      "bytes": 39957,
-      "sha256": "e9083109053c6bf97e62f7d64863ed6c43541475b088086acf6f6f984c2e87e2"
+      "bytes": 21768,
+      "sha256": "7c87629c07a346c46cffd63f249458a6c8d05588bd06dfcb36906682a2cb56c0"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-normal:svg",
@@ -110,8 +110,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-260x62-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-260x62-normal.svg",
       "format": "svg",
-      "bytes": 13466,
-      "sha256": "a1246a51c1fe8417aca4a0f7029bab5d9925be6886b92d06e42dc1290618e8eb"
+      "bytes": 10737,
+      "sha256": "8991007f6e7202abc4fd5c30f0386245bce0ce72802a38171e7d6f2050efb628"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-normal:png",
@@ -119,8 +119,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-260x62-normal.png",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-260x62-normal.png",
       "format": "png",
-      "bytes": 40650,
-      "sha256": "193875adf896ce5492f0fc91e4f36f0c0b9f37a69a99a72f621aa57176abfad6"
+      "bytes": 21010,
+      "sha256": "f271bb56610b8434226664b80e6919eea46d21e7b5397b6f633fdc05844b6647"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-pressed:svg",
@@ -128,8 +128,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-260x62-pressed.svg",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-260x62-pressed.svg",
       "format": "svg",
-      "bytes": 13493,
-      "sha256": "fea59c75e2563ace7b21fd43a8c394fa2cf11dcaafeec77c18cea33bb6b723f4"
+      "bytes": 10769,
+      "sha256": "47ced754717e698ac7eeac447639d79e75b4eb1f066ff2213f3e441f60c13b68"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-pressed:png",
@@ -137,8 +137,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-260x62-pressed.png",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-260x62-pressed.png",
       "format": "png",
-      "bytes": 39887,
-      "sha256": "52e137a4772b8c6b712b38fbd49345c287e1908112e6bf25613464f8c5c2041d"
+      "bytes": 20379,
+      "sha256": "f449d98ad199c6519835a65aa17ae8d2e36e343eea788868ad6d4e49161983cf"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-disabled:svg",
@@ -146,8 +146,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-260x62-disabled.svg",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-260x62-disabled.svg",
       "format": "svg",
-      "bytes": 13523,
-      "sha256": "cdfa80a2eb76a3b7ad2536b21c73a45130aeac4d867f1c89f8acf5fe4b079730"
+      "bytes": 10793,
+      "sha256": "6842bffade882b1e04d05b214b010a89cc6a82a2d3b32597a09a3178ab4b48f9"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:primary-hex-button-260x62-disabled:png",
@@ -155,8 +155,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/primary-hex-button-260x62-disabled.png",
       "path": "assets/m11-enchanted-forest/modules/primary-hex-button/primary-hex-button-260x62-disabled.png",
       "format": "png",
-      "bytes": 34043,
-      "sha256": "e5b52c7c6fa41611dffd2691f3527fe45fedfa0cc3df8cffd880080ff9dfb6f1"
+      "bytes": 18712,
+      "sha256": "e60609cacd4252e6062e5aaa74c7de13738629db490feb390870d5906c7948bf"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-normal:svg",
@@ -164,8 +164,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-232x56-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-232x56-normal.svg",
       "format": "svg",
-      "bytes": 13953,
-      "sha256": "365b96a4170d55290742125c8b1bd13371f911753f60e9e96a1a6a0fde1f5f80"
+      "bytes": 9985,
+      "sha256": "9aca87be3cee6be2f5ce65f5e6998a2d9866c2139146899f3d75fe08f0123383"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-normal:png",
@@ -173,8 +173,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-232x56-normal.png",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-232x56-normal.png",
       "format": "png",
-      "bytes": 33234,
-      "sha256": "faad341aa5d73f2b4ca2c7e682e0dad36b9cb3d27f9b3894689f0faa12285474"
+      "bytes": 13276,
+      "sha256": "10218bbc61bb0e5c00ca51579280fe860372c26e27ddd0e1614834f470ec4a5e"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-pressed:svg",
@@ -182,8 +182,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-232x56-pressed.svg",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-232x56-pressed.svg",
       "format": "svg",
-      "bytes": 13980,
-      "sha256": "47cc10ac87c76ac29100fb0b6a7226fd23ab81c1c11f4986552b01ee5471bb9d"
+      "bytes": 10017,
+      "sha256": "52bbbff3a460aaa98c1ea99a30eafc423f370b698408c3ad3bb4fa7500070e1f"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-pressed:png",
@@ -191,8 +191,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-232x56-pressed.png",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-232x56-pressed.png",
       "format": "png",
-      "bytes": 32793,
-      "sha256": "ca329a50813f47ef312a05e6be54ffc8e89282e08627ca9c134fa37c436181d1"
+      "bytes": 12941,
+      "sha256": "0339f090bbc9176d0a873c2ae3e622dd4b79a312cbe0b9859959ef92befe0b4b"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-disabled:svg",
@@ -200,8 +200,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-232x56-disabled.svg",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-232x56-disabled.svg",
       "format": "svg",
-      "bytes": 14010,
-      "sha256": "a0facd6c056a3e5628093f7e42690e8a27d77d37f79000f3dc061c1bb82a4f4b"
+      "bytes": 10041,
+      "sha256": "17c587b6ca8a3f86e5aabfcf5c4885026f4a39e505eab6f2a174f4ebf6bec661"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-232x56-disabled:png",
@@ -209,8 +209,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-232x56-disabled.png",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-232x56-disabled.png",
       "format": "png",
-      "bytes": 28099,
-      "sha256": "67af4715934af072f6c7d78b6fccadfcfb3928b20176bb4f0eaab56fa9d842ca"
+      "bytes": 11887,
+      "sha256": "a3ef7dfec457f3741f073b2e11ade7d6d791fe2728062bf7824461516a8dcb7d"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-normal:svg",
@@ -218,8 +218,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-188x52-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-188x52-normal.svg",
       "format": "svg",
-      "bytes": 13899,
-      "sha256": "0da9821a397d62b1a651a9e514dfce54cc9b027d8fb775ad1059d5f7a9658580"
+      "bytes": 9884,
+      "sha256": "cc4c725022faf05ce63cb0fb7b19158509941991616aa9be7450b39d7e11d35e"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-normal:png",
@@ -227,8 +227,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-188x52-normal.png",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-188x52-normal.png",
       "format": "png",
-      "bytes": 28659,
-      "sha256": "dabd7ae86c0c4bda3afa3339ed0fb2866a8400eb502041ec8f175115f71a56e2"
+      "bytes": 10617,
+      "sha256": "17d3f0cd0d417ca44da4e26e5e11f262c8f5a2ac75057ca0f3c558104e5c7c5c"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-pressed:svg",
@@ -236,8 +236,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-188x52-pressed.svg",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-188x52-pressed.svg",
       "format": "svg",
-      "bytes": 13926,
-      "sha256": "d9837bc5737581a1be1e665fa93c11dbcb42ca9f0cb7ef7c11b7f2a3a403ac60"
+      "bytes": 9916,
+      "sha256": "de89742346bf2e10d59579feb790fb7ae4b8bfe12aeec431642005781867c0f0"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-pressed:png",
@@ -245,8 +245,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-188x52-pressed.png",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-188x52-pressed.png",
       "format": "png",
-      "bytes": 28304,
-      "sha256": "a56fee29deb8952bfeac5f62724204cad6b070c2c920adf9e860736543956eac"
+      "bytes": 10375,
+      "sha256": "819565b4b7be0ecc86b4b24b221c0ed127aa34cecc74e1336f2e34c385a8c64c"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-disabled:svg",
@@ -254,8 +254,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-188x52-disabled.svg",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-188x52-disabled.svg",
       "format": "svg",
-      "bytes": 13956,
-      "sha256": "6827899d5183bd241eafd5a97ad74f6002e0475e2e79566e3ac2c9f6bd2a31a4"
+      "bytes": 9940,
+      "sha256": "02cc5c62239e354bba4bcb9054cd731f40a46d586a21276531e13e82a60559ca"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:secondary-hex-button-188x52-disabled:png",
@@ -263,8 +263,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/secondary-hex-button-188x52-disabled.png",
       "path": "assets/m11-enchanted-forest/modules/secondary-hex-button/secondary-hex-button-188x52-disabled.png",
       "format": "png",
-      "bytes": 23751,
-      "sha256": "1afd6438fe7d897dd473b36079ea474bfecdef56f021680e4cc334093f38cb10"
+      "bytes": 9741,
+      "sha256": "eb346394f43084aa54c015c02f63fd7255b58e1a7a79df7bff1c3306164c408f"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:tab-148x52-normal:svg",
@@ -272,8 +272,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/tab-148x52-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/tab/tab-148x52-normal.svg",
       "format": "svg",
-      "bytes": 12826,
-      "sha256": "38bae63af10d1a64b778f83032647e1c5582b38908c151f831967f8bbcd571a7"
+      "bytes": 9327,
+      "sha256": "b72bc295b3f6398f2de197a4a0b243418607b57cc39749926a58a4d370b442bf"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:tab-148x52-normal:png",
@@ -281,8 +281,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/tab-148x52-normal.png",
       "path": "assets/m11-enchanted-forest/modules/tab/tab-148x52-normal.png",
       "format": "png",
-      "bytes": 24605,
-      "sha256": "1051dc4b52c4ff311f6b82f6a2f5cd4ca33d6f0a8ca8f3d752a9d0ddaf86136c"
+      "bytes": 9376,
+      "sha256": "099b190554af66fd677601222cbec6639a7bb9c608c264f114a70c0ee1a8be1c"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:tab-184x52-selected:svg",
@@ -290,8 +290,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/tab-184x52-selected.svg",
       "path": "assets/m11-enchanted-forest/modules/tab/tab-184x52-selected.svg",
       "format": "svg",
-      "bytes": 12874,
-      "sha256": "6c6724d8a461ba01f5c100a959be6a94a4d4c4c808a146e045bd8f718c7dc43c"
+      "bytes": 9318,
+      "sha256": "83e34d867e20f8b1ebdcdd250fb124303f8ea9b4066fc32784f228775dd80486"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:tab-184x52-selected:png",
@@ -299,8 +299,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/tab-184x52-selected.png",
       "path": "assets/m11-enchanted-forest/modules/tab/tab-184x52-selected.png",
       "format": "png",
-      "bytes": 28045,
-      "sha256": "72e22554f74bfab46aa77ef82369a1cf9c1d4c4fea1366e4c87714910a684e91"
+      "bytes": 11523,
+      "sha256": "89e19e5dc42013ac1a5319538c252c1d6742a6d8ee6427d51283f1ac79a0f2d7"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:badge-164x48-normal:svg",
@@ -308,8 +308,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/badge-164x48-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/badge/badge-164x48-normal.svg",
       "format": "svg",
-      "bytes": 13454,
-      "sha256": "356ff90a2273e4652511ba35c089fca33a69cc180f9458d4e0e492f6044b3dd2"
+      "bytes": 9358,
+      "sha256": "da9a8d6ff68c69c8447f95d99a7d206fadb85e68e09ea272a77ee4a2f61a6a57"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:badge-164x48-normal:png",
@@ -317,8 +317,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/badge-164x48-normal.png",
       "path": "assets/m11-enchanted-forest/modules/badge/badge-164x48-normal.png",
       "format": "png",
-      "bytes": 24581,
-      "sha256": "1cab152bd9c621834de1d21749a351653c069c3e38580514b2991d2a75984f79"
+      "bytes": 9980,
+      "sha256": "fd2eed8ab6f59ad0fb1233b747b2a6a4fcc0764af133a36d4a5913ce5ef4bf49"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:badge-212x48-highlighted:svg",
@@ -326,8 +326,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/badge-212x48-highlighted.svg",
       "path": "assets/m11-enchanted-forest/modules/badge/badge-212x48-highlighted.svg",
       "format": "svg",
-      "bytes": 13495,
-      "sha256": "86804d27089902a07eb19dd89e43754f7dd828ae05e03a071f033708d954e042"
+      "bytes": 9548,
+      "sha256": "e28fbac23131407e5a57952f44c4395e6a0862b7611ecd3e2dcd3473439a461b"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:badge-212x48-highlighted:png",
@@ -335,8 +335,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/badge-212x48-highlighted.png",
       "path": "assets/m11-enchanted-forest/modules/badge/badge-212x48-highlighted.png",
       "format": "png",
-      "bytes": 28584,
-      "sha256": "8d9e629fa679c2280a0842a782be674f27d0c33b5f61933efd9ca9be77497246"
+      "bytes": 12293,
+      "sha256": "6145ca11d0f0d4e0122ff0779064bd371fb4cbfd4fec449a8d5bb80bf5c4ba75"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:icon-container-92x92-normal:svg",
@@ -344,8 +344,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/icon-container-92x92-normal.svg",
       "path": "assets/m11-enchanted-forest/modules/icon-container/icon-container-92x92-normal.svg",
       "format": "svg",
-      "bytes": 15929,
-      "sha256": "58376417d732fa09edc6e762b22239536513c351126adbe1af2836eb4f1329b6"
+      "bytes": 12572,
+      "sha256": "f4953576bcfd8bd546db4506cabca797afb96ca4a8db2780b61192fbafc58dfa"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:icon-container-92x92-normal:png",
@@ -353,8 +353,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/icon-container-92x92-normal.png",
       "path": "assets/m11-enchanted-forest/modules/icon-container/icon-container-92x92-normal.png",
       "format": "png",
-      "bytes": 30250,
-      "sha256": "86e562424842060c65af60536cb458d7cb397ad4c9e526e78f7ce37c994ce8c3"
+      "bytes": 20525,
+      "sha256": "4220e8662cd03f4d91d0705339e4b33818d058328e27a283c4254bc76ef52100"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:icon-container-116x116-selected:svg",
@@ -362,8 +362,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/icon-container-116x116-selected.svg",
       "path": "assets/m11-enchanted-forest/modules/icon-container/icon-container-116x116-selected.svg",
       "format": "svg",
-      "bytes": 16380,
-      "sha256": "8cf554282c6e5e54e3402036195008d00f809af40fac76c2dd5c05d54b1b3ffa"
+      "bytes": 12784,
+      "sha256": "5d6f6767cea668e31b74f88825b3a922f94a0d19e3ed2a6103f0736df0263f91"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:icon-container-116x116-selected:png",
@@ -371,8 +371,8 @@
       "source": "docs/validation/evidence/m11-enchanted-forest/matrix/icon-container-116x116-selected.png",
       "path": "assets/m11-enchanted-forest/modules/icon-container/icon-container-116x116-selected.png",
       "format": "png",
-      "bytes": 43084,
-      "sha256": "bde92cb6324d789d57949caa922d504015987563bf88d3dd278acc35584259dc"
+      "bytes": 27750,
+      "sha256": "2a40f46b3b1630f30ca2db11a2b89db39272f6d215c00ee37ecf86709c26bbd5"
     },
     {
       "assetId": "lnh-prism:asset:m11-enchanted-forest:progress-344x28-10:svg",

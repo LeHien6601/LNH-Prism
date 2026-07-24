@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { renderStyledComponentSvg, renderStyledProgressSvg } from "../../dist/renderer/style-composition.js";
-import { M11_ENCHANTED_FOREST_BINDING, renderM11LivingFocalSvg, renderM11MaterialClusterSvg } from "../../dist/styles/m11-enchanted-forest-binding.js";
+import { M11_ENCHANTED_FOREST_BINDING, M11_ENCHANTED_FOREST_DENSITY_BUDGETS, M11_ENCHANTED_FOREST_STATE_RECIPES, renderM11LivingFocalSvg, renderM11MaterialClusterSvg } from "../../dist/styles/m11-enchanted-forest-binding.js";
 
 test("M11 renders required shared-template states without obscuring semantic layers", () => {
   for (const state of ["normal", "pressed", "disabled"]) {
@@ -14,24 +14,25 @@ test("M11 renders required shared-template states without obscuring semantic lay
   const panel = renderStyledComponentSvg({ component: "panel", width: 488, height: 660, state: "normal", variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
   assert.match(panel, /data-layer="forest-material-stack"/);
   assert.match(panel, /data-material-families="weathered-stone,dark-wood,moss-lichen"/);
-  assert.match(panel, /data-layer="forest-material-detail"/);
-  assert.match(panel, /data-material-channels="stone-chips,wood-grain,moss-mask"/);
-  assert.match(panel, /data-layer="forest-material-face-depth"/);
-  assert.match(panel, /data-layer="forest-weathered-stone"/);
-  assert.match(panel, /data-layer="forest-dark-wood-grain"/);
-  assert.match(panel, /data-layer="forest-moss-growth-mask"/);
-  assert.match(panel, /data-layer="forest-material-restraint"/);
-  assert.match(panel, /data-restraint="edge-anchored-low-opacity"/);
   assert.match(panel, /data-layer="forest-integrated-material-regions"/);
-  assert.match(panel, /data-integration="edge-anchored-connected"/);
+  assert.match(panel, /data-integration="construction-profile-connected"/);
   assert.match(panel, /data-layer="forest-stone-surface-region"/);
+  assert.match(panel, /data-layer="forest-stone-contact-occlusion"/);
+  assert.match(panel, /data-layer="forest-stone-fracture-field"/);
   assert.match(panel, /data-layer="forest-wood-surface-region"/);
+  assert.match(panel, /data-layer="forest-wood-growth-body"/);
+  assert.match(panel, /data-layer="forest-wood-relief-bands"/);
   assert.match(panel, /data-layer="forest-moss-surface-region"/);
+  assert.match(panel, /data-layer="forest-moss-substrate"/);
+  assert.match(panel, /data-layer="forest-moss-coverage-transition"/);
   assert.match(panel, /data-layer="forest-living-light-surface-response"/);
+  assert.match(panel, /data-layer="forest-stone-light-receiver"/);
+  assert.match(panel, /data-layer="forest-wood-light-receiver"/);
+  assert.match(panel, /data-layer="forest-moss-light-receiver"/);
   assert.match(panel, /data-layer="forest-authored-material-clusters"/);
   assert.match(panel, /data-material-families="stone,wood,moss"/);
   assert.match(panel, /data-cluster-scale="component"/);
-  assert.match(panel, /data-placement="component-aware"/);
+  assert.match(panel, /data-placement="construction-anchor-budgeted"/);
   assert.match(panel, /data-layer="forest-stone-chip-cluster"/);
   assert.match(panel, /data-layer="forest-wood-knot-cluster"/);
   assert.match(panel, /data-layer="forest-moss-lichen-cluster"/);
@@ -47,12 +48,43 @@ test("M11 renders required shared-template states without obscuring semantic lay
 });
 
 test("M11 living focal helper preserves editable seed, support, roots, and light interaction", () => {
-  const focal = renderM11LivingFocalSvg("icon-container", 58, 58, 22);
+  const focal = renderM11LivingFocalSvg("icon-container", 58, 58, 22, "selected");
   assert.match(focal, /data-layer="luminous-seed-focal"/);
   assert.match(focal, /data-layer="forest-focal-support"/);
   assert.match(focal, /data-layer="forest-focal-roots"/);
   assert.match(focal, /data-layer="forest-focal-light-interaction"/);
+  assert.match(focal, /data-focal-state="selected"/);
+  assert.match(focal, /data-emitter-opacity="0.38"/);
   assert.doesNotMatch(focal, /<image\b/);
+});
+
+test("M11 component-class budgets reduce compact density and keep progress quiet", () => {
+  assert.ok(M11_ENCHANTED_FOREST_DENSITY_BUDGETS.panel.clusters > M11_ENCHANTED_FOREST_DENSITY_BUDGETS["primary-hex-button"].clusters);
+  assert.ok(M11_ENCHANTED_FOREST_DENSITY_BUDGETS["primary-hex-button"].clusters > M11_ENCHANTED_FOREST_DENSITY_BUDGETS.tab.clusters);
+  const panel = renderStyledComponentSvg({ component: "panel", width: 488, height: 660, state: "normal", variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
+  const primary = renderStyledComponentSvg({ component: "primary-hex-button", width: 320, height: 68, state: "normal", variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
+  const tab = renderStyledComponentSvg({ component: "tab", width: 184, height: 52, state: "selected", variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
+  const progress = renderStyledProgressSvg({ component: "progress", width: 420, height: 28, percent: 90, variationSeed: 51731 }, M11_ENCHANTED_FOREST_BINDING);
+  assert.match(panel, /data-cluster-budget="5"/);
+  assert.match(primary, /data-cluster-budget="2"/);
+  assert.match(tab, /data-cluster-budget="1"/);
+  assert.doesNotMatch(progress, /forest-authored-material-clusters|forest-ornament/);
+});
+
+test("M11 states drive named receivers instead of a global opacity change", () => {
+  const request = { component: "primary-hex-button", width: 320, height: 68, variationSeed: 51731 };
+  const normal = renderStyledComponentSvg({ ...request, state: "normal" }, M11_ENCHANTED_FOREST_BINDING);
+  const pressed = renderStyledComponentSvg({ ...request, state: "pressed" }, M11_ENCHANTED_FOREST_BINDING);
+  const disabled = renderStyledComponentSvg({ ...request, state: "disabled" }, M11_ENCHANTED_FOREST_BINDING);
+  assert.match(normal, new RegExp(`data-receiver-opacity="${M11_ENCHANTED_FOREST_STATE_RECIPES.normal.receiver}"`));
+  assert.match(pressed, new RegExp(`data-receiver-opacity="${M11_ENCHANTED_FOREST_STATE_RECIPES.pressed.receiver}"`));
+  assert.match(disabled, new RegExp(`data-receiver-opacity="${M11_ENCHANTED_FOREST_STATE_RECIPES.disabled.receiver}"`));
+  for (const svg of [normal, pressed, disabled]) {
+    assert.match(svg, /data-layer="forest-wood-light-receiver"/);
+    assert.match(svg, /data-layer="forest-edge-light-receiver"/);
+  }
+  assert.notEqual(normal, pressed);
+  assert.notEqual(normal, disabled);
 });
 
 test("M11 authored material clusters are deterministic, seed-varying, and absent at baseline", () => {
