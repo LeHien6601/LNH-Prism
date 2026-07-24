@@ -21,8 +21,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | ⚪ **M11 — Enchanted Forest third-style contrast** |
-| Next task | 🤖 **Author connected multi-scale Enchanted Forest plate interiors (M11-R025)** · Agent |
-| Next agent-ready task | M11-R025 — replace the repeated single-chip plate rhythm with bounded seeded tonal planes, irregular inner-bevel breaks, localized pits/chips, and join-following contact darkening |
+| Next task | 🧭 **Re-review connected multi-scale Enchanted Forest plate interiors (M11-R026 / V11 re-review)** · Product + Art + UI + Technical leads |
+| Next agent-ready task | None — M11-R026 is a human decision gate |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -57,7 +57,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| ⚪ | M11 | Enchanted Forest third-style contrast | 🔴 M11-R024 review failed at `62/100`; M11-R025 connected multi-scale plate interiors are next |
+| ⚪ | M11 | Enchanted Forest third-style contrast | 🟡 M11-R025 connected multi-scale plate interiors complete; M11-R026 / V11 re-review is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -194,7 +194,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Re-review Enchanted Forest weathered plate depth (M11-R022 / V11 re-review) | ?? Product + ?? Art + ? UI + ??? Technical leads | ?? Complete — failed | Authorized automated review passed technical gates but scored 62/100; V11-B012 requires weathered plate interiors |
 | P0 | Deepen Enchanted Forest weathered plate interiors (M11-R023) | 🤖 Agent | 🟢 Complete | Added six independently clipped, seeded plate-interior treatments with localized stone chips, tonal bevel islands, and contact darkening; preserved the zero baseline, shared seam, compact controls, and approved boundaries; regenerated 26-entry/52-module evidence |
 | P0 | Re-review Enchanted Forest weathered plate interiors (M11-R024 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟢 Complete — failed | Authorized automated review passed the technical hard gate and all visual minima but scored `62/100`; `V11-B013` requires integrated plate-surface authorship |
-| P0 | Author connected multi-scale Enchanted Forest plate interiors (M11-R025) | 🤖 Agent | 🔵 Agent-ready | Give all six plates coherent seeded tonal-plane structure, irregular inner-bevel breaks, localized pits/chips, and join-following contact darkening while preserving the zero baseline and approved boundaries |
+| P0 | Author connected multi-scale Enchanted Forest plate interiors (M11-R025) | 🤖 Agent | 🟢 Complete | All six plates now own coherent seeded tonal-plane structure, irregular inner-bevel breaks, localized multi-scale pits/chips, and join-following contact darkening; the zero baseline, compact controls, shared seam, semantic slots, state evidence, and reference isolation remain intact |
+| P0 | Re-review connected multi-scale Enchanted Forest plate interiors (M11-R026 / V11 re-review) | 🧭 Product + 🎨 Art + ✦ UI + 🛠️ Technical leads | 🟡 Human decision | Apply the approved V11 rubric to the regenerated R025 evidence at source, target-phone, construction-isolate, and thumbnail distances |
 | P0 | Require export-manifest provenance at the contract root | 🤖 Agent | 🟢 Complete | Schema and canonical example require a full provenance receipt; a negative contract test rejects omission; all renderer manifests remain valid |
 
 ## 6. Decision register
@@ -387,3 +388,5 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | 2026-07-24 | Completed M11-R023: added deterministic clipped interior treatment to all six panel plates, preserved the zero baseline and approved shared boundaries, and regenerated the validated 26-entry/52-module evidence package; M11-R024 / V11 re-review is next | Codex |
 
 | 2026-07-24 | Applied M11-R024 authorized automated review: technical gates and visual minima passed, but V11 remained failed at `62/100`; `V11-B013` opens M11-R025 connected multi-scale plate-interior remediation | Project owner / Codex |
+
+| 2026-07-24 | Completed M11-R025: replaced the repeated single-chip plate rhythm with independently clipped connected tonal planes, irregular inner-bevel breaks, localized multi-scale pits/chips, and join-following contact darkening across all six panel plates; regenerated and validated the 26-entry/52-module package; M11-R026 / V11 re-review is next | Codex |

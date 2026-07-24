@@ -19,9 +19,12 @@ test("M11 renders required shared-template states without obscuring semantic lay
   assert.match(panel, /data-layer="forest-stone-surface-region"/);
   assert.equal((panel.match(/ZM0/g) ?? []).length >= 2, true, "panel stone rail uses separated plate paths");
   assert.equal((panel.match(/data-layer="forest-stone-plate-interior"/g) ?? []).length, 6, "each panel plate owns an interior treatment");
-  assert.equal((panel.match(/data-layer="forest-stone-plate-chip"/g) ?? []).length, 6);
-  assert.equal((panel.match(/data-layer="forest-stone-tonal-bevel-island"/g) ?? []).length, 6);
+  assert.equal((panel.match(/data-layer="forest-stone-connected-tonal-plane"/g) ?? []).length, 18, "each plate owns three connected tonal planes");
+  assert.equal((panel.match(/data-layer="forest-stone-plate-chip"/g) ?? []).length, 12, "each plate owns primary and secondary chip scales");
+  assert.equal((panel.match(/data-layer="forest-stone-plate-pit"/g) ?? []).length, 18, "each plate owns localized pits");
   assert.equal((panel.match(/data-layer="forest-stone-plate-contact-darkening"/g) ?? []).length, 6);
+  assert.equal((panel.match(/data-layer="forest-stone-irregular-inner-bevel-break"/g) ?? []).length, 6);
+  assert.equal((panel.match(/data-join-following="true"/g) ?? []).length, 6);
   assert.match(panel, /data-layer="forest-stone-contact-occlusion"/);
   assert.match(panel, /data-layer="forest-stone-fracture-field"/);
   assert.match(panel, /data-layer="forest-wood-surface-region"/);
