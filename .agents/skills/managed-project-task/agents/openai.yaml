@@ -1,0 +1,4 @@
+interface:
+  display_name: "managed-project-task"
+  short_description: "LNH Prism managed-project-task workflow"
+  default_prompt: "Use this skill for LNH Prism managed-project-task work."

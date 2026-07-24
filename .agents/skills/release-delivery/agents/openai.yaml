@@ -1,0 +1,4 @@
+interface:
+  display_name: "release-delivery"
+  short_description: "LNH Prism release-delivery workflow"
+  default_prompt: "Use this skill for LNH Prism release-delivery work."

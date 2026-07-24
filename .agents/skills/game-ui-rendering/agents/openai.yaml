@@ -1,0 +1,4 @@
+interface:
+  display_name: "game-ui-rendering"
+  short_description: "LNH Prism game-ui-rendering workflow"
+  default_prompt: "Use this skill for LNH Prism game-ui-rendering work."

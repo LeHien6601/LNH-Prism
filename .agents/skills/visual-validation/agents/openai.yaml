@@ -1,0 +1,4 @@
+interface:
+  display_name: "visual-validation"
+  short_description: "LNH Prism visual-validation workflow"
+  default_prompt: "Use this skill for LNH Prism visual-validation work."

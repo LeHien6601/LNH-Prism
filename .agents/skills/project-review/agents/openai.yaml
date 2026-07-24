@@ -1,0 +1,4 @@
+interface:
+  display_name: "project-review"
+  short_description: "LNH Prism project-review workflow"
+  default_prompt: "Use this skill for LNH Prism project-review work."

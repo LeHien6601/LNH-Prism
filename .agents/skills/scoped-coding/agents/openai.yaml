@@ -1,0 +1,4 @@
+interface:
+  display_name: "scoped-coding"
+  short_description: "LNH Prism scoped-coding workflow"
+  default_prompt: "Use this skill for LNH Prism scoped-coding work."

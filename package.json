@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "agent:brief": "node scripts/agent-brief.mjs",
     "build:renderer": "tsc --project tsconfig.json",
     "prepare:showcase": "npm run build:renderer && node scripts/prepare-showcase.mjs",
     "render:primary-button": "npm run build:renderer && node dist/renderer/primary-button-cli.js",
