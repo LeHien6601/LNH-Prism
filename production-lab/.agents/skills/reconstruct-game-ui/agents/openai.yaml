@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reconstruct Game UI"
+  short_description: "Turn screenshots into editable game UI assets"
+  default_prompt: "Use $reconstruct-game-ui to process this screenshot or production-lab job into editable components and a matching screen."

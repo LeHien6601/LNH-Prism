@@ -1,0 +1,442 @@
+{
+  "schemaVersion": 1,
+  "projectId": "block-forge",
+  "jobId": "block-forge-puzzle-board",
+  "canvas": {
+    "width": 1024,
+    "height": 1536
+  },
+  "observations": [],
+  "tokens": {
+    "background": "#18120d"
+  },
+  "components": [],
+  "componentFamilies": [
+    {
+      "id": "puzzle-board",
+      "role": "puzzle-grid",
+      "bounds": {
+        "x": 192,
+        "y": 320,
+        "width": 640,
+        "height": 640
+      },
+      "nativeSize": {
+        "width": 640,
+        "height": 640
+      },
+      "allowedResize": "uniform",
+      "effectPadding": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "contentSafeRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 640,
+        "height": 640
+      },
+      "baseLayers": [
+        {
+          "id": "board-surface",
+          "kind": "rect",
+          "x": 0,
+          "y": 0,
+          "width": 640,
+          "height": 640,
+          "radius": 8,
+          "fill": "#6b4a2d"
+        }
+      ],
+      "textSlots": [],
+      "iconSlots": [],
+      "states": [
+        {
+          "id": "normal",
+          "layerOverrides": []
+        },
+        {
+          "id": "completed",
+          "layerOverrides": [
+            {
+              "layerId": "board-surface",
+              "properties": {
+                "stroke": "#f4c95d",
+                "strokeWidth": 6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "puzzle-unit",
+      "role": "puzzle-piece-unit",
+      "bounds": {
+        "x": 192,
+        "y": 224,
+        "width": 80,
+        "height": 80
+      },
+      "nativeSize": {
+        "width": 80,
+        "height": 80
+      },
+      "allowedResize": "none",
+      "effectPadding": {
+        "top": 4,
+        "right": 4,
+        "bottom": 4,
+        "left": 4
+      },
+      "contentSafeRegion": {
+        "x": 8,
+        "y": 8,
+        "width": 64,
+        "height": 64
+      },
+      "baseLayers": [
+        {
+          "id": "unit-face",
+          "kind": "rect",
+          "x": 0,
+          "y": 0,
+          "width": 80,
+          "height": 80,
+          "radius": 6,
+          "fill": "#9a642f"
+        }
+      ],
+      "textSlots": [],
+      "iconSlots": [],
+      "states": [
+        {
+          "id": "normal",
+          "layerOverrides": []
+        },
+        {
+          "id": "valid",
+          "layerOverrides": [
+            {
+              "layerId": "unit-face",
+              "properties": {
+                "stroke": "#76d672",
+                "strokeWidth": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "invalid",
+          "layerOverrides": [
+            {
+              "layerId": "unit-face",
+              "properties": {
+                "stroke": "#df5b43",
+                "strokeWidth": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bridge",
+      "role": "repair-target",
+      "bounds": {
+        "x": 192,
+        "y": 1016,
+        "width": 640,
+        "height": 160
+      },
+      "nativeSize": {
+        "width": 640,
+        "height": 160
+      },
+      "anchor": {
+        "x": 320,
+        "y": 80
+      },
+      "allowedResize": "uniform",
+      "effectPadding": {
+        "top": 20,
+        "right": 20,
+        "bottom": 24,
+        "left": 20
+      },
+      "contentSafeRegion": {
+        "x": 40,
+        "y": 24,
+        "width": 560,
+        "height": 112
+      },
+      "baseLayers": [
+        {
+          "id": "bridge-deck",
+          "kind": "rect",
+          "x": 0,
+          "y": 24,
+          "width": 640,
+          "height": 112,
+          "radius": 12,
+          "fill": "#704523"
+        },
+        {
+          "id": "condition-mark",
+          "kind": "path",
+          "d": "M 240 24 L 320 136 L 400 24",
+          "fill": "none",
+          "stroke": "#2a160d",
+          "strokeWidth": 12
+        }
+      ],
+      "textSlots": [],
+      "iconSlots": [
+        {
+          "id": "repair-symbol",
+          "bounds": {
+            "x": 280,
+            "y": 48,
+            "width": 80,
+            "height": 64
+          }
+        }
+      ],
+      "states": [
+        {
+          "id": "broken",
+          "layerOverrides": [
+            {
+              "layerId": "bridge-deck",
+              "properties": {
+                "fill": "#4a2c1b"
+              }
+            }
+          ]
+        },
+        {
+          "id": "damaged",
+          "layerOverrides": [
+            {
+              "layerId": "bridge-deck",
+              "properties": {
+                "fill": "#76502c"
+              }
+            }
+          ]
+        },
+        {
+          "id": "repaired",
+          "layerOverrides": [
+            {
+              "layerId": "condition-mark",
+              "properties": {
+                "stroke": "#d9b35f",
+                "strokeWidth": 8
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "primary-action",
+      "role": "button",
+      "bounds": {
+        "x": 312,
+        "y": 1248,
+        "width": 400,
+        "height": 96
+      },
+      "nativeSize": {
+        "width": 400,
+        "height": 96
+      },
+      "allowedResize": "scalable-region",
+      "effectPadding": {
+        "top": 8,
+        "right": 10,
+        "bottom": 16,
+        "left": 10
+      },
+      "contentSafeRegion": {
+        "x": 72,
+        "y": 20,
+        "width": 256,
+        "height": 56
+      },
+      "baseLayers": [
+        {
+          "id": "button-face",
+          "kind": "rect",
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 96,
+          "radius": 18,
+          "fill": "#b56b2d"
+        },
+        {
+          "id": "button-label",
+          "kind": "text",
+          "x": 200,
+          "y": 61,
+          "fontSize": 32,
+          "textAnchor": "middle",
+          "value": "REPAIR"
+        }
+      ],
+      "textSlots": [
+        {
+          "id": "label",
+          "bounds": {
+            "x": 72,
+            "y": 20,
+            "width": 256,
+            "height": 56
+          },
+          "alignment": "center",
+          "minimumSize": 22,
+          "preferredSize": 32,
+          "wrapping": "none",
+          "singleLine": true,
+          "fallbackFontFamilies": [
+            "Noto Sans",
+            "sans-serif"
+          ],
+          "localizationExpansion": 1.35,
+          "fontProvenance": "Runtime font selected by the consuming project; generated typography is layout evidence only.",
+          "licensingNote": "Consumer must provide a licensed font."
+        }
+      ],
+      "iconSlots": [],
+      "states": [
+        {
+          "id": "normal",
+          "layerOverrides": []
+        },
+        {
+          "id": "pressed",
+          "layerOverrides": [
+            {
+              "layerId": "button-face",
+              "properties": {
+                "fill": "#8e4c24"
+              }
+            }
+          ]
+        },
+        {
+          "id": "disabled",
+          "layerOverrides": [
+            {
+              "layerId": "button-face",
+              "properties": {
+                "fill": "#61564b"
+              }
+            }
+          ]
+        }
+      ],
+      "slicing": {
+        "fixedBorders": {
+          "top": 18,
+          "right": 24,
+          "bottom": 18,
+          "left": 24
+        },
+        "stretchRegion": {
+          "x": 24,
+          "y": 18,
+          "width": 352,
+          "height": 60
+        },
+        "contentSafeRegion": {
+          "x": 72,
+          "y": 20,
+          "width": 256,
+          "height": 56
+        },
+        "minimumWidth": 192,
+        "minimumHeight": 80,
+        "tiling": "stretch"
+      }
+    }
+  ],
+  "geometryConstraints": [
+    {
+      "id": "puzzle-exact-grid",
+      "kind": "square-grid",
+      "familyId": "puzzle-board",
+      "rows": 8,
+      "columns": 8,
+      "cellSize": 80
+    },
+    {
+      "id": "puzzle-fixed-aspect",
+      "kind": "fixed-aspect-ratio",
+      "familyId": "puzzle-board",
+      "ratio": 1
+    },
+    {
+      "id": "puzzle-unit-fixed-size",
+      "kind": "fixed-size",
+      "familyId": "puzzle-unit",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "id": "puzzle-unit-fixed-aspect",
+      "kind": "fixed-aspect-ratio",
+      "familyId": "puzzle-unit",
+      "ratio": 1
+    },
+    {
+      "id": "puzzle-grid-alignment",
+      "kind": "grid-alignment",
+      "familyId": "puzzle-board",
+      "gridSize": 16
+    },
+    {
+      "id": "bridge-state-footprint",
+      "kind": "shared-footprint",
+      "familyId": "bridge",
+      "stateIds": [
+        "broken",
+        "damaged",
+        "repaired"
+      ]
+    },
+    {
+      "id": "bridge-anchor-consistency",
+      "kind": "consistent-anchor",
+      "familyId": "bridge"
+    },
+    {
+      "id": "primary-action-touch-target",
+      "kind": "minimum-touch-target",
+      "familyId": "primary-action",
+      "minimumWidth": 96,
+      "minimumHeight": 88
+    },
+    {
+      "id": "primary-action-safe-area",
+      "kind": "safe-area",
+      "familyId": "primary-action",
+      "bounds": {
+        "x": 64,
+        "y": 96,
+        "width": 896,
+        "height": 1344
+      }
+    }
+  ],
+  "unresolved": [],
+  "policy": {
+    "sourcePixelsInProduction": false,
+    "editableGeometryRequired": true,
+    "humanApprovalRequired": true
+  }
+}

@@ -34,7 +34,9 @@ export async function validateControlDrift({ root = resolve(".") } = {}) {
   if (humanDecision && !overview.includes(next)) throw Error(`Control drift: overview must record that ${next} is awaiting a human decision.`);
   const milestoneRow = overview.split(/\r?\n/u).find(line => line.includes(`| ${milestone} |`));
   if (!milestoneRow || /review pending|human decision pending/iu.test(milestoneRow)) throw Error(`Control drift: active milestone ${milestone} has stale pending status.`);
-  if (!roadmap.includes(`## ⚪ ${milestone}`) && !roadmap.includes(`## 🟢 ${milestone}`)) throw Error(`Control drift: roadmap does not contain active milestone ${milestone}.`);
+  if (!new RegExp(`^##\\s+\\S+\\s+${milestone}\\b`, "mu").test(roadmap)) {
+    throw Error(`Control drift: roadmap does not contain active milestone ${milestone}.`);
+  }
   if (!roadmap.includes(next)) throw Error(`Control drift: roadmap does not reference active task ${next}.`);
 
   const referenceAssets = resolve(docs, "reference-briefs/assets");

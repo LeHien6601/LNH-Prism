@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "jobId": "reward-popup",
+  "referenceSha256": "replace-with-job-reference-hash",
+  "canvas": {
+    "width": 540,
+    "height": 960
+  },
+  "observations": [
+    {
+      "id": "obs-primary-action",
+      "region": [110, 780, 320, 68],
+      "kind": "observation",
+      "confidence": "high",
+      "text": "A centered primary action occupies the lower screen."
+    }
+  ],
+  "tokens": {
+    "background": "#10131c",
+    "primary": "#315be8",
+    "primaryEdge": "#9fb5ff"
+  },
+  "components": [
+    {
+      "id": "primary-action",
+      "role": "button",
+      "bounds": {
+        "x": 110,
+        "y": 780,
+        "width": 320,
+        "height": 68
+      },
+      "layers": [
+        {
+          "id": "outer-border",
+          "kind": "rect",
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 68,
+          "radius": 16,
+          "fill": "#315be8",
+          "stroke": "#9fb5ff",
+          "strokeWidth": 3
+        },
+        {
+          "id": "label-slot",
+          "kind": "text",
+          "x": 160,
+          "y": 43,
+          "value": "CONTINUE",
+          "fill": "#ffffff",
+          "fontFamily": "sans-serif",
+          "fontSize": 22,
+          "textAnchor": "middle"
+        }
+      ]
+    }
+  ],
+  "unresolved": [],
+  "policy": {
+    "sourcePixelsInProduction": false,
+    "editableGeometryRequired": true,
+    "humanApprovalRequired": true
+  }
+}

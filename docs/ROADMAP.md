@@ -274,3 +274,28 @@ M11-R034 authorized automated review passed the technical hard gate and every vi
 M11-R035 completed: sparse seeded asymmetric wood, moss, stone, and receiver cadence now inhabits the existing upper canopy region without changing geometry, components, global lighting, semantic slots, or reference isolation. M11-R036 is next.
 
 M11-R036 authorized automated review passed the technical hard gate and all visual minima at `85/100`; M11 V11 passed.
+
+## 🔵 M12 — Production Lab Block Forge readiness
+
+**Decision:** The project owner authorized the next recommended milestone on
+2026-07-30: advance the supported private Production Lab through bounded,
+engine-neutral Block Forge readiness slices. Unity integration remains deferred.
+
+**M12-A1 — Project and reference registry:** 🟢 Complete. Production Lab
+ownership, package versioning, generic project intake, managed multi-reference
+authority, bounded job creation, deterministic Codex packets, status/audit
+commands, atomic manifests, and Block Forge pilot intake validate.
+
+**M12-A2 — State and geometry constraints:** 🟢 Complete. Component families,
+shared base layers, inherited state overrides, shared footprints, anchors,
+replaceable text/icon slots, effect padding, native size/resize behavior,
+scalable regions, safe areas, touch targets, fixed size/aspect, grid alignment,
+and exact 8x8 square puzzle geometry validate through the canonical Block Forge
+puzzle/bridge/button fixture and machine-readable job report.
+
+**Next agent-ready task:** M12-A3 — deterministic transparent PNG output,
+alpha/effect-padding validation, slicing preview, state comparison, and
+native/phone/thumbnail review surfaces.
+
+**Boundary:** no Unity integration, reference-pixel extraction, autonomous
+approval, promotion, engine packaging, runtime code, or general visual editor.
