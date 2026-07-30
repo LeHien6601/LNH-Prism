@@ -370,11 +370,18 @@ passed dry-run validation, and `small-info-panel`, `medium-modal-panel`, and
 now contains seven promoted families and 41 files with zero audit findings. No
 delivery package was assembled.
 
-**Next agent-ready task:** M12-A6g — register the approved gameplay-state and
-gameplay-main references with bounded authority roles, create the gameplay
-HUD/composition job, reuse promoted shared components where applicable,
-reconstruct editable missing HUD families, generate native/phone/thumbnail
-evidence, and stop for human review.
+**M12-A6g — Gameplay HUD/composition job:** 🟢 Technical preparation complete.
+The approved gameplay main and state references are registered as
+`screen-composition` and `state-authority`. The bounded job references all seven
+promoted component families and adds only `repair-progress-hud`,
+`turn-counter`, and `exit-control`, covering seven inherited states. Native,
+phone, thumbnail, state, isolation, slicing, geometry, and safe-area evidence
+were generated and inspected. The five-reference project audit has zero
+findings.
+
+**Next task:** M12-A6h — Hien reviews the gameplay HUD evidence as Product, Art,
+and UI reviewer. **Human decision:** approve it or return it with a bounded
+reason. No build or promotion is authorized before approval.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.

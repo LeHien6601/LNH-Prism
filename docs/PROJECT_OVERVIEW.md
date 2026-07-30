@@ -35,8 +35,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🤖 **Block Forge gameplay HUD/composition job (M12-A6g)** · Agent-ready |
-| Next agent-ready task | M12-A6g — Register gameplay authorities and reconstruct the bounded HUD/composition job using promoted shared components |
+| Next task | 🧭 **Block Forge gameplay HUD review (M12-A6h)** · Human decision |
+| Next agent-ready task | None until Hien approves or returns the gameplay HUD evidence |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -72,7 +72,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | Seven component families promoted; M12-A6g continues the nine-job pilot |
+| 🔵 | M12 | Production Lab Block Forge readiness | Gameplay HUD reconstruction/evidence complete; M12-A6h is a human decision |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -89,7 +89,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Reconstruct Block Forge button and panel families (M12-A6d) | 🤖 Agent | 🟢 Complete | The job references promoted `primary-action@1.0.0`, adds three editable scalable panel families and six states, and passes three-size technical inspection |
 | P0 | Review Block Forge UI-family evidence (M12-A6e) | 🧭 Hien · Product + Art + UI | 🟢 Approved | Immutable approval receipt is current and hash-valid |
 | P0 | Build and promote approved panel families (M12-A6f) | 🤖 Agent | 🟢 Complete | 12 modules across three panel families are promoted as immutable `1.0.0` components; incomplete pilot packaging remains deferred |
-| P0 | Reconstruct gameplay HUD and composition (M12-A6g) | 🤖 Agent | Agent-ready | Gameplay state/main references are registered, a bounded job reuses promoted shared components, three-size evidence validates, and work stops for human review |
+| P0 | Reconstruct gameplay HUD and composition (M12-A6g) | 🤖 Agent | 🟢 Complete | Five authorities are registered; the job reuses seven promoted families, adds three HUD families and seven states, and passes three-size technical inspection |
+| P0 | Review gameplay HUD evidence (M12-A6h) | 🧭 Hien · Product + Art + UI | Human decision | Approve the current evidence or return it with a bounded reason |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |
