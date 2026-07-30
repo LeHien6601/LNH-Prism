@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
+import { mkdir, open, readFile, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 export const LAB_ROOT = path.resolve(import.meta.dirname, "..");
@@ -67,9 +67,218 @@ export async function atomicWriteFile(filename, content) {
   }
 }
 
+export async function withFileLock(filename, action) {
+  await ensureDir(path.dirname(filename));
+  let handle;
+  const acquire = async () => open(filename, "wx");
+  try {
+    handle = await acquire();
+    await handle.writeFile(`${JSON.stringify({ pid: process.pid, acquiredAt: new Date().toISOString() })}\n`, "utf8");
+  } catch (error) {
+    if (error.code === "EEXIST") {
+      let stale = false;
+      try {
+        const lock = JSON.parse(await readFile(filename, "utf8"));
+        try {
+          process.kill(lock.pid, 0);
+        } catch (processError) {
+          stale = processError.code === "ESRCH";
+        }
+      } catch {
+        stale = false;
+      }
+      if (!stale) throw new Error(`Concurrent operation refused; lock already exists: ${filename}`);
+      await rm(filename, { force: true });
+      handle = await acquire();
+      await handle.writeFile(`${JSON.stringify({ pid: process.pid, acquiredAt: new Date().toISOString(), recoveredStaleLock: true })}\n`, "utf8");
+    } else {
+      throw error;
+    }
+  }
+  try {
+    return await action();
+  } finally {
+    await handle.close();
+    await rm(filename, { force: true });
+  }
+}
+
+export async function atomicReplaceDirectory(target, prepare) {
+  const parent = path.dirname(target);
+  const temporary = path.join(parent, `.${path.basename(target)}.${process.pid}.${Date.now()}.tmp`);
+  const backup = path.join(parent, `.${path.basename(target)}.${process.pid}.${Date.now()}.bak`);
+  await ensureDir(temporary);
+  let backedUp = false;
+  try {
+    await prepare(temporary);
+    try {
+      await rename(target, backup);
+      backedUp = true;
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+    await rename(temporary, target);
+    if (backedUp) await rm(backup, { recursive: true, force: true });
+  } catch (error) {
+    await rm(temporary, { recursive: true, force: true }).catch(() => {});
+    if (backedUp) {
+      await rm(target, { recursive: true, force: true }).catch(() => {});
+      await rename(backup, target).catch(() => {});
+    }
+    throw error;
+  }
+}
+
 export async function sha256(filename) {
   const bytes = await readFile(filename);
   return createHash("sha256").update(bytes).digest("hex");
+}
+
+export function sha256Value(value) {
+  return createHash("sha256").update(`${JSON.stringify(value)}\n`).digest("hex");
+}
+
+export function createApprovalReceipt({
+  draft,
+  draftSha256,
+  job,
+  reviewer,
+  referenceHashes,
+  reviewManifestSha256,
+  approvedAt
+}) {
+  if (typeof reviewer !== "string" || !reviewer.trim()) throw new Error("Reviewer must not be empty.");
+  if (draft.unresolved?.length) throw new Error(`Draft has ${draft.unresolved.length} unresolved review item(s).`);
+  if (!Array.isArray(referenceHashes) || referenceHashes.length === 0) throw new Error("Approval requires reference hashes.");
+  return {
+    schemaVersion: 1,
+    approvalId: draftSha256,
+    projectId: job.projectId ?? draft.projectId ?? null,
+    jobId: job.jobId,
+    status: "approved",
+    reviewer: reviewer.trim(),
+    approvedAt,
+    source: {
+      draftSha256,
+      draftSchemaVersion: draft.schemaVersion,
+      jobSchemaVersion: job.schemaVersion,
+      reviewManifestSha256,
+      referenceHashes
+    },
+    policy: {
+      humanApprovalRequired: true,
+      autonomousApproval: false,
+      invalidatedBySourceChange: true
+    },
+    approvedSnapshot: draft
+  };
+}
+
+export function validateApprovalFreshness({
+  receipt,
+  draftSha256,
+  referenceHashes,
+  reviewManifestSha256
+}) {
+  if (receipt?.status !== "approved") throw new Error("Approval receipt is not approved.");
+  if (receipt.source?.draftSha256 !== draftSha256) throw new Error("Stale approval: draft hash changed.");
+  if (receipt.source?.reviewManifestSha256 !== reviewManifestSha256) throw new Error("Stale approval: review evidence changed.");
+  const expected = new Map((receipt.source?.referenceHashes ?? []).map((reference) => [reference.id, reference.sha256]));
+  for (const reference of referenceHashes) {
+    if (expected.get(reference.id) !== reference.sha256) throw new Error(`Stale approval: reference hash changed for ${reference.id}.`);
+  }
+  if (expected.size !== referenceHashes.length) throw new Error("Stale approval: reference registry changed.");
+  return receipt;
+}
+
+function familySignature(family) {
+  return sha256Value({
+    bounds: { width: family.bounds.width, height: family.bounds.height },
+    baseLayers: family.baseLayers,
+    textSlots: family.textSlots ?? [],
+    iconSlots: family.iconSlots ?? [],
+    slicing: family.slicing ?? null,
+    effectPadding: family.effectPadding
+  });
+}
+
+export function auditProjectDrafts(project, drafts) {
+  const findings = [];
+  const firstFamilies = new Map();
+  for (const draft of drafts) {
+    const job = project.jobs.find((candidate) => candidate.id === draft.jobId);
+    const supportingReference = job?.referenceIds?.[0] ?? null;
+    for (const [token, expected] of Object.entries(project.visualTokens ?? {})) {
+      const actual = draft.tokens?.[token];
+      if (actual !== undefined && JSON.stringify(actual) !== JSON.stringify(expected)) {
+        const intentional = draft.intentionalVariations?.some((variation) => variation.token === token);
+        findings.push({
+          classification: intentional ? "acceptable-intentional-variation" : "blocking-inconsistency",
+          projectId: project.projectId,
+          jobId: draft.jobId,
+          componentId: null,
+          stateId: null,
+          token,
+          supportingReference,
+          message: intentional ? `Intentional variation recorded for ${token}.` : `Project token ${token} drifted.`
+        });
+      }
+    }
+    for (const family of draft.componentFamilies ?? []) {
+      const signature = familySignature(family);
+      const first = firstFamilies.get(family.id);
+      if (first && first.signature !== signature) {
+        findings.push({
+          classification: "blocking-inconsistency",
+          projectId: project.projectId,
+          jobId: draft.jobId,
+          componentId: family.id,
+          stateId: null,
+          token: null,
+          supportingReference,
+          message: `Component family ${family.id} drifts from job ${first.jobId}.`
+        });
+      } else if (!first) {
+        firstFamilies.set(family.id, { signature, jobId: draft.jobId });
+      }
+    }
+    for (const unresolved of draft.unresolved ?? []) {
+      findings.push({
+        classification: "unresolved-human-decision",
+        projectId: project.projectId,
+        jobId: draft.jobId,
+        componentId: unresolved.componentId ?? null,
+        stateId: unresolved.stateId ?? null,
+        token: unresolved.token ?? null,
+        supportingReference,
+        message: unresolved.question ?? unresolved.message ?? unresolved.id
+      });
+    }
+  }
+  for (const component of project.componentInventory ?? []) {
+    if (component.status === "approved" && !drafts.some((draft) =>
+      (draft.sharedComponentRefs ?? []).some((reference) =>
+        reference.id === component.id && reference.version === component.version
+      )
+    )) {
+      findings.push({
+        classification: "recommended-correction",
+        projectId: project.projectId,
+        jobId: null,
+        componentId: component.id,
+        stateId: null,
+        token: null,
+        supportingReference: null,
+        message: `Approved shared component ${component.id}@${component.version} is not referenced by any audited job.`
+      });
+    }
+  }
+  return {
+    schemaVersion: 1,
+    projectId: project.projectId,
+    findingCount: findings.length,
+    findings
+  };
 }
 
 export function imageDimensions(bytes, extension) {
@@ -105,7 +314,7 @@ export function createProjectManifest({ projectId, displayName }) {
     support: {
       status: "supported-private-package",
       owner: "lnh-prism",
-      packageVersion: "0.4.0",
+      packageVersion: "0.5.0",
       engineNeutral: true
     },
     references: [],

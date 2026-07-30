@@ -302,9 +302,19 @@ Technical inspection recorded one non-blocking finding: the prototype `REPAIR`
 label is not comfortably readable at thumbnail size; no artistic approval was
 granted.
 
-**Next agent-ready task:** M12-A4 — cross-job drift classification, immutable
-approval evidence, stale-source invalidation, concurrency protection, and
-interrupted-build recovery.
+**M12-A4 — Audit and approval hardening:** 🟢 Complete. Project audit emits
+blocking inconsistency, recommended correction, acceptable intentional
+variation, and unresolved human-decision findings with project/job/component/
+state/token/reference context. Named reviewers, cleared decisions, completed
+three-size evidence, current draft/reference/evidence hashes, immutable
+hash-addressed receipts, stale-approval rejection, exclusive locks, stale-lock
+recovery, staged builds, and interrupted-build rollback validate. The real
+Block Forge pilot remains `review-required`; no reviewer was invented and no
+autonomous approval occurred.
+
+**Next agent-ready task:** M12-A5 — controlled dry-run/execute promotion,
+versioned project component library, promotion receipts, and complete
+engine-neutral delivery packaging.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, promotion, engine packaging, runtime code, or general visual editor.

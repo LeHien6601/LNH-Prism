@@ -3,7 +3,10 @@ import { access, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import {
+  atomicReplaceDirectory,
+  auditProjectDrafts,
   componentSvg,
+  createApprovalReceipt,
   AUTHORITY_ROLES,
   atomicWriteFile,
   createProjectManifest,
@@ -24,7 +27,9 @@ import {
   stateSheetSvg,
   reviewScreenSvg,
   validateDraft,
+  validateApprovalFreshness,
   validateProjectManifest,
+  withFileLock,
   writeJson
 } from "./lib.mjs";
 import { pngAlphaStats, renderPng } from "./raster.mjs";
@@ -47,6 +52,23 @@ async function loadProject(projectId) {
   const root = projectRoot(projectId);
   const filename = path.join(root, "project.json");
   return { root, filename, project: validateProjectManifest(await readJson(filename)) };
+}
+
+async function currentReferenceHashes(job, root) {
+  if (job.schemaVersion === 2) {
+    const project = await loadProject(job.projectId);
+    const results = [];
+    for (const registered of job.references) {
+      const reference = project.project.references.find((candidate) => candidate.id === registered.id);
+      if (!reference || reference.status !== "approved") throw new Error(`Reference ${registered.id} is no longer approved.`);
+      const filename = path.resolve(project.root, ...reference.path.split("/"));
+      const current = await sha256(filename);
+      if (current !== reference.sha256) throw new Error(`Changed reference hash: ${reference.id}`);
+      results.push({ id: reference.id, sha256: current, version: reference.version, authorityRole: reference.authorityRole });
+    }
+    return results;
+  }
+  return [{ id: "legacy-reference", sha256: await sha256(path.resolve(root, job.reference.path)), version: "legacy", authorityRole: "primary-geometry" }];
 }
 
 async function initProject(values) {
@@ -179,16 +201,30 @@ async function projectStatus(values) {
 async function auditProject(values) {
   await validateReferences(values);
   const { project } = await loadProject(required(values, "project"));
-  const findings = [];
+  const drafts = [];
+  for (const job of project.jobs) {
+    const draftPath = path.join(jobRoot(job.id), "analysis", "draft.json");
+    if (await pathExists(draftPath)) drafts.push(validateDraft(await readJson(draftPath)));
+  }
+  const report = auditProjectDrafts(project, drafts);
   for (const job of project.jobs) {
     const authorities = new Set(job.referenceIds.map((id) =>
       project.references.find((reference) => reference.id === id)?.authorityRole
     ));
     if (!authorities.has("primary-geometry")) {
-      findings.push({ classification: "unresolved-human-decision", jobId: job.id, message: "No primary-geometry authority is registered." });
+      report.findings.push({
+        classification: "unresolved-human-decision",
+        projectId: project.projectId,
+        jobId: job.id,
+        componentId: null,
+        stateId: null,
+        token: null,
+        supportingReference: job.referenceIds[0] ?? null,
+        message: "No primary-geometry authority is registered."
+      });
     }
   }
-  const report = { schemaVersion: 1, projectId: project.projectId, findingCount: findings.length, findings };
+  report.findingCount = report.findings.length;
   await writeJson(path.join(projectRoot(project.projectId), "audit-report.json"), report);
   console.log(JSON.stringify(report, null, 2));
 }
@@ -222,6 +258,13 @@ async function validateJob(values) {
     }
   };
   await writeJson(path.join(root, "validation", "constraint-report.json"), report);
+  const jobPath = path.join(root, "job.json");
+  const job = await readJson(jobPath);
+  if (job.status === "analysis-review-required") {
+    job.status = "review-required";
+    job.updatedAt = new Date().toISOString();
+    await writeJson(jobPath, job);
+  }
   console.log(JSON.stringify(report, null, 2));
 }
 
@@ -442,7 +485,7 @@ editable layers, states, and unresolved human decisions. Then generate and
 inspect the preview comparison. Do not use reference pixels in generated assets.
 `;
   await atomicWriteFile(path.join(root, "analysis", "CODEX_TASK.md"), task);
-  job.status = "analysis-review-required";
+  job.status = "review-required";
   job.updatedAt = new Date().toISOString();
   await writeJson(path.join(root, "job.json"), job);
   console.log(`Prepared Codex-native analysis task for ${job.jobId}.`);
@@ -452,60 +495,160 @@ async function approveJob(values) {
   const root = jobRoot(required(values, "job"));
   const reviewer = required(values, "reviewer").trim();
   if (!reviewer) throw new Error("Reviewer must not be empty.");
-  const draftPath = path.join(root, "analysis", "draft.json");
-  const draft = validateDraft(await readJson(draftPath), { requireResolved: true });
-  const approval = {
-    ...draft,
-    approval: {
-      reviewer,
-      approvedAt: new Date().toISOString(),
-      draftSha256: await sha256(draftPath)
+  await withFileLock(path.join(root, ".locks", "approval.lock"), async () => {
+    const draftPath = path.join(root, "analysis", "draft.json");
+    const draft = validateDraft(await readJson(draftPath), { requireResolved: true });
+    const mobileReview = await readJson(path.join(root, "review", "mobile-readability.json"));
+    if (mobileReview.status !== "inspected" || !Object.values(mobileReview.inspected ?? {}).every(Boolean)) {
+      throw new Error("Approval requires completed native, phone, and thumbnail inspection.");
     }
-  };
-  await writeJson(path.join(root, "approved", "style-and-components.json"), approval);
+    const reviewManifestPath = path.join(root, "review", "manifest.json");
+    const job = await readJson(path.join(root, "job.json"));
+    const draftHash = await sha256(draftPath);
+    const receipt = createApprovalReceipt({
+      draft,
+      draftSha256: draftHash,
+      job,
+      reviewer,
+      referenceHashes: await currentReferenceHashes(job, root),
+      reviewManifestSha256: await sha256(reviewManifestPath),
+      approvedAt: new Date().toISOString()
+    });
+    const relativeReceiptPath = `approved/receipts/${draftHash}.approval.json`;
+    const receiptPath = path.join(root, ...relativeReceiptPath.split("/"));
+    if (await pathExists(receiptPath)) throw new Error(`Immutable approval already exists for ${draftHash}.`);
+    await writeJson(receiptPath, receipt);
+    await writeJson(path.join(root, "approved", "current.json"), {
+      schemaVersion: 1,
+      jobId: job.jobId,
+      approvalId: receipt.approvalId,
+      receiptPath: relativeReceiptPath,
+      receiptSha256: await sha256(receiptPath)
+    });
+    job.status = "approved";
+    job.updatedAt = new Date().toISOString();
+    job.currentApprovalId = receipt.approvalId;
+    await writeJson(path.join(root, "job.json"), job);
+    console.log(`Approved ${job.jobId} with immutable receipt ${receipt.approvalId}.`);
+  });
+}
+
+async function approvalStatus(values) {
+  const root = jobRoot(required(values, "job"));
   const job = await readJson(path.join(root, "job.json"));
-  job.status = "approved";
-  job.updatedAt = new Date().toISOString();
-  await writeJson(path.join(root, "job.json"), job);
-  console.log(`Approved ${job.jobId} for deterministic reconstruction.`);
+  const pointer = await readJson(path.join(root, "approved", "current.json"));
+  const receiptPath = path.join(root, ...pointer.receiptPath.split("/"));
+  const receipt = await readJson(receiptPath);
+  let status = "valid";
+  let reason = null;
+  try {
+    if (await sha256(receiptPath) !== pointer.receiptSha256) throw new Error("Approval receipt hash changed.");
+    validateApprovalFreshness({
+      receipt,
+      draftSha256: await sha256(path.join(root, "analysis", "draft.json")),
+      referenceHashes: await currentReferenceHashes(job, root),
+      reviewManifestSha256: await sha256(path.join(root, "review", "manifest.json"))
+    });
+  } catch (error) {
+    status = "stale";
+    reason = error.message;
+    job.status = "revision-required";
+    job.updatedAt = new Date().toISOString();
+    await writeJson(path.join(root, "job.json"), job);
+  }
+  console.log(JSON.stringify({ schemaVersion: 1, projectId: job.projectId ?? null, jobId: job.jobId, approvalId: receipt.approvalId, status, reason }, null, 2));
+}
+
+async function recordReviewDecision(values) {
+  const decision = required(values, "decision");
+  if (!["revision-required", "rejected"].includes(decision)) throw new Error("Decision must be revision-required or rejected.");
+  const reviewer = required(values, "reviewer").trim();
+  const reason = required(values, "reason").trim();
+  if (!reviewer || !reason) throw new Error("Reviewer and reason must not be empty.");
+  const root = jobRoot(required(values, "job"));
+  await withFileLock(path.join(root, ".locks", "review-decision.lock"), async () => {
+    const job = await readJson(path.join(root, "job.json"));
+    const receipt = {
+      schemaVersion: 1,
+      projectId: job.projectId ?? null,
+      jobId: job.jobId,
+      decision,
+      reviewer,
+      reason,
+      decidedAt: new Date().toISOString(),
+      draftSha256: await sha256(path.join(root, "analysis", "draft.json"))
+    };
+    const receiptId = `${Date.now()}-${decision}`;
+    await writeJson(path.join(root, "review-decisions", `${receiptId}.json`), receipt);
+    job.status = decision;
+    job.updatedAt = new Date().toISOString();
+    await writeJson(path.join(root, "job.json"), job);
+    console.log(`Recorded ${decision} for ${job.jobId}.`);
+  });
 }
 
 async function buildJob(values) {
   const root = jobRoot(required(values, "job"));
-  const approvedPath = path.join(root, "approved", "style-and-components.json");
-  const draft = validateDraft(await readJson(approvedPath), { requireResolved: true });
-  const componentDir = path.join(root, "components", "editable-svg");
-  await ensureDir(componentDir);
-  const modules = [];
-  for (const component of draft.components) {
-    const filename = path.join(componentDir, `${component.id}.svg`);
-    await writeFile(filename, componentSvg(component, draft.materials), "utf8");
-    modules.push({
-      id: component.id,
-      role: component.role,
-      path: `components/editable-svg/${component.id}.svg`,
-      bounds: component.bounds,
-      sha256: await sha256(filename)
+  await withFileLock(path.join(root, ".locks", "build.lock"), async () => {
+    const pointer = await readJson(path.join(root, "approved", "current.json"));
+    const receiptPath = path.join(root, ...pointer.receiptPath.split("/"));
+    if (await sha256(receiptPath) !== pointer.receiptSha256) throw new Error("Approval pointer receipt hash changed.");
+    const receipt = await readJson(receiptPath);
+    const draftPath = path.join(root, "analysis", "draft.json");
+    const job = await readJson(path.join(root, "job.json"));
+    validateApprovalFreshness({
+      receipt,
+      draftSha256: await sha256(draftPath),
+      referenceHashes: await currentReferenceHashes(job, root),
+      reviewManifestSha256: await sha256(path.join(root, "review", "manifest.json"))
     });
-  }
-  const screenPath = path.join(root, "composition", "reconstructed-screen.svg");
-  await ensureDir(path.dirname(screenPath));
-  await writeFile(screenPath, screenSvg(draft), "utf8");
-  await writeJson(path.join(root, "components", "manifest.json"), {
-    schemaVersion: 1,
-    jobId: draft.jobId,
-    approvedSourceSha256: await sha256(approvedPath),
-    modules,
-    composition: {
-      path: "composition/reconstructed-screen.svg",
-      sha256: await sha256(screenPath)
-    }
+    const draft = validateDraft(receipt.approvedSnapshot, { requireResolved: true });
+    const target = path.join(root, "build-output");
+    let moduleCount = 0;
+    await atomicReplaceDirectory(target, async (staging) => {
+      const modules = [];
+      for (const component of draft.components) {
+        const relativePath = `components/${component.id}.svg`;
+        const filename = path.join(staging, ...relativePath.split("/"));
+        await atomicWriteFile(filename, componentSvg(component, draft.materials));
+        modules.push({ id: component.id, stateId: null, format: "svg", path: relativePath, sha256: await sha256(filename), bounds: component.bounds });
+      }
+      for (const family of draft.componentFamilies ?? []) {
+        for (const state of family.states) {
+          const base = `components/${family.id}/${state.id}`;
+          const svgPath = path.join(staging, `${base}.svg`);
+          const pngPath = path.join(staging, `${base}.png`);
+          const svg = familyStateSvg(family, state.id, draft.materials);
+          await atomicWriteFile(svgPath, svg);
+          const png = renderPng(svg);
+          await atomicWriteFile(pngPath, png);
+          const alpha = pngAlphaStats(png);
+          if (alpha.edgeOpaquePixels > 0 || alpha.transparentPixels === 0) throw new Error(`Invalid transparent output for ${family.id}/${state.id}.`);
+          modules.push({ id: family.id, stateId: state.id, format: "svg", path: `${base}.svg`, sha256: await sha256(svgPath), bounds: family.bounds, effectPadding: family.effectPadding });
+          modules.push({ id: family.id, stateId: state.id, format: "png", path: `${base}.png`, sha256: await sha256(pngPath), bounds: family.bounds, effectPadding: family.effectPadding, alpha });
+        }
+      }
+      const screenRelativePath = "composition/reconstructed-screen.svg";
+      const screenPath = path.join(staging, ...screenRelativePath.split("/"));
+      await atomicWriteFile(screenPath, reviewScreenSvg(draft));
+      await writeJson(path.join(staging, "manifest.json"), {
+        schemaVersion: 2,
+        projectId: draft.projectId ?? null,
+        jobId: draft.jobId,
+        approvalId: receipt.approvalId,
+        approvalReceiptSha256: pointer.receiptSha256,
+        modules,
+        composition: { path: screenRelativePath, sha256: await sha256(screenPath) }
+      });
+      moduleCount = modules.length;
+      if (values["simulate-interruption"] === "true") throw new Error("Simulated interrupted build.");
+    });
+    job.status = "built";
+    job.updatedAt = new Date().toISOString();
+    job.builtApprovalId = receipt.approvalId;
+    await writeJson(path.join(root, "job.json"), job);
+    console.log(`Built ${moduleCount} deterministic module(s) from approval ${receipt.approvalId}.`);
   });
-  const job = await readJson(path.join(root, "job.json"));
-  job.status = "reconstructed";
-  job.updatedAt = new Date().toISOString();
-  await writeJson(path.join(root, "job.json"), job);
-  console.log(`Built ${modules.length} editable component(s) and one screen composition.`);
 }
 
 async function previewJob(values) {
@@ -536,8 +679,10 @@ async function previewJob(values) {
 async function compareJob(values) {
   const root = jobRoot(required(values, "job"));
   const job = await readJson(path.join(root, "job.json"));
-  const approved = await readJson(path.join(root, "approved", "style-and-components.json"));
-  const manifest = await readJson(path.join(root, "components", "manifest.json"));
+  const pointer = await readJson(path.join(root, "approved", "current.json"));
+  const receipt = await readJson(path.join(root, ...pointer.receiptPath.split("/")));
+  const approved = receipt.approvedSnapshot;
+  const manifest = await readJson(path.join(root, "build-output", "manifest.json"));
   const totalArea = approved.canvas.width * approved.canvas.height;
   const componentArea = approved.components.reduce(
     (sum, component) => sum + component.bounds.width * component.bounds.height,
@@ -546,7 +691,7 @@ async function compareJob(values) {
   const report = {
     schemaVersion: 1,
     jobId: job.jobId,
-    referenceSha256: job.reference.sha256,
+    referenceSha256: job.references?.[0]?.sha256 ?? job.reference.sha256,
     reconstructionSha256: manifest.composition.sha256,
     metrics: {
       canvasWidth: approved.canvas.width,
@@ -561,12 +706,14 @@ async function compareJob(values) {
   };
   const comparisonDir = path.join(root, "comparison");
   await writeJson(path.join(comparisonDir, "report.json"), report);
-  const referencePath = `../${job.reference.path.replaceAll("\\", "/")}`;
+  const referencePath = job.references?.[0]
+    ? pathToFileURL(path.resolve(projectRoot(job.projectId), ...job.references[0].projectPath.split("/"))).href
+    : `../${job.reference.path.replaceAll("\\", "/")}`;
   const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>${job.jobId} comparison</title>
 <style>html,body{margin:0;background:#151821;color:#fff;font:14px system-ui}.bar{padding:12px 16px}.stage{position:relative;margin:auto;width:min(100vw,${approved.canvas.width}px);aspect-ratio:${approved.canvas.width}/${approved.canvas.height};overflow:hidden}.stage img,.stage object{position:absolute;inset:0;width:100%;height:100%}.stage object{opacity:.5}.hint{opacity:.7}</style></head>
 <body><div class="bar"><strong>${job.jobId}</strong> <span class="hint">Reference with 50% reconstruction overlay</span></div>
-<div class="stage"><img src="${referencePath}" alt="Review reference"><object data="../composition/reconstructed-screen.svg" type="image/svg+xml" aria-label="Reconstruction"></object></div></body></html>
+<div class="stage"><img src="${referencePath}" alt="Review reference"><object data="../build-output/composition/reconstructed-screen.svg" type="image/svg+xml" aria-label="Reconstruction"></object></div></body></html>
 `;
   await ensureDir(comparisonDir);
   await writeFile(path.join(comparisonDir, "overlay.html"), html, "utf8");
@@ -591,11 +738,13 @@ async function main() {
     analyze: prepareJob,
     preview: previewJob,
     approve: approveJob,
+    "approval-status": approvalStatus,
+    "review-decision": recordReviewDecision,
     build: buildJob,
     compare: compareJob
   };
   if (!actions[command]) {
-    throw new Error("Usage: lab <project-init|reference-add|reference-list|reference-validate|job-create|project-status|project-audit|validate-job|render-evidence|record-mobile-review|init|prepare|preview|approve|build|compare> [options]");
+    throw new Error("Usage: lab <project-init|reference-add|reference-list|reference-validate|job-create|project-status|project-audit|validate-job|render-evidence|record-mobile-review|approve|approval-status|review-decision|build|compare|init|prepare|preview> [options]");
   }
   await actions[command](values);
 }

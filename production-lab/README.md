@@ -1,7 +1,7 @@
 # LNH Prism Production Lab
 
 A supported private package inside LNH Prism for controlled screenshot-to-UI
-reconstruction. Version `0.4.0` is owned by LNH Prism and supported for project
+reconstruction. Version `0.5.0` is owned by LNH Prism and supported for project
 intake, registered reference provenance, bounded job preparation, editable SVG
 reconstruction, human approval, build, and comparison. The package remains
 isolated from the parent renderer, milestone evidence, and production assets.
@@ -9,8 +9,10 @@ isolated from the parent renderer, milestone evidence, and production assets.
 Component-family/state inheritance, shared footprints, replaceable text/icon
 slots, scalable-region metadata, effect padding, and declarative geometry
 constraints are supported and validated. Deterministic transparent PNG state
-assets and native/phone/thumbnail review evidence are supported. Promotion,
-project-library versioning, and engine-neutral package assembly remain planned.
+assets and native/phone/thumbnail review evidence are supported. Cross-job drift
+classification, immutable approval receipts, stale-source invalidation, file
+locks, and interrupted-build rollback are supported. Promotion, project-library
+versioning, and engine-neutral package assembly remain planned.
 
 Reference screenshots are evidence only. Production output is reconstructed
 from editable geometry and declared materials; screenshot pixels are never
@@ -33,6 +35,13 @@ cropped, traced, or embedded into component assets.
     geometry overlays, comparison HTML, and target-size review surfaces.
 11. After inspecting every required size, `record-mobile-review` records
     evidence-backed findings without granting artistic approval.
+12. `approve` requires a named human reviewer, cleared unresolved decisions,
+    completed three-size inspection, current reference hashes, and current
+    evidence. It writes an immutable hash-addressed receipt.
+13. `approval-status` reports stale source/evidence and moves the job to
+    `revision-required`; `review-decision` records named revision or rejection.
+14. `build` revalidates approval freshness, renders into a staging directory,
+    and atomically replaces the prior complete output.
 
 ## Commands
 
@@ -49,6 +58,9 @@ npm run lab -- prepare --job puzzle-board
 npm run lab -- validate-job --job puzzle-board
 npm run lab -- render-evidence --job puzzle-board
 npm run lab -- record-mobile-review --job puzzle-board --reviewer "UI reviewer" --findings "Evidence-backed native, phone, and thumbnail findings"
+npm run lab -- approve --job puzzle-board --reviewer "Art Lead"
+npm run lab -- approval-status --job puzzle-board
+npm run lab -- build --job puzzle-board
 npm run lab -- preview --job puzzle-board
 npm run lab -- approve --job puzzle-board --reviewer "Art Lead"
 npm run lab -- build --job puzzle-board
@@ -84,6 +96,23 @@ fails when alpha is absent, output dimensions drift, an outer edge is occupied
 provides side-by-side, adjustable overlay, difference, reconstruction-only,
 component-isolation, state, target-size, transparency-background, geometry,
 safe-area, grid, and anchor views.
+
+## Approval lifecycle
+
+Supported statuses are `draft`, `review-required`, `revision-required`,
+`approved`, `rejected`, `superseded`, `built`, and `promoted`. Promotion is a
+reserved status until the promotion milestone is implemented.
+
+Approval receipts live under `approved/receipts/` and are never overwritten.
+`approved/current.json` is only a hash-verified pointer. Any change to the draft,
+registered reference bytes/registry, or rendered review manifest invalidates the
+approval before build. Review decisions and approvals always require a named
+reviewer; the CLI never approves autonomously.
+
+Job-level approval and build operations use exclusive lock files. Builds are
+prepared outside the live output directory and replace it atomically only after
+all SVG, PNG, alpha, manifest, and receipt checks pass. Interrupted builds clean
+their staging data and retain the previous complete output.
 
 ## Draft component format
 

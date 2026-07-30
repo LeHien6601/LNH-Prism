@@ -73,3 +73,4 @@ Create one `primary-button` spec that inherits style tokens, overrides one param
 | 2026-07-16 | Added M2-S1 version-pinned style overlays, complete resolved-style checks, deterministic ancestor provenance, and bounded material-binding resolution | Codex |
 | 2026-07-17 | Added export-manifest `1.1`, legacy `1.0` compatibility, deterministic Unity identity/registry semantics, canonical fixtures, and migration guidance for M4-S1 | Codex |
 | 2026-07-30 | Added the isolated Production Lab project/reference boundary plus first-class state inheritance, geometry, slot, effect-padding, and scalable-region contracts for M12-A1/A2 | Codex |
+| 2026-07-30 | Added M12-A4 immutable approval receipts, source/evidence freshness checks, cross-job drift classifications, exclusive locks, and staged-build rollback | Codex |

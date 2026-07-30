@@ -39,8 +39,9 @@ Keep all work inside `production-lab/workspace/jobs/<job-id>/`.
 9. Stop for user review when consequential visual choices remain. Never remove
    an unresolved item by guessing.
 10. After explicit user approval, run
-   `npm run lab -- approve --job <id> --reviewer "<name>"`, then `build` and
-   `compare`.
+   `npm run lab -- approve --job <id> --reviewer "<name>"`, verify
+   `approval-status`, then run `build` and `compare`. Never invent a reviewer.
+   Any draft, reference, or evidence change requires renewed approval.
 11. Report outputs, remaining visual differences, and validation actually run.
 
 ## Boundaries
