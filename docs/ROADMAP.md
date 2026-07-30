@@ -356,9 +356,16 @@ engine-neutral scalable borders. Native, phone, thumbnail, state, isolation,
 slicing, geometry, and safe-area evidence were generated and inspected. The
 project audit has zero findings.
 
-**Next task:** M12-A6e — Hien reviews the UI-family evidence as Product, Art,
-and UI reviewer. **Human decision:** approve it or return it with a bounded
-reason. No build or promotion is authorized before approval.
+**M12-A6e — UI-family approval:** 🟢 Approved. Hien, acting as Product, Art,
+and UI reviewer, accepted the source-neutral editable panel treatment on
+2026-07-30. The immutable approval receipt is current and hash-valid; the
+accepted limitation is that painted wood grain remains simplified rather than
+copied from reference pixels.
+
+**Next agent-ready task:** M12-A6f — build and compare the approved UI-family
+snapshot, validate the promotion dry-run, and promote `small-info-panel`,
+`medium-modal-panel`, and `popup-panel` as immutable version `1.0.0`. Do not
+assemble the final package while the remaining pilot jobs are incomplete.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
