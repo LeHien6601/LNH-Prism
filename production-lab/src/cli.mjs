@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { access, readFile, writeFile } from "node:fs/promises";
+import { access, copyFile, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import {
@@ -33,6 +33,7 @@ import {
   writeJson
 } from "./lib.mjs";
 import { pngAlphaStats, renderPng } from "./raster.mjs";
+import { createPackageManifest, createPromotionReceipt, planPromotion } from "./delivery.mjs";
 
 function required(values, key) {
   if (!values[key]) throw new Error(`Missing required --${key}.`);
@@ -46,6 +47,15 @@ async function pathExists(filename) {
   } catch {
     return false;
   }
+}
+
+async function filesUnder(directory) {
+  const entries = await readdir(directory, { withFileTypes: true });
+  const nested = await Promise.all(entries.map((entry) => {
+    const filename = path.join(directory, entry.name);
+    return entry.isDirectory() ? filesUnder(filename) : [filename];
+  }));
+  return nested.flat();
 }
 
 async function loadProject(projectId) {
@@ -587,6 +597,255 @@ async function recordReviewDecision(values) {
   });
 }
 
+async function promotionContext(jobId) {
+  const root = jobRoot(jobId);
+  const job = await readJson(path.join(root, "job.json"));
+  if (job.status !== "built") throw new Error(`Promotion requires a built job; received ${job.status}.`);
+  const { root: projectDirectory, filename: projectFilename, project } = await loadProject(job.projectId);
+  const pointer = await readJson(path.join(root, "approved", "current.json"));
+  const receiptPath = path.join(root, ...pointer.receiptPath.split("/"));
+  if (await sha256(receiptPath) !== pointer.receiptSha256) throw new Error("Approval receipt hash changed.");
+  const approvalReceipt = await readJson(receiptPath);
+  const buildManifestPath = path.join(root, "build-output", "manifest.json");
+  const buildManifest = await readJson(buildManifestPath);
+  validateApprovalFreshness({
+    receipt: approvalReceipt,
+    draftSha256: await sha256(path.join(root, "analysis", "draft.json")),
+    referenceHashes: await currentReferenceHashes(job, root),
+    reviewManifestSha256: await sha256(path.join(root, "review", "manifest.json"))
+  });
+  for (const module of buildManifest.modules) {
+    const filename = path.resolve(root, "build-output", ...module.path.split("/"));
+    const buildRoot = path.resolve(root, "build-output");
+    if (!filename.startsWith(`${buildRoot}${path.sep}`)) throw new Error(`Unsafe build module path: ${module.path}`);
+    if (await sha256(filename) !== module.sha256) throw new Error(`Changed build module hash: ${module.path}`);
+    if (module.format === "svg" && (await readFile(filename, "utf8")).includes("<image")) {
+      throw new Error(`Reference pixels are forbidden in promoted SVG: ${module.path}`);
+    }
+  }
+  return { root, job, projectDirectory, projectFilename, project, pointer, approvalReceipt, receiptPath, buildManifest };
+}
+
+async function promoteJob(values) {
+  const jobId = safeJobId(required(values, "job"));
+  const componentVersion = required(values, "version");
+  const dryRun = (values["dry-run"] ?? "false") === "true";
+  const context = await promotionContext(jobId);
+  const plan = planPromotion({
+    project: context.project,
+    job: context.job,
+    buildManifest: context.buildManifest,
+    approvalReceipt: context.approvalReceipt,
+    componentVersion
+  });
+  const previewFiles = plan.components.flatMap((component) => component.modules.map((module) => ({
+    componentId: component.id,
+    version: component.version,
+    stateId: module.stateId,
+    format: module.format,
+    sha256: module.sha256
+  })));
+  if (dryRun) {
+    console.log(JSON.stringify(createPromotionReceipt({
+      plan,
+      promotedFiles: previewFiles,
+      executedAt: new Date().toISOString(),
+      dryRun: true
+    }), null, 2));
+    return;
+  }
+  await withFileLock(path.join(context.projectDirectory, ".locks", "promotion.lock"), async () => {
+    const transaction = path.join(context.projectDirectory, ".promotion-staging", `${plan.jobId}-${plan.approvalId}-${componentVersion}`);
+    if (await pathExists(transaction)) throw new Error("Promotion staging transaction already exists.");
+    const moved = [];
+    let receiptPath;
+    let projectUpdated = false;
+    try {
+      const promotedFiles = [];
+      for (const component of plan.components) {
+        const componentStage = path.join(transaction, component.id, component.version);
+        await ensureDir(componentStage);
+        for (const module of component.modules) {
+          const source = path.resolve(context.root, "build-output", ...module.path.split("/"));
+          const filename = `${module.stateId ?? "default"}.${module.format}`;
+          const destination = path.join(componentStage, filename);
+          await copyFile(source, destination);
+          promotedFiles.push({
+            componentId: component.id,
+            version: component.version,
+            stateId: module.stateId,
+            format: module.format,
+            path: `library/${component.id}/${component.version}/${filename}`,
+            sha256: await sha256(destination)
+          });
+        }
+        await writeJson(path.join(componentStage, "component.json"), {
+          schemaVersion: 1,
+          id: component.id,
+          version: component.version,
+          sourceJobId: plan.jobId,
+          approvalId: plan.approvalId,
+          states: component.states,
+          modules: promotedFiles.filter((file) => file.componentId === component.id),
+          provenance: {
+            references: context.approvalReceipt.source.referenceHashes,
+            draftSha256: context.approvalReceipt.source.draftSha256,
+            reviewManifestSha256: context.approvalReceipt.source.reviewManifestSha256
+          }
+        });
+      }
+      for (const component of plan.components) {
+        const source = path.join(transaction, component.id, component.version);
+        const target = path.join(context.projectDirectory, "library", component.id, component.version);
+        if (await pathExists(target)) throw new Error(`Duplicate component version: ${component.id}@${component.version}`);
+        await ensureDir(path.dirname(target));
+        await rename(source, target);
+        moved.push(target);
+      }
+      const receipt = createPromotionReceipt({
+        plan,
+        promotedFiles,
+        executedAt: new Date().toISOString(),
+        dryRun: false
+      });
+      receiptPath = path.join(context.projectDirectory, "promotion-receipts", `${receipt.receiptId}.json`);
+      if (await pathExists(receiptPath)) throw new Error(`Promotion receipt already exists: ${receipt.receiptId}`);
+      const nextProject = structuredClone(context.project);
+      for (const component of plan.components) {
+        nextProject.componentInventory.push({
+          id: component.id,
+          version: component.version,
+          status: "promoted",
+          sourceJobId: plan.jobId,
+          approvalId: plan.approvalId,
+          libraryPath: `library/${component.id}/${component.version}`,
+          promotionReceipt: `promotion-receipts/${receipt.receiptId}.json`
+        });
+      }
+      await writeJson(receiptPath, receipt);
+      await writeJson(context.projectFilename, validateProjectManifest(nextProject));
+      projectUpdated = true;
+      context.job.status = "promoted";
+      context.job.updatedAt = new Date().toISOString();
+      await writeJson(path.join(context.root, "job.json"), context.job);
+      await rm(transaction, { recursive: true, force: true });
+      console.log(`Promoted ${plan.components.length} component family/families at ${componentVersion}.`);
+    } catch (error) {
+      if (projectUpdated) await writeJson(context.projectFilename, context.project).catch(() => {});
+      if (receiptPath) await rm(receiptPath, { force: true }).catch(() => {});
+      for (const target of moved.reverse()) {
+        const resolved = path.resolve(target);
+        if (!resolved.startsWith(`${context.projectDirectory}${path.sep}`)) throw new Error("Refusing promotion rollback outside project directory.");
+        await rm(resolved, { recursive: true, force: true }).catch(() => {});
+      }
+      await rm(transaction, { recursive: true, force: true }).catch(() => {});
+      throw error;
+    }
+  });
+}
+
+async function packageProject(values) {
+  const projectId = safeProjectId(required(values, "project"));
+  const packageVersion = required(values, "version");
+  const limitations = required(values, "limitations");
+  const { root, project } = await loadProject(projectId);
+  const components = project.componentInventory.filter((component) => component.status === "promoted");
+  if (components.length === 0) throw new Error("Package requires promoted components.");
+  await withFileLock(path.join(root, ".locks", "package.lock"), async () => {
+    const target = path.join(root, "packages", packageVersion);
+    if (await pathExists(target)) throw new Error(`Package version ${packageVersion} already exists.`);
+    await atomicReplaceDirectory(target, async (staging) => {
+      const files = [];
+      const approvalReceipts = [];
+      const promotionReceipts = [];
+      for (const component of components) {
+        const source = path.resolve(root, ...component.libraryPath.split("/"));
+        if (!source.startsWith(`${root}${path.sep}`)) throw new Error(`Unsafe library path: ${component.libraryPath}`);
+        for (const filename of await filesUnder(source)) {
+          const relativeFromLibrary = path.relative(path.join(root, "library"), filename).replaceAll("\\", "/");
+          const destination = path.join(staging, "components", ...relativeFromLibrary.split("/"));
+          await ensureDir(path.dirname(destination));
+          await copyFile(filename, destination);
+          files.push({ path: `components/${relativeFromLibrary}`, sha256: await sha256(destination), bytes: (await readFile(destination)).length });
+        }
+        const promotionPath = path.resolve(root, ...component.promotionReceipt.split("/"));
+        const promotionReceipt = await readJson(promotionPath);
+        if (!promotionReceipts.some((receipt) => receipt.receiptId === promotionReceipt.receiptId)) promotionReceipts.push(promotionReceipt);
+        const approvalRoot = jobRoot(component.sourceJobId);
+        const pointer = await readJson(path.join(approvalRoot, "approved", "current.json"));
+        const approvalReceipt = await readJson(path.join(approvalRoot, ...pointer.receiptPath.split("/")));
+        if (!approvalReceipts.some((receipt) => receipt.approvalId === approvalReceipt.approvalId)) {
+          approvalReceipts.push({
+            approvalId: approvalReceipt.approvalId,
+            jobId: approvalReceipt.jobId,
+            reviewer: approvalReceipt.reviewer,
+            approvedAt: approvalReceipt.approvedAt,
+            source: approvalReceipt.source
+          });
+        }
+      }
+      await writeJson(path.join(staging, "metadata", "tokens.json"), project.visualTokens ?? {});
+      await writeJson(path.join(staging, "metadata", "materials.json"), project.materials ?? []);
+      await writeJson(path.join(staging, "metadata", "approvals.json"), approvalReceipts);
+      await writeJson(path.join(staging, "metadata", "promotions.json"), promotionReceipts);
+      const validationReport = await readJson(path.join(root, "audit-report.json"));
+      await writeJson(path.join(staging, "metadata", "validation.json"), validationReport);
+      await writeJson(path.join(staging, "KNOWN_LIMITATIONS.json"), { limitations: [limitations] });
+      const metadataFiles = (await filesUnder(staging)).filter((filename) => path.basename(filename) !== "manifest.json");
+      for (const filename of metadataFiles) {
+        const relative = path.relative(staging, filename).replaceAll("\\", "/");
+        if (!files.some((file) => file.path === relative)) files.push({ path: relative, sha256: await sha256(filename), bytes: (await readFile(filename)).length });
+      }
+      files.sort((a, b) => a.path.localeCompare(b.path));
+      const manifest = createPackageManifest({
+        project,
+        packageVersion,
+        componentEntries: components,
+        files,
+        approvalReceipts,
+        promotionReceipts,
+        validationReport,
+        knownLimitations: [limitations]
+      });
+      await writeJson(path.join(staging, "manifest.json"), manifest);
+    });
+    console.log(`Packaged ${components.length} promoted component(s) as ${projectId}@${packageVersion}.`);
+  });
+}
+
+async function validatePackage(values) {
+  const projectId = safeProjectId(required(values, "project"));
+  const packageVersion = required(values, "version");
+  const root = projectRoot(projectId);
+  const packageRoot = path.join(root, "packages", packageVersion);
+  const manifest = await readJson(path.join(packageRoot, "manifest.json"));
+  if (manifest.projectId !== projectId || manifest.packageVersion !== packageVersion || manifest.engineNeutral !== true || manifest.unityIntegration !== false) {
+    throw new Error("Package identity or engine-neutral boundary is invalid.");
+  }
+  for (const file of manifest.files) {
+    if (path.isAbsolute(file.path) || file.path.split(/[\\/]/u).includes("..")) throw new Error(`Unsafe package path: ${file.path}`);
+    if (/reference|screenshot|comparison/iu.test(file.path)) throw new Error(`Reference evidence is forbidden in package path: ${file.path}`);
+    const filename = path.resolve(packageRoot, ...file.path.split("/"));
+    if (!filename.startsWith(`${packageRoot}${path.sep}`)) throw new Error(`Unsafe resolved package path: ${file.path}`);
+    const bytes = await readFile(filename);
+    if (bytes.length !== file.bytes || await sha256(filename) !== file.sha256) throw new Error(`Package file receipt mismatch: ${file.path}`);
+    if (file.path.endsWith(".svg") && bytes.toString("utf8").includes("<image")) throw new Error(`Image layers are forbidden in package SVG: ${file.path}`);
+  }
+  const report = {
+    schemaVersion: 1,
+    projectId,
+    packageVersion,
+    status: "valid",
+    fileCount: manifest.files.length,
+    componentCount: manifest.components.length,
+    manifestSha256: await sha256(path.join(packageRoot, "manifest.json")),
+    referencePixelsIncluded: false,
+    engineNeutral: true
+  };
+  await writeJson(path.join(root, "packages", `${packageVersion}.validation.json`), report);
+  console.log(JSON.stringify(report, null, 2));
+}
+
 async function buildJob(values) {
   const root = jobRoot(required(values, "job"));
   await withFileLock(path.join(root, ".locks", "build.lock"), async () => {
@@ -740,11 +999,14 @@ async function main() {
     approve: approveJob,
     "approval-status": approvalStatus,
     "review-decision": recordReviewDecision,
+    promote: promoteJob,
+    package: packageProject,
+    "validate-package": validatePackage,
     build: buildJob,
     compare: compareJob
   };
   if (!actions[command]) {
-    throw new Error("Usage: lab <project-init|reference-add|reference-list|reference-validate|job-create|project-status|project-audit|validate-job|render-evidence|record-mobile-review|approve|approval-status|review-decision|build|compare|init|prepare|preview> [options]");
+    throw new Error("Usage: lab <project-init|reference-add|reference-list|reference-validate|job-create|project-status|project-audit|validate-job|render-evidence|record-mobile-review|approve|approval-status|review-decision|build|promote|package|validate-package|compare|init|prepare|preview> [options]");
   }
   await actions[command](values);
 }

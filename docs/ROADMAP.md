@@ -312,9 +312,18 @@ recovery, staged builds, and interrupted-build rollback validate. The real
 Block Forge pilot remains `review-required`; no reviewer was invented and no
 autonomous approval occurred.
 
-**Next agent-ready task:** M12-A5 — controlled dry-run/execute promotion,
-versioned project component library, promotion receipts, and complete
-engine-neutral delivery packaging.
+**M12-A5 — Promotion and packaging:** 🟢 Complete. Approved built jobs support
+non-mutating promotion plans and controlled execution into immutable semantic
+versions in the project component library. Promotion receipts bind the approved
+build and copied hashes. Engine-neutral packages include promoted modules,
+tokens, materials, approvals, promotions, validation, and limitations; package
+validation rejects changed bytes, unsafe paths, embedded image layers, and
+reference/comparison evidence. The real Block Forge pilot was deliberately not
+promoted because it remains `review-required`.
+
+**Next task:** M12-A6 — Block Forge pilot approval and execution. **Human
+decision:** named product, art, and UI reviewers must approve the bounded pilot
+jobs before builds, promotion, or the final delivery package may proceed.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
-approval, promotion, engine packaging, runtime code, or general visual editor.
+approval, Unity integration, runtime code, or general visual editor.

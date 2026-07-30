@@ -314,7 +314,7 @@ export function createProjectManifest({ projectId, displayName }) {
     support: {
       status: "supported-private-package",
       owner: "lnh-prism",
-      packageVersion: "0.5.0",
+      packageVersion: "0.6.0",
       engineNeutral: true
     },
     references: [],

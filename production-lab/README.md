@@ -1,7 +1,7 @@
 # LNH Prism Production Lab
 
 A supported private package inside LNH Prism for controlled screenshot-to-UI
-reconstruction. Version `0.5.0` is owned by LNH Prism and supported for project
+reconstruction. Version `0.6.0` is owned by LNH Prism and supported for project
 intake, registered reference provenance, bounded job preparation, editable SVG
 reconstruction, human approval, build, and comparison. The package remains
 isolated from the parent renderer, milestone evidence, and production assets.
@@ -11,8 +11,9 @@ slots, scalable-region metadata, effect padding, and declarative geometry
 constraints are supported and validated. Deterministic transparent PNG state
 assets and native/phone/thumbnail review evidence are supported. Cross-job drift
 classification, immutable approval receipts, stale-source invalidation, file
-locks, and interrupted-build rollback are supported. Promotion, project-library
-versioning, and engine-neutral package assembly remain planned.
+locks, and interrupted-build rollback are supported. Approved builds can be
+dry-run or promoted into an immutable versioned project library with receipts,
+then assembled and hash-validated as a reference-free engine-neutral package.
 
 Reference screenshots are evidence only. Production output is reconstructed
 from editable geometry and declared materials; screenshot pixels are never
@@ -42,6 +43,12 @@ cropped, traced, or embedded into component assets.
     `revision-required`; `review-decision` records named revision or rejection.
 14. `build` revalidates approval freshness, renders into a staging directory,
     and atomically replaces the prior complete output.
+15. `promote --dry-run true` validates the exact approved build without writing;
+    `promote` executes the same plan into the versioned project library.
+16. `package` assembles promoted modules, tokens, materials, approval and
+    promotion receipts, validation evidence, and known limitations.
+17. `validate-package` verifies every packaged byte and the engine-neutral,
+    reference-free boundary.
 
 ## Commands
 
@@ -67,6 +74,10 @@ npm run lab -- build --job puzzle-board
 npm run lab -- compare --job puzzle-board
 npm run lab -- project-status --project block-forge
 npm run lab -- project-audit --project block-forge
+npm run lab -- promote --job puzzle-board --version 1.0.0 --dry-run true
+npm run lab -- promote --job puzzle-board --version 1.0.0
+npm run lab -- package --project block-forge --version 1.0.0 --limitations "Unity integration intentionally excluded"
+npm run lab -- validate-package --project block-forge --version 1.0.0
 ```
 
 Then ask Codex:
@@ -100,8 +111,8 @@ safe-area, grid, and anchor views.
 ## Approval lifecycle
 
 Supported statuses are `draft`, `review-required`, `revision-required`,
-`approved`, `rejected`, `superseded`, `built`, and `promoted`. Promotion is a
-reserved status until the promotion milestone is implemented.
+`approved`, `rejected`, `superseded`, `built`, and `promoted`. Only a current,
+hash-verified approval and its matching complete build can be promoted.
 
 Approval receipts live under `approved/receipts/` and are never overwritten.
 `approved/current.json` is only a hash-verified pointer. Any change to the draft,
@@ -162,5 +173,6 @@ style injection is rejected, and no material may reference source pixels.
 - Every job stays under this package's `workspace/jobs` directory.
 - Approved inputs and generated files carry SHA-256 receipts.
 - Reference images may appear only in `input/` and `comparison/`.
-- Promotion is intentionally absent until its approval, hash, destination, and
-  receipt contract is implemented and validated.
+- Promotion accepts only safe SVG/PNG module paths, rejects embedded image
+  layers, never copies references or comparisons, and refuses an existing
+  component version or package version.

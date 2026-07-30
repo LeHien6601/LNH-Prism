@@ -39,4 +39,5 @@ M4-A: inspect the delivery package outside any engine project and confirm that n
 |---|---|---|
 | 2026-07-17 | Replaced engine-specific export scope with engine-neutral modular asset delivery under ADR-014 | Project owner / Codex |
 | 2026-07-17 | Assembled and validated the Frostbound package with 62 independently extractable SVG/PNG modules, unique IDs, and output receipts | Codex |
+| 2026-07-30 | Added Production Lab dry-run/execute promotion, immutable semantic component versions, promotion receipts, and reference-free engine-neutral package validation | Codex |
 | 2026-07-17 | Aligned the active handoff status with the M5-A2 next-task assignment | Codex |

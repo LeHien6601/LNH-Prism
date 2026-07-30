@@ -29,7 +29,7 @@ package.
 4. **Audit and approval hardening (implemented):** cross-job shared registries and drift
    classifications, immutable approval evidence, stale-source invalidation,
    concurrency protection, and interrupted-build recovery.
-5. **Promotion and packaging (next):** dry-run/execute promotion receipts, versioned
+5. **Promotion and packaging (implemented):** dry-run/execute promotion receipts, versioned
    component library, complete engine-neutral package, and package validation.
 6. **Block Forge pilot:** nine bounded jobs, visual inspection, explicit human
    approvals, consistency audit, controlled promotion, and package review.
@@ -40,10 +40,11 @@ The intake and state/constraint commands make bounded Block Forge reconstruction
 safe to exercise with exact 8x8 square-cell, identical puzzle-unit, shared
 bridge-footprint, anchor, safe-area, touch-target, slot, effect-padding, and
 scalable-region requirements expressed as data. Reconstruction outputs are not
-yet ready for approval, promotion, or delivery. Deterministic transparent PNGs,
+yet approved for promotion or delivery. Deterministic transparent PNGs,
 slicing/state sheets, geometry overlays, and native/phone/thumbnail inspection
 are now available. Cross-job drift classifications, immutable approval receipts,
 stale-source invalidation, exclusive locks, stale-lock recovery, and interrupted
 build rollback are implemented. The real Block Forge pilot remains
 `review-required` because no human approval was supplied. The next milestone is
-controlled promotion and complete engine-neutral packaging.
+the human-gated Block Forge pilot across controlled promotion and complete
+engine-neutral packaging.

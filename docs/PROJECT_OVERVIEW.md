@@ -1,7 +1,7 @@
 # Project Overview and Control Page
 
 > 2026-07-30 readiness update: `production-lab/` is now an owned, supported
-> private LNH Prism package at version `0.5.0`; see
+> private LNH Prism package at version `0.6.0`; see
 > [ADR-015](decisions/ADR-015-production-lab-supported-package.md) and the
 > [incremental readiness plan](implementation/PRODUCTION_LAB_READINESS_PLAN.md).
 > Generic intake, multi-reference provenance, component-family/state
@@ -10,8 +10,9 @@
 > Deterministic transparent state PNGs and native/phone/thumbnail review
 > evidence, cross-job audit classifications, immutable approval receipts,
 > stale-source invalidation, file locks, and interrupted-build rollback are
-> implemented. Promotion and packaging remain gated; Unity integration remains
-> deferred.
+> implemented. Controlled promotion, immutable versioned component-library
+> entries, promotion receipts, complete engine-neutral package assembly, and
+> package hash validation are implemented. Unity integration remains deferred.
 
 ## 1. Mission
 
@@ -34,8 +35,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🤖 **Promotion and packaging (M12-A5)** · Agent-ready |
-| Next agent-ready task | M12-A5 — Dry-run promotion, versioned component library, receipts, and complete engine-neutral package |
+| Next task | 🧭 **Block Forge pilot approval and execution (M12-A6)** · Human decision |
+| Next agent-ready task | None until named reviewers approve the Block Forge pilot jobs |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -71,7 +72,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | M12-A1 through M12-A4 complete; M12-A5 is agent-ready |
+| 🔵 | M12 | Production Lab Block Forge readiness | M12-A1 through M12-A5 complete; M12-A6 is a human decision |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -81,7 +82,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 |---|---|---|---|---|
 | P0 | Add deterministic transparent output and review surfaces (M12-A3) | 🤖 Agent | 🟢 Complete | Eleven isolated state SVG/PNG pairs validate deterministic hashes, alpha, padding, slicing/state sheets, and native/phone/thumbnail inspection |
 | P0 | Harden audit and approval lifecycle (M12-A4) | 🤖 Agent | 🟢 Complete | Drift classifications, immutable receipts, stale-source rejection, locks, stale-lock recovery, and interrupted-build rollback validate |
-| P0 | Add controlled promotion and engine-neutral packaging (M12-A5) | 🤖 Agent | Agent-ready | Approved built jobs promote by dry-run/execute receipt into a versioned library and complete reference-free package |
+| P0 | Add controlled promotion and engine-neutral packaging (M12-A5) | 🤖 Agent | 🟢 Complete | Approved built jobs promote by dry-run/execute receipt into a versioned library and complete reference-free package |
+| P0 | Approve and execute the Block Forge pilot (M12-A6) | 🧭 Product + Art + UI reviewers | Human decision | Named reviewers approve the bounded pilot jobs before any real promotion or delivery package is produced |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |
