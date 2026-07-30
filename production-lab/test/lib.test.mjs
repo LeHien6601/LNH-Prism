@@ -257,7 +257,9 @@ test("families reject unsafe geometry, clipped effects, and invalid scalable reg
 
 test("replaceable text slots enforce mobile and localization declarations", async () => {
   const draft = await blockForgeFixture();
-  const label = draft.componentFamilies.find((family) => family.id === "primary-action").textSlots[0];
+  const action = draft.componentFamilies.find((family) => family.id === "primary-action");
+  const label = action.textSlots[0];
+  assert.equal(action.baseLayers.find((layer) => layer.id === "button-label").fontSize, 56);
   label.localizationExpansion = 0.9;
   assert.throws(() => validateDraft(draft), /localizationExpansion/);
 });

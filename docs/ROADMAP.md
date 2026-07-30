@@ -326,10 +326,17 @@ reviewer, selected Option 1 on 2026-07-30. The puzzle-board job is
 `revision-required`; its `REPAIR` label must be comfortably readable at
 thumbnail size before approval.
 
-**Next agent-ready task:** M12-A6a — improve the puzzle-board `REPAIR` label
-without changing the approved geometry/reference boundary, regenerate native,
-phone, and thumbnail evidence, and return the job for Hien's approval. No build,
-promotion, or package execution is authorized by this remediation decision.
+**M12-A6a — Thumbnail readability remediation:** 🟢 Complete. The editable
+`REPAIR` label increased from `32` to `56` logical pixels and was vertically
+rebalanced within the existing slot. The button footprint, puzzle geometry,
+states, materials, and reference boundary are unchanged. All eleven transparent
+state assets and native/phone/180-pixel thumbnail evidence were regenerated;
+technical inspection confirms the label is comfortably readable. The job is
+again `review-required`.
+
+**Next task:** M12-A6b — Hien reviews the regenerated evidence as Product, Art,
+and UI reviewer. **Human decision:** approve it or return it with a bounded
+reason. No build, promotion, or package execution is authorized before approval.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.

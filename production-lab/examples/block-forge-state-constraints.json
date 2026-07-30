@@ -282,8 +282,8 @@
           "id": "button-label",
           "kind": "text",
           "x": 200,
-          "y": 61,
-          "fontSize": 32,
+          "y": 70,
+          "fontSize": 56,
           "textAnchor": "middle",
           "value": "REPAIR"
         }

@@ -384,6 +384,11 @@ async function renderEvidence(values) {
     inspected: { native: false, phone: false, thumbnail: false },
     checks: ["text-hierarchy", "silhouette-recognition", "target-state-recognition", "icon-readability", "touch-target-declarations", "interactive-separation", "excessive-detail", "effect-visibility"]
   });
+  if (job.status === "revision-required") {
+    job.status = "review-required";
+    job.updatedAt = new Date().toISOString();
+    await writeJson(path.join(root, "job.json"), job);
+  }
   console.log(`Rendered ${assets.length} transparent state asset(s) and review surfaces.`);
 }
 
