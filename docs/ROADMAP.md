@@ -422,10 +422,21 @@ promoted as immutable `1.0.0` components. The project library now contains
 fourteen promoted families and 80 files with zero audit findings. No delivery
 package was assembled.
 
-**Next agent-ready task:** M12-A6m — register the approved Workshop reference as
-a bounded state authority, create the Workshop upgrade-state job, reuse
-promoted shared components, reconstruct only missing upgrade-state UI families,
-generate native/phone/thumbnail evidence, and stop for human review.
+**M12-A6m — Workshop upgrade-state job:** 🟢 Technical preparation complete. The
+approved Workshop reference is registered as `state-authority`. The bounded job
+reuses promoted `primary-action`, `medium-modal-panel`,
+`town-resource-counter`, and `town-upgrade-offer`, and adds only
+`workshop-status-indicator` and `workshop-upgrade-summary`, each with warning,
+valid, and completed states. Native, phone, thumbnail, state, isolation,
+slicing, geometry, and safe-area evidence were generated and inspected. The
+seven-reference project audit has zero findings. Building evolution, smoke,
+vegetation, paths, and other illustration content remain excluded.
+
+**Next task:** M12-A6n — Hien reviews the Workshop upgrade-state evidence as
+Product, Art, and UI reviewer. **Human decision:** approve it or return it with
+a bounded reason. Full copy is readable at phone size but not comfortably
+readable at thumbnail size; state silhouettes and semantic colors remain
+distinct. No build or promotion is authorized before approval.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
