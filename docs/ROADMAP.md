@@ -379,9 +379,16 @@ phone, thumbnail, state, isolation, slicing, geometry, and safe-area evidence
 were generated and inspected. The five-reference project audit has zero
 findings.
 
-**Next task:** M12-A6h — Hien reviews the gameplay HUD evidence as Product, Art,
-and UI reviewer. **Human decision:** approve it or return it with a bounded
-reason. No build or promotion is authorized before approval.
+**M12-A6h — Gameplay HUD approval:** 🟢 Approved. Hien, acting as Product, Art,
+and UI reviewer, accepted the current three-size evidence on 2026-07-30. The
+immutable approval receipt is current and hash-valid. The approval covers the
+three newly reconstructed HUD families and preserves reuse of all seven
+promoted dependencies.
+
+**Next agent-ready task:** M12-A6i — build and compare the approved snapshot,
+validate the promotion dry-run, and promote `repair-progress-hud`,
+`turn-counter`, and `exit-control` as immutable version `1.0.0` components. Do
+not assemble an incomplete final delivery package.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
