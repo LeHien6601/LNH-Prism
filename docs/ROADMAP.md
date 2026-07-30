@@ -334,9 +334,15 @@ state assets and native/phone/180-pixel thumbnail evidence were regenerated;
 technical inspection confirms the label is comfortably readable. The job is
 again `review-required`.
 
-**Next task:** M12-A6b — Hien reviews the regenerated evidence as Product, Art,
-and UI reviewer. **Human decision:** approve it or return it with a bounded
-reason. No build, promotion, or package execution is authorized before approval.
+**M12-A6b — Puzzle-board approval:** 🟢 Approved. Hien, acting as Product, Art,
+and UI reviewer, approved the regenerated evidence on 2026-07-30. The immutable
+approval receipt is current and hash-valid; it covers only
+`block-forge-puzzle-board`.
+
+**Next agent-ready task:** M12-A6c — build and compare the approved puzzle-board
+job, validate the promotion dry-run, and promote its components as immutable
+version `1.0.0`. Do not assemble the final Block Forge package while the other
+eight planned pilot jobs remain uncreated and unapproved.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.

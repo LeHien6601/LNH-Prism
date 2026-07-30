@@ -35,8 +35,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🧭 **Puzzle-board approval (M12-A6b)** · Human decision |
-| Next agent-ready task | None until Hien approves or returns the regenerated puzzle-board evidence |
+| Next task | 🤖 **Approved puzzle-board build and promotion (M12-A6c)** · Agent-ready |
+| Next agent-ready task | M12-A6c — Build, compare, dry-run, and promote the approved puzzle-board job as version 1.0.0 |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -72,7 +72,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | M12-A6a readability remediation complete; M12-A6b is a human decision |
+| 🔵 | M12 | Production Lab Block Forge readiness | M12-A6b approved the puzzle-board evidence; M12-A6c is agent-ready |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -84,7 +84,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Harden audit and approval lifecycle (M12-A4) | 🤖 Agent | 🟢 Complete | Drift classifications, immutable receipts, stale-source rejection, locks, stale-lock recovery, and interrupted-build rollback validate |
 | P0 | Add controlled promotion and engine-neutral packaging (M12-A5) | 🤖 Agent | 🟢 Complete | Approved built jobs promote by dry-run/execute receipt into a versioned library and complete reference-free package |
 | P0 | Improve puzzle-board thumbnail readability (M12-A6a) | 🤖 Agent | 🟢 Complete | `REPAIR` is comfortably readable at thumbnail size, regenerated evidence passes, and the job is `review-required` |
-| P0 | Review regenerated puzzle-board evidence (M12-A6b) | 🧭 Hien · Product + Art + UI | Human decision | Approve the current evidence or return it with a bounded reason |
+| P0 | Review regenerated puzzle-board evidence (M12-A6b) | 🧭 Hien · Product + Art + UI | 🟢 Approved | Immutable approval receipt is current and hash-valid |
+| P0 | Build and promote the approved puzzle-board job (M12-A6c) | 🤖 Agent | Agent-ready | Approved build validates, comparison is current, promotion dry-run passes, and immutable `1.0.0` components are promoted without packaging incomplete pilot scope |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |
