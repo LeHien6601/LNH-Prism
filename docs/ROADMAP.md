@@ -404,11 +404,19 @@ geometry, and safe-area evidence were generated and inspected. The
 six-reference project audit has zero findings. Environment, building, foliage,
 path, and prop art remain excluded.
 
-**Next task:** M12-A6k — Hien reviews the Town functional-UI evidence as Product,
-Art, and UI reviewer. **Human decision:** approve it or return it with a bounded
-reason. The compact upgrade-offer copy is readable at phone size but not
-comfortably readable at thumbnail size. No build or promotion is authorized
-before approval.
+**M12-A6k — Town functional-UI approval:** 🟢 Approved. Hien, acting as Product,
+Art, and UI reviewer, accepted the current three-size evidence on 2026-07-31.
+The immutable approval receipt is current and hash-valid. The approval covers
+the four newly reconstructed Town control families and preserves reuse of the
+three promoted foundations. It explicitly accepts that compact secondary
+upgrade-offer copy is not comfortably readable at thumbnail size while its
+silhouette and information grouping remain recognizable.
+
+**Next agent-ready task:** M12-A6l — build and compare the approved snapshot,
+validate the promotion dry-run, and promote `town-resource-counter`,
+`town-settings-control`, `town-upgrade-offer`, and `town-level-node` as
+immutable version `1.0.0` components. Do not assemble an incomplete final
+delivery package.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
