@@ -321,9 +321,15 @@ validation rejects changed bytes, unsafe paths, embedded image layers, and
 reference/comparison evidence. The real Block Forge pilot was deliberately not
 promoted because it remains `review-required`.
 
-**Next task:** M12-A6 — Block Forge pilot approval and execution. **Human
-decision:** named product, art, and UI reviewers must approve the bounded pilot
-jobs before builds, promotion, or the final delivery package may proceed.
+**M12-A6 — Pilot review decision:** Hien, acting as Product, Art, and UI
+reviewer, selected Option 1 on 2026-07-30. The puzzle-board job is
+`revision-required`; its `REPAIR` label must be comfortably readable at
+thumbnail size before approval.
+
+**Next agent-ready task:** M12-A6a — improve the puzzle-board `REPAIR` label
+without changing the approved geometry/reference boundary, regenerate native,
+phone, and thumbnail evidence, and return the job for Hien's approval. No build,
+promotion, or package execution is authorized by this remediation decision.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
