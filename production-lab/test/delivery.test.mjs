@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  applyPromotionToProject,
   createPackageManifest,
   createPromotionReceipt,
   planPromotion
@@ -67,6 +68,16 @@ test("plans a deterministic versioned promotion and produces dry-run and executi
   });
   assert.equal(executed.status, "promoted");
   assert.equal(executed.components[0].version, "1.0.0");
+
+  const project = applyPromotionToProject({
+    project: { ...fixture().project, jobs: [{ id: "pilot-job", status: "built" }], promotion: { status: "not-promoted" } },
+    plan,
+    receipt: executed
+  });
+  assert.equal(project.componentInventory[0].status, "promoted");
+  assert.equal(project.jobs[0].status, "promoted");
+  assert.equal(project.promotion.status, "components-promoted");
+  assert.match(project.promotion.latestReceipt, /promotion-receipts/u);
 });
 
 test("rejects promotion without a built job or with stale identity and unsafe modules", () => {

@@ -66,6 +66,29 @@ export function createPromotionReceipt({ plan, promotedFiles, executedAt, dryRun
   };
 }
 
+export function applyPromotionToProject({ project, plan, receipt }) {
+  const nextProject = structuredClone(project);
+  for (const component of plan.components) {
+    nextProject.componentInventory.push({
+      id: component.id,
+      version: component.version,
+      status: "promoted",
+      sourceJobId: plan.jobId,
+      approvalId: plan.approvalId,
+      libraryPath: `library/${component.id}/${component.version}`,
+      promotionReceipt: `promotion-receipts/${receipt.receiptId}.json`
+    });
+  }
+  const job = nextProject.jobs.find((entry) => entry.id === plan.jobId);
+  if (job) job.status = "promoted";
+  nextProject.promotion = {
+    status: "components-promoted",
+    latestReceipt: `promotion-receipts/${receipt.receiptId}.json`,
+    updatedAt: receipt.executedAt
+  };
+  return nextProject;
+}
+
 export function createPackageManifest({
   project,
   packageVersion,

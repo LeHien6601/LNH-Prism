@@ -339,10 +339,18 @@ and UI reviewer, approved the regenerated evidence on 2026-07-30. The immutable
 approval receipt is current and hash-valid; it covers only
 `block-forge-puzzle-board`.
 
-**Next agent-ready task:** M12-A6c — build and compare the approved puzzle-board
-job, validate the promotion dry-run, and promote its components as immutable
-version `1.0.0`. Do not assemble the final Block Forge package while the other
-eight planned pilot jobs remain uncreated and unapproved.
+**M12-A6c — Puzzle-board build and promotion:** 🟢 Complete. The current
+approval produced 22 deterministic SVG/PNG modules across four component
+families and 11 states. Comparison was regenerated, the promotion dry-run
+validated plan `7b1f96109f1d6d40f3373a4861b8dc83dcb9c6fd7fa365bf9dfef5acb116cf26`,
+and execution promoted `bridge`, `primary-action`, `puzzle-board`, and
+`puzzle-unit` as immutable `1.0.0` components. The project summary now
+synchronizes promoted job/component status. No delivery package was assembled.
+
+**Next agent-ready task:** M12-A6d — create the bounded Block Forge UI button
+and panel family job, reuse the promoted `primary-action` rather than
+reconstructing it independently, reconstruct the missing panel coverage,
+generate native/phone/thumbnail evidence, and stop for human review.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.

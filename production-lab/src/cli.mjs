@@ -33,7 +33,7 @@ import {
   writeJson
 } from "./lib.mjs";
 import { pngAlphaStats, renderPng } from "./raster.mjs";
-import { createPackageManifest, createPromotionReceipt, planPromotion } from "./delivery.mjs";
+import { applyPromotionToProject, createPackageManifest, createPromotionReceipt, planPromotion } from "./delivery.mjs";
 
 function required(values, key) {
   if (!values[key]) throw new Error(`Missing required --${key}.`);
@@ -715,18 +715,7 @@ async function promoteJob(values) {
       });
       receiptPath = path.join(context.projectDirectory, "promotion-receipts", `${receipt.receiptId}.json`);
       if (await pathExists(receiptPath)) throw new Error(`Promotion receipt already exists: ${receipt.receiptId}`);
-      const nextProject = structuredClone(context.project);
-      for (const component of plan.components) {
-        nextProject.componentInventory.push({
-          id: component.id,
-          version: component.version,
-          status: "promoted",
-          sourceJobId: plan.jobId,
-          approvalId: plan.approvalId,
-          libraryPath: `library/${component.id}/${component.version}`,
-          promotionReceipt: `promotion-receipts/${receipt.receiptId}.json`
-        });
-      }
+      const nextProject = applyPromotionToProject({ project: context.project, plan, receipt });
       await writeJson(receiptPath, receipt);
       await writeJson(context.projectFilename, validateProjectManifest(nextProject));
       projectUpdated = true;
