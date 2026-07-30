@@ -385,10 +385,19 @@ immutable approval receipt is current and hash-valid. The approval covers the
 three newly reconstructed HUD families and preserves reuse of all seven
 promoted dependencies.
 
-**Next agent-ready task:** M12-A6i — build and compare the approved snapshot,
-validate the promotion dry-run, and promote `repair-progress-hud`,
-`turn-counter`, and `exit-control` as immutable version `1.0.0` components. Do
-not assemble an incomplete final delivery package.
+**M12-A6i — Gameplay HUD build and promotion:** 🟢 Complete. The approved
+snapshot produced 14 deterministic SVG/PNG modules. Comparison was regenerated,
+promotion plan
+`428a8dd9a07abcd26395a7350fd476c577e451dc0c26ab9ceda19db7af0a05be`
+passed dry-run validation, and `repair-progress-hud`, `turn-counter`, and
+`exit-control` were promoted as immutable `1.0.0` components. The project
+library now contains ten promoted families and 58 files with zero audit
+findings. No delivery package was assembled.
+
+**Next agent-ready task:** M12-A6j — register the approved Town reference as a
+bounded composition authority, create the Town functional-UI job, reuse
+promoted shared components, reconstruct only missing functional UI families,
+generate native/phone/thumbnail evidence, and stop for human review.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
