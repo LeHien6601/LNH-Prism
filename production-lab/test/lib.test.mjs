@@ -10,6 +10,7 @@ import {
   createApprovalReceipt,
   createProjectManifest,
   familyStateSvg,
+  hasGeometryAuthority,
   resolveComponentState,
   reviewScreenSvg,
   safeJobId,
@@ -199,6 +200,15 @@ test("project manifests validate multi-reference authority and history", () => {
   assert.throws(() => validateProjectManifest(invalid), /unregistered reference/);
 });
 
+test("component authority satisfies bounded UI-family geometry authority", () => {
+  const references = [
+    { id: "ui", authorityRole: "component-authority" },
+    { id: "style", authorityRole: "style-authority" }
+  ];
+  assert.equal(hasGeometryAuthority(["ui", "style"], references), true);
+  assert.equal(hasGeometryAuthority(["style"], references), false);
+});
+
 async function blockForgeFixture() {
   return JSON.parse(await readFile(
     new URL("../examples/block-forge-state-constraints.json", import.meta.url),
@@ -290,6 +300,7 @@ test("review surfaces expose states, slicing guides, and geometry overlays", asy
   assert.match(reviewScreenSvg(draft, { overlays: true }), /canvas-safe-area/);
   assert.match(reviewScreenSvg(draft, { overlays: true }), /puzzle-board-constraint-guides/);
   assert.match(reviewScreenSvg(draft, { overlays: true }), /bridge-constraint-guides/);
+  assert.match(reviewScreenSvg(draft), /data-component-family-id|primary-action/);
 });
 
 test("approval receipts are immutable inputs and reject stale sources", async () => {

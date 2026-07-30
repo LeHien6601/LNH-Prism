@@ -13,6 +13,7 @@ import {
   ensureDir,
   escapeXml,
   familyStateSvg,
+  hasGeometryAuthority,
   imageDimensions,
   jobRoot,
   parseArgs,
@@ -21,7 +22,6 @@ import {
   safeJobId,
   safeProjectId,
   safeReferenceId,
-  screenSvg,
   sha256,
   slicingPreviewSvg,
   stateSheetSvg,
@@ -218,10 +218,7 @@ async function auditProject(values) {
   }
   const report = auditProjectDrafts(project, drafts);
   for (const job of project.jobs) {
-    const authorities = new Set(job.referenceIds.map((id) =>
-      project.references.find((reference) => reference.id === id)?.authorityRole
-    ));
-    if (!authorities.has("primary-geometry")) {
+    if (!hasGeometryAuthority(job.referenceIds, project.references)) {
       report.findings.push({
         classification: "unresolved-human-decision",
         projectId: project.projectId,
@@ -230,7 +227,7 @@ async function auditProject(values) {
         stateId: null,
         token: null,
         supportingReference: job.referenceIds[0] ?? null,
-        message: "No primary-geometry authority is registered."
+        message: "No primary-geometry or component authority is registered."
       });
     }
   }
@@ -503,6 +500,14 @@ inspect the preview comparison. Do not use reference pixels in generated assets.
   job.status = "review-required";
   job.updatedAt = new Date().toISOString();
   await writeJson(path.join(root, "job.json"), job);
+  if (job.projectId) {
+    const { filename: projectFilename, project } = await loadProject(job.projectId);
+    const projectJob = project.jobs.find((entry) => entry.id === job.jobId);
+    if (projectJob) {
+      projectJob.status = job.status;
+      await writeJson(projectFilename, validateProjectManifest(project));
+    }
+  }
   console.log(`Prepared Codex-native analysis task for ${job.jobId}.`);
 }
 
@@ -912,8 +917,19 @@ async function previewJob(values) {
   for (const component of draft.components) {
     await writeFile(path.join(componentDir, `${component.id}.svg`), componentSvg(component, draft.materials), "utf8");
   }
+  let familyStateCount = 0;
+  for (const family of draft.componentFamilies ?? []) {
+    for (const state of family.states) {
+      await writeFile(
+        path.join(componentDir, `${family.id}-${state.id}.svg`),
+        familyStateSvg(family, state.id, draft.materials),
+        "utf8"
+      );
+      familyStateCount += 1;
+    }
+  }
   const screenPath = path.join(root, "preview", "reconstructed-screen.svg");
-  await writeFile(screenPath, screenSvg(draft), "utf8");
+  await writeFile(screenPath, reviewScreenSvg(draft), "utf8");
 
   const job = await readJson(path.join(root, "job.json"));
   const referencePath = `../${job.reference.path.replaceAll("\\", "/")}`;
@@ -926,7 +942,7 @@ async function previewJob(values) {
   const comparisonDir = path.join(root, "comparison");
   await ensureDir(comparisonDir);
   await writeFile(path.join(comparisonDir, "overlay.html"), html, "utf8");
-  console.log(`Previewed ${draft.components.length} component(s) for Codex inspection.`);
+  console.log(`Previewed ${draft.components.length} component(s) and ${familyStateCount} family state(s) for Codex inspection.`);
 }
 
 async function compareJob(values) {

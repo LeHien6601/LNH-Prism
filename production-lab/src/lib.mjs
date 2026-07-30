@@ -281,6 +281,13 @@ export function auditProjectDrafts(project, drafts) {
   };
 }
 
+export function hasGeometryAuthority(referenceIds, references) {
+  const roles = new Set(referenceIds.map((id) =>
+    references.find((reference) => reference.id === id)?.authorityRole
+  ));
+  return roles.has("primary-geometry") || roles.has("component-authority");
+}
+
 export function imageDimensions(bytes, extension) {
   const ext = extension.toLowerCase();
   if (ext === ".png" && bytes.length >= 24 && bytes.subarray(1, 4).toString() === "PNG") {

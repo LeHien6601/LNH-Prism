@@ -347,10 +347,18 @@ and execution promoted `bridge`, `primary-action`, `puzzle-board`, and
 `puzzle-unit` as immutable `1.0.0` components. The project summary now
 synchronizes promoted job/component status. No delivery package was assembled.
 
-**Next agent-ready task:** M12-A6d — create the bounded Block Forge UI button
-and panel family job, reuse the promoted `primary-action` rather than
-reconstructing it independently, reconstruct the missing panel coverage,
-generate native/phone/thumbnail evidence, and stop for human review.
+**M12-A6d — UI button/panel family job:** 🟢 Technical preparation complete.
+The bounded job references promoted `primary-action@1.0.0` rather than
+reconstructing the shared button. It adds editable `small-info-panel`,
+`medium-modal-panel`, and `popup-panel` families with normal/selected states,
+replaceable text/icon slots, protected content regions, effect padding, and
+engine-neutral scalable borders. Native, phone, thumbnail, state, isolation,
+slicing, geometry, and safe-area evidence were generated and inspected. The
+project audit has zero findings.
+
+**Next task:** M12-A6e — Hien reviews the UI-family evidence as Product, Art,
+and UI reviewer. **Human decision:** approve it or return it with a bounded
+reason. No build or promotion is authorized before approval.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
