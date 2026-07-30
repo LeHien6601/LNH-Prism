@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 import { access, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import {
   componentSvg,
   AUTHORITY_ROLES,
   atomicWriteFile,
   createProjectManifest,
   ensureDir,
+  escapeXml,
+  familyStateSvg,
   imageDimensions,
   jobRoot,
   parseArgs,
@@ -17,10 +20,14 @@ import {
   safeReferenceId,
   screenSvg,
   sha256,
+  slicingPreviewSvg,
+  stateSheetSvg,
+  reviewScreenSvg,
   validateDraft,
   validateProjectManifest,
   writeJson
 } from "./lib.mjs";
+import { pngAlphaStats, renderPng } from "./raster.mjs";
 
 function required(values, key) {
   if (!values[key]) throw new Error(`Missing required --${key}.`);
@@ -216,6 +223,132 @@ async function validateJob(values) {
   };
   await writeJson(path.join(root, "validation", "constraint-report.json"), report);
   console.log(JSON.stringify(report, null, 2));
+}
+
+async function renderEvidence(values) {
+  const requestedJobId = safeJobId(required(values, "job"));
+  const root = jobRoot(requestedJobId);
+  const draftPath = path.join(root, "analysis", "draft.json");
+  const draft = validateDraft(await readJson(draftPath));
+  if (draft.jobId !== requestedJobId) throw new Error(`Draft jobId ${draft.jobId} does not match ${requestedJobId}.`);
+  if (!(draft.componentFamilies?.length > 0)) throw new Error("Evidence rendering requires componentFamilies.");
+  const outputRoot = path.join(root, "review");
+  const assets = [];
+  for (const family of draft.componentFamilies) {
+    for (const state of family.states) {
+      const svg = familyStateSvg(family, state.id, draft.materials);
+      const relativeBase = `isolated/${family.id}-${state.id}`;
+      const svgPath = path.join(outputRoot, `${relativeBase}.svg`);
+      const pngPath = path.join(outputRoot, `${relativeBase}.png`);
+      await atomicWriteFile(svgPath, svg);
+      const png = renderPng(svg);
+      await atomicWriteFile(pngPath, png);
+      const alpha = pngAlphaStats(png);
+      const expectedWidth = family.bounds.width + family.effectPadding.left + family.effectPadding.right;
+      const expectedHeight = family.bounds.height + family.effectPadding.top + family.effectPadding.bottom;
+      if (alpha.width !== expectedWidth || alpha.height !== expectedHeight) throw new Error(`Native dimensions drifted for ${family.id}/${state.id}.`);
+      if (alpha.transparentPixels === 0 || alpha.minimumAlpha === 255) throw new Error(`Transparent alpha is missing for ${family.id}/${state.id}.`);
+      if (alpha.edgeOpaquePixels > 0) throw new Error(`Effect padding is clipped for ${family.id}/${state.id}.`);
+      if (svg.includes("<image")) throw new Error(`Reference pixels are forbidden in ${family.id}/${state.id}.`);
+      assets.push({
+        familyId: family.id,
+        stateId: state.id,
+        svgPath: `${relativeBase}.svg`,
+        pngPath: `${relativeBase}.png`,
+        svgSha256: await sha256(svgPath),
+        pngSha256: alpha.sha256,
+        nativeDimensions: { width: alpha.width, height: alpha.height },
+        alpha
+      });
+    }
+    const sheet = stateSheetSvg(family, draft.materials);
+    await atomicWriteFile(path.join(outputRoot, `states/${family.id}.svg`), sheet);
+    await atomicWriteFile(path.join(outputRoot, `states/${family.id}.png`), renderPng(sheet));
+    if (family.slicing) {
+      const slicing = slicingPreviewSvg(family, draft.materials);
+      await atomicWriteFile(path.join(outputRoot, `slicing/${family.id}.svg`), slicing);
+      await atomicWriteFile(path.join(outputRoot, `slicing/${family.id}.png`), renderPng(slicing));
+    }
+  }
+  const nativeSvg = reviewScreenSvg(draft);
+  const overlaySvg = reviewScreenSvg(draft, { overlays: true });
+  await atomicWriteFile(path.join(outputRoot, "screens/native.svg"), nativeSvg);
+  await atomicWriteFile(path.join(outputRoot, "screens/geometry-overlays.svg"), overlaySvg);
+  for (const [id, width] of [["native", draft.canvas.width], ["phone", 360], ["thumbnail", 180]]) {
+    await atomicWriteFile(path.join(outputRoot, `screens/${id}.png`), renderPng(nativeSvg, { width }));
+  }
+  await atomicWriteFile(path.join(outputRoot, "screens/geometry-overlays.png"), renderPng(overlaySvg));
+
+  const job = await readJson(path.join(root, "job.json"));
+  const reference = job.references?.[0];
+  const referenceUrl = reference
+    ? pathToFileURL(path.resolve(projectRoot(job.projectId), ...reference.projectPath.split("/"))).href
+    : pathToFileURL(path.resolve(root, job.reference.path)).href;
+  const stateLinks = draft.componentFamilies.map((family) =>
+    `<a href="states/${family.id}.svg">${escapeXml(family.id)} states</a>`
+  ).join("");
+  const isolatedLinks = assets.map((asset) =>
+    `<a href="${asset.pngPath}">${escapeXml(asset.familyId)}/${escapeXml(asset.stateId)}</a>`
+  ).join("");
+  const html = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>${escapeXml(requestedJobId)} review</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#14171c;color:#f7f7f7;font:14px system-ui}.bar{position:sticky;top:0;z-index:2;padding:12px 16px;background:#20242b;display:flex;gap:14px;align-items:center;flex-wrap:wrap}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;padding:16px}.card{background:#20242b;border:1px solid #3d4552;border-radius:10px;padding:12px}.stage{position:relative;max-width:520px;margin:auto;aspect-ratio:${draft.canvas.width}/${draft.canvas.height};overflow:hidden;background:#000}.stage img,.stage object{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.reconstruction{opacity:.5}.checker{background-color:#ddd;background-image:linear-gradient(45deg,#aaa 25%,transparent 25%),linear-gradient(-45deg,#aaa 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#aaa 75%),linear-gradient(-45deg,transparent 75%,#aaa 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}.light{background:#f5f5f5}.dark{background:#111}.links{display:flex;flex-wrap:wrap;gap:8px}.links a{color:#71d7ff}
+</style></head><body>
+<div class="bar"><strong>${escapeXml(requestedJobId)}</strong><label>Overlay <input id="opacity" type="range" min="0" max="100" value="50"></label><span>Reference is review-only; outputs contain reconstructed geometry.</span></div>
+<div class="grid">
+<section class="card"><h2>Side by side</h2><div class="grid"><img src="${referenceUrl}" alt="Approved review reference" style="width:100%"><object data="screens/native.svg" type="image/svg+xml"></object></div></section>
+<section class="card"><h2>Adjustable overlay</h2><div class="stage"><img src="${referenceUrl}" alt="Approved review reference"><object class="reconstruction" data="screens/native.svg" type="image/svg+xml"></object></div></section>
+<section class="card"><h2>Difference view</h2><div class="stage"><img src="${referenceUrl}" alt="Approved review reference"><object class="reconstruction" style="mix-blend-mode:difference;opacity:1" data="screens/native.svg" type="image/svg+xml"></object></div></section>
+<section class="card"><h2>Reconstruction only</h2><object data="screens/native.svg" type="image/svg+xml" style="width:100%"></object></section>
+<section class="card"><h2>Geometry and safe areas</h2><object data="screens/geometry-overlays.svg" type="image/svg+xml" style="width:100%"></object></section>
+<section class="card"><h2>Target sizes</h2><div class="links"><a href="screens/native.png">native</a><a href="screens/phone.png">phone</a><a href="screens/thumbnail.png">thumbnail</a></div></section>
+<section class="card"><h2>Transparency backgrounds</h2><div class="grid"><div class="light"><img src="${assets[0].pngPath}" style="width:100%"></div><div class="dark"><img src="${assets[0].pngPath}" style="width:100%"></div><div class="checker"><img src="${assets[0].pngPath}" style="width:100%"></div></div></section>
+<section class="card"><h2>State comparisons</h2><div class="links">${stateLinks}</div></section>
+<section class="card"><h2>Component isolation</h2><div class="links">${isolatedLinks}</div></section>
+</div><script>const slider=document.querySelector("#opacity");const layer=document.querySelector(".reconstruction");slider.addEventListener("input",()=>layer.style.opacity=slider.value/100);</script></body></html>`;
+  await atomicWriteFile(path.join(outputRoot, "index.html"), html);
+  const manifest = {
+    schemaVersion: 1,
+    projectId: draft.projectId ?? null,
+    jobId: draft.jobId,
+    draftSha256: await sha256(draftPath),
+    renderer: { id: "@resvg/resvg-js", version: "2.6.2" },
+    assets,
+    reviewSurfaces: {
+      index: "index.html",
+      stateSheets: draft.componentFamilies.map((family) => `states/${family.id}.svg`),
+      slicingPreviews: draft.componentFamilies.filter((family) => family.slicing).map((family) => `slicing/${family.id}.svg`),
+      screens: ["screens/native.png", "screens/phone.png", "screens/thumbnail.png", "screens/geometry-overlays.png"]
+    }
+  };
+  await writeJson(path.join(outputRoot, "manifest.json"), manifest);
+  await writeJson(path.join(outputRoot, "mobile-readability.json"), {
+    schemaVersion: 1,
+    projectId: draft.projectId ?? null,
+    jobId: draft.jobId,
+    status: "inspection-required",
+    inspected: { native: false, phone: false, thumbnail: false },
+    checks: ["text-hierarchy", "silhouette-recognition", "target-state-recognition", "icon-readability", "touch-target-declarations", "interactive-separation", "excessive-detail", "effect-visibility"]
+  });
+  console.log(`Rendered ${assets.length} transparent state asset(s) and review surfaces.`);
+}
+
+async function recordMobileReview(values) {
+  const requestedJobId = safeJobId(required(values, "job"));
+  const root = jobRoot(requestedJobId);
+  const reviewPath = path.join(root, "review", "mobile-readability.json");
+  const report = await readJson(reviewPath);
+  const reviewer = required(values, "reviewer").trim();
+  if (!reviewer) throw new Error("Reviewer must not be empty.");
+  report.status = "inspected";
+  report.inspected = { native: true, phone: true, thumbnail: true };
+  report.reviewer = reviewer;
+  report.inspectedAt = new Date().toISOString();
+  report.findings = required(values, "findings");
+  report.artisticApproval = false;
+  await writeJson(reviewPath, report);
+  console.log(`Recorded native, phone, and thumbnail inspection for ${requestedJobId}.`);
 }
 
 async function initJob(values) {
@@ -451,6 +584,8 @@ async function main() {
     "project-status": projectStatus,
     "project-audit": auditProject,
     "validate-job": validateJob,
+    "render-evidence": renderEvidence,
+    "record-mobile-review": recordMobileReview,
     init: initJob,
     prepare: prepareJob,
     analyze: prepareJob,
@@ -460,7 +595,7 @@ async function main() {
     compare: compareJob
   };
   if (!actions[command]) {
-    throw new Error("Usage: lab <project-init|reference-add|reference-list|reference-validate|job-create|project-status|project-audit|validate-job|init|prepare|preview|approve|build|compare> [options]");
+    throw new Error("Usage: lab <project-init|reference-add|reference-list|reference-validate|job-create|project-status|project-audit|validate-job|render-evidence|record-mobile-review|init|prepare|preview|approve|build|compare> [options]");
   }
   await actions[command](values);
 }

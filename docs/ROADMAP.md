@@ -293,9 +293,18 @@ scalable regions, safe areas, touch targets, fixed size/aspect, grid alignment,
 and exact 8x8 square puzzle geometry validate through the canonical Block Forge
 puzzle/bridge/button fixture and machine-readable job report.
 
-**Next agent-ready task:** M12-A3 — deterministic transparent PNG output,
-alpha/effect-padding validation, slicing preview, state comparison, and
-native/phone/thumbnail review surfaces.
+**M12-A3 — Preview and transparent output:** 🟢 Complete. Eleven isolated state
+SVG/PNG pairs validate deterministic hashes, real alpha, native dimensions,
+effect-padding clearance, and absence of reference pixels. Slicing/state sheets,
+side-by-side/overlay/difference HTML, geometry/safe-area/grid/anchor overlays,
+and native/phone/thumbnail surfaces were generated and visually inspected.
+Technical inspection recorded one non-blocking finding: the prototype `REPAIR`
+label is not comfortably readable at thumbnail size; no artistic approval was
+granted.
+
+**Next agent-ready task:** M12-A4 — cross-job drift classification, immutable
+approval evidence, stale-source invalidation, concurrency protection, and
+interrupted-build recovery.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, promotion, engine packaging, runtime code, or general visual editor.

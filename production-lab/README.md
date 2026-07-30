@@ -1,14 +1,15 @@
 # LNH Prism Production Lab
 
 A supported private package inside LNH Prism for controlled screenshot-to-UI
-reconstruction. Version `0.3.0` is owned by LNH Prism and supported for project
+reconstruction. Version `0.4.0` is owned by LNH Prism and supported for project
 intake, registered reference provenance, bounded job preparation, editable SVG
 reconstruction, human approval, build, and comparison. The package remains
 isolated from the parent renderer, milestone evidence, and production assets.
 
 Component-family/state inheritance, shared footprints, replaceable text/icon
 slots, scalable-region metadata, effect padding, and declarative geometry
-constraints are supported and validated. Transparent PNG delivery, promotion,
+constraints are supported and validated. Deterministic transparent PNG state
+assets and native/phone/thumbnail review evidence are supported. Promotion,
 project-library versioning, and engine-neutral package assembly remain planned.
 
 Reference screenshots are evidence only. Production output is reconstructed
@@ -28,6 +29,10 @@ cropped, traced, or embedded into component assets.
 7. `build` emits independently editable component SVGs and a composed screen.
 8. `compare` creates an overlay surface and a machine-readable geometry report.
 9. `validate-job` creates a machine-readable state-and-constraint report.
+10. `render-evidence` emits isolated SVG/PNG states, slicing/state sheets,
+    geometry overlays, comparison HTML, and target-size review surfaces.
+11. After inspecting every required size, `record-mobile-review` records
+    evidence-backed findings without granting artistic approval.
 
 ## Commands
 
@@ -42,6 +47,8 @@ npm run lab -- reference-validate --project block-forge
 npm run lab -- job-create --project block-forge --job puzzle-board --references puzzle-system,ui-system --scope "Puzzle board cells and fixed-orientation pieces"
 npm run lab -- prepare --job puzzle-board
 npm run lab -- validate-job --job puzzle-board
+npm run lab -- render-evidence --job puzzle-board
+npm run lab -- record-mobile-review --job puzzle-board --reviewer "UI reviewer" --findings "Evidence-backed native, phone, and thumbnail findings"
 npm run lab -- preview --job puzzle-board
 npm run lab -- approve --job puzzle-board --reviewer "Art Lead"
 npm run lab -- build --job puzzle-board
@@ -70,6 +77,13 @@ The canonical state-and-constraint example is
 square puzzle grid, shared broken/damaged/repaired bridge footprints, inherited
 layer overrides, replaceable text and icon slots, mobile touch targets, safe
 areas, effect padding, and engine-neutral scalable regions.
+
+Isolated PNG dimensions include declared effect padding. Evidence rendering
+fails when alpha is absent, output dimensions drift, an outer edge is occupied
+(indicating clipped effects), or SVG contains an image layer. `review/index.html`
+provides side-by-side, adjustable overlay, difference, reconstruction-only,
+component-isolation, state, target-size, transparency-background, geometry,
+safe-area, grid, and anchor views.
 
 ## Draft component format
 

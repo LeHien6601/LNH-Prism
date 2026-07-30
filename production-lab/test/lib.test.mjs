@@ -4,12 +4,17 @@ import test from "node:test";
 import {
   componentSvg,
   createProjectManifest,
+  familyStateSvg,
   resolveComponentState,
+  reviewScreenSvg,
   safeJobId,
   screenSvg,
+  slicingPreviewSvg,
+  stateSheetSvg,
   validateDraft,
   validateProjectManifest
 } from "../src/lib.mjs";
+import { pngAlphaStats, renderPng } from "../src/raster.mjs";
 
 function fixture() {
   return {
@@ -248,4 +253,32 @@ test("replaceable text slots enforce mobile and localization declarations", asyn
   const label = draft.componentFamilies.find((family) => family.id === "primary-action").textSlots[0];
   label.localizationExpansion = 0.9;
   assert.throws(() => validateDraft(draft), /localizationExpansion/);
+});
+
+test("isolated family PNG output is deterministic, transparent, and padding-safe", async () => {
+  const draft = await blockForgeFixture();
+  const family = draft.componentFamilies.find((candidate) => candidate.id === "primary-action");
+  const svg = familyStateSvg(family, "normal", draft.materials);
+  const first = renderPng(svg);
+  const second = renderPng(svg);
+  assert.deepEqual(first, second);
+  assert.doesNotMatch(svg, /<image|screen-background/);
+  const alpha = pngAlphaStats(first);
+  assert.equal(alpha.width, 420);
+  assert.equal(alpha.height, 120);
+  assert.equal(alpha.minimumAlpha, 0);
+  assert.ok(alpha.transparentPixels > 0);
+  assert.equal(alpha.edgeOpaquePixels, 0);
+});
+
+test("review surfaces expose states, slicing guides, and geometry overlays", async () => {
+  const draft = await blockForgeFixture();
+  const family = draft.componentFamilies.find((candidate) => candidate.id === "primary-action");
+  assert.match(stateSheetSvg(family), /data-review-surface="state-comparison"/);
+  assert.match(stateSheetSvg(family), /primary-action-disabled/);
+  assert.match(slicingPreviewSvg(family), /id="slicing-guides"/);
+  assert.match(reviewScreenSvg(draft, { overlays: true }), /data-review-overlays="true"/);
+  assert.match(reviewScreenSvg(draft, { overlays: true }), /canvas-safe-area/);
+  assert.match(reviewScreenSvg(draft, { overlays: true }), /puzzle-board-constraint-guides/);
+  assert.match(reviewScreenSvg(draft, { overlays: true }), /bridge-constraint-guides/);
 });

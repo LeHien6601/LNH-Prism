@@ -1,14 +1,15 @@
 # Project Overview and Control Page
 
 > 2026-07-30 readiness update: `production-lab/` is now an owned, supported
-> private LNH Prism package at version `0.3.0`; see
+> private LNH Prism package at version `0.4.0`; see
 > [ADR-015](decisions/ADR-015-production-lab-supported-package.md) and the
 > [incremental readiness plan](implementation/PRODUCTION_LAB_READINESS_PLAN.md).
 > Generic intake, multi-reference provenance, component-family/state
 > inheritance, exact Block Forge puzzle geometry, shared bridge footprints,
 > slots, effect padding, scalable regions, and job validation are implemented.
-> Production reconstruction remains gated on preview/transparent-output
-> evidence; Unity integration remains deferred.
+> Deterministic transparent state PNGs and native/phone/thumbnail review
+> evidence are implemented. Production approval remains gated on audit and
+> approval hardening; Unity integration remains deferred.
 
 ## 1. Mission
 
@@ -31,8 +32,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🤖 **Preview and transparent output (M12-A3)** · Agent-ready |
-| Next agent-ready task | M12-A3 — Deterministic PNG, slicing/state previews, and mobile-readability evidence |
+| Next task | 🤖 **Audit and approval hardening (M12-A4)** · Agent-ready |
+| Next agent-ready task | M12-A4 — Drift audit, immutable approval evidence, stale-source invalidation, and interrupted-build safety |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -68,7 +69,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | M12-A1 and M12-A2 complete; M12-A3 is agent-ready |
+| 🔵 | M12 | Production Lab Block Forge readiness | M12-A1 through M12-A3 complete; M12-A4 is agent-ready |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -76,7 +77,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
 | Priority | Task | Owner | Execution | Exit condition |
 |---|---|---|---|---|
-| P0 | Add deterministic transparent output and review surfaces (M12-A3) | 🤖 Agent | Agent-ready | Transparent PNG hashes/alpha/effect padding validate; slicing, state, native/phone/thumbnail surfaces are inspectable |
+| P0 | Add deterministic transparent output and review surfaces (M12-A3) | 🤖 Agent | 🟢 Complete | Eleven isolated state SVG/PNG pairs validate deterministic hashes, alpha, padding, slicing/state sheets, and native/phone/thumbnail inspection |
+| P0 | Harden audit and approval lifecycle (M12-A4) | 🤖 Agent | Agent-ready | Cross-job drift is classified; approvals are immutable and invalidate on source change; interrupted writes/builds recover safely |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |

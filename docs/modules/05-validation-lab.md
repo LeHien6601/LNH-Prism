@@ -106,3 +106,4 @@ ADR-014 sets M4's accepted boundary as engine-neutral modular asset delivery. M4
 | 2026-07-17 | Approved V4 definition Option A with manifest versioning and canonical naming clarifications; unblocked M4-S1 | Project owner / Codex |
 | 2026-07-17 | Reconciled active validation guidance with ADR-014's engine-neutral M4 package boundary; historical Unity entries remain for audit only | Codex |
 | 2026-07-19 | Added a pre-package craft loop and grammar/state-contract evidence after repeated M11 reviews isolated surface construction and perceptible state response as the limiting quality gap | Codex |
+| 2026-07-30 | Added M12-A3 slicing/state sheets, adjustable comparison, geometry/grid/anchor overlays, three-size review surfaces, and explicit non-approving mobile-readability evidence | Codex |

@@ -105,7 +105,7 @@ export function createProjectManifest({ projectId, displayName }) {
     support: {
       status: "supported-private-package",
       owner: "lnh-prism",
-      packageVersion: "0.3.0",
+      packageVersion: "0.4.0",
       engineNeutral: true
     },
     references: [],
@@ -580,6 +580,101 @@ export function componentSvg(component, materials = []) {
 ${defsSvg(materials)}
   ${layers}
 </svg>
+`;
+}
+
+export function familyStateSvg(family, stateId, materials = []) {
+  const resolved = resolveComponentState(family, stateId);
+  const padding = family.effectPadding;
+  const width = family.bounds.width + padding.left + padding.right;
+  const height = family.bounds.height + padding.top + padding.bottom;
+  const layers = resolved.layers.map(layerSvg).join("\n    ");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" data-component-family-id="${escapeXml(family.id)}" data-state-id="${escapeXml(stateId)}">
+${defsSvg(materials)}
+  <g id="${escapeXml(family.id)}-${escapeXml(stateId)}" transform="translate(${padding.left} ${padding.top})">
+    ${layers}
+  </g>
+</svg>
+`;
+}
+
+export function stateSheetSvg(family, materials = []) {
+  const gap = 32;
+  const labelHeight = 36;
+  const itemWidth = family.bounds.width + family.effectPadding.left + family.effectPadding.right;
+  const itemHeight = family.bounds.height + family.effectPadding.top + family.effectPadding.bottom;
+  const width = family.states.length * itemWidth + Math.max(0, family.states.length - 1) * gap;
+  const height = itemHeight + labelHeight;
+  const states = family.states.map((state, index) => {
+    const resolved = resolveComponentState(family, state.id);
+    const x = index * (itemWidth + gap);
+    const layers = resolved.layers.map(layerSvg).join("\n        ");
+    return `    <g id="${escapeXml(family.id)}-${escapeXml(state.id)}" transform="translate(${x + family.effectPadding.left} ${labelHeight + family.effectPadding.top})">
+        ${layers}
+      </g>
+      <text x="${x + itemWidth / 2}" y="24" fill="#ffffff" font-family="sans-serif" font-size="18" text-anchor="middle">${escapeXml(state.id)}</text>`;
+  }).join("\n");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" data-review-surface="state-comparison">
+${defsSvg(materials)}
+  <rect width="100%" height="100%" fill="#20242b"/>
+${states}
+</svg>
+`;
+}
+
+export function slicingPreviewSvg(family, materials = []) {
+  if (!family.slicing) throw new Error(`${family.id} does not declare slicing metadata.`);
+  const stateId = family.states[0].id;
+  const resolved = resolveComponentState(family, stateId);
+  const { width, height } = family.bounds;
+  const borders = family.slicing.fixedBorders;
+  const safe = family.slicing.contentSafeRegion;
+  const layers = resolved.layers.map(layerSvg).join("\n    ");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" data-review-surface="slicing-preview" data-component-family-id="${escapeXml(family.id)}">
+${defsSvg(materials)}
+  <g id="${escapeXml(family.id)}-${escapeXml(stateId)}">
+    ${layers}
+  </g>
+  <g id="slicing-guides" fill="none" pointer-events="none">
+    <path d="M ${borders.left} 0 V ${height} M ${width - borders.right} 0 V ${height} M 0 ${borders.top} H ${width} M 0 ${height - borders.bottom} H ${width}" stroke="#00e5ff" stroke-width="2" stroke-dasharray="8 6"/>
+    <rect x="${safe.x}" y="${safe.y}" width="${safe.width}" height="${safe.height}" stroke="#ffe066" stroke-width="2" stroke-dasharray="6 4"/>
+    <rect x="${family.slicing.stretchRegion.x}" y="${family.slicing.stretchRegion.y}" width="${family.slicing.stretchRegion.width}" height="${family.slicing.stretchRegion.height}" stroke="#ff5edb" stroke-width="2"/>
+  </g>
+</svg>
+`;
+}
+
+export function reviewScreenSvg(draft, { overlays = false } = {}) {
+  const legacy = draft.components.map((component) => {
+    const layers = component.layers.map(layerSvg).join("\n      ");
+    return `    <g id="${escapeXml(component.id)}" transform="translate(${component.bounds.x} ${component.bounds.y})">\n      ${layers}\n    </g>`;
+  });
+  const families = (draft.componentFamilies ?? []).map((family) => {
+    const state = resolveComponentState(family, family.states[0].id);
+    const layers = state.layers.map(layerSvg).join("\n      ");
+    const grid = (draft.geometryConstraints ?? []).find((constraint) =>
+      constraint.kind === "square-grid" && constraint.familyId === family.id
+    );
+    const gridGuides = grid ? [
+      ...Array.from({ length: grid.columns - 1 }, (_, index) => `<path d="M ${(index + 1) * grid.cellSize} 0 V ${family.bounds.height}"/>`),
+      ...Array.from({ length: grid.rows - 1 }, (_, index) => `<path d="M 0 ${(index + 1) * grid.cellSize} H ${family.bounds.width}"/>`)
+    ].join("") : "";
+    const anchorGuide = family.anchor
+      ? `<path d="M ${family.anchor.x - 12} ${family.anchor.y} H ${family.anchor.x + 12} M ${family.anchor.x} ${family.anchor.y - 12} V ${family.anchor.y + 12}"/><circle cx="${family.anchor.x}" cy="${family.anchor.y}" r="6"/>`
+      : "";
+    const guides = overlays ? `<rect id="${escapeXml(family.id)}-bounds" width="${family.bounds.width}" height="${family.bounds.height}" fill="none" stroke="#00e5ff" stroke-width="2" stroke-dasharray="8 6"/>
+      <rect id="${escapeXml(family.id)}-safe" x="${family.contentSafeRegion.x}" y="${family.contentSafeRegion.y}" width="${family.contentSafeRegion.width}" height="${family.contentSafeRegion.height}" fill="none" stroke="#ffe066" stroke-width="2" stroke-dasharray="5 4"/>` : "";
+    const constraintGuides = overlays && (gridGuides || anchorGuide)
+      ? `<g id="${escapeXml(family.id)}-constraint-guides" fill="none" stroke="#76ff7a" stroke-width="2">${gridGuides}${anchorGuide}</g>`
+      : "";
+    return `    <g id="${escapeXml(family.id)}" transform="translate(${family.bounds.x} ${family.bounds.y})">\n      ${layers}\n      ${guides}\n      ${constraintGuides}\n    </g>`;
+  });
+  const safeArea = overlays ? `  <rect id="canvas-safe-area" x="64" y="96" width="${draft.canvas.width - 128}" height="${draft.canvas.height - 192}" fill="none" stroke="#ff5edb" stroke-width="3" stroke-dasharray="12 8"/>\n` : "";
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${draft.canvas.width}" height="${draft.canvas.height}" viewBox="0 0 ${draft.canvas.width} ${draft.canvas.height}" data-job-id="${escapeXml(draft.jobId)}" data-review-overlays="${overlays}">
+${defsSvg(draft.materials)}
+  <rect id="screen-background" width="100%" height="100%" fill="${escapeXml(draft.tokens?.background ?? "#10131c")}"/>
+${[...legacy, ...families].join("\n")}
+${safeArea}</svg>
 `;
 }
 

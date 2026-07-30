@@ -76,3 +76,4 @@ M1 V1: create a Primary Button, a Panel, and a Progress Bar for a real screen. T
 | 2026-07-16 | Completed M2-S2 material-source and masking foundation; M2-S3 may bind the shared templates to the Neon Alloy layer model | Codex |
 | 2026-07-16 | Completed M2-S3 with one additive shared Neon Alloy renderer family for Button, Panel, Progress, Tab, and Badge; stable layer IDs, mask clipping, bounds, and deterministic tests are ready for M2-S4 assembly | Codex |
 | 2026-07-17 | Completed M3-S4 Frostbound Panel, primary/secondary Button, Progress, and Reward Emblem Container recipes with bounded states/sizes, independent progress parts, a portrait reconstruction, and deterministic comparison evidence | Codex |
+| 2026-07-30 | Added Production Lab editable family-state SVG rendering plus deterministic transparent PNG derivatives with alpha, native-dimension, and effect-padding validation for M12-A3 | Codex |

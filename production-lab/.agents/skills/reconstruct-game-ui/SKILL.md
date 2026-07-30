@@ -30,15 +30,18 @@ Keep all work inside `production-lab/workspace/jobs/<job-id>/`.
    - place uncertainty in `unresolved`.
 6. Run `npm run lab -- validate-job --job <id>` and resolve every contract
    failure before visual review.
-7. Run `npm run lab -- preview --job <id>`. Inspect the reconstructed screen and
-   `comparison/overlay.html`; iterate until layout, silhouettes, hierarchy,
+7. Run `npm run lab -- render-evidence --job <id>`. Inspect `review/index.html`,
+   isolated alpha assets, slicing/state sheets, geometry overlays, and the
+   native, phone, and thumbnail PNGs; iterate until layout, silhouettes, hierarchy,
    palette, typography, materials, and target-phone readability are close.
-8. Stop for user review when consequential visual choices remain. Never remove
+8. Record the inspected sizes and evidence-backed findings with
+   `record-mobile-review`; this never grants artistic approval.
+9. Stop for user review when consequential visual choices remain. Never remove
    an unresolved item by guessing.
-9. After explicit user approval, run
+10. After explicit user approval, run
    `npm run lab -- approve --job <id> --reviewer "<name>"`, then `build` and
    `compare`.
-10. Report outputs, remaining visual differences, and validation actually run.
+11. Report outputs, remaining visual differences, and validation actually run.
 
 ## Boundaries
 
