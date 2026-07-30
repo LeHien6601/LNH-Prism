@@ -362,10 +362,19 @@ and UI reviewer, accepted the source-neutral editable panel treatment on
 accepted limitation is that painted wood grain remains simplified rather than
 copied from reference pixels.
 
-**Next agent-ready task:** M12-A6f — build and compare the approved UI-family
-snapshot, validate the promotion dry-run, and promote `small-info-panel`,
-`medium-modal-panel`, and `popup-panel` as immutable version `1.0.0`. Do not
-assemble the final package while the remaining pilot jobs are incomplete.
+**M12-A6f — UI-family build and promotion:** 🟢 Complete. The approved snapshot
+produced 12 deterministic SVG/PNG modules. Comparison was regenerated, promotion
+plan `bb57b3f1413e92103b6fb497f2c26313bb20846a59db654e4c353c7e274c839e`
+passed dry-run validation, and `small-info-panel`, `medium-modal-panel`, and
+`popup-panel` were promoted as immutable `1.0.0` components. The project library
+now contains seven promoted families and 41 files with zero audit findings. No
+delivery package was assembled.
+
+**Next agent-ready task:** M12-A6g — register the approved gameplay-state and
+gameplay-main references with bounded authority roles, create the gameplay
+HUD/composition job, reuse promoted shared components where applicable,
+reconstruct editable missing HUD families, generate native/phone/thumbnail
+evidence, and stop for human review.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
