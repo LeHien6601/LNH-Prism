@@ -412,11 +412,20 @@ three promoted foundations. It explicitly accepts that compact secondary
 upgrade-offer copy is not comfortably readable at thumbnail size while its
 silhouette and information grouping remain recognizable.
 
-**Next agent-ready task:** M12-A6l — build and compare the approved snapshot,
-validate the promotion dry-run, and promote `town-resource-counter`,
-`town-settings-control`, `town-upgrade-offer`, and `town-level-node` as
-immutable version `1.0.0` components. Do not assemble an incomplete final
-delivery package.
+**M12-A6l — Town functional-UI build and promotion:** 🟢 Complete. The approved
+snapshot produced 18 deterministic SVG/PNG modules. Comparison was regenerated,
+promotion plan
+`0551826b537533ff00dc7c0f26488016b56c80c8682b0c121657721de49d9bd2`
+passed dry-run validation, and `town-resource-counter`,
+`town-settings-control`, `town-upgrade-offer`, and `town-level-node` were
+promoted as immutable `1.0.0` components. The project library now contains
+fourteen promoted families and 80 files with zero audit findings. No delivery
+package was assembled.
+
+**Next agent-ready task:** M12-A6m — register the approved Workshop reference as
+a bounded state authority, create the Workshop upgrade-state job, reuse
+promoted shared components, reconstruct only missing upgrade-state UI families,
+generate native/phone/thumbnail evidence, and stop for human review.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
