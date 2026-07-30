@@ -35,8 +35,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🤖 **Reconstruct Town functional UI (M12-A6j)** · Agent-ready |
-| Next agent-ready task | M12-A6j — Register the approved Town authority, reuse promoted shared components, reconstruct only missing functional UI, and prepare three-size evidence |
+| Next task | 🧭 **Review Town functional UI evidence (M12-A6k)** · Human decision |
+| Next agent-ready task | None until Hien approves or returns the Town functional-UI evidence |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -72,7 +72,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | Ten component families promoted; M12-A6j continues the pilot with Town functional UI |
+| 🔵 | M12 | Production Lab Block Forge readiness | Town functional-UI reconstruction/evidence complete; M12-A6k is a human decision |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -92,7 +92,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Reconstruct gameplay HUD and composition (M12-A6g) | 🤖 Agent | 🟢 Complete | Five authorities are registered; the job reuses seven promoted families, adds three HUD families and seven states, and passes three-size technical inspection |
 | P0 | Review gameplay HUD evidence (M12-A6h) | 🧭 Hien · Product + Art + UI | 🟢 Approved | Immutable approval receipt is current and hash-valid |
 | P0 | Build and promote approved gameplay HUD families (M12-A6i) | 🤖 Agent | 🟢 Complete | 14 modules across three HUD families are promoted as immutable `1.0.0` components; incomplete pilot packaging remains deferred |
-| P0 | Reconstruct Town functional UI (M12-A6j) | 🤖 Agent | Agent-ready | Register the Town authority, reuse promoted shared components, reconstruct only missing functional UI, generate three-size evidence, and stop for human review |
+| P0 | Reconstruct Town functional UI (M12-A6j) | 🤖 Agent | 🟢 Complete | Six authorities are registered; the job reuses three promoted foundations, adds four Town control families and nine states, and passes three-size technical inspection |
+| P0 | Review Town functional UI evidence (M12-A6k) | 🧭 Hien · Product + Art + UI | Human decision | Approve the current evidence or return it with a bounded reason |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |

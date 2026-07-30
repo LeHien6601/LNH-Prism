@@ -394,10 +394,21 @@ passed dry-run validation, and `repair-progress-hud`, `turn-counter`, and
 library now contains ten promoted families and 58 files with zero audit
 findings. No delivery package was assembled.
 
-**Next agent-ready task:** M12-A6j — register the approved Town reference as a
-bounded composition authority, create the Town functional-UI job, reuse
-promoted shared components, reconstruct only missing functional UI families,
-generate native/phone/thumbnail evidence, and stop for human review.
+**M12-A6j — Town functional-UI job:** 🟢 Technical preparation complete. The
+approved Town reference is registered as `screen-composition`. The bounded job
+reuses promoted `primary-action`, `small-info-panel`, and
+`medium-modal-panel`, and adds only `town-resource-counter`,
+`town-settings-control`, `town-upgrade-offer`, and `town-level-node`, covering
+nine inherited states. Native, phone, thumbnail, state, isolation, slicing,
+geometry, and safe-area evidence were generated and inspected. The
+six-reference project audit has zero findings. Environment, building, foliage,
+path, and prop art remain excluded.
+
+**Next task:** M12-A6k — Hien reviews the Town functional-UI evidence as Product,
+Art, and UI reviewer. **Human decision:** approve it or return it with a bounded
+reason. The compact upgrade-offer copy is readable at phone size but not
+comfortably readable at thumbnail size. No build or promotion is authorized
+before approval.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
