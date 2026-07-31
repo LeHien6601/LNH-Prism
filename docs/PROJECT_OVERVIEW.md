@@ -35,8 +35,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🤖 **Reconstruct cross-screen consistency UI (M12-A6v)** · Agent-ready |
-| Next agent-ready task | M12-A6v — Register the approved consistency authority, reuse promoted shared components, reconstruct only missing cross-screen consistency UI, and prepare three-size evidence |
+| Next task | 🧭 **Review cross-screen consistency evidence (M12-A6w)** · Human decision |
+| Next agent-ready task | M12-A6w — Review the bounded secondary-action and review-status evidence, including the thumbnail label limitation, then approve or request revision |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -72,7 +72,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | Twenty component families promoted; M12-A6v prepares bounded cross-screen consistency UI |
+| 🔵 | M12 | Production Lab Block Forge readiness | Cross-screen consistency evidence is ready for Product, Art, and UI review |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -104,7 +104,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Reconstruct Failure modal (M12-A6s) | 🤖 Agent | 🟢 Complete | Nine authorities are registered; the job reuses promoted modal/action foundations, adds two Failure families, and passes three-size technical inspection |
 | P0 | Review Failure modal evidence (M12-A6t) | 🧭 Hien · Product + Art + UI | 🟢 Approved | Immutable approval receipt is current and hash-valid; thumbnail copy limitation accepted |
 | P0 | Build and promote approved Failure modal UI (M12-A6u) | 🤖 Agent | 🟢 Complete | Four modules across two Failure families are promoted as immutable `1.0.0` components; incomplete pilot packaging remains deferred |
-| P0 | Reconstruct cross-screen consistency UI (M12-A6v) | 🤖 Agent | Agent-ready | Register the consistency authority, reuse promoted shared components, reconstruct only missing cross-screen consistency UI, and prepare three-size evidence for human review |
+| P0 | Reconstruct cross-screen consistency UI (M12-A6v) | 🤖 Agent | 🟢 Complete | Ten authorities are registered; the job reuses promoted foundations, adds two consistency families and three states, and passes three-size technical inspection |
+| P0 | Review cross-screen consistency evidence (M12-A6w) | 🧭 Hien · Product + Art + UI | Human decision | Review the bounded secondary-action and review-status evidence; accept or revise the thumbnail label limitation |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |

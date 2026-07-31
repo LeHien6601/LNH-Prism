@@ -501,10 +501,22 @@ passed dry-run validation, and `failure-heading` and
 project library now contains twenty promoted families and 106 files with zero
 audit findings. No delivery package was assembled.
 
-**Next agent-ready task:** M12-A6v — register the approved consistency-review
-reference as bounded `screen-composition` authority, create the job, reuse
-promoted shared components, reconstruct only missing cross-screen consistency
-UI, generate three-size evidence, and stop for human review.
+**M12-A6v — Cross-screen consistency UI job:** 🟢 Technical preparation
+complete. The approved consistency-review reference is registered as
+`screen-composition`. The bounded job reuses promoted `primary-action` and
+`medium-modal-panel` foundations, and adds only `secondary-action` and
+`review-status-indicator`, covering three states. Native, phone, thumbnail,
+state, isolation, slicing, geometry, and safe-area evidence were generated and
+inspected. The ten-reference project audit has zero findings. Screen
+compositions, buildings, gameplay board, modal illustrations, bridge art, and
+environment content remain excluded.
+
+**Next human decision:** M12-A6w — Hien, acting as Product, Art, and UI
+reviewer, should review the bounded secondary-action and review-status evidence.
+Approve the two new families for deterministic build/promotion, or request a
+revision. The thumbnail preserves action hierarchy and the green reviewed cue;
+full action labels are intentionally not expected to be comfortably readable at
+that size.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
