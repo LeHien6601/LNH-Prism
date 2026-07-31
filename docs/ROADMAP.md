@@ -511,12 +511,18 @@ inspected. The ten-reference project audit has zero findings. Screen
 compositions, buildings, gameplay board, modal illustrations, bridge art, and
 environment content remain excluded.
 
-**Next human decision:** M12-A6w — Hien, acting as Product, Art, and UI
-reviewer, should review the bounded secondary-action and review-status evidence.
-Approve the two new families for deterministic build/promotion, or request a
-revision. The thumbnail preserves action hierarchy and the green reviewed cue;
-full action labels are intentionally not expected to be comfortably readable at
-that size.
+**M12-A6w — Cross-screen consistency approval:** 🟢 Approved. Hien, acting as
+Product, Art, and UI reviewer, accepted the current three-size evidence on
+2026-07-31. The immutable approval receipt is current and hash-valid. The
+approval covers the two newly reconstructed consistency families and preserves
+reuse of promoted action and modal foundations. It explicitly accepts that
+detailed action labels are not comfortably readable at thumbnail size while
+action hierarchy and the green reviewed cue remain recognizable.
+
+**Next agent-ready task:** M12-A6x — build and compare the approved snapshot,
+validate the promotion dry-run, and promote `secondary-action` and
+`review-status-indicator` as immutable version `1.0.0` components. Do not
+assemble an incomplete final delivery package.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
