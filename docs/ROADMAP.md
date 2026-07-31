@@ -519,10 +519,18 @@ reuse of promoted action and modal foundations. It explicitly accepts that
 detailed action labels are not comfortably readable at thumbnail size while
 action hierarchy and the green reviewed cue remain recognizable.
 
-**Next agent-ready task:** M12-A6x — build and compare the approved snapshot,
-validate the promotion dry-run, and promote `secondary-action` and
-`review-status-indicator` as immutable version `1.0.0` components. Do not
-assemble an incomplete final delivery package.
+**M12-A6x — Cross-screen consistency build and promotion:** 🟢 Complete. The
+approved snapshot produced six deterministic SVG/PNG modules. Comparison was
+regenerated, promotion plan
+`3aace31ae982f13f8a189f496774d4ddc89dd92b24f46e3a348eb6a903c60643`
+passed dry-run validation, and `secondary-action` and
+`review-status-indicator` were promoted as immutable `1.0.0` components. The
+project library now contains twenty-two promoted families and 114 files with
+zero audit findings. No delivery package has yet been assembled.
+
+**Next agent-ready task:** M12-A6y — assemble and validate the complete
+engine-neutral Block Forge package from the approved promoted component library.
+Exclude all reference and comparison evidence.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.

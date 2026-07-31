@@ -35,8 +35,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🤖 **Build and promote cross-screen consistency UI (M12-A6x)** · Agent-ready |
-| Next agent-ready task | M12-A6x — Build and compare the approved consistency snapshot, validate the promotion dry-run, and promote the two new families as immutable `1.0.0` components |
+| Next task | 🤖 **Assemble complete Block Forge package (M12-A6y)** · Agent-ready |
+| Next agent-ready task | M12-A6y — Assemble and validate the complete engine-neutral Block Forge package from the approved promoted component library |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -72,7 +72,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | Cross-screen consistency evidence approved; M12-A6x builds and promotes the two consistency families |
+| 🔵 | M12 | Production Lab Block Forge readiness | Twenty-two component families promoted; M12-A6y assembles the complete engine-neutral package |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -106,7 +106,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Build and promote approved Failure modal UI (M12-A6u) | 🤖 Agent | 🟢 Complete | Four modules across two Failure families are promoted as immutable `1.0.0` components; incomplete pilot packaging remains deferred |
 | P0 | Reconstruct cross-screen consistency UI (M12-A6v) | 🤖 Agent | 🟢 Complete | Ten authorities are registered; the job reuses promoted foundations, adds two consistency families and three states, and passes three-size technical inspection |
 | P0 | Review cross-screen consistency evidence (M12-A6w) | 🧭 Hien · Product + Art + UI | 🟢 Approved | Immutable approval receipt is current and hash-valid; thumbnail label limitation accepted |
-| P0 | Build and promote approved cross-screen consistency UI (M12-A6x) | 🤖 Agent | Agent-ready | Build and compare the approved snapshot, then promote the two consistency families as immutable `1.0.0` components |
+| P0 | Build and promote approved cross-screen consistency UI (M12-A6x) | 🤖 Agent | 🟢 Complete | Six modules across two consistency families are promoted as immutable `1.0.0` components; incomplete pilot packaging is now unblocked |
+| P0 | Assemble complete Block Forge package (M12-A6y) | 🤖 Agent | Agent-ready | Assemble and validate the complete engine-neutral package from the approved promoted component library; exclude all reference and comparison evidence |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |
