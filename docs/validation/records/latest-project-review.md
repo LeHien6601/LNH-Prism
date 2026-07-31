@@ -194,3 +194,30 @@ No icon promotion was authorized or performed.
 icons using the locked construction rules. Do not draw other semantic icons,
 change the approved foundation, or promote any icon family without a separate
 human approval.
+
+## BF-V2.3b bridge, upgrade, and settings evidence
+
+**Technical preparation complete on 2026-07-31.** The bounded
+`block-forge-v2-semantic-icons-r2` job adds only three editable families:
+bridge, upgrade, and settings. Each family provides uncontained, cream-container,
+colored-container, and compact colored-container review views while preserving
+the locked rounded-square container, navy outline weight, upper-left highlight,
+lower-right depth, restrained palette, stable IDs, and component-level compact
+glyph transform.
+
+Job validation passes for three families, twelve states, and three shared
+footprint constraints. Native, phone, thumbnail, state, isolated, geometry,
+and safe-area evidence was regenerated and inspected. The compact glyph groups
+remain within their declared content-safe regions with visible padding on all
+four sides. The Block Forge project audit continues to report zero findings,
+and no reference pixels enter the editable production geometry.
+
+**Visual preflight:** bridge reads as a timber span with separated piers and an
+open arch; upgrade uses a chunky gold upward action silhouette; settings uses a
+restrained wood/cream gear. All three remain distinct at compact mobile scale.
+This is an evidence-backed Codex preflight, not Product/Art/UI approval.
+
+**Next human decision:** Hien should approve the three-family evidence or
+request a targeted correction. Do not promote these icons or continue to exit,
+check, warning, lock, level marker, or other semantic families before that
+decision.
