@@ -70,6 +70,59 @@ test("drafts reject reference pixel layers", () => {
   assert.throws(() => validateDraft(draft), /Reference pixels/);
 });
 
+test("review labels are declared, review-only, and deterministic", () => {
+  const draft = fixture();
+  draft.componentFamilies = [{
+    id: "icon-calibration",
+    bounds: { x: 20, y: 20, width: 80, height: 80 }, nativeSize: { width: 80, height: 80 },
+    allowedResize: "none", effectPadding: { top: 2, right: 2, bottom: 2, left: 2 },
+    contentSafeRegion: { x: 8, y: 8, width: 64, height: 64 },
+    baseLayers: [{ id: "glyph", kind: "ellipse", cx: 40, cy: 40, rx: 20, ry: 20, fill: "#fff" }],
+    textSlots: [], iconSlots: [],
+    states: [{ id: "normal", variantLabel: "cream-container", sizeLabel: "compact", layerOverrides: [] }]
+  }];
+  draft.reviewLabelRegistry = { variantLabels: ["cream-container"], sizeLabels: ["compact"] };
+  assert.equal(validateDraft(draft), draft);
+  const first = stateSheetSvg(draft.componentFamilies[0]);
+  assert.match(first, /cream-container · compact/);
+  assert.equal(first, stateSheetSvg(draft.componentFamilies[0]));
+  draft.componentFamilies[0].states[0].variantLabel = "arbitrary";
+  assert.throws(() => validateDraft(draft), /reviewLabelRegistry/);
+});
+
+test("glyph-group transforms are bounded, deterministic, and absent by default", () => {
+  const family = {
+    id: "compact-icon", bounds: { x: 20, y: 20, width: 100, height: 100 }, nativeSize: { width: 100, height: 100 }, allowedResize: "none",
+    effectPadding: { top: 2, right: 2, bottom: 2, left: 2 }, contentSafeRegion: { x: 10, y: 10, width: 80, height: 80 },
+    glyphLayerIds: ["glyph"], glyphBounds: { x: 20, y: 20, width: 60, height: 60 },
+    baseLayers: [{ id: "container", kind: "rect", x: 0, y: 0, width: 100, height: 100, fill: "#fff" }, { id: "glyph", kind: "ellipse", cx: 50, cy: 50, rx: 30, ry: 30, fill: "#000" }], textSlots: [], iconSlots: [],
+    states: [{ id: "normal", layerOverrides: [] }, { id: "disabled", glyphGroupTransform: { scale: 0.7, translateX: 0, translateY: 0 }, layerOverrides: [] }]
+  };
+  const draft = { ...fixture(), componentFamilies: [family] };
+  assert.equal(validateDraft(draft), draft);
+  const normal = familyStateSvg(family, "normal");
+  const legacyFamily = structuredClone(family);
+  delete legacyFamily.glyphLayerIds;
+  delete legacyFamily.glyphBounds;
+  legacyFamily.states = [legacyFamily.states[0]];
+  assert.equal(normal, familyStateSvg(legacyFamily, "normal"));
+  assert.doesNotMatch(normal, /glyph-group/);
+  const transformed = familyStateSvg(family, "disabled");
+  assert.match(transformed, /id="compact-icon-glyph-group"/);
+  assert.match(transformed, /id="glyph"/);
+  assert.deepEqual(renderPng(transformed), renderPng(transformed));
+  family.states[1].glyphGroupTransform.scale = 0;
+  assert.throws(() => validateDraft(draft), /positive/);
+  family.states[1].glyphGroupTransform = { scale: Number.NaN, translateX: 0, translateY: 0 };
+  assert.throws(() => validateDraft(draft), /finite/);
+  family.states[1].glyphGroupTransform = { scale: 0.7, translateX: Number.POSITIVE_INFINITY, translateY: 0 };
+  assert.throws(() => validateDraft(draft), /finite/);
+  family.states[1].glyphGroupTransform = { scale: 0.7, translateX: 0, translateY: 0, rotation: 5 };
+  assert.throws(() => validateDraft(draft), /invalid/);
+  family.states[1].glyphGroupTransform = { scale: 1, translateX: 100, translateY: 0 };
+  assert.throws(() => validateDraft(draft), /contentSafeRegion/);
+});
+
 test("component and screen output preserve stable editable IDs", () => {
   const draft = fixture();
   assert.match(componentSvg(draft.components[0]), /id="base"/);

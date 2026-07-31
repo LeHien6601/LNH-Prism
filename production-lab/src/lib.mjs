@@ -452,6 +452,26 @@ const STATE_IDS = new Set([
   "warning", "valid", "invalid", "completed", "broken", "damaged", "repaired"
 ]);
 
+function reviewLabelRegistry(registry) {
+  if (registry === undefined) return { variants: new Set(), sizes: new Set() };
+  if (!registry || typeof registry !== "object" || Array.isArray(registry)) {
+    throw new Error("reviewLabelRegistry must be an object.");
+  }
+  const read = (key) => {
+    if (!Array.isArray(registry[key])) throw new Error(`reviewLabelRegistry.${key} must be an array.`);
+    const values = new Set();
+    for (const value of registry[key]) {
+      if (typeof value !== "string" || !/^[a-z][a-z0-9-]*$/.test(value)) {
+        throw new Error(`Invalid reviewLabelRegistry.${key} entry.`);
+      }
+      if (values.has(value)) throw new Error(`Duplicate reviewLabelRegistry.${key} entry ${value}.`);
+      values.add(value);
+    }
+    return values;
+  };
+  return { variants: read("variantLabels"), sizes: read("sizeLabels") };
+}
+
 function positive(value, label) {
   number(value, label);
   if (value <= 0) throw new Error(`${label} must be positive.`);
@@ -525,7 +545,7 @@ function validateSlicing(slicing, family) {
   }
 }
 
-function validateFamily(family, canvas, familyIds) {
+function validateFamily(family, canvas, familyIds, labels) {
   materialId(family.id, "component family ID");
   if (familyIds.has(family.id)) throw new Error(`Duplicate component family ID: ${family.id}`);
   familyIds.add(family.id);
@@ -560,6 +580,17 @@ function validateFamily(family, canvas, familyIds) {
     }
     validateLayerGeometry(layer, `${family.id}.${layer.id}`);
   }
+  if (family.glyphLayerIds !== undefined && (!Array.isArray(family.glyphLayerIds) || family.glyphLayerIds.length === 0 || family.glyphLayerIds.some((id) => !layerIds.has(id)))) {
+    throw new Error(`${family.id}.glyphLayerIds must name existing layers.`);
+  }
+  if (family.glyphLayerIds !== undefined) {
+    const glyphIds = new Set(family.glyphLayerIds);
+    const glyphIndices = family.baseLayers.map((layer, index) => glyphIds.has(layer.id) ? index : -1).filter((index) => index >= 0);
+    if (glyphIndices.at(-1) - glyphIndices[0] + 1 !== glyphIndices.length) {
+      throw new Error(`${family.id}.glyphLayerIds must form one contiguous layer group.`);
+    }
+  }
+  if (family.glyphBounds !== undefined) validateBox(family.glyphBounds, `${family.id}.glyphBounds`, { allowZeroOrigin: false });
   const slotIds = new Set();
   for (const [kind, slots] of [["text", family.textSlots ?? []], ["icon", family.iconSlots ?? []]]) {
     if (!Array.isArray(slots)) throw new Error(`${family.id}.${kind}Slots must be an array.`);
@@ -573,6 +604,11 @@ function validateFamily(family, canvas, familyIds) {
   const stateIds = new Set();
   for (const state of family.states) {
     if (!STATE_IDS.has(state.id)) throw new Error(`Unsupported state ${state.id} in ${family.id}.`);
+    for (const [field, allowed] of [["variantLabel", labels.variants], ["sizeLabel", labels.sizes]]) {
+      if (state[field] !== undefined && (!allowed.has(state[field]) || typeof state[field] !== "string")) {
+        throw new Error(`${family.id}/${state.id}.${field} is not declared in reviewLabelRegistry.`);
+      }
+    }
     if (stateIds.has(state.id)) throw new Error(`Duplicate state ${state.id} in ${family.id}.`);
     stateIds.add(state.id);
     if (state.bounds && JSON.stringify(state.bounds) !== JSON.stringify(family.bounds)) {
@@ -582,6 +618,19 @@ function validateFamily(family, canvas, familyIds) {
       throw new Error(`${family.id}/${state.id} must preserve the shared anchor.`);
     }
     if (!Array.isArray(state.layerOverrides)) throw new Error(`${family.id}/${state.id}.layerOverrides must be an array.`);
+    if (state.glyphGroupTransform !== undefined) {
+      const transform = state.glyphGroupTransform;
+      if (!family.glyphBounds || !family.glyphLayerIds) throw new Error(`${family.id}/${state.id} glyphGroupTransform requires glyphBounds and glyphLayerIds.`);
+      if (!transform || typeof transform !== "object" || Array.isArray(transform) || Object.keys(transform).some((key) => !["scale", "translateX", "translateY"].includes(key))) throw new Error(`${family.id}/${state.id}.glyphGroupTransform is invalid.`);
+      for (const key of ["scale", "translateX", "translateY"]) if (!Number.isFinite(transform[key])) throw new Error(`${family.id}/${state.id}.glyphGroupTransform.${key} must be finite.`);
+      if (transform.scale <= 0) throw new Error(`${family.id}/${state.id}.glyphGroupTransform.scale must be positive.`);
+      const source = family.glyphBounds;
+      const centerX = source.x + source.width / 2;
+      const centerY = source.y + source.height / 2;
+      const transformed = { x: centerX + transform.translateX - source.width * transform.scale / 2, y: centerY + transform.translateY - source.height * transform.scale / 2, width: source.width * transform.scale, height: source.height * transform.scale };
+      const safe = family.contentSafeRegion;
+      if (transformed.x < safe.x || transformed.y < safe.y || transformed.x + transformed.width > safe.x + safe.width || transformed.y + transformed.height > safe.y + safe.height) throw new Error(`${family.id}/${state.id} transformed glyph bounds escape contentSafeRegion.`);
+    }
     const overridden = new Set();
     for (const override of state.layerOverrides) {
       if (!layerIds.has(override.layerId)) throw new Error(`Unknown layer ${override.layerId} in ${family.id}/${state.id}.`);
@@ -671,7 +720,8 @@ export function resolveComponentState(family, stateId) {
     familyId: family.id,
     stateId,
     bounds: family.bounds,
-    layers: family.baseLayers.map((layer) => ({ ...layer, ...(overrides.get(layer.id) ?? {}) }))
+    layers: family.baseLayers.map((layer) => ({ ...layer, ...(overrides.get(layer.id) ?? {}) })),
+    glyphGroupTransform: state.glyphGroupTransform
   };
 }
 
@@ -737,7 +787,8 @@ export function validateDraft(draft, { requireResolved = false } = {}) {
   const families = draft.componentFamilies ?? [];
   if (!Array.isArray(families)) throw new Error("componentFamilies must be an array.");
   const familyIds = new Set();
-  for (const family of families) validateFamily(family, draft.canvas, familyIds);
+  const labels = reviewLabelRegistry(draft.reviewLabelRegistry);
+  for (const family of families) validateFamily(family, draft.canvas, familyIds, labels);
   validateGeometryConstraints(draft.geometryConstraints ?? [], families, draft.canvas);
   return draft;
 }
@@ -789,6 +840,22 @@ function layerSvg(layer) {
   return `<text ${common} x="${layer.x ?? 0}" y="${layer.y ?? 0}" fill="${escapeXml(layer.fill ?? "#ffffff")}" font-family="${escapeXml(layer.fontFamily ?? "sans-serif")}" font-size="${layer.fontSize ?? 16}" text-anchor="${escapeXml(layer.textAnchor ?? "start")}">${escapeXml(layer.value ?? "")}</text>`;
 }
 
+function familyLayersSvg(family, resolved) {
+  if (!resolved.glyphGroupTransform) return resolved.layers.map(layerSvg).join("\n    ");
+  const transform = resolved.glyphGroupTransform;
+  const glyphIds = new Set(family.glyphLayerIds);
+  const glyphLayers = resolved.layers.filter((layer) => glyphIds.has(layer.id));
+  const glyphs = glyphLayers.map(layerSvg).join("\n      ");
+  const firstGlyphIndex = resolved.layers.findIndex((layer) => glyphIds.has(layer.id));
+  const before = resolved.layers.slice(0, firstGlyphIndex).map(layerSvg).join("\n    ");
+  const after = resolved.layers.slice(firstGlyphIndex + glyphLayers.length).map(layerSvg).join("\n    ");
+  const bounds = family.glyphBounds;
+  const centerX = bounds.x + bounds.width / 2;
+  const centerY = bounds.y + bounds.height / 2;
+  const matrix = `translate(${centerX + transform.translateX} ${centerY + transform.translateY}) scale(${transform.scale}) translate(${-centerX} ${-centerY})`;
+  return [before, `<g id="${escapeXml(family.id)}-glyph-group" transform="${matrix}">\n      ${glyphs}\n    </g>`, after].filter(Boolean).join("\n    ");
+}
+
 export function componentSvg(component, materials = []) {
   const { width, height } = component.bounds;
   const layers = component.layers.map(layerSvg).join("\n  ");
@@ -804,7 +871,7 @@ export function familyStateSvg(family, stateId, materials = []) {
   const padding = family.effectPadding;
   const width = family.bounds.width + padding.left + padding.right;
   const height = family.bounds.height + padding.top + padding.bottom;
-  const layers = resolved.layers.map(layerSvg).join("\n    ");
+  const layers = familyLayersSvg(family, resolved);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" data-component-family-id="${escapeXml(family.id)}" data-state-id="${escapeXml(stateId)}">
 ${defsSvg(materials)}
   <g id="${escapeXml(family.id)}-${escapeXml(stateId)}" transform="translate(${padding.left} ${padding.top})">
@@ -824,11 +891,11 @@ export function stateSheetSvg(family, materials = []) {
   const states = family.states.map((state, index) => {
     const resolved = resolveComponentState(family, state.id);
     const x = index * (itemWidth + gap);
-    const layers = resolved.layers.map(layerSvg).join("\n        ");
+    const layers = familyLayersSvg(family, resolved);
     return `    <g id="${escapeXml(family.id)}-${escapeXml(state.id)}" transform="translate(${x + family.effectPadding.left} ${labelHeight + family.effectPadding.top})">
         ${layers}
       </g>
-      <text x="${x + itemWidth / 2}" y="24" fill="#ffffff" font-family="sans-serif" font-size="18" text-anchor="middle">${escapeXml(state.id)}</text>`;
+      <text x="${x + itemWidth / 2}" y="24" fill="#ffffff" font-family="sans-serif" font-size="18" text-anchor="middle">${escapeXml([state.variantLabel, state.sizeLabel].filter(Boolean).join(" · ") || state.id)}</text>`;
   }).join("\n");
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" data-review-surface="state-comparison">
 ${defsSvg(materials)}
@@ -845,7 +912,7 @@ export function slicingPreviewSvg(family, materials = []) {
   const { width, height } = family.bounds;
   const borders = family.slicing.fixedBorders;
   const safe = family.slicing.contentSafeRegion;
-  const layers = resolved.layers.map(layerSvg).join("\n    ");
+  const layers = familyLayersSvg(family, resolved);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" data-review-surface="slicing-preview" data-component-family-id="${escapeXml(family.id)}">
 ${defsSvg(materials)}
   <g id="${escapeXml(family.id)}-${escapeXml(stateId)}">
@@ -867,7 +934,7 @@ export function reviewScreenSvg(draft, { overlays = false } = {}) {
   });
   const families = (draft.componentFamilies ?? []).map((family) => {
     const state = resolveComponentState(family, family.states[0].id);
-    const layers = state.layers.map(layerSvg).join("\n      ");
+    const layers = familyLayersSvg(family, state);
     const grid = (draft.geometryConstraints ?? []).find((constraint) =>
       constraint.kind === "square-grid" && constraint.familyId === family.id
     );

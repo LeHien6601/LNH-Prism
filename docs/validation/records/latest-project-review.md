@@ -163,3 +163,34 @@ The refreshed project audit has zero findings, the rollout approval remains
 valid, and package validation confirms an engine-neutral, reference-free
 delivery. Unity integration and runtime-font licensing remain consumer
 responsibilities.
+
+## BF-V2.3 icon calibration status
+
+**Approved on 2026-07-31 by Hien, acting as Product, Art, and UI reviewer:**
+Wood normal and compact variants; target normal and compact variants;
+clock/turn; container construction; and the review-label axes. Wood,
+clock/turn, and bridge target are now the locked semantic-family foundation.
+The immutable Wood/target calibration approval is
+`32ea6957d45f784ca18a87302814dfd4d6661fa73add6b586041511b06a202de`.
+
+The bounded renderer task is complete. The optional component-level
+`glyphGroupTransform` defaults to identity and accepts only finite positive
+uniform scale with finite X/Y translation. SVG, PNG, review, and packaged
+rendering share the same composition path. Transformed visual bounds must stay
+inside the declared content-safe region; clipping, non-positive scale,
+non-finite values, arbitrary transform fields, and non-contiguous glyph layer
+groups are rejected. Tests prove deterministic SVG/PNG output, stable component
+and layer IDs, and byte-identical SVG output for components that do not declare
+the transform.
+
+The refreshed calibration job validates two families and eight review views;
+the Block Forge project audit reports zero findings. The existing
+`block-forge@1.1.0` package remains valid at 27 components and 143 files, with
+unchanged manifest SHA-256
+`01e3c7c1b778506869dd31e4d891a4cf52eef7d4b9ca195e8d78cfacf5bf00ac`.
+No icon promotion was authorized or performed.
+
+**Next bounded task — Agent-ready:** draw only the bridge, upgrade, and settings
+icons using the locked construction rules. Do not draw other semantic icons,
+change the approved foundation, or promote any icon family without a separate
+human approval.
