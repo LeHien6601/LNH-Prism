@@ -458,12 +458,18 @@ inspected. The eight-reference project audit has zero findings. Gameplay board,
 environment, bridge illustration, reward-log illustration, particles, and
 background art remain excluded.
 
-**Next human decision:** M12-A6q — Hien, acting as Product, Art, and UI
-reviewer, should review the bounded Victory heading and reward-summary evidence.
-Approve the two new families for deterministic build/promotion, or request a
-revision. The thumbnail keeps the Victory cue and reward silhouette readable;
-full secondary reward copy is intentionally not expected to be comfortably
-readable at that size.
+**M12-A6q — Victory modal approval:** 🟢 Approved. Hien, acting as Product, Art,
+and UI reviewer, accepted the current three-size evidence on 2026-07-31. The
+immutable approval receipt is current and hash-valid. The approval covers the
+two newly reconstructed Victory families and preserves reuse of the promoted
+modal and action foundations. It explicitly accepts that detailed secondary
+reward copy is not comfortably readable at thumbnail size while the Victory cue
+and reward silhouette remain recognizable.
+
+**Next agent-ready task:** M12-A6r — build and compare the approved snapshot,
+validate the promotion dry-run, and promote `victory-heading` and
+`victory-reward-summary` as immutable version `1.0.0` components. Do not
+assemble an incomplete final delivery package.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
