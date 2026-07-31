@@ -317,3 +317,29 @@ stable IDs, and provenance. The immutable approval receipt is
 
 No promotion was authorized or performed. Lock and level marker remain
 unstarted and require a separately authorized bounded task.
+
+## BF-V2.3d lock and level-marker evidence
+
+**Technical preparation complete on 2026-07-31.** The bounded
+`block-forge-v2-semantic-icons-r4` job adds only lock and level marker. Lock
+uses the approved desaturated cream/gray role with a clear shackle, inset body,
+and non-color-only keyhole. Level marker uses the approved gold emphasis role
+with a shield-and-star rank silhouette that remains distinct from the upgrade
+arrow and bridge-target diamond.
+
+Each family provides uncontained, cream-container, colored-container, and
+compact colored-container views using the locked navy outline, upper-left
+highlight, lower-right depth, stable layers, glyph/container separation, and
+production-level compact transform. Job validation passes for two families,
+eight states, and two shared-footprint constraints. Native, phone, thumbnail,
+state, isolated, geometry, and safe-area evidence was regenerated and
+inspected. The Block Forge project audit reports zero findings.
+
+**Visual preflight:** both meanings remain recognizable at compact mobile
+scale; the complete rounded-square containers and four-side glyph padding stay
+visible. This is a Codex preflight, not Product/Art/UI approval. No promotion
+or unrelated semantic-icon work occurred.
+
+**Next human decision:** approve lock and level marker across the eight reviewed
+views or request a targeted correction. Do not promote the semantic family
+before that decision.
