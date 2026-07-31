@@ -415,3 +415,37 @@ validates with 38 components and 242 files. Its manifest SHA-256 is
 The package contains no reference pixels, and the refreshed project audit has
 zero findings. Unity integration and runtime-font licensing remain consumer
 responsibilities; the accepted tertiary-thumbnail-copy limitation is retained.
+
+## BF-V2.4 puzzle-readability evidence
+
+**Technical preparation complete on 2026-08-01.** The bounded
+`block-forge-v2-puzzle-readability` job changes only the puzzle board, puzzle
+unit placement feedback, target presentation, and bridge-condition evidence.
+Town, Workshop, result systems, unrelated semantic icons, promotion, and Unity
+remain excluded.
+
+The gameplay geometry is unchanged: the board is exactly `640 x 640`, declares
+an `8 x 8` square grid with `80`-unit cells, puzzle units remain exactly
+`80 x 80`, and all bridge conditions share one `640 x 160` footprint and
+anchor. The visible frame was corrected after preflight so all eight rows and
+columns read at equal size instead of allowing inset edges to make the outer
+cells appear narrower.
+
+The board now shows explicit grid lines, aligned sample pieces, and two approved
+diamond target markers. Placement evidence includes normal, valid, and invalid
+units; valid and invalid states use check and X silhouettes in addition to
+green/red color. Bridge evidence shows broken, damaged, and repaired states
+through distinct gap, crack, brace, and success-check construction rather than
+color-only changes.
+
+Job validation passes for three editable families, eight states, and nine
+geometry constraints. Native, phone, thumbnail, state, isolation, geometry,
+safe-area, and deterministic light/dark comparison evidence was generated and
+inspected. The light/dark PNG SHA-256 is
+`db28627b15ce9c21ffe08c12603c8fb3e2ad6c963e1e6c957bbe8f8d9a470af0`.
+The Block Forge project audit reports zero findings and no reference pixels
+enter production geometry.
+
+**Next human decision:** approve the BF-V2.4 puzzle-readability evidence or
+request a targeted correction. Do not promote it or begin BF-V2.5 Town and
+Workshop work before that decision.
