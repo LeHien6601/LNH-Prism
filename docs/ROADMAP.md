@@ -466,10 +466,19 @@ modal and action foundations. It explicitly accepts that detailed secondary
 reward copy is not comfortably readable at thumbnail size while the Victory cue
 and reward silhouette remain recognizable.
 
-**Next agent-ready task:** M12-A6r — build and compare the approved snapshot,
-validate the promotion dry-run, and promote `victory-heading` and
-`victory-reward-summary` as immutable version `1.0.0` components. Do not
-assemble an incomplete final delivery package.
+**M12-A6r — Victory modal build and promotion:** 🟢 Complete. The approved
+snapshot produced four deterministic SVG/PNG modules. Comparison was
+regenerated, promotion plan
+`a7e7d649e6afa387ace390fa5d1dd2afef5115487dc0496f7b0847ad85a60152`
+passed dry-run validation, and `victory-heading` and `victory-reward-summary`
+were promoted as immutable `1.0.0` components. The project library now contains
+eighteen promoted families and 100 files with zero audit findings. No delivery
+package was assembled.
+
+**Next agent-ready task:** M12-A6s — register the approved Failure reference
+as bounded `screen-composition` authority, create the job, reuse promoted
+shared components, reconstruct only missing Failure modal UI, generate
+three-size evidence, and stop for human review.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
