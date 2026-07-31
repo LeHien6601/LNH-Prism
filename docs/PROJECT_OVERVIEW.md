@@ -35,8 +35,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🤖 **Build and promote Failure modal UI (M12-A6u)** · Agent-ready |
-| Next agent-ready task | M12-A6u — Build and compare the approved Failure snapshot, validate the promotion dry-run, and promote the two new families as immutable `1.0.0` components |
+| Next task | 🤖 **Reconstruct cross-screen consistency UI (M12-A6v)** · Agent-ready |
+| Next agent-ready task | M12-A6v — Register the approved consistency authority, reuse promoted shared components, reconstruct only missing cross-screen consistency UI, and prepare three-size evidence |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -72,7 +72,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | Failure modal evidence approved; M12-A6u builds and promotes the two Failure families |
+| 🔵 | M12 | Production Lab Block Forge readiness | Twenty component families promoted; M12-A6v prepares bounded cross-screen consistency UI |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -103,7 +103,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Build and promote approved Victory modal UI (M12-A6r) | 🤖 Agent | 🟢 Complete | Four modules across two Victory families are promoted as immutable `1.0.0` components; incomplete pilot packaging remains deferred |
 | P0 | Reconstruct Failure modal (M12-A6s) | 🤖 Agent | 🟢 Complete | Nine authorities are registered; the job reuses promoted modal/action foundations, adds two Failure families, and passes three-size technical inspection |
 | P0 | Review Failure modal evidence (M12-A6t) | 🧭 Hien · Product + Art + UI | 🟢 Approved | Immutable approval receipt is current and hash-valid; thumbnail copy limitation accepted |
-| P0 | Build and promote approved Failure modal UI (M12-A6u) | 🤖 Agent | Agent-ready | Build and compare the approved snapshot, then promote the two Failure families as immutable `1.0.0` components |
+| P0 | Build and promote approved Failure modal UI (M12-A6u) | 🤖 Agent | 🟢 Complete | Four modules across two Failure families are promoted as immutable `1.0.0` components; incomplete pilot packaging remains deferred |
+| P0 | Reconstruct cross-screen consistency UI (M12-A6v) | 🤖 Agent | Agent-ready | Register the consistency authority, reuse promoted shared components, reconstruct only missing cross-screen consistency UI, and prepare three-size evidence for human review |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |

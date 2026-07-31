@@ -492,10 +492,19 @@ modal and action foundations. It explicitly accepts that detailed secondary
 progress copy is not comfortably readable at thumbnail size while the
 clock-led Failure cue and incomplete-progress silhouette remain recognizable.
 
-**Next agent-ready task:** M12-A6u — build and compare the approved snapshot,
-validate the promotion dry-run, and promote `failure-heading` and
-`failure-progress-summary` as immutable version `1.0.0` components. Do not
-assemble an incomplete final delivery package.
+**M12-A6u — Failure modal build and promotion:** 🟢 Complete. The approved
+snapshot produced four deterministic SVG/PNG modules. Comparison was
+regenerated, promotion plan
+`d4eb32e35c4130e8c4e5a819f67c26b77da84bd38975c153777fbc4b99e0c5d9`
+passed dry-run validation, and `failure-heading` and
+`failure-progress-summary` were promoted as immutable `1.0.0` components. The
+project library now contains twenty promoted families and 106 files with zero
+audit findings. No delivery package was assembled.
+
+**Next agent-ready task:** M12-A6v — register the approved consistency-review
+reference as bounded `screen-composition` authority, create the job, reuse
+promoted shared components, reconstruct only missing cross-screen consistency
+UI, generate three-size evidence, and stop for human review.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
