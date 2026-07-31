@@ -267,3 +267,53 @@ uncreated in this task; no promotion occurred.
 **Next human decision:** approve the exit/check/warning evidence or request a
 targeted correction. Do not continue to lock or level marker before that
 decision.
+
+## BF-V2.3c automated visual review
+
+### Facts
+
+- All twelve isolated SVG/PNG outputs have transparent padding and no opaque
+  edge pixels.
+- Shared family/state bounds, stable IDs, content-safe compact transforms, and
+  reference-pixel exclusion validate.
+- Native, phone, thumbnail, state-sheet, isolation, and geometry-overlay
+  evidence was inspected.
+- Lock and level marker are absent, and no icon promotion has occurred.
+
+### Visual-review inferences
+
+- **Pass:** Exit reads immediately as leaving through a doorway; the red arrow
+  remains distinct on the red container because the navy outline and cream door
+  preserve figure separation.
+- **Pass:** Check has the strongest compact recognition of the group. The cream
+  tick, navy ring, and green success field remain distinct without relying on
+  the container silhouette.
+- **Pass:** Warning preserves a conventional triangle and exclamation cue, so
+  its meaning is not color-only. The revised normal triangle leaves the
+  container rim and lower-right depth visible, and the compact form is centered
+  with four-side padding.
+- **Pass:** Outline weight, upper-left highlight, lower-right depth, palette
+  discipline, and optical scale are consistent with the locked semantic-family
+  foundation.
+- **Non-blocking observation:** On colored containers, the semantic fill and
+  container face intentionally share red or green. Navy internal outlines keep
+  the glyphs readable at the reviewed phone and thumbnail scales.
+
+### Automated outcome
+
+**Recommend visual approval with no correction.** No technical or visual
+blocker was found in the reviewed evidence. Final locking remains Hien's
+Product/Art/UI decision; promotion and the lock/level-marker group remain out
+of scope.
+
+## BF-V2.3c approval
+
+**Approved and locked on 2026-07-31 by Hien, acting as Product, Art, and UI
+reviewer.** Exit, check, and warning are accepted across all twelve validated
+presentation and size views. The lock preserves approved glyph geometry,
+semantic colors, container treatments, compact transforms, content-safe bounds,
+stable IDs, and provenance. The immutable approval receipt is
+`3501f18851b135a91c121feb113853fed71817e93aab6e6a008776bc599dcaf4`.
+
+No promotion was authorized or performed. Lock and level marker remain
+unstarted and require a separately authorized bounded task.
