@@ -140,3 +140,26 @@ localization-safe expansion regions. It explicitly excludes puzzle, HUD, Town,
 Workshop, result, and environment families. Generated phone evidence must keep
 that representative text visible; a text-free scale composition is not
 readability evidence.
+
+## BF-V2.2a approval, promotion, and package
+
+**Approved on 2026-07-31 by Hien, acting as Product, Art, and UI reviewer.**
+The accepted limitation is that tertiary copy may not remain fully readable at
+thumbnail scale; headings, values, action labels, and semantic hierarchy must
+remain clear.
+
+The immutable rollout approval is
+`6dc4276a1b84b0670698b61b48bce42b75523b15661043ef6877237195a77ba8`.
+The validated promotion plan is
+`90dd96697893dddf5ab2d65a006d844f74d1c330092d5091428b7b3cd4609502`.
+It promoted only `v2-primary-action`, `v2-secondary-action`,
+`v2-small-info-panel`, `v2-medium-modal-panel`, and `v2-popup-panel`, all at
+immutable `1.0.0`, with nine states and eighteen SVG/PNG modules.
+
+`block-forge@1.1.0` validates with 27 components and 143 files. Its manifest
+SHA-256 is
+`01e3c7c1b778506869dd31e4d891a4cf52eef7d4b9ca195e8d78cfacf5bf00ac`.
+The refreshed project audit has zero findings, the rollout approval remains
+valid, and package validation confirms an engine-neutral, reference-free
+delivery. Unity integration and runtime-font licensing remain consumer
+responsibilities.
