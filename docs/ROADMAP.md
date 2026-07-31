@@ -432,11 +432,18 @@ slicing, geometry, and safe-area evidence were generated and inspected. The
 seven-reference project audit has zero findings. Building evolution, smoke,
 vegetation, paths, and other illustration content remain excluded.
 
-**Next task:** M12-A6n — Hien reviews the Workshop upgrade-state evidence as
-Product, Art, and UI reviewer. **Human decision:** approve it or return it with
-a bounded reason. Full copy is readable at phone size but not comfortably
-readable at thumbnail size; state silhouettes and semantic colors remain
-distinct. No build or promotion is authorized before approval.
+**M12-A6n — Workshop upgrade-state approval:** 🟢 Approved. Hien, acting as
+Product, Art, and UI reviewer, accepted the current three-size evidence on
+2026-07-31. The immutable approval receipt is current and hash-valid. The
+approval covers the two newly reconstructed Workshop families and preserves
+reuse of the four promoted foundations. It explicitly accepts that full
+secondary copy is not comfortably readable at thumbnail size while warning,
+ready, and completed states remain recognizable.
+
+**Next agent-ready task:** M12-A6o — build and compare the approved snapshot,
+validate the promotion dry-run, and promote `workshop-status-indicator` and
+`workshop-upgrade-summary` as immutable version `1.0.0` components. Do not
+assemble an incomplete final delivery package.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
