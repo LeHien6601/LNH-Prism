@@ -449,10 +449,21 @@ passed dry-run validation, and `workshop-status-indicator` and
 project library now contains sixteen promoted families and 94 files with zero
 audit findings. No delivery package was assembled.
 
-**Next agent-ready task:** M12-A6p — register the approved Victory reference
-as bounded `screen-composition` authority, create the job, reuse promoted
-shared components, reconstruct only missing Victory modal UI, generate
-three-size evidence, and stop for human review.
+**M12-A6p — Victory modal job:** 🟢 Technical preparation complete. The approved
+Victory reference is registered as `screen-composition`. The bounded job reuses
+promoted `medium-modal-panel` and `primary-action` foundations, and adds only
+`victory-heading` and `victory-reward-summary`. Native, phone, thumbnail,
+state, isolation, slicing, geometry, and safe-area evidence were generated and
+inspected. The eight-reference project audit has zero findings. Gameplay board,
+environment, bridge illustration, reward-log illustration, particles, and
+background art remain excluded.
+
+**Next human decision:** M12-A6q — Hien, acting as Product, Art, and UI
+reviewer, should review the bounded Victory heading and reward-summary evidence.
+Approve the two new families for deterministic build/promotion, or request a
+revision. The thumbnail keeps the Victory cue and reward silhouette readable;
+full secondary reward copy is intentionally not expected to be comfortably
+readable at that size.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
