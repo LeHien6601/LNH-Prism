@@ -124,3 +124,19 @@ to the wooden frame; normalized upper-left highlight/lower-right depth offsets;
 and a review-only 320 x 568 mobile composition. Job validation again passes for
 two families, three states, four geometry constraints, and the reference-pixel
 boundary. This remains a human visual decision; nothing has been propagated.
+
+## BF-V2.1a approval and BF-V2.2a rollout
+
+**Approved on 2026-07-31 by Hien, acting as Product, Art, and UI reviewer.**
+The construction recipe is locked for this improvement program: navy silhouette,
+lower-right depth, upper-left highlight, restrained metal fasteners, contained
+wood grain, cream inset construction, and heavier display typography.
+
+**BF-V2.2a — Agent-ready execution:** applies that locked recipe only to
+`primary-action`, `secondary-action`, `small-info-panel`,
+`medium-modal-panel`, and `popup-panel`. The draft declares shared footprints
+for every multi-state family, representative action/reward/upgrade copy, and
+localization-safe expansion regions. It explicitly excludes puzzle, HUD, Town,
+Workshop, result, and environment families. Generated phone evidence must keep
+that representative text visible; a text-free scale composition is not
+readability evidence.
