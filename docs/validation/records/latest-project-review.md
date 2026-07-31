@@ -221,3 +221,20 @@ This is an evidence-backed Codex preflight, not Product/Art/UI approval.
 request a targeted correction. Do not promote these icons or continue to exit,
 check, warning, lock, level marker, or other semantic families before that
 decision.
+
+## BF-V2.3b partial approval and upgrade correction
+
+**Bridge and settings approved and locked on 2026-07-31 by Hien, acting as
+Product, Art, and UI reviewer.** Approval covers all four reviewed presentation
+and size variants. Their regenerated state-sheet SHA-256 values remain
+`F6A9F177CC2825E5F92C4807530BBBB0E3220B36F116B2D0B21A4FE6E55D31B1`
+for bridge and
+`7192D808596A62148C85CB137C9637055F7E81AD8E81C16DA1923920D269C09F`
+for settings, proving the targeted correction did not modify either family.
+
+Only the upgrade glyph was revised: its horizontal baseline was removed and
+the existing chunky upward arrow group was vertically recentered. Colors,
+outline, highlight, containers, state IDs, family/state bounds, and the compact
+transform are unchanged. Job validation and regenerated evidence pass. Upgrade
+remains a human visual decision; no icon was promoted and no other semantic
+family was modified.
