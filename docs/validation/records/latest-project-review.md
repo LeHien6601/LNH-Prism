@@ -449,3 +449,73 @@ enter production geometry.
 **Next human decision:** approve the BF-V2.4 puzzle-readability evidence or
 request a targeted correction. Do not promote it or begin BF-V2.5 Town and
 Workshop work before that decision.
+
+## BF-V2.4 automated visual review
+
+### Facts
+
+- The exact `8 x 8`/`80`-unit grid, fixed puzzle-unit size, shared bridge
+  footprint, stable IDs, transparent padding, and reference-pixel boundary all
+  validate.
+- Native, phone, thumbnail, state, isolated, geometry, safe-area, and
+  light/dark comparison evidence was inspected.
+- Valid and invalid puzzle units use check and X silhouettes in addition to
+  green and red.
+- The completed board currently preserves the same pieces, target markers, and
+  placement-preview check as the normal board; its principal change is the
+  outer border treatment.
+- Broken and damaged bridges share the same central gap and zigzag crack
+  silhouette; their principal visible difference is color.
+
+### Visual-review inferences
+
+- **Pass:** All eight rows and columns now read at equal size. Grid lines,
+  aligned pieces, and diamond targets remain clear at phone scale and survive
+  thumbnail reduction.
+- **Pass:** Normal, valid, and invalid unit states are immediately distinct and
+  do not depend on hue alone.
+- **Pass:** Repaired bridge is clearly different through the crossed brace and
+  green check, with the original shared footprint preserved.
+- **Blocker:** Completed-board recognition is too weak and potentially
+  misleading because unresolved-looking targets and the placement preview
+  remain visible while only the border changes. Completion requires a clear
+  non-color structural cue and resolved target treatment.
+- **Blocker:** Broken versus damaged bridge recognition is color-dependent.
+  Broken should keep the open gap; damaged should retain a visibly continuous
+  deck with localized cracks or partial reinforcement.
+- **Non-blocking observation:** The standalone normal unit above the board is
+  useful calibration evidence but reads as detached in the composition. State
+  sheets already provide the clearer unit comparison.
+
+### Automated outcome
+
+**Request targeted correction before approval.** Preserve all validated
+dimensions, board grid, normal/valid/invalid units, targets, repaired bridge,
+palette, IDs, and reference boundary. Correct only completed-board semantics
+and broken/damaged bridge structural separation, then rerender the board and
+bridge state comparisons plus phone/thumbnail evidence. Do not promote or begin
+BF-V2.5.
+
+## BF-V2.4 corrective evidence
+
+**Targeted correction prepared on 2026-08-01.** The completed board now retains
+the approved grid, pieces, placement preview, target paths, dimensions, and IDs
+while adding checked target resolution and a separate green completion badge
+with a cream check. Completion therefore has an explicit non-color silhouette
+cue instead of relying on the gold frame treatment.
+
+The broken bridge retains its open central gap and red break mark. The damaged
+bridge now has a visibly continuous deck across the same footprint with a
+localized brown crack, while the repaired bridge remains unchanged with its
+gold crossed brace and green check. This makes broken, damaged, and repaired
+structurally distinct without changing their shared bounds or anchor.
+
+The corrected job validates with three editable families, eight states, nine
+geometry constraints, stable IDs, shared footprints, and a clean
+reference-pixel boundary. Board and bridge state comparisons plus native,
+phone, and thumbnail evidence were rebuilt and inspected. Normal/valid/invalid
+units, target geometry, the repaired bridge, palette, and unrelated output were
+not revised.
+
+**Next human decision:** visually approve the corrected BF-V2.4 evidence or
+request another targeted correction. Promotion and BF-V2.5 remain unauthorized.
