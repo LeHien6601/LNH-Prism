@@ -343,3 +343,50 @@ or unrelated semantic-icon work occurred.
 **Next human decision:** approve lock and level marker across the eight reviewed
 views or request a targeted correction. Do not promote the semantic family
 before that decision.
+
+## BF-V2.3d automated visual review
+
+### Facts
+
+- All eight isolated SVG/PNG outputs preserve transparent padding with no
+  opaque edge pixels.
+- Shared footprints, stable IDs, reference-free editable geometry, and compact
+  content-safe transforms validate.
+- Native, phone, thumbnail, state-sheet, isolation, and geometry-overlay
+  evidence was inspected.
+- No icon promotion or unrelated semantic-family work occurred.
+
+### Visual-review inferences
+
+- **Pass:** Lock is immediately recognizable through its shackle, body, and
+  keyhole. Its desaturated cream/gray construction communicates locked or
+  unavailable status without weakening the navy silhouette.
+- **Pass:** The compact lock remains optically centered with a complete
+  rounded-square container and visible padding on every side.
+- **Pass:** Level marker reads as rank/current-level emphasis through its gold
+  shield and cream inset star. It remains distinct from the upgrade arrow and
+  bridge-target diamond at normal, phone, and thumbnail scales.
+- **Pass:** The compact shield keeps the outer crest as the primary silhouette;
+  the star remains recognizable without excessive internal detail.
+- **Pass:** Both families preserve the locked outline weight, lighting
+  direction, depth, palette discipline, and glyph/container separation.
+
+### Automated outcome
+
+**Recommend visual approval with no correction.** No technical or visual
+blocker was found. Final locking remains Hien's Product/Art/UI decision, and
+promotion remains separately gated.
+
+## BF-V2.3d approval
+
+**Approved and locked on 2026-07-31 by Hien, acting as Product, Art, and UI
+reviewer.** Lock and level marker are accepted across all eight validated
+presentation and size views. The lock preserves glyph geometry, semantic
+colors, container treatments, compact transforms, content-safe bounds, stable
+IDs, and provenance. The immutable approval receipt is
+`60441d88de8e87fd72a7f674de0987dbcc7d807cad092a284b65f98f81f42c25`.
+
+This completes visual calibration and approval for the requested semantic-icon
+list: Wood, clock/turn, bridge target, bridge, upgrade, settings, exit, check,
+warning, lock, and level marker. No semantic icon has been promoted; promotion
+remains a separately authorized bounded task.
