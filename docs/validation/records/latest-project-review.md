@@ -238,3 +238,32 @@ outline, highlight, containers, state IDs, family/state bounds, and the compact
 transform are unchanged. Job validation and regenerated evidence pass. Upgrade
 remains a human visual decision; no icon was promoted and no other semantic
 family was modified.
+
+## BF-V2.3b final approval and BF-V2.3c evidence
+
+**Bridge, corrected upgrade, and settings approved and locked on 2026-07-31 by
+Hien, acting as Product, Art, and UI reviewer.** The approval covers all twelve
+validated presentation and size views and preserves glyph geometry, container
+treatments, compact transforms, content-safe bounds, stable IDs, and
+provenance. The immutable approval receipt is
+`19179cde525e151a17e86d5e52adb3e7935e985c326f03f746749679e31f33b8`.
+No promotion was authorized or performed.
+
+**BF-V2.3c technical preparation complete.** The bounded
+`block-forge-v2-semantic-icons-r3` job adds only exit, check, and warning. Exit
+uses the reserved red warning/exit role with a door-and-right-arrow silhouette;
+check uses the approved green success role; warning uses a red triangular
+silhouette with a cream inset and non-color-only exclamation cue. Each family
+provides uncontained, cream-container, colored-container, and compact
+colored-container views using the locked construction and production-level
+compact transform.
+
+Job validation passes for three families, twelve states, and three shared
+footprint constraints. Native, phone, thumbnail, state, isolated, geometry,
+and safe-area evidence was regenerated and inspected. The project audit has
+zero findings. Lock, level marker, and every other semantic icon remain
+uncreated in this task; no promotion occurred.
+
+**Next human decision:** approve the exit/check/warning evidence or request a
+targeted correction. Do not continue to lock or level marker before that
+decision.
