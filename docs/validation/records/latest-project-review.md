@@ -390,3 +390,28 @@ This completes visual calibration and approval for the requested semantic-icon
 list: Wood, clock/turn, bridge target, bridge, upgrade, settings, exit, check,
 warning, lock, and level marker. No semantic icon has been promoted; promotion
 remains a separately authorized bounded task.
+
+## BF-V2.3 semantic-family promotion and package
+
+**Complete on 2026-07-31.** The previously approved clock/turn family was
+isolated unchanged into a one-family job so its immutable approval boundary
+does not include the rejected first-pass Wood and target families. Its approval
+receipt is
+`d1d446671e40d3cf029aacca96c0c86d76471560613bcc5e2004a0dee2c4ea49`.
+
+Five approved snapshots rebuilt 88 deterministic SVG/PNG modules. Their dry-run
+promotion plans validated before execution:
+
+- Wood and bridge target: `8004b075e79823835aeb6448bdad121a630aa3e2a5f4246e31fb8ff3b4f21e55`.
+- Clock/turn: `fc636a831f2202088c0b7eb1144e379a4757d81c30c371318b8a1cc60926fa90`.
+- Bridge, upgrade, and settings: `f6d155c6947fa6a0550270196f3a8ef78ed9043e1eeca6076490e2f2bfd9c976`.
+- Exit, check, and warning: `2703d9d7fe05fc3cda7b92179306123fa51bec96a3268470bc0a8e60deccad8b`.
+- Lock and level marker: `7a4991c51d1f4c639042fdfda0678c6086476ff4af5ac03f7f7ccfc5ff5a2b12`.
+
+Only the eleven approved semantic families were promoted as immutable `1.0.0`
+components. The regenerated engine-neutral `block-forge@1.2.0` package
+validates with 38 components and 242 files. Its manifest SHA-256 is
+`cdab6f99bcfe1305cd655c05e3e6d7a978581cd64e1e60a4aa2cadd6101285c4`.
+The package contains no reference pixels, and the refreshed project audit has
+zero findings. Unity integration and runtime-font licensing remain consumer
+responsibilities; the accepted tertiary-thumbnail-copy limitation is retained.
