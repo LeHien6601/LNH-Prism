@@ -528,9 +528,17 @@ passed dry-run validation, and `secondary-action` and
 project library now contains twenty-two promoted families and 114 files with
 zero audit findings. No delivery package has yet been assembled.
 
-**Next agent-ready task:** M12-A6y — assemble and validate the complete
-engine-neutral Block Forge package from the approved promoted component library.
-Exclude all reference and comparison evidence.
+**M12-A6y — Complete Block Forge package:** 🟢 Complete. The approved promoted
+component library was assembled as `block-forge@1.0.0`. Package validation
+passed with 22 components and 120 files; the manifest SHA-256 is
+`2e3e6b8a13f4a4b60a1a167583643b1abc2cebc8a6b2eccf0295eca6763bbe8d`.
+The package is engine-neutral and contains no reference pixels, reference
+paths, or comparison evidence. Unity integration, runtime-font licensing, and
+final engine integration remain consumer responsibilities.
+
+**Next human decision:** M12-A6z — Hien, acting as Product, Art, and UI
+reviewer, should accept or reject the complete engine-neutral Block Forge
+delivery package and its recorded integration limitations for M12 delivery.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
