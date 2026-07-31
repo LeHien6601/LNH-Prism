@@ -484,12 +484,18 @@ inspected. The nine-reference project audit has zero findings. Gameplay board,
 environment, bridge illustration, particles, and background art remain
 excluded.
 
-**Next human decision:** M12-A6t — Hien, acting as Product, Art, and UI
-reviewer, should review the bounded Failure heading and incomplete-progress
-evidence. Approve the two new families for deterministic build/promotion, or
-request a revision. The thumbnail keeps the clock-led Failure cue and
-incomplete-progress silhouette readable; full secondary progress copy is
-intentionally not expected to be comfortably readable at that size.
+**M12-A6t — Failure modal approval:** 🟢 Approved. Hien, acting as Product, Art,
+and UI reviewer, accepted the current three-size evidence on 2026-07-31. The
+immutable approval receipt is current and hash-valid. The approval covers the
+two newly reconstructed Failure families and preserves reuse of the promoted
+modal and action foundations. It explicitly accepts that detailed secondary
+progress copy is not comfortably readable at thumbnail size while the
+clock-led Failure cue and incomplete-progress silhouette remain recognizable.
+
+**Next agent-ready task:** M12-A6u — build and compare the approved snapshot,
+validate the promotion dry-run, and promote `failure-heading` and
+`failure-progress-summary` as immutable version `1.0.0` components. Do not
+assemble an incomplete final delivery package.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
