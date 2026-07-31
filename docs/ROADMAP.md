@@ -440,10 +440,19 @@ reuse of the four promoted foundations. It explicitly accepts that full
 secondary copy is not comfortably readable at thumbnail size while warning,
 ready, and completed states remain recognizable.
 
-**Next agent-ready task:** M12-A6o — build and compare the approved snapshot,
-validate the promotion dry-run, and promote `workshop-status-indicator` and
-`workshop-upgrade-summary` as immutable version `1.0.0` components. Do not
-assemble an incomplete final delivery package.
+**M12-A6o — Workshop upgrade-state build and promotion:** 🟢 Complete. The
+approved snapshot produced 12 deterministic SVG/PNG modules. Comparison was
+regenerated, promotion plan
+`54b55cf257405e5096ce5d6626946b83812cfee82ea8979bc82b914d0b8a4bc4`
+passed dry-run validation, and `workshop-status-indicator` and
+`workshop-upgrade-summary` were promoted as immutable `1.0.0` components. The
+project library now contains sixteen promoted families and 94 files with zero
+audit findings. No delivery package was assembled.
+
+**Next agent-ready task:** M12-A6p — register the approved Victory reference
+as bounded `screen-composition` authority, create the job, reuse promoted
+shared components, reconstruct only missing Victory modal UI, generate
+three-size evidence, and stop for human review.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.

@@ -35,8 +35,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🤖 **Build and promote Workshop upgrade states (M12-A6o)** · Agent-ready |
-| Next agent-ready task | M12-A6o — Build the approved Workshop snapshot, compare it, and promote the two new families as immutable `1.0.0` components |
+| Next task | 🤖 **Reconstruct Victory modal (M12-A6p)** · Agent-ready |
+| Next agent-ready task | M12-A6p — Register the approved Victory authority, reuse promoted shared components, reconstruct only missing modal UI, and prepare three-size evidence |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -72,7 +72,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | Workshop upgrade-state evidence approved; M12-A6o builds and promotes the two Workshop families |
+| 🔵 | M12 | Production Lab Block Forge readiness | Sixteen component families promoted; M12-A6p continues the pilot with bounded Victory modal UI |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -97,7 +97,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Build and promote approved Town functional UI (M12-A6l) | 🤖 Agent | 🟢 Complete | 18 modules across four Town families are promoted as immutable `1.0.0` components; incomplete pilot packaging remains deferred |
 | P0 | Reconstruct Workshop upgrade states (M12-A6m) | 🤖 Agent | 🟢 Complete | Seven authorities are registered; the job reuses four promoted foundations, adds two Workshop families and six states, and passes three-size technical inspection |
 | P0 | Review Workshop upgrade-state evidence (M12-A6n) | 🧭 Hien · Product + Art + UI | 🟢 Approved | Immutable approval receipt is current and hash-valid; thumbnail state-recognition limitation accepted |
-| P0 | Build and promote approved Workshop upgrade states (M12-A6o) | 🤖 Agent | Agent-ready | Build and compare the approved snapshot, then promote the two Workshop families as immutable `1.0.0` components |
+| P0 | Build and promote approved Workshop upgrade states (M12-A6o) | 🤖 Agent | 🟢 Complete | 12 modules across two Workshop families are promoted as immutable `1.0.0` components; incomplete pilot packaging remains deferred |
+| P0 | Reconstruct Victory modal (M12-A6p) | 🤖 Agent | Agent-ready | Register the Victory authority, reuse promoted shared components, reconstruct only missing modal UI, and prepare three-size evidence for human review |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |
