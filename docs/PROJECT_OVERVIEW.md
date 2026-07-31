@@ -35,8 +35,8 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🤖 **Reconstruct Failure modal (M12-A6s)** · Agent-ready |
-| Next agent-ready task | M12-A6s — Register the approved Failure authority, reuse promoted shared components, reconstruct only missing modal UI, and prepare three-size evidence |
+| Next task | 🧭 **Review Failure modal evidence (M12-A6t)** · Human decision |
+| Next agent-ready task | M12-A6t — Review the bounded Failure heading and incomplete-progress evidence, including the accepted thumbnail copy limitation, then approve or request revision |
 | Last reviewed | 2026-07-19 |
 | Project owner | 🧭 To be assigned |
 
@@ -72,7 +72,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | Eighteen component families promoted; M12-A6s continues the pilot with bounded Failure modal UI |
+| 🔵 | M12 | Production Lab Block Forge readiness | Failure modal evidence is ready for Product, Art, and UI review |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -101,7 +101,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | P0 | Reconstruct Victory modal (M12-A6p) | 🤖 Agent | 🟢 Complete | Eight authorities are registered; the job reuses promoted modal/action foundations, adds two Victory families, and passes three-size technical inspection |
 | P0 | Review Victory modal evidence (M12-A6q) | 🧭 Hien · Product + Art + UI | 🟢 Approved | Immutable approval receipt is current and hash-valid; thumbnail copy limitation accepted |
 | P0 | Build and promote approved Victory modal UI (M12-A6r) | 🤖 Agent | 🟢 Complete | Four modules across two Victory families are promoted as immutable `1.0.0` components; incomplete pilot packaging remains deferred |
-| P0 | Reconstruct Failure modal (M12-A6s) | 🤖 Agent | Agent-ready | Register the Failure authority, reuse promoted shared components, reconstruct only missing modal UI, and prepare three-size evidence for human review |
+| P0 | Reconstruct Failure modal (M12-A6s) | 🤖 Agent | 🟢 Complete | Nine authorities are registered; the job reuses promoted modal/action foundations, adds two Failure families, and passes three-size technical inspection |
+| P0 | Review Failure modal evidence (M12-A6t) | 🧭 Hien · Product + Art + UI | Human decision | Review the bounded Failure heading and incomplete-progress evidence; accept or revise the thumbnail copy-readability limitation |
 | P0 | Draft versioned M0 contracts: style, component, material pack, and export manifest | 🤖 Agent | 🟢 Complete | Schemas and examples validate; 🟢 approved |
 | P0 | Review and approve schemas and IDs | 🧭 Product + 🛠️ technical lead | 🟢 Complete | Approved by project owner on 2026-07-15 |
 | P0 | Select one style reference and target device scale | 🎨 Art lead | 🟢 Complete | Neon Core selected; `540 × 960` logical portrait canvas and `1080 × 1920` 2× output recorded in the V1 reference brief |

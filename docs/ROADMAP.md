@@ -475,10 +475,21 @@ were promoted as immutable `1.0.0` components. The project library now contains
 eighteen promoted families and 100 files with zero audit findings. No delivery
 package was assembled.
 
-**Next agent-ready task:** M12-A6s — register the approved Failure reference
-as bounded `screen-composition` authority, create the job, reuse promoted
-shared components, reconstruct only missing Failure modal UI, generate
-three-size evidence, and stop for human review.
+**M12-A6s — Failure modal job:** 🟢 Technical preparation complete. The approved
+Failure reference is registered as `screen-composition`. The bounded job reuses
+promoted `medium-modal-panel` and `primary-action` foundations, and adds only
+`failure-heading` and `failure-progress-summary`. Native, phone, thumbnail,
+state, isolation, slicing, geometry, and safe-area evidence were generated and
+inspected. The nine-reference project audit has zero findings. Gameplay board,
+environment, bridge illustration, particles, and background art remain
+excluded.
+
+**Next human decision:** M12-A6t — Hien, acting as Product, Art, and UI
+reviewer, should review the bounded Failure heading and incomplete-progress
+evidence. Approve the two new families for deterministic build/promotion, or
+request a revision. The thumbnail keeps the clock-led Failure cue and
+incomplete-progress silhouette readable; full secondary progress copy is
+intentionally not expected to be comfortably readable at that size.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
