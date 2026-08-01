@@ -16,9 +16,10 @@ product documents, semantic UI specifications, actions, bindings, assets, and
 generated engine output. Prism owns only the versioned schemas, compiler,
 wireframe tooling, CLI, and engine adapters that consume those inputs.
 
-M13 establishes this V2 boundary as a clean package family. The initial package
-entry points contain boundary metadata only; semantic schemas, validation,
-wireframes, CLI commands, and Unity export behavior are separate later tasks.
+M13 establishes this V2 boundary as a clean package family. Schema version
+`1.0.0`, the bounded semantic component contracts, and stable-ID diagnostics
+are implemented. Cross-reference and hierarchy validation, wireframes, CLI
+commands, and Unity export behavior remain separate later tasks.
 
 ## V2 package boundary
 

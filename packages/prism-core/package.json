@@ -5,6 +5,7 @@
   "type": "module",
   "exports": "./src/index.mjs",
   "dependencies": {
-    "@lnh-prism/schema": "0.1.0"
+    "@lnh-prism/schema": "0.1.0",
+    "ajv": "^8.17.1"
   }
 }

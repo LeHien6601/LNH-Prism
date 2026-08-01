@@ -14,7 +14,7 @@ package support, but they are not V2 dependencies.
 | Status | In progress — M13 Semantic UI V2 foundation |
 | Active mission | `semantic-ui-v2` |
 | Active milestone | M13: Semantic UI V2 vertical slice |
-| Next task | M13-A2: versioned semantic schemas and stable-ID validation |
+| Next task | M13-A3: semantic reference and hierarchy validation |
 | North-star outcome | Safely regenerate engine UI from game-owned semantic specifications |
 | First production validation | External Tic-Tac-Toe semantic UI fixture and Unity workflow |
 

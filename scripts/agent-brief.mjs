@@ -8,7 +8,10 @@ const nextId = text => text.match(/^\| Next task \|.*?\(([^)]+)\)/mu)?.[1] ?? "u
 const milestone = text => text.match(/^\| Active milestone \|.*?\b(M\d+)\b.*$/mu)?.[1] ?? "unavailable";
 const mission = text => text.match(/^\| Active mission \|\s*`([^`]+)`/mu)?.[1] ?? "unavailable";
 async function files(path) { const entries = await readdir(path, { withFileTypes: true }); return (await Promise.all(entries.map(entry => entry.isDirectory() ? files(resolve(path, entry.name)) : [resolve(path, entry.name)]))).flat(); }
-function validations(id) { return id.startsWith("M11") ? ["npm run build:renderer", "npm run test:renderer", "npm run validate:m11-a4-package", "npm run validate:contracts", "npm run test:review-reference-boundary", "npm run validate:control-drift"] : ["npm run validate:contracts", "npm run test:renderer"]; }
+function validations(id) {
+  if (id.startsWith("M13")) return ["npm run validate:v2-contracts", "npm run test:semantic-contracts", "npm run validate:v2-boundaries", "npm run validate:control-drift"];
+  return id.startsWith("M11") ? ["npm run build:renderer", "npm run test:renderer", "npm run validate:m11-a4-package", "npm run validate:contracts", "npm run test:review-reference-boundary", "npm run validate:control-drift"] : ["npm run validate:contracts", "npm run test:renderer"];
+}
 export async function createAgentBrief({ root = resolve(".") } = {}) {
   const overview = await readFile(resolve(root, "docs/PROJECT_OVERVIEW.md"), "utf8"); const id = nextId(overview);
   const module = (await files(resolve(root, "docs/implementation"))).find(path => path.endsWith(".md") && path.includes(id.split("-")[0])) ?? "";

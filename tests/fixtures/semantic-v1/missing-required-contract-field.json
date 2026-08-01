@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": {
+    "id": "project.sample",
+    "defaultThemeId": "theme.default",
+    "unityExport": { "contractVersion": "1.0.0", "generatedRoot": "Generated/Prism", "namespace": "Fixture.Ui" }
+  },
+  "themes": [],
+  "screens": [],
+  "components": [],
+  "actions": [],
+  "bindings": [],
+  "assetSlots": [],
+  "states": []
+}

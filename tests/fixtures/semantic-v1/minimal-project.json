@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": {
+    "id": "project.contract-sample",
+    "name": "Semantic UI contract sample",
+    "defaultThemeId": "theme.default",
+    "unityExport": {
+      "contractVersion": "1.0.0",
+      "generatedRoot": "Assets/Generated/Prism",
+      "namespace": "ContractSample.Ui"
+    }
+  },
+  "themes": [
+    {
+      "id": "theme.default",
+      "tokens": {
+        "colors": { "surface": "#20242a", "content": "#ffffff" },
+        "spacing": { "small": 8, "medium": 16 }
+      }
+    }
+  ],
+  "screens": [
+    {
+      "id": "screen.sample",
+      "root": {
+        "id": "sample.root",
+        "type": "screen",
+        "children": [
+          {
+            "id": "sample.safe-area",
+            "type": "safe-area",
+            "children": [
+              {
+                "id": "sample.content",
+                "type": "container",
+                "children": [
+                  { "id": "sample.title", "type": "label", "text": "Contract sample" },
+                  { "id": "sample.gap", "type": "spacer" },
+                  { "id": "sample.grid", "type": "grid", "grid": { "columns": 3, "rows": 3 } },
+                  { "id": "sample.continue", "type": "button", "text": "Continue", "actionId": "action.continue" },
+                  { "id": "sample.settings", "type": "modal", "componentId": "component.settings", "dismissalPolicy": "explicit" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "components": [
+    {
+      "id": "component.settings",
+      "root": {
+        "id": "settings.panel",
+        "type": "panel",
+        "children": [
+          { "id": "settings.icon", "type": "image", "assetSlotId": "asset.settings-icon" },
+          { "id": "settings.sound", "type": "toggle", "bindingId": "binding.sound-enabled", "stateIds": ["state.enabled"] }
+        ]
+      }
+    }
+  ],
+  "actions": [
+    { "id": "action.continue", "kind": "invoke" }
+  ],
+  "bindings": [
+    { "id": "binding.sound-enabled", "valueType": "boolean" }
+  ],
+  "assetSlots": [
+    { "id": "asset.settings-icon", "kind": "sprite" }
+  ],
+  "states": [
+    { "id": "state.enabled" }
+  ]
+}

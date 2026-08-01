@@ -576,18 +576,28 @@ legacy history, M12-A6z remains an independent pending human decision, and
 focused validation rejects stale mission scope or multiple active milestones.
 No semantic schema implementation was added.
 
-**M13-A2 — Versioned semantic schemas and stable IDs:** 🔵 Agent-ready.
-Implement the smallest project, theme, screen, reusable component, instance,
-action, binding, asset-slot, state, and Unity-export-setting contracts needed by
-the approved semantic component set. Add stable semantic-ID validation, one
-valid public-contract fixture, focused invalid fixtures, and deterministic
-machine-readable results. Do not add layout solving, wireframe rendering, CLI
-commands, game-specific authoritative data, or Unity generation.
+**M13-A2 — Versioned semantic schemas and stable IDs:** 🟢 Complete. Schema
+`1.0.0` defines project, theme, screen, reusable-component, instance, action,
+binding, asset-slot, state, layout, and Unity-export-setting contracts for the
+eleven approved component types. Core validation rejects unsupported versions,
+malformed or duplicate stable IDs, and unsupported component types with sorted,
+machine-readable diagnostics. One generic public fixture and five focused
+invalid fixtures validate deterministically. No layout solving, wireframe
+rendering, CLI command, game-specific authoritative data, or Unity generation
+was added.
 
-**Later ordered slices:** core diagnostics and semantic validation;
-deterministic multi-size wireframes; CLI and external-project resolution;
-engine-neutral Unity export; Unity adapter and regeneration proof. Each slice
-requires its own bounded authorization and validation.
+**M13-A3 — Semantic reference and hierarchy validation:** 🔵 Agent-ready.
+Validate references to declared screens, reusable components, actions,
+bindings, asset slots, and states; hierarchy shape and cycles; and bounded
+per-type requirements for buttons, toggles, grids, modals, and safe-area roots.
+Preserve the M13-A2 public contract and deterministic diagnostic format. Do not
+add layout geometry checks, wireframes, CLI commands, game-specific data, or
+Unity generation.
+
+**Later ordered slices:** deterministic multi-size wireframes; CLI and
+external-project resolution; engine-neutral Unity export; Unity adapter and
+regeneration proof. Each slice requires its own bounded authorization and
+validation.
 
 **Boundary:** no production-art generation, screenshot-to-layout inference,
 game-specific product ownership, competing LNH Core UI framework, general

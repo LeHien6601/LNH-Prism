@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": {
+    "id": "project.sample",
+    "name": "Unsupported type fixture",
+    "defaultThemeId": "theme.default",
+    "unityExport": { "contractVersion": "1.0.0", "generatedRoot": "Generated/Prism", "namespace": "Fixture.Ui" }
+  },
+  "themes": [],
+  "screens": [
+    {
+      "id": "screen.sample",
+      "root": { "id": "sample.carousel", "type": "carousel" }
+    }
+  ],
+  "components": [],
+  "actions": [],
+  "bindings": [],
+  "assetSlots": [],
+  "states": []
+}

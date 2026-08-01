@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": {
+    "id": "project.sample",
+    "name": "Duplicate ID fixture",
+    "defaultThemeId": "theme.default",
+    "unityExport": { "contractVersion": "1.0.0", "generatedRoot": "Generated/Prism", "namespace": "Fixture.Ui" }
+  },
+  "themes": [
+    { "id": "theme.default", "tokens": { "colors": {}, "spacing": {} } },
+    { "id": "theme.default", "tokens": { "colors": {}, "spacing": {} } }
+  ],
+  "screens": [],
+  "components": [],
+  "actions": [],
+  "bindings": [],
+  "assetSlots": [],
+  "states": []
+}

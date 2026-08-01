@@ -14,8 +14,8 @@ engine-neutral Unity export contracts, generated-file ownership, and
 compatibility rules.
 
 It excludes game-specific product data, screenshot-to-layout inference,
-production art generation, a general editor, Unity generation in M13-A1, and
-broad legacy cleanup.
+production art generation, a general editor, Unity generation until its later
+bounded task, and broad legacy cleanup.
 
 ## Inputs and outputs
 
@@ -62,11 +62,12 @@ The complete policy is [ADR-026](../decisions/ADR-026-semantic-ui-v2-boundary.md
 
 ## Initial implementation sequence
 
-1. M13-A1: establish product and package boundaries with enforcement.
-2. M13-A2: implement the smallest versioned semantic schema and stable-ID
-   validation slice.
-3. Later bounded tasks: core diagnostics, deterministic wireframes, CLI
-   commands, external-project resolution, Unity export contract, and adapter.
+1. M13-A1: product and package boundaries with enforcement — complete.
+2. M13-A2: semantic schema `1.0.0`, bounded public contracts, and stable-ID
+   validation — complete.
+3. M13-A3: semantic cross-reference, hierarchy, and per-type validation.
+4. Later bounded tasks: deterministic wireframes, CLI commands,
+   external-project resolution, Unity export contract, and adapter.
 
 ## Legacy boundary
 
@@ -92,3 +93,4 @@ and focused compatibility tests.
 | 2026-08-01 | Replaced the active architecture with the approved semantic UI V2 boundary while retaining legacy history | Project owner / Codex |
 | 2026-08-01 | Hardened module and manifest dependency enforcement across supported JS/TS forms with focused negative coverage | Codex |
 | 2026-08-01 | Reconciled active controls around `semantic-ui-v2` and added mission-drift enforcement | Codex |
+| 2026-08-01 | Added schema `1.0.0`, bounded semantic contracts, stable-ID/type diagnostics, and deterministic public fixtures | Codex |
