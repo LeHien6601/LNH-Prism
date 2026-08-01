@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "agent:brief": "node scripts/agent-brief.mjs",
     "lab": "npm --prefix production-lab run lab --",
@@ -47,7 +50,9 @@
     "test:m10-reference-boundary": "node --test tests/validation/m10-reference-boundary.test.mjs",
     "test:review-reference-boundary": "node --test tests/validation/review-reference-boundary.test.mjs",
     "test:control-drift": "node --test tests/validation/control-drift.test.mjs",
+    "test:v2-boundaries": "node --test tests/architecture/v2-boundaries.test.mjs",
     "validate:control-drift": "node scripts/validate-control-drift.mjs",
+    "validate:v2-boundaries": "node scripts/validate-v2-boundaries.mjs",
     "prepare:v8-evidence": "node scripts/prepare-v8-evidence.mjs",
     "validate:v8-evidence": "node scripts/validate-v8-evidence.mjs",
     "prepare:v7-evidence": "node scripts/prepare-v7-review.mjs",
@@ -63,7 +68,7 @@
     "prepare:v2-evidence": "npm run build:renderer && node scripts/prepare-v2-evidence.mjs",
     "validate:v2-evidence": "npm run build:renderer && node scripts/validate-v2-evidence.mjs",
     "validate:v1-evidence": "node scripts/validate-v1-evidence.mjs",
-    "validate": "npm run validate:contracts && npm run prepare:asset-package && npm run validate:asset-package && npm run test:analysis && npm run prepare:m3-s2-review && npm run validate:m3-s2-review && npm run prepare:m3-s3-material-intake && npm run validate:m3-s3-material-intake && npm run prepare:m3-s4-evidence && npm run validate:m3-s4-evidence && npm run prepare:m7-a5-assets && npm run validate:m7-a5-assets && npm run prepare:m8-a4-assets && npm run validate:m8-a4-assets && npm run prepare:m8-material-intake && npm run prepare:v7-evidence && npm run validate:v7-evidence && npm run test:resolver && npm run test:materials && npm run test:renderer && npm run prepare:v3-evidence && npm run validate:v3-evidence && npm run prepare:m2-s2-evidence && npm run prepare:m2-s4-evidence && npm run prepare:v2-evidence && npm run validate:v2-evidence && npm run prepare:showcase && npm run validate:showcase && npm run validate:v1-evidence"
+    "validate": "npm run validate:v2-boundaries && npm run test:v2-boundaries && npm run validate:contracts && npm run prepare:asset-package && npm run validate:asset-package && npm run test:analysis && npm run prepare:m3-s2-review && npm run validate:m3-s2-review && npm run prepare:m3-s3-material-intake && npm run validate:m3-s3-material-intake && npm run prepare:m3-s4-evidence && npm run validate:m3-s4-evidence && npm run prepare:m7-a5-assets && npm run validate:m7-a5-assets && npm run prepare:m8-a4-assets && npm run validate:m8-a4-assets && npm run prepare:m8-material-intake && npm run prepare:v7-evidence && npm run validate:v7-evidence && npm run test:resolver && npm run test:materials && npm run test:renderer && npm run prepare:v3-evidence && npm run validate:v3-evidence && npm run prepare:m2-s2-evidence && npm run prepare:m2-s4-evidence && npm run prepare:v2-evidence && npm run validate:v2-evidence && npm run prepare:showcase && npm run validate:showcase && npm run validate:v1-evidence"
   },
   "devDependencies": {
     "@types/node": "26.1.1",

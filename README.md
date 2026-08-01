@@ -1,36 +1,62 @@
 # LNH Prism
 
-LNH Prism is an AI-assisted mobile game UI asset generation system.
+LNH Prism V2 is a semantic UI specification, validation, deterministic
+wireframe, packaging, and Unity-integration system for game-owned UI projects.
 
-> AI creates concepts and reusable materials; deterministic tools create structure and final assets.
+> Prism compiles written, typed game specifications into validated wireframe
+> evidence and engine-specific generated views. It does not create production
+> artwork.
 
-The project is currently in **M1 — Deterministic MVP renderer**. Its first implementation target is a consistent Primary Button, Panel, and Progress Bar that can be regenerated across sizes and states without manual repainting.
+## Current direction
+
+Written game specifications are authoritative. Game repositories own their
+product documents, semantic UI specifications, actions, bindings, assets, and
+generated engine output. Prism owns only the versioned schemas, compiler,
+wireframe tooling, CLI, and engine adapters that consume those inputs.
+
+M13 establishes this V2 boundary as a clean package family. The initial package
+entry points contain boundary metadata only; semantic schemas, validation,
+wireframes, CLI commands, and Unity export behavior are separate later tasks.
+
+## V2 package boundary
+
+```text
+@lnh-prism/cli -> @lnh-prism/core -> @lnh-prism/schema
+@lnh-prism/cli -> @lnh-prism/wireframe -> core/schema
+@lnh-prism/cli -> @lnh-prism/unity-contract -> core/schema
+```
+
+Run `npm run validate:v2-boundaries` to verify the package graph and reject
+imports from the legacy renderer, Production Lab, or other repository-owned
+implementation paths.
+
+## Product boundary
+
+Prism V2:
+
+- validates typed semantic UI specifications;
+- produces deterministic wireframe evidence;
+- packages stable, engine-neutral export contracts;
+- supports generated-versus-authored ownership boundaries;
+- preserves stable semantic IDs and reproducible metadata.
+
+Prism V2 does not generate final art, infer product behavior from screenshots,
+replace LNH Core UI capabilities, or own game-specific specifications and
+assets.
+
+## Legacy system
+
+The root `src/`, `specs/`, `materials/`, `assets/`, `showcase/`, and
+`production-lab/` areas remain historical and supported evidence for the V1
+asset-generation pipeline. They are not V2 dependencies and are not being
+deleted or broadly refactored during the semantic UI MVP. Before any later
+cleanup, preserve a repository tag such as `prism-v1-legacy-baseline`.
 
 ## Documentation
 
 - [Project overview and status](docs/PROJECT_OVERVIEW.md)
-- [Agent instructions and quick commands](AGENTS.md)
-- [Phased roadmap](docs/ROADMAP.md)
+- [Semantic UI V2 architecture decision](docs/decisions/ADR-026-semantic-ui-v2-boundary.md)
 - [System architecture](docs/modules/01-system-architecture.md)
-- [M0 contract specifications](specs/README.md)
-- [V1 render/export decision](docs/decisions/ADR-009-v1-render-export-stack.md)
+- [Phased roadmap](docs/ROADMAP.md)
 - [Change control](docs/CHANGE_CONTROL.md)
-- [Skill capability assessment](docs/SKILL_CAPABILITY_ASSESSMENT.md)
-- [All documentation](docs/README.md)
-
-## Repository layout
-
-```text
-docs/     Project controls, modules, and roadmap
-src/      Renderer, schema, analysis, material, and export implementation
-tests/    Unit, schema, golden-render, and integration tests
-assets/   Approved source references and validation fixtures only
-```
-
-## Immediate next task
-
-Prove the approved TypeScript + SVG + resvg renderer with the Primary Button. See the task board in the [project overview](docs/PROJECT_OVERVIEW.md).
-
-## Status
-
-No production renderer code has been added yet. The project has approved its contracts, V1 reference and briefs, visual review rubric, and render/export stack; the next task is the bounded M1 Primary Button proof.
+- [Agent instructions](AGENTS.md)

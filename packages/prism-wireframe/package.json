@@ -1,0 +1,11 @@
+{
+  "name": "@lnh-prism/wireframe",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.mjs",
+  "dependencies": {
+    "@lnh-prism/core": "0.1.0",
+    "@lnh-prism/schema": "0.1.0"
+  }
+}

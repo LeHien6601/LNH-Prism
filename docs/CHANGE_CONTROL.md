@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The system must welcome useful ideas without losing its mission: **AI supplies concepts and reusable materials; deterministic tooling owns structure and final assets.**
+The system must welcome useful ideas without losing its active mission: **game-owned typed specifications are authoritative; Prism deterministically validates, previews, and packages UI structure without creating production artwork.**
 
 ## Non-negotiable guardrails
 
@@ -62,3 +62,4 @@ The system must welcome useful ideas without losing its mission: **AI supplies c
 |---|---|---|
 | 2026-07-15 | Initial governance rules created | Codex |
 | 2026-07-17 | Defined whole-project weakness reviews and one-task review remediation workflow | Codex |
+| 2026-08-01 | Approved CR-003 and made the semantic UI compiler boundary the active mission for new V2 development | Project owner / Codex |

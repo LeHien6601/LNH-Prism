@@ -1,57 +1,46 @@
-# AI-Assisted Mobile Game UI Asset Generation System
+# LNH Prism Semantic UI V2 documentation
 
-**Core principle:** AI creates concepts and reusable materials; deterministic tools create structure and final assets.
+**Core principle:** Game-owned typed specifications are authoritative; Prism
+deterministically validates, previews, and packages UI structure without
+creating production artwork.
 
-This documentation package defines the plan for a production-oriented system that turns a game UI style direction into consistent, editable, engine-neutral UI asset modules. It deliberately treats AI-generated screens as references—not as final assets to cut apart.
+Legacy asset-generation records remain available for auditability and existing
+package support, but they are not V2 dependencies.
 
 ## Project snapshot
 
 | Field | Current value |
 |---|---|
-| Status | 🟡 In progress — M3-S4 Frostbound reconstruction complete; V3 evidence preparation is next |
-| Active milestone | 🟡 M3: AI-assisted analysis and material intake implementation |
-| Next task | 🔵 Prepare M3-S5 V3 evidence package and preflight |
-| North-star outcome | Generate consistent UI components, states, and size variants from reusable styles/materials |
-| First production validation | Build a real Primary Button, Panel, and Progress Bar in one selected style |
+| Status | In progress — M13 Semantic UI V2 foundation |
+| Active milestone | M13: Semantic UI V2 vertical slice |
+| Next task | M13-A2: versioned semantic schemas and stable-ID validation |
+| North-star outcome | Safely regenerate engine UI from game-owned semantic specifications |
+| First production validation | External Tic-Tac-Toe semantic UI fixture and Unity workflow |
 
-## Navigation
+## Active navigation
 
 | Document | Purpose |
 |---|---|
-| [Project overview](PROJECT_OVERVIEW.md) | Current state, roadmap, tasks, risks, decisions, and governance |
+| [Project overview](PROJECT_OVERVIEW.md) | Current state, tasks, risks, decisions, and governance |
 | [Roadmap](ROADMAP.md) | Phased delivery plan and quality gates |
-| [System architecture](modules/01-system-architecture.md) | System boundaries, data flow, contracts, and repository shape |
-| [Design analysis](modules/02-design-analysis.md) | Concept/screenshot analysis into a controlled style specification |
-| [Component renderer](modules/03-component-renderer.md) | Deterministic structure, layers, states, and size variants |
-| [Materials & textures](modules/04-materials-textures.md) | Reusable procedural and AI-sourced materials |
-| [Validation lab](modules/05-validation-lab.md) | Real-asset validation milestones and review loops |
-| [V1 visual-review rubric](validation/V1_VISUAL_REVIEW_RUBRIC.md) | Approved scorecard and evidence requirements for the completed first validation |
-| [V1 Neon Core reference brief](reference-briefs/V1_NEON_CORE.md) | Selected style direction, palette, scale, and V1 constraints |
-| [V1 core-component acceptance briefs](acceptance-briefs/V1_CORE_COMPONENTS.md) | Approved dimensions, states, layers, and evidence for the first three assets |
-| [V2 Neon Market reference brief](reference-briefs/V2_NEON_MARKET.md) | Approved shop-popup family and Neon Alloy direction |
-| [M2 Neon Market implementation specification](implementation/M2_NEON_MARKET_IMPLEMENTATION_SPEC.md) | Approved versioned requirements, bounded controls, implementation slices, and validation obligations |
-| [V2 visual-review rubric](validation/V2_VISUAL_REVIEW_RUBRIC.md) | Approved evidence package, scoring thresholds, blockers, and scorecard for M2 |
-| [V3 Frostbound Reward reference brief](reference-briefs/V3_FROSTBOUND_REWARD.md) | Selected concept receipt, scale, bounded family, analysis priorities, and no-extraction boundary |
-| [M3 Frostbound implementation specification](implementation/M3_FROSTBOUND_ANALYSIS_IMPLEMENTATION_SPEC.md) | Draft human-controlled proposal, review, material-intake, reconstruction, and evidence requirements |
-| [V3 concept-reconstruction rubric](validation/V3_CONCEPT_RECONSTRUCTION_RUBRIC.md) | Draft evidence package, scoring, automatic blockers, and review procedure for M3 |
-| [ADR-012: V3 Frostbound Reward target](decisions/ADR-012-v3-frostbound-reward.md) | Approved V3 concept, scale, reconstruction family, and concept-pixel prohibition |
-| [ADR-009: V1 render/export stack](decisions/ADR-009-v1-render-export-stack.md) | Approved TypeScript, SVG, resvg, and JSON-manifest architecture |
-| [Modular asset delivery](modules/06-asset-delivery.md) | Extractable assets, derivatives, metadata, and provenance |
-| [Production hardening](modules/07-production-hardening.md) | Reliability, regression testing, performance, and operations |
-| [Change control](CHANGE_CONTROL.md) | Rules for new ideas, reviews, traceability, and scope protection |
-| [Component showcase plan](DASHBOARD_PLAN.md) | Local preview of generated components, states, and real UI scenarios |
-| [CR-001: Component showcase](change-requests/CR-001-component-showcase.md) | Approved scope change from status dashboard to renderer-backed showcase |
-| [Skill capability assessment](SKILL_CAPABILITY_ASSESSMENT.md) | Installed skills, roadmap coverage, and deferred integrations |
+| [System architecture](modules/01-system-architecture.md) | Active V2 boundaries, ownership, dependencies, and sequence |
+| [ADR-026](decisions/ADR-026-semantic-ui-v2-boundary.md) | Semantic UI V2 mission, ownership, versioning, and compatibility policy |
+| [CR-003](change-requests/CR-003-semantic-ui-v2-boundary.md) | Approved strategic change and acceptance criteria |
+| [Change control](CHANGE_CONTROL.md) | Governance, review, and traceability rules |
+| [Agent instructions](../AGENTS.md) | Repository routing and safety rules |
 
-## Document conventions
+## Legacy documentation
 
-- **Status key:** 🟢 complete/approved · 🔵 agent-ready · 🟡 active/draft/proposed · 🟣 human decision/review · 🔴 blocked · ⚪ deferred/not started.
-- **Role key:** 🤖 agent · 🧭 product · 🛠️ technical · 🎨 art · ✦ UI.
-- **Quick commands:** `Next:` starts one 🔵 agent-ready task; `Guide:` prepares the current 🟣 human decision; `Review:` performs a read-only health review.
-- **M0–M6** means a delivery milestone in `ROADMAP.md`.
-- **Validation task** means a real deliverable, not a synthetic demo.
-- **Gate** means a required review before work proceeds.
-- **Decision ID** is permanent, for example `ADR-003`.
-- **Change ID** is permanent, for example `CR-012`.
+The module, reference, acceptance, implementation, validation, decision, and
+evidence records for M0–M12 remain in their existing folders. They document the
+asset renderer and Production Lab history; they are not active V2 contracts.
 
-All documents have a change history. Update the overview first whenever project status, the active milestone, next task, key risk, or decision changes.
+## Conventions
+
+- `Next:` executes one authorized agent-ready task.
+- `Guide:` prepares a pending human decision.
+- `Review:` performs a read-only project assessment.
+- M0–M12 are legacy asset-pipeline milestones; M13+ are semantic UI V2
+  milestones.
+- A gate requires recorded evidence; file existence alone is not completion.
+- Generated output never authorizes overwriting game-authored files.

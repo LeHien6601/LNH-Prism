@@ -1,0 +1,13 @@
+{
+  "name": "@lnh-prism/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.mjs",
+  "dependencies": {
+    "@lnh-prism/core": "0.1.0",
+    "@lnh-prism/schema": "0.1.0",
+    "@lnh-prism/unity-contract": "0.1.0",
+    "@lnh-prism/wireframe": "0.1.0"
+  }
+}

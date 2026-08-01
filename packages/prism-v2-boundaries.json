@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "packages": {
+    "@lnh-prism/schema": [],
+    "@lnh-prism/core": ["@lnh-prism/schema"],
+    "@lnh-prism/wireframe": ["@lnh-prism/core", "@lnh-prism/schema"],
+    "@lnh-prism/unity-contract": ["@lnh-prism/core", "@lnh-prism/schema"],
+    "@lnh-prism/cli": [
+      "@lnh-prism/core",
+      "@lnh-prism/schema",
+      "@lnh-prism/unity-contract",
+      "@lnh-prism/wireframe"
+    ]
+  },
+  "forbiddenDependencies": [
+    "lnh-prism",
+    "lnh-prism-production-lab"
+  ]
+}

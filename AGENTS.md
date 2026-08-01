@@ -2,9 +2,11 @@
 
 ## Mission
 
-AI creates concepts and reusable materials; deterministic tools create editable UI structure and final assets.
+Prism V2 compiles game-owned semantic UI specifications into validated wireframe evidence and engine-specific generated views. It does not create production artwork.
 
 Always preserve deterministic output, editable geometry, stable IDs, independent effects, material provenance, reproducible export metadata, and the review-reference boundary.
+
+The legacy renderer and Production Lab remain supported historical evidence, but new V2 packages must not import their art, material, reconstruction, showroom, or milestone implementation paths.
 
 ## Route work
 

@@ -1,5 +1,11 @@
 # Project Overview and Control Page
 
+> 2026-08-01 semantic UI V2 update: [CR-003](change-requests/CR-003-semantic-ui-v2-boundary.md)
+> and [ADR-026](decisions/ADR-026-semantic-ui-v2-boundary.md) establish the
+> active game-owned semantic UI compiler mission. Five isolated private package
+> boundaries and executable legacy-dependency enforcement are now in place.
+> M12-A6z remains an unmade, independent human delivery decision.
+
 > 2026-07-30 readiness update: `production-lab/` is now an owned, supported
 > private LNH Prism package at version `0.6.0`; see
 > [ADR-015](decisions/ADR-015-production-lab-supported-package.md) and the
@@ -16,14 +22,21 @@
 
 ## 1. Mission
 
-Build an adaptable but controlled UI asset pipeline for mobile games. The pipeline should accept an art direction and produce reusable UI assets whose geometry, states, sizes, and export metadata remain deterministic and editable.
+Build a semantic UI specification, validation, deterministic wireframe,
+packaging, and engine-integration system for game-owned UI projects. Written,
+typed game specifications are authoritative; Prism does not create production
+artwork.
 
-The project succeeds when a small team can produce a coherent UI family faster than manually painting every variant, without accepting the inconsistency and rework of extracting components from AI-generated full-screen images.
+The V2 project succeeds when an external game can validate semantic UI,
+generate deterministic multi-size evidence, export a stable engine hierarchy,
+bind authored behavior through semantic IDs, and regenerate without damaging
+authored code or asset mappings.
 
 ## 2. Current status
 
 | Area | State | Evidence / next action |
 |---|---|---|
+| Semantic UI V2 | 🔵 Active foundation | ADR-026, five private package boundaries, and dependency enforcement are complete; schema work is next |
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
@@ -34,11 +47,11 @@ The project succeeds when a small team can produce a coherent UI family faster t
 
 | Focus | Current value |
 |---|---|
-| Active milestone | 🔵 **M12 — Production Lab Block Forge readiness** |
-| Next task | 🧭 **Review Block Forge delivery package (M12-A6z)** · Human decision |
-| Next agent-ready task | M12-A6z — Review the complete engine-neutral Block Forge package and its recorded limitations for M12 delivery acceptance |
-| Last reviewed | 2026-07-19 |
-| Project owner | 🧭 To be assigned |
+| Active milestone | 🔵 **M13 — Semantic UI V2 vertical slice** |
+| Next task | 🔵 **Implement versioned semantic schemas and stable-ID validation (M13-A2)** · Agent-ready |
+| Next agent-ready task | M13-A2 — Implement the smallest versioned semantic schema and stable-ID validation slice |
+| Last reviewed | 2026-08-01 |
+| Project owner | Hien |
 
 ## 3. Objective boundaries
 
@@ -73,6 +86,7 @@ The project succeeds when a small team can produce a coherent UI family faster t
 | 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
 | 🔵 | M12 | Production Lab Block Forge readiness | Complete Block Forge package is validated and ready for delivery review |
+| 🔵 | M13 | Semantic UI V2 vertical slice | Product/package boundary complete; semantic schema slice is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -80,6 +94,8 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
 | Priority | Task | Owner | Execution | Exit condition |
 |---|---|---|---|---|
+| P0 | Establish Semantic UI V2 product and package boundary (M13-A1) | 🤖 Agent | 🟢 Complete | ADR-026, active guidance, five private packages, and legacy-dependency enforcement validate without game data or Unity generation |
+| P0 | Implement versioned semantic schemas and stable-ID validation (M13-A2) | 🤖 Agent | 🔵 Agent-ready | Minimal project/theme/screen/component contracts, supported component types, stable-ID rules, valid fixture, and focused invalid fixtures produce deterministic machine-readable results |
 | P0 | Add deterministic transparent output and review surfaces (M12-A3) | 🤖 Agent | 🟢 Complete | Eleven isolated state SVG/PNG pairs validate deterministic hashes, alpha, padding, slicing/state sheets, and native/phone/thumbnail inspection |
 | P0 | Harden audit and approval lifecycle (M12-A4) | 🤖 Agent | 🟢 Complete | Drift classifications, immutable receipts, stale-source rejection, locks, stale-lock recovery, and interrupted-build rollback validate |
 | P0 | Add controlled promotion and engine-neutral packaging (M12-A5) | 🤖 Agent | 🟢 Complete | Approved built jobs promote by dry-run/execute receipt into a versioned library and complete reference-free package |
@@ -276,6 +292,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | ADR-023 | Generate review-only references for new style packages | 🟢 Accepted | After human style approval, an agent generates and receipts one review-only reference before visual comparison; reference pixels never enter production assets |
 | ADR-024 | Select Enchanted Forest for third-style contrast proof | 🟢 Accepted | Third-style proof uses organic stone/wood/moss, bioluminescence, botanical ornament, and a soft focal within the existing seven-component inventory |
 | ADR-025 | Approve Enchanted Forest third-style definition | 🟢 Accepted | Defines semantic, unobscured target-phone text/progress and a `3/5` minimum readability score while preserving all R-016b boundaries |
+| ADR-026 | Establish Prism Semantic UI V2 as an isolated compiler package family | 🟢 Accepted | Makes game-owned typed specifications authoritative and prevents legacy art-pipeline dependencies in V2 |
 
 ## 7. Top risks and responses
 
@@ -301,6 +318,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
 | Date | Change | Author |
 |---|---|---|
+| 2026-08-01 | Approved CR-003/ADR-026, completed M13-A1 semantic UI V2 package boundaries and enforcement, preserved M12-A6z as an independent pending decision, and queued M13-A2 | Project owner / Codex |
 | 2026-07-15 | Initial control page created | Codex |
 | 2026-07-15 | Added execution eligibility and agent-ready M0 task queue | Codex |
 | 2026-07-15 | Drafted and validated M0 source contracts; queued V1 rubric work | Codex |

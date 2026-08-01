@@ -542,3 +542,43 @@ delivery package and its recorded integration limitations for M12 delivery.
 
 **Boundary:** no Unity integration, reference-pixel extraction, autonomous
 approval, Unity integration, runtime code, or general visual editor.
+
+## 🔵 M13 — Semantic UI V2 vertical slice
+
+**Decision:** The project owner authorized CR-003 on 2026-08-01. ADR-026 makes
+the semantic UI compiler the active architecture for new Prism development.
+M12-A6z remains an independent pending human delivery decision and is not
+implicitly accepted or rejected.
+
+**Goal:** prove the smallest external-project workflow from game-owned typed UI
+specifications through validation, deterministic wireframes, an engine-neutral
+Unity contract, and safe generated-view ownership.
+
+**M13-A1 — Product and package boundary:** 🟢 Complete. The active README,
+architecture, change control, and project controls now describe Prism V2 as a
+semantic UI compiler that does not create production art. Five private package
+boundaries implement the approved acyclic dependency graph. Focused validation
+rejects legacy package dependencies, package-root import escapes, undeclared
+internal edges, and dependency cycles. No game data, semantic behavior, Unity
+generation, or broad legacy cleanup was added.
+
+**M13-A2 — Versioned semantic schemas and stable IDs:** 🔵 Agent-ready.
+Implement the smallest project, theme, screen, reusable component, instance,
+action, binding, asset-slot, state, and Unity-export-setting contracts needed by
+the approved semantic component set. Add stable semantic-ID validation, one
+valid public-contract fixture, focused invalid fixtures, and deterministic
+machine-readable results. Do not add layout solving, wireframe rendering, CLI
+commands, game-specific authoritative data, or Unity generation.
+
+**Later ordered slices:** core diagnostics and semantic validation;
+deterministic multi-size wireframes; CLI and external-project resolution;
+engine-neutral Unity export; Unity adapter and regeneration proof. Each slice
+requires its own bounded authorization and validation.
+
+**Boundary:** no production-art generation, screenshot-to-layout inference,
+game-specific product ownership, competing LNH Core UI framework, general
+constraint solver, or legacy renderer dependency.
+
+**Exit gate:** an external repository can pin Prism, validate and preview a
+complete semantic UI fixture, export stable Unity-consumable inputs, and prove
+idempotent regeneration without modifying Prism or authored game files.

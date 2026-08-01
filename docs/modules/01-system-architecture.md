@@ -1,76 +1,92 @@
-# Module 01 — System Architecture and Contracts
+# Module 01 — Semantic UI V2 architecture and contracts
 
 ## Goal
 
-Define the deterministic system that turns approved specifications into final assets, while keeping AI outputs at controlled input boundaries.
+Define the deterministic system that compiles game-owned semantic UI
+specifications into validated wireframe evidence and engine-specific generated
+views without generating production artwork.
 
 ## Scope
 
-Includes repository structure, specification schemas, IDs, versioning, renderer/material/export boundaries, and traceability. Excludes a general visual editor and any final-pixel decisions made solely by AI.
+This module owns V2 package boundaries, schema and semantic-ID versioning,
+normalization, validation diagnostics, wireframe contracts, CLI orchestration,
+engine-neutral Unity export contracts, generated-file ownership, and
+compatibility rules.
+
+It excludes game-specific product data, screenshot-to-layout inference,
+production art generation, a general editor, Unity generation in M13-A1, and
+broad legacy cleanup.
 
 ## Inputs and outputs
 
 | Inputs | Outputs |
 |---|---|
-| Approved style spec, component spec, material pack, render preset | Rendered assets, export manifest, validation evidence, trace links |
+| Game-owned project, theme, screen, component, action, binding, asset-slot, and export specifications | Structured diagnostics, deterministic wireframe evidence, normalized manifests, and engine-specific generated inputs |
+
+Written typed specifications are authoritative. Reference images may support
+human review but cannot define behavior or become production pixels.
 
 ## Architecture
 
 ```text
-Concept / style board ──> reviewed Style Spec ─┐
-AI material source ──> reviewed Material Pack ─┼─> Component Spec ─> Deterministic Renderer ─> Portable Asset Module
-Human art/UI decisions ────────────────────────┘                              │
-                                                                                └─> visual validation evidence
+Game documents -> game-owned semantic specifications -> Prism CLI
+                                                       |-> core -> schema
+                                                       |-> wireframe -> core/schema
+                                                       `-> Unity contract -> core/schema
+
+future Unity adapter -> com.lnhgames.ui + generated Unity contract
 ```
 
-Suggested repository layout:
+The allowed package graph is declared in
+`packages/prism-v2-boundaries.json`. `npm run validate:v2-boundaries` rejects
+undeclared internal edges, cycles, imports that escape a package, and legacy
+root or Production Lab dependencies.
 
-```text
-specs/styles/{style-id}.json
-specs/components/{component-id}.json
-materials/{material-pack-id}/
-templates/{template-id}/
-exports/{style-id}/{component-id}/
-validation/{validation-id}/
-```
+## Ownership
 
-## Implementation steps
+Prism owns public contracts and compiler behavior. Game repositories own all
+product specifications, assets, generated engine output, and authored gameplay
+or presentation code. Prism may replace only a declared generated subtree;
+authored files remain outside that boundary.
 
-1. Define `styleId`, `componentId`, `materialPackId`, `templateId`, `assetId`, and `validationId` formats.
-2. Version every spec with semantic versioning; generated output records all source versions.
-3. Create schemas with required fields, defaults, and validation messages.
-4. Implement a resolver: component overrides → template defaults → style tokens → render defaults.
-5. Write a trace manifest containing source hashes, renderer version, timestamp, and export IDs.
-6. Add migrations whenever a schema changes incompatibly.
+## Versioning and compatibility
 
-## Dependencies
+- Packages and schemas are versioned independently.
+- External projects pin tool, schema, export-contract, and adapter versions.
+- Stable semantic IDs are compatibility surfaces.
+- Incompatible schemas require a major version and migration guidance.
+- Unsupported versions fail with diagnostics rather than implicit coercion.
+- Identical pinned inputs produce equivalent normalized output.
 
-M0 contract review; chosen implementation technology; file-based schema validator.
+The complete policy is [ADR-026](../decisions/ADR-026-semantic-ui-v2-boundary.md).
+
+## Initial implementation sequence
+
+1. M13-A1: establish product and package boundaries with enforcement.
+2. M13-A2: implement the smallest versioned semantic schema and stable-ID
+   validation slice.
+3. Later bounded tasks: core diagnostics, deterministic wireframes, CLI
+   commands, external-project resolution, Unity export contract, and adapter.
+
+## Legacy boundary
+
+The root renderer, materials, asset packages, showcase, milestone evidence, and
+Production Lab remain auditable V1-era systems. V2 cannot import them. A small
+source-neutral utility may be extracted later only behind a V2-owned contract
+and focused compatibility tests.
 
 ## Acceptance criteria
 
-- A generated asset identifies every source spec and version.
-- The same inputs render the same output on a supported environment.
-- Invalid or incomplete specs fail before rendering.
-- Changing a global token affects dependent assets predictably.
-
-## Validation task
-
-Create one `primary-button` spec that inherits style tokens, overrides one parameter, and yields a manifest that proves the inheritance chain.
-
-## Risks
-
-- Overly rigid schemas slow art iteration: use extension fields with review, not unbounded free-form parameters.
-- Contract churn: version schemas and require migration tests.
+- Acyclic package dependencies match the declared graph.
+- V2 source cannot import legacy repository implementation paths.
+- Game-specific authoritative data does not enter Prism packages.
+- Generated and authored ownership remains explicit.
+- Schema and behavioral capability is added only through bounded validated
+  tasks.
 
 ## Change history
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-07-15 | Initial module definition | Codex |
-| 2026-07-15 | Added JSON Schema Draft 2020-12 contract baseline and validation examples | Codex |
-| 2026-07-16 | Required export-manifest provenance at the schema root, corrected the canonical example, and added explicit missing-provenance rejection coverage | Project owner / Codex |
-| 2026-07-16 | Added M2-S1 version-pinned style overlays, complete resolved-style checks, deterministic ancestor provenance, and bounded material-binding resolution | Codex |
-| 2026-07-17 | Added export-manifest `1.1`, legacy `1.0` compatibility, deterministic Unity identity/registry semantics, canonical fixtures, and migration guidance for M4-S1 | Codex |
-| 2026-07-30 | Added the isolated Production Lab project/reference boundary plus first-class state inheritance, geometry, slot, effect-padding, and scalable-region contracts for M12-A1/A2 | Codex |
-| 2026-07-30 | Added M12-A4 immutable approval receipts, source/evidence freshness checks, cross-job drift classifications, exclusive locks, and staged-build rollback | Codex |
+| 2026-07-15 | Initial deterministic asset architecture created | Codex |
+| 2026-08-01 | Replaced the active architecture with the approved semantic UI V2 boundary while retaining legacy history | Project owner / Codex |
