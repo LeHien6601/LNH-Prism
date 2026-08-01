@@ -36,7 +36,22 @@
                 "children": [
                   { "id": "sample.title", "type": "label", "text": "Contract sample" },
                   { "id": "sample.gap", "type": "spacer" },
-                  { "id": "sample.grid", "type": "grid", "grid": { "columns": 3, "rows": 3 } },
+                  {
+                    "id": "sample.grid",
+                    "type": "grid",
+                    "grid": { "columns": 3, "rows": 3 },
+                    "children": [
+                      { "id": "sample.grid.cell-0-0", "type": "spacer" },
+                      { "id": "sample.grid.cell-0-1", "type": "spacer" },
+                      { "id": "sample.grid.cell-0-2", "type": "spacer" },
+                      { "id": "sample.grid.cell-1-0", "type": "spacer" },
+                      { "id": "sample.grid.cell-1-1", "type": "spacer" },
+                      { "id": "sample.grid.cell-1-2", "type": "spacer" },
+                      { "id": "sample.grid.cell-2-0", "type": "spacer" },
+                      { "id": "sample.grid.cell-2-1", "type": "spacer" },
+                      { "id": "sample.grid.cell-2-2", "type": "spacer" }
+                    ]
+                  },
                   { "id": "sample.continue", "type": "button", "text": "Continue", "actionId": "action.continue" },
                   { "id": "sample.settings", "type": "modal", "componentId": "component.settings", "dismissalPolicy": "explicit" }
                 ]

@@ -18,8 +18,9 @@ wireframe tooling, CLI, and engine adapters that consume those inputs.
 
 M13 establishes this V2 boundary as a clean package family. Schema version
 `1.0.0`, the bounded semantic component contracts, and stable-ID diagnostics
-are implemented. Cross-reference and hierarchy validation, wireframes, CLI
-commands, and Unity export behavior remain separate later tasks.
+are implemented. Typed references, hierarchy/cycle rules, and bounded per-type
+semantics are validated. Wireframes, CLI commands, and Unity export behavior
+remain separate later tasks.
 
 ## V2 package boundary
 

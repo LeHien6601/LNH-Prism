@@ -6,7 +6,9 @@
     "defaultThemeId": "theme.default",
     "unityExport": { "contractVersion": "1.0.0", "generatedRoot": "Generated/Prism", "namespace": "Fixture.Ui" }
   },
-  "themes": [],
+  "themes": [
+    { "id": "theme.default", "tokens": { "colors": {}, "spacing": {} } }
+  ],
   "screens": [],
   "components": [],
   "actions": [],

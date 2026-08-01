@@ -6,11 +6,25 @@
     "defaultThemeId": "theme.default",
     "unityExport": { "contractVersion": "1.0.0", "generatedRoot": "Generated/Prism", "namespace": "Fixture.Ui" }
   },
-  "themes": [],
+  "themes": [
+    { "id": "theme.default", "tokens": { "colors": {}, "spacing": {} } }
+  ],
   "screens": [
     {
       "id": "screen.sample",
-      "root": { "id": "sample.carousel", "type": "carousel" }
+      "root": {
+        "id": "sample.root",
+        "type": "screen",
+        "children": [
+          {
+            "id": "sample.safe-area",
+            "type": "safe-area",
+            "children": [
+              { "id": "sample.carousel", "type": "carousel" }
+            ]
+          }
+        ]
+      }
     }
   ],
   "components": [],

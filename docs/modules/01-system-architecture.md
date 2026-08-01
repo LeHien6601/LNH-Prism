@@ -65,9 +65,11 @@ The complete policy is [ADR-026](../decisions/ADR-026-semantic-ui-v2-boundary.md
 1. M13-A1: product and package boundaries with enforcement — complete.
 2. M13-A2: semantic schema `1.0.0`, bounded public contracts, and stable-ID
    validation — complete.
-3. M13-A3: semantic cross-reference, hierarchy, and per-type validation.
-4. Later bounded tasks: deterministic wireframes, CLI commands,
-   external-project resolution, Unity export contract, and adapter.
+3. M13-A3: semantic cross-reference, hierarchy, cycle, and per-type validation
+   — complete.
+4. M13-A4: deterministic primitive wireframes and multi-size evidence.
+5. Later bounded tasks: CLI commands, external-project resolution, Unity
+   export contract, and adapter.
 
 ## Legacy boundary
 
@@ -94,3 +96,4 @@ and focused compatibility tests.
 | 2026-08-01 | Hardened module and manifest dependency enforcement across supported JS/TS forms with focused negative coverage | Codex |
 | 2026-08-01 | Reconciled active controls around `semantic-ui-v2` and added mission-drift enforcement | Codex |
 | 2026-08-01 | Added schema `1.0.0`, bounded semantic contracts, stable-ID/type diagnostics, and deterministic public fixtures | Codex |
+| 2026-08-01 | Added typed reference resolution, bounded hierarchy/cycle rules, per-type semantic validation, and deterministic negative coverage | Codex |

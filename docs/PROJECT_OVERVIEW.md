@@ -36,7 +36,7 @@ authored code or asset mappings.
 
 | Area | State | Evidence / next action |
 |---|---|---|
-| Semantic UI V2 | 🔵 Active foundation | Package boundaries and schema version `1.0.0` are active; M13-A2 contracts and stable-ID diagnostics are complete, and M13-A3 semantic reference validation is next |
+| Semantic UI V2 | 🔵 Active foundation | Schema `1.0.0`, stable IDs, typed references, hierarchy/cycle rules, and bounded per-type validation are active; M13-A4 deterministic wireframes are next |
 | Product and architecture boundary | 🟢 Approved baseline | `README.md`, ADR-026, and the active architecture module agree that typed game specifications are authoritative and Prism does not create production artwork |
 | Legacy M0–M11 asset pipeline | Historical supported evidence | Renderer, material, analysis, packaging, and showcase records remain auditable but are not active V2 contracts or dependencies |
 | Legacy M12 Production Lab | Human decision pending | The complete Block Forge package remains supported historical evidence; M12-A6z is an independent unmade delivery decision |
@@ -45,8 +45,8 @@ authored code or asset mappings.
 |---|---|
 | Active mission | `semantic-ui-v2` — compile game-owned typed UI specifications into validated, deterministic, engine-ready structure without creating production artwork |
 | Active milestone | 🔵 **M13 — Semantic UI V2 vertical slice** |
-| Next task | 🔵 **Implement semantic reference and hierarchy validation (M13-A3)** · Agent-ready |
-| Next agent-ready task | M13-A3 — Implement semantic reference and hierarchy validation |
+| Next task | 🔵 **Implement deterministic primitive wireframes and multi-size evidence (M13-A4)** · Agent-ready |
+| Next agent-ready task | M13-A4 — Implement deterministic primitive wireframes and multi-size evidence |
 | Last reviewed | 2026-08-01 |
 | Project owner | Hien |
 
@@ -85,7 +85,7 @@ authored code or asset mappings.
 | Legacy complete | M10 | Volcanic Forge second-style transfer | V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
 | Legacy complete | M11 | Enchanted Forest third-style contrast | V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
 | Human decision pending | M12 | Production Lab Block Forge readiness | M12-A6z remains an independent unmade delivery decision |
-| Active | M13 | Semantic UI V2 vertical slice | Product/package boundary and semantic contracts complete; reference/hierarchy validation is next |
+| Active | M13 | Semantic UI V2 vertical slice | Semantic contracts and validation complete; deterministic wireframe evidence is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
@@ -100,7 +100,8 @@ legacy history; M12-A6z remains an independent human decision.
 | P0 | Harden V2 dependency enforcement (R-M13-001) | 🤖 Agent | 🟢 Complete | Syntax-aware ESM/CommonJS/TypeScript inspection, manifest target validation, local/alias rejection, entry-point containment, and cycle coverage pass |
 | P0 | Reconcile active project controls around Semantic UI V2 (R-M13-002) | 🤖 Agent | 🟢 Complete | Active mission, objective boundaries, legacy status, and M12/M13 markers align; mission-drift validation passes |
 | P0 | Implement versioned semantic schemas and stable-ID validation (M13-A2) | 🤖 Agent | 🟢 Complete | Schema `1.0.0` covers the bounded public contracts and component set; valid/invalid fixtures produce deterministic machine-readable stable-ID/type diagnostics |
-| P0 | Implement semantic reference and hierarchy validation (M13-A3) | 🤖 Agent | 🔵 Agent-ready | Cross-references, hierarchy shape/cycles, and bounded per-type semantic requirements fail with deterministic actionable diagnostics while M13-A2 fixtures remain compatible |
+| P0 | Implement semantic reference and hierarchy validation (M13-A3) | 🤖 Agent | 🟢 Complete | Typed references, screen/safe-area and leaf/container hierarchy, reusable-component and object cycles, plus bounded action/button/toggle/grid/modal rules produce deterministic actionable diagnostics |
+| P0 | Implement deterministic primitive wireframes and multi-size evidence (M13-A4) | 🤖 Agent | 🔵 Agent-ready | The validated public fixture renders reproducible SVG/PNG wireframes at the approved portrait review sizes with stable semantic IDs, hierarchy cues, safe-area visibility, and no production artwork |
 | P0 | Add deterministic transparent output and review surfaces (M12-A3) | 🤖 Agent | 🟢 Complete | Eleven isolated state SVG/PNG pairs validate deterministic hashes, alpha, padding, slicing/state sheets, and native/phone/thumbnail inspection |
 | P0 | Harden audit and approval lifecycle (M12-A4) | 🤖 Agent | 🟢 Complete | Drift classifications, immutable receipts, stale-source rejection, locks, stale-lock recovery, and interrupted-build rollback validate |
 | P0 | Add controlled promotion and engine-neutral packaging (M12-A5) | 🤖 Agent | 🟢 Complete | Approved built jobs promote by dry-run/execute receipt into a versioned library and complete reference-free package |
@@ -323,6 +324,7 @@ legacy history; M12-A6z remains an independent human decision.
 
 | Date | Change | Author |
 |---|---|---|
+| 2026-08-01 | Completed M13-A3: added typed reference resolution, bounded hierarchy/cycle enforcement, per-type semantic rules, and deterministic negative coverage; opened M13-A4 | Codex |
 | 2026-08-01 | Completed M13-A2: added semantic schema `1.0.0`, the eleven-type public contract set, stable-ID/type diagnostics, deterministic validation output, and focused fixtures; opened M13-A3 | Codex |
 | 2026-08-01 | Applied R-M13-002: reconciled active controls around `semantic-ui-v2`, labeled M0–M12 as legacy history with M12-A6z still pending, added mission-drift validation, and opened M13-A2 | Codex |
 | 2026-08-01 | Applied R-M13-001 with syntax-aware module inspection, manifest dependency/entry enforcement, and expanded negative coverage; queued R-M13-002 before M13-A2 | Codex |

@@ -586,18 +586,26 @@ invalid fixtures validate deterministically. No layout solving, wireframe
 rendering, CLI command, game-specific authoritative data, or Unity generation
 was added.
 
-**M13-A3 — Semantic reference and hierarchy validation:** 🔵 Agent-ready.
-Validate references to declared screens, reusable components, actions,
-bindings, asset slots, and states; hierarchy shape and cycles; and bounded
-per-type requirements for buttons, toggles, grids, modals, and safe-area roots.
-Preserve the M13-A2 public contract and deterministic diagnostic format. Do not
-add layout geometry checks, wireframes, CLI commands, game-specific data, or
-Unity generation.
+**M13-A3 — Semantic reference and hierarchy validation:** 🟢 Complete. Core now
+resolves typed theme, screen, reusable-component, action, binding, asset-slot,
+and state references. It enforces screen roots, direct safe-area roots, leaf
+hierarchy, modal nesting, fixed-grid content, navigate-action targets, and
+bounded button/toggle/grid/modal requirements. Reusable-component graphs and
+in-memory child hierarchies reject cycles deterministically. The M13-A2 schema,
+public fixture, and diagnostic format remain compatible. No layout geometry,
+wireframe, CLI, game-specific data, or Unity generation was added.
 
-**Later ordered slices:** deterministic multi-size wireframes; CLI and
-external-project resolution; engine-neutral Unity export; Unity adapter and
-regeneration proof. Each slice requires its own bounded authorization and
-validation.
+**M13-A4 — Deterministic primitive wireframes and multi-size evidence:** 🔵
+Agent-ready. Render the validated public fixture through `@lnh-prism/wireframe`
+as deterministic primitive SVG and PNG evidence at the approved 9:16 and tall
+portrait review sizes. Preserve stable semantic IDs, hierarchy cues, explicit
+safe-area bounds, state/asset placeholders, and reproducible hashes. Do not add
+production artwork, a general layout solver, CLI workflow, external-project
+resolution, game-specific data, or Unity generation.
+
+**Later ordered slices:** CLI and external-project resolution; engine-neutral
+Unity export; Unity adapter and regeneration proof. Each slice requires its own
+bounded authorization and validation.
 
 **Boundary:** no production-art generation, screenshot-to-layout inference,
 game-specific product ownership, competing LNH Core UI framework, general
