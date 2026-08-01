@@ -7,20 +7,23 @@ M13-A1 roadmap contract, and the repository's managed-workflow controls. It is
 a diagnostic record only; it does not change milestone status or authorize
 implementation.
 
-**Outcome: conditional acceptance; first remediation complete.** The product
+**Outcome: accepted after remediation.** The product
 boundary, package topology, workspace resolution, and ownership policy are
 coherent and validated. R-M13-001 closed the reviewed module/manifest bypasses.
-R-M13-002 remains required before M13-A2 because the active overview still
-presents legacy asset objectives as current scope.
+R-M13-002 reconciled the active project controls and added mission-drift
+validation. M13-A2 is now agent-ready.
 
 ## Validation performed
 
 - `npm run validate:v2-boundaries` — pass; five packages and five source files.
-- `npm run test:v2-boundaries` — pass; five tests.
-- `npm run validate:control-drift` — pass; M13-A2 selected and three
-  review-reference receipts verified.
-- Repository state — clean `main`, synchronized with `origin/main` at
-  `0805529` before this review record was written.
+- `npm run test:v2-boundaries` — pass; fourteen tests.
+- `npm run validate:control-drift` — pass; `semantic-ui-v2`, M13, M13-A2,
+  and three review-reference receipts align.
+- `npm run test:control-drift` — pass; seven tests, including stale mission,
+  legacy active scope, and multiple-active-milestone rejection.
+- `npm run agent:brief -- --json` — reports `semantic-ui-v2`, M13, and M13-A2.
+- `npm run validate:contracts` — pass.
+- `npm run test:renderer` — pass; 56 tests.
 
 ## Facts
 
@@ -103,13 +106,20 @@ present the legacy asset mission as current scope.
 agree on one active milestone and mission; M12-A6z remains pending rather than
 accepted, rejected, or erased; control-drift tests cover the new invariant.
 
+**Application status — complete on 2026-08-01:** Active documentation and the
+agent brief now identify `semantic-ui-v2` and M13 consistently. The overview's
+objective boundaries contain only the V2 compiler scope, M0–M12 are explicit
+legacy history, M12-A6z remains an unmade independent human decision, and
+focused negative tests reject stale mission IDs, legacy scope, and multiple
+active milestone markers. M13-A2 is the next agent-ready task.
+
 ## Readiness and ordering
 
 | Order | Work | Eligibility | Dependency |
 |---|---|---|---|
 | 1 | R-M13-001 boundary-enforcement hardening | Complete | None |
-| 2 | R-M13-002 active-control scope reconciliation | Agent-ready | R-M13-001 complete |
-| 3 | M13-A2 semantic schemas and stable IDs | Agent-ready after remediation | R-M13-001 and R-M13-002 |
+| 2 | R-M13-002 active-control scope reconciliation | Complete | R-M13-001 complete |
+| 3 | M13-A2 semantic schemas and stable IDs | Agent-ready | R-M13-001 and R-M13-002 complete |
 
 No new human decision blocks these remediations. M12-A6z remains a separate
 human decision and does not block the ordered M13 technical work.

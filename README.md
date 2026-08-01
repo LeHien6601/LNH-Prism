@@ -9,6 +9,8 @@ wireframe, packaging, and Unity-integration system for game-owned UI projects.
 
 ## Current direction
 
+**Active mission:** `semantic-ui-v2`
+
 Written game specifications are authoritative. Game repositories own their
 product documents, semantic UI specifications, actions, bindings, assets, and
 generated engine output. Prism owns only the versioned schemas, compiler,

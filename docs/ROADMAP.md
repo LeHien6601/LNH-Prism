@@ -569,13 +569,14 @@ extensions, statically inspectable module edges, manifest dependency and entry
 target validation, and fourteen focused tests including syntax false-positive
 resistance and real cycle rejection.
 
-**R-M13-002 — Active-control scope reconciliation:** 🔵 Agent-ready. Align the
-overview's active objective boundaries and legacy status with ADR-026, keep
-M12-A6z as an independent pending human decision, and add mission-drift
-validation. Do not begin semantic schema implementation in this task.
+**R-M13-002 — Active-control scope reconciliation:** 🟢 Complete. The overview,
+active documentation, architecture, roadmap markers, and agent brief now agree
+on `semantic-ui-v2` and M13 as the sole active milestone. M0–M12 are explicit
+legacy history, M12-A6z remains an independent pending human decision, and
+focused validation rejects stale mission scope or multiple active milestones.
+No semantic schema implementation was added.
 
-**M13-A2 — Versioned semantic schemas and stable IDs:** queued after
-R-M13-002.
+**M13-A2 — Versioned semantic schemas and stable IDs:** 🔵 Agent-ready.
 Implement the smallest project, theme, screen, reusable component, instance,
 action, binding, asset-slot, state, and Unity-export-setting contracts needed by
 the approved semantic component set. Add stable semantic-ID validation, one

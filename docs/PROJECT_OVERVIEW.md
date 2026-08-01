@@ -36,20 +36,17 @@ authored code or asset mappings.
 
 | Area | State | Evidence / next action |
 |---|---|---|
-| Semantic UI V2 | 🔵 Active foundation | ADR-026 and five private package boundaries are active; R-M13-001 dependency hardening is complete and R-M13-002 control reconciliation is next |
-| Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
-| Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
-| Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
-| Materials | 🟢 V2 gate passed | Neon Market and Neon Alloy passed V2 at `93/100`; shared material reuse, propagation, structure, and traceability met every mandatory minimum |
-| AI analysis | 🟢 M3/V3 gate passed | Frostbound passed V3 at `94/100`; every mandatory minimum was met, no blocker or defect remained, and simplified ornamental fidelity is a non-blocking observation |
-| Asset delivery | 🟢 M4-A1 package complete | Frostbound Reward is assembled as 62 independently extractable SVG/PNG modules across five components with stable IDs, hashes, and usage guidance |
-| Component showcase | 🟢 Bounded prototype complete | Button and Progress controls use shared deterministic SVG recipes with traceability, boundary enforcement, and desktop/mobile evidence |
+| Semantic UI V2 | 🔵 Active foundation | ADR-026 and five private package boundaries are active; R-M13-001 and R-M13-002 are complete, and M13-A2 semantic contracts are next |
+| Product and architecture boundary | 🟢 Approved baseline | `README.md`, ADR-026, and the active architecture module agree that typed game specifications are authoritative and Prism does not create production artwork |
+| Legacy M0–M11 asset pipeline | Historical supported evidence | Renderer, material, analysis, packaging, and showcase records remain auditable but are not active V2 contracts or dependencies |
+| Legacy M12 Production Lab | Human decision pending | The complete Block Forge package remains supported historical evidence; M12-A6z is an independent unmade delivery decision |
 
 | Focus | Current value |
 |---|---|
+| Active mission | `semantic-ui-v2` — compile game-owned typed UI specifications into validated, deterministic, engine-ready structure without creating production artwork |
 | Active milestone | 🔵 **M13 — Semantic UI V2 vertical slice** |
-| Next task | 🔵 **Reconcile active project controls around Semantic UI V2 (R-M13-002)** · Agent-ready |
-| Next agent-ready task | R-M13-002 — Reconcile active project controls and add mission-drift validation |
+| Next task | 🔵 **Implement versioned semantic schemas and stable-ID validation (M13-A2)** · Agent-ready |
+| Next agent-ready task | M13-A2 — Implement versioned semantic schemas and stable-ID validation |
 | Last reviewed | 2026-08-01 |
 | Project owner | Hien |
 
@@ -57,47 +54,52 @@ authored code or asset mappings.
 
 ### In scope
 
-- Layer-based components: button, panel, progress bar, tab, card, badge, popup, toggle, and icon container.
-- Design tokens, reusable material packs, deterministic state generation, and engine-neutral asset delivery.
-- AI-supported concept generation, material generation/import, analysis suggestions, and visual comparison.
-- Repeatable validation using real game UI assets.
+- Versioned project, theme, screen, component, action, binding, asset-slot, state, and export specifications owned by game repositories.
+- Stable semantic IDs, deterministic normalization, structured diagnostics, and compatibility rules.
+- Deterministic multi-size wireframe evidence and stable engine-neutral hierarchy/export contracts.
+- Explicit generated-versus-authored ownership, safe regeneration boundaries, and reproducible metadata.
+- Bounded CLI, external-project resolution, and engine-adapter work authorized as separate validated tasks.
 
 ### Out of scope until a reviewed change request approves it
 
-- A general-purpose design editor comparable to Figma, Photoshop, or Substance Designer.
-- Fully autonomous UI layout/design decisions.
-- Treating extracted pixels from concept screenshots as final production assets.
-- Character art, backgrounds, logos, or broad game-content pipelines.
+- Production artwork, material, screenshot reconstruction, or reference-pixel generation.
+- Screenshot-to-layout or screenshot-to-behavior inference.
+- Game-specific authoritative product data, assets, gameplay logic, or authored presentation code inside Prism packages.
+- A general-purpose design editor, universal layout solver, or competing LNH Core UI framework.
+- Unity view generation until a separately authorized bounded task begins it.
 
 ## 4. Roadmap at a glance
 
 | State | Milestone | Outcome | Gate |
 |---|---|---|---|
-| 🟢 | M0 | Contracts, repository, reference brief | 🟢 Architecture review accepted |
-| 🟢 | M1 | MVP renderer and three core templates | 🟢 V1 Pass — `93/100` |
-| 🟢 | M2 | Tokens, variants, states, material packs | 🟢 V2 Pass — `93/100` |
-| 🟢 | M3 | AI-assisted analysis and material intake | 🟢 V3 Pass — `94/100` |
-| 🟢 | M4 | Modular asset delivery | 🟢 Passed — 62-module engine-neutral package validated |
-| 🟢 | M5 | Production hardening and regression suite | 🟢 Passed — Frostbound-only hardening accepted for M5 exit |
-| 🟢 | M6 | Optional showcase scaling and workflow review | 🟢 Deferred — Markdown + showcase remain sufficient |
-| 🟢 | M7 | Reference-fidelity style expansion | 🟢 V7 Pass — `90.5/100`; 68 engine-neutral modules, evidence, and showroom validated |
-| 🟢 | M8 | Frostbound-aligned angular refinement | 🟢 V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
-| 🟢 | M9 | Frostbound production-fidelity systems | 🟢 V9 Pass — `85/100`; generalized systems and corrected package review passed |
-| 🟢 | M10 | Volcanic Forge second-style transfer | 🟢 V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
-| 🟢 | M11 | Enchanted Forest third-style contrast | 🟢 V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
-| 🔵 | M12 | Production Lab Block Forge readiness | Complete Block Forge package is validated and ready for delivery review |
-| 🔵 | M13 | Semantic UI V2 vertical slice | Product/package boundary complete; semantic schema slice is next |
+| Legacy complete | M0 | Contracts, repository, reference brief | Architecture review accepted |
+| Legacy complete | M1 | MVP renderer and three core templates | V1 Pass — `93/100` |
+| Legacy complete | M2 | Tokens, variants, states, material packs | V2 Pass — `93/100` |
+| Legacy complete | M3 | AI-assisted analysis and material intake | V3 Pass — `94/100` |
+| Legacy complete | M4 | Modular asset delivery | Passed — 62-module engine-neutral package validated |
+| Legacy complete | M5 | Production hardening and regression suite | Passed — Frostbound-only hardening accepted for M5 exit |
+| Legacy complete | M6 | Optional showcase scaling and workflow review | Deferred — Markdown + showcase remain sufficient |
+| Legacy complete | M7 | Reference-fidelity style expansion | V7 Pass — `90.5/100`; 68 engine-neutral modules, evidence, and showroom validated |
+| Legacy complete | M8 | Frostbound-aligned angular refinement | V8 Pass — `90/100`; reusable cold-material/focal refinement validated |
+| Legacy complete | M9 | Frostbound production-fidelity systems | V9 Pass — `85/100`; generalized systems and corrected package review passed |
+| Legacy complete | M10 | Volcanic Forge second-style transfer | V10 Pass — `86/100`; 52-module package, hard-gate receipts, cross-style hardening, and review-only reference evidence validated |
+| Legacy complete | M11 | Enchanted Forest third-style contrast | V11 Pass — `85/100`; 52-module package, deterministic canopy cadence, and review-reference controls validated |
+| Human decision pending | M12 | Production Lab Block Forge readiness | M12-A6z remains an independent unmade delivery decision |
+| Active | M13 | Semantic UI V2 vertical slice | Product/package boundary complete; semantic schema slice is next |
 
 Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
 ## 5. Near-term task board
 
+Only M13 rows authorize active implementation. M0–M12 rows are retained as
+legacy history; M12-A6z remains an independent human decision.
+
 | Priority | Task | Owner | Execution | Exit condition |
 |---|---|---|---|---|
 | P0 | Establish Semantic UI V2 product and package boundary (M13-A1) | 🤖 Agent | 🟢 Complete | ADR-026, active guidance, five private packages, and legacy-dependency enforcement validate without game data or Unity generation |
 | P0 | Harden V2 dependency enforcement (R-M13-001) | 🤖 Agent | 🟢 Complete | Syntax-aware ESM/CommonJS/TypeScript inspection, manifest target validation, local/alias rejection, entry-point containment, and cycle coverage pass |
-| P0 | Reconcile active project controls around Semantic UI V2 (R-M13-002) | 🤖 Agent | 🔵 Agent-ready | Active mission, objective boundaries, legacy status, and M12/M13 markers align; mission-drift validation passes |
-| P0 | Implement versioned semantic schemas and stable-ID validation (M13-A2) | 🤖 Agent | Queued after R-M13-002 | Minimal project/theme/screen/component contracts, supported component types, stable-ID rules, valid fixture, and focused invalid fixtures produce deterministic machine-readable results |
+| P0 | Reconcile active project controls around Semantic UI V2 (R-M13-002) | 🤖 Agent | 🟢 Complete | Active mission, objective boundaries, legacy status, and M12/M13 markers align; mission-drift validation passes |
+| P0 | Implement versioned semantic schemas and stable-ID validation (M13-A2) | 🤖 Agent | 🔵 Agent-ready | Minimal project/theme/screen/component contracts, supported component types, stable-ID rules, valid fixture, and focused invalid fixtures produce deterministic machine-readable results |
 | P0 | Add deterministic transparent output and review surfaces (M12-A3) | 🤖 Agent | 🟢 Complete | Eleven isolated state SVG/PNG pairs validate deterministic hashes, alpha, padding, slicing/state sheets, and native/phone/thumbnail inspection |
 | P0 | Harden audit and approval lifecycle (M12-A4) | 🤖 Agent | 🟢 Complete | Drift classifications, immutable receipts, stale-source rejection, locks, stale-lock recovery, and interrupted-build rollback validate |
 | P0 | Add controlled promotion and engine-neutral packaging (M12-A5) | 🤖 Agent | 🟢 Complete | Approved built jobs promote by dry-run/execute receipt into a versioned library and complete reference-free package |
@@ -320,6 +322,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
 | Date | Change | Author |
 |---|---|---|
+| 2026-08-01 | Applied R-M13-002: reconciled active controls around `semantic-ui-v2`, labeled M0–M12 as legacy history with M12-A6z still pending, added mission-drift validation, and opened M13-A2 | Codex |
 | 2026-08-01 | Applied R-M13-001 with syntax-aware module inspection, manifest dependency/entry enforcement, and expanded negative coverage; queued R-M13-002 before M13-A2 | Codex |
 | 2026-08-01 | Approved CR-003/ADR-026, completed M13-A1 semantic UI V2 package boundaries and enforcement, preserved M12-A6z as an independent pending decision, and queued M13-A2 | Project owner / Codex |
 | 2026-07-15 | Initial control page created | Codex |
