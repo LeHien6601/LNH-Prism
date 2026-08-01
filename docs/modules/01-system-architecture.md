@@ -90,3 +90,4 @@ and focused compatibility tests.
 |---|---|---|
 | 2026-07-15 | Initial deterministic asset architecture created | Codex |
 | 2026-08-01 | Replaced the active architecture with the approved semantic UI V2 boundary while retaining legacy history | Project owner / Codex |
+| 2026-08-01 | Hardened module and manifest dependency enforcement across supported JS/TS forms with focused negative coverage | Codex |

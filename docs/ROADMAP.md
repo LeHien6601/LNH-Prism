@@ -558,11 +558,24 @@ Unity contract, and safe generated-view ownership.
 architecture, change control, and project controls now describe Prism V2 as a
 semantic UI compiler that does not create production art. Five private package
 boundaries implement the approved acyclic dependency graph. Focused validation
-rejects legacy package dependencies, package-root import escapes, undeclared
-internal edges, and dependency cycles. No game data, semantic behavior, Unity
-generation, or broad legacy cleanup was added.
+rejects syntax-aware ESM, CommonJS, TypeScript, and dynamic module escapes;
+undeclared, local, aliased, or forbidden dependencies; escaping package entry
+targets; undeclared internal edges; and dependency cycles. No game data,
+semantic behavior, Unity generation, or broad legacy cleanup was added.
 
-**M13-A2 — Versioned semantic schemas and stable IDs:** 🔵 Agent-ready.
+**R-M13-001 — Boundary-enforcement hardening:** 🟢 Complete. The reviewed P1
+dependency gap is closed with TypeScript 7 token scanning across JS/TS module
+extensions, statically inspectable module edges, manifest dependency and entry
+target validation, and fourteen focused tests including syntax false-positive
+resistance and real cycle rejection.
+
+**R-M13-002 — Active-control scope reconciliation:** 🔵 Agent-ready. Align the
+overview's active objective boundaries and legacy status with ADR-026, keep
+M12-A6z as an independent pending human decision, and add mission-drift
+validation. Do not begin semantic schema implementation in this task.
+
+**M13-A2 — Versioned semantic schemas and stable IDs:** queued after
+R-M13-002.
 Implement the smallest project, theme, screen, reusable component, instance,
 action, binding, asset-slot, state, and Unity-export-setting contracts needed by
 the approved semantic component set. Add stable semantic-ID validation, one

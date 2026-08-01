@@ -36,7 +36,7 @@ authored code or asset mappings.
 
 | Area | State | Evidence / next action |
 |---|---|---|
-| Semantic UI V2 | 🔵 Active foundation | ADR-026, five private package boundaries, and dependency enforcement are complete; schema work is next |
+| Semantic UI V2 | 🔵 Active foundation | ADR-026 and five private package boundaries are active; R-M13-001 dependency hardening is complete and R-M13-002 control reconciliation is next |
 | Product framing | 🟢 Approved baseline | Core principle and system boundary are recorded in `README.md` |
 | Architecture | 🟢 M1 render/export stack approved | TypeScript + SVG + `@resvg/resvg-js` + JSON manifests accepted in [ADR-009](decisions/ADR-009-v1-render-export-stack.md) |
 | Renderer | 🟢 V1 gate passed and corrections closed | Button, Panel, and independent Progress Bar frame/fill passed V1 at `93/100`; V1-D003 connected extrusion treatment is complete |
@@ -48,8 +48,8 @@ authored code or asset mappings.
 | Focus | Current value |
 |---|---|
 | Active milestone | 🔵 **M13 — Semantic UI V2 vertical slice** |
-| Next task | 🔵 **Implement versioned semantic schemas and stable-ID validation (M13-A2)** · Agent-ready |
-| Next agent-ready task | M13-A2 — Implement the smallest versioned semantic schema and stable-ID validation slice |
+| Next task | 🔵 **Reconcile active project controls around Semantic UI V2 (R-M13-002)** · Agent-ready |
+| Next agent-ready task | R-M13-002 — Reconcile active project controls and add mission-drift validation |
 | Last reviewed | 2026-08-01 |
 | Project owner | Hien |
 
@@ -95,7 +95,9 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 | Priority | Task | Owner | Execution | Exit condition |
 |---|---|---|---|---|
 | P0 | Establish Semantic UI V2 product and package boundary (M13-A1) | 🤖 Agent | 🟢 Complete | ADR-026, active guidance, five private packages, and legacy-dependency enforcement validate without game data or Unity generation |
-| P0 | Implement versioned semantic schemas and stable-ID validation (M13-A2) | 🤖 Agent | 🔵 Agent-ready | Minimal project/theme/screen/component contracts, supported component types, stable-ID rules, valid fixture, and focused invalid fixtures produce deterministic machine-readable results |
+| P0 | Harden V2 dependency enforcement (R-M13-001) | 🤖 Agent | 🟢 Complete | Syntax-aware ESM/CommonJS/TypeScript inspection, manifest target validation, local/alias rejection, entry-point containment, and cycle coverage pass |
+| P0 | Reconcile active project controls around Semantic UI V2 (R-M13-002) | 🤖 Agent | 🔵 Agent-ready | Active mission, objective boundaries, legacy status, and M12/M13 markers align; mission-drift validation passes |
+| P0 | Implement versioned semantic schemas and stable-ID validation (M13-A2) | 🤖 Agent | Queued after R-M13-002 | Minimal project/theme/screen/component contracts, supported component types, stable-ID rules, valid fixture, and focused invalid fixtures produce deterministic machine-readable results |
 | P0 | Add deterministic transparent output and review surfaces (M12-A3) | 🤖 Agent | 🟢 Complete | Eleven isolated state SVG/PNG pairs validate deterministic hashes, alpha, padding, slicing/state sheets, and native/phone/thumbnail inspection |
 | P0 | Harden audit and approval lifecycle (M12-A4) | 🤖 Agent | 🟢 Complete | Drift classifications, immutable receipts, stale-source rejection, locks, stale-lock recovery, and interrupted-build rollback validate |
 | P0 | Add controlled promotion and engine-neutral packaging (M12-A5) | 🤖 Agent | 🟢 Complete | Approved built jobs promote by dry-run/execute receipt into a versioned library and complete reference-free package |
@@ -318,6 +320,7 @@ Detailed tasks and exit conditions are in [ROADMAP.md](ROADMAP.md).
 
 | Date | Change | Author |
 |---|---|---|
+| 2026-08-01 | Applied R-M13-001 with syntax-aware module inspection, manifest dependency/entry enforcement, and expanded negative coverage; queued R-M13-002 before M13-A2 | Codex |
 | 2026-08-01 | Approved CR-003/ADR-026, completed M13-A1 semantic UI V2 package boundaries and enforcement, preserved M12-A6z as an independent pending decision, and queued M13-A2 | Project owner / Codex |
 | 2026-07-15 | Initial control page created | Codex |
 | 2026-07-15 | Added execution eligibility and agent-ready M0 task queue | Codex |
